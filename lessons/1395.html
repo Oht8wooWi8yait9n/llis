@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1395: Simplified Simulation for Control Validation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1395: Simplified Simulation for Control Validation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1395 (Database ID: 1395)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-04-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> White Sands Test Facility</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1395" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The WSTF Propulsion Computer Engineering section was given a task (via Space Act agreement) to develop, validate and implement a very challenging rocket engine control software module for use in initial developmental ground testing operations. This custom control and monitoring software was to be used for safely establishing the closed loop startup and shutdown profiles of a liquid propellant rocket engine with a gas generator powered turbo-pump propellant feed system. There were several critical pressures and turbo-pump vibration parameters that had to be monitored while valves were being cycled to allow safe buildup of gas generator pressure, turbo-pump speed, manifold pressures, and combustion pressure. At any time during the startup or main stage process, if any of these critical parameters deviated from predetermined nominal limits, then a sequence of commands had to be issued for safely shutting down the engine.<br />
+    <br />
+     The design and code generation for the control and limit shutdown algorithms was relatively straight forward, but the challenge was to ensure it would all work correctly prior to firing up a developmental rocket engine for the first time. A process was needed to ensure that the software and hardware involved would correctly respond to all critical control parameters. This process had to simulate failures during all stages of operation while providing simulated feedback for the closed loop startup, main stage, and shutdown modes. A rocket engine simulator was required to validate the control system for this one-of-a-kind developmental engine. This simulator would then have to be implemented in a system that could provide not just mathematical values, but electrical signals for communicating pressure values and vibration monitoring events back to the control system. High fidelity modeling of rocket engine processes is very complex and to develop a math model that runs in real-time
+    is even more complex. In previous projects of this type, actual hardware components electronically similar to the rocket engine valves, actuators, and pumps had to be assembled into a crude engine breadboard. All these components then had to be individually connected to the data acquisition and control system for validating the monitor and control algorithms. In addition, time delay relays and signal generators would have to be integrated with the breadboard components to provide enough precision for validating the fast, time critical, transient response requirements.<br />
+    <br />
+     The facility where this rocket engine was to be tested already had a programmable logic controller (PLC) in place for controlling some test facility support functions. Although not fast enough to control or provide high fidelity real-time engine simulation it was ideally suited for issuing signals back to the engine control system in response to the control system program output commands. It could also be used to sequence various failure simulation signals for validating correct responses to possible engine problems during all stages of operation. The complexity of designing a complete real-time breadboard or math model simulation of the rocket engine was replaced using simpler PLC ladder logic. It was used to provide feedback defined by the engine designers for the critical control points in the power up and power down staging process. This in essence allowed using a very simple empirical model of the engine for our validation simulator. It was then also possible to easily
+    inject simulated failures at various critical times to ensure safe operation of all control and emergency shutdown algorithms. This technique could be applied to many dynamic process algorithms on systems that have a few fairly well defined critical control points.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>A combination of technical insight and innovation plus understanding of test article requirements together with extensive experience with the test facility and support system can lead to test success at reduced costs.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>When a dynamic process must be simulated, analyze the critical parameters to find discrete points at which control actions must be performed. Then build a simple empirical model, which may be developed and run on a slower and easier to program and integrate platform such as an industrial PLC. This simplified approach to the validation using hardware and software tools already in the system reduced validation time and costs.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0681: Concurrent Engineering Guideline for Aerospace Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0681: Concurrent Engineering Guideline for Aerospace Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0681 (Database ID: 681)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/681" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2204 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Reliable hardware and software can be designed and developed in a shorter time and at a lower cost and at a short schedule if maximum use is made of a computer-aided concurrent engineering techniques. Operational, manufacturing, assembly, quality, reliability and safety considerations can easily be interjected at the beginning of the design process through the prudent use of the team approach, aided by computer based rapid prototyping techniques, methods, and tools.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><u>Background:</u></p>
+
+    <p>Concurrent engineering is the simultaneous and integrated engineering of all design, manufacturing, and operational aspects of a project from the conceptual formulation of the project through project completion. It is a team-engineering process in which all of the specialists who normally get involved in a project combine into a multi-disciplinary task force to carry out a project. They work together, trading ideas, and ensuring what they do early in the project (like major design decisions or changes) will not adversely affect what they do later (like "manufacturing in" quality or supporting flight operations). All disciplines are addressed simultaneously.</p>
+
+    <p>Until the advent of high-powered, networked computers and communications systems, effective concurrent engineering was an ambitious goal, particularly for large, technically complex aerospace projects. The advent of interactive three-dimensional computer-aided design, solid modeling, simulation, and virtual reality methods has created a naturally adaptive environment for the complex interactions that are required in a truly effective concurrent engineering process. This guideline describes the desirable elements of a successful concurrent engineering process and enumerates the ways computer-aided techniques can facilitate the effective meshing of the simultaneous engineering process with currently available design, analysis, processing and image processing tools.</p>
+
+    <p><u>The Concurrent Engineering Process:</u></p>
+
+    <p>A key to the success of the concurrent engineering process is to gather together a complete and competent team to carry out the project. All disciplines that will be affected by the hardware and software configurations must be represented. Typical engineering disciplines that must be represented on a concurrent engineering team are: flight hardware or software design, mission operations, manufacturing and assembly, tooling and fixture design, and safety and mission assurance. As shown on Figure 1, consideration of each of these disciplines, coupled with the client, user, or customer requirements is the key to a successful integrated design. The fully integrated design is then subjected to process engineering and production functions to provide operational hardware and software. Concurrent engineering teams must be encouraged to develop a free flow of ideas between team members. The object of the team approach is to provide an environment in which potential problems can be
+    easily and quickly exposed to creative and synergistic problem solving by the innovative engineering and design processes of the team itself. To do this, the hardware and software configurations under consideration must be communicated to all team members with equal rapidity and understanding. This is where computer-aided solid modeling, simulations, kinematic modeling, virtual reality, and graphical computer-aided engineering analysis techniques come into play.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009056main_0681.jpg"  HEIGHT="349"  BORDER="0" /><A HREF="/llis_lib/txt/1009541main_0681.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p><u>The Use of Computer-aided Concurrent Engineering Methods:</u></p>
+
+    <p>In recent years, computer-aided design tools that have become available have augmented, and in many instances, replaced the design&#151;build&#151;test, design&#151;build&#151;test cycle. A master model usually takes the form of a three-dimensional, color image of the element, mechanism, system, or component being developed. Software programs now available can be programmed to interface (in varying degrees of seamlessness) with this master model to perform a wide variety of engineering functions. The resulting refined master model can be used to define, design, and provide manufacturing and operational control codes for the tooling, fixtures, and the element itself. On-screen, three-dimensional animated simulations are made possible through sophisticated software coupled with high-speed computers. In many instances, effective use of these simulations will eliminate the need for hard mockups, operational models, and engineering prototypes. High reliability, and a shorter
+    development cycle, are feasible through the use of these systems.</p>
+
+    <p><u>Computer Modeling and Integrated Engineering Analysis:</u></p>
+
+    <p>Through the use of three-dimensional solid modeling and related computer-based kinematic and dynamic analyses, interference analysis and interface checking can be automated. Engineering analysis procedures such as structural and thermal finite element analyses, mass properties analyses, tolerance analyses, and ergonomic studies can be performed using the master three-dimensional model as an input to currently available engineering analysis software modules. Motions and forces generated in simple or complex mechanisms can be derived accurately without building and testing the actual hardware. Virtual imaging and virtual reality interactive displays can help the concurrent engineering team to establish valid mechanical or human interfaces. Simulations of the robotic mechanisms interaction personnel and with hardware can yield off-line programming codes that will control robots.</p>
+
+    <p>Three-dimensional solid models of aerospace structures have proven useful for the routing of electrical or fluid lines, the confirmation of manufacturing and maintenance access to structures, and the design of master tooling and fixtures. Rapid transmission of structure designs to other disciplines (propulsion, electrical, manufacturing, and quality) has speeded up the process of team engineering design. Simultaneous electronic linking of documents and specifications with hardware designs and software coding has enhanced traceability and data compatibility with designs in rapidly changing configurations.</p>
+
+    <p>Solid, three-dimensional prototypes can be created directly from a three-dimensional computer image through stereolithography and laser-fused deposition techniques. The design and configuration of tooling, fixtures and prototypes of these elements can be created through interaction with the master model, and machine instructions can be generated that will produce the master model. Thus, engineering designs can be rapidly converted into manufacturing aids and control codes. By linking engineering, project management, and work flow information to computer aided drawings and models, the speed and reliability of product data management, file management, and work process flow management can be enhanced.</p>
+
+    <p><u>Real-Time Participation of the Concurrent Engineering Team in the Computer-Aided Design and Development Process:</u></p>
+
+    <p>Availability and proper use of currently available computer-based systems can significantly improve the communication of engineering information among members of the concurrent engineering team. Each member is able to view parts, components, subsystems, and system, as they appear in final form well before hardware is built. Thus, interfaces and interactions between system elements and disciplines can be significantly enhanced. General guidelines for optimum use of these techniques and methodologies are as follows:</p>
+
+    <ol>
+      <li>
+        In planning multiple-organizational support of the computer-aided concurrent engineering process, strive for standardization in the following areas:
+
+        <ol type="a">
+          <li>The manner in which computer-aided drawings and models are identified, constructed, and filed.</li>
+
+          <li>The color coding, layer designations, scale, symbols, graphic ground rules, and format of computer-aided design documents.</li>
+
+          <li>The "handshaking" between computer-aided capabilities of participating organizations.</li>
+        </ol>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide rapid transmission or networking of information and central displays of pictorial, graphical, and text information about the project for concurrent review by all key concurrent engineering design team members.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide configuration management controls for the master model, with free access for viewing, analysis, and alternate design creation. Put prudent restrictions on changes to the master model.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide more time in the beginning stages of a project to allow the interactive design process to operate. Permit this longer initial concept definition and design phase to create a faster production and operations phase by freezing the design once all engineering interactions and considerations have been thoroughly input, negotiated, and established.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The concurrent engineering process by its nature does not require the normal control and review activities historically performed in the management of product development. The degree to which the concurrent engineering process is empowered to proceed with parallel process actions is believed to be directly proportional to potential schedule, cost, and reliability improvements.</p>
+
+    <p>The use of concurrent engineering practices, coupled with the application of current state-of-the-art three-dimensional solid modeling and analysis tools, has proven to dramatically reduce new project development times while maintaining or further improving quality, reliability, and safety. MSFC has implemented several projects using concurrent engineering techniques and has reduced to practice several software and hardware elements using computer based three-dimensional kinematic and dynamic analysis. Although the project development teams now in operation have not yet completed the development cycle, the concurrent engineering process is working smoothly. Beneficial results are expected. Manufacturing and refurbishment cells using robots that were designed and programmed with kinematic and dynamic simulation techniques were put into operation in record time and are producing high quality results.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Ashley, Steven: "DARPA Initiative in Concurrent Engineering," Mechanical Engineering, ASME, New York, NY, April 1992.</li>
+
+      <li>Aukstakalnis, Steve: "Virtual Reality and Experiential Prototyping of CAD Models," Design Net, Ariel Communications, pp. 62-65, January 1992.</li>
+
+      <li>Babai, Majid et-al: "Mobile Robot Hydroblast System, CAD/CAM, Robotics and Factories of the Future," pp. 350-355, Southbank Press, London, 1991.</li>
+
+      <li>Bein, Christopher: "Robot Simulation and Manufacturing, Aerospace Engineering," SAE, pp. 11-13, October 1992.</li>
+
+      <li>Edwards, David E.: "Interactive Computer Graphics," Aerospace America. AIAA, New York, page 41, December 1992.</li>
+
+      <li>Hartley, John R.: "Concurrent Engineering," Productivity Press, Cambridge, MA, 1990.</li>
+
+      <li>Hedberg, Sarah: "Concurrent Engineering," The Spang Robinson Report on Intelligent Systems, Vol. 8, No. 4, Wiley, New York, NY, April 1992.</li>
+
+      <li>Hurwitz, Ken: "Integrating 3-D Solids in Design," Design Net, Ariel Communications, pp. 49-51, Austin, TX, January 1992.</li>
+
+      <li>Kramer, Bill: "The CAD/CAM Link to DFM (Design for Manufacturability)," Design Net, Ariel Communications, pp. 17-51, Austin, TX, February 1992.</li>
+
+      <li>Kusiak, Andrew: "Concurrent Engineering: Automation, Tools and Techniques," John Wiley &amp; Sons, New York, NY, 1992.</li>
+
+      <li>Park, Brian V.: "Concurrent Documentation," Design Net, Ariel Communications, pp. 25-30, Austin, TX, January 1992.</li>
+
+      <li>Wahlin, Greg: "Intelligent Interference Checking," Design Net, Ariel Communications, pp. 35-38, Austin, TX, June 1992.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to: (1) have all critical disciplines represented on the concurrent engineering team; (2) standardize methods of creating and maintaining three-dimensional models; (3) display or furnish all design and engineering information to key team members on a timely basis; and (4) provide effective configuration management controls on the master model could result in wasted expenditures for hardware, software, training, and concurrent engineering management.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use concurrent engineering techniques, coupled with computer-based three-dimensional solid modeling, simulation, and engineering analysis methods to design and develop reliable hardware and software.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

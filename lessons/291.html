@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0291: Design of Dust Covers for Systems Requiring Forced Air Ventilation (Such as Electronics Systems)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0291: Design of Dust Covers for Systems Requiring Forced Air Ventilation (Such as Electronics Systems)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0291 (Database ID: 291)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1993-07-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/291" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During burn-in testing of an orbiter General Purpose (Flight) Computer (GPC) in the JSC avionics engineering laboratory, a "fail to synchronize" error was detected. This error indicates that the computer is out of synch with other GPCs involved in the test, and may be the result of a computer hardware problem. The GPC in question was discovered to be very hot to the touch, and inspection of internal sensors indicated the GPC had been overheated beyond design limits. An ensuing investigation showed that the unit had operated without cooling for 11.5 hours due to failure to remove the ventilation system air duct cover prior to installation of the GPC in the test bed. This event was a direct result of not following installation procedures described in the Test Preparation Sheet (TPS). Additional factors contributing to this event included:</p>
+
+    <ol type="A">
+      <li>The design of the cover plate for the GPC cooling duct did not prevent installation of the GPC with the cover in place. Most of the cover plates used in the laboratory were modified with additional foam to preclude installation of the GPC without removing the cover.</li>
+
+      <li>The alarm system used to monitor GPC cooling depended on vacuum sensing instead of positive airflow indications. With the air duct cover in place, the vacuum sensor on the GPC in question showed a normal range reading even though there was no air flowing through the computer. The monitoring of an indirect parameter (vacuum) rather than a direct indication of absence of a critical parameter (cooling air flow) or the existence of the hazardous condition of concern (temperature of the GPC) did not guarantee that proper cooling was provided.</li>
+
+      <li>Only one junior technician was assigned to install the GPC. This was a violation of instructions on the TPS, which required two technicians to perform this task. As a result, the quality assurance assignee for the task helped to perform the installation procedure rather than performing his intended monitoring function.</li>
+
+      <li>There was no formal program of training or certification in place for technicians in the laboratory. The training received was principally an undetermined amount of on-the-job training.</li>
+    </ol>
+
+    <p>Factory evaluation of the GPC involved in this event determined that it was fit for use only as a test or prototype unit and not as a flight unit. The difference in cost between a flight GPC and a test GPC is approximately $700,000.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Design of dust covers for ventilation systems which do not require their removal before hardware installation can result in equipment damage due to interruption of critical cooling air.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Corrective actions recommended by the mishap investigation board include modification of all cooling duct covers to ensure that equipment cannot be installed without first removing the cover.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

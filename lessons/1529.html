@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1529: Ensure Test Monitoring Software Imposes Limits to Prevent Overtest (2003)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1529: Ensure Test Monitoring Software Imposes Limits to Prevent Overtest (2003)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1529 (Database ID: 1529)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-10-11</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1529" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Vacuum testing of the Mars Reconnaissance Orbiter (MRO) telecommunications subsystem at JPL included a multipaction test of the diplexer, which is conducted with the equipment powered. (&ldquo;Multipaction&rdquo; is a phenomenon that occurs when radio frequency (RF) transmit power accelerates electrons in a vacuum, causing a corona discharge and possible RF system failure.) During this test, an accurate indication of the power output of the test equipment was not provided to the test monitoring software. This caused the test monitoring software to command the test equipment to increase the transmitter output to a potentially harmful level. Analysis showed that the GSE power meter stopped taking measurements, possibly due to an AC power anomaly. The test monitoring software then interpreted the zero reading from the power meter as a loss of power, and responded by increasing the drive level of the X-Band Synthesizer to a level sufficient to drive the Traveling Wave Tube
+    Amplifier (TWTA) to maximum output power. To prevent a recurrence, an attenuator or limiter was inserted to maintain the RF output below a specified level, preventing the TWTA from providing more power than the maximum rating of the test article should the power measurements fail. References: (1) Jet Propulsion Laboratory Problem/Failure Report No. Z82462, November 12, 2003. (2) LLIS #0573, &ldquo;Power Bus/GSE Sneak Paths May Energize Spacecraft in the Ground Test Environment" (3) LLIS #0583, &ldquo;Test Contingency Planning Should Consider Facility Power Interruptions,&rdquo; February 19, 1998. Additional Key Words: facility power, test failure, test-induced failure, power limits, test software, fault protection, RF breakdown, RF test, test overstress, High Power RF Breakdown Facility</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>GSE failures can negate the test limits programmed into commercial test monitoring and control software applications.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Before it is used with flight hardware, perform a Failure Mode and Effects Analysis (FMEA) on GSE test equipment to identify failure modes that could cause test monitoring and control software to initiate an overtest.</li>
+
+      <li>Prior to test, under the test principle of "First, Do No Harm" to flight equipment, assure that test monitoring and control software is programmed or a limiting hardware device is inserted to prevent overtest under all conditions, including GSE failure.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.2.5 ("Safety and Mission Assurance Practices: Reliability Engineering"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br>
+In addition, JPL has referenced the lesson as supporting Paragraph 4.12.5.1 ("Flight Electronics Hardware System Design: Interfaces - Flight-Support Equipment Interfaces"), in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

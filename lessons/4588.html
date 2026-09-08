@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #4588: Automated Management of the Technical Baseline:</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #4588: Automated Management of the Technical Baseline:</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #4588 (Database ID: 4588)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-12-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Approval</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Program and Project Management, Review boards, Configuration and data management</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/4588" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Driving Event for this effort was the requirement to track and manage all products related to the Technical Baseline within Windchill. The Technical Baseline serves as a snapshot in time of those items in the Technical Baseline.
+<p>
+To meet the requirements of the Systems Engineering and Integration (SE&I) Technical Baseline, the following steps were required:  
+<ol>
+<li>Create a technical baseline in the GOP Windchill Library</li>
+<li>Manage the data input by SE&I in the GOP DM Project</li>
+<li>Add products to a baseline in the GOP Library</li>
+<li>Roll the current baseline to the new baseline in the GOP Library</li>
+<li>Initiate review/approval/release of technical baseline in the GOP Data Management (DM) Library</li>
+</ol>
+
+Each time the Technical Baseline was rolled to the next revision of the Baseline in Windchill, there was no automation for this effort.  All documents that were part of the Technical Baseline (and not just those products that were revised or updated) had to be manually uploaded or transferred electronically to the new baseline within Windchill.  This was extremely time consuming and inefficient.  Documents had to be manually moved from the Project side of Windchill to the Data Management Library side of Windchill, one document at a time.  
+<p>
+Additionally, the Technical Baseline was revised by Management Directive (MD), which was also a manual process.  MDs were issued for each revision to the Technical Baseline under Constellation, which required an update to the MD each time, and presentation and approval at the Project Review Board (PRB). Once approved, the MD was manually released and uploaded to the Baseline. The MD contained a list of all those products that were revised for that revision to the Baseline.   For efficient management of the Systems Engineering and Integration (SE&I) Technical Baseline, an automated tool or an additional module integrated within Windchill is required to track and maintain the Technical Baseline and requirements
+</section>
+<section><h2>Lesson(s) Learned</h2>
+A tool or module should be procured or developed that will provide automation of the Technical Baseline process and manage data integrity. Additionally, all users of the tool should receive appropriate training.
+</section>
+<section><h2>Recommendation(s)</h2>
+Develop an automated tool or procure a module that provides more efficient management of the Technical Baseline and integration with Windchill (the official data repository).
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0678: Design Considerations for Selection of Thick-Film Microelectronic Circuits</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0678: Design Considerations for Selection of Thick-Film Microelectronic Circuits</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0678 (Database ID: 678)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/678" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2202 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>This guideline identifies design considerations and reliability requirements to assure reliable performance and to avoid cost overruns due to redesign and operational failures.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <ol>
+      <li>Component information. The design of thick-film microelectronic circuits requires information on specifying components with established reliability. The components used in thick-film microelectronic circuits are somewhat different from the sealed or encapsulated, fully tested discrete components used to fabricate circuits on printed wiring boards. The components fall into the categories of (a) thick-film resistors, (b) thin-film resistors, (c) ceramic capacitors, (d) semiconductors, and (e) thick-film conductors.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Circuit partitioning. Several factors should be considered when partitioning the system into individual microelectronic circuits. Each of the circuits should be a separate and complete function which can be tested with the addition of a minimum number of external components, and should have the minimum number of input-output pins. If a system consists of two signal paths which must track, the partitioning should be done such that the corresponding circuits of each channel are in one thick-film microelectronic circuit. This will ensure that the circuit elements of both channels will be at the same temperature and therefore increase the tracking accuracy.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Packages available. There are several package types that are currently available in industry. The packages that are used for space flight application shall meet MIL-H-38534 requirements.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Power dissipation. The junction temperature is a function of the case temperature and the power dissipation within the package. The case temperature is a function of the internal power dissipation of the microelectronic circuit, the printed wiring board loading, the thermal impedances from the package case to the outside world, and the operating ambient temperature of the chassis. Thermal impedance of packages, substrates, and semiconductors all affect the thermal gradient from the junction to the outside world. Therefore, the choice of package and the distribution of power within the package will affect the maximum allowable power of the circuit with either a fixed maximum case or ambient temperature.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Worst case analysis. A worst case analysis ensures that the circuit will function over the maximum operating temperature with the worst possible combination of component variables. The worst case analysis shall be performed in accordance with the applicable program requirements. The worst case analyses shall include the individual components. Before an actual worst case analysis is started, the following preliminary considerations must be made:
+
+        <ol type="a">
+          <li>Physical limitations. There are three factors to consider: (1) the number of required pin-outs must be available in the desired type of package and a key pin should be included in the pin count; (2) the number of components in the circuit shall not exceed the number of components specified as the maximum number that can go into that particular type of package, and (3) the use of non-established reliability components in the circuit design should be avoided.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Power dissipation within the circuit. The worst case power dissipation within the circuit must be calculated.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>External factors. External factors affecting circuit performance must be identified before starting the worst case analysis; e.g., (1) the power supply tolerance should be known, (2) the worst case loading of the circuit&iacute;s outputs must be considered, and (3) the decoupling requirements must be considered.</li>
+        </ol>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Testing. Most hybrid microelectronic devices are custom made for their particular applications. However, the part operation should be precisely defined by electrical characteristics which include all necessary parameters with test conditions, parameter minima and maxima, and parameter typical values.<br />
+      <br />
+      All active and passive elements of the hybrid should have electrical characteristics derated according to the appropriate derating factors listed in MIL-STD-975 for NASA standard parts. Derating will increase the safety margin between the operating stress level and the actual failure level for the constituent hybrid parts and will provide added protection for system anomalies unforeseen by the application engineer.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Dynamic trimming. The thick-film microelectronic circuits are dynamically trimmed using automatic laser trim system. Power supply settings, input conditions, and output requirements must be defined prior to dynamic trimming. All resistors involved in a trim must be referenced, along with the output reaction to the trimming of each resistor.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Radiation Hardness Testing. The components used in the thick-film hybrids are required to undergo radiation hardness testing when radiation tolerances are specified in the detail specification, which may include dose rate and latchup, total dose, and neutron irradiation as applicable.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Circuit quality level. The hybrid microelectronic circuits shall be screened to meet the requirements of MIL-STD-883, Class S or B depending on the program requirements. As a minimum, the following screening steps are essential in accordance with MIL-STD-883 applicable test methods, to ensure the quality and reliability. They are, (a) Die Visual Inspection, (b) Substrate Visual Inspection, (c) Element Evaluation, (d) Package Evaluation, and (e) Quality Conformance Evaluation including groups A, B, C, D, and E testings of MIL-STD-883 specifications.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>This document and JSC contractor paper, JSC 25471, provide the information and guidance to circuit designers for specifying devices which will be developed and produced as thick-film hybrid circuits. In order to ensure a reliable circuit at the lowest cost, there are several areas that require special consideration when designing a thick-film hybrid circuit. Use of these two documents should allow the engineer to spend less time researching standards and more time designing reliable microcircuits.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>JSC 25471, Electrical Design Considerations for Thick-film Microcircuits</li>
+
+      <li>MIL-M-38510 Microcircuits, General Specifications for</li>
+
+      <li>MIL-H-38534 Hybrid Microcircuits, General Specifications for</li>
+
+      <li>MIL-STD-975 NASA Standards Parts List</li>
+
+      <li>MIL-HDBK-978 NASA Parts Applications Hand Book</li>
+
+      <li>MIL-STD-1772 Certification Requirements for Hybrid Microcircuit Facilities and Lines</li>
+
+      <li>MIL-STD-883 Test Methods and Procedures for Microelectronics</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Inadequate design and selecting non-established reliability components may impair the reliability of hybrid microcircuits.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This guideline provides information and guidance for the design of thick-film hybrid circuits.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

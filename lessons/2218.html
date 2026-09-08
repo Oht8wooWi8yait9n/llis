@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2218: Flight Software Engineering Lessons</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2218: Flight Software Engineering Lessons</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2218 (Database ID: 2218)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-06-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment, Flight Operations, Hardware, Payloads, Risk Management / Assessment, Software, Spacecraft, Test and Verification, Software Engineering, Spacecraft and Spacecraft Instruments, Mission control Planning, Training and simulation systems, Early requirements and standards definition, Engineering design and project processes and standards, Level II/III requirements definition, Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2218" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The engineering of flight software (FSW) for a typical NASA/Caltech Jet Propulsion Laboratory (JPL) spacecraft is a major consideration in establishing the total project cost and schedule because every mission requires a significant amount of new software to implement new spacecraft functionality. FSW development is performed concurrently along with the design and development of (1) the spacecraft with its many mechanical, electronic, and computational elements, (2) the instruments that comprise the spacecraft’s payload, and (3) the testbed software that simulates the spacecraft, its payload, and the extreme operational environment of space. This is extremely challenging because the complete and accurate spacecraft hardware design documentation needed to complete the design and test the FSW and develop the simulation software is typically unavailable until late in the software development lifecycle. Because FSW engineers cannot test their software against mature hardware (that reflects the actual behaviors and performance characteristics of the hardware that will operate in space) until they gain access to flight-like testbeds, a significant amount of software testing is usually performed after the spacecraft has launched, during the relatively benign cruise portion of the mission. Software changes are then uploaded to the spacecraft prior to critical mission events-- like landing on Mars.<br/><br/>
+
+These endemic constraints to FSW design and test impact project cost and schedule and pose a risk to mission success because the FSW must be integrated with the flight system hardware. In addition, FSW is suffering accelerating growth in size, complexity, and difficulty to understand and verify (Reference (1)). These factors complicate project cost and schedule estimation/performance in a functional area where an in-flight fault may cause an unrecoverable error. FSW errors had a role in the loss of the Mars Polar Lander and Mars Climate Orbiter missions (Reference (2)), in the Mars Global Surveyor loss of contact (Reference (3)), and in recoverable in-flight failures such as the Mars Exploration Rover flash memory anomaly (Reference (4)).<br/><br/>
+
+<U>References</U>:  
+
+<ol><li>“NASA Study of Flight Software Complexity,” NASA Lesson Learned No. 2050, NASA Engineering Network, May 5, 2009. http://www.nasa.gov/offices/oce/llis/imported_content/lesson_2050.html</li><li> 
+
+“Report on the Loss of the Mars Polar Lander and Deep Space 2 Missions, JPL Special Review Board, JPL D-18709, March 22, 2000.</li><li>
+
+“Mars Global Surveyor (MGS) Spacecraft Loss of Contact,” NASA Lesson Learned No. 1805, NASA Engineering Network, September 4, 2007. http://www.nasa.gov/offices/oce/llis/imported_content/lesson_1805.html</li><li>
+
+“MER Spirit Flash Memory Anomaly,” NASA Lesson Learned No. 1483, NASA Engineering Network, August 23, 2004. http://www.nasa.gov/offices/oce/llis/1483.html </li><li>
+
+Ronald Kirk Kandt, “Flight Software Engineering Lessons,” Proceedings of the 15th Americas Conference on Information Systems (AMCIS 2009), August 06-09 2009, San Francisco. [URS208276]</li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Reference (5) distills the findings of several JPL studies and flight mishap investigations, conducted over the course of two decades, which explored the causes of FSW problems affecting the success of JPL missions.
+</section>
+<section><h2>Recommendation(s)</h2>
+Reference (5) suggests the following steps to mitigate the risk from defects in the FSW development process. Some of these have been addressed in JPL software development process procedures: 
+
+<ol><li>Adopt a risk-based approach to software engineering. Software development resources may not be allocated optimally because of overly optimistic estimates of software reuse, inability to accurately estimate the cost of new code, reallocation of hardware functionality to FSW, hardware that operates differently than planned, contracts bid using overly optimistic cost assumptions, a shortened FSW development schedule due to late hardware delivery, and delays in FSW testing due to late delivery of flight-like testbeds. Where resource limitations constrain the project’s ability to perform every preferred software development practice in a manner that yields benefits, software practices should be assessed for risk mitigation potential and adopted based on value. Recommendations 2 through 9 may also help to mitigate software engineering risk.<br/><br/></li><li>
+
+Involve software engineers in the early, system-level, project decisions that determine flight system characteristics (e.g., performance, reliability, flexibility), flight system cost, and the role of FSW in the performance of spacecraft flight system functions. <br/><br/></li><li>
+
+Provide projects with the requisite software development infrastructure prior to project commencement. To avoid disrupting FSW development, make any changes to the software development process-- or to tools that are inadequate or poorly integrated-- before software engineers are assigned to the project.<br/><br/></li><li>
+
+Develop simulations of instruments and other custom hardware that interfaces with FSW at the earliest point at which their behavior is understood. Use these simulations in regression tests of FSW logic, and later for testing in the flight-like environment. Avoid deferring all FSW testing to the end of FSW development when there are fewer resources available to fix problems.<br/><br/></li><li>
+
+Before coding begins, prepare an FSW architecture specification for use in developing the conceptual architecture, realizing the architecture as a high-level integrated flight system design, and managing subsequent changes. As code is written and actual data is obtained on resource usage and performance characteristics, reassess the architecture and the detailed technical decisions based on the variance from earlier estimates.<br/><br/></li><li>
+
+Define a suite of flight system architectures that are each capable of supporting a commonly-flown category of JPL mission (e.g., “Planetary Rover,” “4 Instruments or Less,” and “High-Bandwidth Communications”). This will significantly ease the problem of project requirements and hardware that are unstable and project software simulations and flight-like testbeds that are unavailable.<br/><br/></li><li>
+
+Development of a complete and consistent set of engineering requirements requires a robust systems engineering process that defines performance and resource utilization requirements, traces requirements to higher and lower-level requirements, ensures review of requirements by key stakeholders and by parties independent of the engineering of the requirements, and assesses the requirements using a checklist of questions that address quality concerns.<br/><br/></li><li>
+
+Use objective measures to monitor FSW development progress and to determine the adequacy of software verification activities. To reliably assess FSW production and quality, these measures should include metrics such as the percentage of code, requirements, and defined faults tested, and the percentage of tests passed in both simulation and testbed environments. These measures should also identify the number of units where both the allocated requirements and the detailed design have been baselined, where coding has been completed and successfully passed all unit tests in both the simulated and testbed environments, and where they have successfully passed all stress tests.<br/><br/></li><li>
+
+Manage FSW development using an integrated system. Use of separate “stovepiped” commercial or JPL-developed systems for FSW requirements definition, action item tracking, problem reporting, and scheduling inhibits effective management of FSW development.</li></ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.11 (“Engineering Practices: Software Development”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 7,” JPL DocID 58032, September 30, 2008.<br/><br/>
+
+In addition, JPL has referenced as supporting Paragraph 4.11 (“Flight System Design: Flight Software System Design”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 3, December 11, 2006.<br/><br/>
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-8719.13a, Software Safety
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

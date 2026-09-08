@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0830: Rocket Engine Failure Prediction Using an Average Signal Power Technique</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0830: Rocket Engine Failure Prediction Using an Average Signal Power Technique</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0830 (Database ID: 830)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/830" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-5 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p><u>Benefit:</u></p> 
+<p>This technique will reduce unnecessary failures attributed to the traditionally used redline-based system. The average signal power algorithm can be used with engine test firing data to provide significantly earlier failure indication times than the present method of using redline limits. Limit monitoring techniques are not capable of detecting certain modes of failures with sufficient warning to avoid major hardware and facility damage.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>For discrete random processes, probabilistic functions are used to describe the behavior of the rocket engine system. The Power Spectral Density (PSD) is computed to describe how the variation of the random process is distributed with frequency. For stationary signals, the PSD is bandlimited to ±1/(2T), where T is the sampling interval in seconds.</p> 
+<p>Average Signal Power Calculations</p> 
+<p>The PSD is defined as the discrete-time Fourier transform of an autocorrelation function. (The derivation of the autocorrelation function is shown in Reference 1.) When the autocorrelation function is evaluated at zero lag, then an expression for the average signal power (ASP) of a random stationary process results:</p> 
+<img alt="refer to [D] description" border="0" height="133" src="https://llis.nasa.gov/llis_lib/images/1009333main_0830-1.jpg" title="refer to [D] description" width="447"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009808main_0830-1.txt">[D]</a> 
+<p>where:</p> 
+<div style="margin-left: 2em">
+  P 
+ <small><sub>xx</sub></small>f ) = discrete-time Fourier Transform 
+ <br> r 
+ <small><sub>xx</sub></small> [0] = inverse discrete-time Fourier transform 
+</div> 
+<p>The average signal power for several SSME parameters is determined by calculating the autocorrelation at zero lag for the parameters provided in Table 1. The assumption is made that the signal is stationary over the computation interval. The average signal power calculations are performed over 2-second, 50-percent overlapping window for nominal test firings at both 104- and a 109-percent-rated power levels. A smaller time increment must be used to improve the failure the algorithm.</p> 
+<img alt="refer to [D] description" border="0" height="714" src="https://llis.nasa.gov/llis_lib/images/1009334main_0830-2.jpg" title="refer to [D] description" width="303"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009809main_0830-2.txt">[D]</a> 
+<br> Table 1: Signal Threshold and Safety Factor for SSMEs 
+<p>The average plus three standard deviations of the average signal power are computed for all the nominal firings at both engine power levels. These values are combined to calculate the thresholds (see Reference 1).</p> 
+<p>A safety factor ranging from 1.5 to 3.5 is needed to ensure no false failure indications are computed for the nominal firings. The range of safety factors reflected signal behavior variations that occurred over seven nominal A2 firings. When used in the failure detection mode, failure of the average signal power of a parameter to fall outside its threshold results in a failure indication. Also shown in Table 1 are the thresholds calculated from the SSME nominal test firings based on the average signal power algorithm along with the associated safety factors.</p> 
+<p>Algorithm Implementation</p> 
+<p>A system identification and signal processing software package on a RISC workstation provides the average signal power algorithm. Command and Data Simulator (CADS) data from a predetermined number of SSME test firings are used to establish the failure indication thresholds.</p> 
+<p>Several system conditions must be considered to ensure that the algorithm does not erroneously indicate an engine fault. These conditions include sensor failure, propellant tank venting and pressurization, and propellant transfer. Sensor failure detection techniques must be exercised before, or concurrently, with safety monitoring algorithms in order to eliminate the possibility of a sensor failure being interpreted as an engine problem. Typically, all parameters exhibiting sensor problems are removed prior to the application of the algorithm.</p> 
+<p>Failure indication thresholds are established by applying the average signal power algorithm to a set number of nominal tests. For the SSME four anomalous firings and one nominal firing were tested using the thresholds shown in Table 1. An example of the application of the average signal power algorithm to a SSME anomalous test firing is shown in Figures 1 and 2.</p> 
+<p>Figure 1 illustrates the interval over which the average signal power was computed for a single parameter, HPFP discharge pressure and one test firing.</p> 
+<img alt="refer to [D] description" border="0" height="333" src="https://llis.nasa.gov/llis_lib/images/1009335main_0830-3.jpg" title="refer to [D] description" width="446"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009810main_0830-3.txt">[D]</a> 
+<br> Figure 1: Application of the Average Signal Power Algorithm to the HPFP Discharge Pressure 
+<p>Figure 2 displays the resulting average signal power, as a function of time. As shown, the threshold for the average signal power algorithm has been exceeded.</p> 
+<img alt="refer to [D] description" border="0" height="329" src="https://llis.nasa.gov/llis_lib/images/1009336main_0830-4.jpg" title="refer to [D] description" width="444"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009811main_0830-4.txt">[D]</a> 
+<br> Figure 2: Average Signal Power for that Interval with the Failure Indication Threshold 
+<p>Nomenclature:</p> 
+<div style="margin-left: 2em">
+  HPFP high pressure fuel pump 
+ <br> HPFT high pressure fuel turbine 
+ <br> HPFTP high pressure fuel turbopump 
+ <br> HPOP high pressure oxidizer pump 
+ <br> HPOT high pressure oxidizer turbine 
+ <br> LPFP low pressure fuel pump 
+ <br> MCC main combustion chamber 
+ <br> PID parameter identification 
+ <br> SSME space shuttle main engine 
+</div> 
+<p>References:</p> 
+<ol> 
+ <li>Meyer, C.M., Zakrajsek, J.F., Rocket Engine Failure Detection Using System Identification Techniques, AIAA Paper 90-1993, July 1990.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Detection of anomalous behavior is critical during the operation of the Space Shuttle Main Engine (SSME). Increasing the detectability of failures during the steady-state operation of the SSME will minimize the likelihood of costly engine damage and maintenance. The average power signal algorithm is superior to the time series algorithm because more parameters contribute to the first simultaneous failure indication times. This increases the agreement between several parameters, thus increasing the likelihood that an engine anomaly has occurred. This method also reduces the number of false failure indications that can prematurely shut down the engine during testing or operation.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Apply a univariate failure prediction algorithm using a signal processing technique to rocket engine test firing data to provide an early failure indication. The predictive maintenance technique involves tracking the variations in the average signal power over time.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Transportation System (STS).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

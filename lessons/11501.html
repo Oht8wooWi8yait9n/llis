@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #11501: MSL Actuator Design Process Escape</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #11501: MSL Actuator Design Process Escape</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #11501 (Database ID: 11501)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-09-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design, Manufacturing and Assembly, Program Management, Systems Engineering and Analysis, Flight Equipment, Hardware, Industrial Operations, Payloads, Spacecraft, Test and Verification, Spacecraft and Spacecraft Instruments, Acquisition / procurement strategy and planning, Contractor relationships, Early requirements and standards definition, Review systems and boards, Engineering design and project processes and standards, Level II/III requirements definition</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/11501" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The ambitious MSL mission presented some major design challenges for the NASA/Caltech Jet Propulsion Laboratory (JPL) in its development of the “Curiosity” rover. Arriving at a successful design for the rover actuators, however, posed the one of the thorniest problems over the course of MSL development. An actuator is a complex component comprised of a motor and a gearbox. Rotary actuators are used on planetary rovers for such disparate purposes (Figure 1) as driving the rover wheels, moving the robotic arm (RA), and actuating science instrument components.</p> 
+<p> <img alt="Figure 2 is a color photo of a small motor lying on a table; the motor is partly positioned on a sheet of white cloth material. The motor is a steel cylinder that appears to be approximately 3-½ inches long and 1-½ inches in diameter with 4 wires passing through the housing and the rotating stem of the motor protruding from the side positioned over the cloth. The white cloth is stained with substantial amounts of a black powder that appears to be dry lubricant that escaped from the motor." src="https://llis.nasa.gov/llis_lib/images/2014-07_actuators_Fig1.jpg" /></p> 
+<p> <strong>Figure 1.</strong> Locations of MSL actuators</p> 
+<p> The Mars Exploration Rover (MER) project that landed the previous, smaller, rover design on Mars in 2004 procured commercial off-the-shelf motors with minimal design modifications for use on the Mars surface. However, the MSL mission profile called for a rover that could operate for seven times longer than any previous planetary mission, and at the colder latitudes farther from the equator. JPL needed to acquire a total of 61 actuators and 29 stand-alone motors (90 units) for use in the MSL engineering models, test units, spare units, and in the flight model that was intended to be launched in 2009.</p> 
+<p> Because the wet lubricant that had been used for the MER actuators was not suitable for usage at colder temperatures, the baseline design (Reference (1)) for most MSL rover applications called for an actuator with a titanium gearbox and dry lubricant capable of operating at -135 degrees C without a dedicated heater. By June 2007, three life tests of this design had each failed (Figures 2 and 3), and in September 2007 the MSL project switched to a heated actuator design using a conventional steel gearbox and wet lubricant actuator design that left part of the gearbox unheated (Reference (2)). </p> 
+<p> This redesign was passed to the actuator supplier, but by this late date in the project development cycle, even triple shifts at this point were insufficient to produce quality actuators on schedule. By November 2008, NASA recognized that MSL was too far behind schedule to meet its October 2009 launch date (due to the problems with actuator development and production-- and other risk factors), and the mission was delayed for two years.</p> 
+<p> <img alt="Figure 2 is a color photo of a small motor lying on a table; the motor is partly positioned on a sheet of white cloth material. The motor is a steel cylinder that appears to be approximately 3-½ inches long and 1-½ inches in diameter with 4 wires passing through the housing and the rotating stem of the motor protruding from the side positioned over the cloth. The white cloth is stained with substantial amounts of a black powder that appears to be dry lubricant that escaped from the motor." src="https://llis.nasa.gov/llis_lib/images/2014-07_actuators_Fig2.png" /></p> 
+<p> <strong>Figure 2</strong> Unit #3 of the dry lubricant actuator design reached only 20% of its design life before failing the life test (Reference (3))</p> 
+<p> <img alt="Figure 3 is a color photo of a bronze or dark gold colored gearbox that has been opened to reveal its insides. Along the circumference of a disk-shaped housing are positioned apparent bolt holes for securing the housing to the motor assembly. Within the housing are positioned two concentric platter-shaped elements that apparently rotate within the housing." src="https://llis.nasa.gov/llis_lib/images/2014-07_actuators_Fig3.png" /></p> 
+<p> <strong>Figure 3</strong> Unit #3 titanium gearbox</p> 
+<p> The MSL Curiosity rover’s two-year primary mission ended in August 2014, and the actuators performed to expectations in the severe Martian environment.  </p> 
+<p> <strong style="line-height: 1.4;">References:</strong></p> 
+<ol> 
+ <li> Mars Science Laboratory Rover Actuator Thermal Design Peer Review, January 23, 2008, p. 8.</li> 
+ <li> Keith Novak & Steven Hendricks, “Mars Science Laboratory Rover Actuator Thermal Design,” Spacecraft Thermal Control Workshop, March 11 -13, 2008, p. 8-9.</li> 
+ <li> Richard Cook, et al, “Quarterly/GPMC Mars Science Laboratory” May 9, 2007, p. 4.</li> 
+ <li> Rius Billing and Richard Fleischner, “Mars Science Laboratory Robotic Arm,” 14th European Space Mechanisms and Tribology Symposium, September 28 - 30, 2011.</li> 
+ <li> Technical Assessment of MSL Actuators, Letter to Howard Eisen (JPL) from Dr. Christopher DellaCorte (GRC), April 2, 2009.</li> 
+ <li> “Dawn Ion Propulsion System (IPS) Lessons Learned, NEN #3396, NASA Lesson Learned Information System (LLIS), April 26, 2010.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> <em>See &quot;Recommendations.&quot;</em></p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p style="line-height: 16.79px;"> Reference (4) provides a list of flaws in the MSL actuator mechanical design process, including poorly defined performance requirements, lack of established technical milestones, design incompatibilities, and inadequate verification.</p> 
+<p> 1.     <strong style="line-height: 1.4;">Lesson Learned</strong> - Mass reduction without consideration of technical and programmatic impacts can lead to significant subsystem development dependencies, schedule delays, and in some cases, design weaknesses (References (4) and (5)):</p> 
+<p style="margin-left: 22.5pt;"> <strong>1a) <u>Optimization/Reduction Across Interfaces</u></strong></p> 
+<p style="margin-left: 45pt;"> Planetary rovers and Entry, Descent, and Landing (EDL) systems are as volume-constrained as they are mass-constrained.  In pursuit of minimizing mass and volume, the MSL RA joint bearings were incorporated into the drive actuators.  Thus, a functional robotic arm could not exist without the actuators, and the RA development schedule was held hostage by a delayed actuator development schedule.</p> 
+<p style="margin-left: 45pt;"> <strong style="line-height: 16.79px;">Recomendation 1a)</strong> A configuration that results in the drive actuators being integral to the subsystem structure causes significant development schedule dependences.  Specification of the external loading requirements (particularly cross-moment loading cases) must be defined very early in the design phase to enable a timely actuator procurement.  (See Item #7 below regarding long lead-time procurement of bearings.)</p> 
+<p style="margin-left: 22.3pt;"> <strong>1b)  <u>Mass Reduction vs. Manufacturability</u></strong></p> 
+<p style="margin-left: 44.6pt;"> The original plan was to develop &quot;a catalog&quot; of a few motor types and gearbox sizes, which subsystem users could mix and match at Preliminary Design Review (PDR).  Actuator procurement was significantly delayed because subsystem users specified a custom actuator for each application in pursuit of minimizing mass and volume.  (The original purpose for developing titanium gearing was for mass reduction, but the increased volume required compared to a conventional steel gearbox was not taken into consideration.) The number of variations on a similar design exploded, with many gear stages that differed only in the width of the gear.</p> 
+<p style="margin-left: 44.6pt;"> <strong style="line-height: 16.79px;">Recomendation 1b)</strong> There are significant schedule ramifications in mass optimization of numerous actuator types.  Minimization of mass is an important pursuit, but project management must balance the amount of mass reduction against manufacturability-- number of drawings produced, parts count, management of parts inventory, and manufacturing cost/schedule.</p> 
+<p style="margin-left: 22.5pt;"> <strong>1c)  <u>Mass Optimization Resulting in Poor Design Configuration</u></strong></p> 
+<p style="margin-left: 45pt;"> The MSL Low-Power High Torque Actuator (LPHTA) with its A500 motor, and to some extent the A300 motors, exhibited speed and torque instability that was never fully understood or fixed-- only mitigated.  The symptoms occurred somewhat randomly, but were ultimately blamed on a combination of rotational non-concentricities, bearing clearance fits, &quot;springy&quot; bearing preload, unbalanced rotors, and a three-bearing design to accommodate the encoder.  Prioritizing mass and volume reduction resulted in a non-optimum MSL motor mechanical configuration, producing a number of functional imperfections that most likely were the root source of operating dynamics problems.  (Reference 6.)</p> 
+<p style="margin-left: 45pt;"> <strong style="line-height: 16.79px;">Recomendation 1c)</strong> The motor design process should place a priority on controlling concentricity of the rotating mass, tight-fitting bearings that still allow easy disassembly, consistent bearing preload, and avoiding a three-bearing configuration.  (This issue is also related to LL #5 regarding a breakdown in the design review process.)</p> 
+<p> 2.     <strong style="line-height: 1.4;">Lesson Learned –</strong> The motor encoder implementation was susceptible to magnetic disruption from the motor/brake. The motor cold encoder was not tested in the proximity of the power-off brake early in the development program. The cold encoder also presented functional idiosyncrasies (in concert with the drive electronics) that were difficult to characterize and mitigate.</p> 
+<p> <strong style="line-height: 16.79px;">Recomendation 2)</strong> Verify motor encoder design compatibility with magnetics in Phase B, or very early in Phase C.  Should any of the three elements in a controlled-drive design (i.e., motor, feedback device, and drive electronics) not be fully developed, avoid design configurations that are magnetically sensitive. </p> 
+<p> 3.     <strong style="line-height: 1.4;">Lesson Learned - </strong>Qualification of a new actuator material/lubricant application in the flight program:</p> 
+<p style="margin-left: 0.5in;"> <strong>3a) Validation of New Application.  </strong></p> 
+<p style="margin-left: 0.5in;"> The supplier failed to retain the data from MER-- the heritage program that utilized the dry lube process proposed for MSL.  Evidence of process efficacy was not pursued by JPL until failures were experienced in the MSL developmental life test program.  The one MER hardware example still available was the Lander Petal Actuator (LPA), which had passed its much shorter cycle life qualification test for the MER project.  (The MSL developmental life test unit design was derived from the MER LPA.)  The MER LPA qualification life test unit was again disassembled and re-inspected under magnification.  It was determined that the dry lube and gearing failure observed in the MSL development unit was just beginning in that MER unit, but at a fraction of the MSL design life.  Hence, the MSL project reverted to a wet lubrication scheme for the gearing.</p> 
+<p style="margin-left: 0.5in;"> Implementation of titanium gearing was fraught with development problems not related to lubrication.  As is common with the use of titanium, many problems were ultimately traced to the low thermal conductivity of the material.  Accommodation of the thermal gradients within the gearbox and use of hard surface coatings might have eventually produced a successful titanium gearing design.  Instead, JPL went with &quot;conventional&quot; steel materials, but using the (larger) titanium gearing design configuration.</p> 
+<p style="margin-left: 0.5in;"> <strong style="line-height: 16.79px;">Recomendation 3a)</strong> Demand a higher standard of proof-of-readiness prior to incorporation of risky new technology. This proof did not exist at the time the MSL project chose to implement titanium gearing (for mass reduction) and dry lubricant gear coating (for cryogenic operation without active heating).</p> 
+<p style="margin-left: 0.5in;"> <strong style="line-height: 1.4;">3b) Fall-back plan for New Technology.  </strong></p> 
+<p style="margin-left: 0.5in;"> A steel gearbox approach concurrent with a titanium gearbox design program would have increased the initial costs (plus the need for more staff), but it would have been ready for implementation if the titanium gearing design approach failed.  Furthermore, this would have provided an accurate design trade of mass and volume between the two approaches.  MSL switched to the conventional steel gearing and conventional wet lubrication once the development problems couldn’t be solved quickly, but retained the larger gearing design intended for the titanium material to preserve cost and schedule.</p> 
+<p style="margin-left: 0.5in;"> <strong style="line-height: 16.79px;">Recomendation 3b)</strong> Whenever new technology is incorporated in the baseline design of the flight system, a heritage technology &quot;fall-back&quot; implementation should be concurrently developed until the new technology is validated.</p> 
+<p> 4.     <strong>Lesson Learned</strong> - <u>Out-of-Phase Development</u></p> 
+<p style="margin-left: 22.5pt;"> The Critical Design Review (CDR) schedules for the actuators slipped until mid-2007, yet extremely important requirements such as output torque, external loading, and cycle life were fuzzy.   Disconnects such as &quot;what side of the interface does torque margin reside&quot; resulted in the need to submit waivers to institutional requirements.</p> 
+<p style="margin-left: 22.5pt;"> <strong style="line-height: 16.79px;">Recomendation 4)</strong> Avoid out-of-phase project development, which in this case resulted from &quot;re-architecture&quot; of the MSL Surface Sampling System in spring 2007. The detailed performance requirements for the Sampling System actuators were determined well after detailed design had begun in the winter of 2006.</p> 
+<p> 5.  <strong>Lesson Learned - </strong>Breakdown of the design review process<u>:</u></p> 
+<p style="margin-left: 0.5in;"> <strong>5a) <u>Gate Reviews Not Actually Passed</u>.  </strong></p> 
+<p style="margin-left: 0.5in;"> Although over 200 requests for action (RFAs) were submitted as a result of the design reviews, few were closed by the supplier.  In some cases delta-reviews were convened, and in some of those reviews, some of the action items were answered.  Due to limited staffing at JPL and at the supplier, there was a lack of attention to closing major open items identified in the reviews. Also, there were a number of glaring design deficiencies that were only identified after testing had begun. JPL and the supplier were operating nearly continuously in &quot;recovery mode&quot; from ongoing test anomalies.  In some cases poor design features were identified, but they were left unchanged in an attempt to preserve schedule.</p> 
+<p style="margin-left: 0.5in;"> Few Actuator design reviews were truly &quot;passed,&quot; but extreme schedule pressure demanded that production proceed.  Although it was hoped that design weaknesses would be retired concurrently, there was not enough JPL and supplier staff to accomplish this.  In hindsight, a few of the significant hardware failures were traced to design review RFAs that did not receive timely or adequate attention.</p> 
+<p style="margin-left: 0.5in;"> <strong style="line-height: 16.79px;">Recomendation 5a)</strong> It is imperative RFAs be dispositioned and retired in a timely manner, particularly for a deliverable such as the MSL actuators that are integral to multiple subsystems.  Workforce resources need to be applied to manage design review actions so manufacturing doesn’t build-in design weaknesses that cannot be rectified at a later date.</p> 
+<p style="margin-left: 0.5in;"> <strong>5b) <u>Review of vendor competency</u>. </strong></p> 
+<p style="margin-left: 0.5in;"> The actuator supplier had demonstrated good technical performance in the past, and JPL anticipated similar performance for MSL. However, the supplier had subsequently reorganized staff roles and lost some core competencies. This was not clearly recognized by the MSL project until the actuator designs were already in production.  (See Item #5a.)  As another example, the JPL Dawn mission launched in 2007 had planned to use the same ion propulsion system design that was successfully demonstrated by the JPL Deep Space 1 spacecraft, only to find that the supplier’s technical and management capabilities had significantly degraded during the 6-year lag between the two projects (Reference (7)).</p> 
+<p style="margin-left: 0.5in;"> <strong style="line-height: 16.79px;">Recomendation 5b)</strong> The design reviews did not adequately assess the competency of the supplier staff to produce the product.  This largely occurred due to the incomplete nature of the review materials, which tended to hide or defer to later the detailed technical weaknesses and corrective actions.  Preliminary design reviews must strive to evaluate the competency of the supplier and its staff as well as the technical design.  Both Dawn and MSL point out the need to “re-qualify” subcontractors who bid to produce mission-critical components. (See Item 6.)</p> 
+<p> 6.     <strong>Lesson Learned</strong><u> - Excessive Scope to Design, Test & Deliver Large Production Quantities</u></p> 
+<p style="margin-left: 22.5pt;"> The actuator development task consisted of too much work, too many deliverables, in too short a schedule—a key finding.  The development schedule slipped as the procurement concept changed from &quot;a catalog of component assemblies to select from&quot; to custom actuators for specific applications (per Item #1b above).  The decision to procure all of the actuators from one supplier was extremely risky, and JPL paid dearly in cost and schedule.  Eventually, splitting a quantity of small actuators from the primary supplier to another (who performed very well) greatly enabled the eventual success of the actuator subsystem.</p> 
+<p style="margin-left: 22.5pt;"> The final actuator ship-set for MSL was 31 actuators in 13 configurations, and the total quantity procured was 90 units!  Seven large dynamometers were fabricated to permit concurrent acceptance testing.</p> 
+<p style="margin-left: 22.5pt;"> The development schedule was compressed to an insufficient duration due to delayed requirements definition.  The complexity of the designs was complicated by mass reduction efforts and changing requirements as the various subsystem customers for the actuators refined their needs.   An unfortunate result of the schedule slip for the design phase was that the scope of work to design and implement testing resources compromised the flight hardware development efforts.  The large quantity of deliverable hardware over a relatively short duration overstretched supplier and JPL staff resources.</p> 
+<p style="margin-left: 22.5pt;"> <strong style="line-height: 16.79px;">Recomendation 6)</strong>  Track the cost-to-complete and schedule-to-complete throughout project development, and allocate project reserves as necessary to retire major project development risks.  Consider obtaining a second source for complex critical components acquired in quantity.</p> 
+<p> 7.    <strong>Lesson Learned</strong><u>  - Rolling Element Bearings Procurement is Extremely Long-Lead</u></p> 
+<p style="margin-left: 22.3pt;"> Today, there are fewer ball bearing suppliers, and they are less willing to respond rapidly to customers who have unusual requirements and purchase in small quantities. Therefore, design changes demanding a change in bearing size or type often cannot be accomplished without a serious impact to schedule.</p> 
+<p style="margin-left: 22.3pt;"> <strong style="line-height: 16.79px;">Recomendation 7)</strong> Since the load cases define the size of the bearings, the difficulties of long-lead procurement were exacerbated by delays in determining external load cases per Item #4 and by the complexity of the usage cases of the subsystems per Item #1. Recognize that acquisition of rolling element bearings is a fundamental pacing item for production of actuators. </p> 
+<p style="margin-left: 22.3pt;">  </p> 
+<p>  </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.17.1 (”Management Practices: Risk Management”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 10,” JPL DocID 58032, October 23, 2013.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

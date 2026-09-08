@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #18803: Software Triple Redundancy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #18803: Software Triple Redundancy</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #18803 (Database ID: 18803)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-11-04</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Specified</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research,  Human Exploration and Operations,  Science,  Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Software,  Software Engineering</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/18803" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The Interface Adapter Module (IAM) of the Stratospheric Aerosol and Gas Experiment III on the International Space Station (SAGE III on ISS) provides electronics interfaces between the various elements of the instrument and the ISS. The IAM flight software is responsible for ensuring that its stored data is not lost or unusable by a single corruption or failure of flash memory.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Triple redundancy for items in flash memory is a simple and uniform way of identifying memory corruption in space. The advantage to triple redundancy is the ability to detect which copy of a file is corrupt, and correct it either autonomously or by command. Combining triple redundancy with a Cyclic Redundancy Check (CRC) allows the software to determine which files have been corrupt, and to ensure that files are correctly read, even when they are read by voting the contents of the three copies. The IAM flight software images are triple redundant. Triple redundancy is simpler and more uniform than the implementation of double redundancy in the IAM flight software. In the case of double redundancy there was a main and redundant copy, while for triple redundancy all copies were equal. Having code to treat each copy differently added some complexity because with double redundancy there is no ability to vote, so there is a need for some other strategy like nominating one as the main. In this case all data had CRCs, so it was not a problem of determining which copy to use, only that having non-equal treatment of each copy meant that the code needed special cases to distinguish between the two copies. For us, the trade was in available space – the only advantage of double redundancy would have been less space used. This was not an issue in this specific case, so we would have been better off using triple redundancy for all items stored in flash memory.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> The recommendation is to consider triple redundancy the default option for storing persistent data on flight systems. It provides a simple and well known way to solve the problem of data corruption and provides the opportunity to correct corrupt data by command or autonomously. It is also recommended to store a Cyclic Redundancy Check (CRC) along the three copies of each file to ensure that the correct image can be identified.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

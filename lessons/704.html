@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0704: Nickel-Hydrogen Spacecraft Battery Handling and Storage Practice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0704: Nickel-Hydrogen Spacecraft Battery Handling and Storage Practice</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0704 (Database ID: 704)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/704" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1109; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Nickel-Hydrogen (Ni-H<small><sub>2</sub></small>) batteries will significantly deteriorate, principally due to capacity fading, if the proper storage and handling procedures are not followed in a number of stages in the cell/battery lifetime. A set of proven guidelines is followed by flight projects in the preparation and utilization of project unique handling and storage procedures in order to minimize these deterioration effects and ensure the reliable performance of Ni-H<small><sub>2</sub></small> batteries.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A sealed Ni-H<small><sub>2</sub></small> secondary cell is a hybrid, combining battery and fuel-cell technologies. The nickel positive electrode comes from the nickel-cadmium cell and the negative platinum electrode from the hydrogen-oxygen fuel cell. The cell is contained in a pressure vessel designed to operate up to 1,200 p.s.i. of hydrogen gas when the cell is fully charged. Pressure measurements can be used to determine the "state of charge" of batteries in flight. Salient features of the Ni-H<small><sub>2</sub></small> battery are a long cycle life that exceeds any other maintenance-free secondary battery system, high specific energy (gravimetic energy density), high power density (pulse or peak power capability), and a tolerance to overcharge and reversal. It is these features that make the Ni-H<small><sub>2</sub></small> battery system the prime candidate for the energy storage subsystem in many aerospace applications, such as geosychronous-earth-orbit (GEO), commercial
+    communications satellites, and low-earth-orbit (LEO) satellites. The GEO and the LEO applications have two different requirements for batteries. The LEO applications require charge/discharge cycles of 18,000 to 30,000 cycles with depth of discharges (DOD) up to 40% and up to a 5 year lifetime in orbit. The GEO applications require lifetimes in orbit of 5 to 10 years and about 100 cycles per year with maximum DODs of 60% for a total of 500 to 1,000 cycles. To meet these mission requirements, a number of different design approaches are used by a variety of Ni-H<small><sub>2</sub></small> battery manufacturers.</p>
+
+    <p>Generally, two or more batteries are used per spacecraft to meet the power requirements. The major advantage of using multiple batteries is reliability. If one battery fails, the other battery or batteries can maintain all or at least the most significant functions of the spacecraft.</p>
+
+    <p>The storage and handling of Ni-H<small><sub>2</sub></small> cells and batteries can significantly alter performance during both prelaunch and mission lifetimes. The development of a low-voltage plateau in the discharge mode or capacity fading (loss of capacity to 1.0 volts) is the major concern. Under most circumstances, capacity can be recovered. However, if a cell or battery is overheated, it can be permanently damaged. The following storage and handling procedures cover the three stages in the cell/battery lifetime:</p>
+
+    <center>
+      <table width="90%" border="1" cellpadding="4" cellspacing="2">
+        <tr>
+          <td><b>Stage 1 - Storage of cells after manufacture and before assembly into batteries:</b></td>
+
+          <td>
+            Storage periods can range from a few weeks to several years depending upon the launch schedule. The following three methods are used to store and maintain capacity of cells for periods of time from several weeks up to three years.
+
+            <ol type="a">
+              <li>Store fully charged cells open-circuited at temperatures below 0&deg;C. These cells must be recharged, (topped off), every 7 to 14 days.</li>
+
+              <li>Store fully charged cells at temperatures below 0&deg;C with a trickle charge rate of C/100.</li>
+
+              <li>Store discharged cells open-circuited at 0&deg;C for up to three years.</li>
+            </ol>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Stage 2 - Storage of batteries after assembly:</b></td>
+
+          <td>Once the flight batteries are assembled, they are generally stored until they are shipped to the launch site for integration into the spacecraft. For flight batteries, the storage period can range from a few months to three years. The longer periods represent program delays that affect launch schedules.<br />
+          <br />
+          The same methods for the storage of batteries can be used as defined above for cells. Regardless of the method of storage used, the capacity of batteries is measured both before and after storage to determine if any capacity fading has occurred during storage.</td>
+        </tr>
+
+        <tr>
+          <td><b>Stage 3 - Storage of cells/batteries during shipment:</b></td>
+
+          <td>Cells/batteries are fully discharged and short circuited during shipment. Each cell/battery is wrapped separately with its own packaging material to exclude humidity and control temperatures to 5&deg;C (+/- 5&deg;C). Five to 10 cells can be packed within the same container and shipped air express to minimize shipping time. The shipping container should be equipped with temperature recorders to provide assurance that flight cells/batteries have not been exposed to temperatures exceeding 25&deg;C. The capacity of cells/batteries is measured both before and after shipment to determine if any capacity fading has occurred during shipping.</td>
+        </tr>
+
+        <tr>
+          <td><b>Stage 4 - Storage of batteries at the launch site:</b></td>
+
+          <td>Batteries should be in the fully discharged state during handling operations at the launch site. Batteries can then be maintained during short term storage in the charged state at room temperatures but must be recharged every 7 to 14 days. Also, flight batteries can be maintained on trickle charge prior to launch. The final reconditioning of flight batteries should be performed 14 days prior to spacecraft launch. Upon completion of the reconditioning, flight batteries should be kept on low rate trickle charge until launch or reconditioned every 30 days if the launch is delayed. The batteries should be kept in cold storage if the launch is delayed beyond 90 days.</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The following additional general guidelines and procedures are used in the handling and operation of Ni-H<small><sub>2</sub></small> batteries.</p>
+
+    <ol>
+      <li>
+        A battery should be "reconditioned" if it has been on open circuit, subjected to intermittent use, i.e., open circuit, trickle charge, occasional discharge, etc., for a cumulative period of 30 days. Reconditioning is effected by performing the following sequence at 20&deg;C.<br />
+        <br />
+
+        <ol type="a">
+          <li>Discharge at C/2 constant current rate until the first cell reaches 1.0 v/c.</li>
+
+          <li>Drain each cell with a 1 ohm resistor until each cell's voltage is less than .03 V/C.</li>
+
+          <li>Recharge battery at C/20 constant current rate for 40 hours (+/- 4 hours).</li>
+
+          <li>Repeat steps a and b.</li>
+
+          <li>Charge battery at C/10 constant current rate for 16 hours ( +/- 4 hours).</li>
+
+          <li>Repeat steps a, b, and e.</li>
+        </ol>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Batteries are not charged or discharged in parallel. Isolation is provided in spacecraft power systems to ensure that a failure of one battery does not affect another battery.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Batteries are charged and all functions and cells are checked out thoroughly prior to installation in a flight spacecraft. Batteries are installed into a spacecraft in a discharged state.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>"Tap"s are never installed on any portion of a string of cells in series that can cause unbalanced loading of portions of a battery.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Shorting resistors are normally placed across individual cells to prevent cell reversal which could damage individual cells when flight Ni-H<small><sub>2</sub></small> batteries are stored short circuited.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Power system designs include circuitry to prevent overcharging of batteries and the generation of excessive heat which can damage batteries.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>The temperatures of Ni-H<small><sub>2</sub></small> batteries are monitored during operation and storage. Operating temperatures are not permitted beyond 18&deg;C and non-operating exposures are not permitted beyond 25&deg;C. Exposure to temperatures beyond 30&deg;C results in permanent loss of capacity.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Heaters are used as required to insure that the temperature of Ni-H<small><sub>2</sub></small> batteries do not go below -25&deg;C at any time in order to prevent freezing of the electrolyte.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Flight batteries should not be subjected to extended spacecraft integration and test activities. The open circuit and intermittent use of Ni-H<small><sub>2</sub></small> batteries during extended spacecraft integration and testing activities are known to significantly accelerate the degradation of batteries. Results from controlled tests have shown permanent and irreversible changes.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        The design of flight batteries should include the following provisions for ground console interfacing with the batteries while integrated into the spacecraft.<br />
+        <br />
+
+        <ol type="a">
+          <li>Signal lines for monitoring total battery voltage, charge and discharge currents, battery temperatures, and individual cell voltages.</li>
+
+          <li>Capabilities to charge and discharge the battery from the ground test console.</li>
+
+          <li>Capability to place a resister and a shorting plug across each individual cell.</li>
+        </ol>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>A log book shall be maintained on each flight battery including the complete test histories of each cell, of the assembled battery, and of all integration and test and launch site activities. Each log book shall identify the project and battery and individual cell serial numbers. Chronological (date and time) entries for all test sequences, summary of observations, identifications of related computer stored records, malfunctions, names of responsible test personnel, and references to test procedures controlling all tests shall be recorded.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Since Ni-H<small><sub>2</sub></small> batteries are perishable, their ability to satisfactorily complete their mission life is directly related to their storage, their ground use, and handling. Historical performance information is required to ensure their flight worthiness at launch time.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Ni-H<small><sub>2</sub></small> batteries can deteriorate due to improper storage and handling. This practice which avoids this deterioration is based on a long period of battery development, testing, and flight experience.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>NASA Handbook for Nickel-Hydrogen Batteries: NASA Reference Publication 1314, September 1993</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The impact of not following this practice is that batteries may be damaged during handling and storage and may exhibit degraded performance during the mission including early life failure. Additionally, batteries may not be properly charged prior to launch and therefore may not meet their mission performance requirements or may require a lengthy recharging procedure before the satellite can be fully activated.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Develop and implement handling and storage procedures to ensure reliable operation, minimize deterioration, and prevent irreversible effects on the flight performance of Ni-H<small><sub>2</sub></small> flight batteries due to improper handling and storage.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Hubble Space Telescope (HST) (NASA's first flight use of Ni-H<small><sub>2</sub></small> batteries in a low Earth orbit application); Earth Observing System AM, (EOS AM), LANDSAT</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

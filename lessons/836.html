@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0836: Solid Rocket Booster (SRB) Refurbishment Practices</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0836: Solid Rocket Booster (SRB) Refurbishment Practices</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0836 (Database ID: 836)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/836" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p><u>Benefit:</u></p>
+
+    <p>This Lesson Learned is based on Maintainability Technique number OPS-01 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Refurbishment of SRB components is cost effective and conserves resources. This allows for reuse of SRB's, thus saving money for the program versus building new SRB's for each launch.</p>
+
+    <p>Solid Rocket Booster (SRB) Refurbishment encompasses the activities required to return the reusable SRB component to a flightworthy condition after SRB ignition, liftoff, and flight; separation from the external tank; descent (free fall and parachute); ocean impact; and retrieval. When the decision was made to recover and reuse the SRB hardware, a design team was organized to formulate the maintainability criteria for a reusable booster. The SRB Flow Chart for Maintainability is shown in Figure 1. The maintainability design team produced the Solid Rocket Booster Maintainability Design Criteria Document (reference 1), a document that was used by designers as they conceived each design feature, performed the necessary tradeoffs of the design parameters, and made other design and product engineering decisions. The design team included maintainability as a design goal and incorporated the desired maintainability features into components of the end item throughout the design
+    process. Maintainability factors that were considered during the design of the SRB are shown in Table 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009341main_0836-1.jpg"  HEIGHT="197"  BORDER="0" /><A HREF="/llis_lib/txt/1009816main_0836-1.txt"  >[D]</A><br />
+      Figure 1. SRB Flow Chart for Maintainability
+    </center>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ol>
+              <li>Accessibility</li>
+
+              <li>Commonality of Fasteners</li>
+
+              <li>Electrical Subsystem Installation and Removal</li>
+
+              <li>Thrust Vector Control (TVC) Subsystem Installation and Removal</li>
+
+              <li>Markings and Color Coding</li>
+
+              <li>Unitization of Subsystems</li>
+
+              <li>Irreversibility of Connectors</li>
+
+              <li>Tool and Equipment Design</li>
+
+              <li>Spares Provisioning</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      Table 1. SRB Maintainability Factors
+    </center>
+
+    <p>Design Process Considerations</p>
+
+    <p>Table 2 lists typical maintenance actions that were considered during the design process. The SRB was designed to withstand launch, water impact, and towback environments, incorporating the capability of 10 flights for the parachutes; 20 flights for electrical/electronic components, Thrust Vector Control (TVC) components, and SRM components; and 40 flights for the structures. SRB structures are typically welded and/or mechanically fastened aluminum except for the external tank attach ring, which is mechanically fastened steel. All aluminum structural assemblies are first painted and then coated with an ablative insulation. The SRM segments are forged D6AC steel. All structural components are cleaned and/or alodined as appropriate, before being primed and top coated with paint. The mechanically fastened aluminum and steel structural components are designed to be protected from salt water intrusion by applying sealant between adjoining surfaces, installing the fasteners with
+    sealant, torquing the fasteners, and applying a fillet of sealant along the edge of brackets where they join the main structure. The electronic/electrical components exposed to salt water are sealed, and the external surfaces of these components are painted. The TVC hydraulic system is a closed-loop system that does not permit the intrusion of sea water. The SRM segments' external surfaces are protected with an epoxy paint finish, and the internal surfaces are protected by the propellant insulator that is bonded to the inside surfaces of the SRM segments. Areas not protected with paint or bonded-on insulation are protected with a water-repellent grease.</p>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ol>
+              <li>Inspection</li>
+
+              <li>Troubleshooting</li>
+
+              <li>Calibration and Adjustment</li>
+
+              <li>Repair</li>
+
+              <li>Verification</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      Table 2. Maintenance Actions
+    </center>
+
+    <p>Specific Improvements</p>
+
+    <p>Typical areas of the SRB that have been redesigned or modified as a result of trouble areas found during recovery and refurbishment are discussed below:</p>
+
+    <ol>
+      <li>Galvanic corrosion occurred in the aft skirt of the first few SRB's recovered. To prevent this from recurring the design team added a zinc coating to selected metal components, and bolted anodes (Zinc bars) to some components of the TVC system.</li>
+
+      <li>The aft skirts of the first few SRB's experienced water impact damage. The corrective action included the addition of gusset reinforcements to the structural rings. Foam was sprayed on the interior of the aft skirt to protect the reinforcement rings and the TVC components. Impact force with the water was reduced by increasing the diameter of the main parachutes from 115 feet to 136 feet. The larger parachutes decreased the SRB's water impact velocity from 88 ft/sec to 75.5 ft/sec (60 mph to 51.5 mph, respectively).</li>
+
+      <li>During initial teardown and inspection, water and corrosion were found between the mating surfaces of structural members. To correct this problem, the sealant application specifications were modified to require the sealant to be applied to both surfaces before joining.</li>
+
+      <li>To eliminate potential water entry into the forward skirt, the following areas were modified or redesigned:</li>
+
+      <li style="list-style: none">
+        <ol value="a">
+          <li style="list-style: none">The aft seal on the forward skirt was changed from a rectangular to a "D" configuration to allow better contact between the forward skirt and the forward dome of the SRM.</li>
+
+          <li>A fillet of sealant was added between the access door and the surrounding structure after final close-out of the forward skirt.</li>
+
+          <li>Sealant was added to the mating surfaces and the installation bolts of the separation nut housing for the main parachute attach fittings.</li>
+        </ol>
+      </li>
+
+      <li>The following practices improved maintainability, parachute deployment, and parachute inflation:</li>
+
+      <li style="list-style: none">
+        <ol value="a">
+          <li style="list-style: none">To avoid abrasive damage that occurred during main parachute deployment, foam and ablative material were added to portions of the frustum and the main parachute support structure.</li>
+
+          <li>To avoid damage to the parachutes during deployment, the parachutes are now packed in a circular pattern rather than the previous zig-zag pattern.</li>
+
+          <li>The opening at the top of the main parachute canopy was decreased in diameter to allow quicker inflation of the parachute.</li>
+        </ol>
+      </li>
+
+      <li>After every flight electronic components were being returned to the vendor for refurbishment. After refurbishment, acceptance test procedures (ATP) were performed, including vibration and thermal testing. The vibration level of these tests caused the remaining life of the component to be reduced. To prevent the excessive expenditure of components' lifetime (except for the range safety system components) vibration and thermal testing has been eliminated during normal turnaround. The constant improvement of electronic parts by the manufacturer presents a unique problem to the SRB refurbishment effort because the improved parts are often not interchangeable with their predecessors. A sufficient quantity of spare parts must be procured to meet logistics requirements until the components are redesigned to use the improved parts.</li>
+    </ol>
+
+    <p>Typical Refurbishment Procedures</p>
+
+    <p>Figure 2 depicts the SRB flight configuration. After approximately 125 seconds into the Shuttle flight, the SRB's are jettisoned from the external tank. During reentry, the nose cap is jettisoned (it is not recovered), deploying the drogue parachute. After the SRB is stabilized in a vertical position, the frustum is jettisoned and descends into the ocean. Its descent is held to a safe velocity by the drogue parachute. In the meantime, the jettisoning of the frustum deploys the three main parachutes, lowering the remaining portion of the SRB into the ocean. Once in the ocean, the parachutes (which are jettisoned at water impact) and the frustum are removed by the recovery team and positioned onto the recovery vessel. A plug is inserted into the SRM nozzle throat and the SRB is dewatered. Removal of the water from the SRB allows the SRB to be positioned from a vertical position to a horizontal position. The SRB is then towed to the disassembly area dock.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009342main_0836-2.jpg"  HEIGHT="371"  BORDER="0" /><A HREF="/llis_lib/txt/1009817main_0836-2.txt"  >[D]</A><br />
+      Figure 2. SRB Flight Configuration
+    </center>
+
+    <p>At dockside, the SRB is lifted from the water and placed on dollies. The SRB pyrotechnics are disarmed, the TVC fuel system is depressurized, and an assessment team inspects and documents anomalies that may have occurred during flight. Then the SRB is washed with a detergent solution in a semiautomated wash facility. The aft skirt is removed and routed to the TVC disassembly facility. Table 3 lists a typical flow sequence for major structure refurbishment. After the aft skirt is removed, the remainder of the SRB is routed to the disassembly facility.</p>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ol>
+              <li>Tow SRB from water impact area to dock</li>
+
+              <li>Remove SRB from ocean, Rinse with potable water.</li>
+
+              <li>Place SRB on transporter.</li>
+
+              <li>Safe SRB Ordnance and Hydrazine Systems.</li>
+
+              <li>Assessment Team Inspection.</li>
+
+              <li>Wash SRB with detergent solution and rinse.</li>
+
+              <li>Remove aft skirt assembly.</li>
+
+              <li>TVC refurbishement facility.</li>
+
+              <li>Remove TVC Components.</li>
+
+              <li>Disassembly area; remove components.</li>
+
+              <li>Critical dimension check.</li>
+
+              <li>Thermal protection system removal, robotic hydrolaser.</li>
+
+              <li>Inspect, Visual and NDE (XRAY and Ultrasonics).</li>
+
+              <li>Rework, Touch-up paint (repaint every fifth use.)</li>
+
+              <li>Inspect and identify.</li>
+
+              <li>Preflight storage.</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      Table 3. Typical Structure Refurbishment Flow
+    </center>
+
+    <p>As the SRB components are removed, they are identified by attaching a metal tag with their part number and dispositioned per the Predisposition List for SRB Flight Hardware (reference 2). The SRB component is then routed to the refurbishment area where a prepared refurbishment procedure document is attached to the part. The part is reworked to conform to the Refurbishment Engineering Specification. This specification lists the requirements for refurbishing each component to flightworthy condition before it is returned to storage.</p>
+
+    <p>The SRM segments are disassembled in the disassembly facility at dockside, placed on rail cars, and transported to the SRM contractor located in Utah. At the contractor's plant, the segments are off-loaded and routed to refurbishment areas. All segments that are to be reused must meet the requirements of specification STW7-2744 (reference 3). If segment dimensions fall outside the acceptable requirements of this specification, an individual analysis is required to determine the effect on the structural and sealing capability before reusability is determined. All documented nonconformances are reviewed to determine if the condition of the hardware has changed. The most critical areas to be reviewed are case membrane thickness, vent port and leak port threaded areas and sealing surfaces, and aft segment stiffener stubs. No surface defects (corrosion, pitting, scratches, noncrack-like flaws, etc.) deeper than 0.010 inch are permitted. All segments are hydrotested to 1.125 times
+    the Maximum Expected Operating Pressure and magnetic-particle inspected.</p>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ol>
+              <li>Major Structures (Frustrum, Forward Skirt, Aft Skirt, External Tank Attach (ETA) Ring, Solid Rocket Motor (SRM) Segments, etc.</li>
+
+              <li>Electronic Components: Integrated Electronic Assembly (IEA), Integrated Receiver Decoder (IRD), etc.</li>
+
+              <li>Electrical Cables.</li>
+
+              <li>TVD Components Auxiliary Power Unit (APU), Hydraulic Pump, Hydraulic Reservoir, Fuel Service Module (FSM), etc.</li>
+
+              <li>Parachutes</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      Table 4. Types of Hardware That Have Been Successfully Refurbished
+    </center>
+
+    <p>References:</p>
+
+    <ol>
+      <li>NASA/MSFC: Solid Rocket Booster Maintainability Design Criteria Document, SE-019-022-2H, NASA/Marshall Space Flight Center, AL.</li>
+
+      <li>USBI: Predisposition List for SRB Flight Hardware, 10PLN-0027, USBI, United Technologies, Huntsville, AL.</li>
+
+      <li>Thiokol: Space Shuttle SRM Refurbished Case Acceptance Criteria, STW7-2744, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>NASA/MSFC: Sealing of Faying Surfaces Subject to Sea Water Exposure on the SRB Excluding the SRM, 10A00526, NASA/Marshall Space Flight Center, AL.</li>
+
+      <li>NASA/MSFC: Sealing of Fasteners Subject to Sea Water Exposure on the SRB Excluding the SRM, 10A00527, NASA/Marshall Space Flight Center, AL.</li>
+
+      <li>NASA/MSFC: Protective Finishes for Aluminum and Steel Alloys Subject to Seawater Exposure on the SRB Excluding the SRM, 10A00528, NASA/Marshall Space Flight Center, AL.</li>
+
+      <li>NASA/MSFC: Solid Rocket Booster Flight Hardware Ground Operations Plan, SE-019-040-2H, NASA/Marshall Space Flight Center, AL.</li>
+
+      <li>NASA/MSFC: Solid Rocket Booster Flight Hardware Refurbishment Requirements, SE-019-050-2H, NASA/Marshall Space Flight Center, AL, Systems Analysis and Integration.</li>
+
+      <li>Thiokol: Space Shuttle SRM, Requirements and Acceptance for Refurbishment Nozzle Metal Components, STW7-2863, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>Thiokol: Space Shuttle SRM, Process Finalization Requirements for Nozzle Metal Hardware, STW7-3450, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>Thiokol: Space Shuttle SRM, Acceptance Criteria, New and Modified Case, STW7-3489, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>Thiokol: Space Shuttle SRM, Acceptance Criteria for Refurbished Igniter Chambers and Igniter Adapter, STW7-3861, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>Thiokol: Refurbishment and Acceptance Criteria for Redesigned Barrier-Booster Assembly, STW7-3888, Thiokol Corporation, Space Operations, Brigham City, Utah.</li>
+
+      <li>Thiokol: Manufacturing Plan for Space Shuttle Redesigned Solid Rocket Motor (RSRM) Project, TWR-10341(CD), Prepared for NASA by Thiokol Corporation. Brigham City, Utah.</li>
+
+      <li>USBI: 10MNL-0028, Solid Rocket Booster Pictorial Representations Handbook, USBI, United Technologies, Huntsville, AL.</li>
+
+      <li>USBI: Frustum/Aft Skirt Disassembly Requirements, 10REG-0032, USBI, United Technologies, Huntsville, AL.</li>
+
+      <li>USBI: Refurbishment Engineering Specifications For Space Shuttle Solid Rocket Booster Assembly Project, 10SPC-0131, USBI, United Technologies, Huntsville, AL.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Through the past decade of maintaining the SRB by refurbishing the structures and components, MSFC and its contractors have developed and implemented successful refurbishment specifications and procedures that have proven their effectiveness. For example, failure to adhere to the proven practice of refurbishing recovered hardware from salt water impact can result in unacceptable performance, scrapping of otherwise usable hardware, expenditure of unnecessary resources, and possible schedule delays.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Engage in refurbishment activities to rebuild and prepare for reuse of the Solid Rocket Boosters (SRB's) after each Space Shuttle Orbiter launch. These refurbishment activities include: (1) inspection, (2) reworking of anomalies to specification, (3) material review board (MRB) acceptance or scrapping, (4) cleaning, (5) corrosion protection and prevention, (6) scheduled part replacement, (7) test and checkout, and (8) preparation for storage or return to flight buildup.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle Solid Rocket Booster (SRB), Space Shuttle Solid Rocket Motor (SRM).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

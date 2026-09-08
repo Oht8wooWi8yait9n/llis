@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2157: Network/Radio Frequency (RF) Compatibility Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2157: Network/Radio Frequency (RF) Compatibility Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2157 (Database ID: 2157)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-11-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Integration and Testing, Mission Operations and Ground Support Systems, Missions and Systems Requirements Definition, Program Management, Safety and Mission Assurance, Systems Engineering and Analysis, Communication Systems, Ground support systems, Configuration control and data management, Risk management, Configuration Change Control, Maintenance, Product Assurance, Quality, Reliability, Engineering design and project processes and standards, Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2157" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Network/Radio Frequency (RF) Compatibility Test was run to prove that the NASA ground network would work with the Hinode (Solar-B) satellite. At the time of the test, it was thought that the best way to prove the NASA ground stations would be able to communicate with the Japanese-built satellite was to use the GSFC testing equipment designed specifically for this scenario. Typically, the test racks are packed, sent to wherever the satellite is being built, and tested there. In this case, testing took place in Japan. This resulted in a number of problems:
+<ul><li>During the test preparation timeframe, it was difficult to obtain information on the status of the test. </li>
+<li>The shipment of the testing racks and power converters was coordinated very late, leading to confusion and frustration. </li>
+<li>The power converters may have played an important part in subsequent anomalies during the testing and should have been more thoroughly researched. </li>
+<li>The testing racks were antiquated, leading to difficult situations during the testing. </li>
+<li>Changes were made to the test requirements without a discussion being held with the entire group; and consequently, they did not reflect the correct Solar-B requirements. </li>
+<li>A Test Procedure Review was conducted the night before the test, and only after the MSFC Project Office insisted. </li>
+<li>The test procedures should have been placed under configuration control and followed during the testing. </li>
+<li>At the test site, the time given for configuration and verification of the test hardware was inadequate; and the racks were taken apart and re-integrated using photographs. </li>
+<li>Because there were no setup and verification procedures to follow, setup problems led to a loss of 2 days of testing time. </li>
+<li>Uplink commands for the RF Compatibility Test were not loaded beforehand for efficiency. Loading the commands during the test wasted the engineers’ time. </li>
+<li>Troubleshooting during the testing did not follow standard engineering practices or another type of logic flow. During the troubleshooting, the engineers were unable to return the test racks to a known configuration because the configuration changes had not been tracked as the troubleshooting progressed. </li>
+<li>As the testing and troubleshooting progressed, and even after the testing was complete, no one accepted responsibility for the schedule delays, problems during the test, or failure of the test. </li></ul>
+After the failed test, another test was performed, this time using a flight satellite with the same transponder and telemetry system as the one being tested on the ground station. The MSFC Project Office had originally suggested this test, but it was rejected. This test was easily passed with no complications.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+If conducting RF compatibility testing in the U.S., adequate planning must be done to prevent the problems that were encountered with shipping, outdated equipment, configuration control of test procedures and equipment, troubleshooting, and assigned responsibilities. 
+</br>   
+If conducting the same testing overseas, the following feasibility study could be performed: If there is another satellite operating with the same transponder and telemetry system as the one being tested, the ground station could track the orbiting spacecraft to provide data for the characterization of the downlink telemetry performance and to verify station configuration and telemetry data handling in support of the test spacecraft. This was done to finalize the incomplete RF Compatibility Test for Solar-B.
+</section>
+<section><h2>Recommendation(s)</h2>
+Always plan adequately for compatibility testing. Always follow best engineering practices during testing: review, manage the configuration, and follow all procedures in the test documentation (e.g., setup and verification procedures, test procedures, test commands). Perform any setup activities that can be done before the test to save time during the test. Document results of each step of the test, including any unexpected results, malfunctions, anomalies, or hardware/software changes.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

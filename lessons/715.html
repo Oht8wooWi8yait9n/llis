@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0715: Near Field Measurement for Large Aperature Antenna Pattern Determination</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0715: Near Field Measurement for Large Aperature Antenna Pattern Determination</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0715 (Database ID: 715)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/715" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GT-TE-2402 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>For high frequency, large aperture antennas, near field antenna facilities provide more timely, cost effective, and efficient pattern measurements resulting in the following benefits:</p>
+
+    <ol>
+      <li>protection for environmentally (and gravitationally) sensitive antennas from elements such as wind, rain, smog, wildlife, etc.;</li>
+
+      <li>characterization of complete far field pattern over region corresponding to sampled near field;</li>
+
+      <li>measurements are not affected by weather or uncontrolled reflections;</li>
+
+      <li>diagnostic capability for feed misalignment, phased array element amplitude and phase excitation, holographic determination of reflector surface accuracy; and</li>
+
+      <li>depending on range geometry, accurate characterization of far sidelobes and backlobe patterns;</li>
+
+      <li>accurate far-field pattern construction of both co- and cross-polarization patterns from the same set of near field data.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The implementation of near field antenna measurements for the determination of far field antenna patterns involves the following. A near-field probe is placed in close proximity to an antenna under test. The probe or test antenna or both are moved in such a manner that a set of complex field measurements can be made at known locations, with respect to the test antenna. The surface containing the measurements should, in general, completely enclose the antenna. However, for most directional (larger aperture) antennas, an abbreviated plane, which intercepts all but a small percentage of the radiated energy, can be used, resulting in negligible loss in accuracy. A spherical, cylindrical, planar, or other convenient surface can be used. At each measurement point, on the measurement surface, the complex field and position are measured. The set of measurements are transformed, via near-field to far field transformation algorithms, to obtain the far field patterns for the test
+    antenna.</p>
+
+    <p>The near field antenna test facility at LeRC is in an in-door, environmentally controlled test area. The facility contains a moveable antenna mount that is used to orient and position the antenna and a structure used to move the near-field probe within a 22 ft x 22 ft vertical plane. The facility is designed to test antennas with horizontal orientation of the antenna boresite. A block diagram of the LeRC Near Facility is shown in Figure 1, below.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009134main_0715.jpg"  HEIGHT="278"  BORDER="0" /><A HREF="/llis_lib/txt/1009613main_0715.txt"  >[D]</A>
+    </center>
+
+    <p>A laser distance measuring system, shown in Figure 1, is used to measure x and y position of the probe in the scan plane. The complex electric field is measured at each measurement point in the scan plane using a Hewlett Packard 8510 automated network analyzer; and Hewlett Packard 8340 frequency synthesizers are used to provide RF and local oscillator signal sources. Fiber optic links are used to distribute local oscillator signal to RHG mixers. The data acquisition and system control are performed by an on-site computer. Data processing is performed in an offsite computer facility. The LeRC near field test facility was designed for frequencies of operation from 0.8 GHz to 60 GHz. The scanner can test antennas having a D/l to 1100 for antenna apertures up to 18 ft. D is a characteristic dimension of the test antenna (i.e. diameter for a circular aperture antenna), andl is the wavelength for the antenna operating frequency.
+    For detailed description of design, operation and performance see references 1, 2, and 3. Other near field antenna test facilities within NASA (see Appendix) are located at JPL, and JSC.</p>
+
+    <p>In selecting a near field range for antenna testing, just as in selecting a far field range, attention must be given to the determination of measurement uncertainty. This can be of importance for applications requiring low measurement uncertainties or high precision. As in far field ranges, near field ranges are affected by electronic equipment sources of error such as drift, noise, dynamic range, nonlinearity, signal leakage, and reflections. However, the error manifestations may differ between the near field and far field ranges. In addition, the near field range is affected by error sources from probe interactions with the near fields, probe position, antenna alignment, and errors caused by flexing cables. Mathematical errors are generally very small in comparison to experimental errors. For more information on the effects of errors in near field antenna testing see references 6 and 7.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The measurement of far field antenna patterns can be accomplished by using a far field range or a near field measurement facility. For measurements made in the far field, the distance between the test antenna and the measurement transmitting source (or receiver) must be greater than 2D<small><sup>2</sup></small>/l, where D is a characteristic dimension of the test antenna and l is the wavelength. (For antennas having significant aperture phase deviations and requiring low measurement uncertainties, the spacing required can exceed 8D<small><sup>2</sup></small>/l.) From this relation it can be seen that large distances are required for far field testing of large aperture, high frequency antennas. For example the test distance required for far field pattern measurement of a 12 GHz parabolic reflector antenna with a 12 ft diameter would be 3500 ft. Because of the large distances the far field tests are
+    conducted outdoors where the testing is constrained by weather and the transmission path is influenced by the weather. In addition, the path between the test antenna and the source must be controlled to preclude variations due to reflections from traffic entering the path.</p>
+
+    <p>The determination of far field antenna patterns, obtained by using near field measurements, has been demonstrated and proven, references 4 and 5. The validity and accuracies have been shown to be comparable to measurements made using far field ranges, under conditions controlled to preclude environment errors. The determination of far field antenna patterns, from near field measurements, can be done indoors in a protected, controlled environment, where the testing is not constrained by the effects of weather on the test antenna or results. The anechoic environment can provide protection for costly flight hardware from weather, smog, wildlife, and other environmental hazards. The region of testing can be designed and controlled to minimize the effects of reflections. And, for spacecraft antennas designed in a microgravity environment, the effects of gravitational deformations can be reduced or eliminated when tests are conducted with vertical boresite orientations. These
+    advantages are gained at the expense of increased measurement times and complexity. Many measurements must be made to define the near field pattern, see reference 7. The set of near field measurements must be made up of complex field quantities (e.g., a+jb) and an accurate determination of probe position. Data acquisition time is a function of desired accuracy, aperture area, and frequency. In addition, computation time is required to transform the near field data to the far field patterns.</p>
+
+    <p><u>Appendix:</u></p>
+
+    <p>This appendix provides a listing of near field antenna test facilities within NASA, and lists their salient characteristics. The table below lists the location of the facility, the type of scanning surface used, the size of the scanning plane, the maximum frequency of operation, and antenna boresite orientation. The table also describes the mode of operation supported for the test antenna, i.e. transmitting and/or receiving, and notes if the test antenna must be moved during testing.</p>
+
+    <center>
+      <table border="2" cellpadding="2" cellspacing="2">
+        <tr>
+          <td valign="top">
+            <center>
+              <b>Location</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Type</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Size,<br />
+              m</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Frequency,<br />
+              GHz</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Boresite<br />
+              Orientation</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Mode</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Probe<br />
+              motion</b>
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <b>Note</b>
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              JPL
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Cylindrical
+            </center>
+          </td>
+
+          <td>
+            <center>
+              5.2
+            </center>
+          </td>
+
+          <td>
+            <center>
+              18
+            </center>
+          </td>
+
+          <td>
+            <center>
+              horizontal
+            </center>
+          </td>
+
+          <td>
+            <center>
+              trans
+            </center>
+          </td>
+
+          <td>
+            <center>
+              1d
+            </center>
+          </td>
+
+          <td>
+            <center>
+              rotate<br />
+              antenna
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              JPL
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Plane polar
+            </center>
+          </td>
+
+          <td>
+            <center>
+              6.1
+            </center>
+          </td>
+
+          <td>
+            <center>
+              32
+            </center>
+          </td>
+
+          <td>
+            <center>
+              vertical
+            </center>
+          </td>
+
+          <td>
+            <center>
+              trans
+            </center>
+          </td>
+
+          <td>
+            <center>
+              1d
+            </center>
+          </td>
+
+          <td>
+            <center>
+              rotate<br />
+              antenna
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              JSC
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Plane<br />
+              rectangular
+            </center>
+          </td>
+
+          <td>
+            <center>
+              12.2x12.2
+            </center>
+          </td>
+
+          <td>
+            <center>
+              40
+            </center>
+          </td>
+
+          <td>
+            <center>
+              vertical
+            </center>
+          </td>
+
+          <td>
+            <center>
+              trans
+            </center>
+          </td>
+
+          <td>
+            <center>
+              2d
+            </center>
+          </td>
+
+          <td>
+            <center>
+              fixed
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              LeRC
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Plane rectangular
+            </center>
+          </td>
+
+          <td>
+            <center>
+              6.7x6.7
+            </center>
+          </td>
+
+          <td>
+            <center>
+              60
+            </center>
+          </td>
+
+          <td>
+            <center>
+              horizontal
+            </center>
+          </td>
+
+          <td>
+            <center>
+              trans<br />
+              rec
+            </center>
+          </td>
+
+          <td>
+            <center>
+              2d
+            </center>
+          </td>
+
+          <td>
+            <center>
+              fixed
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>The following is a brief description of each center's near-field capability.</p>
+
+    <p><b>Jet Propulsion Laboratory</b><br />
+    Cylindrical Near-Field Facility</p>
+
+    <p>The cylindrical near-field scanning facility at JPL contains an anechoic chamber that is 20x20x40. The chamber contains two automated positioners, one for the test antenna and the other for the sampling probe. Cylindrical near-field scanning is performed by rotating the test antenna in an azimuth direction while the probe step along the z-direction after the test antenna completes a full 360 degree rotation. The Jet Propulsion Laboratory has conducted recently an extensive research in the area of cylindrical near-field that led to the development of efficient and fast algorithms for far field construction, probe pattern compensation, probe characterization, and an error analysis.</p>
+
+    <p>Plane-polar Near-Field Facility</p>
+
+    <p>The plane-polar near-field range facility is located in an anechoic chamber with a dimension of 20'x20'x40'. The facility utilizes two automated positioners, one for the test antenna (generally has a large planer aperture) and the other for the sampling probe. The test antenna aperture is horizontally situated close to the ground with the aperture placed in the x-y plane facing up and rotated azimuthally around the z-axis. The probe is situated close to the ceiling facing down with a single linear translational motion in the x or y direction above and across the center of the test antenna. The probe is generally separated several wavelengths away from the test antenna. The near-field amplitude and phase data are taken with the probe initiated at a particular incremental location while the test antenna is rotated 360 degrees incrementally, which is repeated at the next incremental probe location, etc. The probe has a total rms deflection of 0.025 cm over the total run of the
+    carriage (7m long). This provides sufficient accuracy for measurement up to Ku-band and can be improved for Ka-band measurement.</p>
+
+    <p><b>Johnson Space Center</b><br />
+    Plane Rectangular Near-Field Facility</p>
+
+    <p>The anechoic chamber at the Johnson Space Center is capable of testing antennas up to 30 ft in diameter. The frequency range of the facility is from 1.0 Ghz to 60.0 Ghz. The near-field facility includes a two-axis horizontal scanning system. The scanner is configured with a RF probe which can function as a transmitter or receiver. The probe travels in the Y-direction for each step increment moved by the translation beam in the X-direction. The movement of the scanner will describe a raster scan geometry.</p>
+
+    <p>During testing, the position of the test antenna will be fixed such that its boresight will be perpendicular to the horizontal scan plane of approximately 40'x38'. The planarity of the scanner as described by the probe tip motion will be flat within +/- 0.005 inch. This accuracy is especially critical at the maximum operating frequency of 60.0 GHz.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Sharp, G. R., et al: "Characteristics and Capabilities of the NASA LeRC High Precision 6.7-by 6.7-m Planer Near-Field Scanner," NASA TM 83785, October 1984.</li>
+
+      <li>Kunath, Richard R. and Zakrajsek, Robert J.: "Near-Field Testing of the 30-GHz TRW Proof-of-Concept Multibeam Antenna," NASA TM 87357, September 1986.</li>
+
+      <li>Kunath, Richard R., and Garrett, Michael J.: "Near-Field Antenna Testing Using the Hewlett Packard 8510 Automated Network Analyzer," NASA TM 103699, October 1990.</li>
+
+      <li>Joy, Edward B. and Paris, Demetrius T.: "Spatial Sampling and Filtering in Near-Field Measurements," IEEE Trans. Antennas and Propagation, Vol. AP-20, May 1972, pp. 253-261.</li>
+
+      <li>Newell, A. C., and Crawford, M. L.: "Planar Near-Field Measurements on High Performance Array Antennas," NBS, NBSIR 74-380, July 1974.</li>
+
+      <li>Evans, Gary E.: "Antenna Measurement Techniques," Artech House Inc., 1990.</li>
+
+      <li>Acosta, Roberto J., and Lee, Richard Q.: "Case Study of Sample Spacing in Planar Near-Field Measurement of High Gain Antennas," NASA TM 86872, September 1984.</li>
+
+      <li>Yaghjian, A. D.: "Near-Field Antenna Measurement on Cylindrical Surface: A Source Scattering Matrix Formulation," NBS Tech. note 698, July 1977.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to use near field measurements for determining far field patterns of high frequency, large aperture antennas, constrains testing due to exposure of test antenna to weather. In addition, test results can may be influenced by local weather conditions and the existence of uncontrolled reflections from traffic within the region of the test path.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use near field antenna measurement facilities for determination of far field antenna patterns of large aperture, high frequency antennas (For the purposes of this Guideline, "large aperture, high frequency antennas" are those antennas for which the far field (D<small><sup>2</sup></small>/l) distance exceeds reasonable building size and/or controlled range space. See Technical Rationale in this Guideline.) This guideline supports reliable communications with spacecraft.</p>
+    <br />
+    <br />
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

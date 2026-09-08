@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #31403: Controlling Triboelectrification Effects on Spacecraft Ethernet Cabling</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #31403: Controlling Triboelectrification Effects on Spacecraft Ethernet Cabling</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #31403 (Database ID: 31403)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2022-08-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> nesc</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/31403" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">On multiple flights, disruption of multiple launch vehicle Ethernet communication links occurred during ascent at an altitude of between 10 km and 15 km. Three redundant Ethernet links used to communicate from the spacecraft to the launch vehicle all detected multiple false carriers. An Ethernet false carrier indicates a corrupted idle symbol. Ethernet transmits idle symbols when data are not otherwise being transmitted to maintain synchronization between transmitters and receivers. False carriers tend to be extremely rare events since an Ethernet link typically exhibits a bit error rate on the order of 1 in 10 billion. Although false carriers do not necessarily result in a loss of Ethernet communication, they are an indicator of a degraded connection. Of particular concern was the common cause nature of the anomaly occurring nearly simultaneously on all three redundant Ethernet links.</span></span></span></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">After modeling of atmospheric charging effects and laboratory electrostatic discharge (ESD) testing on flight-like harness and cable/connector assemblies, the most probable root cause was determined to be electrostatic discharges associated with the spacecraft’s triboelectric charging. Primary contributing factors were the colocation of the three Ethernet cable runs through two connectors near each other and inadequate cable shielding. It was observed the spacecraft did not use static dissipative paint on two missions, but one mission with the paint, which should have minimized potentials, also had false carriers.</span></span></span></p> 
+<p style="text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">During harness qualification, IEC 61000-4-2 ESD testing was conducted at Level 4 (8kv), but false carriers were not observed. In hindsight, it was noted that the following likely contributed to not detecting the vulnerability during testing:</span></span></span></p> 
+<ol> 
+ <li style="text-align:justify"><span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif">The harness tested was not the same length as the flight harness. This is significant because the longer harness would be capable of coupling more energy from the radiated electric and magnetic fields associated with the impulse.</span></span></span></li> 
+ <li style="text-align:justify"><span style="font-size:11pt"><span style="line-height:normal"><span style="font-family:Calibri,sans-serif">The connectors in the test harness used a different, more electrically conductive, alloy than the flight harness. This is significant because the more conductive alloy would present a lower impedance to the local equipotential reference and would thus act to reduce the magnitude of the threat waveform.</span></span></span></li> 
+ <li style="text-align:justify"><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">The ESD gun discharge was not injected at the connectors where the susceptibility was later observed and verified.</span></span></span></li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">For redundant systems, physical separation should be utilized to prevent a discharge event from affecting multiple harnesses or avionics systems. </span></span></span></li> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Harness and connector shield integrity should be verified by ESD testing on a fully configured flight harness. Multiple test discharge locations should be tested including shield termination points and all connectors. Such testing should be performed on cables exposed to ESD sources, including triboelectrification effects and spacecraft plasma charging effects.</span></span></span></li> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Transfer impedance measurements on assembled harnesses should be performed as a diagnostic assessment to ascertain the shield performance as a function of frequency. This testing is nondestructive and could therefore be considered for performance on a flight harness, rather than on a flight representative harness differing in length or construction from the actual flight articles. If the transfer impedance is known prior to assembly, or the level of shielding effectiveness required to demonstrate immunity is known, a test of the assembled harnesses could demonstrate a weakness in the assembled cabling.</span></span></span></li> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Additionally, common mode conducted emissions and conducted and/or radiated susceptibility (CS and/or RS) testing should be performed during component certification to gain information pertaining to shield performance as a function of frequency not readily obtained via the ESD or transfer impedance testing. Results from these measurements, coupled with those from ESD testing and from transfer impedance testing, provide a relatively complete “picture” of shield performance, and provide the assurance that the shielding will perform as required during all phases of operation. Thus, the goal is to ensure the as-built harness shield performance is comparable with the shield performance of harnesses used during unit level conducted and radiated susceptibility testing.&#xa0; This could be done using shield transfer impedance measurements or other shield performance measurements.</span></span></span></li> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Design approaches and techniques should be considered to improve harness and connector shielding effectiveness, including: [refs. 1 – 9]</span></span></span> 
+  <ol style="list-style-type:lower-alpha"> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Double shielding the cable.<br> <br> “Double shielding” is an ambiguous term and may carry a different connotation to different organizations. Multiple factors can impact the “double shield” approach, including but not limited to: 1) the configuration of the shield (i.e., only braided shielding, only solid shielding, a combination of braid and solid shielding, one layer of shielding of either type, multiple shield layers of one or both types that are ohmically isolated from each other, multiple shield layers of one or both types that are ohmically connected at both ends, multiple shield layers of one or both types that are ohmically connected only at one end, etc.); 2) the percentage optical coverage of the shield (higher is better; typically &gt; 85% is considered an acceptable minimum percentage coverage for braided cabling used in aerospace applications, whereas foil may be near 100% with the exception of possible leakage along the seam). Note that a braid shield normally provides good attenuation at “lower” frequencies (&lt; 400 kHz to 500 kHz), while a foil shield is able to provide superior attenuation at “higher” frequencies (&gt; 500 kHz); and 3) use of peripheral termination (no pigtails) of shields into cable and harness backshells with low resistance electrical bond magnitude, typically ≤ 2.5 mΩ per interface/joint in the shield to backshell stack-up. The use of pigtails for shield termination introduces impedance discontinuities into the shield circuit that can completely negate any capability of the cable shield to mitigate electromagnetic interference. The use of pigtail terminations is extremely poor practice, is ill-advised, and is strongly discouraged.<br> <br> Cable manufacturers of Cat 5e, Cat 6/6A, and Cat 8/8.1 Ethernet cables typically employ a foil layer over unshielded twisted pairs (single layer approach), while for shielded Cat 7/7A and Cat 8.2 Ethernet cables, a configuration using a braid shield layer over one or more foil-covered twisted shielded pairs is employed (double layer approach, by definition).</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Controlled impedance connectors and ethernet cables qualified to applicable current military and/or industry Ethernet cabling standards should be used.<br> <br> The use of Quadrax contacts in standard connectors or specialty connectors with controlled impedance contacts with a shielded interconnect is encouraged. Multiple vendors offer both connectors and cables for Ethernet applications, and some may also offer turnkey fabrication. Not all vendor products are the same, and the final choice of a cable/connector configuration should be carefully specified and assessed for performance in the intended application.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Exercise care in maintenance of the twist of each twisted pair in the cable at the entry point into the connector.<br> <br> Almost without exception, Ethernet cable vendors employ twisted pairs in their products, and will specify a different number of twists per inch for each pair such that no two pairs in a cable have the same twist rate, or pitch rate. Pitch rates vary from as little as ½ twist per inch (TPI) to 7 TPI or greater, with the larger number of twists associated with lower crosstalk and higher data rates. Regardless of TPI for a given cable, according to TIA-568 and cabling best practices, wire pairs should not be untwisted more than 13 mm (~ ½ inch) for Cat 5e, Cat 6, and higher.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Do not exceed the minimum bend radius of 8 times the outside diameter of the cable. Anything less affects the twist rate, reducing noise rejection.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">When installing long runs, be careful not to stretch the cable. &#xa0;This could alter the twist rate, again reducing noise rejections.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Due to the high frequency of digital transmissions, the phenomenon of skin effect could occur. Be careful not to nick the copper wire.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">If the run is in a space that is used for air circulation, be sure to use plenum-rated Ethernet cabling.</span></span></span><br> &#xa0;</li> 
+   <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">If Ethernet cabling is run in parallel with high-potential lines, it should be separated by at least 15 cm distance away, 30 cm is better. If Ethernet cabling must cross a high-voltage line, do so as close to a 90-degree angle as possible.</span></span></span></li> 
+  </ol> </li> 
+</ol> 
+<p style="margin-left:96px">&#xa0;</p> 
+<ol start="6"> 
+ <li style="text-align:justify; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">In general, assume triboelectric charging on vehicle surfaces will occur during ascent and possibly descent. Develop a mitigation strategy to manage this, which can be a multifaceted approach that may include but not be limited to:</span></span></span> 
+  <ol style="list-style-type:lower-alpha"> 
+   <li style="margin-left:8px; text-align:justify"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Design and placement of harnesses and avionics systems</span></span></span></li> 
+   <li style="margin-left:8px; text-align:justify"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Charging models to characterize the expected environment</span></span></span></li> 
+   <li style="margin-left:8px; text-align:justify"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Testing of flight systems to expected ESD environments</span></span></span></li> 
+   <li style="margin-left:8px; text-align:justify"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Application of dissipative paints to the exterior of vehicle surfaces to minimize charging</span></span></span></li> 
+   <li style="margin-left:8px; text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Use of and adherence to launch commit criteria to minimize charging</span></span></span></li> 
+  </ol> </li> 
+</ol> 
+<p style="text-align:justify; margin-bottom:11px">&#xa0;</p> 
+<p style="text-align:justify; margin-bottom:11px">REFERENCES</p> 
+<p style="text-align:justify; margin-bottom:11px">&#xa0;</p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[1] R. T. Milton, “Design Handbook Electromagnetic Compatibility,” Section 3.4, General Electric Company, 1963, National Technical Information Service Accession # N70-72903.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[2] “Electromagnetic Compatibility Principles and Practices,” Section 11.4.5, NASA Issuance Number NHB 5320.3, Apollo Documentation Number RA-016-001-1, Oct 1965.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[3] E. F. Vance, “Coupling to Shielded Cables,” John Wiley &amp; Sons, Hoboken, New Jersey, 1978.</span></span></span></p> 
+<p style="text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[4] J. Goedbloed, “Electromagnetic Compatibility,” Chapter 5, Prentice Hall International (UK) Ltd., Campus 400, Maylands Avenue, Hemel Hempstead, Hertfordshire, UK, 1992.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[5] J. P. Mills, “Electromagnetic Interference,” Chapter 4, PTR Prentice-Hall, Englewood Cliffs, New Jersey, 1993.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[6] A. Tsaliovich, ”Shielding for Electromagnetic Compatibility,” Section 3.6, Van Nostrand Reinhold New York, NY 1995.</span></span></span></p> 
+<p style="text-align:justify; margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[7] K. L. Kaiser, “Electromagnetic Compatibility Handbook,” Chapter 18, CRC Press, Boca Raton, FL, 2004.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[8] C. R. Paul, “Introduction to Electromagnetic Compatibility,” 2ed, Section 9.7.5, John Wiley &amp; Sons, Hoboken, New Jersey, 2006.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">[9] H. W. Ott, “Electromagnetic Compatibility Engineering,” 2ed, Section 2.15.2.4, John Wiley &amp; Sons, Hoboken, New Jersey, 2009.</span></span></span></p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0843: Use of Digital Potentiometers in Electrically Powered Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0843: Use of Digital Potentiometers in Electrically Powered Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0843 (Database ID: 843)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/843" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number DFE-4 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Digital potentiometers are Dual Inline Package (DIP) devices capable of supporting variable resistance functions currently accomplished by standard electromechanical potentiometers. However, they can be equipped to handle a wide spectrum of specialty tasks not technically possible with standard devices. For example; remote process control, remote calibration, analog to digital conversions, digital to analog conversions, variable gain amplification and variable oscillation.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Digital potentiometers should be installed in electronic systems as a replacement for standard potentiometers. However, designs should be enhanced to utilize the digital potentiometers' extended functionality.</p>
+
+    <p>Digital potentiometers are suitable in both facility power and battery driven applications. These devices should be appropriately selected to match system operating parameters and affixed to printed circuit cards as necessary. In contrast to standard potentiometers, digital potentiometers are remotely accessible and can be driven to specific resistance values directly via a 17 bit serial shift register. An application diagram is attached which illustrates a generic implementation methodology.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009362main_0843-1.jpg"  HEIGHT="405"  BORDER="0" /><A HREF="/llis_lib/txt/1009837main_0843-1.txt"  >[D]</A>
+    </center>
+
+    <p>The digital potentiometer, although not an infinitely variable device, has either 64 or 256 resistive increments (based on model). In the event that finer control is necessary, digital potentiometers can be cascaded to provide high resolution trim functions. The digital potentiometers' architecture is designed to simulate that of a standard variable resistance device. Three pinpoints provide signal in, signal out and wiper. However, unlike discrete devices, wiper position can be incrementally changed or directly accessed through inputting desired position into the onboard register. Upon power loss, latest wiper position is saved in nonvolatile memory.</p>
+
+    <p>As an added improvement over discrete devices, noise has been minimized such that signal to noise ratios are greater than or equal to 120db.</p>
+
+    <p>Installation of digital potentiometers will provide accurate and reliable remote control of electronic hardware. Digital potentiometers will provide cost savings in the following key areas:</p>
+
+    <ul>
+      <li>Reduced equipment downtime (standard Potentiometers are prone to failures/instability due to contamination).</li>
+
+      <li>Reduced maintenance and calibration costs on equipment due to superior resistance to drift, remote configuration capability, and remote reporting not available in standard devices.</li>
+
+      <li>Provides preventive maintenance function and reduces corrective maintenance costs as digital potentiometers do not typically require replacement and can be remotely monitored and configured.</li>
+    </ul>
+
+    <p>Additionally, performance of low level signal processing devices will be greatly enhanced due to superior signal/noise ratios.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"Don't Touch That Dial"; An Overview of Digital Potentiometers and Applications by Dallas Semiconductor Corporation.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Digital potentiometers should be considered in new design or major redesign of electronic systems where comprehensive system control, monitoring, configuration and calibration functions are desired (both locally and remotely). Standard devices (electromechanical potentiometers) are limited to manual control. System analysis will reveal strategic points for the inclusion of digital potentiometers to maximize utilization of their remote capabilities and superior noise characteristics. Substitution of standard variable resistance devices with digital potentiometer based circuits will result in enhanced capabilities while yielding reduced maintenance resource impact.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Enhancement maintainability through the use of digital potentiometers to provide accurate and reliable remote control of electronic hardware.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Although these devices are not currently in use at Kennedy Space Center (KSC), they represent emerging new technologies with known implementation in commercial industry that are applicable to aerospace systems.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

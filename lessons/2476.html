@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2476: Place Flight Scripts Under Configuration Management Prior to ORT</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2476: Place Flight Scripts Under Configuration Management Prior to ORT</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2476 (Database ID: 2476)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-03-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Computers, Configuration Management, Flight Operations, Software, Spacecraft, Standard, Test and Verification, Software Engineering, Mission operations systems, Configuration control and data management, Configuration and data management, Contractor relationships, Configuration Change Control, Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2476" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Flight scripts are modules of software code used to automate many flight software development and test processes that were previously done manually and repetitively. Because flight scripts are considered to be &quot;development support&quot; software (Class D), they are not placed under configuration management (CM) control as early as mission software classified as Class C (Mission Support) or Class B (Mission-Critical). This timing may be appropriate because instituting Mission System Change Control Board (MCCB) control of the scripts too early may impede the flight system development process, but very late initiation of formal control may result in excessive software iterations and may compromise test-as-you-fly fidelity or test procedure accuracy. 
+<br/>
+<br/>The solution proven on several recent spaceflight projects is to institute change management of flight scripts prior to Operational Readiness Test (ORT). The Orbiting Carbon Observatory (OCO) project found that the process of flight script development continued for too long (Reference (1)). Given the multiple script authors and the potential impact of changes, the Flight Operations Team should have been in control of the scripts prior to the start of mission rehearsals (i.e., ORT). 
+<br/>
+<br/>The Mars Exploration Rover (MER) project should have placed more emphasis on management of the variety and the versions of flight scripts. Developers became accustomed to preparing scripts on their own computer, exchanging them with others, and independently making changes. Hence, the scripts that were run out of home directories were not always sourced in a dependable way to MER workstations. With different versions of scripts found on different workstations-- some of which would not work properly-- processes were not repeatable between workstations. Reference (2) may be a typical example.
+<br/>
+<br/>Because this caused operational issues for MER during Assembly, Test, and Launch Operations (ATLO, aka &quot;Integration &amp; Test&quot;), a procedure was successfully implemented during ORTs in which these scripts were delivered to CM, installed on Mission Support Environment workstations, and notification sent to Flight Operations Team support personnel. Accordingly, procedures for the Juno (Reference (3)) and GRAIL (Reference (4)) projects place Class B, Class C, and Class D software under configuration control prior to ORTs.
+<br/>
+<br/><U>References</U>:<br/>
+<ol><li>P.J. Guske, "OCO (Orbiting Carbon Observatory) Project Lessons Learned Document (Final)," JPL Document No. D-26172, July 7, 2009, Paragraph 3.2.5.</li> <li> 
+
+"Confusion with upper and lower case letters," JPL Problem/Failure Report No. Z77058, August 7, 2002.</li> <li> 
+
+"Juno Project: Mission System Configuration Management Plan, Preliminary Release," JPL Document No. D-49338, September 30, 2009, Paragraph 5.6, Page 18. <small>https://pdms.jpl.nasa.gov/CMTOOLS/DocProperties.aspx?objid=tjEvitaempirepdmpdsu-Wqi</small></li><li> 
+
+"Grail Project Software Management Plan," JPL Document No. D-38908, October 9, 2008. <small>http://charlie-lib.jpl.nasa.gov/docushare/dsweb/Get/Document-280353/GRAIL_D38908_Initial_2008-10-09.doc</small></li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Project attention to the configuration control of flight scripts is likely to prevent the generation of unnecessary software iterations, improve the rigor of mission system engineering processes, and ensure consistency in the test and operations environments.
+</section>
+<section><h2>Recommendation(s)</h2>
+Place flight scripts under change control prior to ORT.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.15.2.1  ("Engineering Practices: Configuration Management - Implementation") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-8719.13a, Software Safety
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

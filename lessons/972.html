@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0972: User IDs and Passwords</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0972: User IDs and Passwords</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0972 (Database ID: 972)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-07-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/972" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>In the 1995-1996 timeframe the Office of Safety and Mission Assurance (OSMA) began development of a distance learning capability under the umbrella of the Professional Development Initiative (PDI). This distance learning capability eventually evolved from a Safety and Mission Assurance discipline system into the Site for Online Learning and Resources (SOLAR) (http://solar.msfc.nasa.gov), currently one of NASA's primary distance learning resources. The intent of the initial development effort was to design and implement a prototype system for the Safety and Mission Assurance discipline. Since the system was web-based part of the design considerations involved system security, specifically the use of User IDs and Passwords. The system was going to maintain user sensitive course completion data (completion records and testing scores) so establishing a User ID and Password to generate and access that information became a requirement. In addition, some course materials were going to
+    contain licensed material and finally we wanted to limit access to the courses to the NASA community to ensure availability of courses to our users. To accomplish this the User ID and Password were also required to access course materials. SOLAR was configured to maintain its own User ID and Password protocols and files. The decision to develop a unique User ID and Password system was based on two assumptions. The first assumption was that requiring users to remember another User ID and Password would not be a burden and second that development of a unique capability would be easier than integrating the system into the various security systems resident at the NASA Centers.</p>
+
+    <p>As use of the SOLAR system grew and some disciplines initiated mandatory training, by far the largest demand for user support involved re-establishing out-of-date or forgotten passwords. This represented a significant expenditure of resources to maintain the user support primarily to reset passwords. An additional system capability was added to automate password revalidation, this capability did reduce the demand for manual update. This did not solve the frustrations of users who had to remember another User ID/Password combination or were delayed even momentarily from taking training which they had allotted time to complete often with a looming deadline for completion.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Proliferation of User IDs and Passwords can frustrate system users, particularly if the User ID and Password combination is not used on a regular basis.</li>
+
+      <li>For systems with infrequent access, a large amount of resources may be required to provide the capability to reset User IDs and Passwords.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Consider carefully the decision to adopt a unique User ID and Password authentication method. Consider instead using or piggybacking on another system's authentication system so that users have a single User ID and Password to access multiple capabilities.</li>
+
+      <li>If a unique User ID and Password authentication system is adopted, ensure that sufficient user support is provided to quickly respond to user requests for Password resets.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

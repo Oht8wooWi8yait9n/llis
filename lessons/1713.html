@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1713: Simulate the Launch Site RF Configuration During I&amp;T</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1713: Simulate the Launch Site RF Configuration During I&amp;T</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1713 (Database ID: 1713)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-11-11</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Communication Systems, Configuration Management, Facilities, Flight Equipment, Flight Operations, Ground Equipment, Ground Operations, Hardware, Launch Process, Payloads, Range Operations, Spacecraft, Test Article, Test Facility</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1713" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+A Factory Compatibility Test (FCT) was performed on the NASA CloudSat spacecraft to provide a baseline for comparison of payload function and performance after transportation to and installation at the launch pad.  In May 2005 a Launch Base Compatibility Test (LBCT) was performed at Vandenberg Air Force Base (VAFB).  The LBCT ground support equipment (GSE) configuration differed significantly in complexity from that of the FCT (as described below).  The LBCT was performed in the payload processing facility (PPF) to verify the compatibility of CloudSat radio frequency (RF) signals with the Air Force Satellite Control Network (AFSCN) ground system.  Examination of the LBCT results showed that approximately 5 percent of the science data frames downlinked from the Cloud Profiling Radar instrument aboard CloudSat failed to reach the Vandenberg Tracking Station (VTS).
+<br/>
+<br/>After significant resources were expended troubleshooting this problem under launch schedule pressure, the anomaly was traced to the test configuration differences between the FCT and the LBCT.  For the spacecraft RF signal to reach the VTS, it must pass through a series of GSE coaxial cables, couplers, and attenuators in the PPF.  Subsequent modifications to match the FCT configuration resulted in an increase in signal strength of 10-20 dB, and the number of lost science data frames was reduced significantly below specified levels.
+<br/>
+<br/>An effective industry practice is to duplicate the launch control at the factory or at the system-level spacecraft test, or Assembly, Test, and Launch Operations (ATLO), facility.  This is done with sufficient fidelity and configuration control to assure that anomalous conditions encountered at the launch site may be efficiently and thoroughly analyzed and resolved during integration and test (I&amp;T).  Highly successful space programs, including some recent JPL missions, have taken further steps to assure launch and deployment success by conducting primary launch and/or deployment operations at the &quot;factory,&quot; or within the ATLO facility itself.  The operations facilities at the launch site are then reserved for use only as a backup.  
+<br/>
+<br/> References: 
+<br/>(1)  "LBCT CPR Data Loss," JPL Incident Surprise Anomaly (ISA) No. Z86739, June 10, 2005.
+<br/>
+<br/>(2)  CloudSat Mission Readiness Review, "Spacecraft" section, September 1, 2005.
+<br/>
+<br/>(3)  "End-to-End Compatibility and Mission Simulation Testing," NASA Reliability Preferred Practice for Design and Test No. PT-TE- 1437 (NASA Lessons Learned No. 0726), February 1, 1999.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+It is a standard JPL factory ATLO practice to duplicate the power and signal cabling configuration that will be encountered at the launch site, and to evaluate any changes to other launch site GSE that are too complex for simulation during ATLO.  Violations of this <em>"Test as you fly"</em> practice may result in significant RF signal degradation and data loss during subsequent launch site compatibility testing or during flight.
+</section>
+<section><h2>Recommendation(s)</h2>
+1. Simulate the launch (or launch support) facility cabling configuration at the NASA or contractor ATLO facility as part of system I&amp;T.  Once verified, monitor the cabling configuration at the launch facility to assure that any changes are identified.  Where launch facility changes have been made, or where ATLO simulation of launch facility GSE is not feasible, evaluate such elements for payload impacts and possible risks well before the commencement of compatibility testing at the launch site.
+<br/>
+<br/>2.   To ensure the compatibility of the as-tested system with launch facilities, consider performing the complete launch control function from within the factory ATLO facility as a standard practice for uncrewed Earth orbit or deep space missions, with control facilities at the launch site reserved as a backup.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 6.14.2.3 ("Engineering Practices: Project and System Level Functional Verification and Validation -- Verification and Validation") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 6," JPL DocID 58032, March 6, 2006. <br/><br/>
+
+In addition, JPL has referenced the lesson as supporting Paragraph 8.2.3 ("Flight System Verification and Validation Design: Pre-Deliver Verification -- System Level") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

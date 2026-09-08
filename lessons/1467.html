@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1467: Accident Investigations/Software Tool Selection</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1467: Accident Investigations/Software Tool Selection</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1467 (Database ID: 1467)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-08-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1467" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Due to the urgent need to quickly select and implement a software tool to support the Columbia Accident Investigation Board (CAIB), the tool designated to be the single interface to the Board was selected based on brief demonstrations of the key features of various tools, including a generic collaborative environment tool already in use within the NASA community for non-sensitive data, and a NASA-developed mishap investigation specific tool. At the time, the collaborative environment tool was in the process of being expanded to include enhanced security for storing sensitive data, namely, two-factor- strong authentication. Two-factor-strong authentication was identified as an IT requirement, and it allowed remote access to sensitive data over the Internet - a feature not offered by other alternative software solutions.<br />
+    <br />
+    The collaborative environment tool was selected because of the enhanced security with remote access, the built-in generic database capability, and the overall ease of use. A best- effort approach was undertaken to implement the enhanced security features ahead of schedule to meet the needs of the board. However, implementing the enhanced security features caused initial problems with normal operation of the tool, which resulted in delays in implementing the library and action tracking databases. In addition, while the ease of use of the tool was attractive, this came at the expense of advance functionality required by the CM and library support staff, which required custom software engineering to meet their needs causing delays in functionality and frustration on behalf of the end users.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Different levels of software functionality are required by members of the investigation board and support staff (e.g., top-level board members vs. library support staff). A thorough review of software alternatives based on a clear set of functional requirements should precede selection of a tool. Criteria, such as having a single user interface, ease of use, remote access, security, etc., should be prioritized and considered in the decision-making process to select a tool, or set of tools, to meet the needs of the users.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Have representative members of an investigation board and representative end users of critical functionality (e.g., library support staff) review criteria for selection of a software tool, and the associated advantages and disadvantages, before tool selection. Specifically, consider the following &ldquo;must have&rdquo; requirements when selecting a library/data management software tool to support large-scale accident investigations:<br />
+    </p>
+
+    <ul>
+      <li>implements IT security (e.g., single-factor vs. two-factor strong authentication) that is consistent with the level of safeguarding required and the investigations need for simplicity and rapid startup,</li>
+
+      <li>allows for easy storage and retrieval of very large data files that are an order of magnitude larger than what would currently be considered a big data file for every day use (e.g., by todays standard, allow for 100 to 300MB PowerPoint files),</li>
+
+      <li>allows for secure remote access (consistent with an accident investigation board's needs) to stored files for download to local PCs by investigation board members while on travel or in a dispersed location environment,</li>
+
+      <li>has strong keyword search capability, preferably full text search capability,</li>
+
+      <li>has advanced capability adaptable to new functional requirements on-the-fly without requiring customized software engineering, yet still be easy to learn, easy to use, and compatible with other software applications,</li>
+
+      <li>is comprised of proven COTS software solutions (when possible),</li>
+
+      <li>incorporates the functional capability to store, read, and manipulate all flavors of detailed 3-D engineering models/drawings in use at NASA, and</li>
+
+      <li>is adequately tested and implemented prior to future investigations for full buy-in by representative investigation board and support staff members.</li>
+    </ul>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>TBD NASA Response</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

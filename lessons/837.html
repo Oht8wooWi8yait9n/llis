@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0837: False Alarm Mitigation Techniques</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0837: False Alarm Mitigation Techniques</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0837 (Database ID: 837)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/837" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number DFE-2 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p><u>Benefit:</u></p> 
+<p>Effectively implementing Built-in-Test (BIT) techniques automatically reduces the number of BIT false alarms. Decreasing the number of BIT false alarms increases a system's availability and decreases the maintenance man-hours required. The overall result is a reduction of the system's life cycle cost.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>To mitigate false alarms, a system's BIT circuitry must be able to cope with a limited amount of anomalous performance. NASA Handbook 5300.4 (1E) defines a false alarm as <q>an indicated fault where no fault exists.</q> Based on this definition, this technique is concerned only with BIT indications of system malfunction which cause unnecessary maintenance actions. The inability of a system to detect or report the occurrence of a failure, a <q>fails to alarm condition</q>, is not a false alarm and is not addressed.</p> 
+<p>BIT should be designed to distinguish between actual failures and anomalies which must be tolerated due to adverse operating conditions or that are normal anomalies within acceptable limits. To accomplish this, the following principles and techniques must be mandated in the system specifications, requirement documents, and design policies and implemented in the system design.</p> 
+<p>Voting Scheme</p> 
+<p>One technique is called the <q>Voting Scheme.</q> With the voting scheme, all test data are analyzed by three or more different computers. A failure is declared only when a majority of the computers detect the same failure. An example of this type of architecture is the Space Shuttle Orbiter Avionics System. The five General Purpose Computers (GPCs) are all interconnected to the same 28 serial data channels. The GPCs perform all system-level processing and require a majority agreement on all test signals. This technique requires an extensive use of resources but is extremely effective at mitigating false alarms. A less complicated version of this is the use of double or triple redundant monitors. Having two or more sensors in series increases the reliability of the test data reported while only requiring a single computer or processor.</p> 
+<p>Continuous Monitoring</p> 
+<p>Continuous monitoring with BIT filtering can be used in place of the voting scheme. With this technique, BIT results are based on a integration of successive measurements of a signal over a period of time instead of a single check of the signal. The monitoring of the signal does not have to be continuous but only sampled over the time period. The filtering involves comparing the current reading of a signal with past and future readings of the same signal. This filtering allows for the disregarding of sporadic out-of-limit measurements. Only when a signal is out-of-limits for a predefined time limit or a sequence of tests identify the same failure, should the BIT flag be set.</p> 
+<p>To maximize the effectiveness of continuous monitoring, the BIT data must be recorded. Once recorded, the data need to be summarized and evaluated so that trends can be tracked and weaknesses identified. Controls should be implemented to help manage all of this data. The number of signals monitored and the maximum sample rate can be limited. The time span over which data are collected should be set at a reasonable period, and the type of data accumulated should be restricted. Finally, computing techniques can be used that do not require the storage of old data. Once the information is gathered, a failure log should be created.</p> 
+<p>This failure log is the basis for future modifications to the system's BIT. To improve the BIT, every instant of anomalous performance not related to an identified failure mode should be analyzed and the root causes identified. Some form of corrective action must be taken to avoid recurrence. If a design change cannot be made, then the BIT must be modified to accommodate the non-failure causing anomaly.</p> 
+<p>The need for modification requires BIT to be flexible. Test parameters and limits must be easily changed. The operator should be able to control or even change the test sequence. This flexibility allows the necessary changes in the BIT to be made if false alarms start occurring. For example, the Space Station's Command and Data Handling System uses programmable Deadman Timers in the multiplexer/demultiplexer (MDM's) and standard data processor (SDP's). The response intervals of the timers can be adjusted by the system controller to accommodate changes in system configuration or mode of operation. However, the BIT software must be changed without disturbing the system operation. For this to be possible, the BIT software must be independent of the operating software.</p> 
+<p>Decentralized Architecture</p> 
+<p>Another technique for mitigating false alarms is the use of a distributed or decentralized BIT architecture. With this approach the BIT is implemented so that a <q>NO GO</q> on a given test directly isolates the implied failure to a replaceable unit. Locating most of the BIT internal to a unit greatly reduces the possibility of incorrect isolation of a failure. Although the decentralized BIT concept consists primarily of unit level tests, some system level testing is still required.</p> 
+<p>An excellent technology for combining unit level testing with system level testing is boundary scan. Boundary scan is the application of a partitioning scan ring at the boundary of integrated circuit (IC) designs to provide controllability and observability access via scan operations. In Figure 1, an IC is shown with an application logic section, related input and output, and a boundary scan path consisting of a series of boundary scan cells (BSC), one BSC per IC function pin. The BSCs are interconnected to form a scan path between the host IC's Test Data Input (TDI) pin and Test Data Output (TDO) pin, for serial access.</p> 
+<img alt="refer to [D] description" border="0" height="197" src="https://llis.nasa.gov/llis_lib/images/1009343main_0837-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009818main_0837-1.txt">[D]</a> 
+<br> Figure 1. Integrated Circuit with Boundary Scan Paths 
+<p>During normal IC operation, input and output signals pass freely through each BSC, from the Normal Data Input (NDI) to the Normal Data Output (NDO). However, when the boundary test mode is entered, the IC's boundary is partitioned in such a way that test stimulus can be shifted in and applied from each BSC output (NDO). The test response can then be captured at each BSC input (NDI) and shifted out for inspection. Internal testing of the application logic is accomplished by applying test stimulus from the input BSCs and capturing test response at the output BSCs. External testing of wiring interconnects and neighboring ICs on a board assembly is accomplished by applying test stimulus from the output BSCs and capturing test response at the input BSCs. This application of a scan path at the boundary of IC designs provides an embedded testing capability that can overcome test access problems. The unit level tests can also be combined for a subsystem or system level verification (Figure 2). More details on applying these techniques are in IEEE Standards 1149.1 <q>Boundary Scan</q> and 1149.5 <q>System and Maintenance Bus.</q></p> 
+<img alt="refer to [D] description" border="0" height="162" src="https://llis.nasa.gov/llis_lib/images/1009344main_0837-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009819main_0837-2.txt">[D]</a> 
+<br> Figure 2: Typical Test Regimen for Space Systems 
+<p>Finally, high-reliability components should be used in the design. The reliability of the BIT hardware should at least equal or exceed that of the hardware it is testing. The BIT software also needs to be thoroughly tested and verified to ensure that it will not be a source of false alarms. Accordingly, adequate amounts of effort and resources must be allocated during the design phase. The designer should not be unduly limited by memory size, component count, or any other allocated resource.</p> 
+<p>These guidelines are not all inclusive. The false alarm problem is very complex. Each system is unique and must be approached differently. The best approach is simply to eliminate each factor as it is identified.</p> 
+<p>References:</p> 
+<ol> 
+ <li>Coppola, Anthony, A Design Guide for Built-In-Test (BIT), RADC-TR-78-224, April 1979.</li> 
+ <li>Malcolm, John G., Highland, Richard W., Analysis of Built-In-Test False Alarm Conditions, RADC-TR-81-220, August 1981.</li> 
+ <li>NASA Handbook 5300.4 (1E), Maintainability Program Requirements for Space Systems, March 10, 1987.</li> 
+ <li>Texas Instruments Inc., TESTABILITY, Test and Emulation Primer, 1989.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The reliability of a system's BIT can be determined in part by the number of false alarms it experiences. If the BIT can not accurately identify and report the occurrence of failures then the test has failed its mission. Testability must be treated with the same level of importance as other design disciplines. BIT reliability must be considered just as critical as any other performance requirement. A system cannot perform its mission if its components are constantly being removed for false maintenance.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Minimize the occurrence and effect of Built In Test (BIT) false alarms by applying principles and techniques that are intended to reduce the probability of false alarms and increase the reliability of BIT in avionics and other electronic equipment.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on International Space Station Program and the National Space Transportation System.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

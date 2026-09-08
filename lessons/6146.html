@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6146: Absence Of Explicitly Defined Fluid Property/Composition At The Vehicle/Engine Interface</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6146: Absence Of Explicitly Defined Fluid Property/Composition At The Vehicle/Engine Interface</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6146 (Database ID: 6146)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-12-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Accident Investigation, Propulsion, Ground processing and manifesting, Maintenance, Level II/III requirements definition, Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6146" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+As part of routine Tanking operations for STS-128, Pre-Valve (PV12) closure could not be verified at the start of Liquid Hydrogen (LH2) Topping. The launch attempt was scrubbed.  During the development a flight rationale, should the next attempt give similar results, it was determined that Gaseous Helium (GHe) used to inert the T-0 Umbilical during drain assist could become trapped in the fill and drain line prior to PV11 closure. This posed a potential for GHe entering the LH2 system if the PV12 relief valve opened. A helium bubble entering the engine system could unload the pump causing an overspeed condition a possible catastrophic failure.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The Orbiter Engine ICD (13M15000) made no mention of Helium in the LH2 other than quantities allowed per the controlling document SE-S-0073, SPACE SHUTTLE SPECIFICATION, FLUID PROCUREMENT AND CONTROL (27 MAY 1999).  This specification established the procurement requirements and the chemical and particulate limitations for fluids used in fluid systems of the Space Shuttle Solid Rocket Booster (SRB), External Tank (ET), Space Shuttle Main Engine (SSME), and Orbiter. This specification applied to payloads that have fluid interfaces with the Orbiter or Space Shuttle Ground Support Equipment (GSE). This specification applied throughout all program levels for commonality and to ensure that fluid requirements used for design concepts will be used in verification and operation. The intent and requirements of this specification applied equally to influents and to effluents to the extent specified herein.   
+
+No testing of GHe ingestion into the LH2 system was ever performed on a Space Shuttle Main Engine (SSME) because the condition of ingesting helium into the system was not addressed.  In addition, at the time of the STS-128 launch attempt the SSME test program was over and there was no way to test an engine in the test stands.  The rule of thumb on the Shuttle Program is Fly as you test and Test as you fly.  Simulated tanking system testing was performed at Marshall Space Flight Center (MSFC) in an attempt to quantify how much Helium, if any, could be trapped in the Fill and Drain line. The combination of test results and the paucity of data regarding the capability of the SSME to tolerate GHe injestion resulted in the conclusion that if any Ghe (greater than zero GHe) is present in the system, no flight rationale is possible.
+</section>
+<section><h2>Recommendation(s)</h2>
+The Interface Control Document (ICD) should contain all relevant data on potential fluid properties.  All relevant fluid properties data for potential cross system contamination, leakage, or ingestion should be included in the liquid propulsion system ICDs.  Any future engine test programs should explore the limits of potential gas ingestion so that a value other than zero can be quoted should the need arise.
+</section>
+<section><h2>Related Policies & Standards</h2>
+Interface Control Document
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

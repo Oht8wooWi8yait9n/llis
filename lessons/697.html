@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0697: Active Redundancy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0697: Active Redundancy</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0697 (Database ID: 697)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/697" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1216; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Provides multiple ways of accomplishing a function to improve mission reliability.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The decision to use redundant design techniques should be based on analysis of reliability and test data. Redundancy may prove to be the only available method when other techniques of improving performance (e.g., better components, additional derating, simplification, software debugging) have been exhausted or when methods of item improvements are shown to be more costly than duplications. The use of redundant equipment can allow for repair with no system downtime. Some situations exist in which equipment cannot be maintained (e.g., communication satellites), in which case dormant redundant elements may be a necessary approach to prolong operating time.</p>
+
+    <p>The application of redundancy is not without penalties. It will increase weight, space, complexity, and time to design, fabricate, assemble, and test. It may also increase costs; however, the costs may be recovered by the increased reliability. Thus, safety and mission reliability is gained at the expense of adding more items to test. The increase in testing time may be reduced by making improvements in the components such as the use of more reliable parts, more derating, design simplification, and software improvements.</p>
+
+    <p>The incorporation of redundancy into a design must take into account "checkable redundancy." It is important to be able to functionally test the redundant elements prior to mission start. If this capability is not present, the benefits of redundancy may be defeated by the uncertain functionality. However, if the designer takes into account built-in test planning, inclusion of test points, and packaging, the benefits of active redundancy will be retained.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>As an example, consider how redundancy was used in the transmitters of the Communications Technology Satellite (CTS). The component failure data for the basic nonredundant configuration of the Traveling Wave Tube (TWT) is shown in Table 1.</p>
+
+    <center>
+      CTS TWT Component Failure Data<br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009081main_0697-1.jpg"  HEIGHT="587"  BORDER="0" /><A HREF="/llis_lib/txt/1009563main_0697-1.txt"  >[D]</A><br />
+      K<small><sub>A</sub></small>= application factor =&gt;engineering adjustment for use application
+    </center>
+
+    <p>The TWT serves as the final output stage and driver for the 200W transmitter. Most space applications require long operating times for earth/satellite communications. Therefore, reliability without maintenance is a major design and manufacturing concern.</p>
+
+    <p>(The analysis used in this example assumes that the failure rates are constant over time and, therefore, the calculations are used as engineering estimates.)</p>
+
+    <p>For the nonredundant circuit, the approximate total failure rate is given by:</p>
+
+    <center>
+      <font size="+2">Failure Rate=l~ 27.4x 10<small><sup>-6</sup></small><i>failures / hour</i>
+    </center>
+    <br />
+    <br />
+
+    <p>This rate is then adjusted by an operating factor based on engineering judgement to take into account the space environment, K<small><sub>op</sub></small>:</p>
+
+    <center>
+      <font size="+2">l<small><sub><i>total</i></sub></small>=lK<small><sub><i>op</i></sub></small>= (27.4 x 10<small><sup>-6</sup></small>)(0.33) = 9.04x10<small><sup>-6</sup></small><i>failures / hour</i>
+    </center>
+    <br />
+    <br />
+
+    <p>Using a mission time of 17,520 hours (2 years, the CTS performance goal), the approximate reliability for the nonredundant configuration is:</p>
+
+    <center>
+      <table>
+        <tr>
+          <td>
+            <p><font size="+2" face="arial, helvetica">R = e<small><sup><sup>-l</sup>total<sup>t</sup></sup></small>= e<small><sup>- (9.04 x 10</sup>-6</small>)(17,520)</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td><font size="+2" face="arial, helvetica">R = 0.85</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>For the simple, redundant configuration, the approximate reliability is:</p>
+
+    <center>
+      <table>
+        <tr>
+          <td>
+            <p><font size="+2" face="arial, helvetica">R<small><sub>s</sub></small>= 1- (1-R<small><sub>1</sub></small>)(1-R<small><sub>2</sub></small>),<i>where</i>R<small><sub>1</sub></small>= R<small><sub>2</sub></small>= 0.85</p>
+
+            <p><font size="+2" face="arial, helvetica">R<small><sub>s</sub></small>= 0.98</p>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>Obviously, the use of redundancy can greatly enhance the transmitter reliability and give high confidence that the two year CTS performance goal will be met. However, there are additional considerations that need to be taken into account. Specifically, we need to address the additional components added by the redundancy, such as switches, sensors, and/or activators. In this case, two switches are added in order to activate the redundancy (see Figure 1).The first switch is a coaxial transfer switch with a failure rate of 1.1 x 10<small><sup>-6</sup></small>. The second switch, a waveguide transfer switch, has a failure rate of 1.5 x 10<small><sup>-6</sup></small>. These are the only two components added due to the redundancy. The command receiver/decoder needs to operate in order to activate the switches. However, if it fails, the whole spacecraft would fail whether the redundancy is present or not. Therefore, the following additional calculations need to be made:</p>
+
+    <center>
+      <table>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <p><font size="+2" face="arial, helvetica">l<small><sub>SWI</sub></small>= 1.1 x 10<small><sup>-6</sup></small></p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p><font size="+2" face="arial, helvetica">l<small><sub>eq</sub>TWT</small>= 1.15 x 10<small><sup>-6</sup></small> (<i>since</i>R = 0.98)</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p><font size="+2" face="arial, helvetica">l<small><sub>SW2</sub></small>= 1.5 x 10<small><sup>-6</sup></small></p>
+                </td>
+              </tr>
+            </table>
+          </td>
+
+          <td>
+            <center>
+              Switched Redundant TWT Block Diagram<br />
+              <IMG  WIDTH="458"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009082main_0697-2.jpg"  HEIGHT="283"  BORDER="0" /><A HREF="/llis_lib/txt/1009564main_0697-2.txt"  >[D]</A>
+            </center>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <br />
+
+      <table>
+        <tr>
+          <td>
+            <p><font size="+2" face="arial, helvetica">l<small><sub>RED</sub></small>=l<small><sub>SW1</sub></small>+l<small><sub>eq</sub>TWT</small>+l<small><sub>SW2</sub></small>= (1.5 + 1.15 + 1.1) x 10<small><sup>-6</sup></small>=3.75 x 10<small><sup>-6</sup></small></p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p><font size="+2" face="arial, helvetica">R<small><sub>RED</sub></small>= 0.94</p>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Therefore, the total Reliability of the redundant system is approximately 0.94. This is still a big improvement over the single component reliability of 0.85.</p>
+
+    <p>The success of the CTS spacecraft demonstrated this improved reliability as all CTS transmitters operated beyond their performance goal of 2 years.</p>
+
+    <p>Both the advantages and disadvantages of redundancy should be considered prior to its use. To repeat, the disadvantages of using redundancy to solve a reliability problem are increased weight, cost, and complexity. Additions of back-up systems and/or lower level items add the weight and cost of the additional hardware. This weight and cost may be reduced by the application of piece part redundancy. A more harmful effect may be increased complexity which would negate the reliability improvement. For example, sensing, activation, and switching hardware added to use the redundant component may reduce the overall reliability lower than that of the simple string.</p>
+
+    <p>There are many cases where deliberate redundancy provides reliability improvement with cost reduction. It does not necessarily follow that simple redundancy is the cost effective way to compensate for low reliability. The design engineer has the responsibility to determine what balance of redundancy alternatives is the most effective to use. In the trade-off process, it may be determined that redundancy, by the duplication of hardware, may impact the cost of preventive maintenance. This is a significant factor in life cycle cost considerations for equipment worth. Redundancy may be practical if a designed item is readily available, and more economical than redesign. However, redundancy may be too expensive if the item is costly, or too heavy if spacecraft limitations are exceeded. These are all trade-offs which the designer must consider.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Dillard, R.B., <u>Reliability for the Engineer</u>, Book Two, Martin Marietta Corporation, 1973.</li>
+
+      <li>"Electronic Reliability Design Handbook," MIL-HDBK-338-1A, October 1988.</li>
+
+      <li>Klion, Jerome, <u>A Redundancy Notebook</u>, Rome Air Development Center, RADC-TR-77-287, December 1987.</li>
+
+      <li>Lalli, Vincent R. and Speck, Carlton E., "Traveling-Wave Tube Reliability Estimates, Life Tests, and Space Flight Experience," NASA TM X-73541, January 1977.</li>
+
+      <li>"Reliability Modeling and Prediction," MIL-STD-756B, November 1981.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The designer should consider redundancy for reliability improvement of critical components having low reliability for which a single failure could cause loss of a system or one of its major functions, i.e. loss of control, unintentional release or inability to release space hardware, failure of space installation systems, or harm to the crew. Building a flight assembly that has low reliability can cause problems in qualification and acceptance testing, launch preparation and flight activities, schedule delays, and budget overruns.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use active redundancy as a design option when development testing and reliability analysis show that a single component is not reliable enough to accomplish the function. Although active redundancy can be applied to various types of mechanical and electrical components and systems, the application detailed in this practice illustrates an approach using a Traveling Wave Tube amplifier in a space flight application.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Acceleration Measurement System (SAMS), Communication Technology Satellite (CTS), Atlas/Centaur, and Titan.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

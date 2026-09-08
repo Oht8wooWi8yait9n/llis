@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1765: Managing Rover-Orbiter Relay Link Prediction Variability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1765: Managing Rover-Orbiter Relay Link Prediction Variability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1765 (Database ID: 1765)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2006-10-05</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Mission Operations and Ground Support Systems,  Missions and Systems Requirements Definition,  Program Management,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Communication Systems,  Flight Equipment,  Flight Operations,  Ground Equipment,  Ground Operations,  Hardware,  Payloads,  Risk Management / Assessment,  Spacecraft,  Standard,  Spacecraft and Spacecraft Instruments,  Ground support systems,  Mission control Planning,  Mission operations systems,  Planetary Operations,  Vehicle concepts,  Science integration,  Early requirements and standards definition,  Engineering design and project processes and standards,  Human factors planning,  Level II/III requirements definition,  Mission and systems trade studies,  Mission definition and planning,  Planning of requirements verification processes,  Systems analysis - cost analysis</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1765" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+By relaying data to Earth through one of the spacecraft orbiting Mars, the two Mars Exploration Rovers (MER) were able to transmit science data at a higher rate than by direct links from the Martian surface to the Deep Space Network (DSN). However, these surface-to-orbiter relay links (via the UHF frequency band) are known to be less predictable in total data volume as compared to direct-to-Earth links (via X-band transmission). The data volume received during orbiter overflights has exhibited nominal variations of 75 to 125 percent of the volume predicted, and extremes of 50 to 150 percent of the predicted volume are occasionally experienced. Reference (1) is a very recent statistical study that for the first time documents MER data volume variations over 186 recent overflights. The study found that 11 overflights achieved less than 75% of the predicted volume and 78 passes exceeded 125% of predicted. Additional statistical studies are underway. Tactics such as changing a rover¿s heading to facilitate communications after a day of driving and science activities have sometimes been necessary to attain an MER data return goal of 30 megabits per rover per quotsolquot (Martian day). 
+<br> 
+<br> Because there are multiple contributors to relay link variability, it is hard to identify and quantify the factors that contribute to the difference between the predicted and received data volume on a specific overflight. This is true even after engineering analysis of available rover and orbiter telemetered data, leaving mission planners with uncertain expectations as to actual performance. The impact on mission operations has been an inconsistent flow of relay link data during Mars surface operations. This has caused the following problems for the MER science team (Science Operations Working Group): 
+<ol> 
+ <li>When a UHF data relay pass yields a data volume that is less than 30 megabits, the science team may lack sufficient information (i.e., pictures of the rover¿s surroundings) on the current sol¿s drive to safely plan the next day¿s drive.</li> 
+ <li>In contrast, larger than anticipated data volumes may represent a lost opportunity for the science team. Had they known, the team would have planned for more activity by rover instruments or higher image resolutions so that the extra telemetry capacity would not have been wasted. (See Reference (2).)</li> 
+</ol> The inability to consistently and accurately predict actual relay pass data volume is not an MER design or operational anomaly. It is an anticipated result of a telecommunications system constrained by the spacecraft mass and configuration, project budget, development and testing schedule, and operational factors, including: 
+<ol> 
+ <li>The UHF antenna pattern on MER is highly variable and not completely understood, even after extensive preflight mockup tests and post landing data collection.</li> 
+ <li>The UHF antenna pattern is further modified by local geologic surroundings which change the multipath signal phase and signal power. Geologic changes variables include proximity to a hill, proximity to a crater, proximity to a large rock, and changes in the electromagnetic properties of the underlying soil/rock as the rover changes location.</li> 
+ <li>Rover tilt impacts antenna pattern. Predicted rover tilt is only known to a few degrees, and the relationship between tilt and antenna gain pattern is not modeled.</li> 
+ <li>Rover yaw angle is set to one of 20 steps, with the data volume computed based on the gain value for the step. Thus there is uncertainty in the gain pattern and in the resulting data volume due to this quantization. In addition, the gain pattern may be further changed by deployment or retraction of a rover appendage.</li> 
+ <li>The Mars orbiter UHF antenna gain pattern is also variable based on the pointing angle to the rover. It may further change with variations in orbiter solar panel orientation.</li> 
+</ol> The Mission Operations Team has limited insight into which of these design and operational factors apply, and the extent to which they apply, on a given relay pass. 
+<br> 
+<br> Constrained by mass, cost, and schedule, the MER lander project and the Mars orbiter projects elected to use omni directional UHF antennas mounted in the midst of a crowded science deck. This resulted in highly variable and unpredictable antenna gain patterns (Figure 1). Due to the same program constraints, testing of the antenna patterns was limited to model mockups which have limited fidelity. Thus much of the UHF link performance variability and uncertainty resulted from engineering and programmatic decisions with known consequences. 
+<br> &nbsp; 
+<table border="1" cellpadding="0" width="326"> 
+ <tbody> 
+  <tr> 
+   <td valign="bottom"><a href="https://llis.nasa.gov/llis_lib/images/1013961main_NEN1755-Fig_1a_Rev_10-30.jpg" title="Click here to view a larger picture"><img align="Bottom" alt="(a) Drawing of an MER-like rover with a monopole UHF antenna with a radiation pattern having many lobes and nulls. A 'meter' indicating link predictability to an orbiter overhead displays a moderate reading." border="0" src="https://llis.nasa.gov/llis_lib/images/1013965main_NEN1755-Fig_1a_Rev_10-30_small.jpg" title="(a) Drawing of an MER-like rover with a monopole UHF antenna with a radiation pattern having many lobes and nulls. A 'meter' indicating link predictability to an orbiter overhead displays a moderate reading."></a><br> (a) Drawing of an MER-like rover with a monopole UHF antenna with a radiation pattern having many lobes and nulls. A quotmeterquot indicating link predictability to an orbiter overhead displays a moderate reading.</td> 
+  </tr> 
+  <tr> 
+   <td valign="bottom"><a href="https://llis.nasa.gov/llis_lib/images/1013962main_NEN1755-Fig_1b_Rev_10-30.jpg" title="Click here to view a larger picture"><img align="Bottom" alt="(b) Same as Drawing (a), except the MER-like rover is tilted and overhung by a crater lip. The meter reads at the low end of the scale." border="0" src="https://llis.nasa.gov/llis_lib/images/1013964main_NEN1755-Fig_1b_Rev_10-30_small.jpg" title="(b) Same as Drawing (a), except the MER-like rover is tilted and overhung by a crater lip. The meter reads at the low end of the scale."></a><br> (b) Same as Drawing (a), except the MER-like rover is tilted and overhung by a crater lip. The meter reads at the low end of the scale.</td> 
+  </tr> 
+  <tr> 
+   <td valign="bottom"><a href="https://llis.nasa.gov/llis_lib/images/1013686main_Managing_Rover_Fig_1c_1.jpg" title="Click here to view a larger picture"><img align="Bottom" alt="(c) Same as Drawing (b) with tilt and crater, but now a hypothetical future rover sports a high gain, steered UHF antenna that aims a single lobe toward the orbiter. The meter reads at the high end of the scale." border="0" src="https://llis.nasa.gov/llis_lib/images/1013963main_NEN1755-Fig_1c_1_small.jpg" title="(c) Same as Drawing (b) with tilt and crater, but now a hypothetical future rover sports a high gain, steered UHF antenna that aims a single lobe toward the orbiter. The meter reads at the high end of the scale."></a><br> (c) Same as Drawing (b) with tilt and crater, but now a hypothetical future rover sports a high gain, steered UHF antenna that aims a single lobe toward the orbiter. The meter reads at the high end of the scale.</td> 
+  </tr> 
+  <tr> 
+   <td colspan="1" valign="top">Figure 1. Effect of antenna design on link volume predictability</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> The majority of MER overflights have produced data volumes reasonably close to predictions. UHF data has totaled about 90 percent of the science data returned from the rovers. Use of the Proximity-1 protocol has assured that virtually all data actually returned is error free (Reference (3)). 
+<br> 
+<br> 
+<b>References: </b> 
+<ol> 
+ <li>Andrea G. Thomas, Mars Exploration Rover UHF Data Return Statistics, JPL Memorandum No. 337H-06-001, September 21, 2006. https://mars03-lib.jpl.nasa.gov/docushare/dsweb/View/Collection-26375</li> 
+ <li>quotProvide In-Flight Capability to Modify Mission Plans During All Operations,quot Lessons Learned No. 1480, NASA Engineering Network, June 21, 2004.</li> 
+ <li>quotMars Exploration Rover Telecommunicationsquot (Article 10, Deep Space Communications &amp; Navigation Systems (DESCANSO) Design and Performance Summary Series), J. Taylor, A. Makovsky, A. Barbieri, R. Tung, P. Estabrook, A. Thomas, October 2005, p. 73, http://descanso.jpl.nasa.gov/DPSummary/MER_article_cmp20051028.pdf</li> 
+</ol> 
+<br> 
+<b>Additional Key Words (JPL metadata field):</b> 
+<br> 
+<br> downlink; telemetry rates; data rates; relay passes; telecommunications performance; link performance; antenna performance; telecommunications accuracy; UHF design; UHF data return; UHF data volumes; error detection; error correction; operations phase; mission operations; operations design; occlusion; antenna pointing angle; antenna field of view; antenna field-of-view; antenna FOV; link margin; relay link planning
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Constrained by mass, cost, and schedule, the Mars orbiter and Mars rover UHF antenna system designs and test programs have exhibited sol-to-sol variations between predicted and achieved link performance. Though not unexpected, actual data return uncertainty has necessitated modifications to the rover mission planning processes for operations supported by the orbiters. The difference between the predicted versus achieved data volume returned by the MER UHF data link has sometimes impacted the daily planning of rover driving and science data collection. Although for a small number of sols this resulted in a data return less than the maximum achievable, the greatly extended MER surface mission duration has returned science data that has vastly exceeded requirements and the most optimistic early expectations. 
+<br />
+</section>
+<section><h2>Recommendation(s)</h2>
+Develop a data return planning process based on analyses of link performance that anticipates and plans for the unpredictable characteristics of UHF omni links. Also, be prepared to update the process as a result of subsystem and spacecraft development, test, and flight operations experience. Data return planning should begin with an estimate or model of the predicted data volume statistics which may feature a mean value and variance that change over time. With an assumption of achieving a data volume level for the sol of one sigma (1 standard deviation) less than the predicted volume, prioritize the data return for (1) mission operations and (2) high priority science data. Lower priority data will then be relegated to any remaining data volume actually achieved during the sol. For future mission, reassess the predicted data model as the design and test of antennas, mission planning tools, and procedures evolve.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 6.2.4 (quotEngineering Practices: Telecommunication Designquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006. 
+<br /> 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 4.5.1.2 (quotTelecommunications System Design: End-to-End System Designquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

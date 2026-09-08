@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0805: Practice of Reporting Parts, Materials, and Safety Problems (Alerts)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0805: Practice of Reporting Parts, Materials, and Safety Problems (Alerts)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0805 (Database ID: 805)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/805" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1428 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The benefit of the ALERTS system is the reduction or elimination of duplicate expenditures of time and money by exchanging information of general concern regarding parts, materials, and safety problems within MSFC, between MSFC and other NASA centers, between NASA and other government organizations, and between government and industry to assist in preventing similar occurrences. The use of the ALERTS system avoids future failures, rules out fraudulent hardware, helps enhance reliability, and ensures mission success.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>The Government-Industry Data Exchange Program (GIDEP) is an on-line service that fosters cooperative data interchange between government and industry seeking to reduce or eliminate duplicate expenditures of time and money by making use of existing knowledge. The program provides a means to exchange technical data essential in the research, design, development, production, and operational phases of the cycle of systems and equipment. The primary objectives are to improve reliability, quality, productivity, safety and logistics support. A GIDEP participant may be either a government or industry activity engaged in the design, development, test, production, or support of equipment and systems. Universities and consultant firms who qualify may also participate. GIDEP participants may have access to any of the following four data interchanges 1) Engineering Data Interchange, 2) Failure Experience Data Interchange, 3) Reliability-Maintainability Data Interchange and 4) Metrology Data Interchange.</p> 
+<p>The Failure Experience Data Interchange (FEDI) is the GIDEP data interchange relative to ALERTS, SAFE-ALERTS, and Problem Advisories. The FEDI contains objective failure information generated when significant problems are identified on parts, components, processes, equipment, materials, specifications, or safety hazards. This data includes ALERTS and SAFE-ALERTS, failure analysis, problem information data and manufacturing sources data. The initiator of an ALERT coordinates the ALERT with the manufacturer (vendor) when applicable then forwards the ALERT to the GIDEP Operations Center for electronic distribution to all participants. SAFE-ALERTS describe problems usually related to finished products which could have an impact on the safety of personnel or risk damage to facilities or equipment. FEDI Report definitions follow:</p> 
+<ol> 
+ <li>ALERT - An ALERT reports a problem with parts, components, materials, specifications, manufacturing processes, or test equipment that can cause a functional failure.</li> 
+ <li>SAFE-ALERT - A SAFE-ALERT reports a problem that relates to the safety of personnel or equipment.</li> 
+ <li>PROBLEM ADVISORY - A Problem Advisory reports 1) preliminary information on a suspected problem, or 2) a problem with parts, components, materials, manufacturing processes, specifications or test equipment that has an unknown or a low probability of causing a functional failure. Problem advisories that report preliminary information must be followed by updated reports at not less than 30 day intervals until resolved or canceled.</li> 
+</ol> 
+<p>MSFC prime contractors are required to participate in GIDEP when their participation is considered advantageous to the program. However, the contractor must obtain MSFC approval for ALERTS which they propose on MSFC hardware. Nonparticipating subcontractors may propose ALERTS for submission to GIDEP via the MSFC System.</p> 
+<p>Approximately 250 to 300 GIDEP ALERTS, SAFE-ALERTS, and Problem Advisories are received and processed each year. Approximately 10 to15 preliminary ALERTS or SAFE-ALERTS are generated within NASA; of those approximately 2 to 4 originate at MSFC.</p> 
+<p>The MSFC ALERT system is comprised of the GIDEP ALERTS, SAFE-ALERTS, and Problem Advisories and internal NASA ALERTS, SAFE-ALERTS, and Problem Advisories. These are processed at MSFC using MSFCís tailored system as shown in Figure 1, MSFC ALERT/SAFE-ALERT System Flow Chart. The left portion of Figure 1 depicts processing ALERTS that originate outside MSFC (includes other NASA centers and GIDEP). The ALERTS are received by the ALERT coordinator, logged in and forwarded to the appropriate MSFC Laboratory for technical evaluation. This evaluator determines whether the alert should be considered a FULL ALERT, Information ALERT, or No Action Required, which is entered onto an evaluation form. These three categories are defined as follows:</p> 
+<ol> 
+ <li>A FULL ALERT is a serious problem which involves a high probability of causing a failure in quality sensitive equipment. The FULL ALERT should be disseminated immediately for investigation and a required response.</li> 
+ <li>An Information ALERT reports a minor problem with low risk of affecting quality sensitive equipment. It will be disseminated for information and will require a response only if it results in an impact.</li> 
+ <li>No Action Required is a classification that is applied to conditions which do not represent valid problems or have no impact on quality sensitive equipment. These conditions should not be classified by NASA as an ALERT and it will receive no further dissemination.</li> 
+</ol> 
+<img alt="refer to [D] description" border="0" height="609" src="https://llis.nasa.gov/llis_lib/images/1009281main_0805-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009756main_0805-1.txt">[D]</a> 
+<br> Figure 1: MSFC ALERT/SAFE-ALERT System Flow Chart 
+<p>The completed evaluation form is returned to the MSFC ALERT Coordinator and filed if classified as ìNo Action Required.î If the ALERT is classified as an Information ALERT or FULL ALERT, it is transmitted to MSFC contractors, laboratories, project offices, and the safety office. When a response is received from a MSFC contractor it is routed through applicable MSFC project offices for coordination with MSFC laboratories and transmitted to the MSFC ALERT coordinator for action and closeout. Responses from MSFC laboratories and safety offices are forwarded to the MSFC ALERT coordinator for action and close out. The response to an ALERT indicates whether the item is included in the system and, if so, what corrective action is required. Further use of the problem part, material, equipment, or process does not take place until the corrective action is implemented.</p> 
+<p>The right portion of Figure 1 depicts proposed ALERTS originating within MSFC and MSFC contractors. The proposed ALERT is forwarded to the MSFC ALERT coordinator, logged in and forwarded to the appropriate MSFC laboratory or safety office for technical evaluation and recommendation. The MSFC ALERT coordinator forwards comments to the affected manufacturer (vendor) for their evaluation and comments. The manufacturer returns their comments to the MSFC ALERT coordinator who transmits information ALERT or FULL ALERT to MSFC contractors, laboratories and project office and safety office with copies to NASA Headquarters, other NASA centers and GIDEP. Responses received from MSFC contractors, laboratories, and safety offices are routed and closed out as stated earlier.</p> 
+<p>An ALERT is considered to be a NASA-wide concern if it is a potential source of unreliability, performance degradation, personnel hazard, or if it may result in a significant schedule delay.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>As technical rationale, two specific situations in which ALERTS or SAFE-ALERTS have been vital to mission success are described below:</p> 
+<ol> 
+ <li>ALERT No. H1-A-88-01 dated 3-15-88 <p>This ALERT started out as a MSFC TWX ALERT 5210A dated 2-17-88 by memorandum from the MSFC ALERT coordinator. The TWX, and later the GIDEP ALERT, stated that a quality assurance product audit was performed on NAS bolts fabricated from A-286 steel and disclosed they were not properly tested to the requirements of the NAS specification by the manufacturer. This ALERT affected shuttle elements, payloads and satellites. Considerable effort was made to identify and determine the extent of prior use of NAS bolts from the same manufacturer. Testing was performed on the fasteners to determine shear and tensile strengths. Stress analysis was performed using the test results. In all cases, positive margins of safety were depicted. To ensure that the fasteners would be acceptable for 40 usages, a fatigue analysis was performed. An inspection plan was implemented for future procurement of these fasteners.</p> </li> 
+ <li>SAFE-ALERT No. M7-S-93-01A <p>A Battery case is part of the Alinco Igniter Circuit Tester, Model 101-5CFG. Embedded in the battery case is a resistor that limits the amount of current to 5 milliamps. This current is low enough to prevent activation of the igniter but sufficient to determine if the igniter is functional through a continuity test. In 1989, a tester was returned for battery replacement and calibration. The presence of the current limiting resistor in the battery case was unknown to the repair technician, who discarded the case because new, larger batteries were required. Use of the tester resulted in premature ignition of a test rocket flare. Fortunately, no injuries occurred. A SAFE-ALERT was issued in 1989, but was not incorporated correctly into the GIDEP data base because an improper document number of M7-F-89-01 was assigned. (The <q>F</q> should have been an <q>S,</q> which would have designated the document as a SAFE-ALERT). As a result of this improper designation, all of the users of this circuit tester model were not alerted to this hazardous situation, and, in an incident in Sweden in 1993, the same model tester caused the ignition of a rocket motor which resulted in one death, three injuries, and two damaged buildings. This incident underscores the need to accurately and promptly designate and disseminate ALERTS and SAFE-ALERTS. However, since Canada is the only other country that is a member of GIDEP, it is doubtful that Sweden would have been alerted. With proper designation, membership in GIDEP would have been another essential element in avoiding the problem.</p> </li> 
+</ol> 
+<p>References:</p> 
+<ol> 
+ <li>MMI 5310.2D: <q>ALERTS and SAFE-ALERTS Reporting of NASA Parts, Materials, and Safety Problems,</q> Marshall Management Instruction, Marshall Space Flight Center, AL 35812, February 4, 1986.</li> 
+ <li>NMI-5310.2C: <q>Participation in The Government-Industry Data Exchange Program (GIDEP),</q> NASA Management Instruction, National Aeronautics and Space Administration, Washington, D.C., July 9, 1991.</li> 
+ <li>NHB 5310.3: <q>Procedures for NASA ALERT Reporting of Parts, Materials, and Safety Problems,</q> NASA, Office of Safety and Mission Quality Publication, April 1993.</li> 
+ <li>NMI 5310.1D: NASA Alert Reporting of Parts, Materials, and Safety Problems, NASA Management Instruction.</li> 
+ <li>Government-Industry Data Exchange Program (GIDEP), Program Summary, GIDEP Operations Center, Corona, CA 91720, September 1987.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to issue or properly designate or to review for program/project impact ALERTS and Problem Advisories or SAFE-ALERTS could cause duplication of testing, possible schedule delays, loss of mission, and, in extreme circumstances, loss of life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Ensure that potentially significant problems involving parts, materials, and safety discovered during receiving inspection, manufacturing, post-manufacturing inspection, or testing do not affect the safety or the performance of NASA hardware by reporting all anomalies via ALERT systems. ALERTS and SAFE ALERTS pertaining to these problems are quickly disseminated for impact assessment and, if required, corrective action taken or a rationale developed for <q>flying as is.</q></p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle External Tank, Space Shuttle Main Engine, Space Shuttle Solid Rocket Booster, and Space Shuttle Experiments/Payloads.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0652: Combination Methods for Deriving Structural Design Loads Considering Vibro-Acoustic, etc., Responses</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0652: Combination Methods for Deriving Structural Design Loads Considering Vibro-Acoustic, etc., Responses</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0652 (Database ID: 652)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/652" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1211; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The probability of structural failure during launch and landing is significantly reduced.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Loads due to various sources (steady-state acceleration, transient dynamic, vibro-acoustic) may be computed separately. Then use one of the combination methods listed below to derive the combined load. For acoustically sensitive components, direct acoustic load should be included as well.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Vibration which causes structural loads can be classified as follows (see Table 1):</p>
+
+    <ol>
+      <li>Vibration due to transient events (liftoff, staging, etc.), typically below 60 Hz, including steady-state acceleration;</li>
+
+      <li>Random vibration transmitted through mechanical interfaces, typically from 20 to 2000 Hz;</li>
+
+      <li>Random vibration caused by direct acoustic loading on the surface of the structure, typically from 50 to 10,000 Hz.</li>
+    </ol>
+
+    <p>For primary structure, the steady-state and transient loads typically dominate the vibro-acoustic loads, and the latter are often ignored in practice. For secondary structure, however, the vibro-acoustic loads can be comparable to, or larger than, the steady-state and transient loads. Acoustically sensitive components may have loads which are dominated by their response to direct acoustic excitation.</p>
+
+    <p>Because the transient and vibro-acoustic loads can be of comparable magnitude, and both are present simultaneously at liftoff, it can be unconservative to design the structure to the transient and vibro-acoustic loads separately. A number of methods are available for assessing the combined load. The following methods are considered acceptable.</p>
+
+    <p><b>Method 1: Coupled Transient Analysis with Base Drive Random</b></p>
+
+    <p>Depending on the launch vehicle, coupled transient analysis predicts structural loads up to 60 Hz, although in most cases the frequency cutoff is much lower (35 Hz for STS liftoff). Forcing functions for these analyses are adjusted, based on flight data, to assure that the loads envelop the actual flight loads (including transient and mechanically transmitted random vibrations within the frequency range of analysis).</p>
+
+    <p>Above the cutoff frequency of the coupled transient analysis, mechanically transmitted random vibration loads may be computed using base drive random analysis of the payload structure. The base vibration is specified in terms of power spectral densities of the acceleration in each direction. If possible, the analysis should be performed using input accelerations corresponding to the time of peak transient loads, rather than the maximum random vibration over the entire flight. Accelerations in different directions should be considered uncorrelated, and may be applied simultaneously or one direction at a time. A higher level of damping is acceptable for the random analysis than for the coupled transient. Common practice is to use 3 times the RMS (3 sigma) as the peak load prediction.</p>
+
+    <p>Peak loads from the coupled transient and base drive random analyses may be combined by a root-sum-square (RSS) approach.</p>
+
+    <p>When direct acoustic loading on the payload structure is non-negligible, it may be combined with the above load using an RSS approach. Methods for predicting acoustic loading include finite-element based approaches, which are limited to low frequency predictions, and statistical energy methods, which are limited to higher frequency predictions.</p>
+
+    <p><b>Method 2: Mass Acceleration Curve</b></p>
+
+    <p>A typical mass acceleration curve (MAC) is shown in Figure 1. The MAC is an upper bound acceleration level for all components of a given mass, regardless of location, orientation, or frequency. Applicability is limited to appendage masses up to 500 kg, with frequencies up to approximately 100 Hz. Such a curve can be derived based on analytical and flight data, and includes the effects of both transient and mechanically transmitted random vibration. That is, the load predicted by the curve is already a combination of transient and random vibration.</p>
+
+    <p>When direct acoustic loading is non-negligible, it may be combined with the MAC load using an RSS approach.</p>
+
+    <p><b>Method 3: Coupled Transient Analysis with Modal MAC</b></p>
+
+    <p>It is generally accepted that base drive random analysis can be very conservative, because it does not account for impedance effects. These effects can be very significant for the payload modes with large effective mass.</p>
+
+    <p>An approach which accounts for impedance in an approximate way is based on application of the MAC to the modes of the payload structure. Each mode of the payload may be assigned an acceleration level based on its effective mass. The acceleration level is taken from a curve similar to Figure 1, but the modal MAC is typically lower in level than the MAC which applies to physical appendage masses. Physical loads corresponding to each mode are then derived by scaling the mode shape according to this level. The combined load is obtained as the RSS of the transient load with the modal loads above the transient cutoff frequency. It can be seen that this method is the same as Method 1, except that the base drive random approach is replaced by an RSS of modal loads scaled to the modal MAC.</p>
+
+    <p>As in the previous two methods, when direct acoustic loading is non-negligible, it should be computed by an appropriate acoustic analysis method, and combined with the transient and random load using the RSS approach.</p>
+
+    <center>
+      <b>Table 1. Sources of Structural Loads</b><br />
+      <br />
+
+      <table border="2">
+        <tr>
+          <td rowspan="2">
+            <center>
+              Type of vibration
+            </center>
+          </td>
+
+          <td colspan="2">
+            <center>
+              Frequencies (Hz)
+            </center>
+          </td>
+
+          <td rowspan="2" colspan="3">
+            <center>
+              Types of Analysis
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              From
+            </center>
+          </td>
+
+          <td>
+            <center>
+              To
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ol>
+              <li value="1">Steady-state:<br />
+              Transient Vibration</li>
+            </ol>
+          </td>
+
+          <td>
+            <center>
+              0
+            </center>
+          </td>
+
+          <td>
+            <center>
+              60
+            </center>
+          </td>
+
+          <td colspan="2">
+            <center>
+              Coupled transient
+            </center>
+          </td>
+
+          <td rowspan="2">
+            <center>
+              MAC
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ol>
+              <li value="2">Mechanically<br />
+              transmitted random</li>
+            </ol>
+          </td>
+
+          <td>
+            <center>
+              20
+            </center>
+          </td>
+
+          <td>
+            <center>
+              2,000
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Base drive random
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Modal MAC
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <ol>
+              <li value="3">Direct acoustic</li>
+            </ol>
+          </td>
+
+          <td>
+            <center>
+              50
+            </center>
+          </td>
+
+          <td>
+            <center>
+              10,000
+            </center>
+          </td>
+
+          <td>
+            <center>
+              Finite element<br />
+              (low frequency)
+            </center>
+          </td>
+
+          <td colspan="2">
+            <center>
+              Statistical engergy<br />
+              (high frequency)
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <hr width="75%" />
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009008main_0652.jpg"  HEIGHT="376"  BORDER="0" /><A HREF="/llis_lib/txt/1009496main_0652.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    The probability of structural failure during launch will be increased, particularly for secondary structure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Design primary and secondary structural components to accommodate loads which include steady-state, transient dynamic, and vibro-acoustic contributions at liftoff.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br />
+    <br />
+    Viking, Voyager, Galileo</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

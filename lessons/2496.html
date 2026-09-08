@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2496: High Voltage Power Supply Circuit Failure due to Hollow Core Resistor</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2496: High Voltage Power Supply Circuit Failure due to Hollow Core Resistor</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2496 (Database ID: 2496)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-03-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Wallops Flight Facility</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design, Safety and Mission Assurance, Systems Engineering and Analysis, Crew Survival Systems, Launch Systems, Orbiting Vehicles, Power, Spacecraft and Spacecraft Instruments, Advanced planning of safety systems, Early requirements and standards definition, Reliability, Engineering design and project processes and standards, Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2496" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+After the missions were conducted and the data review indicated science instrument failure, University of Iowa personnel investigated the issue and tried to recreate the problem in their laboratory. The problem manifested itself as a failed op-amp in the feedback control circuitry when the high voltage supplies were placed in vacuum and powered on. The feedback control is achieved through a resistor divider circuit on the output of the supply utilizing a 100Mohm and 100kohm resistor to provide a divide by 1000. This monitor of the output is the input of the drive controlling op-amp (the op-amp that would fail). The 100MOhm resistor was an OHMITE Maxi-Mox series resistor, which is rated for >10kV. Note: The failure never occurred on the bench in atmosphere, only during vacuum conditions. After multiple tests and a detailed review by a space flight high voltage power supply expert it was pointed out that the Maxi-Mox series resistor was hollow. This resistor uses a hollow ceramic core for the mechanical support in the resistor; the core is hollowed in order to decrease the weight of the resistor. In atmosphere there is sufficient standoff of the voltage between the two ends of the resistor; however, as the ambient pressure decreases the standoff voltage decreases and ultimately could break down. This results in the full voltage of the supply output, 2.5 kV, directly inputting into the feedback op-amp and damaging the op-amp. This failure mode was verified in testing 6 Maxi-mox resistors in vacuum, by setting up a test resistor divide network similar to the supply implementation, applying a set 2.5kV across the resistor network and measuring the voltage at the divide point. Five of the resistors arced and resulted in the full 2.5kV at the divide point. One resistor showed no indication of arcing. This was attributed to either the sealing around the core of the resistor being either very tight or very loose; the resistor either never reached the corona point or quickly pumped out past the corona point.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The Maxi-Mox resistors could be used in space flight if a sufficiently long interval is allowed for the cavity in the core to reach vacuum; however, because the pump-out rate varies from resistor to resistor, the point at which the arcing occurs on the resistor is indeterminate and, therefore, these resistors are not suitable for use on sounding rockets or space flight applications where a long pump out is not feasible. This issue is only on the Maxi-Mox series; the Slim-Mox and Mini-Mox series are solid core resistors and do not suffer this problem.
+</section>
+<section><h2>Recommendation(s)</h2>
+It is recommended that hollow core resistors only be used in situations where they are given sufficient time to reach vacuum prior to high voltage being applied. This requires the user to characterize, with sufficient reliability and confidence, the pump-out rate of the resistor.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+University of Iowa personnel indicated that they have shared this lesson with other researchers in the sounding rocket community.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

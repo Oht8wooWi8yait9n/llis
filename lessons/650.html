@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0650: Fail Safe Firex/Deluge System</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0650: Fail Safe Firex/Deluge System</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0650 (Database ID: 650)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/650" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3002 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>This design standard incorporated a fail safe practice that prevents the two potential failures inherent to a water protection system:</p> 
+<ol> 
+ <li>Lack of water flow when required</li> 
+ <li>Inadvertent water flow when not required.</li> 
+</ol> &nbsp; 
+<p><u>Implementation Method:</u></p> 
+<p>This design implements a practice which might be considered as excessive due to the added expense of the additional water valves and their associated controls. However, applied in an appropriate situation this configuration could prove to be very cost effective. The appropriate application for this design would be where the protected materials are susceptible to ruination from water damage.</p> 
+<p>The loss incurred from fire damage and the lack of fire extinguishing capability is well understood. This configuration provides added security to the user that the system will be available when required. Not as evident is the susceptibility to damage as a result of an inadvertent activation or failure. This arrangement provides the security that a single failure will not result in a water deluge potentially destroying the property it was designed to protect.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>The basis for this configuration is the series-parallel arrangement of the water valves shown in Figure 1. An adequate flow of water should be available to the user through any of the paths involving the <q>ARM</q> and <q>ACTIVATE</q> valves, i.e. all that is required is one <q>ARM</q> valve and one <q>ACTIVATE</q> valve to open (see figure 1 to show available water paths). The valves should be pneumatically or hydraulically controlled through electrically positioned solenoid valves. Each water valve should have its own controlling solenoid valve. The <q>ARM</q> solenoid valves should be controlled open by two parallel redundant controlling devices (relays, programmable logic controllers, etc.) and the <q>ACTIVATE</q> solenoid valves should be controlled open by two other parallel redundant controlling devices. Local and remote valve actuation should be provided with separate <q>ARM</q> and <q>ACTIVATE</q> switches. These arrangements insure that a single failure will not prevent water flow when required or initiate water flow when not desired.</p> 
+<img alt="refer to [D] description" border="0" height="352" src="https://llis.nasa.gov/llis_lib/images/1009007main_0650.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009495main_0650.txt">[D]</a> &nbsp; 
+<p>References:</p> 
+<ol> 
+ <li>KSC-STD-F-0004C: Standard for Fire Protection Design for Facilities, John F. Kennedy Space Center, NASA.</li> 
+ <li>SAA09SY03B-001: System Assurance Analysis of the Pad Water System at LC-39 Pad B &amp; MLP-1, -2.</li> 
+ <li>79K40019: LOA Facility Water Pad B SMS/EMCD.</li> 
+ <li>80K55529: LOA Facility Water MLP 1, 2, &amp; 3 SMS/EMCD.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>This system serves two purposes. It prevents a single failure from rendering the FIREX system inoperative and helps prevent the occurrence of an inadvertent operation of the FIREX Deluge System.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Incorporation of prudent design techniques results in reliable Firex/Deluge System Design Practice for Elimination of Single Point Failures and Unsolicited Operation.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, Ground Support Equipment, KSC Launch Complex 39 Pad B Payload Changeout Room Firex/Deluge System KSC Mobile Launch Platform (-1, -2, -3) Hydrazine Service Area Firex/Deluge.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0643: NASA Preferred Reliability Practices; Design and Test Practices for Aerospace Systems; Environmental Factors</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0643: NASA Preferred Reliability Practices; Design and Test Practices for Aerospace Systems; Environmental Factors</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0643 (Database ID: 643)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/643" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice NO. PD-EC-1101 from NASA Technical Memorandum 4322A, NASA Preferred Reliability Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Each of the identified environmental factors requires consideration in the design process. This assures that adequate environmental strength is incorporated into the design to ensure reliability.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>To ensure a reliability-oriented design, determine the needed environmental resistance of the equipment. The initial requirement is to define the operating environment for the equipment. A Life-Cycle Environment Profile, containing this information, should be developed.</p>
+
+    <p>A Life-Cycle Environment Profile is a forecast of events and associated environmental conditions that an item experiences from manufacturing to retirement. The life cycle includes the phases that an item will encounter such as: handling, shipping, or storage prior to use; disposition between missions (storage, standby, or transfer to/from repair sites); geographical locations of expected deployment; and platform environments. The environment or combination of environments the equipment will encounter at each phase should be determined. All deployment scenarios should be described as a baseline to identify the environments most likely to be associated with each life cycle phase. The following factors should also be taken into account:</p>
+
+    <ol type="a">
+      <li>Hardware configuration.</li>
+
+      <li>Environment(s) that will be encountered.</li>
+
+      <li>Platform/hardware interfaces.</li>
+
+      <li>Interfaces with other equipment.</li>
+
+      <li>Absolute and relative duration of exposure phase.</li>
+
+      <li>Probability that environmental condition(s) will occur.</li>
+
+      <li>Geographical locations.</li>
+
+      <li>Any other information that will help identify environmental conditions that may impact the item.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>The steps in developing a Life-Cycle Environment Profile are as follows:</p>
+
+    <ol>
+      <li>Describe anticipated events for an item of equipment, from final factory acceptance through terminal expenditure or removal from inventory.</li>
+
+      <li>Identify significant natural and induced environments or combination of environments for each anticipated shipping, storage, and logistic event (such as transportation, dormant storage, stand-by, bench handling, and ready modes, etc.).</li>
+
+      <li>Describe environmental and stress conditions (in narrative and statistical form) to which equipment will be subjected during the life cycle. Data may be derived by calculation, laboratory tests, or operational measurements. Estimated data should be replaced with actual values as determined. The profile should show the number of measurements used to obtain the average value of these stresses and design achievements as well as their variability (expressed as standard deviation).</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>This analysis can be used to: develop environmental design criteria consistent with anticipated operating conditions, evaluate possible effects of change in environmental conditions, and provide traceability for the rationale applied in criteria selection for future use on the same program or other programs.</p>
+
+    <p>A listing of typical environmental factors is included in Table 1.</p>
+
+    <center>
+      <i>Table 1: Environmental Coverage Checklist (Typical)</i>
+
+      <table border="1" width="90%">
+        <tr>
+          <th width="50%">Natural</th>
+
+          <th width="50%">Induced</th>
+        </tr>
+
+        <tr>
+          <td valign="top" width="50%">
+            <dl>
+              <dd>Albedo, Planetary IR</dd>
+
+              <dd>Clouds</dd>
+
+              <dd>Electromagnetic Radiation</dd>
+
+              <dd>Electrostatic Discharge</dd>
+
+              <dd>Fog</dd>
+
+              <dd>Freezing Rain</dd>
+
+              <dd>Frost</dd>
+
+              <dd>Fungus</dd>
+
+              <dd>Gravity, Low</dd>
+
+              <dd>Hail</dd>
+
+              <dd>Humidity, High</dd>
+
+              <dd>Humidity, Hight</dd>
+
+              <dd>Ice</dd>
+
+              <dd>Ionized Gases</dd>
+
+              <dd>Lightning</dd>
+
+              <dd>Magnetics, Geo</dd>
+
+              <dd>Meteoroids</dd>
+
+              <dd>Pollution, Air</dd>
+
+              <dd>Pressure, High</dd>
+
+              <dd>Pressure, Low, Vacuum</dd>
+
+              <dd>Radiation, Cosmic, Solar</dd>
+
+              <dd>Rain</dd>
+
+              <dd>Salt Spray</dd>
+
+              <dd>Sand and Dust</dd>
+
+              <dd>Sleet</dd>
+
+              <dd>Snow</dd>
+
+              <dd>Temperature, High</dd>
+
+              <dd>Temperature, Low</dd>
+
+              <dd>Wind</dd>
+            </dl>
+          </td>
+
+          <td valign="top" width="50%">
+            <dl>
+              <dd>Acceleration</dd>
+
+              <dd>Chemicals</dd>
+
+              <dd>Corona</dd>
+
+              <dd>Electromagnetic, Laser</dd>
+
+              <dd>Electromagnetic Radiation</dd>
+
+              <dd>Electrostatic Discharge</dd>
+
+              <dd>Explosion</dd>
+
+              <dd>Icing</dd>
+
+              <dd>Magnetics</dd>
+
+              <dd>Moisture</dd>
+
+              <dd>Nuclear Radiation</dd>
+
+              <dd>Shock, Pyro, Thermal</dd>
+
+              <dd>Space Debris</dd>
+
+              <dd>Temperature, High, Aero. Heating, Fire</dd>
+
+              <dd>Temperature, Low, Aero. Cooling</dd>
+
+              <dd>Turbulence</dd>
+
+              <dd>Vapor Trails</dd>
+
+              <dd>Vibration, Mechanical, Microphonics</dd>
+
+              <dd>Vibration, Acoustic</dd>
+            </dl>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Given the dependence of equipment reliability on the operating conditions encountered during the life cycle, it is important that such conditions be identified accurately at the beginning of the design process. Environmental factors that strongly influence equipment reliability are included in Table 1, which provides a checklist for environmental coverage (typical).</p>
+
+    <p>Concurrent (combined) environments may be more detrimental to reliability than the effects of a single environment. In characterizing the design process, design/test criteria must consider both single and/or combined environments in anticipation of providing the hardware capability to withstand the hazards identified in the system profile. The effects of typical combined environments are illustrated in a matrix relationship in Figure 1, which shows combinations where the total effect is more damaging than the cumulative effect of each environment acting independently. For example, an item may be exposed to a combination such as temperature, humidity, altitude, shock, and vibration while it is being transported. The acceptance to end-of-life history of an item must be examined for these effects. Table 2 provides reliability considerations for pairs of environmental factors.</p>
+
+    <p>Each environmental factor that is present requires a determination of its impact on the operational and reliability characteristics of the materials and parts comprising the equipment being designed. Packaging techniques should be identified that afford the necessary protection against the degrading factors.</p>
+
+    <p>In the environmental stress identification process that precedes selection of environmental strength techniques, it is essential to consider stresses associated with all life intervals of the equipment. This includes operational and maintenance environments as well as the pre-operational environments, when stresses imposed on the parts during manufacturing assembly, inspection, testing, shipping, and installation may have significant impact on equipment reliability. Stresses imposed during the pre-operational phase often are overlooked; however, they may represent a particularly harsh environment that the equipment must withstand. Often, the environments to which systems are exposed during shipping and installation are more severe than those encountered during normal operating conditions. It is probable that some of the environmental strength features that are contained in a system design pertain to conditions that will be encountered in the pre-operational phase rather than
+    during actual operation.</p>
+
+    <center>
+      <p><i>Figure 1: Effects of Combined Environments</i></p>
+      <a href="https://llis.nasa.gov/llis_lib/images/1009001main_0643l.jpg"><IMG  WIDTH="450"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009002main_0643s.jpg"  HEIGHT="388"  BORDER="0" /></a><A HREF="/llis_lib/txt/1009490main_0643s.txt"  >[D]</A><br />
+      <font size="-1">(Click image for a larger view)
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <i>Table 2: Various Environmental Pairs</i>
+
+      <table border="1" cellpadding="3" cellspacing="3" width="90%">
+        <tr>
+          <th width="33%" valign="top">High Temperature and Humidity</th>
+
+          <th width="33%" valign="top">High Temperature and Low Pressure</th>
+
+          <th width="33%" valign="top">High Temperature and Salt Spray</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">High temperature tends to increase the rate of moisture penetration. The general deterioration effects of humidity are increased by high temperatures.</td>
+
+          <td width="33%" valign="top">Each of these environments depends on the other. For example, as pressure decreases, outgassing of constituents of materials increases; as temperature increases, outgassing increases. Hence, each tends to intensify the effects of the other.</td>
+
+          <td width="33%" valign="top">High temperature tends to increase the rate of corrosion caused by salt spray.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">High Temperature and Solar Radiation</th>
+
+          <th width="33%" valign="top">High Temperature and Fungus</th>
+
+          <th width="33%" valign="top">High Temperature and Sand and Dust</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This is a man-independent combination that causes increasing effects on organic materials.</td>
+
+          <td width="33%" valign="top">A certain degree of high temperature is necessary to permit fungus and microorganisms to grow. However, fungus and microorganisms cannot develop above 160&deg;F (71&deg;C).</td>
+
+          <td width="33%" valign="top">The erosion rate of sand may be accelerated by high temperature. However, high temperature reduces sand and dust penetration.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">High Temperature and Shock and Vibration</th>
+
+          <th width="33%" valign="top">High Temperature and Acceleration</th>
+
+          <th width="33%" valign="top">High Temperature and Explosive Atmosphere</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Since both environments affect common material properties, they will intensify each other's effects. The degree to which the effect are intensified depends on the magnitude of each environment in combination. Plastics and polymers are more susceptible to this combination than metals, unless extremely high temperatures are involved.</td>
+
+          <td width="33%" valign="top">This combination produces the same effect as high temperature and shock and vibration.</td>
+
+          <td width="33%" valign="top">Temperature has minimal effect on the ignition of an explosive atmosphere but does affect the air-vapor ratio, which is an imporant consideration.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Temperature and Humidity</th>
+
+          <th width="33%" valign="top">High Temperature and Ozone</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Relative humidity increases as temperature decreases, and lower temperature may induce moisture condensation. If the temperature is low enough, frost or ice may result.</td>
+
+          <td width="33%" valign="top">Starting at about 300&deg;F (150&deg;C) temperature starts to reduce ozone. Above about 520&deg;F (270&deg;C), ozone cannot exist at pressures normally encountered.</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Temperature and Solar Radiation</th>
+
+          <th width="33%" valign="top">Low Temperature and Low Pressure</th>
+
+          <th width="33%" valign="top">Low Temperature and Salt Spray</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Low temperature tends to reduce the effects of solar radiation and vice versa.</td>
+
+          <td width="33%" valign="top">This combination can accelerate leakage through seals, etc.</td>
+
+          <td width="33%" valign="top">Low temperature reduces the corrosion rate of salt spray.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">&nbsp;</th>
+
+          <th width="33%" valign="top">Low Temperature and Sand and Dust</th>
+
+          <th width="33%" valign="top">Low Temperature and Fungus</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">&nbsp;</td>
+
+          <td width="33%" valign="top">Low temperature increases dust penetration.</td>
+
+          <td width="33%" valign="top">Low temperature reduces fungus growth. At sub-zero temperatures, fungi remain in suspended animation.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Temperature and Shock and Vibration</th>
+
+          <th width="33%" valign="top">Low Temperature and Acceleration</th>
+
+          <th width="33%" valign="top">Low Temperature and Explosive Atmosphere</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Low temperature tends to intensify the effects of shock and vibration. However, it is a consideration only at very low temperatures.</td>
+
+          <td width="33%" valign="top">This combination produces the same effect as low temperature and shock and vibration.</td>
+
+          <td width="33%" valign="top">Temperature has minimal effect on the ignition of an explosive atmosphere but does affect the air-vapor ratio, which is an important consideration.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Temperature and Ozone</th>
+
+          <th width="33%" valign="top">Humidity and Low Pressure</th>
+
+          <th width="33%" valign="top">Humidity and Salt Spray</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Ozone effects are reduced at lower temperatures but ozone concentration increases with lower temperatures.</td>
+
+          <td width="33%" valign="top">Humidity increases the effects of low pressure, particularly in relation to electronic or electrical equipment. However, the actual effectiveness of this combination is determined primarily by the temperature.</td>
+
+          <td width="33%" valign="top">High humidity may dilute the salt concentration and could affect the corrosive action of the salt by increasing the coverage, thereby increasing the conductivity.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Humidity and Fungus</th>
+
+          <th width="33%" valign="top">Humidity and Sand and Dust</th>
+
+          <th width="33%" valign="top">Humidity and Solar Radiation</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Humidity helps the growth of fungus and microorganisms but adds nothing to their effects.</td>
+
+          <td width="33%" valign="top">Sand and dust have a natural affinity for water and this combination increases deterioration.</td>
+
+          <td width="33%" valign="top">Humidity intensifies the deteriorating effects of solar radiation on organic materials.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Humidity and Vibration</th>
+
+          <th width="33%" valign="top">Humidity and Shock and Acceleration</th>
+
+          <th width="33%" valign="top">Humidity and Explosive Atmosphere</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination tends to increase the rate of breakdown of electrical material.</td>
+
+          <td width="33%" valign="top">The periods of shock and acceleration are considered too short for these environments to be affected by humidity.</td>
+
+          <td width="33%" valign="top">Humidity has no effect on the ignition of an explosive atmosphere but a high humidity will reduce the pressure of an explosion.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Humidity and Ozone</th>
+
+          <th width="33%" valign="top">Low Pressure and Salt Spray</th>
+
+          <th width="33%" valign="top">Low Pressure and Solar Radiation</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Ozone meets with moisture to form hydrogen peroxide, which has a greater deteriorating effect on plastics and elastomers than the additive effects of moisture and ozone.</td>
+
+          <td width="33%" valign="top">This combination is not expected to occur.</td>
+
+          <td width="33%" valign="top">This combination does not add to the overall effects.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">&nbsp;</th>
+
+          <th width="33%" valign="top">Low Pressure and Fungus</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">&nbsp;</td>
+
+          <td width="33%" valign="top">This combination does not add to the overall effects.</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Pressure and Sand and Dust</th>
+
+          <th width="33%" valign="top">Low Pressure and Vibration</th>
+
+          <th width="33%" valign="top">Low Pressure and Shock or Acceleration</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination only occurs in extreme storms during which small dust particles are carried to high altitudes.</td>
+
+          <td width="33%" valign="top">This combination intensifies effects in all equipment categories but mostly with electronic and electrical equipment.</td>
+
+          <td width="33%" valign="top">These combinations only become important at the hyperenvironment levels, in combination with high temperature.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Low Pressure and Explosive Atmosphere</th>
+
+          <th width="33%" valign="top">Salt Spray and Fungus</th>
+
+          <th width="33%" valign="top">Salt Spray and Dust</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">At low pressures, an electrical discharge is easier to develop but the explosive atmosphere is harder to ignite.</td>
+
+          <td width="33%" valign="top">This is considered an incompatible combination.</td>
+
+          <td width="33%" valign="top">This will have the same effect as humidity and sand and dust.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Salt Spray and Vibration</th>
+
+          <th width="33%" valign="top">Salt Spray and Shock or Acceleration</th>
+
+          <th width="33%" valign="top">Salt Spray and Explosive Atmosphere</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This will have the same combined effect as humidity and vibration.</td>
+
+          <td width="33%" valign="top">This combinations produce no added effects.</td>
+
+          <td width="33%" valign="top">This is considered an incompatible combination.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Salt Spray and Ozone</th>
+
+          <th width="33%" valign="top">Solar Radiation and Fungus</th>
+
+          <th width="33%" valign="top">Solar Radiation and Sand and Dust</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination is similar to but more corrosive than humidity and ozone.</td>
+
+          <td width="33%" valign="top">Because of the resulting heat from solar radiation, this combination probably produces the same combined effect as high temperature and fungus. Further, the ultraviolet in unfiltered radiation is an effective fungicide.</td>
+
+          <td width="33%" valign="top">It is suspected that this combination will produce high temperatures.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Solar Radiation and Ozone</th>
+
+          <th width="33%" valign="top">Fungus and Ozone</th>
+
+          <th width="33%" valign="top">Solar Radiation and Shock or Acceleration</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination increases the rate of oxidation of materials.</td>
+
+          <td width="33%" valign="top">Fungus is destroyed by ozone.</td>
+
+          <td width="33%" valign="top">These combinations produce no added effects.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Solar Radiation and Vibration</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+
+          <th width="33%" valign="top">Sand and Dust and Vibration</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">Under vibration conditions, solar radiation deteriorates plastics, elastomers, oils, etc., at a higher rate.</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+
+          <td width="33%" valign="top">Vibration might possibly increase the wearing effects of sand and dust.</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Shock and Vibration</th>
+
+          <th width="33%" valign="top">Vibration and Acceleration</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination produces no added effects.</td>
+
+          <td width="33%" valign="top">This combination produces increased effects when encountered with high temperatures and low pressure in the hyperenvironmental ranges.</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+        </tr>
+
+        <tr>
+          <th width="33%" valign="top">Solar Radiation and Explosive Atmosphere</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+
+          <th width="33%" valign="top">&nbsp;</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">This combination produces no added effects.</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+
+          <td width="33%" valign="top">&nbsp;</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+    <br />
+
+    <p>Environmental stresses affect parts in different ways. Table 3 illustrates the principal effects of typical environments on system parts and materials.</p>
+
+    <p>High temperatures impose a severe stress on most electronic items, since it can cause catastrophic failure (such as melting of solder joints and burnout of solid-state devices). High temperature also causes progressive deterioration of reliability due primarily to chemical degradation effects. It is often stated that excessive temperature is the primary cause of poor reliability in electronic equipment.</p>
+
+    <p>In electronic systems design, great emphasis is placed on small size and high part densities. This generally requires a cooling system to provide a path of low thermal resistance from heat-producing elements to an ultimate heat sink of reasonably low temperature.</p>
+
+    <p>Solid-state parts are rated in terms of maximum junction temperatures. The thermal resistance is usually specified from this point to either case or to free air. Specification of the maximum ambient temperature for which a part is suitable generally is not a sufficient method for part selection, since the surface temperature of a particular part can be greatly influenced by heat radiation or heat conduction effects from nearby parts. These effects can lead to overheating, even though an ambient temperature rating appears not to be exceeded. It is preferable to specify thermal environment ratings such as equipment surface temperatures, thermal resistance paths associated with conduction, convection, and radiation effects, and cooling provisions such as air temperature, pressure, and velocity. In this manner, the true thermal state of the internal components of temperature-sensitive components can be determined. Reliability improvement techniques for high temperature stress
+    include the use of heat dissipation devices, cooling systems, thermal insulation, and heat-withstanding materials.</p>
+
+    <p>Low temperatures experienced by electronic equipment can cause reliability problems. These problems usually are associated with mechanical system elements. They include mechanical stresses produced by differences in the coefficients of expansion (contraction) of metallic and nonmetallic materials, embrittlement of nonmetallic components, mechanical forces caused by freezing of entrapped moisture, stiffening of liquid constituents, etc. Typical examples include cracking of seams, binding of mechanical linkages, and excessive viscosity of lubricants. Reliability improvement techniques for low temperature stress include the use of heating devices, thermal insulation, and cold-withstanding materials.</p>
+
+    <center>
+      <i>Table 3: Environmental Effects</i>
+
+      <table border="1" cellpadding="3" cellspacing="3" width="90%">
+        <tr>
+          <th width="33%" valign="top">Environment</th>
+
+          <th width="33%" valign="top">Principal Effects</th>
+
+          <th width="33%" valign="top">Typical Failures Induced</th>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="4">
+            <center>
+              High Temperature
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Thermal aging:</dt>
+
+              <dd>Oxidation</dd>
+
+              <dd>Structural change</dd>
+
+              <dd>Chemical reaction</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Insulation failure;</dt>
+
+              <dt>Alteration of electrical properties.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Softening, melting, and sublimation</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural failure.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Viscosity reduction/evaporation</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Loss of lubrication properties.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Physical expansion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural failure;</dt>
+
+              <dt>increased mechanical stress;</dt>
+
+              <dt>increased wear on moving parts.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="4">
+            <center>
+              Low Temperature
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Increased viscosity and solidification</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Loss of lubrication properties.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Ice formation</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Alteration of electrical properties.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Embrittlement</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>cracking, failure.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Physical contraction</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural failure;</dt>
+
+              <dt>increased wear on moving parts.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              High relative humidity
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Moisture absorption</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top" rowspan="2">
+            <dl>
+              <dt>Selling, rupture of container;</dt>
+
+              <dt>Physical breakdown;</dt>
+
+              <dt>Loss of electrical strength;</dt>
+
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>Interference with function;</dt>
+
+              <dt>Loss of electrical properties;</dt>
+
+              <dt>Increased conductivity of insulators.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Chemical reaction</dt>
+
+              <dd>Corrosion</dd>
+
+              <dd>Electrolysis</dd>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Low relative humidity
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Desiccation</dt>
+
+              <dd>Embrittlement</dd>
+
+              <dd>Granulation</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>Structural collapse;</dt>
+
+              <dt>Alteration of electrical properties, "dusting".</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              High pressure
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Compression</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural collapse;</dt>
+
+              <dt>Penetration of sealing;</dt>
+
+              <dt>Interference with function.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="3">
+            <center>
+              Low Pressure
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Expansion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Fracture of container;</dt>
+
+              <dt>Explosive expansion.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Outgassing</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Alteration of electrical properties;</dt>
+
+              <dt>Loss of mechanical strength.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Reduced dielectrical strength of air</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Insulation breakdown and arc-over;</dt>
+
+              <dt>Corona and ozone formation.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Solar radiation
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Actinic and physicochemical reactions:</dt>
+
+              <dd>Embrittlement</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Surface deterioration;</dt>
+
+              <dt>Alteration of electrical properties;</dt>
+
+              <dt>Discoloration of materials;</dt>
+
+              <dt>Ozone formation.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Sand and dust
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Abrasion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Increased wear.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Clogging</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Interference with function;</dt>
+
+              <dt>Alteration of electrical properties.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Salt spray
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Chemical reactions:</dt>
+
+              <dd>Corrosion</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Increased wear.</dt>
+
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>Alteration of electrical properties;</dt>
+
+              <dt>Interference with function.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Electrolysis</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Surface deterioration;</dt>
+
+              <dt>Structural weakening;</dt>
+
+              <dt>Increased conductivity.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="4">
+            <center>
+              Wind
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Force application</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural collapse;</dt>
+
+              <dt>Interference with function;</dt>
+
+              <dt>Loss of mechanical strength.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Deposition of materials</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Mechanical interference and cloggin;</dt>
+
+              <dt>Abrasion accelerated.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Heat loss (low velocity)</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Accelerates low-temperature effects.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Heat gain (high velocity)</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Accelerates high-temperature effects.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="4">
+            <center>
+              Rain
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Physical stress</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural collapse.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Water absorption and immersion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Increase in weight;</dt>
+
+              <dt>Electrical failure;</dt>
+
+              <dt>Structural weakening.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Erosion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Removes protective coatings;</dt>
+
+              <dt>Structural weakening;</dt>
+
+              <dt>Surface deterioration.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Corrosion</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Enhances chemical reactions.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Temperature shock
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Mechanical stress</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural collapse or weakening;</dt>
+
+              <dt>Seal damage.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              High-speed particles<br />
+              (nuclear irradiation)
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Heating</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Thermal aging;</dt>
+
+              <dt>Oxidation.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Transmutation and ionization</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Alteration of chemical, physical, and electrical properties;</dt>
+
+              <dt>Production of gases and secondary particles.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Zero gravity
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Mechanical stress</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Interruption of gravity-dependent functions.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Absence of convection cooling</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Aggravation of high-temperature effects.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Ozone
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Chemical reactions:</dt>
+
+              <dd>Crazing, cracking</dd>
+
+              <dd>Embrittlement</dd>
+
+              <dd>Granulation</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Rapid Oxidation;</dt>
+
+              <dt>Alteration of electrical properties;</dt>
+
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>Interference with function.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Reduced dielectric strength of air</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Insulation breakdown and arc-over</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Explosive decompression
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Severe mechanical stress</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Rupture and cracking;</dt>
+
+              <dt>Structural collapse.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Dissociated gases
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Chemical reactions:</dt>
+
+              <dd>Contamination</dd>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Alteration of physical and electrical properties</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Reduced dielectric strength</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Insulation breakdown and arc-over.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Accleration
+            </center>
+          </td>
+
+          <td width="33%" valign="top">Mechanical stress.</td>
+
+          <td width="33%" valign="top">Structural collapse.</td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top" rowspan="2">
+            <center>
+              Vibration
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Mechanical Stress</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Loss of mechanical strength;</dt>
+
+              <dt>Interference with function;</dt>
+
+              <dt>Increased wear.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Fatigue</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Structural collapse.</dt>
+            </dl>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="33%" valign="top">
+            <center>
+              Magnetic Fields
+            </center>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Induced magnetization</dt>
+            </dl>
+          </td>
+
+          <td width="33%" valign="top">
+            <dl>
+              <dt>Interference with function;</dt>
+
+              <dt>Alteration of electrical properties;</dt>
+
+              <dt>Induced heating.</dt>
+            </dl>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+    <br />
+
+    <p>Additional stresses are produced when electronic equipment is exposed to sudden changes of temperature or rapidly changing thermal cycling conditions. These conditions generate large internal mechanical stresses in structural elements, particularly when dissimilar materials are involved. Effects of thermal shock-induced stresses include cracking of seams, delamination, loss of hermeticity, leakage of fill gases, separation of encapsulating materials from components and enclosure surface leading to the creation of voids, and distortion of support members.</p>
+
+    <p>A thermal shock test may be specified to determine the integrity of solder joints since such a test creates large internal forces due to differential expansion effects. Such a test also has been found to be instrumental in creating segregation effects in solder alloys leading to the formation of lead-rich zones, which are susceptible to cracking effects.</p>
+
+    <p>Electronic equipment often is subjected to environmental shock and vibration during both normal use and testing. Such environments can cause physical damage to parts and structural members when deflections produced cause mechanical stresses which exceed the allowable working stress of the constituent parts.</p>
+
+    <p>Natural frequencies of items comprising the equipment are important parameters that must be considered in the design process since a resonant condition can be produced if a natural frequency is within the vibration frequency range. The resonance condition will greatly amplify subsystem deflection and may increase stresses beyond the safe limit.</p>
+
+    <p>The vibration environment can be particularly severe for electrical connectors, since it may cause relative motion between members of the connector. In combination with other environmental stresses, this motion can produce fret corrosion. This generates wear debris and causes large variation in contact resistance. Reliability improvement techniques for vibrational stress include the use of stiffening, control of resonance, and reduced freedom of movement.</p>
+
+    <p>Humidity and salt air environments can cause degradation of equipment performance since they promote corrosion effects in metallic components. They also can foster the creation of galvanic cells, particularly when dissimilar metals are in contact. Another deleterious effect of humidity and salt air atmosphere is the formation of surface films on nonmetallic parts. These films cause leakage paths and degrade the insulation and dielectric properties of these materials. Moisture absorption by insulating materials also can cause a significant increase in volume conductivity and the dissipation factor of these materials. Reliability improvement techniques for humidity and salt environments include use of hermetic sealing, moisture-resistant material, dehumidifiers, protective coatings/covers, and reduced use of dissimilar metals.</p>
+
+    <p>Electromagnetic and nuclear radiation can disrupt performance levels and, in some cases, cause permanent damage to exposed equipment. Therefore, it is important that such effects be considered in determining the environmental strength for electronic equipment that must achieve a specified reliability goal.</p>
+
+    <p>Electromagnetic radiation often produces interference and noise effects within electronic circuity, which can impair system performance. Sources of these effects include corona or lightning discharges, sparking, and arcing phenomena. These may be associated with high voltage transmission lines, ignition systems, brush type motors, and even the equipment itself. Generally, the reduction of interference effects requires incorporating filtering and shielding features or specifying less susceptible components and circuity.</p>
+
+    <p>Nuclear radiation can cause permanent damage by alteration of the atomic or molecular structure of dielectric and semiconductor materials. High energy radiation also can cause ionization effects that degrade the insulation levels of dielectric materials. The migration of nuclear radiation effects typically involves materials and parts possessing a higher degree of radiation resistance, and the incorporation of shielding and hardening techniques.</p>
+
+    <p>Each environmental factor experienced by an item during its life cycle requires consideration in the design process. This ensures that adequate environmental strength is incorporated into the design for reliability.</p>
+
+    <p>References:</p>
+
+    <ul>
+      <li>
+        Government
+
+        <ol>
+          <li>MIL-HDBK-217E Notice 1, "Reliability Prediction of Electronic Equipment," January 1990.</li>
+
+          <li>MIL-HDBK-251, "Reliability/Design Thermal Applications," January 1978.</li>
+
+          <li>MIL-HDBK-338-1A, "Electronic Reliability Design Handbook," October 1988.</li>
+
+          <li>MIL-STD-810E, "Environmental Test Methods and Engineering Guidelines," July 1989.</li>
+        </ol>
+      </li>
+
+      <li style="list-style: none"><br />
+      </li>
+
+      <li>
+        Industry
+
+        <ol>
+          <li value="5">EID-00866, Rocketdyne Division, Rockwell International, "Space Station Freedom Electric Power System Reliability and Maintainability Guidelines Document," 1990.</li>
+
+          <li value="6">SAE G-11, Society of Automotive Engineers, Reliability, Maintainability, and Supportability Guidebook, 1990.</li>
+        </ol>
+      </li>
+    </ul>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to perform a detailed life cycle environment profile can lead to overlooking environmental factors whose effect is critical to equipment reliability. If these factors are not included in the environmental design criteria and test program, environment-induced failures may occur during space flight operations.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>At the onset of the design process, identify the operating conditions that will be encountered during the life of the equipment.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br />
+    <br />
+    Space Electronic Rocket Test (SERT) I and II, Communication Technology Satellite (CTS), ACTS, Space Experiments, Launch Vehicles, Space Power Systems, and Space Station Freedom.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

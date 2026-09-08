@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1772: Know How Your Software Measurement Data Will Be Used</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1772: Know How Your Software Measurement Data Will Be Used</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1772 (Database ID: 1772)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2006-12-08</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Formulation &amp;raquo; Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Engineering Design, Mission Operations and Ground Support Systems, Missions and Systems Requirements Definition, Program Management, Systems Engineering and Analysis, Financial Management, Flight Operations, Ground Operations, Program and Project Management, Software, Software Engineering, Mission operations systems, Configuration control and data management, Requirements critical to costing and cost credibility, Business processes, Communications between different offices and contractor personnel, Cross Agency coordination, Program planning / development and management, Systems analysis - cost analysis</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1772" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The life cycle cost of complex NASA flight software is difficult to forecast accurately, and erroneous or poorly communicated software development cost estimate data may lead to the unjustified cancellation of spaceflight projects. NASA policy requires each flight project to provide cost estimate support data to the NASA Independent Program Assessment Office (IPAO) prior to each major project milestone (Reference (1)). JPL experiences with two recent flight projects point out the risk of cost estimate support data being misinterpreted by the recipient.
+<br/>
+<br/>Prior to Preliminary Mission &amp; Systems Review (PMSR), the Mars Science Laboratory (MSL) flight project submitted a Cost Analysis Data Requirement (CADRe) document to the IPAO that included an estimate of source lines of code (SLOC) and other descriptive measurement data related to the proposed flight software. The IPAO input this data to their parametric cost estimating model. The project had provided qualitative parameters that were subject to misinterpretation, and provided physical SLOC counts. These SLOC values were erroneously interpreted as logical SLOC counts, causing the model to produce a cost estimate approximately 50 percent higher than the project's estimate. It proved extremely difficult and time-consuming for the parties to reconcile the simple inconsistency and reach agreement on the correct estimate.
+<br/>  
+<br/>Similar confusion in the interpretation of cost measurement data supplied by JPL for the Juno flight project resulted in IPAO overstating by orders of magnitude the cost of the reused portion of the proposed (15 million SLOC) Ground Data System (GDS) software for the Juno mission. The IPAO cost-estimate did not reflect that the cost of re-integrating/re-testing inherited code would not be incurred by the Juno project because it had been included in the budget for the overall JPL Multi-Mission Ground System Services (MGSS) infrastructure. Once the Juno GDS SLOC numbers were updated to include only the Juno-specific software modifications, the IPAO and Juno project estimates agreed.
+<br/>
+<br/>References:  
+<br/>1. NASA NPR 7120.5, "NASA Program and Project Management Process and Requirements" 
+<br/>2. NPD 7120.4, "Program/Project Management"
+<br/>3. "NASA Cost Estimating Handbook", http://www.ceh.nasa.gov
+</section>
+<section><h2>Lesson(s) Learned</h2>
+When software measurement data used to support cost estimates is provided to NASA by a major program or project without an understanding of how NASA will apply the data, discrepancies may produce erroneous cost estimates that disrupt the process of program/project assessment and approval.
+</section>
+<section><h2>Recommendation(s)</h2>
+Prior to submitting software cost estimate support data (such as estimates of total SLOC and software reuse) to NASA for major flight projects (over $500 million), verify how the NASA recipient plans to interpret the data and use it in their parametric cost estimating model. To further preclude misinterpretation of the data, the software project may wish to duplicate the NASA process using the same or a similar parametric model, and compare the results with NASA's.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 5.9.2.5 ("Management Practices: Scheduling, Cost Estimating, Performance Assessment and Control -- Cost Estimating") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 6," JPL DocID 58032, March 6, 2006. <br/><br/>
+</section>
+<section><h2>Related Policies & Standards</h2>
+(1) NASA NPR 7120.5, ¿NASA Program and Project Management Process and Requirements¿
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

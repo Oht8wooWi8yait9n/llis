@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0448: Fusing Element Failure resulting from Test Integration, Test, Pyrotechnic Devices, PYRO, Electrical Explosive Devices, EED, Command Circuit, Drive Circuit</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0448: Fusing Element Failure resulting from Test Integration, Test, Pyrotechnic Devices, PYRO, Electrical Explosive Devices, EED, Command Circuit, Drive Circuit</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0448 (Database ID: 448)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1996-09-12</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/448" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Recently on a Goddard Space Flight Center (GSFC) spacecraft program, a contractor had concluded successful live fire tests on the EEDs (Electrical Explosive Devices, also called Pyros). Subsequently it was found that the live fire tests had not only fired the EEDs but had also damaged the drive circuit. The damaged component was the EED circuit fusing element. This component would not provide sufficient energy to fire an EED when required during the mission. This then could have resulted in failure to fire EEDs during the mission. GSFC engineering had mandated that the drive circuit be tested after the live fire test. This drive circuit test was to demonstrate the drive circuit vitality. Fortunately, the mandated tests were done, the damaged parts found and appropriate corrective measures taken. The last paragraph of this document contains a test recommendation to preclude launching with a "dead" EED system (typical I&amp;T EED tests may appear to be successful but the typical
+    test can actually damage the EED drive circuit). This paragraph was written as an executive summary with the last paragraph being the summary recommendation. The other paragraphs provide more detailed information on the problem.</p>
+
+    <p>Early concerns about the Pyro circuit design included unconventional EMI shielding, unconventional EED firing via a ground pulse, firing current sustained after initiation, overcurrent protection by using a resistor (current-time curves were not available from the contractor), and the safing plug location that precludes verification of EED status. The Contractor maintained that the design was the same as that used repeatedly on all of their programs. (It was subsequently discovered that the fire pulse design has not been consistent on their programs.) The contractor also maintained that the design minimized hazard risks and therefore was acceptable. They were insistent that since they had already fabricated the assemblies a change to the design would substantially impact the program. GSFC insisted that as a minimum after any EED test firing, the Contractor must conduct a test to verify the resistance value of the EED fusing resistors. No change was made by the contractor to
+    alter the unconventional EED firing via a ground pulse.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1008970main_0448.gif"  HEIGHT="297"  BORDER="0" /><A HREF="/llis_lib/txt/1009470main_0448.txt"  >[D]</A>
+    </center>
+
+    <p>During the tests to verify the resistance value of the EED fusing resistor, it was discovered that in one channel the fusing resistor value was 15 times the required value. Therefore, the fusing resistor would no longer activate a flight installed EED. When the assembly was opened, the resistor was found to be charred. Evidence points to this being a result of EED firing via a ground pulse and the EED establishing an internal path to ground that resulted in a sustained current until the pre-arm/arm path was interrupted by fusing resistor failure.</p>
+
+    <p>Another fusing resistor was also discolored but had the correct resistance value. The discolored resistor was then further tested to confirm that it could provide additional adequate fire pulses. The Contractor did limited testing and confirmed that the discolored (but correct resistance) fusing resistor was capable of repeatedly providing fire pulses with adequate energy. This result appears to confirm that a measurement of resistance value was adequate to determine drive circuit functionality.</p>
+
+    <p>The mechanism for the damage appears to be the ground firing pulse combined with the known effect of EED shorting to case during discharge. The enclosed figure is a simplified diagram of the ground firing pulse configuration. The prearm and arm contacts are closed or opened by ground command for extended periods. The duration of positive voltage application is mostly dependent upon intervening operations. However, a minimum duration on the order of a few hundred milliseconds would be expected from the contractor's implementation. The fire pulse is a 40 ms ground activation pulse. If the prearm and arm commands are executed, the EED only needs the fire pulse ground connection to initiate. Once the fire pulse occurs then a "sneak" circuit can occur internal to the EED by either the bridge wire shorting to the EED case or by a low resistance plasma path to the case (information seems to indicate that this kind event occurs in about 4 percent of EEDs). If this happens, high current
+    will flow until either the fusing resistor opens or the prearm or arm functions are deactivated.</p>
+
+    <p>A short duration fire pulse on the positive voltage side would not have caused fusing resistor damage. If the fire pulse were placed on the positive side of the circuit instead of the ground side a high surge current could still occur but only for the duration of the 40ms fire pulse instead of the much longer duration of the prearm and arm relays.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>EED I&amp;T tests can appear to be successful while concurrently damaging the fusing element so that subsequent EED firing is impossible. If fusing resistor damage is not found, the result could be a launch with one or more dead EED channels.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>An obvious recommendation is that the status of the fusing element be verified after the last EED live fire test, before launch, which would stress the fusing element. Another recommendation would be NOT TO USE THIS DESIGN. If it is desired to break all connections to the power source then this could be done with an arm and a prearm single pole elements in each leg of the design or with double pole elements. Best of all options would be to not use this kind of ground fire pulse design AND check the status of fusing element after each use of the circuit and prior to launch. It is crucial that for any designs like that shown the fusing element be checked at least once before launch and after the last test that would stress the fusing element.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

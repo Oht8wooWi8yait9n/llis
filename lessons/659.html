@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0659: Redundancy in Critical Mechanical Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0659: Redundancy in Critical Mechanical Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0659 (Database ID: 659)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/659" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3003 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The benefit of using dual redundancy in critical KSC Ground Support Equipment (GSE) systems is greater assurance of successful system operation during critical shuttle processing operations in the event of a single equipment failure that would otherwise possibly cause loss of life, vehicle or damage to a vehicle system. By designing in redundancy for critical operations, the system can fail to a "fail-safe" condition and still achieve operational objectives.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The Orbiter Access Arm (OAA) is a critical GSE system located at Launch Complex 39, Pads A and B, Kennedy Space Center, Florida. The OAA is extended shortly after the shuttle arrives at the launch pad to allow personnel access to the shuttle to make the necessary preparations for launch. Shortly before launch, the astronauts will board the shuttle via the OAA. The OAA provides the only path of ingress and egress to the space shuttle crew cabin for the astronauts. Thus, this system becomes critical to the safety of the crew.</p>
+
+    <p>A critical system, as it applies to KSC GSE systems, is a system whose loss of overall system function, or improper performance of a system function, could result in loss of life, loss of the shuttle vehicle itself, or damage to a shuttle system. In addition, systems that have been identified as critical must be designed to be fail-safe. Fail-safe design provides the ability to sustain a critical system failure without causing loss of life, loss of the shuttle vehicle, or damage to a shuttle system. This includes the capability to safe the systems and successfully terminate operations, or if required, to continue operations through to completion.</p>
+
+    <p>Therefore, the OAA system must be able to sustain a failure and still be able to perform its function to completion of the operation. In the event of a single system failure, it must fail to a safe condition, meaning a single failure will not result in loss of life, loss of the shuttle, or damage to a shuttle system.</p>
+
+    <p>The critical condition is encountered when the OAA is retracted away from the shuttle at T-7:30 minutes in the countdown in preparation for launch. Should an emergency arise, either on board the shuttle or on the launch pad, during the final minutes of the countdown after the OAA is retracted, the OAA will need to be re-extended to allow the astronauts to evacuate the area as quickly as possible. Extension of the OAA is essential to the astronauts safety, as it is the only path available to the crew in the event evacuation of the shuttle is required. The astronauts lives depend on the OAA extending when needed.</p>
+
+    <p>The probability of 2 redundant components failing during a critical time period is much less likely than 1 component failing during the same period. In the case of the OAA, 2 completely redundant sets of valves, plumbing, and electrical controls are installed. Based on the classical probability theory, assuming no common cause failures, it can be shown that through using dual redundancy the reliability of a system can be increased 1 or more orders of magnitude. Thus redundant system design provides protection against a single failure causing a hazardous condition resulting in loss of life, destruction of a shuttle or damage to a shuttle system.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Redundancy is defined as multiple ways of performing a function. There are several different types of redundancy used on KSC GSE systems. Depending on the requirements of the application, the type of redundancy to be used will vary. The two primary types of redundancy are described below:</p>
+
+    <p>Operational or Active "fully on" Redundancy - Redundant elements, all of which are fully energized during the system operating cycle. Operational redundancy includes load sharing redundancy wherein redundant elements are connected in such a manner that, on failure of one unit, the remaining redundant elements will continue to perform the system function. Switching out the failed element is not required. Operational redundancy may be either full parallel or "majority vote".</p>
+
+    <p>Standby Redundancy - A redundant hardware item(s) that are non-operative until they are switched into the system on failure of the primary item(s). Switching can be accomplished by either automatic or manual means.</p>
+
+    <p>Other categorization of redundancy include:</p>
+    Like Redundancy - Identical hardware items performing the same function.<br />
+    <br />
+
+    <p>Unlike Redundancy - Nonidentical hardware items performing the same function. Safety features which provide protection for specific failure modes are considered as unlike redundancy for that failure mode; i.e. relief valves which provide protection against overpressurization after failure of a regulator</p>
+
+    <p>Typically, KSC employs parallel, two component redundancy. It can be shown that the incremental reliability gain is greatest for the first redundant unit and decreases rapidly as more redundant units are added in parallel.</p>
+
+    <p>Figure 1 provides an example of a basic block diagram of the hydraulic extend circuit for the Orbiter Access Arm (OAA) showing the use of redundancy in a critical shuttle ground support system.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009017main_0659.jpg"  HEIGHT="406"  BORDER="0" /><A HREF="/llis_lib/txt/1009505main_0659.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>A hydraulic reservoir fills 4 hydraulic accumulators. Only 2 accumulators are needed to ensure arm retract and extend, but 2 additional (redundant) accumulators are provided for fail-safe operation in the event of a leak. In the event of a major leak, the launch countdown will stop. If a major leak occurs during an emergency re-extend operation, the 2 redundant accumulators should supply enough hydraulic pressure to ensure full extension of the OAA. In addition, the hydraulic supply system is capable of supplying additional pressure if required.</p>
+
+    <p>The ensuing discussion will address the primary system only. Design of the system minimizes the likelihood of a common cause failure. The accumulators provide hydraulic fluid to a pilot valve (Primary Hydraulic Extend Pilot Valve) and to the main hydraulic supply valve (Primary Hydraulic Extend Supply Valve). When commanded by LPS (Launch Processing System), the pilot valve supplies hydraulic pressure to the Primary Hydraulic Extend Supply Valve and to the Primary Hydraulic Extend Return Valve, thus opening both valves. Hydraulic fluid from the accumulators then flows thru the Primary Hydraulic Extend Supply Valve to the upper and lower OAA hinges. Each hinge is individually capable of rotating the OAA. Thus the hinges are redundant. Fluid exits the OAA hinges, and returns to the main hydraulic reservoir through the Primary Hydraulic Extend Return Valve.</p>
+
+    <p>This discussion described the basic operation of the primary hydraulic extend circuit for the OAA. There is a secondary (redundant) set of valves as described above installed in parallel with the primary valves, that simultaneously operate.</p>
+
+    <p>Operational redundancy ensures that the OAA will operate when needed. A single failure will not result in a catastrophic consequence.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>O'Connor, Patrick "Practical Reliability Engineering" 2nd Edition, Wiley, 1985.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>All other factors being equal, the elimination of redundancy in the system described in this practice would result in a considerably higher probability of failure, the identification of additional critical items and increased probability of loss of life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The careful use of redundancy in Critical Kennedy Space Center (KSC) Ground Support Equipment (GSE) Mechanical Systems ensures reliable operation.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, Ground Support Equipment.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1333: Commercial Off The Shelf (COTS) Electronic Hardware Susceptibility to Radiation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1333: Commercial Off The Shelf (COTS) Electronic Hardware Susceptibility to Radiation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1333 (Database ID: 1333)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-11-27</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1333" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The Physics of Colloids in Space (PCS) experiment was launched on ISS Flight 6A in April 2001, was activated in EXPRESS Rack 2 on May 31, 2001, and was successfully operated on the International Space Station (ISS) until February 24, 2002. On February 24, 2002, at the onset of a scheduled operational run on ISS, the PCS flight system computer (within the PCS Avionics Section) failed to boot up. On-orbit recovery efforts were undertaken but were unsuccessful. The Avionics Section was removed and brought back on ISS Flight UF-2.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>A detailed hardware inspection and troubleshooting process was initiated on the Avionics Section. The Project asserts with a measure of confidence that the on-orbit failure of the PCS experiment was due to a Single Event Effect (radiation event) on the Single Board Computer&raquo;s CMOS (i.e., the battery-backed Random Access Memory). Commercial Off The Shelf (COTS) electronic hardware memory devices deployed on ISS can be highly susceptible to space radiation effects.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>One response to this lesson is, where vulnerabilities have been identified, to deploy radiation hardened solutions. For reflight, PCS will employ a Programmable Read-Only Memory (PROM) device for storage of Basic Input Output System (BIOS) application and parameters, a technology that is much less susceptible to Single Event Effects than either CMOS or flash memory technologies.</p>
+
+    <p>Specifically, the solution being pursued by the Project to reduce the vulnerability of the BIOS is to have the Original Equipment Manufacturer of the original Single Board Computer create a customized BIOS application that will force a boot-up using BIOS parameters stored in Programmable Read-Only Memory (PROM) technology. PROM memory technology is far less susceptible to radiation events than either CMOS or flash memory. The PCS BIOS program and the BIOS parameters themselves will be &rdquo;burned&rdquo; into a One Time Programmable- Programmable Read-Only Memory (OTP-EPROM) device. Storing all BIOS parameters in OTP-EPROM will then effectively bypass CMOS as a storage location for the PCS startup parameters and also provide a far less susceptible storage location than flash memory for the BIOS application itself.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Not yet available.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

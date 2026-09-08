@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0726: End-To-End Compatibility and Mission Simulation Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0726: End-To-End Compatibility and Mission Simulation Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0726 (Database ID: 726)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/726" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PT-TE-1437 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>This testing significantly enhances flight reliability by ensuring that all portions of the flight operational system work together as expected. This includes the proper flow of data to the end users.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The GSFC Mission Operations and Data Systems Directorate (MO&amp;DSD) develops, maintains, and operates a worldwide Ground Data System (GDS) to support a wide range of flight missions. Various organizational units within the MO&amp;DSD such as branches, sections, and mission readiness test teams collaborate with the Flight Project and the Flight Assurance Directorate in planning and performing a wide range of mission readiness testing. The purpose of this readiness testing is to verify the performance and to demonstrate the readiness of the integrated GDS to support specific flight missions. This practice is implemented by the MO&amp;DSD in the following three basic phases.</p>
+
+    <p><b>Phase A:</b> Acceptance and Interface Testing of Individual Elements of GDS</p>
+
+    <p>Acceptance and Interface testing is performed on each element of the GDS for each flight mission. This testing is particularly applicable to those hardware and software elements in the GDS that have been updated, modified, or added to meet specific requirements of a mission.</p>
+
+    <p>The acceptance and interface testing is followed by a formal Project Integration and Test Program. The Project Integration and Test Program verifies that the GDS can meet all of the project mission support requirements and documents the system's operational readiness. After all requirements have been verified, all discrepancies have been resolved, and all corrective actions have been completed, the verification process through Integration and Test is complete. The GDS is now ready to participate in Phase B, Compatibility Testing.</p>
+
+    <p><b>Phase B:</b> Compatibility Testing</p>
+
+    <p>Compatibility testing is conducted on all portions of the operational system including the payload, the operational software, and the ground systems. The ground systems include the Space and Ground Networks, the Mission Operations Control Center (MOCC), and the data processing facilities. When the mission scenario calls for electrical operation of the payload aboard the STS or in conjunction with it, compatibility of the operational system is demonstrated with the use of the appropriate elements of the STS, such as the Orbiter Payload Data Handling System and the Mission Control Center. After completion of compatibility testing, the GDS is ready to participate in Phase C, Mission Readiness and Mission Simulations Testing.</p>
+
+    <p><b>Phase C:</b> Mission Readiness And Mission Simulation Testing</p>
+
+    <p>Mission Readiness Testing is conducted to verify that system design specifications are being routinely met, to ascertain the level of operational proficiency being maintained throughout the networks, and to evaluate the network's abilities to meet or exceed design specifications in response to project requirements. An evaluation phase follows in which all Discrepancy Reports (DRs) are reviewed by a DR Review Board.</p>
+
+    <p>Mission Simulation Testing includes data flow tests performed on the total system in a realistic mission timeline. When practical, external stimulus of the spacecraft instruments and attitude control sensors are used.</p>
+
+    <p>Mission Readiness and Mission Simulation Testing is carried out in accordance with formal test plans prepared and approved by the MO&amp;DSD with concurrence by the flight projects. These test plans define test coordination, system requirements, test procedures, problem resolution procedures, and reporting requirements. In order to ensure an integrated testing effort, testing and planning is coordinated through a Mission Readiness Test Team comprised of project and MO&amp;DSD development, test, and operations representatives.</p>
+
+    <p><u>Test Facilities and Systems Used for Compatibility and Simulations Testing</u></p>
+
+    <p>This section on test facilities and systems used for compatibility and simulation testing provides a description of the major elements of the GDS and how they are used in these test programs.</p>
+
+    <p>The Simulations Operations Center (SOC) located at the GSFC provides support and test tools that can emulate the spacecraft, the MOCC, the Network Control Center, and the Ground and Space Networks. System evaluations and validation test and simulation programs are also conducted to characterize new or modified Space and Ground Network capabilities, to verify that system design specifications are being met routinely, to ascertain the level of operational proficiency being maintained throughout the networks, and to evaluate network abilities to meet or exceed design specifications in response to user requirements. The SOC provides various resources used to simulate and test ground data system elements. These resources include the Project Platform Training Simulator, the SOC Mission Control Simulator, the RF Simulations Operations Center, the Portable Simulations System, and various utility programs such as a Super Programmable Data Formatter and the data blocker/deblocker. The
+    SOC has a standard NASA Communications (NASCOM) interface which permits it to communicate with all ground data system elements during Simulation and End-to-End Testing.</p>
+
+    <p>The Platform Training Simulator provides support for training Flight Operations Teams (FOT) in normal and contingency operations of the spacecraft. The FOT can refine and practice operations and contingency procedures without using valuable spacecraft time. The Training Simulator is also used to support the Integration and Test data flows and the Network Simulation tests.</p>
+
+    <p>The SOC Mission Control Simulator emulates the Johnson Space Center's payload support functions for simulations with the MOCC.</p>
+
+    <p>The RF SOC is a simulations facility used for Space Network (SN) simulations and data flows. It has the capability to communicate with the Tracking and Data Relay Satellite E through a small satellite earth terminal located at the GSFC.</p>
+
+    <p>The Data Evaluation Lab (DEL) provides recording systems, engineering support, and special data services. It can generate, quality check, and provide distribution for pre-mission simulation tapes and analog tapes. Additionally, the DEL can playback generated tapes in the form of data flow to the Mission Operations Center (MOC) and other elements in support of engineering, pre-mission, and operational readiness tests.</p>
+
+    <p>The SUPER Programmable Data Formatter (PDF) is a portable, stand-alone system used in the SOC or at remote sites for ground system data flow tests, interface verification tests, and end-to-end rehearsals. The SUPER PDF can generate simulated real-time and playback telemetry. It is packaged in a portable unit for supporting tests from the Ground network (GN), spacecraft integration areas, or launch sites.</p>
+
+    <p>Mobile Compatibility Test Vans (CTV), normally stationed at the GSFC, travel to the spacecraft factory or to the launch site. They are used for verifying the spacecraft's RF compatibility with the network by performing initial checkout of the spacecraft RF interface with the tracking and data networks. The CTVs also provide the MOCC with a direct link to the spacecraft at the manufacturer's plant. The CTV can send spacecraft telemetry data via the GN and NASCOM to all support elements and can receive commands from the MOC via the SN and the NASCOM. They can also be used as a data source for performing network verification tests.</p>
+
+    <p><u>Monitoring and Witnessing of Ground Data System Testing</u></p>
+
+    <p>The GSFC Office of Flight Assurance assigns an Assurance Management Representative (AMR), a Systems Assurance Manager (SAM), and others as needed to perform assurance functions on flight projects. These functions include identifying tests to be monitored or witnessed, determining the level of coverage based on the test objectives and criticality, and arranging for the coverage by assurance representatives or their contractors. The assurance functions also include observing and reporting on the success of the test in meeting its objectives. The results are documented and identify any events or anomalies for use by engineering and management. The AMR test report contains the objectives of the test, anomaly reports, corrective actions expected, and the AMR's appraisal of whether test objectives were met.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The detailed performance of the Ground Data System in meeting the specific technical requirements of spaceflight missions is thoroughly evaluated and validated in order to ensure mission readiness and compatibility with mission requirements. This readiness includes the training of control center operational personnel by simulating and practicing both nominal and contingency flight operations.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>GSFC Document Entitled "Directorate Test Support", Subject - Code 500 Directorate Test Support</li>
+
+      <li>GSFC Document Entitled "Flight Assurance Procedure" No. P-303-1025, Subject-Monitoring and Witnessing Ground Data System Testing"</li>
+
+      <li>GSFC, SPAR-3, Standard Payload Assurance Requirements (SPAR) for GSFC Orbital Project, Paragraph 3.7 March 1990</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Nonpractice of End-to-End Compatibility and Mission Simulation Testing could result in marginal performance or failure of the mission due to incompatibilities in the Ground Data System. Control center operational errors due to inadequate training could significantly impact the health and safety of the spacecraft.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>End-to-End Compatibility and Mission Simulation testing are conducted on all portions of the Ground Data Systems (GDS). These tests are performed to fully demonstrate the operational compatibility and the ability of the entire system to perform as expected during the flight mission.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on all flight programs managed by the Goddard Space Flight Center (GSFC). They are required to use this practice.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

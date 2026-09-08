@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #15301: Fidelity of the Dawn Thrust Gimbal Assembly Life Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #15301: Fidelity of the Dawn Thrust Gimbal Assembly Life Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #15301 (Database ID: 15301)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-12-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment, Hardware, Parts Materials and Processes, Payloads, Test and Verification, Spacecraft and Spacecraft Instruments, Engineering design and project processes and standards, Long term sustainability and maintenance planning, Mission definition and planning, Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/15301" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The Dawn mission to orbit and explore the two major objects in the main asteroid belt, protoplanet Vesta and dwarf planet Ceres, would have been infeasible without the use of solar electric propulsion (SEP). (Even orbiting only one of these bodies would have been difficult to achieve within the NASA Discovery Program if chemical propulsion were used.) Dawn SEP is implemented as an ion propulsion system (IPS), with strong inheritance from the successful development and operation of the IPS on the Deep Space 1 (DS1) spacecraft, launched in 1998. Launched in 2007, the Dawn mission is managed by the NASA/Caltech Jet Propulsion Laboratory (JPL), with instruments contributed by European partners from Italy and Germany.</p> 
+<p> Dawn employs thrust vector control (TVC) in which the attitude control system (ACS) commands a thrust gimbal assembly (TGA) that is attached (Figure 1) to each of the three ion engines and adjusts engine pointing. DS1 also controlled two engine axes by gimballing a very similar ion engine, but DS1 used an entirely different TGA design.</p> 
+<div style="text-align:center;"> 
+ <a href="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig1_Ver_A1"><img alt="" src="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig1_Ver_A1.jpg" style="height: 262px; width: 368px;" /></a> 
+</div> 
+<blockquote> 
+ <blockquote> 
+  <strong style="font-size: 10px;">Figure 1. </strong>Dawn Ion Thruster Gimbal Assembly (TGA) 
+  <a href="http://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20090038672.pdf" style="font-size: 12px;">hexapod gimbal</a>. Each one of Dawn’s three ion thrusters includes 1 TGA with 6 supporting struts and 2 actuators. The thruster’s neutralizer defines the 12:00 location when viewed from the “downstream” side of the thruster. The 6 struts support the ion thruster at 3 gimbal pad locations-- 2:00, 6:00, 10:00. Each of the 2 actuators attaches to a single strut. When an actuator is commanded to rotate, bearings in the struts allow them to move, thus pushing or pulling the ion thruster at the pads. 
+ </blockquote> 
+</blockquote> 
+<p> Five years into the Dawn mission, downlinked data indicated an unexpected change in steady state gimbal angles while thrusting (Reference (1)). It was determined that the TGA3 motors were not executing all of the commanded steps when commanded to move at near the maximum step rate. The behavior initially was acceptable but two years later had grown to a level that it needed correction. Operations and system design personnel conducted flight tests of new parameters that appeared to correct the problem. Shortly thereafter, however, the TGA3 +Y gimbal motor did not move to the commanded position and appeared to have moved in the wrong direction. This motor positioning error gradually led to a spacecraft attitude error, causing the spacecraft to enter safe mode.</p> 
+<p> The degradation of TGA performance occurred earlier than predicted by life testing, and it points to a difference between actual flight conditions and the conditions simulated by test:</p> 
+<p style="margin-left:.25in;"> <strong>Test Assumptions. </strong>TGA ground testing (References (2) and (3)) included a test of the crank arm spherical bearing and the actuator motor assembly (not attached to a crank arm) over a range of temperatures in the clockwise direction and in the counterclockwise direction. A major concern evaluated during October 2005 life testing of a flight-like TGA actuator assembly was the characteristics of the gearing lubricant at elevated temperatures. At that time, tiny motions of the actuator assembly (dithering) in the aft section of the actuator (the planetary gears, harmonic gears, output bearings) were not considered to be a significant failure mode.</p> 
+<p style="margin-left:.25in;"> <strong>Flight Conditions. </strong>The TGA actuators have moved tens of millions of steps each, with the great majority of those steps taken at just a few (< 10) steps at a time during a TVC event which typically lasted for one to four weeks. In addition, virtually all of Dawn&#39;s TVC has occurred across a total range for all of the mission of ± 500 stepper motor steps. While this range produces 62.5 motor revolutions at the stepper motor, which is adequate for redistributing lubrication at the fore end of the actuator, it is only about 3.3 motor revolutions at the planetary gears and 0.03 degrees for mechanical parts within and aft of the harmonic drives. This means there were many very tiny motions within the actuators, with little opportunity for lubrication to be redistributed. The scenario leads to a likelihood of mechanical wear in parts such as the harmonic drive resulting in backlash.</p> 
+<p> During the cruise phase of the Dawn mission, bearings, gear teeth and other mechanical parts in the fore end of the actuator have likely been properly lubricated because of the large number of revolutions in that part of the actuator. But downstream of the stepper motor (Figures 2 and 3), the mechanical parts have dithered over a very small range of travel, likely causing substantial mechanical wear due to lack of lubrication. Dithering tends to push lubricant away from the moving interfaces and form “dams” of lubricant, degrade lubricant, or produce wear debris that can build up at the edges of the dithering range of motion.</p> 
+<div style="text-align:center;"> 
+ <a href="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig2.jpg"><img alt="Figure 2 is a diagram showing 19 elements of the actuator assembly.  There are no size dimensions for scale on the image. The elements of the assembly are shown disassembled and laid out in a line from lower left to upper right of the diagram: Element 1 is gold colored cylinder shape with six extruding pins. Element 2 is blue colored cylinder on center, with a smaller cylinder off center. A housing joins the larger cylinder to the smaller cylinder giving the entire element a tear-drop shape. Element 3 is gold colored, medium thickness ring with rounded edges. Element 4 is yellow colored, medium thickness ring with flat top and square edges. Element 5 is yellow colored, medium thickness ring with flat top and square edges. Element 6 is brown colored, thin thickness ring. Element 7 is black colored, very thin thickness ring. Element 8 is green colored, very deep thickness. The upper fifth of the cylinder has a grove cut into the outer diameter of the cylinder. The bottom fifth of the cylinder has an extruded cylinder. Element 9 is purple in color, deep thickness. The element has a larger diameter cylinder on the upper half, with a small rectangle notch cut into the outer surface. A smaller diameter cylinder completes the lower half of the element.  Inside the cylinder, a wide squared off grove is cut into the inner diameter.  Element 10 is brown colored, medium thickness ring with flat top and square edges. Element 11 is colored dark cyan, cyan, and green.  A red arrow points to this element with the text “Harmonic Drive”.  The element consists of a thin upper cylinder with a small centered hole. Around the hole are six smaller holes. A second cylinder of dark cyan color has a rounded edge like a cap extending over a thicker cyan colored cylinder.  The last dark green cylinder extrudes out from the upper cylinder and has eight very tiny holes. Element 12 is brown colored small diameter of thin thickness. It has six small holes around the outer edge.  There is no center hole in this element. Element 13 is gold colored and consists of six tubes with larger diameter heads. The diameter is the same size as the previous element. Element 14 is gold colored and appears to be a grouping of four individual bolts. Element 15 is blue colored medium thickness very small diameter cylinder with a small center hole.  Extruding from the left and right side of the cylinder are two rectangles. Element 16 is blue colored cylinder with a larger diameter hole that would fit the previous element. It also has two notches on the inside to fit the extrusions of the element. The inside material of the element is gold colored. Element 17 is blue colored containing a small thin cylinder extruding out to a larger diameter cylinder. A small center hole is shown with four smaller holes around the center. Element 18 is blue colored large cylinder with an extruded outside lip. A large center hole is surrounded by an indeterminate number of smaller holes. Six mounting bolts are elevated above this element and two larger mounting bolts with washers are shown below the element. Element 19 is gold colored and the deepest thickness element on the assembly. The element consists of a smaller cylinder with a color extruding enough material for mounting holes. Although only four holes are shown, it is assumed there are two holes not visible in keeping with the previous elements six-hole alignment.  There is a red arrow with the text “Stepper Motor” pointing to this element." src="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig2.jpg" style="width: 384px; height: 354px;" /></a> 
+</div> 
+<blockquote> 
+ <p> <strong>Figure 2.</strong> Detailed design of the DAWN TGA Actuator. Motions within the TGA become progressively smaller downstream of the stepper motor.</p> 
+</blockquote> 
+<p> After recovering from the safe mode entry, the Dawn project switched back to the original parameters and swapped to TGA2 (Reference (4)). The project then resumed ion engine thrusting with no further TGA problems. The risk of the swap was viewed as low due to extensive operational experience with TGA-2 (which has never displayed the anomalous symptoms), the occurrence of the swap late in the mission, and the availability of TGA1 should another swap be necessary. Dawn’s practice has been to redistribute lubricant by sweeping the operating gimbal set through its full range every two months-- and every six months on the dormant sets. With the swap to TGA2, Dawn is expected to complete the mission with that gimbal and associated ion engine, and no further mission impact is expected from this anomaly.</p> 
+<p>  </p> 
+<div style="text-align:center;"> 
+ <a href="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig3.jpg"><img alt="Figure 3 consists of three computer-aided engineering images. The first image is the actuator assembly that consists of two round cylinders that are joined together on end by four Phillips head bolts. On the far end of the assembly is a elongated tube containing electrical wires to power the internal motor. One the near end of the cylinder is a top plate with six radial protrusions with mounting holes for the larger assembly.  The second image is the internal motor in a metallic cylinder with a protruding axil and attached gear head.  The third image is a computer-aided engineering of the actuator assembly that is a cross section cutaway to illustrate the internals of the assembly. There is a vacant space for the internal motor, and reduction gears on small axels are partially illustrated." src="https://llis.nasa.gov/llis_lib/images/2015-09_Dawn_Fig3.jpg" style="width: 384px; height: 284px;" /></a> 
+</div> 
+<blockquote> 
+ <p> <strong>Figure 3.</strong> DAWN TGA Actuator close-up. Bearings, gears, gear teeth, races, and strut bearings are all subject to lubricant removal from numerous small motions.</p> 
+</blockquote> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> “Dawn Steady State Gimbal Position Changing More Than Expected,” JPL Incident Surprise Anomaly (ISA) No. 53730, December 20, 2012.</li> 
+ <li> JPL IOM 5133-04-009, DAWN&#39;s Gimbal Spherical Bearing Test Report, April 7, 2004.</li> 
+ <li> Life Testing of DAWN Thruster Gimbal Assembly (TGA) Life Test Unit (LTU) Actuator, October 25, 2005.</li> 
+ <li> “Dawn in safemode due to attitude fault,” JPL Incident Surprise Anomaly (ISA) No. 58451, July 1, 2015.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Since mechanism life tests may run for years and thus must start early in system development, it is important for the designers to fully understand the conditions under which the mechanism will operate in spaceflight and assure that they are encompassed by the test design (i.e., test-as-you-plan-to-fly). The life qualification testing of the Dawn TGA actuator assembly was insufficient because the test protocol was not representative of the mission usage. Mechanical engineers are commonly aware that actuator mechanical parts may dither over a very small range of travel, resulting in greater wear than might result from the large sweep angles that tend to redistribute lubricant. The original engineering design assessment was in error: it incorrectly held that numerous small angles of back-and-forth motion of the actuator (i.e., &quot;dithering”) is not a critical life test parameter.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> It is critical that qualification life test represent the actual service operation of the mission, which may demand numerous small angles of motion. “Small angles of motion matter!”</li> 
+ <br /> 
+ <li> The test-as-you-fly principle demands that mechanism designers attain an improved understanding of mechanism flight operating conditions. Specifically, as they re-evaluate the fidelity of the life test parameters they, as necessary, alter the test plan to reflect the evolving understanding of operating conditions.</li> 
+ <br /> 
+ <li> Projects should consult with materials engineers and subject matter experts (e.g., an actuator specialist) early in the design process so that the spacecraft doesn&#39;t end up with unsuitable materials that break in Phase D.</li> 
+ <br /> 
+ <li> Retain the practice of redistributing lubricant (concentrated by a prolonged small range of travel) by periodically sweeping lubricated components through their full range of motion.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> Absent knowledge of the precise operating conditions, material properties and their interactions in space are difficult to predict and design for. JPL is researching solutions (e.g., amorphous metallic glass gears) to actuator problems caused by the non-distribution of lubricant, such as the development of harmonic drives that do not need liquid lubricant. </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

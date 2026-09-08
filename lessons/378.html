@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0378: Untestable System Mode In Flight</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0378: Untestable System Mode In Flight</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0378 (Database ID: 378)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1995-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/378" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Prior to launch, telecommunication analysts responsible for the Viking Orbiter and the Lander identified that in-flight checkout of the Lander transmitter could be a potential problem. The transmitter outputs are 1, 10, and 30 watts. When the Orbiter and Lander are mated, there is only a small separation between the Lander relay transmitter antenna and the Orbiter relay receiver antenna. The analysts realized that at the higher relay transmitter output levels, the relay receiver would be subject to an overload condition and could suffer possible damage. Prelaunch tests of the antenna geometry and Orbiter/Lander mated tests were insufficient because of limited modeling capability, nonflight conditions, and noisy environments.</p>
+
+    <p>To verify a working Lander transmitter output before the first descent to Mars surface, an in-flight test was essential. Engineers, working at the bounds of analysis with nonlinear telemetry, deemed a 10-watt test safe. Because of parameter tolerance buildup, they could not guarantee damage-free testing at the 30-watt level. Therefore, the project decided the critical Lander-1 Mars-descent data would be transmitted at 10 watts, thereby accepting the risk of some data loss due to atmospheric fading.</p>
+
+    <p>Additional Keyword(s): RF System Design</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>System engineers cannot rely on the individual subsystem engineers to predict problems of their subsystems interacting with other subsystems during system tests.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>During the system design phase, system engineers must be sensitive to the various configurations to be encountered during the system test program.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.13.1 ("Engineering Practices: Design and Verification for Environmental Compatibility - Practices") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br><br>
+ 
+In addition, JPL has referenced the lesson as supporting Paragraph 4.10.1.1 ("System EMC/EMI Design: General - EMC Approach"), and Paragraph 4.2.2.1 ("Mechanical Configuration/Systems Design: Configuration - Accessibility") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1358: Current Limitation is Necessary for All Uses of Power Supplies (2002)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1358: Current Limitation is Necessary for All Uses of Power Supplies (2002)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1358 (Database ID: 1358)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-12-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1358" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Non-flight test heaters located on each of the three non-flight, inert TIRS (Transverse Impulse Rocket System) motors were powered during system thermal test of the Mars Exploration Rover (MER 1) to accelerate return of the test chamber to ambient conditions. Post-test inspection of the TIRS assembly revealed that the heaters had burned through the heater Kapton insulation (Figure 1) and severely damaged the surrounding flight MLI (multi layer insulation) blanket (Figure 2) on all three units.<br> <br> The failure was caused by the lack of a current limit specification on the controlling GSE (ground support equipment) power supplies. Test temperature sensors were located 4-5 inches from the heater; this was too far away to detect the high temperature due to the low thermal conductance of the TIRS motor case.</p> 
+<p><img alt="refer to [D] description" border="0" height="326" src="https://llis.nasa.gov/llis_lib/images/1009439main_1358-1.jpg" title="refer to [D] description" width="500"><a href="https://llis.nasa.gov/llis_lib/txt/1009910main_1358-1.txt">[D]</a></p> 
+<p>The only flight hardware damaged by the test heater failures were the three flight TIRS MLI thermal blankets. These were refabricated because failure to correct the damage might have been mission catastrophic.<br> <br> <u>References</u></p> 
+<ol> 
+ <li>JPL Problem/Failure Report No. Z78893, December 30, 2002.</li> 
+ <li>Eric Sunada, <q>Inert TIRS Motor Test Heater Failures during System Thermal Test 1,</q> JPL internal memorandum 353/ES/02-047.MER, December 26, 2002.</li> 
+</ol> 
+<b>Additional Key Words:</b> system test, integration and test, ATLO, overheating, test-induced failure, test damage, overtest, overtemperature, current-limiting, excess current, thermal-vacuum test, T-V test, heat transfer
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Adhere to the JPL and industry best practice of explicitly current limiting all power supplies.</li> 
+ <li>For low thermal conductivity applications like the TIRS motors, a test thermocouple should also be placed directly on or immediately adjacent to the heater.</li> 
+ <li>Extreme caution must be exercised in the use of heaters on test components to accelerate thermal vacuum test warm up.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>(see Lessons above)<br />  </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.12.5.1 ( 
+<q>Flight Electronics Hardware Systems Design: Interfaces - Flight-Support Equipment Interfaces</q>), in the JPL standard 
+<q>Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)</q>, JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #19501: Provide Adequate Overcurrent Circuit Protection for LEO</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #19501: Provide Adequate Overcurrent Circuit Protection for LEO</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #19501 (Database ID: 19501)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-02-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research,  Human Exploration and Operations,  Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Hardware,  Independent Verification and Validation,  Payloads,  Spacecraft,  Power,  Advanced planning of safety systems,  Reliability,  Engineering design and project processes and standards,  Level II/III requirements definition</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/19501" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The Atmospheric Infrared Sounder (AIRS) is a scanning instrument that was launched in 2002 aboard NASA's Aqua satellite to support Earth climate research and to improve weather forecasting.&nbsp;The Advanced Microwave Sounding Unit-A (AMSU-A) is a 15-channel microwave temperature sounder on AIRS that includes two independently operated modules. One of these (AMSU-A2) provides science data on Earth moisture (total precipitable water and cloud liquid water).</p> 
+<p> On September 24, 2016, without any warning signs from downlinked telemetry, the AMSU-A2 instrument experienced a sudden loss of the power supplied by the Aqua satellite (Reference (1)).&nbsp; (All other instruments on Aqua continued to operate nominally.) The Aqua relays controlling quiet bus power to the instrument did not respond to ground commands.&nbsp;The AMSU-A manufacturer concluded that a fuse blew in the spacecraft power circuit associated with the AMSU-A2 quiet bus relays, and that the proximate cause was most likely a short or overcurrent condition in the AMSU-A2 instrument.</p> 
+<p> Recovery of AMSU-A2 operation would have required switching it to a redundant power bus, but this was considered risky because of possible anomaly-induced damage and because of the likelihood that the large current surge upon powering would harm other Aqua instruments residing on the redundant power bus. Hence, the decision was to leave AMSU-A2 non-operational.&nbsp;AMSU-A2 had already completed its primary mission, and loss of AMSU-A2 science return in the extended mission was determined to pose a minor impact on Level 2 AIRS science products.</p> 
+<p> The AIRS Operations Team agreed (Reference (2)) with the contractor’s analysis that the most likely AMSU-A2 subsystem to have developed a short or overcurrent condition was the DC-DC converter. Although the root cause of the failure is unknown, it could possibly have been caused by a high energy ionizing particle inducing a single event upset (SEU). They also noted that the AMSU-A2 Power Control Assembly and DC-DC Converter lacked circuit protection such as crowbars, which restore function by recycling the power.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> “AMSU-A2 quiet bus anomaly,” JPL Incident Surprise Anomaly (ISA) No. 60251, September 27, 2016.</li> 
+ <li> William Mathews &amp; Fred O’Callaghan, “AMSU-A2 Anomaly of September 24, 2016,” January 31, 2017.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> A crowbar is a fail-safe protection mechanism for electronic circuits, usually placed across a power supply’s output terminals, that short circuits the output of a power supply under such failure conditions as overvoltage or overcurrent. The life of the AMSU-A2 instrument might have been extended if crowbars had been in place to protect vulnerable components in the power switches and in the DC-DC converter. AMSUs are in common use: about 15 are in use on NOAA weather satellites, etc.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> For spacecraft designed to operate in the LEO environment, implement crowbar protection for electronic circuits that are vulnerable to overcurrent/overvoltage caused by radiation effects. </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.3.2 (“Flight System Design: Power/Pyrotechnics Design - Power Distribution”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> IEEE 242, Recommended Practice for Protection and Coordination of Industrial and Commercial Power Systems</p> 
+<p> IEEE Std 399-1997, IEEE Recommended Practice for Industrial and Commercial Power Systems Analysis</p> 
+<p> IEEE Std 493-1997, IEEE Recommended Practice for the Design of Reliable Industrial and Commercial Power Systems </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #30702: Magnetospheric Multiscale Mission (MMS) Laser Hole Problem in JANS Bipolar Junction Transistors (BJT)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #30702: Magnetospheric Multiscale Mission (MMS) Laser Hole Problem in JANS Bipolar Junction Transistors (BJT)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #30702 (Database ID: 30702)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2015-03-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Parts,  Materials,  & Processes,  Product Assurance,  Reliability</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/30702" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">During thermal vacuum testing late in integration and testing ( I&amp;T), after hundreds of hours of testing involving the part, a JANS 2N2222 failed due to corrosion internal to the part.&nbsp; Failure analysis indicated an aggressive solvent had entered the part through a hole created by an errant laser etching process.&nbsp; The part had been leak tested, but the test was ineffective.&nbsp;&nbsp; The laser-etched hole permitted corrosive solvents to enter the part and get trapped inside, causing corrosion.&nbsp; Variants of the laser etching problem had existed for over 10 years, but this was never addressed because the parts had passed all of the necessary testing for JANS. </span></span></span></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ul> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The reliance on hermetic parts can drive up both technical and programmatic risk by (1) trapping contaminants in the parts during the manufacturing process, (2) allowing contaminants to enter the parts for those that are on the fine edge of being hermetic, and (3) providing false confidence that the use of such parts provides substantial protection against part failure due to corrosion.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The sample size for residual gas analysis (RGA) &#xa0;testing under MIL-PRF-19500 only provides a top-level indicator that parts in the lot are free from significant elevated moisture or contaminants.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The use of JANS parts is neither necessary or sufficient for assuring integrity or reliability of parts through I&amp;T.</span></span></span></li> 
+</ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="color:black">Recognize that parts intended to be hermetic are subject to screening and </span>destructive physical analysis (DPA) <span style="color:black">processes that allow some forms of escapes that permit corrosive elements to enter the cavity, albeit at low likelihood.&#xa0; </span></span></span></span></p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

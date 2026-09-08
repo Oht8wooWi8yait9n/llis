@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0781: Thermal-Vacuum Versus Thermal-Atmospheric Tests of Electronic Assemblies</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0781: Thermal-Vacuum Versus Thermal-Atmospheric Tests of Electronic Assemblies</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0781 (Database ID: 781)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/781" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1409, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Assembly-level thermal vacuum testing is the most perceptive test for uncovering design deficiencies and workmanship flaws in spaceflight hardware. The margin beyond flight conditions is demonstrated, as is reliability. However, substituting an atmospheric pressure thermal test for the thermal/vacuum test can effectively reduce electronic piece part temperatures by 20 deg. C or more, even for low power density designs. The net result of this is that the effective test temperatures may be reduced to the point where there is zero or negative margin over the flight thermal environment.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Establish a policy for spaceflight electronic hardware that requires all assembly-level thermal testing to be performed in a thermal/vacuum environment. Moreover, deviation from this policy should require a waiver, supported by quantitative analysis that considers the effect on test demonstrated reliability.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Vacuum effects:</p>
+
+    <p>A thermal/vacuum (T/V) test simulates the flight condition. Two different physical phenomena occur when a thermal/atmospheric pressure (T/A) test is performed in lieu of a T/V test. They are "pure vacuum" effects and temperature level/gradient effects.</p>
+
+    <p>The "pure vacuum" phenomena include corona and multipacting. Corona is of concern in the pressure region from about 0.1 to 0.001 torr. Multipacting can occur starting from the middle of the corona region all the way to near hard vacuum conditions. Pure vacuum problems most often are associated with radio frequency (RF) or high voltage circuits and devices.</p>
+
+    <p>The addition of an ambient pressure gas alters key temperature levels and gradients. For a unit that is designed to be conductively coupled to the spacecraft structure (shear plate), the prime thermal path from the piece parts to the shear plate is via the boards and the housing. The introduction of a gas into the "simulated" flight environment results in two significant thermal alterations. First, the dominant thermal paths from key elements of the assembly (piece parts and solder joints, etc.) are altered because the gas creates a parallel path from these elements to the chamber ambient via the total housing skin. Secondly, artificial parallel paths between the key elements to the flight heat sinking surface are added. These additional parallel paths short out any of the high thermal resistance paths that may be present in the design. The net result of this is a reduction in the temperature of the key elements at both test temperature extremes. This test temperature reduction
+    is referred to as the DT effect.</p>
+
+    <p>A reduction in gradients between circuit elements also occurs, which can lead to circuit performance that is not typical of flight. For example, a timing circuit may show adequate performance due to the reduced gradients, whereas the performance in a flight-like vacuum condition could be unacceptable.</p>
+
+    <p>JPL Study Results:</p>
+
+    <p>Analyses and testing have been specifically performed at JPL since 1985 to quantify the effects of performing T/A testing in lieu of T/V testing. The results of these efforts are summarized in Table 1. Performing T/A testing in lieu of T/V testing reduces the temperature rise from the thermal control surface to key elements (boards, solder joints, parts, etc.) internal to the assembly. Note that this effect reduces the operating temperatures of the key elements over the whole temperature range (i.e., hot testing becomes less severe, while "cold" testing becomes colder). Reductions in the temperature rises can be on the order of 15 deg C to 20 deg C or more. Commonly, T/A testing reduces temperature rises by a factor of 2 to 4.</p>
+
+    <center>
+      <font>Table 1: <b>Summary of Analysis and Test Results for the DT Effect<br />
+       Associated with Performing T/A Testing in Lieu of T/V Testing</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009243main_0781-1.jpg"  HEIGHT="386"  BORDER="0" /><A HREF="/llis_lib/txt/1009719main_0781-1.txt"  >[D]</A>
+    </center>
+    <br />
+    Notes: 
+
+    <ol>
+      <li>Unit not blanketed during initial T/V test. Estimates for the effect of this indicated that the load on the heat exchanger was approximately twice that dissipated by the unit.</li>
+
+      <li>Test performed for the DT effect part case-to-housing. Full DT effect shown is a combination of test and analysis.</li>
+    </ol>
+    <br />
+
+    <p>Such reductions lead to margin demonstrations dramatically lower than desired, and can easily cause negative test margin demonstrations.</p>
+
+    <p>An electronic assembly is manufactured by a series of chemical and mechanical processes. Design and workmanship failures related to the chemical processes are best described by the Arrhenius reaction rate equation. Mechanical design and workmanship failures are most often a result of thermal fatigue and, to a lesser degree, vibration. Both the chemical and thermal fatigue failure mechanisms are a function of temperature. Tables 2 and 3 quantify the temperature influence on these failure mechanisms.</p>
+
+    <center>
+      <font>Table 2: <b>Arrhenius Reaction Rate Reduction Factors<br />
+       for Various DT Effects and Activation Energies</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009244main_0781-2.jpg"  HEIGHT="204"  BORDER="0" /><A HREF="/llis_lib/txt/1009720main_0781-2.txt"  >[D]</A><br />
+      *Assuming a 75 deg C shear plate plus a 35 deg C rise shear plate-to-part junction.<br />
+      Lower test levels lead to greater reduction ratios.<br />
+      <br />
+      <font>Table 3: <b>Screening Strength Reduction Factor ("X" Factors)<br />
+       for Various DT Effects and Shear Plate Temperatures</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009245main_0781-3.jpg"  HEIGHT="253"  BORDER="0" /><A HREF="/llis_lib/txt/1009721main_0781-3.txt"  >[D]</A><br />
+      *For compliant solder joints and cold test temperatures above<br />
+      the glass transition temperature for all materials involved.
+    </center>
+    <br />
+    <br />
+
+    <p>Also presented in Table 1 are various rationales generally in use in industry today for choosing a T/A test in lieu of a T/V test. The most common of these rationales are either based on the power density of the unit or type of hardware (i.e. power supply, digital, RF, etc.) undergoing testing. The JPL study results clearly show that these two rationales are not valid. The current rationale in use at JPL today is that if analysis shows that the DT effect is less than 5 deg C on all piece parts, solder joints, etc., and there are no known pure vacuum effects, then performing a T/A test in lieu of a T/V test might be allowed depending of the criticality of the unit under test. The safest and simplest course of action is to T/V test everything.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>1. Mark Gibbel, "Thermal/Vacuum Versus Thermal Atmospheric Testing of Space Flight Electronic Assemblies," NASA Conference Publication 3096, from the 16th Space Simulation conference, Albuquerque, New Mexico, November 5-8, 1990.</li>
+
+      <li>"Part Electrical Stress Analysis," Reliability Preferred Practice PD-AP-1303.</li>
+
+      <li>"Environmental Factors," Reliability Preferred Practice PT-EC-1101.</li>
+
+      <li>"Thermal Analysis of Electronic Assemblies to the Piece Part Level," Reliability Preferred Practice PD-AP-1306.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Performing an atmospheric pressure thermal (T/A) test in lieu of thermal/vacuum (T/V) test reduces the hot temperature margin, screening strength, and test demonstrated reliability. Hot temperature margins can be compromised to the point where there is a zero or negative margin between environmental test levels and the allowable flight level (e.g., a test with only a planned 10 deg C margin and a T/A reduction effect of 15 to 20 deg C would result in a negative test margin). Screening strengths can be reduced by factors of 2 to 4 or more. Test demonstrated reliability can be reduced by factors of 2 to 10 or more.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform all thermal environmental tests on electronic spaceflight hardware in a flight-like thermal vacuum environment (i.e., do not substitute an atmospheric pressure thermal test for the thermal/vacuum test). Moreover, if a compromise is thought to be necessary for nontechnical reasons, then an analysis is required to quantify the reduction in test demonstrated reliability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Ranger, Mariners, Viking, Voyage and Magellen spacecraft.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

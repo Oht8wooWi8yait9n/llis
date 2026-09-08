@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0763: Systems Test Considerations for High Performance Liquid Propellant Rocket Engines</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0763: Systems Test Considerations for High Performance Liquid Propellant Rocket Engines</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0763 (Database ID: 763)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/763" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1439 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Experience in systems testing of the Space Shuttle Main Engine has shown that integrated propulsion system testing, (1) provides the necessary test data for "model basing," thus enhancing the reliability of system analysis techniques; (2) integrates vehicle hardware, ground hardware, and procedures for propellant loading, safing, and firing operations; (3) provides a resource for determining stage/engine design margins, establishing redlines, developing procedures and time lines, and confirming extrapolated criteria used in engine development; (4) identifies potential risks for catastrophic flight failure, vehicle hardware damage, and launch complex damage; and (5) identifies potential risks of a delayed initial launch and subsequent launches.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>I. <u>Background:</u></p>
+
+    <p>The Space Shuttle Main Propulsion Test Article (MPTA) program was conducted at NASA's Stennis Space Center test site in Mississippi. The program involved NASA and Space Shuttle element contractors. The tests included an orbiter aft fuselage with three Space Shuttle Main Engines, an External Tank, and related ground and flight support equipment. Three non-firing tests and twelve combination development/verification firings met planned pretest objectives. The main propulsion test article was of a flight configuration with a few practical exceptions. External Tank insulation was of non-flight configuration. The auxiliary power unit was simulated by a ground powered hydraulic system. The Shuttle Avionics Test Set was used for propulsion system control rather than flight computers. A special load bearing structure was provided on the test stand to react against the engine's thrust. Non-flight hardware was used for payload bay purge into the aft compartment, propellant loading,
+    ground umbilical disconnects, and some Ground Support Equipment consoles.</p>
+
+    <p>II. <u>Propulsion System Testing</u></p>
+
+    <p>Twenty hot-firing attempts were required to meet the requirements of the 12 test series. Hot firing aborts were distributed throughout the 20 firing attempts, although the frequency of occurrence decreased after the sixth test series or after 50 percent of the test program was completed. Twenty-six terminal counts were required. Fourteen of these were required during the first six firing attempts. Hydrogen leakage within the aft compartment occurred on 12 tests. Two tests experienced high leaks.</p>
+
+    <p>The degree of severity of some of the test failures underscores both the risk involved in propulsion system development and the absolute necessity of this type of testing in order to avoid and eliminate these types of failures during a flight mission. For example, fires occurred in nine firings. Eight of the nine fires resulted from engine discrepancies. Four of the fires at the vehicle base were typical of main fuel valve leaks through the engine after shutdown. One aft compartment fire resulted in extensive hardware damage. Two external fires produced significant damage to the vehicle and facility, particularly to the instrumentation.</p>
+
+    <p>III. <u>Changes and Modifications Brought About by the Main Propulsion Test Article (MPTA) Program</u></p>
+
+    <p>The important issues that were addressed in the Space Shuttle Program to enhance the reliability, safety, and performance of the vehicle by MPTA testing were (1) unworkable designs and procedures were made workable by changes and then verified, (2) workable designs and procedures, for which adjustments to achieve acceptance were initially anticipated, were tested and the adjustments were accomplished. Many action items resulted and were resolved in each test series. Table 1 is an example listing of some of the most important action items that resulted from the propellant loading test, an early test where there was not a hot firing. Thirty to forty similar actions from a hot firing test were not unusual.</p>
+
+    <center>
+      <table border="0" width="98%">
+        <tr align="CENTER">
+          <th>Table 1. Example Action Items From Engine System Testing</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1">
+              <tr>
+                <td>
+                  <ul>
+                    <li>Review LH<sub><small>2</small></sub> high point feedline liquid level sensor operation during propellant load test and repair. Review the need for redundancy.</li>
+
+                    <li>Determine the cause of tripped circuit breaker for LH<sub><small>2</small></sub> recirculation pump #2.</li>
+
+                    <li>Determine requirements for a backup GHe injection system for the LOX antigeyser system operation</li>
+
+                    <li>Review the system requirements and reactivate MEC backup power.</li>
+
+                    <li>Provide necessary engineering to connect the KSC hazardous gas detection system to the LH<sub><small>2</small></sub> vent system.</li>
+
+                    <li>Perform special cryogenic test of LOX and LH<sub><small>2</small></sub> auxiliary dump valves using a solenoid actuated system as well as the existing pressure control actuation system and recommend system changes required to improve valve performance</li>
+
+                    <li>Review the need for changing the 1/8" sample line on the bottom of the LH<sub><small>2</small></sub> tank to 1/4" or larger line to facilitate tank sampling and verification of purge procedures.</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Testing identified oversights which could have resulted in serious consequences under differing circumstances later in the development program. For example, design and manufacturing methods were changed to prevent the release of large hydrogen quantities as a result of main fuel valve structural failure. Design changes were made to prevent fuel preburner burn-through and associated engine software changes were made to facilitate automated prevalve closure under all failure conditions. Manual closure was delayed under some failure conditions until the prevalve benefits were seriously compromised. Changes to software corrected this anomaly. Procedures for unloading oxygen from the ET/Orbiter were corrected to prevent serious pressure surges within the facility hardware. The tests identified the necessity to locate launch facility igniters to burn released raw hydrogen at engine start.</p>
+
+    <p>The Space Shuttle MPTA testing, as well as testing of previous launch vehicle integrated propulsion systems, resulted in preferred practices that will ensure reliable performance if conscientiously applied. Preferred practices are summarized in Table 2.</p>
+
+    <center>
+      <table border="0" width="98%">
+        <tr align="CENTER">
+          <th>Table 2. Improved Procedures</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1">
+              <tr>
+                <td>
+                  <ul>
+                    <li>Integrated testing is conducted to verify the performance of the feed system pressure drops, pressure surges, fluid-hammer responses, and resonances.</li>
+
+                    <li>Mixing of incompatible and hazardous substances in fluid systems are precluded.</li>
+
+                    <li>Contamination is excluded from contamination-sensitive systems.</li>
+
+                    <li>Actual environments, conditions, and designs are simulated.</li>
+
+                    <li>Margins are demonstrated during subsystem or system level tests.</li>
+
+                    <li>Test plans and results are fully documented.</li>
+
+                    <li>Stainless steel tubing and control lines are used for test facilities.</li>
+
+                    <li>Fuel and oxidizer prevalves are used in test facilities, and safe engine shutoff by prevalve closure is demonstrated in a subsystem test prior to propulsion system testing.</li>
+
+                    <li>Thermal and environmental controls of propulsion systems components are provided to prevent freezing, loss of lubrication, and collection of hazardous gases.</li>
+
+                    <li>An emergency source of ground power is provided to terminate the test in the event of a ground power loss.</li>
+
+                    <li>Provisions for pressure relief, flow diversion and control during chill down, and protection against geysering during propellant loading are designed into the test facilities' propellant feed system.</li>
+
+                    <li>Reliable hazardous gas detection and measuring systems and rapid response leak detectors are used for integrated propulsion system firing programs and pre-flight operations.</li>
+
+                    <li>Fire detection, fire protection capability, and internal protective neutralizing purges are used in static test programs, and are evaluated for launch site operations.</li>
+
+                    <li>Heat flux at the vehicle base is measured to determine the relative contributions of convective and radiative heating.</li>
+
+                    <li>Meticulous planning, training, and work control is employed in integrated propulsion system ground tests.</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Recirculation of rocket engine plume low energy gases into the vehicle base may be a predominant heat source for clustered engine vehicles. Heat flux measurements from ground test programs to determine the relative contributions of convective and radiative heating and analytical methods developed to compensate for flight altitudes assist in establishing design requirements.</p>
+
+    <p>Meticulous planning, training, and work control is employed in integrated propulsion system ground tests. Specific preplanned and measured personnel training and demonstration of qualifications is a prerequisite for reliable and repeatable success. Steps to assure effective shift change communications and the use of only experienced and qualified personnel is required. A process where both contractor and government safety personnel perform spot checks on all hazardous work control documentation and operations is essential.</p>
+
+    <p>IV. <u>Other Related Development and Verification Testing</u></p>
+
+    <p>In addition to integrated systems ground tests such as those performed on the Space Shuttle MPTA, structural test articles were built and tested, approach and landing tests were performed, an all-up hydraulic simulator Flight control Hydraulic Laboratory was developed and used, a Mated Vehicle Ground Vibration Test program was conducted, a Shuttle Avionics Integrated Laboratory was (and is) used, along with a Hydraulic Simulation Laboratory, for software verification prior to launch, and full scale external tank terminal drain tests were conducted.</p>
+
+    <p>Extensive development testing was performed at KSC with the flight vehicle prior to the first launch to improve propellant loading procedures and to resolve other launch site/vehicle interface problems. Due to a thermal protection system failure on the External Tank and the desire to increase onboard propellant mass, several unplanned propellant loading tests were conducted both with the MPTA and with the flight vehicle at KSC.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Several decades of integrated ground testing of launch vehicle propulsion systems, culminating in the MPTA Testing for the Space Shuttle Program, have proven that this type of testing is essential to perfect the interface between major hardware and software elements and to develop a reliable integrated launch vehicle propulsion system. The test programs themselves have shown that malfunctions, delays, and failures would be unacceptable in a flight situation. The successful performance of the Space Shuttle Main Propulsion System is attributable in great measure to the successful conduct of this series of ground tests and to the corrective actions that were taken to avoid failures.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>"Advanced NSTS Propulsion System Verification Study," Space Transportation Systems Division, Huntsville Operations, Rockwell International, July 31, 1989.</li>
+
+      <li>"History of MPT Test Program," Space Transportation Systems Division, Huntsville Operations, Rockwell International, February 9, 1986.</li>
+
+      <li>"Main Propulsion System Testing Tanking Test History," Space Transportation Systems Division, Huntsville Operations, Rockwell International, July 1983.</li>
+
+      <li>Quick-Look Test Reports for: MPT-S1-001, MPT-S1-002, MPT-S2-001, MPT-S3-001, MPT-S4-001, MPT-5A, MPT-5, MPT-6-001, MPT-6-02, MPT-6-03, MPT-SF7-01, MPT-SF7-02, MPT-SF8, MPT-9-01, MPT-9-02, MPT-10-01, MPT-11-001, MPT-11-02, MPT-12; Transportation Systems Division, Huntsville Operations, Rockwell International, 1978 thru 1981.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to conduct integrated ground system tests of launch vehicle propulsion systems could result in the inability to locate and correct critical interface and launch preparation problems that could cause launch delays, hazards to personnel, loss of the mission, and/or loss of the crew.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>To achieve high overall liquid rocket fueled propulsion system reliability, conduct a comprehensive test program that verifies and validates the liquid rocket engine's operation as it interacts and interfaces with other elements of the propulsion system, (i.e., structures, propellant feed systems, propellant tankage, and control electronics).</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle Main Engine (SSME), and Main Propulsion Test Article (MPTA) testing at MSFC, Rocketdyne, and Stennis Space Center.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

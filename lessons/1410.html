@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1410: In-Flight Passivation of Lithium-Based Spacecraft Batteries (2003)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1410: In-Flight Passivation of Lithium-Based Spacecraft Batteries (2003)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1410 (Database ID: 1410)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-12-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1410" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Passivation is a phenomenon that can affect the performance of lithium batteries. Under no-load conditions, a passivation layer of lithium chloride (LiCl) forms on the surface of the lithium anode and protects the cells from discharging. This effect is responsible for the battery»s long shelf life, but the high resistance of the passivation layer may cause the cell's voltage to dip during use when a load is applied. As the battery discharges, the passivation layer dissipates and allows the cell to reach a peak voltage value. Passivation increases along with time and temperature; if the circuit cannot accommodate a voltage delay, the battery pack should be depassivated prior to use.</p> 
+<p><img alt="refer to [D] description" border="0" height="276" src="https://llis.nasa.gov/llis_lib/images/1009443main_1410-1.jpg" title="refer to [D] description" width="363"><a href="https://llis.nasa.gov/llis_lib/txt/1009914main_1410-1.txt">[D]</a></p> 
+<p>A simulated brownout during testing of the Entry, Descent, and Landing (EDL) flight software caused repetitive rebooting of the Mars Exploration Rover (MER) flight computer. A drop in the bus voltage during the simulated transition from the solar arrays to the primary batteries in the MER Lander caused the software to erroneously assume that the batteries had failed. The Lander contains five primary (non-rechargeable) lithium sulfur dioxide (LiSO2) batteries to support EDL and initial landed operations. The problem was traced to a passivation layer inhibiting the Lander batteries from producing full power during the transition (Reference (1)). Neither the MER circuit design nor the in-flight battery management procedures allowed for an initial output from the primary batteries (about 25 volts) that was significantly less than the 30-volt bus voltage. (Passivation is not usually a concern for secondary (rechargeable) spacecraft batteries because they are in continuous use.) A similar brownout during a mission critical event, such as EDL, could cause power on reset (POR) transients leading to corrupted memory, repeated reboots, and possible loss of mission.</p> 
+<p>References: Jet Propulsion Laboratory (JPL) Problem/Failure Report No. Z79633, February 28, 2003.<br> <br> Additional Key Words: battery passivation, battery depassivation, RAD6000, VME, battery chemistry, power/pyro subsystem</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Assume that a dormant lithium chemistry spacecraft battery will develop a passivation layer and that the effects on the spacecraft circuitry may be significant:</p> 
+<ul> 
+ <li>Lithium-based spacecraft batteries should be characterized and depassivation measures planned, as required</li> 
+ <li>A standard Department of Defense practice is to characterize and depassivate each spacecraft battery lot-- both on the ground and in flight.</li> 
+</ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Review the spacecraft power subsystem design for battery passivation effects, characterize the spacecraft and mission vulnerability to such effects, and plan for implementation of battery depassivation measures at appropriate mission milestones.</li> 
+ <li>Conduct ground tests on spacecraft batteries using batteries from the same lot, and test them again in-flight to verify passivation characteristics and their effect on voltage output. Assure an adequate supply of spare battery cells.</li> 
+ <li>Design spacecraft circuitry to tolerate voltage transients from battery passivation effects.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.3.3.3 (quotPower/Pyrotechnics Design: Power Generation - Primary Battery Depassivationquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles)quot, JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

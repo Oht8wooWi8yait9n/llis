@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #5656: Network Service Disruption Due to Juniper Network Switch Proprietary Technology</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #5656: Network Service Disruption Due to Juniper Network Switch Proprietary Technology</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #5656 (Database ID: 5656)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-04-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/5656" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+During the transition from the Asynchronous Transmission Mode (ATM) network to the Ethernet network, KSC implemented the Juniper proprietary Redundant Trunk Group (RTG) -- a seamless failover technology -- in the Juniper EX4200 switches to provide additional network reliability for specified Virtual Local Area Network (VLAN) users. 
+<p>
+When a new Juniper switch’s RTG was connected into KSC network with the intention to provide a redundant link to the network and improves overall switch and network reliability, instead an un-anticipated network loop was created.   The network loop coupled with routine data-link layer broadcast traffic will create a broadcast storm that floods network segments with broadcast data packets traffic while displacing or denying normal network data traffic in those segments.  By design, the Juniper’s network switch operating software “Rapid Spanning Tree protocol” should have detected the network loop and placed the switch’s redundant link in blocking mode to avert any network loop. 
+<p>
+Further investigation showed that the RTG not only does not detect network loops, the switch’s RTG does not forward the Bridge Protocol Data Unit (BPDU) data -- a switch network topology discovery and configuration management tool --  to other network devices as a result, other switches were not able to detect or learn about the existing network loop. The combined problems caused a broadcast storm across the network and affected the VLANs on the trunked interfaces and rendered the network  unable to process user traffic and thus causing the user servers and field instrumentation to lose connectivity.  This inherent design deficiencies are reported back the Juniper for resolution.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The lessons learned are the un-anticipated behavior of the operating software and the unknown technical risks associated with any proprietary technology to be integrated into the KSC network environment.
+</section>
+<section><h2>Recommendation(s)</h2>
+Before any proprietary technology to be integrated into the KSC system, an operation risk assessment and abatement plan should be in place to address all foreseeable risks and pre-plan procedure to mitigate impacts.
+ <p>
+When using the Juniper proprietary Redundant Trunk Groups plan for a method to eliminate the possibility of a network loop. This could be by eliminating connections through both legs of the redundant trunk groups or other network design approaches.  Understand that the Juniper proprietary Redundant Trunk Group implementation not only does not process BPDU traffic for detecting network loops, but also prohibits the forwarding of BPDU traffic through the RTG links effectively preventing the network from detecting a loop.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+N/A
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

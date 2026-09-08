@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0841: Availability Prediction and Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0841: Availability Prediction and Analysis</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0841 (Database ID: 841)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/841" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-3 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Availability prediction and assessment methods can provide quantitative performance measures that may be used in assessing a given design or to compare system alternatives to reduce life cycle costs. This technique increases the probability of mission success by ensuring operational readiness. Analyses based on availability predictions will help assess design options and can lead to definition of maintenance support concepts that will increase future system availability, anticipate logistics and maintenance resource needs, and provide long term savings in operations and maintenance costs based on optimization of logistics support.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Availability can be predicted or estimated using various methods and measures. Availability is a characteristic of repairable or restorable items or systems, and assumes that a failed item can be restored to operation through maintenance, reconfiguration, or reset. It is a function of how often a unit fails (reliability) and how fast the unit can be restored after failure (maintainability). A foundation to support both the establishment of reliability and maintainability (R&amp;M) parameters and trade-offs between these parameters is created by availability prediction before analyses. Availability can be estimated for components, items, or units, but overall spacecraft system or ground system availability estimation is based on the combinations and connectivity of the units within the system that perform the functions, i.e., the series and redundant operations paths.</p>
+
+    <p>Availability Measures</p>
+
+    <p>One basic measure of availability, called inherent availability, is useful during the design process to assess design characteristics. The measure involves only the as-designed reliability and maintainability characteristics and can be calculated using the estimated mean-time-between-failure (MTBF) and mean-time-to repair (MTTR) parameters. The predicted or estimated measure of inherent availability is calculated as:</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009356main_0841-1.jpg"  HEIGHT="86"  BORDER="0" /><A HREF="/llis_lib/txt/1009831main_0841-1.txt"  >[D]</A>
+    </center>
+
+    <p>The MTTR time in the inherent availability calculation does not include such times as administrative or logistic delay time, which generally are beyond the control of the designer, and does not include preventive maintenance time. However, effective trade-offs using the basic times and parameters are possible. Trade-off techniques and some sample uses are included in Reference 1, Section 5.5.</p>
+
+    <p>Another measure of availability, achieved availability or A<small><sub>a</sub></small>, can be expressed as:</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009357main_0841-2.jpg"  HEIGHT="89"  BORDER="0" /><A HREF="/llis_lib/txt/1009832main_0841-2.txt"  >[D]</A>
+    </center>
+
+    <p>where OT is the total time spent in an operating state, TCM is the total corrective maintenance time that does not include before-and-after maintenance checks, supply, or administrative waiting periods; and TPM is the total time spent performing preventive maintenance. A<small><sub>a</sub></small> is more specifically directed toward the hardware characteristics than the operational availability measure, which considers the operating and logistics policies.</p>
+
+    <p>A third basic measure of availability, operational availability, considers all repair time: corrective and preventive maintenance time, administrative delay time, and logistic support time. This is a more realistic definition of availability in terms providing a measure to assess alternative maintenance and logistics support concepts associated with the operation of a system or function. It is usually defined by the equation:</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009358main_0841-3.jpg"  HEIGHT="159"  BORDER="0" /><A HREF="/llis_lib/txt/1009833main_0841-3.txt"  >[D]</A>
+    </center>
+
+    <p>where Uptime is the total time a system is in an operable state, and Downtime is the total time the system is in an inoperable state. The sum of Uptime and Downtime, or Total Time, is usually known, specified as a requisite operating time, or is a given time to perform a critical function. Downtime often is broken down into a variety of subcategories such as detection and diagnosis time, time waiting for repair parts, actual unit repair or replacement time, test and checkout time, etc. Table 1 shows the basic difference between the availability measures defined above.</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009359main_0841-4.jpg"  HEIGHT="580"  BORDER="0" /><A HREF="/llis_lib/txt/1009834main_0841-4.txt"  >[D]</A><br />
+      Table 1: Commonly Used Availability Measures
+    </center>
+
+    <p>System or Function Availability Estimation</p>
+
+    <p>System/function availability estimates may be derived in a limited fashion by algebraically combining mean value estimates of the system units, or more rigorously by using computer- aided simulation methods.</p>
+
+    <p>Mean Value Estimation</p>
+
+    <p>Mean value estimation of system availability is usually performed by algebraically combining component, LRU, and ORU availabilities calculated using equation (1). When the system is composed of a number of components, LRU's, or ORU's, the failure of any one of which results in the system being down, the system availability is calculated from the product of these units' availability. When the system involves item redundancy, redundant block availability estimates can be calculated using simple Boolean mathematical decomposition procedures similar to reliability block diagram solution methods. See Reference 1, Section 10.4.</p>
+
+    <p>Computer-Aided Simulation</p>
+
+    <p>Availability prediction using computer-aided simulation modeling may use either a stochastic simulation or a Markov model approach. Stochastic simulation modeling uses statistical distributions for the system's reliability, maintainability, and other maintenance and delay time parameters. These distributions are used as mathematical models for estimating individual failure and restoration times and can include failure effects and other operational conditions. A computer program generates random draws from these distributions to simulate when the system is up and down, maintains tables of failures, repairs, failure effects, etc., and tracks system or function capability over time. These data may then be used to calculate and output system operational availability estimates using equation (2).</p>
+
+    <p>Stochastic Simulation Methods</p>
+
+    <p>Discrete event stochastic simulation programs are recommended to perform operational availability predictions and analyses for large, repairable systems such as the space station or large ground systems and facilities. These methods simulate and monitor the availability status of defined systems or functions that are composed of a collection of Replaceable Units (RUs). The following process is generally used:</p>
+
+    <ol>
+      <li>Generate simulated future failure times for each designated RU based on predicted RU reliability distributions and parameters.</li>
+
+      <li>Step through simulated operating time, and when failure events are encountered, evaluate the failure impact or function status given the specific failures encountered.</li>
+
+      <li>Repair or replace the failed RU using a maintenance policy and procedure based on the availability of required maintenance resources, priority or criticality of the failure, or the current system or function status. Once an RU is repaired or replaced, the system or function status is reset appropriately, and a future failure time for the RU is again generated.</li>
+
+      <li>Generation of simulated failures and maintenance actions for RUs requires as input the estimated RU time-to-failure distribution model parameters and factors that define the frequency of other scheduled or unscheduled maintenance. The maintenance actions can include equipment failures, preventive maintenance tasks, and environmentally or human-induced failures.</li>
+    </ol>
+
+    <p>To evaluate the effect of a simulated failure on the function's operational capability at a particular point in time, minimal cut sets of failure events that define the system or function failure conditions can be used. Minimal cut sets of failure events can be generated from reliability block diagrams or fault tree analysis of the functions, and then used during a simulation run to dynamically determine queuing priorities based upon functional criticality and the current level of remaining redundancy after the simulated failure occurs.</p>
+
+    <p>Maintenance is simulated by allocating available maintenance resources and spare parts to the awaiting maintenance action (or waiting for resources to become available). Groups of maintenance actions may also be packaged into shifts of work. If the system under consideration is in a space environment, both external (extravehicular activity or EVA) or internal (intravehicular activity or IVA) can be considered.</p>
+
+    <p>When the stochastic simulation method is used, each run of the simulation model (called an iteration) will yield a single value of the availability measure that depends on the chance component or unit failures and repairs that happened during that iteration. Therefore, many iterations are required to cover as many potential failure situations as possible, and to give the analyst a better understanding of the variation in the resulting availability as a function of the variations in the random failure and repair process. The number of iterations required for accurate availability measure results will depend on the iteration to iteration variation in the output measure. Experience has shown that in system availability simulations with a large iteration-o-iteration variation, 200 to 1000 iterations or more may be required to obtain a statistically accurate estimate of the average system availability.</p>
+
+    <p>For example, the Reliability and Maintainability Assessment Tool (RMAT) is a stochastic computer-aided simulation method like that described that has been used at Johnson Space Center for assessing the maintainability and availability characteristics of the Space Station. The output of the RMAT includes the percent of total (or specified mission) time each defined space station function spends in a "down" state as well as the percent of time each defined function is one failure away from functional outage (is zero failure tolerant). Using RMAT, analysts at JSC have been able to perform trade studies that quantify the differences between alternative Space Station configurations in terms of their respective operational availability and maintainability measure estimates.</p>
+
+    <p>The same simulation methods (such as RMAT) that provide for operational availability measures will also provide maintenance resource usage measures such as maintenance manpower needs and spare part requirements. With this capability, JSC has been able to estimate the maintenance manpower needs, including EVA requirements, of various Space Station alternative configurations.</p>
+
+    <p>Markov Model Approach</p>
+
+    <p>A Markov process, or state-space analysis is a mathematical tool particularly well suited to computer simulation of the availability of complex systems when the necessary assumptions are valid. This analysis technique also is well adapted to use in conjunction with Fault Tree Analysis or Reliability Block Diagram Analysis (RBDA). Examples of the use of Markov process analysis may be found in Reference 1 or in such standard reliability textbooks as Reference 2.</p>
+
+    <p>Failure to use availability predictions and analysis during the design process may lead to costly sub-optimization of the as-designed system reliability and maintainability characteristics. Where operations and support costs are a major portion of the life cycle costs, availability prediction and analysis are critical to understanding the impact of insufficiently defined maintenance resources (personnel, spare parts, test equipment, facilities, etc.), and maintenance concepts on overall system operational availability and mission success probabilities. These analyses can therefore greatly reduce the life cycle costs associated with deploying and supporting a space or ground system.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>MIL-HDBK-338; Electronic Reliability Design Handbook, Reliability Analysis Center, Rome, NY, 1989.</li>
+
+      <li>O'Connor, P.D.T.; Practical Reliability Engineering, John Wiley &amp; Sons Ltd., Chichester, 1991.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Availability estimation is a valuable design aid and assessment tool for any system whose operating profile allows for repair of failed units or components. These systems include those that operate on earth such as control centers, system test facilities, or flight simulation systems/facilities. Applying availability prediction and analysis techniques is also an extremely valuable process for guiding the development of maintenance concepts and requirements.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Estimate or predict the future availability of a system, function, or unit where availability is defined as the probability that the system, function, or unit will be in an operable state at a random time. Availability may be assessed for a single component, a repairable unit, a replaceable unit, a system of many replaceable units, or a function performed by multiple systems.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the International Space Station Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

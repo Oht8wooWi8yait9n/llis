@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0777: Electrostatic Discharge (ESD) Test Practices</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0777: Electrostatic Discharge (ESD) Test Practices</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0777 (Database ID: 777)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/777" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1414 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Proper implementation of this practice will assure that satellites will operate in the space charging environment without failure or awkward ground controller operations.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The following information has been partially derived from NASA Technical Paper 2361, "Design Guidelines for Assessing and Controlling Spacecraft Charging Effects". That document is also recommended for further description of the test process.</p>
+
+    <ol>
+      <li>Subject the spacecraft to an environment representative of that expected.</li>
+
+      <li>The environment applied to the spacecraft should include a safety margin (i.e., be greater than expected) that gives confidence that the flight spacecraft will survive the real environment.</li>
+
+      <li>Have a design qualification test sequence that is extensive: test all units of hardware; use long test durations; examine many equipment operating modes; apply the environment to all surfaces of the test unit.</li>
+
+      <li>Have a flight hardware test sequence of more modest scope: delete some units from test if qualification test shows great design margins; use shorter test durations; use only key equipment operating modes; and apply the environment to a limited number of surfaces.</li>
+    </ol>
+
+    <p>Simulation of Parameters</p>
+
+    <p>The following items should be considered in test design:</p>
+
+    <ol>
+      <li>Spark location.</li>
+
+      <li>Radiated fields, and/or structure currents.</li>
+
+      <li>Area, thickness, and dielectric strength of material.</li>
+
+      <li>Total charge involved in the event.</li>
+
+      <li>Breakdown voltage.</li>
+
+      <li>Current waveform: rise time, width, fall time, and rate of rise (amps/second).</li>
+
+      <li>Voltage waveform: rise time, width, fall time, and rate of rise (amps/second).</li>
+    </ol>
+
+    <p>Table 1 shows typical values as calculated on some spacecraft. They have been compiled from a variety of sources, mostly associated with the Voyager and Galileo spacecraft. New values must be calculated for a different satellite.</p>
+
+    <center>
+      <font>Table 1. <b>Examples of Estimated Space-Generated ESD Spark Parameters</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009241main_0777-1.jpg"  HEIGHT="365"  BORDER="0" /><A HREF="/llis_lib/txt/1009717main_0777-1.txt"  >[D]</A>
+    </center>
+
+    <p>Several representative types of test equipment are described in Table 2. Where possible, typical parameters for that type of test are listed.</p>
+
+    <center>
+      <font>Table 2. <b>Examples of Several ESD Generators</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009242main_0777-2.jpg"  HEIGHT="319"  BORDER="0" /><A HREF="/llis_lib/txt/1009718main_0777-2.txt"  >[D]</A>
+    </center>
+
+    <p>MIL-STD-1541 Sparker</p>
+
+    <p>The MIL-STD-1541 sparker is commonly used. The schematic and usage instructions are shown in MIL-STD-1541A.</p>
+
+    <p>Flat Plate Capacitor</p>
+
+    <p>A flat plate capacitor may be used in several circumstances. Examples of spacecraft areas which may be simulated by a flat plate capacitor are: (a) thermal blanket areas; (b) dielectric areas such as calibration targets; or (c) dielectric areas such as non-conductive paints. The chief value of a flat plate capacitor is to permit a wide-spread discharge to simulate the physical path of current flow.</p>
+
+    <p>Lumped Element Capacitors</p>
+
+    <p>Lumped element capacitors can overcome some of the objections raised about flat plate capacitors. They can have large capacitance in similar areas and this supplements a flat plate capacitor if it alone is not adequate.</p>
+
+    <p>Switches</p>
+
+    <p>There are a wide variety of switches that can be used to initiate the arc discharge.</p>
+
+    <p>At low voltages, semiconductor switches can be used. The MIL-STD-1541 sparker uses an SCR to initiate the spark activity on the primary of a step-up transformer.</p>
+
+    <p>Also at low voltages, mechanical switches may be used (for example, to discharge modest voltage capacitors). The "bounce" problem with mechanical switches can be alleviated by the use of Mercury-wetted switches.</p>
+
+    <p>For high voltage switching in air, a gap made of two pointed electrodes can be used as the discharge switch.</p>
+
+    <p>For tests which involve a fixed discharge voltage, gas discharge tubes are available with fixed breakdown voltages. The advantages of the gas discharge tube compared to needle points in air is its faster rise time and its very repeatable discharge voltage.</p>
+
+    <p>Another gas discharge tube is the triggered gas discharge tube. This tube can be triggered electronically, much as an SCR can be turned on by its gate.</p>
+
+    <p>Methods of ESD Application</p>
+
+    <p>The ESD energy can be as much as one joule, but usually is in the range of millijoules of energy. The methods of application can range from indirect (radiated) to direct (applying the spark directly to a piece part). In general, the method of application should simulate the expected ESD source as much as possible. The following paragraphs describe several typical methods:</p>
+
+    <p>Radiated Field Tests</p>
+
+    <p>The sparking device can be operated in air at some distance from the victim. This can be used to check for RF interference to communications or surveillance receivers as coupled into their antennas. It can also check susceptibility of scientific instruments which may be measuring plasma or natural radio waves.</p>
+
+    <p>Single Point Discharge Tests</p>
+
+    <p>Discharging the arc onto the spacecraft surface (or a temporary protective metallic fitting), with the arc current return wire in close proximity, can represent the discharge and local flowing of arc currents. This test is more severe than the radiated test, since it is immediately adjacent to the spacecraft rather than some distance away.</p>
+
+    <p>Structure Current Tests</p>
+
+    <p>The objective of structure current testing is to simulate "blowoff" of charges from a spacecraft surface. If a surface charges and a resultant ESD occurs, the spark may vaporize and mechanically remove both material and charges without local charge equalization. In such a case the remaining charge on the spacecraft will redistribute itself, causing structural currents.</p>
+
+    <p>Typically, such a test would be accomplished by using one or more of the following current paths:</p>
+
+    <ol>
+      <li>diametrically opposed locations (through the spacecraft).</li>
+
+      <li>protuberances (from landing foot to top; antenna to body; thruster jets to opposite side of body).</li>
+
+      <li>extensions or booms (from end of sensor boom to spacecraft chassis; end of solar array to spacecraft chassis).</li>
+
+      <li>from launch attachment point to other side of spacecraft.</li>
+    </ol>
+
+    <p>Unit Testing</p>
+
+    <p>Unit ESD testing serves the same purpose it serves in standard environmental testing; i.e., it serves to identify design deficiencies at a stage when design changes are more easily accomplished. However, it is very difficult to provide a realistic determination of the unit's environment as caused by an ESD on the spacecraft.</p>
+
+    <p>Spacecraft Testing</p>
+
+    <p>The system level test will provide the most reliable determination of the expected performance of a space vehicle in the charging environment. Such a test should be conducted on a representative spacecraft prior to exposing the flight spacecraft to assure that there will be no inadvertent over stressing of the flight units. Ideally the spacecraft should be in a 100% flight-like configuration.</p>
+
+    <p>A detailed test plan must be developed defining test procedures, instrumentation, test levels, and parameters to be investigated. Test techniques will probably involve current flow in the spacecraft structure. Tests may be conducted in ambient environment, but screen rooms with electromagnetic dampers are recommended. MIL-STD-1541 system test requirements and radiated EMI testing are considered to be a minimal sequence of tests.</p>
+
+    <p>The test levels should be determined from the analysis of discharging behavior in the substorm environment. It is recommended that full level testing, with test margins, be applied to structural, engineering, or qualification models of spacecraft with only reduced levels applied to the flight unit. The test measurements (structural currents, harness transients, upsets, etc.) are the key systems responses which are to be used to validate predicted behavior.</p>
+
+    <p>Regions of space that contain plasmas (ionized gases, usually consisting of electrons and hydrogen ions) can sometimes be of high energy, as much as 20,000 electron volts or more. The interaction of this plasma with typical spacecraft dielectric surfaces (usually thermal control surfaces, such as Teflon thermal blankets) causes negative charge to be deposited on these surfaces. It has been documented that such charges can generate electric fields in excess of the breakdown strength of the dielectrics. The resultant ESD spark has been known to disrupt digital and analog electronics, and can even be so strong that it damages spacecraft electronic hardware.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>MIL-STD-1541A, "Electromagnetic Compatibility Requirements for Space Systems"</li>
+
+      <li>NASA Technical Paper 2361, "Design Guidelines for Assessing and Controlling Spacecraft Charging Effects"</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If protective design and verification measures are not taken when necessary, the worst impact that can occur is that the satellite will become completely non-functional. Total losses have occurred on several satellites in Earth geostationary orbits (a very severe space charging environment); the failures were attributed to the effects of electrostatic discharge. A less severe effect is transient disruptions in satellite operation. Examples include Power On Reset events (Voyager at Jupiter encounter) and attitude control disruptions requiring frequent ground controller intervention (several Earth geostationary satellites).</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Test satellites for the ability to survive the effects of electrostatic discharges (ESDs) caused by a space charging environment. Such environments include Earth equatorial orbits above 8000 km and virtually all orbits above 40 degrees latitude, Jupiter encounters closer than 15 Rj (Jupiter radii), and possibly other planets.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Galileo</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

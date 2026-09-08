@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #8402: Assure Flight Control Algorithms Can Cope With All Mission Phases</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #8402: Assure Flight Control Algorithms Can Cope With All Mission Phases</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #8402 (Database ID: 8402)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2013-07-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Operations, Ground Equipment, Ground Operations, Software, Spacecraft, Power, Software Engineering, Spacecraft and Spacecraft Instruments, Level II/III requirements definition, Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/8402" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The Kepler mission was specifically designed to discover Earth-size planets in or near the habitable zone and assess how common such exoplanets may be in our galaxy. Because the Kepler instrument required exceptional pointing stability, the spacecraft design incorporated a fixed (i.e., non-deployable) solar array (Figure 1).</p> 
+<div> 
+ <table border="0" style="margin: auto;"> 
+  <tbody> 
+   <tr> 
+    <td> <img alt="Figure 1 is a diagram of the Kepler spacecraft, which is roughly cylindrical in shape. The drawing identifies the placement of a Sun Shade, Photometer, CCD Radiator, High Gain Antenna, Thruster Modules, Star Trackers, and the Solar Array. However, the salient feature in this diagram is that the Solar Array is partially wrapped around the cylindrical spacecraft such that it covers almost all of one side of the spacecraft, and shades approximately half of two other sides." src="https://llis.nasa.gov/llis_lib/images/2013-06_Kepler_panels_Fig1.jpg" style="width: 340px; height: 513px; border-width: 0px; border-style: solid;" /></td> 
+   </tr> 
+   <tr> 
+    <td> <p> <strong>Figure 1. </strong>Kepler employed a fixed solar array that was<br /> partially wrapped around the photometer instrument</p> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p> Shortly following the March 2009 launch of Kepler, spacecraft fault protection responded to an over-voltage condition caused by the battery exceeding the specified voltage. Kepler’s solar panels were hard mounted on three sides of the spacecraft. During a roll, the panels went in and out of the sunlight; this resulted in an anticipated periodicity in battery charging while the spacecraft tumbled following separation from the launch vehicle. The battery charge control algorithm was designed to adjust for the nominal roll rate during science operations. However, the over-voltage anomaly occurred because the battery charge control algorithm was not designed to manage the anticipated higher roll rate during launch operations, combined with the anticipated detumble that Kepler experienced post-separation.</p> 
+<p> A Subsystem Interface Box (SIB) swap recovery contingency procedure had been vetted by an independent review team, and exercised on a testbed during operational readiness testing prior to launch. The procedure was successful in restoring the spacecraft configuration, and the battery voltage readings were nominal once detumble was completed.</p> 
+<p> <u>References</u>:</p> 
+<ol> 
+ <li> Peg Frerking, “Kepler SIB Swap Contingency following Auto-Initiation,” March 18, 2009.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> When designing flight control algorithms, such as battery control algorithms, the design must cover all phases of the mission, including post-separation detumble. For Kepler, this constituted a failure to (1) model dynamic spacecraft behavior during all operational phases so that they could impose the proper flow-down of requirements to the power system, and (2) test-as-you-fly and demonstrate margin.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Model the spacecraft dynamic behavior for launch and all operational phases.</li> 
+ <br /> 
+ <li> Assure that spacecraft flight control algorithms, such as battery charge control algorithms, are designed for all mission phases and operational scenarios, with margin, including the detumble that occurs immediately post launch.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.6.1.1 (“Guidance, Navigation &amp; Control Design: General - Architecture”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+Apollo Operations Handbook Block II Spacecraft - Volume I: Section 02-01 Systems Data - Guidance and Control Standard Handbook for Aeronautical and Astronautical Engineers Spacecraft Thermal Control Handbook
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

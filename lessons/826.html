@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0826: Manned Space Vehicle Battery Safety</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0826: Manned Space Vehicle Battery Safety</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0826 (Database ID: 826)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/826" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-ED-1272, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>There have been many requests by the Space Shuttle Payload customers for a practice which describes all the hazards associated with the use of batteries in and on manned space flight vehicles. This practice is prepared for designers of battery-operated equipment so that designs can accommodate these hazard controls. This practice describes the process that a design engineer should consider in order to verify control of hazards to personnel and the equipment. Hazards to ground personnel who must handle battery-operated equipment are considered, as well as hazards to space crew and vehicles.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The purpose of this practice is primarily to cover battery safety, not performance. Inquiries are frequently received from payload customers as to a listing of batteries "approved"for use onboard the Space Shuttle. There is no such list. Any battery which can be made safe to fly in the manned spacecraft environments can be used. There are some kinds of batteries however, that are not practical to make safe for in-cabin use. For example, a battery with large amounts of free electrolyte presents huge problems in a zero "g" environment when trying to prevent electrolyte escape. Another example is lithium-sulfur dioxide cells, which have built-in overpressure relief which releases SO<small><sub>2</sub></small> and other electrolyte components whenever internal cell pressure is high enough. Batteries that contain these chararacteristics are unacceptable in the close environment of the Orbiter cabin.</p>
+
+    <p>The following is a listing of the types of cells which have already flown in the Orbiter (cabin or payload bay). These include: (1) silver oxide-zinc primary (one shot) and secondary (rechargeable); (2) nickel-cadmium secondary; (3) nickel-hydrogen secondary; (4) nickel-metal hydride, (5) alkaline-manganese primary; (6) LeClanche (carbon-zinc) primary; (7) zinc-air primary; (8) lead-acid secondary pressure relieved cells or cells having immobilized electrolyte; (9) mercuric oxide-zinc primary and (10) lithium primary cells having the following cathodic (positive) active materials consisting of: (a) Thionyl chloride; (b) Thionyl chloride with bromine chloride complexing additive (Li-BCX); (c) Sulfur dioxide; (external to habitable area); (d) Polycarbon monofluoride; (e) Manganese dioxide; (f) Iodine; and (g) Silver chromate.</p>
+
+    <p>It must be noted that lithium-based cells are subject to extremely close review and are required to have seemingly excessive hazard controls incorporated in their usage. They can yield extremely high energies per unit weight and volume relative to other cell types. They have uniquely hazardous failure modes. For many types of lithium batteries, there is little comprehensive data which characterizes either performance or response to abusive or off-nominal exposure. The chemicals contained in them are usually either highly flammable, corrosive and/or toxic. In their various failure modes, they are subject to leakage, venting, or violent explosions accompanied by scattered shrapnel and toxic materials. Hence, no effort is spared in providing the utmost assurance that every known or suspected failure mode is prevented by effective hazard controls. Use of other types of cells is strongly encouraged wherever feasible. Weight and volume differences alone are not necessarily sufficient
+    justification for use of lithium based cells.</p>
+
+    <p>Use of batteries of any chemistry, including those listed above, may require extensive testing, evaluation and use of source controls. Certification prior to flight is always required.</p>
+
+    <p>Many of the hazard controls associated with the batteries, enhance performance reliability, since the battery is designed to prevent hazards which are the result of failures. For example, the prevention of electrolyte leakage and grounding in a battery case which may cause a battery explosion also prevents aborted battery operation.</p>
+
+    <p>The content of this practice is not intended to consider every conceivable contingency. There is no attempt herein to provide knowledge on the theory and electrochemistry of batteries, except as necessary to dictate a hazard or its control.</p>
+
+    <p>General Battery Hazards Sources and Controls</p>
+
+    <p>Battery hazards can generally be broken into seven categories. These are: (1) short circuits; (2) electrolyte leakage; (3) battery gases; (4) high temperature exposure; (5) circulating currents; (6) structural; and (7) charging.</p>
+
+    <p>Practice No. 1. Flight batteries should not be subjected to short circuits.</p>
+
+    <p>Rationale. Shorts can occur in the loads served by the battery through conductive electrolyte leaks between cells within a battery or by careless contact with cell and battery terminals. Internal shorts in cells of batteries which have been prepared for flight by effective procedures are rare. A sustained short can result in extremely high temperature increases. Table I shows effects of shorting relatively benign alkaline-manganese cells and batteries through about 30 milliohms. Peak currents are reached in less than one second.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009325main_0826-1.jpg"  HEIGHT="182"  BORDER="0" /><A HREF="/llis_lib/txt/1009800main_0826-1.txt"  >[D]</A><br />
+      Table 1: Effects of Shorting Through 30 Milliohms
+    </center>
+
+    <p>High temperatures can result in surfaces which burn crewmen (118 degrees F is the specification limit for touchable surfaces), meltdown of protective plastic structure surrounding the battery, release of noxious or explosive substances (hydrogen for example) or initiation of a fire. In addition to heating, a short circuit through an electrolyte leak can decompose water in the electrolyte to hydrogen and oxygen, then provide the minuscule ignition energy (1-2 micro joules) to explode the hydrogen-oxygen mixture when the short circuit current terminates with a small arc at last contact. This type of failure is considered to have caused a momentary LM descent battery short circuit during the cis-lunar leg of the aborted Apollo 13 mission. Some obvious hazard controls had been omitted to save weight because such an event was considered unlikely. Apollo 14 and later LM batteries incorporated the controls.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Batteries must have circuit interrupters which are physically and electrically close to the battery terminals and are rated well below the battery's short circuit current capability. Interrupters may be fuses, circuit breakers, thermal switches or any other effective device. The interrupter should be in the ground leg of batteries with metal cases so that battery grounds inside the battery case (usually grounded to structure) may be sensed and interrupted.</p>
+
+    <p>All inner surfaces of metal battery cases must be coated with an insulating paint known to be resistant to the battery electrolyte. This procedure aids in preventing battery grounds to the case through electrolyte leakage. Cell terminals must also be protected from contact with other conductive surfaces by potting or by non-conductive barrier (e.g., plastic sheets). The parts of battery terminals extending inside the battery case must be insulated from unintentional contact with other conductors and bridging by electrolyte leaks. The battery terminals which pass through metal battery cases must be insulated from the case by an insulating collar or other effective means. The parts of battery terminals on the outside of the battery case must be positively protected from accidental bridging. This may be accomplished by using female connector, recessing stud-type terminals, installation of effective insulating barriers, etc. Wire lengths inside the battery case must be insulated,
+    restrained from contact with the cell terminals and physically constrained from movement due to vibration or bumping.</p>
+
+    <p>Practice No. 2. Preventive measures must be implemented to prevent electrolyte leakage.</p>
+
+    <p>Rationale. Electrolyte leakage can be caused by excessive free electrolyte in vented (pressure relieved) cells. Inadequate design of electrolyte trapping or baffling provisions under covers of vented cells or leakage through cracked cell containers is a major cause for electrolyte leakage. Another cause for electrolyte leakage is faulty seals on sealed cells, and leakage of electrolyte forced through seals by cells overheating or over discharging.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Excessive free electrolyte in vented cells should be corrected by performing cell tests in which the quantity of free electrolyte is reduced until the cell capacity begins to be reduced. These tests must be conducted on cells whose age and cycle-life exposure is nearly identical to that proposed for flight cells. This type of test applies mainly to silver oxide-zinc rectangular cells. The cell manufacturer generally specifies a slight excess of electrolyte be used because his cells are generally recharged several times by most customers. With increasing cycles for use, the excess free electrolyte is generally depleted by both water electrolysis and absorption in gradually expanding zinc negative. Cells used in space applications are generally used on their first to fifth cycle and do not require excess free electrolyte.</p>
+
+    <p>Cell covers can also be designed to have a cylindrical "stand-pipe" extend downward from the underside of the cell cover toward the cell plates, from the cell vent opening in the cover. When the cell is inverted in a gravity environment, the electrolyte level collecting on the inside of the cell cover is optimized not to rise above the opening of the "stand-pipe". This represents the worst case. All other cell positions, including the zero "g" are better.</p>
+
+    <p>Cells having free electrolyte, must be fitted with relief values in their vent ports, not just an opening and/or absorbent material. Relief valve opening pressures having a range from 3 to 35 psid and are a function of the ability of the cell case to withstand internal pressure without cracking. Some steel-case rectangular NiCd cells are considered "sealed" because they use relief valves set to open at 100 to 200 psid. These are not the hermetically sealed, space-type NiCd cells which may also be used.</p>
+
+    <p>If inputs are feasible at the cell design level, micro porous teflon plugs or sheets may be installed on the vent opening on the underside of the cell cover. Such material, if not covered over the electrolyte, will permit gas to escape but will prevent electrolyte escape due to its small pores and non-wetting property.</p>
+
+    <p>If it is not possible to use the above controls, absorbent material, such as non-woven polypropylene or cotton wadding, should be used to fill the void spaces in a battery container or is placed directly over the cell vents. This is a less satisfactory control since electrolyte may be trapped against conductive parts by the absorbent material which may also be flammable. Internal surfaces of metal battery cases must be coated with an electrolyte resistant paint as well.</p>
+
+    <p>The required prelaunch stowage of batteries in any space vehicle, has to be oriented in an "upright" position relative to gravity so that any free electrolyte is forced by earth gravity and the launch acceleration into the cell plates and separators and away from the cells seals or vents. This configuration decreases the chance of an in-flight leakage from occurring. If electrolyte is added at the initial design level of vented cells having free electrolyte, extension of the separator material beyond the cell electrolyte is required. This extension provides additional volume for capillary capture of the electrolyte, which then may require acceleration forces larger than 1g for dislodgment. In-flight maneuvers nearly always provide significantly less g's of force.</p>
+
+    <p>Practice No. 3. Flight batteries utilizing aqueous-based electrolytes should not be stored in enclosed spaces.</p>
+
+    <p>Rationale. Hydrogen gas, mixed with air or oxygen is flammable or explosive over a wide range of concentrations (e.g., 3.8 percent to 94 percent in air). Accumulation of hydrogen in enclosed spaces containing oxygen must always be prevented. Aqueous electrolyte cells subjected to charging, will generate oxygen as the charge nears completion, thus providing oxygen where none may have existed before (due to nitrogen purging). Whenever a flammable/explosive mixture of hydrogen and oxygen exist, an ignition source is presumed to exist although one may not be obviously identifiable. This condition can occur because energy required for ignition is on the order of 1 or 2 micro joules.Special Considerations</p>
+
+    <p>The traditional means of avoiding hydrogen accumulation is to provide continuous air ventilation at a rate sufficient to continuously dilute evolved hydrogen below the 3.8 percent flammability level. For example, a lead-acid or silver oxide-zinc battery on over-charge is considered to evolve hydrogen at the rate expressed by the following equation:</p>
+
+    <center>
+      <p><font>Q = 0.016 NI</p>
+    </center>
+
+    <p>Where:<br />
+    Q = cu. ft. H<small><sub>2</sub></small>/hr. at 1 atm. and 77 deg F<br />
+    N = no. of cells in battery<br />
+    I = charging current in amperes</p>
+
+    <p>Thus, a battery of 20 cells on charge at 3 amps evolves:</p>
+
+    <center>
+      <font>Q = .016 x 20 x 3 = 0.96 cfh H<small><sub>2</sub></small>
+    </center>
+
+    <p>To dilute the hydrogen to about 2 percent concentration in the ventilating air, the air flow must be:</p>
+
+    <center>
+      <font>0.96 / .02 = 48 cfh
+    </center>
+
+    <p>The value Q may be corrected for temperature and pressure by multiplying it by the value:</p>
+
+    <center>
+      <font>K = { 1.415(T+460) } / P
+    </center>
+
+    <p>Where:<br />
+    P = actual pressure in mm Hg<br />
+    T = actual temperature in degrees F</p>
+
+    <p>In practice, it is rarely feasible to ventilate hydrogen in normal Orbiter battery applications. Hence one or more of the following controls must be exercised whether or not charging is performed on board the Orbiter.</p>
+
+    <ol type="a">
+      <li>Avoid charging the battery in the habitable spaces of the Orbiter.</li>
+
+      <li>Do not seal battery cases or provide low pressure relief valves (3 to 15 psid) on the case.</li>
+
+      <li>Minimize the volume of void spaces inside the battery case by design or by adding electrolyte-resistant, non-flammable filler such as potting material.</li>
+
+      <li>Prohibit any component inside the battery case which may provide an ignition source, such as arching between relay contacts.</li>
+
+      <li>Purge the battery completely with dry nitrogen (or any other inert gas) as soon as the battery is installed in the Orbiter.</li>
+
+      <li>Minimize the exposure of the battery to high temperatures.</li>
+    </ol>
+
+    <p>Practice No. 4. Do not expose flight batteries to high temperatures.</p>
+
+    <p>Rationale. High temperatures is construed to mean temperatures higher than 120 degrees F. Some batteries can safely and successfully operate at temperatures well above 120 degrees F. Some cells, notably silver oxide-zinc, are subject to thermal runaway. At high temperatures, silver oxide decomposes, yielding oxygen. The release of oxygen oxidizes zinc in the negative plates, resulting in heat evolution and an increase in cell temperatures which increases the silver oxide decomposition rate. This is different from the mechanism of thermal runaway which can occur during constant potential charging of NiCd cells.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Perform a thermal analysis on the battery and its surroundings to verify probable battery temperatures under load and non-load conditions. This practice is particularly necessary for high energy, high power batteries that are installed with equipment stowed in the Orbiter payload bays. Do not operate cells at loads above those set as maximum by the battery manufacturers. Provide adequate short circuit protection (See practice no.1, Short Circuits). If the thermal analysis conducted on the battery shows that it will become cold enough to require heat inputs, electrical heaters must have redundant thermostatic over temperature controls. If the thermal analysis shows that any combination of internal and external heating may result in over temperature, the following precautions must be considered:</p>
+
+    <ol>
+      <li>Provision for heat sinking, heat shunts or active cooling.</li>
+
+      <li>Provisions for barriers from insulation or other convective, radiative or conductive heat sources.</li>
+
+      <li>Provisions for thermally actuated circuit breakers to interrupt the load current near hazardous temperatures.</li>
+
+      <li>Thermally optimized on-board location (move battery to cooler location).</li>
+    </ol>
+
+    <p>Practice No. 5. Batteries should be protected from circulating currents.</p>
+
+    <p>Rationale. Circulating currents are unintended current flow, generally between cells or cell stacks connected in parallel. They can also occur between standby batteries and the prime power they support, or through electrolyte leakage paths between cells. They result in parasitic discharging and/or unintended charging of cells in the circulating current loop. Circulating currents between parallel-connected cells stacks can result from lowered voltage in one or more stacks due to cell degradation, followed by current flow from adjacent electrically sound stacks due to the resulting difference in stack potentials.</p>
+
+    <p>Hazards associated with currents circulating through electrolyte leakage paths are described under practice no. 2, Electrolyte Leakage. The hazard due to current flow between parallel stacks of cells or between a standby battery and a prime power source, results from unintended charge and/or discharge. In adequate electrolyte batteries, charging can result in water electrolysis with consequent hydrogen generation (See practice no. 3, Enclosed Spaces) charging of lithium primary batteries is hazardous and is covered under charge prevention. Unregulated discharging can result in overheating of the hazard which are covered under practice number 4, High Temperatures.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Circulating currents between parallel cells or cell stacks must be prevented by a blocking diode in the parallel legs. Small, conservatively current-rated Schottky barrier rectifiers have been used for this purpose to minimize voltage drops. Another alternative is to use larger capacity cells instead of many smaller cells in parallel. In the case of secondary batteries, severe charging current distribution problems can arise with parallel cell strings, requiring special charge current controls.</p>
+
+    <p>Currents circulating from a prime power source to its back-up battery, must also be prevented with a blocking diode. Depending on the circuit power requirements, redundant controls such as a high resistance or a fuse in series with the battery may be installed. Another option is to put a relay in series with the battery which is held open by the prime power source.</p>
+
+    <p>Practice No. 6. Flight batteries should not be subjected to mechanical, chemical and thermal stresses which reduce the integrity or functional capability of the cell cases and the battery case.</p>
+
+    <p>Rationale. Breakage of mounting provisions, permits unconstrained movement of the batteries. Breakage of cell cases, permits uncontrolled release of electrolyte and gases within the battery case. Breakage or other failures of the battery case seals, can also permit the release of the electrolyte and gases to the enclosed battery environment. Fractures of the internal current-carrying members, can also result in arching and explosions.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Battery cases are often made of lightweight materials such as aluminum alloy, magnesium alloy, plastics, etc. In such instances, a materials compatibility and stress analysis should be made to ensure maintenance of the cell and the battery case material strength and function after exposure to the electrolyte, potting materials and their solvents or to any material to which the battery may be exposed.</p>
+
+    <p>Battery cases should not be sealed (in the hermetical sense) but rather should have relief valves or low pressure venting provisions installed. If a design is made which results in a gas-tight seal in spite of this constraint, the case must then meet the requirements of Paragraph 208.4 of NHB 1700.7A, "Safety Policy and Requirements for Payloads Using the Space Transportation System," regarding pressure vessel safety. If the battery case closure contains provisions for low pressure venting and is otherwise sealed, it must meet the requirements of paragraph 208.7 of NHB 1700.7A, regarding sealed containers.</p>
+
+    <p>Silver oxide-zinc cells swell in the direction normal to the plane of their plates (electrodes). Zinc-air button cells swell axially; e.g., a Duracell 1200HP cell will lengthen axially about 0.015 inches during discharge. Battery development testing must include determinations of such dimensional changes. Battery case structural design must provide the strength to withstand or negate the stresses that are encountered.</p>
+
+    <p>If it is known that significantly low or high temperatures will be experienced by the battery, whether from external or internal sources, consideration must be given to the effects of the differential thermal expansion and contraction between dissimilar materials; e.g., plastic cell cases and metal battery cases. Plastic cell cases must not be "pinned" to a metal battery case by cement, hard potting or mechanical means. Resilient filler may also be required to absorb dimensional changes due to large temperature changes.</p>
+
+    <p>Verify the vibration resistance of the battery assembly to the vibration spectrum listed below by conducting battery certification tests or by analysis.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009326main_0826-2.jpg"  HEIGHT="132"  BORDER="0" /><A HREF="/llis_lib/txt/1009801main_0826-2.txt"  >[D]</A><br />
+      Table 2: "Freq vs Range"
+    </center>
+
+    <p>Vibration should be for fifteen minutes in each of the three axes of the assembly.</p>
+
+    <p>Verify shock resistance of the battery assembly to shock inputs of the below test by certification test or analysis. Subject the assembly to test in accordance with MIL-STD-810, Method 516.4. Apply a sawtooth shock pulse, 20g peak, 11<u>+</u> l millisecond rise and 1<u>+</u> millisecond decay, once in each direction along each of the three orthogonal axes, for a total of 6 shock pulses. This procedure is from the obsolete MIL-STD-810C.</p>
+
+    <p>Practice No. 7. Prevent overcharging of flight batteries to preclude excessive build up of heat and/or explosive gas mixtures or expulsion of electrolyte fluids.</p>
+
+    <p>Rationale. The charging referred to in this practice is that which may be applied on secondary batteries used in the Orbiter while in flight or awaiting launch on the pad. This condition rarely exists at the Cape due to the inaccessibility of the batteries or lack of necessity to charge. If a charge is required, most of the charges are trickle charges to "top-off" losses due to self discharge on the pad.</p>
+
+    <p>Special Considerations</p>
+
+    <p>Use a battery design which does not require freshening or "trickle charges". This is equivalent to saying do not use nickel-cadmium cells, since they have poor charged shelf-life. Nearly any other kind of cell has adequate shelf-life for shuttle missions. However, it may be necessary to use nickel-cadmium cells in applications requiring high power and low energy. Note that sealed nickel-cadmium cells on overcharge at or less than the manufacturer&iacute;s recommended current and voltage are capable of recombining the generated oxygen within the cell. Therefore they will not vent any gas under these conditions nor experience significant internal pressure rise.</p>
+
+    <p>Ground service or onboard chargers must be designed with all the performance precision and reliability of other space equipment. The voltage and current controls must follow output requirements determined during development testing or specified by the battery manufacturer to prevent excessive overcharging. Temperature adjustments of voltage and current may have to be included in the charger as well. Lithium-ion batteries require special consideration for charging, since charge control must be implemented on the individual cells.</p>
+
+    <p>Vented or pressure-relieved batteries requiring-charging while in or on the shuttle on the launch pad should be mounted upright (tops of cells up, relative to the earth&iacute;s gravity) so that any evolved gas is less likely to entrain the electrolyte.</p>
+
+    <p>Charging instructions must include a safety warning which bans the presence of any ignition source (smoking, welding, hammering, electrical relays or switches opening and closing, etc.) near batteries undergoing charge. If battery cells are truly hermetically sealed, as in the case of certain nickel-cadmium rectangular-cell satellite batteries, gas evolution presents no problem if charge voltage and current controls are adequately implemented.</p>
+
+    <p>Charging instructions and instrumentation must provide for a ground check between the battery terminals (disconnected from external circuitry) and the battery case after charging. Minimum resistance should be greater than 1 megohm. Where equipment batteries must be charged in flight, this procedure must be addressed in the equipment safety analysis report.</p>
+
+    <p><u>Technical Rationale:</u></p>
+    This practice ensures good battery operated-equipment design and safety application procedures to ensure reliable operation of a spacecraft and its complement of scientific instruments and equipment that utilize batteries.
+
+    <p>References:</p>
+
+    <ol>
+      <li>JSC Memorandum EP-5-84-M107, Lithium Batteries in Back-up Power Applications, dated June 20, 1984.</li>
+
+      <li>JSC Design and Procedural Standards, Mercury-Restriction on Use, dated 11/3/67.</li>
+
+      <li>Excerpt from JSC-11123, STS Payload Hazards Definition.</li>
+
+      <li>Bis, R.F. and Murphy, R.M., Safety Characteristics of Non-lithium Battery Systems, NSWC TR 84-302, Naval Surface Weapons Center.</li>
+
+      <li>Mantel, C.L., Batteries and Energy Systems, McGraw-Hill</li>
+
+      <li>Trout, J.B., Studies of Performance and Abuse Resistance of Lithium-Bromine Complex Cells for Manned Space Use, NASA Contract NAS9-15425, JSC-20006.</li>
+
+      <li>Tutorial hand-outs available from various battery manufactures.</li>
+
+      <li>Proceedings of IECEC, annual conference, publication by American Chemical Society; 20 editions as of 1985.</li>
+
+      <li>Various editors, Progress in Batteries and Solar Cells, a journal published annually by JEC Press, Inc. Volume 1 published 1978.</li>
+
+      <li>Smith, G., Storage Batteries, Sir Isaac Pitman and Sons, Ltd.</li>
+
+      <li>Scott, W. R. and Rusta, D.W. Sealed-Cell Nickel-Cadmium Battery Applications Manual, NASA Reference Publication 1052.</li>
+
+      <li>Gabano, J.P., Lithium Batteries, Academic Press.</li>
+
+      <li>Proceedings of Power Sources Symposiums sponsored by U.S. Army Signal Corps, Ft. Monmouth, N.J. more than 20 editions</li>
+
+      <li>Bauer, P., Batteries for Space Power Systems, NASA SP-172</li>
+
+      <li>Linden, D., Handbook of Batteries and Fuel Cells, McGraw-Hill</li>
+
+      <li>Fleischer, A. and Lander, J.J. Zinc-Silver Oxide Batteries, John Wiley and Sons, Inc.</li>
+
+      <li>Heise, G.W. and Cahoon, N.Corey, The Primary Battery, John Wiley and Sons, Inc.</li>
+
+      <li>Vinal, G. W., Primary Batteries, John Wiley and Sons, Inc.</li>
+
+      <li>Vinal, G. W., Storage Batteries, John Wiley and Sons, Inc.</li>
+
+      <li>Reliability Preferred Practice PD-EC-1103, Nickel-Cadmium Conventional Spacecraft Battery Handling and Storage Practice.</li>
+
+      <li>Reliability Preferred Practice PD-ED-1221, Battery Selection Practice for Aerospace Power Systems.</li>
+
+      <li>Reliability Preferred Practice PT-TE-1430, Short Circuit Testing for Nickel Hydrogen Battery.</li>
+
+      <li>Reliability Preferred Practice PT-TE-1434, Battery Verification Through Long Term Simulation.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failures can result in battery-operated equipment if safety precautions are not implemented correctly during operation of the flight equipment.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This practice is for use by designers of battery-operated equipment flown on space vehicles. It provides such people with information on the design of battery-operated equipment to result in a design which is safe. Safe, in this practice, means safe for ground personnel and crew to handle and use; safe for use in the enclosed environment of a manned space vehicle and safe to be mounted in adjacent un-pressurized spaces.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, Orbiter, Apollo Command &amp; Service Module (CSM) , Lunar Entry Module (LEM), International Space Station and Shuttle Payloads programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

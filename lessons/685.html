@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0685: Electrostatic Discharge Control in GSE</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0685: Electrostatic Discharge Control in GSE</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0685 (Database ID: 685)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/685" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3008 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Proper control of electrostatic discharge can significantly reduce the possibility of:</p>
+
+    <ul>
+      <li>Inadvertent ignition of solid propellants, explosives and flammable/combustible materials,</li>
+
+      <li>Inadvertent actuation of electronic devices/systems</li>
+
+      <li>Personnel shock or injury and</li>
+
+      <li>Ground Support Equipment (GSE) hardware/equipment damage that could lead to flight hardware damage.</li>
+    </ul>
+    <br />
+    <br />
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Electrostatic controls are implemented at KSC to reduce the effects of ESD during the following operations:</p>
+
+    <ul>
+      <li>
+        General STS and Payload Operations - The percent relative humidity in an operational area is recorded every four hours prior to the start and during operations involving exposed solid propellants, open flammable/combustible fluid systems and category A Electro-explosive Devices (EED) when the Faraday (electrically conductive shield) cap is removed or firing circuits to EEDs are exposed. At or below 50% RH, bonding and grounding measures are verified. In addition, non-conductive materials in the area and personnel not wearing personnel grounding devices are checked with an electrostatic meter to ensure voltages greater than 350 volts are not present. Electrostatic scanning, not exceeding one hour intervals, is performed during the operation when at any time:<br />
+        <br />
+
+        <ul>
+          <li>additional personnel, equipment or hardware are introduced into the immediate area,</li>
+
+          <li>the RH decreases, or</li>
+
+          <li>the handling of non-conductive materials is required.</li>
+        </ul>
+        <br />
+        <br />
+
+        <p>At or below 30% RH, operations involving exposed solid propellant, except Solid Rocket Booster (SRB) segments, or open flammable/combustible fluid system and category A EEDs (with Faraday caps removed or firing circuits exposed) are not permitted. In the Orbiter Processing facility (OPF), the RH is controlled to within 40 - 50% thus minimizing the effects of ESD.</p>
+      </li>
+
+      <li>
+        STS SRB Processing - Segment processing may continue below 50% RH using the following guidelines, segment processing is not permitted at or below 10%:<br />
+        <br />
+
+        <ul>
+          <li>Between 50% and 30% RH the above requirements apply.</li>
+
+          <li>With proper approval, operations may continue at RH levels below 30% down to 10%. In addition to the above requirement, electronic scanning is required to to be accomplished at 10 minute intervals if the propellant is exposed, and at 30 minute intervals if the propellant is covered.</li>
+
+          <li>At no time will operations continue on the segments with propellant exposed and a potential of 350 volts or greater is measured on the segment case, propellant, or any equipment/personnel within five feet of exposed propellant.</li>
+
+          <li>
+            When the segment and rings with shipping covers are installed (propellant protected by a Faraday cage), the following guidelines apply:<br />
+            <br />
+
+            <ol>
+              <li>A reading of one kilovolt or less on the case is acceptable and work may continue.</li>
+
+              <li>A reading of greater than one kilovolt, but less than four kilovolts on the case requires all segment processing to cease and personnel will stand back four feet. An electrostatic scan will be repeated every five minutes and recorded. If the reading of one kilovolt or up to four kilovolts exists for 30 minutes, connection to facility ground will be verified. If this connection is open, then the ground will be reconnected thru a resistor (1 Meg ohm +/-20%). Processing may continue when the electrostatic scan indicates less than one kilovolt.</li>
+
+              <li>An electrostatic reading of four kilovolts or greater requires all work to stop. All personnel will evacuate to a location 500 feet from the processing area. Designated personnel may re-enter for electrostatic scan. This scan is repeated not less than every 15 minutes. No attempt to check grounds will be performed. If, after an hour, readings still exceed four kilovolts, then a separate ground with a resistor (1 Meg ohm +/- 20%) in line may be connected to another ground point on the segment case. Work may resume when a reading of one kilovolt or less is obtained and all grounds have been rechecked.</li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        Launch Processing System (LPS) Operations - LPS operators coming in contact with the LPS hardware subsystems are required to wear approved grounding wrist straps during test and launch processing operations in environmental conditions below 45% relative humidity. LPS system, maintenance, or support personnel coming in contact with low voltage LPS hardware Line Replaceable Unit (LRU) / Components are required to wear approved grounding wrist straps at all times.<br />
+        <br />
+
+        <p>LPS / Checkout, Control and Monitor Subsystem (CCMS) console stations are equipped with approved terminated ground cables containing quick connect / disconnect type wrist strap snaps.</p>
+
+        <p>Systems, maintenance or support personnel will connect the grounding lead clip to a conductive surface on the LPS grounded hardware structure.</p>
+
+        <p>Testing stations are available for proper go/no go testing of the approved grounding cable and wrist straps.</p>
+      </li>
+
+      <li>
+        Logistics - The effects of ESD on static sensitive Line Replaceable Units (LRU's) during transportation and storage is alleviated with the use of transparent electrostatic-shielding bags. This packaging scheme affords static protection against both external static fields and internal triboelectric charge.<br />
+        <br />
+
+        <p>All programmable read-only memories (PROM's) are transported and stored in static-shielding tubes or approved foam and shielding bags for distribution to installation in LPS hardware sets. These tubes protect against triboelectric charging and direct discharge yielding a dynamic response rating of less than 1 millisecond.</p>
+
+        <p>All integrated circuits (IC's) for temporary staging are placed (leads inserted) on crosslink, noncorrosive, high density, conductive foam. This foam ensures that all device leads are kept at the same potential, thereby protecting the device from ESD damage.</p>
+      </li>
+
+      <li>Other - inspection, testing and repairs of static sensitive electronic components or LRU'sare performed at approved ESD work stations. These work stations, designed to bleed off static charges, utilizes static dissipative table mats electrically connected to a static dissipative floor mat which is connected to ground thru a series resistor (1 Meg ohm +/-20%). The operator connects a wrist strap, to a single point ground, to make himself equal to the same potential as the components that are on the table, thus, prohibiting static discharge on conductive components.</li>
+    </ul>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u>Fundamentals of Electrostatics - To insure successful implementation of proper guarding against harmful effects of ESD, familiarity with the concepts of electrostatics and ESD is necessary. Here, the basic elements are briefly discussed. For more extensive discussion, refer to books listed in the references. The main basic elements of ESD are&amp;colon. electric charges, electric field, electrostatic potential, capacitance, charge generation and charge removal.</p>
+
+    <p>Electric Charges - Experiments have shown that when two dissimilar objects are brought into contact with each other and then separated, the two objects become charged. The classic example is the rubbing of a silk cloth on a glass rod where the charge is visually evident when the charged objects cause the hair on your arm to stand up or cause small bits of paper to be attracted to the charged objects. If two corks are charged by the glass rod, the corks will repel each other because of like charges. Conversely, if one cork is charged by the glass rod and the other is charged by the silk (opposite charges), the corks will attract each other. The charge on these objects is due to an excess or deficiency of electrons on their surfaces. These charges are referred to as static electricity. This is because they can remain stationary on an object for substantial long periods of time. It is to be noted that this sudden transfer of charge from one body to another (by oppositely charged
+    bodies being brought into close proximity) is called electrostatic discharge or the better known acronym "ESD". Lightning is a very high energy form of ESD. The interactions between electric charges are described by Coulomb's law: F=kq<sub><small>1</small></sub>q<sub><small>2</small></sub>/r. Where F is the magnitude of the force, k is the proportionally constant, q<sub><small>1</small></sub> &amp; q<sub><small>2</small></sub>are the charges on the object and r is the distance between them.</p>
+
+    <p>Electric Field - describes the influence of an isolated charge on other charges in its vicinity. This electric field is the direction and magnitude of the force exerted by the charge on a unit charge at any point in its environment. The field strength (E) of an object is force(F)/charge(q). A good example of electrostatic field is when a person generates a charge on a balloon and then holds it above his head to make his hair stand up. The balloon never touches the hair, but an electrostatic field has been created.</p>
+
+    <p>Electrostatic Potential - the amount of energy (work) per unit charge required to move a charge from one point to another in a field. The movement of the charge (q) along a distance (X) requires work (W). Thus the equation W=FX and, substituting the forementioned, W=qEX or W/q=EX . This work per unit charge is the potential difference expressed in volts. Thus the formula E=V/d, where E is the electric field intensity, V is the electric potential and d is the distance between the potential voltages. Ideally, we want to make sure that all charges remain at the same level or same potential so that no ESD (zap) occurs.</p>
+
+    <p>Capacitance - the ratio between the charge on two plates and the potential difference between them, or, C= Q/V. In the case of two parallel plates this capacitance C=eA/d where A is the area of the plates and d is the distance between the plates (potential voltages) and, e is the dielectric constant. Where typical capacitance (C) values for humans ranges from 50 to 500 picofarads (pf) and dielectric constants of 1 (air and insulators) to 10 (insulators). The energy stored in a capacitor is given by the expression E= 1/2CV<small><sup>2</sup></small> or 1/2Q<small><sup>2</sup></small>/C.</p>
+
+    <p>Charge Generation - charging that occurs as a result of contact and frictional motion is referred to as triboelectricity. To describe, whenever two materials (one must be an insulator) are brought together and then separated, there will be a flow of electrons from one material to the other. The material giving up the electrons becomes positively charged while the material accepting the electrons becomes negatively charged.</p>
+
+    <p>Charge Removal - dissipation of electrostatic potential with the use of soft grounding, static dissipative materials and air ionizers.</p>
+
+    <p>Listed below are some of the more common materials and their polarity (+ or -) in the triboelectric series.</p>
+
+    <table>
+      <tr>
+        <td>Asbestos</td>
+
+        <td>Acquires a more positive charge</td>
+      </tr>
+
+      <tr>
+        <td>Glass</td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Human Hair </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Nylon </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Wool </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Aluminum </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Paper </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polyurethane </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Cotton</td>
+
+        <td>Neutral reference point </td>
+      </tr>
+
+      <tr>
+        <td>Wood </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Steel </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Sealing Wax </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Hard Rubber </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mylar </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Epoxy Glass </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Nickel, Copper, Silver </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Brass, Stainless Steel </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Acrylic </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polystyrene Foam </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polyurethane Foam </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polyester </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polyethylene </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Polypropylene </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>PVC (vinyl)Teflon </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Silicone</td>
+
+        <td>Rubber Acquires a more negative charge</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <p>When the charged object is an insulator, the charge can last for extended periods of time. This is true because insulators are poor conductors of electricity. Conversely, when the charged object is a conductor, the charge will decay rather quickly. The factors affecting the magnitude of the rate of charge generation are:</p>
+
+    <ul>
+      <li>Relative position in the triboelectric series.</li>
+
+      <li>Intimacy of contact (proximity of the materials).</li>
+
+      <li>Coefficient of friction between materials.</li>
+
+      <li>Rate of separation.</li>
+    </ul>
+    <br />
+    <br />
+
+    <p>The factors affecting the magnitude of a rate of discharge (dissipation) are:</p>
+
+    <ul>
+      <li>Conductivity of the materials.</li>
+
+      <li>Relative humidity.</li>
+
+      <li>Moisture on the surfaces of the materials.</li>
+
+      <li>Rate of recombination.</li>
+    </ul>
+    <br />
+    <br />
+
+    <p>Some typical electrostatic potential (volts) generated for typical events with various levels of relative humidity (RH) are respectively:</p>
+
+    <table>
+      <tr>
+        <td>Walking across a carpet </td>
+
+        <td>35,000 volts @ 10% RH</td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+
+        <td>15,000 volts @ 40% RH </td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+
+        <td>7,500 volts @ 50% RH</td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>Walking across a vinyl floor </td>
+
+        <td>12,000 volts @ 10% RH </td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+
+        <td>5,000 volts @ 40% RH </td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+
+        <td>3,000 volts @ 50% RH</td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>Pulling tape quickly from its roll &nbsp;&nbsp;</td>
+
+        <td>10,000 volts @ 30% RH</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <p>ESD is not normally a concern when the relative humidity is greater than 50% RH because moisture in the air will act as a high resistance bleeder. This will then dissipate voltage potentials on the surface before they can build up to a level of approximately 350 volts and result in ESD. A few materials such as teflon, vinyl, etc. do not absorb moisture and therefore, will not bleed off readily even in environments above 50% RH and should be avoided where ESD is a concern. Environments below 50% RH require special attention for selection of and use of tapes, plastic films and electrostatic flooring material. Operations below 30% RH should be carefully assessed and avoided when possible. At levels below 30% RH, additional precautions shall be employed (e.g., air ionizers, humidifiers). Voltages, especially on large surfaces, should be dissipated using a high resistance resistor (1 Meg ohm +/- 20%) in series with the ground wire until the charge is eliminated before going directly
+    to ground.</p>
+
+    <p>Note: Surface resistivity changes exponentially with humidity changes. Therefore, relative humidity levels maintained between 40% and 60% are recommended.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Electrostatic Discharge Control Program for Protection of Electrical and Electronic Parts, Assemblies and Equipment, MIL-STD-1686B.</li>
+
+      <li>Electrostatic Discharge Control Handbook for Protection of Electrical and Electronic Parts, Assemblies and Equipment, MIL-HDBK-263A.</li>
+
+      <li>Requirements for Electrostatic Discharge Control, NHB 5300.4(3L)</li>
+
+      <li>ESD Program Management by G. Theodore Dangelmayer of AT&amp;T.</li>
+
+      <li>Investigation Analysis of the ESD Protection in the Facilities at the John F. Kennedy Space Center by Peter Stonefield, LSOC QE.</li>
+
+      <li>Passive Static Protection: Theory and Practice by George R. Berbeco.</li>
+
+      <li>KSC Ground Operations Safety Plan, GP-1098G.</li>
+
+      <li>SPC Standard Practice Instruction (SPI) QA-016(3)K entitled Receiving Inspection of Parts and Materials (SPC procured &amp; Government furnished).</li>
+
+      <li>SPC Standard Practice Instruction (SPI) LP-021(5)K entitled Electrostatic Discharge Prevention (to LPS).</li>
+
+      <li>SPC Standard Practice Instruction (SPI) LG-661(7)K entitled Preservation, Packaging, and Packing of Materials.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Voltage potentials on surfaces can result in uncontrolled electrostatic discharge (ESD). The results of ESD can cause ignition of solid propellants, explosives and flammable/combustible materials, cause damage to or inadvertent actuation of electronic devices/systems, and more familiar shock experienced by personnel. Shock to personnel could cause (depending on the magnitude of the charge and the health of the individual) involuntary muscle reaction which can result in injury or flight hardware/equipment damage.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Reducing the risk of Electrostatic Discharge (ESD) during Space Transportation Systems (STS) processing requires an understanding of the problems and proper reliability practices or controls for various conditions/situations. When conductive materials are present, proper bonding and grounding techniques are essential. When non-conductive materials (i.e., wood, paper, glass, plastics, etc.) are present, these materials must either be eliminated or properly selected or treated for the particular application and use. Another important factor in ESD control is the percent relative humidity (RH) which should be monitored and regulated/controlled, where feasible.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, Launch Processing at the kennedy Space Center.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0732: Electrostatic Discharge (ESD) Control In Flight Hardware</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0732: Electrostatic Discharge (ESD) Control In Flight Hardware</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0732 (Database ID: 732)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/732" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1249; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>This ESD Control Practice significantly enhances mission reliability by protecting susceptible flight and critical flight support electronic parts and related hardware from damage and/or degradation caused by ESD and Induction Polarization Charge (IPC) during the prelaunch phases of the mission.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>NHB 5300.4 (3L) "Requirements for Electrostatic Discharge Control " (Reference 1) specifies the NASA requirements for ESD avoidance and control. It describes basic considerations and requirements for ESD control programs including responsibilities of NASA Installations for invoking ESD control programs. GSFC Document No. P-303-840 "Electrostatic Control Program" (Reference 2) describes the ESD control program that has been established by GSFC for its spaceflight projects. The GSFC program incorporates the ESD requirements of Reference 1.</p>
+
+    <p>The Reference 1 and 2 documents as well as this practice do not include ESD control requirements and programs for electrically initiated explosive devices. Special requirements for the control of these devices exist at the various NASA centers.</p>
+
+    <p>This ESD Control Practice describes the procedures and controls whereby ESD sensitive components and devices are received, distributed, assembled, disassembled, handled, tested, repaired, and stored at GSFC. This practice applies to spacecraft, launch vehicles, mission peculiar equipment, mission-essential support equipment and elements thereof; when invoked contractually in procurements.</p>
+
+    <p>The Practice includes many elements with many details. This description of the Practice can only cover the highlights with limited details. Refer to Reference 2 for complete details and a list of references to ESD control documents. The following are the primary features and requirements of this Practice.</p>
+
+    <p><u>Quality Assurance Responsibilities for the ESD Program:</u></p>
+
+    <p>ESD trained and certified personnel are assigned to support each project and are responsible for the following items:</p>
+
+    <p>1). Follow established procedures to verify that all ESD requirements are complied with in applicable work areas.</p>
+
+    <p>2). Certify the adequacy of ESD-controlled areas and grounded work stations prior to their use.</p>
+
+    <p>3). Ensure the use of protective personnel clothing and proper personnel grounding at all locations where ESD sensitive components and devices are handled.</p>
+
+    <p>4). Ensure that all personnel with access to ESD controlled areas and who handle ESD sensitive components and devices have been trained and certified in accordance with Reference 2.</p>
+
+    <p>5). Perform audits to assure the integrity of ESD-controlled areas.</p>
+
+    <p>6). Verify that all documentation including drawings and work instructions contain ESD marking precautions and handling procedures as appropriate.</p>
+
+    <p>7). Verify proper ESD markings or labels on ESD dissipating or shielding boxes/carriers/bags containing ESD sensitive components and devices, printed circuit boards or flight ready hardware with ESD sensitive components and devices.</p>
+
+    <p>8). Ensure that purchase documentation includes ESD requirements as appropriate.</p>
+
+    <p>9). Ensure that all handling of ESD sensitive components and devices are performed in ESD controlled areas.</p>
+
+    <p>10). Prepare and maintain internal records of each certification and audit to ensure compliance with the ESD Control Program.</p>
+
+    <p>11). Provide internal reports to the project and to the AMO with results and recommendations from audits.</p>
+
+    <p>12). Ensure that corrective actions are initiated for all NASA deficiencies noted during audits and certifications.</p>
+
+    <p><u>Responsibility for ESD Work Sites and Spaces and for Workstations:</u></p>
+
+    <p>The organizations responsible for the facilities where work/test sites or spaces are assigned are responsible for the implementation of the ESD Programs in their facilities. The cognizant System/Subsystem Electrical Engineer is responsible for the initial setup of ESD approved work stations.</p>
+
+    <p><u>ESD Training of Personnel:</u></p>
+
+    <p>All personnel with access to ESD-controlled areas and those who handle ESD sensitive components and devices receive training from an approved NASA training Facility. Additionally, those with any management or quality assurance responsibilities for ESD sensitive components and devices also receive training. This includes project management personnel, engineering, test, and integration personnel, acquisition and quality assurance personnel, field engineers for installation and maintenance where appropriate, and production, material handling, and stockroom personnel as appropriate. Janitorial and facility maintenance personnel receive on-site training and/or facility/project procedures as needed. Each individual attends one of several specific courses appropriate for his/her job assignment. All certified personnel must have their certification card with them whenever they are performing tasks which require ESD control. Certification must be renewed every two years.</p>
+
+    <p><u>ESD Control Requirements:</u></p>
+
+    <p>A long list of ESD control requirements too long to include herein is imposed when ESD sensitive components and devices are handled. The following is an outline of these requirements. Refer to Reference 2 for complete details.</p>
+
+    <ul>
+      <li>Control of ESD-controlled areas including personnel access and relative humidity.</li>
+
+      <li>Control of ESD work surfaces and floors.</li>
+
+      <li>Receiving and shipment of ESD devices.</li>
+
+      <li>Equipment and materials used in the protection and handling of ESD devices.</li>
+
+      <li>Protective packaging materials.</li>
+    </ul>
+
+    <p><u>ESD Audits:</u></p>
+
+    <p>ESD-certified AMO personnel conduct audits of the facilities and the personal and work station equipment handling ESD devices in accordance with Reference No 2. These audits are scheduled in accordance with the schedule shown in Table 1.</p>
+
+    <center>
+      <table border="0" width="95%">
+        <tr valign="TOP">
+          <th>TABLE 1. ESD CERTIFICATION AND PERIODIC INSPECTION</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1" width="100%">
+              <tr valign="CENTER" align="CENTER">
+                <td><font face="arial,helvetica" size="+1">SUBJECT</td>
+
+                <td>INITIAL CERTIFICATION</td>
+
+                <td>CONTINUOUS</td>
+
+                <td>EACH WORK SHIFT</td>
+
+                <td>MONTHLY</td>
+
+                <td>SEMI-ANNUALLY</td>
+
+                <td>ANNUALLY</td>
+              </tr>
+
+              <tr>
+                <td>Work Surface Resistivity (Including ESD Dissipative Mats)</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Work Surface Grounding</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Work Surface Solvent Resistance</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+              </tr>
+
+              <tr>
+                <td>Work Surface Static Charge Dissipation</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Wrist Strap Release Force</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Wrist and/or Heel Strap Continuity</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Tool and Equipment Grounding</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Stool and Chair Grounding</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Facility Earth Ground</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>ESD Controlled Area Metal Frame EntryDoors</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Humidity (RH)</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Certification of Electrostatic Field Survey Meter</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Monitoring Static Levels</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Nuclear Air Ionizer Effectiveness</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Corona Discharge Air Ionizer Effectiveness</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>
+                  Check both Ionizers for:<br />
+                  
+
+                  <table border="0">
+                    <tr>
+                      <td>Ion Balance</td>
+                    </tr>
+
+                    <tr>
+                      <td>EMI Radiation</td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;<br />
+                X<br />
+                X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;<br />
+                X<br />
+                X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Soldering Iron Tip Grounding</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Cart, Wagon and Tram Grounding (When Used)</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+
+              <tr>
+                <td>Temperature Chambers</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+              </tr>
+
+              <tr>
+                <td>Personnel Garmets (Testing Physical Condition with an Eslectrostatic Field Survey Meter)</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">X</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+
+                <td align="CENTER"><font face="arial,helvetica" size="+1">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Part of the audit is monitoring the testing of the equipment and recording the test measurements and the electrostatic voltage readings of the ESD-controlled work stations and areas. Records are kept of all ESD audit data, corrective actions, written reports on corrective actions, and follow up ESD audits conducted after corrective actions have been completed. Formal reports are prepared from these records and include comments/observations on any ESD-control deficiencies and suggestions for preventing recurrence.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The generation of triboelectric and electrostatic charges are a common cause of damage and/or degradation to unprotected ESDS devices. A carefully devised and implemented ESD control program can provide protection from this damage and/or degradation.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>NHB 5300.4 (3L), Requirements for Electrostatic Discharge Control (Excluding Electrically Initiated Explosive Devices)</li>
+
+      <li>GSFC Document No. P-303-840, Electrostatic Discharge (ESD)Control Program</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not following this practice in the handling of ESDS devices can and most likely will result in damage to these devices. One common form of this damage is a deterioration-to-failure process which may not be detected by ground testing. The damaged device may result in early degradation in performance or in mission failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Apply an Electrostatic Discharge (ESD) Control Program to all spaceflight projects to ensure that ESD susceptible hardware is protected from damage due to ESD.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on all Flight Programs managed by the Goddard Space Flight Center (GSFC).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0815: Flight Loads Anaylysis as a Spacecraft Design Tool</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0815: Flight Loads Anaylysis as a Spacecraft Design Tool</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0815 (Database ID: 815)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/815" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1317, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Flight loads analysis, when used throughout the spacecraft development cycle, will 1) provide a mission specific set of loads, 2) provide a balanced structural design, 3) reduce conservatism inherent in bounding quasi-static design load calculations, 4) provide early problem definition, and 5) reduce surprises at the final verification loads cycle.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The accurate determination of structural loads during all phases of STS (Space Transportation System) and/or ELV (Expendable Launch Vehicle) flight environments is crucial to spacecraft development. The procedure to calculate these loads involves 1) creation of an accurate spacecraft loads model and its corresponding validation by test, and 2) using this model in conjunction with vehicle/spacecraft coupled flight forcing functions during the development process. The model is linear and cannot be accurate unless the structure it represents is essentially linear.</p>
+
+    <p>Finite Element Model Creation:</p>
+
+    <p>The development of an accurate finite element model (FEM) is crucial to the successful structural design of a spacecraft. It can be used to predict nodal and relative accelerations, member loads and stresses, critical displacements, mechanically transmitted random loads, and thermal distortion loads. In addition, it can be used to perform weight saving studies, deployment studies, static test loads calculations, and control and stability studies.</p>
+
+    <p>The creation of a FEM should begin early in the design phase of a spacecraft. Even a simple model made from sketches can be useful for preliminary predictions of mass properties, frequency calculations, and primary structure design. As the design matures, more details become available (i.e., mass properties, materials, section properties). At this point, it is essential to understand the analyses for which the model is intended, since this determines the complexity required and the assumptions made in modeling. With the recent advent of very high speed computers (Work-stations, RISC machines, etc.) which are available to today's engineers, the temptation is to create large models which in effect when displayed, look almost like a photograph of the structure. This is often not necessary or efficient, and many times incorrect, especially in the interpretation of results. The engineer should have a clear understanding of the structural load paths, including knowledge about how the
+    actual structure will behave under static and dynamic loading. This is the only way he/she will be capable to later interpret transient events in the structure.</p>
+
+    <p>Finite Element Model Checks</p>
+
+    <p>Model validity must be validated both mathematically and structurally. Throughout the design cycle some of the checks will directly indicate modeling problems, many requiring engineering insight and judgment to assess model validity. The following checks should be performed:</p>
+
+    <ol>
+      <li>Line-by-line check of input data to ensure input accuracy.</li>
+
+      <li>Static run with fixed boundary conditions and 1G loads applied separately in each primary structural direction, reviewing resultant displacements, forces and stresses for reasonableness, and symmetry (if possible), etc.</li>
+
+      <li>Fixed base modal run to calculate resultant structural shapes and frequency modes. Results should be consistent with the structural design. Hand calculations should be made to verify simple characteristics such as panel modes. Modal effective weights and participation factors should be tabulated and studied along with animated mode shape displays to gain insight and ensure consistency with design expectations. Modal strain and kinetic energy calculations also yield insight into structural characteristics. The sum of the effective weights for the modes considered should account for almost the total weight in each direction.</li>
+
+      <li>Free-free modal run to calculate rigid body modes. These modes should be two orders of magnitude less than the first flexible modes, generally less than .001 Hz, to ensure that there is no inadvertent grounding of the structure. Equilibrium checks of the model are calculated by multiplying the free-free stiffness matrix by geometrically derived rigid body modes. Nodes at which the structure is grounded should be displayed in a tabular form.</li>
+
+      <li>For those models which will be used to predict thermally induced loads and deflections, a thermal equilibrium check is performed in which a bulk temperature change is imposed in a kinematically constrained model which has all thermal expansion coefficients changed to a single value. Negligible element forces should be generated for this case. All rigid elements must be replaced with stiff elastic elements to facilitate proper temperature calculations.</li>
+
+      <li>Plot element rotations to assure conformity (if applicable). Also generate a boundary plot to verify proper element locations. It is also strongly recommended that extensive verification using a preprocessor with graphic output be used to verify proper load orientation, model construction, etc.</li>
+
+      <li>Inspection of all FEM software message and warnings which might indicate among other things, improperly shaped elements, ill-conditioning, mechanisms, massless degrees of freedom, and so forth. Mass properties should be compared to current spacecraft weight statements. Comments relative to automatically imposed restraints, in particular, must be verified to be appropriate.</li>
+
+      <li>Dynamic models reduced by the Guyan reduction technique to facilitate manageable normal modes calculations should be checked with a full-size matrix eigenvalue extraction technique such as Lanczos to assess the validity of the Guyan reduced eigenvalues and mode shapes. An improperly chosen Guyan reduction set may miss modes and result in frequency error.</li>
+    </ol>
+
+    <p>Model Validation:</p>
+
+    <p>The finite element model is verified via a series of mechanical tests. Instrumentation data acquired during these tests are then compared to the FEM predicted behavior in order to assess the accuracy of the model. Subsequent adjustments are typically made to improve the model correlation to the test data before the model is considered test verified.</p>
+
+    <p>The static and dynamic response results and the corresponding strength assessment of the structure are solely dependent on the accuracy of the FEM used to calculate these responses. A model uncertainty factor (MUF) is applied to early loads results when coupled loads analysis is used for structural design. The magnitude of this factor may be reduced to 1.0 as confidence in the model is increased through the verification program.</p>
+
+    <p>Mass Properties Verification:</p>
+
+    <p>The initial step in the model correlation should be the measurement and correlation of the rigid body mass properties. At the very least, this should include the structural weight. The center of gravity location and rotary inertia values should also be verified to the greatest extent practicable. In specific instances, where the structure has an axis of symmetry or a simple geometry it may be permissible to rely on analytical values at the discretion of the project management.</p>
+
+    <p>Typically, the mass property adjustments are made by accounting for non-structural mass items such as harnessing, thermal blanketing, or attachment hardware. This adjustment can be included in the model via the use of the non-structural mass parameter on the element property designation or by distributing concentrated mass elements in the region associated with these items.</p>
+
+    <p>The mass property adjustments will affect both the static and the dynamic characteristics of the structural model making it essential to perform this correlation first. Accurate representation of the mass properties will have the greatest influence on the rigid body component of response which can be the dominant contributor to the total response. Further, for small components or very stiff structures which can be considered rigid bodies, the mass properties correlation is the only verification necessary.</p>
+
+    <p>Structural Dynamic Verification</p>
+
+    <p>The modal survey test is the primary test for verifying the ability of the FEM to represent the dynamic behavior of the structure. The goal of this test is to measure the significant natural modes of the structure within a frequency range defined by the frequency content of the loading environment as transmitted by the launch vehicle. If no modes are predicted within this frequency range, a limited modal survey or shaker based sine sweep test should still be performed in order to verify that no modes exist.</p>
+
+    <p>A pre-test analysis should be conducted in order to predict the natural frequencies and mode shapes and to determine appropriate locations for accelerometers. To assess the choice of a set of potential accelerometer locations, a Guyan reduction, consisting only of the instrumentation locations, should be performed and mode shapes and frequencies calculated. These results should then be compared to the previously calculated modal quantities, for the full model, to assess the adequacy of the test instrumentation set.</p>
+
+    <p>The principal method of quantifying the similarity of mode shapes is the cross orthogonality matrix. This method of comparison should be used to make the previously discussed assessment of instrumentation and finally used to evaluate the correlation to the measured test data. If the model correlation is perfect, this matrix should be equal to the identity matrix. The correlation is considered adequate when the diagonal and off-diagonal elements of the matrix are within specified values.</p>
+
+    <p>Once the mass properties are verified, adjustments to the FEM for modal correlation are usually made by the introduction or removal of local flexibilities which may have been based on poor assumptions. These errors can be detected through visual comparison of the test and analysis mode shapes as well as a combination of strain energy or modal effective weight analysis. Spring elements are often included to represent local flexibilities at joints which have originally been assumed rigid. Conversely, rigid elements may be used in instances where electronic boxes or other equipment appear to stiffen an area in which no stiffness contribution was originally assumed. The correct values for these local changes are typically found by iteration and determination of the cross orthogonality matrix. The changes should be demonstrated to be realistic by local detail analysis and not just chosen to match the sparse test values. Automated methods based on sensitivity and optimization
+    techniques are useful to identify areas of likely error. Within this context, all changes should reflect physical reality.</p>
+
+    <p>Static Verification:</p>
+
+    <p>Although the purpose of the static test is to demonstrate the strength of the structure, it may also be used as a secondary model verification test. This is usually not possible if the strength test is performed via the sine burst method, but may be appropriate if actual static pulls are used.</p>
+
+    <p>A pre-test analysis is always performed in order to determine the appropriate test levels and therefore member loads and stress predictions should be available. The actual member loads as experienced in the test are then acquired through strain gage measurements. The locations of this instrumentation should be chosen in order to characterize the primary load paths and are necessary to prove that the qualification levels were attained.</p>
+
+    <p>Assuming that the measured levels are not in accordance with pre-test predictions, adjustments to the FEM for correlation to the static test data may be applied in a similar manner as discussed pertaining to the modal survey test. It should be recognized that the need for implementation of a significant model change indicated by the static test data could result in an invalidation of the modal test correlation. This situation rarely occurs because the modal test should adequately exercise the structure and the static test correlation should only indicate minor adjustments. Both the modal and static correlation must be based on the model after all changes are made.</p>
+
+    <p>Coupled Models:</p>
+
+    <p>The NASA centers have the luxury of having available for themselves and their contractors use, a library of government and commercial launch vehicle FEMs with the appropriate forcing functions to simulate liftoff, staging, on-orbit and in the case of STS, landing events. These models and their forcing functions, when used in conjunction with the spacecraft model, can be used to determine all spacecraft transient responses. This leads to the most accurate prediction of spacecraft loads possible. In addition, time-phased responses can be used to reduce the conservatism resulting from the application of simultaneous bounding quasi-static design loads.</p>
+
+    <p>The creation of system level models for coupled loads analysis almost always requires the techniques of modal synthesis. This is due to both the size and complexity of the individual instrument, spacecraft, and launch, landing or stage models. Modal synthesis involves 1) reduction of the individual models to manageable and yet dynamically accurate sizes, and 2) coupling of these reduced models to form the overall system level model, ready for forced response calculations. Modal synthesis requires matrix manipulations and transformations, eigenvalue analysis, and extensive bookkeeping to track the structural parameters through the transformations. Typically, a Craig-Bampton modal model of the spacecraft is made which has as its major characteristics, the physical boundary points and cantilever modes defining the vehicle flexibility with respect to that fixed boundary. This form of characterizing the payload not only greatly reduces the model size, but also permits the analyst to
+    check the mass properties, displacements, and accelerations as a rigid body. All parameters of the vehicle are available for later data recovery via the creation of LTMs (Loads Transformation Matrices) in which structural variables are defined with respect to unit boundary and modal acceleration applications. Note that the formulation of the vehicle model may actually require a series of Craig-Bampton reductions for large instruments, antennas, solar arrays, etc. Careful bookkeeping and many checks -- rigid body, 1-G, equilibrium, effective modal weights, mass properties -- are required at each step to ensure accuracy. If rigid body motions are imposed on the physical degrees of freedom of the models there should be zero resulting forces. Adjustments should be made until this requirement is met.</p>
+
+    <p>The STS or ELV models are delivered in many different formats, but all currently have the attachment portion of the model defined in physical coordinates, which allows for the direct coupling using matrix techniques (i.e., constraint equations , elastic, or rigid elements, direct matrix addition). Any of the current model deliveries, including discrete mass and stiffness matrices, Craig-Bampton models, or residual stiffness models, can be easily handled with these techniques.</p>
+
+    <p>The coupling procedure should be checked by independent analysis. This is usually done at a NASA center and is initiated by a loads working group consisting of members representing the payload and launch vehicle (including upper stage) contractors.</p>
+
+    <p>Loads Analysis:</p>
+
+    <p>The coupled system level model is run through an eigenvalue analysis routine (i.e., Givens, Modified Givens, generalized dynamic reduction, Lanczos) to calculate uncoupled modes and frequencies. These uncoupled modes and frequencies form the basis for the second order differential equations which are integrated to calculate the forced response due to the application of the forcing functions which are delivered with the launch, landing or stage models. In the case of STS, modal damping is incorporated at this point. System level time response accelerations and displacements are transformed back to local vehicle level modal response via the system level mode shapes. A few non-linear degrees of freedom such as for trunnion friction can be incorporated at this level.</p>
+
+    <p>LTMs and Data Recovery:</p>
+
+    <p>The methodology used to recover specific data on the vehicle model involves the use of LTMs. LTMs are simply linear transformations which yield physical quantities from modal responses. During the Craig-Bampton model formulation, LTMs are set up at the vehicle coordinate level in which all vehicle parameters including accelerations, displacements, member forces and stresses, and relative displacements are defined with respect to individually applied boundary and modal accelerations. Then, at the system level, the system level mode shapes are used to transform the generalized displacements and accelerations back to the local modal level. The multiplication of these local modal time responses by the LTMs will yield the desired vehicle physical responses.</p>
+
+    <p>Data recovery is the all important phase of the coupled loads analysis. The engineer must view responses, study min/max loads, investigate frequency content, etc. until fully convinced that the transient calculations have been accurately carried out. Outputs should include min/max tables, time response plots, shock spectra plots, finite element plots, animated mode shape plots, timed phased stress calculations, etc. All of these facilitate accuracy studies and final report quality for the end user.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>STS and ELV models are available to NASA centers and their subcontractors. Coupled flight loads analyses using these models with their intended spacecraft complement can be performed in a timely manner and at a reasonable cost. Thus, throughout the development cycle of a spacecraft, from conceptual design to final verification loads analysis, flight loads analyses can be used as a design tool. This process yields a high degree of confidence in spacecraft structural integrity, and the spacecraft models' use in weight reduction studies, control and stability studies, thermal distortion loads calculations, deployment studies, and calculation of random loads, etc.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>1. Shimizu, M. W., Dattilo, D. O., and Kosick, L. J., "STS Dynamic Math Models (M6.OZA) for Payloads Analysis", Rockwell International, STS81l-064F, July 1988</li>
+
+      <li>Shimizu, M. W., and Sullivan, A. J., "Landing Forcing Function 7000 Series Data Base", Rockwell International, STS86-0020A, February 1988</li>
+
+      <li>Haugen, E. A., "Liftoff Forcing Functions (LR2000 Series) for Payload Loads analysis", Rockwell International, STS89-0609, April 1988</li>
+
+      <li>Frederick, D. H., "National Space Transportation System Models and Loads Analysis Configuration Management/Control", Rockwell International, SD77-SH-0214C, December 1989</li>
+
+      <li>"Proceedings of the Shuttle Payload Dynamic Environments and Loads Prediction Workshop", JPL D-1347, January 24-26,1984</li>
+
+      <li>"General Environmental Verification Specification for STS and ELV Payloads, Subsystems, and Components," GSFC, GEVS-SE, January 1990</li>
+
+      <li>Sinusoidal Vibration, Reliability Preferred Practice PT-TE-1406.</li>
+
+      <li>Assembly Acoustic Tests, Reliability Preferred Practice PT-TE-1407.</li>
+
+      <li>Random Vibration Testing, Reliability Preferred Practice PT-TE-1413.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The non-use of coupled vehicle/spacecraft calculations can lead to a poorly designed structure, that is, substantially above minimum weight, but not necessarily above dynamic stiffness requirements. Structural and operational reliability of the mission will have been undermined. Unless alternative methods which bound loads have been used, predicted responses, stresses and deformations will be inaccurate.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The determination of accurate spacecraft loads via coupled flight loads analysis is used throughout the entire spacecraft development cycle, from conceptual design to final verification loads calculations.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Hubble Space Telescope, Gamma Ray Observatory, Superfluid Helium On-Orbit Transfer and Get Away Special (GAS) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

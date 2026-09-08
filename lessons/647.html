@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0647: Solar Flare Proton and Heavy Ion Modeling for Single Event Effects</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0647: Solar Flare Proton and Heavy Ion Modeling for Single Event Effects</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0647 (Database ID: 647)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/647" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-EC-1105 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Shielding thickness can be realistically assessed by considering the cumulative probability of component failure due to radiation of solar particles.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>JPL computer codes (ref. 2 &amp; 3), simulate the transport of ion fluxes determined from the particle models through specified shielding thicknesses of aluminum to obtain resultant spectra. These spectra are used to calculate device single event effect rates when applied to the laboratory measured cross sections. For low linear energy transfer (LET) threshold devices, proton upset cross sections vs. energy are used to determine upset rates from the proton energy spectra. For higher LET threshold devices the measured upset cross section vs. LET is used with the Heinrich flux for heavy ions to determine single event effect rates.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Penetrating ions create ionization tracks in silicon components. The heavier ions produce denser ionization tracks. Disposition of the created charge, which depends on the electric field configuration within the device, can lead to the following effects:</p>
+
+    <ol>
+      <li>Recombination without single event effects,</li>
+
+      <li>Single event upsets,</li>
+
+      <li>Device latch up, and</li>
+
+      <li>Spurious signals.</li>
+    </ol>
+
+    <p>Measurements of proton solar event fluences and alpha particle solar event fluences have been obtained for many solar flares. Organizing these data in a statistical manner according to cumulative probability of occurrence for a specified particle event fluence level constitutes the proton and alpha particle models.</p>
+
+    <p>Solar flare heavy ion data are more difficult to obtain because the lower flux levels and the need for mass discrimination requires more sophisticated instrumentation. The paucity of available data creates the need for a heavy ion model based on solar abundance's. A solar heavy ion model (ref. 4) has been constructed based on the work of Breneman and Stone (ref. 5) who analyzed heavy ion data from 10 solar flares between 1977 and 1982.</p>
+
+    <p>It has been assumed that the average alpha fluence is predictable from the heavy ion model relative to the other ion species. However, the proton fluence is not predictable from the heavy ion model. The heavy ions are normalized to the alpha particle probability of occurrence fluence levels by requiring that the integrated alpha fluence level from the heavy ion model match the fluence level from the measured alpha statistical distribution model. Complete ion flux spectra are specified in this manner. These spectra can be introduced into transport software to determine shielding requirements and software to determine single event effect rates.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Environmental Factors, Practice No. PD-EC-1101</li>
+    </ol>
+
+    <p>References:</p>
+
+    <ol>
+      <li>SSP 30425 (SSP Natural Environment Definition), Chapter 6.</li>
+
+      <li>Feynman, J., Spitale, G., Wang, J., Interplanetary Proton Fluence Model: JPL 1991, Jet Propulsion Laboratory IOM 5217-92-23, February 6, 1992.</li>
+
+      <li>Spitale, G., Feynman, J., Wang, J., Solar Alpha Particle Model: Progress and Problems, Jet Propulsion Laboratory IOM 5217-92-60, March 5, 1992.</li>
+
+      <li>Croley, D.R., Solar Flare Heavy Ion Model, IEEE Transactions on Nuclear Science, June 22, 1992.</li>
+
+      <li>Breneman, H., Stone, E. (1985). Solar and Photospheric Abundance from Solar Energetic Particle Measurements, Astrophysical Journal, 299, L57-L61.</li>
+
+      <li>Adams, et. al., (1981). Cosmic Ray Effects on Microelectronics, Part I: The Near-Earth Particle Environment. NRL Memorandum Report 4506, Naval Research Laboratory, Washington, D.C.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    Non-use of the updated JPL solar flare proton and heavy ion models could force designers to over-design, based on the predictions from the Adams worst case model (ref. 6) which predicts unrealistically high single event effects.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Operational spacecraft can experience adverse effects from impinging high energy radiation. A single event upset (SEU) occurs when a single particle, usually a heavy ion or proton, deposits enough charge at a sensitive node in a microcircuit to cause that circuit to change state. In general, these effects are temporary and appear as "soft failures" such as anomalous bit flips or spurious commands. In extreme cases, latch-up can occur and result in the destructive failure of the part.</p>
+
+    <p>The practice is to formulate an energetic particle environment model for calculating single event effect rates by utilizing the JPL statistical models for solar proton, alpha particle and heavy ion fluence. This predicted rate, which is a function of cumulative probability, is a useful measure when specifying shielding thickness to protect susceptible components, employing mitigating software, or both to reduce the risk to an acceptable level. Note that this assessment does not consider concentration of particle radiation due to the Earth's magnetic field, (ref. 1), and factors which are not influenced by shielding thickness, such as GCR (Galactic Cosmic Rays).</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br />
+    <br />
+    Cassini, Multi-Angle Imaging Spectroradiometer (MISR), Atmospheric Infrared Sounder (AIRS), NASA SEP Technology Application Readiness (NSTAR), Hermes, Advanced Composition Explorer (ACE), Mars Missions.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

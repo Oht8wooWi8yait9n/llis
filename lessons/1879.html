@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1879: Guidance for NASA Selection &amp; Application of DC-DC Converters</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1879: Guidance for NASA Selection &amp; Application of DC-DC Converters</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1879 (Database ID: 1879)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-07-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Integration and Testing,  Manufacturing and Assembly,  Missions and Systems Requirements Definition,  Program Management,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Flight Equipment,  Hardware,  Industrial Operations,  Payloads,  Risk Management / Assessment,  Spacecraft,  Power,  Spacecraft and Spacecraft Instruments,  Review boards,  Acquisition / procurement strategy and planning,  Early requirements and standards definition,  Product Assurance,  Quality,  Reliability,  Review systems and boards,  Engineering design and project processes and standards,  Long term sustainability and maintenance planning,  Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1879" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Electronic, switch-mode, DC-to-DC (DC-DC) converters convert one direct current (DC) voltage level to another by storing the input energy temporarily and then releasing that energy to the device's output at a different voltage. Over the past 20 years, there have been few NASA flight projects that have not experienced problems or failures with these complex assemblies (Figures 1 and 2). Although there have been a few suspected in-flight failures (e.g., Gravity Recovery and Climate Experiment (GRACE), International Space Station, Hubble Space Telescope), most problems and failures have occurred during subsystem and system development and test (Reference (1)).<br> &nbsp;</p> 
+<p><img alt="Figure 1 is a collection of three color photos showing top, side, and bottom views of a DC-DC converter. The device appears as a rectangular sealed metallic package with labeling on the top and markings that may be lot numbers on the bottom and side. The bottom exhibits two rows of 5 pins each." border="0" height="235" src="https://llis.nasa.gov/llis_lib/images/1020122main_NEN1879_Fig_1.jpg" title="Figure 1 is a collection of three color photos showing top, side, and bottom views of a DC-DC converter. The device appears as a rectangular sealed metallic package with labeling on the top and markings that may be lot numbers on the bottom and side. The bottom exhibits two rows of 5 pins each." width="250"><br> Figure 1. Front, back, and side views of a typical DC-DC converter</p> 
+<p><img alt="Figure 2 is a set of two color photos of the inside of unsealed DC-DC converters. They appear to be rather complex, densely populated circuit boards." border="0" height="288" src="https://llis.nasa.gov/llis_lib/images/1020123main_NEN1879_Fig_2.jpg" title="Figure 2 is a set of two color photos of the inside of unsealed DC-DC converters. They appear to be rather complex, densely populated circuit boards." width="250"><br> Figure 2. Internal views of typical DC-DC converters</p> &nbsp; 
+<p>DC-DC converters are hybrid devices that are difficult to characterize, and most anomalies have been attributed to part misapplication. The primary source of device specifications for the subsystem designer is the manufacturer's product data sheet, but this source does not typically list all the needed information. In addition, many spacecraft applications place the device under a low load, an application that is not usually reflected in the product data sheet specs. If the subsystem application differs from the device's optimal electrical parameters, the DC-DC converter tends to suffer a very sharp decline in performance. This makes even a carefully selected DC-DC converter vulnerable to design changes over the course of flight system development, and because spacecraft power converters often arrive late in the development of a flight system the selected power converter may no longer be suitable.<br> <br> DC-DC converters also pose quality and reliability challenges. Several spaceflight projects have experienced failures during Destructive Physical Analysis (DPA), radiation test, or life test (e.g., Jason, Space Infrared Telescope Facility, Mars Exploration Rover, Materials Science Research Rack), or due to poor device workmanship (Figure 3) or vulnerability to bench test or environmental test environments (i.e., Cloudsat, Active Cavity Radiometer Irradiance Monitor, Hubble Space Telescope). Even for spaceflight-rated (Class K) devices, many of the provisions in the military specification for hybrids (MIL-PRF-38534, Reference (2)) are inadequate to achieve flight system reliability. Because spaceflight requirements are more stringent than those for typical military applications, MIL-PRF-38534 requirements are inadequate for NASA applications in such areas as capacitor test, hybrid electrical derating and Worst Case Analysis, and low radiation dose rate and single-event effects limits. Additionally, the document does not require requalification of the device after some types of design changes. Sometimes designers have tried to save costs by using the cheaper Class H or lower class devices instead of Class K, only to later incur Integration &amp; Test costs far outstripping the initial savings.<br> <br> <img alt="Figure 3 is a color photo of a circuit board that provides a close-up view of several discrete piece parts. Their configuration relative to one another appears sloppily arranged, to the point where they look like heaped candies of different shapes that were subjected to heat and partial melting. The top component looks like a lifesaver candy with loops of wire wound around the torus, canted at an angle over several parts, and partially covered by a semitransparent coating that appears sloppily applied." border="0" height="193" src="https://llis.nasa.gov/llis_lib/images/1020124main_NEN1879_Fig_3.jpg" title="Figure 3 is a color photo of a circuit board that provides a close-up view of several discrete piece parts. Their configuration relative to one another appears sloppily arranged, to the point where they look like heaped candies of different shapes that were subjected to heat and partial melting. The top component looks like a lifesaver candy with loops of wire wound around the torus, canted at an angle over several parts, and partially covered by a semitransparent coating that appears sloppily applied." width="250"><br> Figure 3. Optical photograph of the generally poor workmanship for this device.</p> 
+<p>Recognizing that DC-DC converters may rank as the most troublesome recurring NASA design problem after Field Programmable Gate Arrays (FPGAs), the NASA Engineering Safety Center (NESC) initiated a study to provide guidance to NASA users of DC-DC converters. Electrical testing was conducted to derive test methods that would reduce the risks of device application in NASA spaceflight systems-- both crewed and robotic. A NASA guidance document was prepared to assist flight projects with selection, purchase, and testing of these devices, and it documents lessons learned from device use. Four NASA Centers (GSFC, JPL, MSFC, and JSC) participated in this study, and the draft document (Reference (3)) is already in use by JPL spaceflight projects.<br> <br> <b>References: </b></p> 
+<ol> 
+ <li>R. Lloyd Keith, Linda Facto, Shavesha Rutledge, <q>NESC Task Summary: Guidance for Off-the-Shelf DC/DC Converter Users,</q> April 7, 2008.</li> 
+ <li>MIL-PRF-38534, <q>General Specification for Hybrid Microcircuits, Rev. F,</q> April 12, 2006.</li> 
+ <li><q>NASA Guidelines for the Selection &amp; Application of DC-DC Converters,</q> May 1, 2008.</li> 
+ <li><q>DC-DC Converter Applications,</q> NEN #0603, NASA Lesson Learned Information System, October 28, 1998.</li> 
+</ol> 
+<p>&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Numerous NASA projects have suffered severe cost and schedule impacts due to problems with hybrid DC-DC converter application, quality, and reliability. Common in NASA spaceflight hardware, these devices are:</p> 
+<ol> 
+ <li>Complex assemblies-- not just piece parts-- that require a multi-disciplinary support team (i.e., design engineering, electronic parts engineering, quality assurance engineering, and reliability engineering) for successful application to flight systems.<br />  </li> 
+ <li>Long lead-time procurements: system requirements changes can result in a project selecting a power converter ill suited to the application.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Reference (3) provides detailed guidelines for the selection and application of DC-DC converters. The most significant recommendations provided by Reference (1) include:<br /> <br /> <u>Device Application and Test</u></p> 
+<ol> 
+ <li>Contact the vendor technical representative to discuss questionable applications, recognizing that the product data sheets do not typically list all the available information about DC-DC converters.<br />  </li> 
+ <li>Recognize that commercial off-the shelf (COTS) converters are less stable at very light (< 20%) loads. Projects that vet the more highly loaded applications should not assume that lightly loaded applications will have no issues.<br />  </li> 
+ <li>COTS hybrid EMI filters have undamped resonances and require additional external parts to ensure the stability of the filter-converter combination. Projects must analyze the overall circuit and add parts (e.g., L-R and/or R-C networks) to damp filter resonances and guarantee stability of the filter-converter combination over the applications range of input voltage, output load, and temperature.<br />  </li> 
+ <li>Although the synchronization function is often needed for JPL missions to control noise, it should be used only when absolutely necessary. The external synchronization function is very sensitive to synch signal amplitude, frequency, rise/fall time, and circuit grounding. Misapplication results in increased noise or oscillation at the converter output.<br />  </li> 
+ <li>Characterize DC-DC converters under flight-like input voltage ramp conditions. A typical flight application may not provide a sufficient input voltage ramp rate to mitigate the input voltage and current spike or to turn on the device without oscillation.<br />  </li> 
+ <li>Additional DC-DC converter testing recommendations were provided in a 1998 lesson learned (Reference (4)).</li> 
+</ol> 
+<p><u>Device Reliability</u></p> 
+<ol start="7"> 
+ <li>Perform Parts Stress Analysis (PSA) on the internal device circuit; avoid simply derating the device as a quotblack box.quot<br />  </li> 
+ <li>Perform Worst Case Analysis (WCA) on DC-DC converters, analyzing not only the total radiation dose but also the enhanced low dose rate and displacement damage effects.<br />  </li> 
+ <li>Review changes to the design or to vendor processes that occur after the device is flight qualified, and request an updated analysis or requalification if needed.<br />  </li> 
+ <li>Verify product data sheet claims regarding device radiation hardness by analysis or test.</li> 
+</ol> 
+<p><u>Device Quality</u></p> 
+<ol start="11"> 
+ <li>Assure that a customer precap visual inspection is performed by a properly trained device inspector as these frequently identify defects requiring rework.<br />  </li> 
+ <li>Perform customer DPA on all non-Class K device lots because some defects occur after device lid sealing and screening.</li> 
+</ol> 
+<p><u>Device Procurement</u></p> 
+<ol start="13"> 
+ <li>Selection of a device vendor on the Qualified Manufacturers List is strongly recommended to achieve device quality<br />  </li> 
+ <li>Because MIL-PRF-38534 has deficiencies even for Class K devices, employ a statement of work (SOW) or source control drawing (SCD) to add customer precap visual inspection, capacitor and Schottky diode screening, and periodic MIL-PRF-38534 Group C (especially life test) testing.<br />  </li> 
+ <li>Plan for converter procurement as long lead time (i.e., greater than 6-month) items because the desired converter will not typically be available from vendor inventory.<br />  </li> 
+ <li>Seek to procure high quality devices. The total cost of lower quality, including upscreening and the cost and schedule impact of lot failures on the project, may greatly exceed the initial cost of the higher quality devices.<br />  </li> 
+ <li>It is vital that the project plan and budget for a monitoring team representing the design engineering, electronic parts engineering, quality assurance engineering, and reliability engineering functions throughout the procurement cycle to resolve issues related to device application or lot failures.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.5.4 (<q>Safety and Mission Assurance Practices: Electronic Parts Reliability, Application, and Acquisition</q>) in the Jet Propulsion Laboratory standard <q>Flight Project Practices, Rev. 6,</q> JPL DocID 58032, March 6, 2006.<br /> <br /> In addition, JPL has referenced it supporting Paragraph 4.12.4.1 (<q>Flight Electronics Hardware System Design: Analog Design Power Converter Synchronization</q>) in the JPL standard <q>Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),</q> JPL Document D-17868, Rev. 3, December 11, 2006.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

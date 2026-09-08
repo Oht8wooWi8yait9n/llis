@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0784: Powered-On Vibration</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0784: Powered-On Vibration</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0784 (Database ID: 784)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/784" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1405, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Aids in the detection of intermittent or incipient failures in electronic circuitry not otherwise found. This reliability practice benefits even those electronics not powered during launch.</p>
+
+    <p>Apply service power to electronics assemblies. Monitor as many circuits as possible for intermittent behavior or change in voltage/current level. Record for later analysis the most critical electrical functions. Employ instrumentation such as a storage logic analyzer to monitor relay contacts, especially during pyroshock testing.</p>
+
+    <p>The NASA and industry practice of powering electronic assemblies during dynamics testing has proven to be effective in uncovering otherwise undetected "soft" failures. Studies by the Institute of Environmental Sciences, the U.S. military, Tustin Technological Institute, Hobbes Engineering, and others have all arrived at the same general conclusion: power-on vibration is a valuable tool for exposing latent defects in electronic hardware with the eventual resultant improvement in product quality.</p>
+
+    <p>Intermittencies in electronic circuitry can often be detected during vibration but may not be observed under ambient functional testing. These intermittencies may not reappear until after launch, where they sometimes degenerate into hard failures.</p>
+
+    <p>Examples of these intermittencies include:</p>
+
+    <ul>
+      <li>Component shorts due to internal conductive particles,</li>
+
+      <li>Loose or contaminated connectors,</li>
+
+      <li>Fractured component-to-board solder joints,</li>
+
+      <li>Electrical arcing,</li>
+
+      <li>Data number changes in digital equipment, and</li>
+
+      <li>Relay transfer or chatter.</li>
+    </ul>
+
+    <p>Powering of electronic equipment during vibration allows for detection of failures or intermittent conditions when they occur. This can be extremely useful in diagnosing the problem and formulating corrective action. In vibration, it is advantageous to know in what environment, level, axis, and time the anomaly occurred. Also, this procedure allows a test to be discontinued at the time the anomaly occurs to avoid the potential for further damage.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>A failure to conduct powered-on vibration test may increase the risk of flight equipment containing flaws or intermittencies, such as electrical arcing, open circuits, and relay chatter, that may cause mission compromises or hardware failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Supply power to electronic assemblies during vibration, acoustics, and pyroshock and monitor the electrical functions continuously while the excitation is applied.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Mariner series, Viking, Voyager, Magellan and Galileo programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

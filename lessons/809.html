@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0809: Heat Sinks for Parts Operated in Vacuum</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0809: Heat Sinks for Parts Operated in Vacuum</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0809 (Database ID: 809)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-27</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/809" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1411 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Controlling the operating temperature of parts in a vacuum flight environment will lower the failure rate, improve reliability and extend the life of the parts.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Thermal design is used to control the temperatures of the parts in equipment so that they will not exceed specific maximum safe temperatures and to minimize the parts temperature variations under all environmental conditions in which the equipment will operate. The maximum safe temperatures must be calculated based on a parts stress analysis and must be consistent with the required equipment reliability.</p> 
+<p>It is usually necessary to maximize the heat transferred by only a single mode in order to obtain adequately low thermal resistances within equipment. Even though a complete cooling system may include three modes of heat transfer, each particular heat path will usually emphasize a single mode. Where a single mode dominates, other modes can often be ignored. For example, with conduction as the predominant mode for parts operated in a vacuum, the conductive thermal resistance can be made low by the use of thermal shunts. The heat transferred by radiation and convection is almost negligible. That is, in the electro-thermal analogue, the shunt thermal resistances due to radiation and convection are so large that they are insignificant for design purposes. Figure 1 shows an electrical analog of a thermal system of a typical part.</p> Figure 1: Equivalent Thermal Circuit of a Part 
+<br> 
+<img alt="refer to [D] description" border="0" height="509" src="https://llis.nasa.gov/llis_lib/images/1009291main_0809-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009766main_0809-1.txt">[D]</a> 
+<p>For example, consider a linear integrated circuit, Part Number 9716 being used in an A/D Converter in a vacuum environment. Without a heat shunt, the case to board temperature rise can be about 15<small><sup>o</sup></small>C for the part when dissipating 300 milliWatts. With a metal clad heat shunt, the case to board temperature rise can be reduced to about 5<small><sup>o</sup></small>C for the same conditions. Figure 2 shows the electrical analog of the thermal system with the shunt.</p> Figure 2: Equivalent Thermal Circuit with Heat Sink 
+<br> 
+<img alt="refer to [D] description" border="0" height="282" src="https://llis.nasa.gov/llis_lib/images/1009292main_0809-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009767main_0809-2.txt">[D]</a> 
+<p>Additional enhancement can be obtained through the use of printed circuit boards with metal planes for heat conduction and heat straps for other hot spots. This has been found to be an effective method for conducting heat to the spacecraft cold plate. The effect of this design is to reduce the temperature of the board by minimizing the temperature rise from the cold plate to the board. A reduction in board temperature will allow for an increase in thermal shunting capacity for the applicable heat conduction path.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>The failure rates of parts increase with loading or stress level, whether it be thermal, electrical, or mechanical. Stresses below the intensity which causes catastrophic failure result in progressive deterioration of material. The effect of temperature cycling is believed to be extremely significant.</p> 
+<p>Thermal failure of parts is caused by deterioration, due to temperature, of the materials of which the part is made. An old rule of chemistry (the Arrhenius Rate Law) states that the speed of chemical reactions doubles for every 10<small><sup>o</sup></small>C increase in temperature. Parts failure rates are known to increase exponentially with temperature as evidenced in published data. A thermal failure may occur so rapidly as to be considered catastrophic. However, there is always a slow, progressive deterioration of dielectrics, cathode coatings, transistor junctions and many other materials which accelerates with temperature, leading eventually to failure. These effects are cumulative so that failure rate depends to some extent on the entire ground test/mission thermal history, the temperature-time integral. Thermal failure is, therefore insidious since it is usually impossible to determine the percentage of life remaining in a part. This has a direct bearing on the effects of temperature cycling, which is specified in nearly all specifications for testing parts and equipment, and which may occur during the normal operation of equipment in space, especially if the equipment is power cycled. There are indications that temperature cycling has a very adverse effect on reliability but there exist little quantitative data and no adequate theory by which the effect can be accurately estimated.</p> 
+<p>The true thermal stress is usually at the internal junctions of the part. Since this is internal to the part, it is difficult to measure. The temperature of the accessible outer surface is the most practical index of the thermal condition of the part. Surface or body temperature is a function of the heat dissipation within the part and of its thermal environment, which is a complex function of: (1) coolant type, temperature, pressure and velocity; (2) the configuration, emittances and temperatures of neighboring surfaces; and (3) all conductive heat flow paths surrounding the part. This becomes evident from Figures 1 and 2.</p> 
+<p>References:</p> 
+<ol> 
+ <li><q>Electronic Reliability Design Handbook,</q> MIL-HDBK-338-1A, October 1988.</li> 
+ <li>Glover, Daniel, <q>Design Considerations for Space Flight Hardware,</q> NASA TM-102300, January 1990.</li> 
+ <li><q>Reliability/Design Thermal Applications,</q> MIL-HDBK-251, January 1978.</li> 
+ <li><q>Reliability Prediction of Electronic Equipment,</q> MIL-HDBK-217E Notice 1, January 1990.</li> 
+ <li><q>EEE Parts Derating,</q> Reliability Preferred Practice PD-ED-1201</li> 
+ <li><q>Part Junction Temperature,</q> Reliability Preferred Practice PD-ED-1204</li> 
+ <li><q>Thermal Test Levels/Durations,</q> Reliability Preferred Practice PT-TE-1404</li> 
+ <li><q>Thermal Analysis of Electronic Assemblies to the Piece Part Level,</q> Reliability Preferred Practice PD-AP-1306</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Hot parts increase failure rate and reduce life. High part failure rates lower the reliability of flight hardware. Low reliability can cause early mission failures that can be very expensive and lower agency prestige.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform a thermal analysis of each electronic assembly to the piece-part level. Provide a heat conduction path for all parts whose junction temperature rise exceeds 35<small><sup>o</sup></small>C above the cold plate.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on SERT II, SAMS, CTS, Atlas/Centaur, and Titan</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1799: Erroneous Onboard Status Reporting Disabled IMAGE's Radio</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1799: Erroneous Onboard Status Reporting Disabled IMAGE's Radio</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1799 (Database ID: 1799)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-07-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Communication Systems,  Computers,  Flight Equipment,  Flight Operations,  Hardware,  Information Technology / Systems,  Mishap Reporting,  Parts,  Materials,  & Processes,  Safety & Mission Assurance,  Software,  Spacecraft,  Power,  Mission control Planning,  Communications between different offices and contractor personnel,  Cross Agency coordination,  Product Assurance</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1799" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The NASA Imager for Magnetopause-to-Aurora Global Exploration (IMAGE) spacecraft became non-responsive to ground commands in December 2005, after almost 6 years of successful on-orbit operation. Designed for a two-year mission, IMAGE was the first satellite dedicated to imaging the Earth's magnetosphere. The only likely cause of the IMAGE failure is a Single Event Upset (SEU) induced quotinstant tripquot (i.e., from a short duration, high current transient) of the Solid State Power Controller (SSPC) that supplies power to the single-string Transponder (Reference (1)).<br> <br> Because the SSPC device that powers the satellite Transponder (receiver/transmitter) also performs a circuit breaker function, the instant trip severed both uplink and downlink communications. An SSPC trip should have been reported in its status telemetry lines that are continuously monitored by onboard Error Detection and Correction (EDAC) logic in the Power Distribution Unit (PDU). This allows the PDU EDAC to command the SSPC to close, reapplying power to the Transponder. However, due to a design oversight in the device, instant trip events are not reported in the status telemetry lines (see Figure 1). This allowed the circuit breaker to be in an open state while still reporting a closed state. The result is that the Transponder remains OFF because the EDAC logic detects the SSPC to still be closed (due to the erroneous status line indication).</p> 
+<p>&nbsp;</p> 
+<table width="100%"> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <table width="610"> 
+     <tbody> 
+      <tr> 
+       <td><img align="Bottom" alt="Figure one is a simplified schematic of the Solid State Power Controller (SSPC).  Three blocks, each with different shades of color, distinguish three distinct sections of the schematic." border="0" height="431" src="https://llis.nasa.gov/llis_lib/images/1015440main_2007-07_IMAGE_Fig_1.jpg" title="Figure one is a simplified schematic of the Solid State Power Controller (SSPC).  Three blocks, each with different shades of color, distinguish three distinct sections of the schematic." width="605"></td> 
+      </tr> 
+      <tr> 
+       <td><b>Figure 1. </b>Simplified schematic of the circuit breaker (SSPC). The circuit breaker protects itself against a current spike (e.g., caused by shorting or an SEU) by means of a trip function that directly turns the MOSFET (1) off. Because the design improperly allows the trip function to sidestep the status line (2), fault detection logic mistook the breaker as ON and would not force a reset.</td> 
+      </tr> 
+     </tbody> 
+    </table> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> The SSPC hybrid device could be susceptible to radiation-induced upsets, depending on the year of manufacture, and the ones used on this cost-constrained project were not screened. In September 2001 (well after IMAGE was launched) it was learned that the lack of proper status reporting following instant trip events was actually inherent in the part's design, but had not been reflected in any SSPC part documentation provided to SSPC users (Reference (2)). This prevented the PDU EDAC designers from incorporating a logic design that could compensate for this device characteristic. (By design, the PDU software is not patchable in flight.) 
+<br> 
+<br> With the inability of EDAC to detect and reset the tripped breaker, secondary failure recovery measures that would have saved the satellite were not available: 
+<ol> 
+ <li>The loss of uplink triggered an automatic quotwarm rebootquot of the flight computer, but a warm boot does not reset the breaker. If the designers of the onboard fault recovery logic had wished to provide for a complete reset (quotcold bootquot) of the computer after several unsuccessful restart attempts, the circuit breaker would have been commanded to ON.<br> &nbsp;</li> 
+ <li>Manual ground commanding of a reset was not feasible because the satellite's receiver was already disabled, and IMAGE lacked a redundant Transponder.</li> 
+</ol> Prior to the IMAGE mishap, three on-orbit SEU-induced instant trips of this SSPC part series from the same manufacturer occurred aboard the Earth Observing 1 (EO-1) and Wilkinson Microwave Anisotropy Probe (WMAP) satellites. Recovery by means of ground-commanded resets was successful because the EO-1 and WMAP configurations did not permit an SEU-disabled breaker to cut power to the command receiver. None of these three anomalies resulted in issuance of a GIDEP report or a NASA Alert. 
+<br> 
+<br> 
+<b>Reference(s):</b> 
+<ol> 
+ <li>IMAGE Failure Review Board Final Report, Flight Programs &amp; Projects Directorate, Goddard Space Flight Center, September 19, 2006, <a href="http://image.gsfc.nasa.gov/publication/document/IMAGE_FRB_Final_Report.pdf">http://image.gsfc.nasa.gov/publication/document/IMAGE_FRB_Final_Report.pdf</a><br> &nbsp;</li> 
+ <li>EO-1 Anomaly Resolution Report for the Attitude Control Electronics (ACE) Anomaly of September 14, 2001, <a href="http://eo1.gsfc.nasa.gov/new/validationReport/Technology/Documents/Tech.Val.Report/EO-1%20ACE%20Anomaly%20of%209-14-01%20Resolution%20Summary%20as%20of%2011-18-01.doc">http://eo1.gsfc.nasa.gov/new/validationReport/Technology/Documents/Tech.Val.Report/EO-1%20ACE%20Anomaly%20of%209-14-01%20Resolution%20Summary%20as%20of%2011-18-01.doc</a></li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>The ability to switch a transponder on and off, especially when a smart device replaces a fused supply, provides flexibility during spacecraft integration and test, and facilitates a mission design in which the transponder is OFF during ascent. However, the IMAGE mishap may validate the typical industry-wide practice of minimizing the risk of losing uplink telemetry by hardwiring the receiver to the power bus.<br />  </li> 
+ <li>Overcurrent protection of a spacecraft receiver may actually pose a mission-critical risk unless the protection device is designed to reset (in a robust and redundant manner) after transient faults in either the receiver or the overcurrent protection device itself.<br />  </li> 
+ <li>Had the IMAGE PDU EDAC designers known in advance about the SSPC's status reporting limitation, they could have designed the logic to prevent an unrecoverable loss of receiver power. For example, it could have imposed a transponder voltage test that closed the SSPC after an extended voltage drop. Also, NASA part anomaly alerts are typically distributed only to hardware developers; distribution to operations personnel would allow early consideration of possible mitigation action.<br />  </li> 
+ <li>Protection against the loss of ground commanding was needed at the flight system level. A system-level command loss fault response from the flight software in IMAGE's main computer that reached to the root level (i.e., including the SSPC) would have reset the telecom power supply SSPC as well as reasserting attitude control and other subsystem and system functions. quotCommand loss fault protectionquot typically resets its timer periodically over the course of normal operations; after the flight software loses ground commanding (for whatever reason), the fault protection will (after a period of days or months) cycle through different system configurations and options until contact is restored.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Recognizing that loss of the ability to command the vehicle is a total loss of mission, consider a design rule that would mandate permanently connecting (hardwiring) receiver power to the power bus, with only the transmitter switched.<br />  </li> 
+ <li>If a switched receiver design is chosen, provide additional redundancy to prevent the switching device itself from becoming a single failure point in the design. Build redundancy into the receiver's power switching or into the sensed operational status so that on-board EDAC logic can correct an inadvertent mis-configuration.<br />  </li> 
+ <li>Generate appropriate GIDEP reports or NASA Alerts as a standard element in all investigations of mission operational anomalies. Route these part anomaly alerts to operations personnel on those flight projects that use the part so that workarounds, if feasible, can be implemented.<br />  </li> 
+ <li>Assure that the flight software has a fault protection feature, such as a set of timed spacecraft-level command loss fault responses, that safeguards against command loss by triggering a system interrupt, return to a prior state, or restart. Assure that the set of fault responses address not just the command processor, but all components that may need to be reset.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson as additional rationale and guidance supporting Paragraph 6.2.1 (quotEngineering Practices: Telecommunication Designquot), and Paragraphs 7.5.4 and 7.5.5 (quotSafety and Mission Assurance Practices: Electronic Parts Reliability, Application and Acquisitionquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006. 
+<br /> 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 4.11.2.1 (quotFlight Software System Design: Initialization -- Nominal Flight Software Initializationquot), Paragraph 4.11.4.7 (quotFlight Software System Design: Design Robustness -- Use of Time-Outsquot), Paragraph 4.12.1.8 (quotFlight Electronics Hardware Systems Design: Use of Fuses -- Fuse Utilizationquot), Paragraph 4.12.7.3 (quotFlight Electronics Hardware System Design: Power-On Reset Design -- Power-On Reset Circuitsquot), Paragraph 4.3.2.3 (quotPower/Pyrotechnics Design: Power Distribution -- Load Shedding Architecturequot), Paragraph 4.4.4.4 (quotInformation System Design: Commanding and Sequencing -- Assured Commandingquot), Paragraph 4.9.2.2 (quotSystem Fault Protection Design: Fault Protection Response -- Flight System Safingquot), Paragraph 4.9.3.4 (quotSystem Fault Protection Design: Flight-Ground Interface -- Spacecraft State Informationquot), and Paragraph 4.9.4.2 (quotSystem Fault Protection Design: Fault Detection -- Deviation from Expected Behaviorquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles)quot JPL Document D-17868, Rev. 3, December 11, 2006. 
+<br />
+</section>
+<section><h2>Related Policies & Standards</h2>
+DI-QCIC-80125B, Government Industry Data Exchange Program (GIDEP) Alert/Safe-Alert Report, NASA-STD-8719.13a, Software Safety
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

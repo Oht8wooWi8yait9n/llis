@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1383: Autoclave Purge Blower Failure</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1383: Autoclave Purge Blower Failure</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1383 (Database ID: 1383)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-10-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1383" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>A mishap occurred in a large (18' X 20') autoclave at MSFC on August 13, 2002 resulting in damage to government property of approximately $23K.<br />
+    <br />
+     Two to four minutes into pressurizing the autoclave, operators noted that vessel pressure was not following the set-point value. Operators heard a loud noise outside the building and sent personnel to investigate. Bystanders outside indicated the noise came from nearby construction. Approximately 5 minutes later, another loud noise was heard coming from the nitrogen pressure regulating assembly of the autoclave. Other than the noise, no system warning or error indicators were encountered. The cycle was aborted and appropriate safety personnel were notified. A checkout of the facility revealed a failure of the purge blower.<br />
+    <br />
+     Equipment damage resulted from the mishap. Damaged components included the purge blower assembly, purge valve solenoid assembly (solenoid in green), purge valve (below the solenoid assembly) and the entire purge line from the blower to the autoclave pressure vessel. A piece of fan blade sheared from the shaft, ripped through the blower housing and hit the purge valve solenoid just before it came to rest on some nearby nitrogen supply piping.<br />
+    <br />
+     The investigation revealed the purge valve had remained open during pressurization of the autoclave allowing pressurizing gas (nitrogen) to back-flow into the purge blower and spin it in reverse until it failed due to excessive load. Debris (probably caused by a mud wasp) had obstructed the vent sufficiently to prevent proper closure of the valve thus ultimately causing the blower failure.<br />
+    <br />
+     The Mishap Board recommended the following corrective actions be implemented prior to facility activation:</p>
+
+    <ol>
+      <li>Install screens over all autoclave pneumatic outputs to prevent debris from clogging lines.</li>
+
+      <li>Install a position indicator switch on the purge valve. Link this position indicator switch into the autoclave's programmable logic control (PLC) software so that the &ldquo;all systems ready&rdquo; interlock prevents operating the autoclave until the valve is properly closed.<br />
+      </li>
+
+      <li>Install a one-way &ldquo;check&rdquo; valve in the purge line to prevent back flow of nitrogen from the pressure vessel into the purge blower in the event of a purge valve failure. This valve shall be installed between the purge valve and the purge blower so it is outside the autoclave's pressure boundary.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Pressure systems may operate safely for years until a specific set of conditions occur and a mishap results. Pneumatic systems should be installed in a way that takes maximum advantage of available logic controls. Check valves and additional external controls should also be incorporated to minimize the potential for back flow into pressure vessels.<br />
+    <br />
+     Finally, even a relatively minor amount of accumulated debris due to age, shop conditions, or other environmental factors can result in mishap.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Screens have been installed over all autoclave pneumatic outputs to prevent debris from clogging lines.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+
+      <li>Position indicator switches should be properly interlocked. In this case, the position indicator switch was not linked with the autoclave's programmable logic control (PLC) which would have allowed the valve to open only if the purge valve were closed</li>
+
+      <li>Use one-way &ldquo;check&rdquo; valves in purge lines to detect/prevent back flow into pressure vessels.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Recommended actions are incorporated and all systems are operating appropriately.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

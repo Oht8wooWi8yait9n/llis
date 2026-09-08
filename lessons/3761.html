@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #3761: Critical Redundant Power Manual Verification</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #3761: Critical Redundant Power Manual Verification</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #3761 (Database ID: 3761)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-09-16</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Launch Systems, Power, Ground support systems, Launch support systems, Logistics and maintenance, Reliability, Level II/III requirements definition, Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/3761" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+As part of the Space Shuttle Orbiter’s redundancy management system, critical LRUs are provided with redundant power. This allows the LRU to continue to function if one of the Orbiter’s electrical power busses goes down. Separate and redundant busses are wired into the LRU, where internal “either/or” circuitry allows the LRU to continue functioning when a bus fails. The OMRSD requires verification of this redundancy as part of the processing flow. This verification drives the performance of serial Orbiter Maintenance Instructions (OMIs) to manually drop the busses and verify that the critical LRUs continue to operate on redundant power. OMIs such as OMI V1161 are serial in the test flow because no other testing can take place while the busses are manually dropped. Mission visibility of critical LRU bus redundancy is extremely limited. There is no health status indication that a particular LRU has the required bus redundancy. During ground testing, the bus drop tests only verify that the required redundancy is available at the time of the test.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Providing redundant power to critical LRUs is important to the Orbiter’s redundancy management system. However,  the need to manually drop busses affects the serial turnaround flow since no other testing can take place when the power has been dropped. Ideally, the equipment’s redundant power should be verified automatically upon power-on. Because the Orbiter does not have this capability, special bus drop tests must be run to verify the bus redundancy.
+</section>
+<section><h2>Recommendation(s)</h2>
+For any new space vehicle program, where redundant power is provided to the space vehicle’s critical LRUs, the capability to automatically detect and verify the bus redundancy should be designed into the system. A system similar to the Orbiter’s “Caution and Warning” panel could be used to monitor the bus redundancy status of all critical functions. This would allow for automatically verifying bus redundancy whenever power is applied to the space vehicle and for monitoring the status throughout launch processing and mission operations.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

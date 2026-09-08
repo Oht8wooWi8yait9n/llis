@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1771: Ensure That Items Separated In Flight Will Not Collide</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1771: Ensure That Items Separated In Flight Will Not Collide</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1771 (Database ID: 1771)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2006-10-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Formulation &amp;raquo; Phase B</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Integration and Testing,  Missions and Systems Requirements Definition,  Systems Engineering and Analysis,  Flight Equipment,  Flight Operations,  Hardware,  Payloads,  Spacecraft,  Entry Systems,  Lander Systems,  Robotics,  Spacecraft and Spacecraft Instruments,  Planetary entry and landing concepts,  Engineering design and project processes and standards,  Level II/III requirements definition</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1771" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+No signal was ever received from the joint British/European Space Agency Beagle 2 lander, carried on the Mars Express spacecraft, after its scheduled landing time in December 2003. The following year, the Beagle 2 Commission of Inquiry identified a number of lessons learned. One lesson (Reference 1) stated the need for positive means of assuring that separated items (e.g., covers, main parachute) do not collide. 
+<br> 
+<br> The potential for separated items to regain contact and damage the spacecraft has also posed a significant risk to recent, current, and planned JPL missions. The system and mission designs have responded to this concern with positive measures to assure that items separated in flight will not regain contact: 
+<br> 
+<br> 
+<b>Genesis</b> The Genesis Sample Return Capsule (SRC) design (Figure 1) was subjected to extensive analysis to ensure that separated items would not regain contact. When Genesis returned to Earth, SRC descent was to be arrested by a sequence in which a small aluminum mortar disk (sabot), a drogue chute, and then the main parachute were expelled from the SRC (Figure 2). Flight testing of this sequence and analysis of the resulting video demonstrated an adequate separation that increased with time, and showed that the deployed components could be tracked with ground cameras and radar. A change in the helicopter loitering duration further helped to ensure the safety of the mid-air helicopter capture of the SRC. Because the sabot follows in the wake of the rapidly inflating drogue chute, analysts also had to determine that the risk of the sabot penetrating and damaging the drogue was acceptable (Reference 2). Although the drogue parachute on the SRC failed to deploy during the mission due to an unrelated system failure, prior testing and analysis had successfully verified that there was little chance of collision. 
+<br> 
+<br> 
+<br> 
+<img alt="Figure 1 is a color diagram of the Genesis SRC that depicts the rough outline and shape of major SRC components within a roughly oval or diamond shaped capsule. On the outer portion of the top of the capsule are the Backshell TPS and the Backshell Structure. Within the capsule, near the top, are packed the Main Parachute, Drogue Chute, and DACS R&amp;R Mechanism. In the center of the capsule is the Canister, supported by the Canister Support Strut. To one side of the canister is positioned the Avionics Deck. The bottom on the capsule features the PICA Heatshield and the Heatshield Structure. An SRC Hinge is attached to the outside of the capsule midline." border="0" height="274" src="https://llis.nasa.gov/llis_lib/images/1014162main_NEN1771-Fig1.jpg" title="Figure 1 is a color diagram of the Genesis SRC that depicts the rough outline and shape of major SRC components within a roughly oval or diamond shaped capsule. On the outer portion of the top of the capsule are the Backshell TPS and the Backshell Structure. Within the capsule, near the top, are packed the Main Parachute, Drogue Chute, and DACS R&amp;R Mechanism. In the center of the capsule is the Canister, supported by the Canister Support Strut. To one side of the canister is positioned the Avionics Deck. The bottom on the capsule features the PICA Heatshield and the Heatshield Structure. An SRC Hinge is attached to the outside of the capsule midline." width="429"> 
+<br> Figure 1. Diagram of Genesis SRC 
+<br> 
+<br> 
+<img align="Bottom" alt="Figure 2a is a set of black and white line drawings of the Genesis parachute deployment sequence. The sequential images each show the SRC at the bottom of each drawing. They show the progress of the chute emerging and inflating beginning with mortar fire and progressing to drogue deploy, sabot separation, drogue full inflation, backshell separation, bridle taut, descent bag extracted, parachute fully deployed, and parafoil inflated. The drogue chute resembles a standard parachute while the parafoil in the last drawing resembles a paraglider or a rectangular flying wing." border="0" src="https://llis.nasa.gov/llis_lib/images/1014163main_NEN1771-Fig2a.jpg" title="Figure 2a is a set of black and white line drawings of the Genesis parachute deployment sequence. The sequential images each show the SRC at the bottom of each drawing. They show the progress of the chute emerging and inflating beginning with mortar fire and progressing to drogue deploy, sabot separation, drogue full inflation, backshell separation, bridle taut, descent bag extracted, parachute fully deployed, and parafoil inflated. The drogue chute resembles a standard parachute while the parafoil in the last drawing resembles a paraglider or a rectangular flying wing."> 
+<br> Figure 2a. Genesis SRC Parachute Deployment Sequence 
+<br> 
+<br> 
+<img alt="Figure 2b is a set of black and white line drawings of the Genesis parachute eployment sequence starting at step 6" border="0" height="287" src="https://llis.nasa.gov/llis_lib/images/1014164main_NEN1771-Fig2b.gif" title="Figure 2b is a set of black and white line drawings of the Genesis parachute eployment sequence starting at step 6" width="500"> 
+<br> Figure 2b. Genesis SRC Parachute Deployment Sequence (Cont.) 
+<br> 
+<br> 
+<b>Deep Impact</b> The Deep Impact mission required an unprecedented feat of navigation requiring an Impactor spacecraft to separate from a Flyby spacecraft and then fly in tandem under independent guidance to encounter a comet. A sophisticated model of the separation dynamics was created that allowed for the rapid implementation and analysis of multi-body dynamics. Even when the worst-case kinematics associated with a failed separation spring was combined with a worst-case off-nominal flight system performance, the analysis demonstrated adequate clearance between the two spacecraft and little chance of collision (Reference 3). 
+<br> 
+<br> 
+<b>MER</b> During the Mars Exploration Rover (MER) entry into the Martian atmosphere, the heat shield, parachute, and lander were separated from the cruise stage, and the parachute deployed, at a descent velocity of 450 meters/sec. Careful analysis assured the eventual success of a sequence in which (1) the heatshield was released using six separation nuts and push off springs, (2) the lander was lowered from the backshell on a 20-meter bridle, and (3) the separation rate was controlled by a Descent Rate Limiter-- a friction brake and steel tape that was deployed with the bridle. 
+<br> 
+<br> 
+<b>Phoenix &amp; Mars Science Laboratory (MSL)</b> Backshell or parachute recontact with the lander was one of the scenarios posed to explain the Mars Polar Lander mission loss in 1999 (Reference 4). Mars landing simulations for Phoenix Mars Scout and MSL revealed a similar risk that the backshell could overtake the lander after the engines fire to slow the landers' vertical descent. This risk was taken into account in the Phoenix and MSL designs. They feature a backshell avoidance maneuver in which a 6-axis descent control system will allow the descent stage to scoot sideways and avoid contact with the descending backshell/parachute. Like a skycrane helicopter, the MSL descent stage will also use a tether to lower the lander to the Martian surface and then fly away from it. 
+<br> 
+<br> 
+<b>References:</b> 
+<ol> 
+ <li>quotBeagle 2 ESA/UK Commission of Inquiry, Joint United Kingdom/European Space Agency Beagle 2 Commission of Inquiry,quot April 5, 2004, p. 30 (Recommendation No. 18).</li> 
+ <li>quotSabot Recontact with Drogue Chute and SRC, JPL Incident Surprise Anomaly (ISA) No. Z84100,quot Jet Propulsion Laboratory, June 11, 2004.</li> 
+ <li>quotOff-Nominal Separation System Performance and Clearance Analysis, Systems Engineering Report No. DI-IMP-MEC-005,quot Ball Aerospace &amp; Technologies Corp., June 14, 2002, p. 1.</li> 
+ <li>quotReport on the Loss of the Mars Polar Lander and Deep Space 2 Missions: JPL Special Review Board, JPL Document D-18709,quot March 22, 2000, p. 43.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Unless specifically proven by design analysis or test, it cannot be assumed that flight hardware items deployed or separated during the cruise or descent phase of a mission will not regain contact and pose a significant risk to mission success.
+</section>
+<section><h2>Recommendation(s)</h2>
+Conduct flight tests or analyses to verify that items separated from a lander or return capsule during the descent phase of a mission, or from the spacecraft during cruise, remain separate by a substantial margin. Perform separation verification as an integrated process in which simulation and analysis is melded with testing that measures the gap.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 4.2.2.12 ( 
+<q>Mechanical Configuration/Systems Design: Configuration: Clearances</q>) in the JPL standard 
+<q>Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),</q> JPL Document D-17868, Rev. 3.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0908: NOAA-15(K) S-Band Antenna Failure</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0908: NOAA-15(K) S-Band Antenna Failure</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0908 (Database ID: 908)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-08-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/908" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The NOAA-15 (K) satellite was launched on May 13 1998. The satellite was the first in the new series of Polar Operational Environmental Satellites (POES) that had design heritage back to Tiros-N launched in 1978. NOAA-15, however, had three S-band antennas operating in the 1700 MHz frequency range that were new to this mission.</p>
+
+    <p>Approximately 18 days after launch, data quality degradation was noted during tape recorder playbacks on the S-band #2 link. In October science data from the AMSU-B instrument provided by the UK was observed to have contamination toward one side of the scan field of view. The degradation was consistently evident or not depending upon the satellite orbital location. An Anomaly Review Board was established and investigation revealed that the contamination appeared to rotate around the globe as the sun moved from north to south during the annual season change.</p>
+
+    <p>Further investigation revealed a thermal correlation to the link degradation and science data contamination as the S-band antennas experienced large thermal gradients throughout the orbit. A detailed thermal stress analysis performed for the antenna confirmed stress levels within internal connecting elements that were sufficient to cause breakage. Once broken, changes in antenna gain, axial ratio, and SWR would significantly degrade link performance and antenna patterns. The failure mode was confirmed in a thermal cycling test of a flight antenna.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Designers of satellite elements subjected to significant thermal gradients in orbit must carefully consider the coefficients of thermal expansion (CTE) of all components in the design.</li>
+
+      <li>A detailed thermal model must be constructed that accurately reflects in orbit temperature extremes and gradients that the element will experience.</li>
+
+      <li>A detailed mechanical model must be constructed that accurately models both mechanical and thermal stresses within the element.</li>
+
+      <li>For elements subjected to frequent and large thermal excursions, additional qualification testing in the form of thermal cycling should be considered.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Ensure that new flight hardware is subjected to a rigorous and well-documented peer and design review process.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<ol>
+      <li>The antennas were redesigned with materials that matched closely in CTE characteristics.</li>
+
+      <li>The new antenna successfully completed qualification that included an extensive thermal cycling test.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0791: Risk Rating of Problem/Failure Reports</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0791: Risk Rating of Problem/Failure Reports</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0791 (Database ID: 791)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/791" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1305, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Risk rating enables management to focus on the issues with the highest probability of impacting mission success. Project management is provided with visibility to a concise subset (&lt; 5 percent) of a large information base focusing on the key problematic areas in a timely fashion.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A two-factored rating is assigned to each Problem/Failure (P/F) report. Figure 1 is a graphical outline of the rating system and indicates the basis of the "Red Flag" risk determination. All closed P/F reports having a potentially significant or major failure effect (Failure Effect Rating of 2 or 3), coupled with uncertain corrective action effectiveness (Failure Cause/Corrective Action rating of 3 or 4), are defined as "Red Flag" P/F reports.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009261main_0791-1.jpg"  HEIGHT="250"  BORDER="0" /><A HREF="/llis_lib/txt/1009736main_0791-1.txt"  >[D]</A><br />
+      Figure 1. P/FR Rating Chart
+    </center>
+
+    <p>"Red Flag" Classification:</p>
+
+    <ol>
+      <li>Each Red Flag P/F report has an attached statement that summarizes the symptom, cause, effect, potential mission impact, and corrective action for the P/F report, as well as the rationale for accepting the residual risk.</li>
+
+      <li>The Project/Task Manager and the Contractor Project Manager (if applicable) review, approve, and sign all Red Flag P/F report closures to acknowledge understanding and acceptance of the defined residual mission risk.</li>
+
+      <li>3. All Red Flag P/F reports are discussed at subsequent formal reviews and reported in Monthly Project/Task Management Reports.</li>
+    </ol>
+
+    <p>Each individual Red Flag P/F report is evaluated for its contribution to the overall mission risk. The total set of Red Flag P/F reports must be evaluated for any presentation of mission risk. The Red Flag P/F report contribution to mission risk is a topic for discussion at the preship and the prelaunch reviews.</p>
+
+    <p>In addition, any unrated P/F report open for 60 days or longer is reviewed and assigned a two-factored rating to determine if there are potential Red Flag issues.</p>
+
+    <p>As indicated in Figure 1, the two numerically indicated components of the P/F report rating system are the Failure Effect Rating and the composite Failure Cause/Corrective Action Rating.</p>
+
+    <p>Failure Effect Rating:</p>
+
+    <p>The first factor, the "Failure Effect Rating," is an assessment of the consequence or impact of the P/F if it had occurred in flight. It is not an assessment of the adequacy of the corrective action. Redundancy is not considered in making the assessment. The assessment is either 1, 2, or 3 based on the following criteria:</p>
+
+    <ol>
+      <li>
+        Rating 1: Negligible effect on mission performance.
+
+        <ol type="a">
+          <li>No appreciable change in functional capability.</li>
+
+          <li>Minor degradation of engineering/science data.</li>
+
+          <li>Support equipment or test equipment P/Fs.</li>
+
+          <li>Support equipment, test equipment, or operator-induced P/Fs.</li>
+
+          <li>Workmanship failures found at initial test.</li>
+
+          <li>Drawing errors found at initial test.</li>
+        </ol>
+      </li>
+    </ol>
+
+    <p>Note: For items c, d, e, and f, after correction of the underlying P/F cause, the hardware/software must be certified to be in flightworthy condition and the failed test must be successfully completed.</p>
+
+    <ol>
+      <li value="2">
+        Rating 2: Significant degradation to mission performance.
+
+        <ol type="a">
+          <li>Appreciable change in functional capability.</li>
+
+          <li>Appreciable degradation of engineering/science data.</li>
+
+          <li>Significant operational difficulties or constraints.</li>
+
+          <li>Reduction in lifetime.</li>
+
+          <li>Significant impact on system safety.</li>
+        </ol>
+      </li>
+
+      <li>Rating 3: Major degradation to mission performance or catastrophic impact on system safety.</li>
+    </ol>
+
+    <p>Failure Cause/Corrective Action Rating:</p>
+
+    <p>The second factor, the "Failure Cause/Corrective Action Rating," is an assessment, with confidence, that the failure cause has been understood correctly, and the confidence that the corrective action is effective and will preclude recurrence of the P/F. The assessment is either 1, 2, 3, or 4 based on the following criteria:</p>
+
+    <ol>
+      <li>Rating 1: The cause of the P/F has been determined with confidence by analysis and/or test. An effective corrective action has been determined, implemented, and verified. Residual risk is considered minimum.</li>
+
+      <li>Rating 2: The cause of P/F has not been determined with confidence. However, corrective action is considered effective in precluding the observed P/F symptom. Residual risk is considered minimum.</li>
+
+      <li>Rating 3: The cause is considered to be "known" and "understood" with confidence. The correction accomplished within constraints (e.g., time, resources, test capability) does not satisfy with confidence all doubts or concerns regarding the corrective action and its effectiveness for precluding recurrence; or, the correction is considered to be a symptomatic treatment without ensuring an effective overall correction of the basic cause. There is residual risk.</li>
+
+      <li>Rating 4: The cause has not been defined with confidence. The correction of the P/F is considered to have an uncertain effectiveness for precluding recurrence. There is a residual risk.</li>
+    </ol>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The P/F report risk rating system is a time-proven technique that permits a Project/Task to close all P/F incidents in a timely and efficient manner and yet retain the critical information relating to mission risk in a highly visible and specific format.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"Problem/Failure Report Independent Review/Approval," Reliability Preferred Practice PD-AP-1304</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The identification of Project/Task risk just prior to launch/delivery becomes a costly and time-consuming activity. Even with a protracted, intensive study, some key issues may be missed.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Problem/failure (P/F) reports are assigned a two-factor set of ratings: a failure effect rating and a failure cause/corrective action rating. The composite rating is used to assess the hardware/software residual launch and mission risk. The high risk P/F reports are labeled "Red Flag".</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Mariners, Seasat, IRAS, VGR, VIK, GLL and MGN programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2116: Mission Operations Planning for Irreversible Processes</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2116: Mission Operations Planning for Irreversible Processes</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2116 (Database ID: 2116)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-09-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Manufacturing and Assembly, Spacecraft and Spacecraft Instruments</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2116" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+GSFC built an X-Ray Spectrometer (XRS) which was integrated in Japan with 3 other instruments into the Astro E-2 spacecraft and launched it aboard a Japanese rocket from Japan. The XRS was the primary instrument for this mission which was managed by the Japanese Space Agency (JAXA). Astro E-2 was renamed Suzaku once orbit was obtained as is customary for Japanese missions. The XRS uses calorimetric detectors that must be cooled to near absolute zero (operating at 60mK). This was accomplished by a multi stage Dewar which includes liquid He and solid Ne. Dewar operations are initiated on ascent by blowing pyro valves allowing the He and Ne to vent. The Dewar was also equipped with a pyro driven vent that exposes the Dewar guard vacuum to ambient environment. This design feature was intended to vent the guard vacuum to deep space once on orbit. This would allow any cryogen leakage to be effectively prevented from contaminating this volume. There is another pyro gate valve at the telescope's aperture that protects the internal detectors until on orbit.
+<br/>
+<br/>By blowing the aperture gate valve the instrument becomes fully operational and is enabled to view its entire desired spectrum. Once the XRS was on orbit it was successfully calibrated and configured for full operations (i.e. guard vacuum and gate valves blown). However, prior to opening either the aperture valve or the valve to the guard vacuum (i.e. He and Ne are venting) significant science can acquired (although only over a small spectrum) in this configuration. 
+<br/>
+<br/>Unfortunately, the space craft design had a fatal flaw. For most missions that fly cryogens the Dewar comprises the main structural component of the spacecraft. The XRS was buried inside the spacecraft in what turned out to be a confined space. Once integrated into the spacecraft the Dewar was supposed to have been vented to the exterior of the spacecraft and then overboard. The entire spacecraft exterior was covered with thermal blankets which enclosed the volume that held XRS. The venting He and Ne accumulated in the confined space. Although the confined space was not airtight the venting area provided by the blanket seams restricted the venting sufficiently enough to establish a level of atmosphere to pose a contamination issue. When the guard and aperture valves were blown the confined He and Ne were sucked into the guard vacuum shorting out the vacuum causing unacceptable heat loads on the tanks. The cryogens were rapidly depleted and a planned 3 year mission was over in 19 days with no science having been acquired.
+<br/>
+<br/>It should be noted that Astro E-2, as the name implies, was a "build to print" reflight of the first Astro which also was launched on a Japanese rocket. It was identically flawed and would have failed in the fashion but the launch vehicle failed to achieve orbit and was lost. Also notable is the design review process failed to identify the design flaw. This lesson is limited to mission operations planning. The genesis and propagation of the original design flaw is covered in detail in the Astro E-2 Mishap Investigation Board report. There are broader issues with respect to communications and program execution.
+<br/>
+<br/>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+1) Had mission operations planning considered some science acquisition prior to initiating the Dewar and gate valves some science could have been  obtained.
+<br/>
+<br/>2) If the fully assembled instrument been tested in an &quot;as flown&quot; configuration (i.e. confined space was simulated)_ the design flaw would have likely been discovered.
+<br/> 
+<br/>
+</section>
+<section><h2>Recommendation(s)</h2>
+1) Mission operations planning should include a thorough analysis of all operations especially irreversible processes under nominal and anomalous conditions.
+<br/>
+<br/>2) Mission operations should be fully exercised in test using a "test-as-you-fly fly as you test". A full up test simulating the actual environmental conditions likely would have detected the design flaw.
+<br/>
+<br/>
+<br/>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

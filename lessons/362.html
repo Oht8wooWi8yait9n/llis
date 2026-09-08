@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0362: Magellan Radio Transmitter A Modulation Failure</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0362: Magellan Radio Transmitter A Modulation Failure</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0362 (Database ID: 362)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-04</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/362" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>After a star calibration during the Magellan third extended mission, the X Band telemetry and high rate data were missing from the down link (22 kHz and 960 kHz subcarriers were missing). A subsequent attempt to use the 360 kHz subcarrier also resulted in no significant subcarrier in the down link.</p>
+
+    <p>The most likely failure is a HA 2520 operational amplifier used as a summing amplifier in the telemetry signal conditioner (although a failure in the phase modulator circuitry is also a possible cause). It failed after 20,600 hours of flight operation and 2,600 power cycles (resulting in 10-15 degree thermal cycles). A prelaunch failure on this component type indicated the possibility that during the repackaging process by the subcontractor of the HA 2520, moisture was trapped inside the electronic component. This moisture would combine with the phosphorus dopant in the glass passivation forming phosphoric acid that would enter through pinholes in the passivation layer and attack the nickel-chromium resistors causing failure. The subsystem contractor did not use a dry gas during the repackaging process; instead air with a moisture content of greater than or equal to 5,000 PPM water was used. The prime contractor, with JPL concurrence, felt that additional screening had been
+    sufficient to identify any other faulty HA 2520 amplifiers.</p>
+
+    <p>It was concluded that the in-flight failure may be related to stress induced by thermal cycles resulting from on-off power cycling.</p>
+
+    <p>As a result of this failure, the degraded transmitter B had to be used to return science data at a lower rate for the remainder of the mission.</p>
+
+    <p>Additional Keyword(s): IC Manufacturing and Packaging</p>
+
+    <p>Reference(s): PFR #52621</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>In-flight failures cannot always be conclusively analyzed using available telemetry data.</li>
+
+      <li>Failure to qualify electronic components and assembly capabilities to mission environmental requirements (including numerous power/thermal cycles) increases risk.</li>
+
+      <li>Power cycling can create thermal cycle effects on internal failure mechanisms for electronic components and assemblies.</li>
+
+      <li>Not using dry gas in the repackaging process can allow moisture to be trapped inside electronic components (hermetically sealed packages with a cavity) and possibly create pinholes if they don't already exist. Water can also evolve from thermally induced decomposition of the epoxy die attach. Moisture could then combine with the phosphate glass to generate corrosive phosphoric acid that can make the electronic component inoperative.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Consider using a fault tree matrix during the design phase to identify critical telemetry parameters needed to analyze failures.</li>
+
+      <li>Match component screening and qualification to the mission, including any expected significant thermal cyclic excursions.</li>
+
+      <li>Minimize mission designed power cycling to reduce thermally induced stress.</li>
+
+      <li>Use of dry gas with moisture content below 5000 PPM in repackaging electronic components is a must.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.5.4 ("Safety and Mission Assurance  Practices: Electronic Parts Reliability, Application, and Acquisition") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

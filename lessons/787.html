@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0787: Acoustic Noise Requirement</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0787: Acoustic Noise Requirement</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0787 (Database ID: 787)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/787" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1259; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The fluctuating pressures associated with acoustic energy during launch can cause vibration of structural components over a broad frequency band, ranging from about 20 Hz to 10,000 Hz and above. Such high frequency vibration can lead to rapid structural fatigue. The acoustic noise requirement assures that flight hardware-- particularly structures with a high ratio of surface area to mass-- is designed with sufficient margin to withstand the launch environment.</p> 
+<p>Definition of an aggressive acoustic noise specification is intended to mitigate the effects of the launch environment on spacecraft reliability. It would not apply to the Space Station nor to the normal operational environment of a spacecraft.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>The failure modes produced by acoustic noise excitation are similar to those associated with other types of vibratory structural fatigue. These include failures due to excessive displacement, in which one deflecting component makes contact with another, as well as fractured structural members and loose fasteners. Broken solder joints and cracked circuit boards and wave guides can also occur. Electronic components whose function depends on the motion of structural parts, such as relays and pressure switches, are particularly susceptible.</p> 
+<p>Large flat panels are most susceptible to damage by acoustic energy as they can undergo large displacements while oscillating at low frequency. For a typical spacecraft, this means that a fixed, high gain antenna must be carefully designed and stiffened to avoid bending failures, debonding of composite members, and related problems. In general, any structure with a high ratio of surface area to mass can be expected to experience potential problems in the acoustic noise environment of spacecraft launch. For small payloads, however, random vibration testing is commonly preferred over acoustic noise testing.</p> 
+<p>A typical acoustic noise requirement is illustrated in Figure 1.</p> 
+<img alt="refer to [D] description" border="0" height="341" src="https://llis.nasa.gov/llis_lib/images/1009254main_0787-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009729main_0787-1.txt">[D]</a> 
+<br> Figure 1: Typical Acoustic Noise Requirement 
+<p>Such a figure specifies the level of input sound pressure over the spectrum of frequencies at which the pressure can fluctuate. The pressure is expressed in units of decibels (dB), defined as</p> 
+<img alt="refer to [D] description" border="0" height="96" src="https://llis.nasa.gov/llis_lib/images/1009255main_0787-2.jpg" title="refer to [D] description" width="238"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009730main_0787-2.txt">[D]</a> 
+<br> where P is measured in Pascals (Pa) and P 
+<small><sub>ref</sub></small> is ostensibly the audible limit of the human ear, with a value defined as 2 x 10 
+<small><sup>-5</sup></small> Pa. 
+<br> &nbsp; 
+<p>The decibel pressure levels in acoustic noise spectra are not generally provided at each and every frequency. Instead, they are often specified over bands of width D f, which span 1/3 of a frequency octave. With this method, 3 sound pressure levels will be provided over any interval in which the frequency doubles. Table 1 is an example of such a 1/3 octave band specification for the curve data of Figure 1.</p> 
+<img alt="refer to [D] description" border="0" height="678" src="https://llis.nasa.gov/llis_lib/images/1009256main_0787-3.jpg" title="refer to [D] description" width="295"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009731main_0787-3.txt">[D]</a> 
+<br> Table 1: 1/3 Octave Band Specification 
+<p>When pressure levels are defined with these methods, it is convenient to provide a measure of the overall acoustic noise intensity. The overall sound pressure level (OASPL) provides just such a measure and, for 1/3 octave band specifications, can be calculated as the decibel equivalent of the root sum square (RSS) pressure. Table 2 illustrates such a calculation for the data of Table 1, and shows that the OASPL is 144.9 dB. It should be noted that this figure is greater than any individual sound pressure level in the specification, because it represents an intensity of the spectrum as a whole.</p> 
+<img alt="refer to [D] description" border="0" height="660" src="https://llis.nasa.gov/llis_lib/images/1009257main_0787-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009732main_0787-4.txt">[D]</a> 
+<br> Table 2: Calculation of Overall Sound Pressure Level 
+<p>To quantify the acoustic environment during launch, launch vehicles are often instrumented with internal microphones, which measure noise levels within the rocket fairing. This data is telemetered to the ground for processing and ultimately plotted in the form of a sound pressure level versus frequency spectrum. Since the acoustic forcing function is stochastic, depending on many atmospheric and other variables, data from a number of such flights are generally gathered, and an envelope, such as that of Figure 1, is developed to encompass the historical record of microphone data.</p> 
+<p>This process can be extended and applied to data from a number of launch vehicles. If a launch platform has not yet been manifested for a particular payload, acoustic profiles from a number of candidate rockets can be enveloped, producing an aggressive specification which will ensure design adequacy for the spacecraft. Figure 2 reflects such a process, providing an envelope which encompasses the acoustic environments from three launch vehicles.</p> 
+<img alt="refer to [D] description" border="0" height="423" src="https://llis.nasa.gov/llis_lib/images/1009258main_0787-5.jpg" title="refer to [D] description" width="500"> 
+<a href="https://nen.nasa.gov/llis_lib/txt/1009733main_0787-5.txt">[D]</a> 
+<br> Figure 2: Envelope of Acoustic Flight Data 
+<p><u>Technical Rationale:</u></p> 
+<p>The rationale for acoustic noise testing is straightforward, as acoustic energy is the primary source of vibration input to a space launch vehicle. During the initial phases of a rocket launch, high velocity gases are ejected from motor nozzles and reflected from the ground, creating turbulence in the surrounding air and inducing a vibratory response of the rocket structure. During the subsequent ascent phase of a launch, as the vehicle accelerates through the atmosphere to high velocity, aerodynamic turbulence induces pressure fluctuations which again cause structural vibration. These pressure fluctuations increase in severity as the vehicle approaches and passes through the speed of sound, due to the development and instability of local shock waves. The high-level acoustic noise environment continues during supersonic flight, generally until the maximum dynamic pressure or quotmax Qquot condition is reached.</p> 
+<p>Acoustic energy is transmitted to the mission payload in two ways. First, fluctuating pressures within the payload fairing impinge directly on exposed spacecraft surfaces, inducing vibration in high gain antennae, solar panels and other components having a large ratio of area-to-mass. Secondarily, the fluctuating external pressure field causes an oscillatory response of the rocket structure, which is ultimately transmitted through the spacecraft attachment ring in the form of random vibration. From the spacecraft perspective, this random input is generally lowest at the launch vehicle attachment plane, and increases upward along the payload axis.</p> 
+<p>At the integrated spacecraft level, then, acoustic noise is a primary source of vibration excitation. It is a ìreal worldî environment, should be reflected in spacecraft design requirements, and should be included in virtually any space vehicle test program. These requirements relate specifically to the launch environment and do not apply to the normal operational environment of a spacecraft.</p> 
+<p>References:</p> 
+<ol> 
+ <li>MIL-STD-1540C, Test Requirements for Launch, Upper-Stage and Space Vehicles, United States Air Force Military Standard, 1994.</li> 
+ <li>Steinberg, D. S., Vibration Analysis for Electronic Equipment, New York: John Wiley &amp; Sons, 1986.</li> 
+ <li>Himelblau, H., Fuller, C. and Scharton, T., quotAssessment of Space Vehicle Aeroacoustic Vibration Prediction, Design and Testing,quot NASA CR-1596, July, 1970.</li> 
+ <li>NASA STD XXXX-94, Standard for Payload Vibroacoustic Test Criteria, National Aeronautics and Space Administration, 1994 (Unreleased).</li> 
+ <li>Combination Methods for Deriving Structural Design Loads Considering Vibro-Acoustic, etc., Responses, Reliability Preferred Practice No. PD-ED-1211.</li> 
+ <li>Powered-On Vibration, Reliability Preferred Practice No. PT-TE-1405.</li> 
+ <li>Sinusoidal Vibration, Reliability Preferred Practice No. PT-TE-1406.</li> 
+ <li>Assembly Acoustic Tests, Reliability Preferred Practice No. PT-TE-1407.</li> 
+ <li>Environmental Test Sequencing, Reliability Preferred Practice No. PT-TE-1412.</li> 
+ <li>Random Vibration Testing, Reliability Preferred Practice No. PT-TE-1413.</li> 
+ <li>Vibroacoustic Qualification Testing of Payloads, Subsystems, and Components, Reliability Preferred Practice No. PT-TE-1419</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>In the absence of an acoustic noise requirement for spacecraft design and test, critical hardware which would likely survive other mission phases may fail when exposed to the mechanical stresses of launch. Since the primary vibroacoustic environment occurs at the very beginning of a mission, such failures are likely to have a greater mission impact than failures induced by other space environments over time.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Impose an acoustic noise requirement on spacecraft hardware design to ensure the structural integrity of the vehicle and its components in the vibroacoustic launch environment. Acoustic noise results from the propagation of sound pressure waves through air or other media. During the launch of a rocket, such noise is generated by the release of high velocity engine exhaust gases, by the resonant motion of internal engine components, and by the aerodynamic flow field associated with high speed vehicle movement through the atmosphere. This environment places severe stress on flight hardware and has been shown to severely impact subsystem reliability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager and all subsequent JPL flight projects.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0845: Vibration Analysis of Rotating Ground Support Machinery</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0845: Vibration Analysis of Rotating Ground Support Machinery</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0845 (Database ID: 845)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/845" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-8 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Vibration analysis allows the maximum interval between repairs to be realized through monitoring the actual mechanical condition of a piece of rotating machinery. Equipment down time is not required for monitoring activities to occur. The monitoring, in turn, directly minimizes the number and cost of unscheduled machine outages created by component failures. Hence, optimum equipment availability may be obtained.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Vibration Analysis is predicated on two basic facts:</p>
+
+    <ol>
+      <li>All common failure modes have distinct vibration frequency components that can be isolated and identified.</li>
+
+      <li>The amplitude of each distinct vibration component will remain constant unless there is a change in the operating dynamics of the machinery.</li>
+    </ol>
+
+    <p>Monitoring the vibration from machinery can provide a direct correlation between the mechanical condition and recorded vibration data of each machine. Vibration analysis can be used to identify specific degrading machine components or failure modes of machinery before serious damage occurs.</p>
+
+    <p>Typically, 80% of the machinery problems experienced can often be classified as either imbalance or misalignment. Imbalance and misalignment can lead to premature bearing, coupling, shaft seal, and gear wear. Most of the problems can be rectified by simply improving maintenance standards and procedures and by eliminating careless or sloppy work.</p>
+
+    <p>Also, imbalance and misalignment do not only occur in established equipment over a period of time, they can be present after initial installation of a new piece of machinery. Vibration analysis can be used to validate that the new equipment has been properly installed. This would prevent the introduction of failure causes which would have a detrimental effect on the life of the equipment and the process which the equipment supports.</p>
+
+    <p>Recent advancements in microprocessor technology and the development of PC based software have simplified data acquisition, automated data management, and minimized the need to have professional vibration consultants available to interpret the data. Commercially available systems are capable of routinely monitoring, trending, evaluating, and reporting the mechanical condition of all mechanical equipment.</p>
+
+    <p>Vibration analysis was started in 1988 by the Shuttle Processing Contractor (SPC) in an effort to reduce the high failure rates experienced by the rotating machinery associated with Environmental Control System (ECS) located in the Orbiter Processing Facility (OPF) at the Kennedy Space Center (KSC). The vibration analysis program initially monitored 66 pieces of equipment associated with the ECS and the Orbiter Portable Purge Units used at the OPF and the two launch pads of Launch Complex 39. The information gathered was used to effectively reduce the failure rate and down time of the ECS equipment.</p>
+
+    <p>Because of the success achieved with the ECS equipment, the SPC expanded the vibration analysis program to include all other Space Shuttle Program ground system equipment for which it had maintenance responsibility at KSC. The equipment considered was machine-train components. Machine-train components consist of a primary driver or drivers (i.e., electric motor, turbine), all intermediate drives (i.e., couplings, belts, gear box), and all driven machine components (i.e., fans, pumps, drums).</p>
+
+    <p>All the SPC equipment was assessed. A list of equipment that would lend itself to vibration analysis was created. Due to the number of items identified, the SPC categorized the equipment into a priority listing of equipment that would be of benefit to the Space Shuttle Program.</p>
+
+    <p>Once the equipment to be monitored was identified, a process was established to routinely obtain vibration data from specific locations on the equipment. Preparation for data collection involved determining what type of data equipment was necessary, what type of data to collect, where to take the measurements (i.e., shaft, bearing, housing, mount, coupling, gears, or fan), how many degrees of freedom for each component were to be measured (i.e., x-axis, y-axis, z-axis, radial), and should the measurement devices be of a permanent or temporary type attachment.</p>
+
+    <p>All of the data is collected via a portable handheld microprocessor-based instrument. This removes the potential for human error, reduces manpower requirements, and automates the acquisition of vibration data. Due to the massive amount of data that is collected, a reliable PC based automated data management system was selected that enables the vibration data to be stored, trended, and recalled for use in developing long-term trends.</p>
+
+    <p>It is important to note that the bearings in a machine-train are the primary limiting factor for operating life. The first indication of machinery problems often develops in the vibration signature of the machine's bearings. However, the bearings are typically not the cause of the problem. But since they are the weakest link in most machinery, the bearings are usually the first to fail. Vibration checks at points other than the bearings are also taken to check for structural problems.</p>
+
+    <p>Experience has proven that on new or refurbished equipment, vibration data should be collected once a week for four consecutive weeks. This will enable a trend to be established for future comparison. The frequency of monitoring a piece of equipment after establishing an initial baseline is based on the following considerations:</p>
+
+    <ul>
+      <li>The machine's operating modes (i.e., intermittent or continuous speeds/loads).</li>
+
+      <li>The machine's operating environment.</li>
+
+      <li>The importance of the machine's function.</li>
+
+      <li>Data derived from comparison of the initial baseline.</li>
+
+      <li>Availability of spare parts.</li>
+    </ul>
+
+    <p>To regularly acquire enough data for complete diagnosis of a machine's potential failure would be "overkill" and unduly burden the data collection process. The periodic collection of vibration data on a prescribed route for trending purposes should be treated as a tool to indicate pending problems. Industry standards are utilized to determine a problem condition unless specific pieces of equipment dictate more stringent or lax alarm limits.</p>
+
+    <p>Once a possible problem is identified, more data is collected from the equipment in order to aid the vibration analyst in determining the exact cause of the anomaly. In order to resolve the anomaly in an efficient manner, "if" and "what type" of information is needed. The questions asked are:</p>
+
+    <ul>
+      <li>What is the problem?</li>
+
+      <li>What is the machine's history? What has the operator observed?</li>
+
+      <li>When did the problem start? Was it sudden or gradual? Did the machine ever run properly?</li>
+
+      <li>Have any changes been made recently? Modifications? Realignments? Changes in machine speed?</li>
+    </ul>
+
+    <p>Other NASA centers utilize vibration analysis for their own purposes as shown by Reference 4.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Lockheed Space Operations Company Predictive Engineering Technology Program Implementation Plan.</li>
+
+      <li>Mobley, R. Keith: "An Introduction to Predictive Maintenance," Van Nostrand Reinhold, 1990.</li>
+
+      <li>P/PM Technology, Volume 5, Issue 3 -May/ June 1992.</li>
+
+      <li>"Absolute Ball Bearing Wear Measurements From SSME Turbopump Dynamic Signals," by J. M. Hine. Proceedings of the 59th Shock and Vibration Symposium, Volume III, pp. 45- 55, October 1988.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Predictive maintenance is a condition driven preventive maintenance program. Instead of relying on industrial average-life statistics to schedule maintenance activities, predictive maintenance uses direct monitoring of the mechanical condition, system efficiency, and other indicators to determine the most efficient time to service a piece of machinery. Since mechanical systems or machines account for the majority of equipment, vibration monitoring is generally the key component of most predictive maintenance programs because it can provide the greatest benefits. Also, equipment down time is not required for vibration analysis to occur.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use the noise or vibration created by mechanical equipment to determine the actual condition of the equipment. Vibration analysis can be used as a nondestructive method for detecting incipient problems in rotating machinery such as imbalance, misalignment, and damaged or worn components and thereby prevent catastrophic failures from occurring. Vibration analysis also can be used for determining what maintenance actions are necessary for a piece of rotating machinery and the frequency of those actions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the following KSC equipment.</p>
+
+    <ul>
+      <li>Cooling Fans for 2000 KW Generators on the Crawler/Transporter.</li>
+
+      <li>Environmental Control System at the Orbiter Processing Facility and the launch pads of Launch Complex 39.</li>
+
+      <li>Liquid Oxygen Pumps at the launch pads of Launch Complex 39.</li>
+
+      <li>Orbiter Dock Seal Blowers at the Payload Changeout Room on the launch pads of Launch Complex 39.</li>
+
+      <li>Payload Bay Area Access Bridge/Bucket at the Orbiter Processing Facility</li>
+    </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

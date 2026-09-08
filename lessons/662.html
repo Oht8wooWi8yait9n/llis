@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0662: Uninterruptable Power Supply Systems (UPS)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0662: Uninterruptable Power Supply Systems (UPS)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0662 (Database ID: 662)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/662" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3009 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Enhances mission reliability and prevents catastrophic mission failure. Use of UPS can prevent equipment damage by giving personnel time to safe a system or to provide power to critical equipment such as oxygen analyzers or emergency lighting until personnel can move to another area. In addition, UPS can be used to provide filtered AC power to equipment and eliminates disturbances in the power such as spikes, undervoltages (dips and sags), outage flicker, and transient noise which can affect system performance. This significantly increases reliability of electronic equipment using AC power.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>UPS can be used where loss of power during an operation is considered critical or where loss of power may cause extensive equipment damage or data loss.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>An UPS typically does two things: (1) It either provides power to enable the safe shutdown of equipment and saving data to a nonvolatile medium, or (2) it provides power to equipment over the duration of fault/failure, enabling equipment to operate continuously. Safe shutdown is completed through embedded programming that communicates shutdown protocol to the user and/or initiates shutdown procedures automatically at the point of fault/failure. Continuous operation is primarily a function of load draw and battery type and size.</p>
+
+    <p>There are a variety of end-user UPS applications, each with a specific price/performance demand. Some of these needs may be served best by a off-line UPS or an on-line UPS. Most UPS have intelligent features such as automatic battery check, automatic inverter check, AC volts in and out, battery alarm, internal temperature, alarm conditions of internal failures, and the number of power outages. The costs of implementing a UPS safety net can be minimized by choosing the right UPS topology and features for each application.</p>
+
+    <p>In the networking environment, on-line UPSs are being assigned to critical processing and data traffic nodes, file servers, routers, etc. Off-line UPSs provide protection and power coverage to network printer/output stations, input/output terminals, and standalone PCS.</p>
+
+    <p>Basically, an UPS system converts some or all of the AC power into DC for the battery and then back into AC power for the load. This double conversion has many variations; however, all of the designs incorporate an inverter to convert DC into AC. It is the inverter operation which defines an UPS as on-line or off-line. The inverter in an off-line UPS operates only when needed, conversely, the inverter in an on-line UPS operates continuously.</p>
+
+    <p>An off-line UPS is inherently more cost effective than an on-line because the inverter is off most of the time. However, when switching from main power to battery power, known as transfer time, an off-line UPS stops providing power to equipment for a few milliseconds (typically up to 4ms). Most modern computer equipment can sustain a power switch time of up to 300ms, but some older equipment may shut down during the transfer time. An on-line UPS has no transfer time because the inverter continuously supplies battery power to the load whether the main power is active or not.</p>
+
+    <p>An UPS must be served from a dedicated circuit unaffected by other loads, and the breaker serving the circuit must be provided with safeguards to prevent inadvertent or unauthorized turnoff. The UPS battery also requires monitoring; battery failure is the most common UPS problem. Life expectancy in small UPSs is only a few years due to the batteries which are replaced in accordance with the owners manual. Some UPSs contain self-diagnostics or other test features to provide personnel an indication of battery condition or component malfunction. By utilizing these features, problems can be detected before they announce themselves by failure of the unit to provide power.</p>
+
+    <p>UPS are used at many locations throughout Kennedy Space Center. Some of the locations where UPSs are used are the Crawler Transporter, Orbiter Processing Facility, and Launch Processing System.</p>
+
+    <p><i><b>Crawler Transporter</b></i></p>
+
+    <p>The Crawler Transporter, Figure 1, is used to transport the Mobile Launch Platform and the space shuttle from the Vehicle Assembly Building to launch Pad A or B.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009024main_0662-1.jpg"  HEIGHT="202"  BORDER="0" /><A HREF="/llis_lib/txt/1009512main_0662-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>The UPS on the Crawler consist of the following major equipment shown in Figure 2.</p>
+
+    <ul class="noindent">
+      <li>Ferroresonant Transformer</li>
+
+      <li>Small Charger</li>
+
+      <li>Batteries</li>
+
+      <li style="list-style: none">Inverter</li>
+    </ul>
+    <br />
+    <br />
+
+    <p>The Crawler Transporter contains a system that operates as an on-line reverse transfer system and has the following operating modes:</p>
+
+    <dl>
+      <dd><u>Normal</u>. Under normal operating conditions, the power path is shown by the black arrows in Figure 2. The load is powered by an AC supply line that has been filtered through a ferroresonant transformer. When AC on-line power is present, the small charger and inverter are normally off. The white arrows show the elements are connected to the system, but are not receiving power. If the battery charge falls below a predetermined level, the small charger will turn on and recharge the batteries. The ferroresonant transformer cleans up the raw line power; filtering out spikes, sags, surges, noise, lightning, and brownouts.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Emergency</u>. When AC line power fails or goes out of tolerance, Figure 3, the inverter turns on and supplies AC power from the battery source. The route of power is shown by the black lines. During the transfer process, the load never sees a break in the output of the system during transfer from normal AC line supply to inverter battery supply or back to line.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Recharge</u>. When AC power is restored, power flows to both the small charger and ferroresonant transformer. The inverter turns off and the small charger is turned on to trickle charge the batteries.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Bypass</u>. If the UPS must be taken out of service for maintenance the alternate AC power is not required since maintenance is done when no shuttle transport is taking place. If the UPS goes down during an transport operation, direct AC power or bypass is not fed into equipment because of voltage spikes and dips during operation. Instead, the Crawler is stopped until repairs are made or the unit is replaced.</dd>
+    </dl>
+    <br />
+    <br />
+
+    <p>Power sustains the operation of the programmable logic controllers and the man machine interface units. The man machine interface units are cathode ray tube screens used by operators to control and monitor several crawler systems. If a power outage occurs during transport of the space shuttle, the Crawler Transporter propel and/or jacking system will automatically stop. The UPS provides power so that operators can obtain information from the various crawler systems and to determine what caused the Crawler to stop. This expedites the troubleshooting process by having the programmable logic controllers operational during a system anomaly.</p>
+
+    <p>The Crawler has two means of AC power either through shore power or during operation where AC power is generated on board through a diesel engine and generator set. In either case, the UPS cleans the AC power from either source to provide power to sensitive electronic equipment such as programmable logic controllers and the man machine interface units. Filtered power precludes against possible equipment damage and provides a smoother operating system, thus improving system reliability.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009025main_0662-2.jpg"  HEIGHT="209"  BORDER="0" /><A HREF="/llis_lib/txt/1009513main_0662-2.txt"  >[D]</A><br />
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009026main_0662-3.jpg"  HEIGHT="208"  BORDER="0" /><A HREF="/llis_lib/txt/1009514main_0662-3.txt"  >[D]</A><br />
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009027main_0662-4.jpg"  HEIGHT="445"  BORDER="0" /><A HREF="/llis_lib/txt/1009515main_0662-4.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p><i><b>Orbiter Processing Facility</b></i></p>
+
+    <p>An UPS system is in the Orbiter Processing Facility High Bay 3 provide reserve power for 20 minutes to the oxygen deficiency monitors, hazard warning lights, emergency exit lights, environmental monitoring data system, and paging area warning system. The UPS in the Orbiter Processing Facility High Bay 3 consists of the following major equipment shown in Figure 4. The UPS operates as an on-line reverse transfer system shown in Figure 2 has the following modes:</p>
+
+    <dl>
+      <dd><u>Normal</u>. The critical AC load is continuously powered by the UPS inverter. The rectifier/charger derives power from a utility AC source and supplies DC power to the inverter, while simultaneously float charging the battery. The UPS also provides clean power to equipment by filtering out spikes, sags, surges, noise, lightning, and brownouts.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Emergency</u>. Upon failure of utility AC power, the critical AC load is powered by the inverter, which without any switching, obtains its power from the battery plant. There is no interruption in power to the critical load upon failure or restoration of the primary AC source.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Recharge</u>. Upon restoration of the utility AC source, the rectifier/charger powers the inverter and simultaneously recharges the battery. This is an automatic function and will cause no interruption to the critical AC load.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Bypass</u>. If the UPS must be taken out of service for maintenance or repair, the static switch will transfer the critical load to an alternate source without an interruption. The static switch is provided as a to draw-out assembly so that the static switch can be electrically isolated for maintenance. Once the load has been transferred to the alternate AC source, retransfer of the load is accomplished by automatically synchronizing the UPS and paralleling the inverter with the alternate AC source, allowing the inverter to ramp into the load and then disconnecting the alternate source.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Off-Battery</u>. If the battery only is taken out of service for maintenance, it is disconnected from the rectifier/charger and inverter by means of a Circuit Breaker. The UPS will continue to function and meet all of the steady state performance criteria specified herein except for the reserve time capability.</dd>
+    </dl>
+    <br />
+    <br />
+
+    <p><i><b>Launch Control Center UPS</b></i></p>
+
+    <p>The main Uninterruptible Power System (UPS) for the Launch Control Center (LCC) provides quality uninterruptible 208 VAC 60 Hz 3 phase power for electronic loads to distribution panels for the Record and Playback Subsystem (RPS), the Complex Control Subsystem (CCS), and the Checkout Control &amp; Monitor Subsystem (CCMS). The UPS is critical because it supplies power to the CCMS which is required to safe the Space Shuttle critical systems. Examining the critical loads, half of the consoles operate off UPS 1 bus while the other half operate off UPS 2 bus. The individual racks operate either off both buses or the active operate off one bus and the standby operate off the other UPS bus.</p>
+
+    <p>The UPS consist of the following major equipment:</p>
+
+    <ul>
+      <li>Uninterruptible Power Modules (UPMs) Power Processors including rectifier/chargers and inverters.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>UPM Battery Banks, one each per UPM plus one spare, including batteries and battery racks.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>UPS Bypass Output Switchboard, including system metering and system status displays.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Vendor UPS Equipment</li>
+    </ul>
+    <br />
+    <br />
+
+    <p>The UPS is designed to operate as an on-line reverse transfer system in the following modes:</p>
+
+    <dl>
+      <dd><u>Normal</u>. The critical load bus is continuously supplied by the UPMs which derive power from the commercial AC source through a primary power supply system and simultaneously float charge the batteries. The UPMs filter AC power to sensitive electronic equipment.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Emergency</u>. Upon failure of the primary AC power, the critical load is supplied by the inverter portion of the UPM's, which, without any switching, shall obtain power from the storage batteries. There is no interruption to the critical bus upon failure or restoration of the commercial AC source. Upon restoration of primary AC power, the rectifier/charger power the inverters and simultaneously recharge the batteries. This is an automatic function and causes no interruption to the critical load.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Bypass</u>. If the UPS must be taken out of service for maintenance or repair of multiple internal failures, the static switch transfers the load to the alternate AC power without an interruption. The static switch is provided as a draw-out assembly so that the static switch can be electrically isolated for maintenance once the load has been transferred to the alternate AC power. (The static switch is also capable of providing fault clearing current to the load when the alternate AC power is available.) Retransfer of the load is accomplished by automatically synchronizing the UPS to the alternate source, paralleling the inverters with the alternate source, and then disconnecting the alternate source.</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><u>Non-Redundant</u>. If one of the UPM's is taken off-line, but the load demand does not exceed the capacity on the UPM's remaining on-line, the UPS will continue to furnish conditioned power from the inverters and operate in a non-redundant mode. Emergency and bypass modes shall operate as described above.</dd>
+    </dl>
+    <br />
+    <br />
+
+    <p>NOTE: INPUT SOURCE IS TWO INDEPENDENT SOURCES, 1 FOR UPS 2nd FOR STATIC BYPASS INPUT.</p>
+
+    <p><b>Basic Requirements of an UPS System</b></p>
+
+    <p><u>Lightning and surge protection</u>. The unit should meet the requirements of IEEE standard 587 Category A or B. These requirements require the unit to withstand surges of 6000 V without damage to itself, and preventing the surge from reaching the protected load.</p>
+
+    <p><u>Isolation</u>. The UPS should have grounding and bonding provisions to reduce neutral-to-ground noise to zero, thereby preventing common mode noise from reaching the protected equipment. Line noise can cause possible malfunction to equipment.</p>
+
+    <p><u>Voltage regulation</u>. Equipment voltage requirements must be maintained within the limits prescribed by the manufacturer.</p>
+
+    <p><u>Continuous, no-break power</u>. A true UPS continuously serves the load through the UPS support battery, and the load never sees a power break when utility power is lost. Some units are standby power systems, whereby the load is transferred to the UPS only when utility power is lost or deviates from prescribed power quality parameters. A continuous no-break power unit must be used if no power interruption, even of a momentary nature, can be tolerated by the load.</p>
+
+    <p><u>Output power waveform</u>. Electronic equipment and computers are designed with the assumption that input power is an AC sine wave. All UPSs transform DC battery power from a constant output, straight line, to a variable output, sine wave, or a reasonable approximation thereof. With some low cost units, a "reasonable approximation" may be an abrupt square wave. It is important to adhere to the requirements prescribed by the manufacturer of the protected equipment.</p>
+
+    <p><u>Load rating basis</u>. More than 90% of computer equipment employs input switching-mode power supplies. The UPS load rating should be based on a switching-mode power supply load, rather than some unrelated load such as lighting or motors.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Valerie A. Price, "UPS systems: Powering Up Process Performance," Intech, July 1994, pp. 38-41.</li>
+
+      <li>Vladi Basch, "Fallacies and Facts of UPS Systems," Plant Engineering, June 3, 1993, pp. 72-74.</li>
+
+      <li>SAA09UP05-001, "System Assurance Analysis of the Uninterruptable Power Supply System at the Orbiter Processing Facility High Bay-3"</li>
+
+      <li>SAA09UP01-001, "System Assurance Analysis of the Uninterruptable Power System (Exide) UPS 2, 2A, 3, 3A at the Launch Control Center"</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>An UPS cost should be weighted against the possible consequences of inadequate protection. Some of the consequences that should be considered are:</p>
+
+    <ul>
+      <li>Repair or replacement cost for damaged electronic equipment.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Safety hazards that might result from a control system malfunction or loss of monitoring systems to alert personnel of hazardous conditions.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Customer dissatisfaction over schedule slips due to lost information or equipment down time.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Labor costs of inactive personnel and possible overtime expense.</li>
+    </ul>
+    <br />
+    <br />
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Enhance system, subsystem, and component reliability by providing an uninterruptable power supply (UPS) system.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program Ground Support Equipment, including the Crawler Transporter, Orbiter Processing Facilities and Launch Processing System.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

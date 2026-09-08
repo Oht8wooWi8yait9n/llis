@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0410: Radio Frequency Interference Caused by Multiple Viking Spacecraft in Deep Space Station Antenna Beamwidth (1976)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0410: Radio Frequency Interference Caused by Multiple Viking Spacecraft in Deep Space Station Antenna Beamwidth (1976)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0410 (Database ID: 410)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1996-06-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/410" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>(Relevant Historical Lesson(s) Learned)</p>
+
+    <p>The potential for mutual interference among the two Viking Orbiters (on Deep Space Network (DSN) channels 9 and 20, with 'backup' on 16) and the two Viking Landers (both on DSN channel 13) was recognized during the link design and test phase. Multiple vehicle interferences can occur when modulation on the carrier of one Viking channel produces sideband energy, which extends into a second channel. In particular, discrete spectrum ranging produces sideband centered about 516 kHz clock and its harmonics, and the orbiter high rate telemetry produces sideband energy centered about 240 kHz subcarrier and its harmonics.</p>
+
+    <p>Compatibility testing was accomplished at Compatibility Test Area 21 (CTA 21). This testing identified the most severe (likely) interference condition as false uplink RF acquisition by and out-lock vehicle of the uplink sideband intended for a second vehicle during range acquisition. Loss of downlink RF from the first vehicle would also be experienced at the station, due to the vehicle's shift from one-way to two-way mode. Several other conditions, involving degradation of the RF carrier tracking, ranging link delay measurements, and telemetry signal-to-noise ratio, were also identified. The results of the analysis and testing were stated in a recommendation not to fly the backup channel 16 and in various mission rules as to when ranging acquisitions would be possible.</p>
+
+    <p>Ranging modulation interference to a one-way Orbiter occurred several times during the Viking Extended mission. Downlink carrier lock and telemetry data were lost as predicted.</p>
+
+    <p>Additional Keyword(s): Multiple Mission Planning</p>
+
+    <p>Reference(s):</p>
+
+    <ol>
+      <li>JPL letter 339-FVS;fv Fred Stuhr to Mr. H. R. Kowitz of Viking Project Office of the Langley Research Center of NASA, Oct. 4, 1974, reporting the CTA-21 test results.</li>
+
+      <li>"Deep Space Network to Viking Orbiter Telecommunications Performance During the Viking Extended Mission, Nov. 1976 Through Feb. 1978", in DSN Progress Report 42-45, March and April 1978, F. H. J. Taylor.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>The situation of two deep space vehicles in the same ground station antenna beamwidth results in possible mutual RF interactions not present with ordinary single-spacecraft tracking.</li>
+
+      <li>The Viking experience showed that the types and magnitude of interference can be adequately analyzed (or determined by test) and that the resulting operational constraints can be adequately specified.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Although the Viking situation continued for more than two years, there are shorter periods when vehicles from different projects (for example, Voyager and Galileo) may be less than a few tenths of one degree from one another, as seen from a station. This potential interference must be properly accounted for in each project's frequency allocation process and mission design.</p>
+
+    <p>On Viking there was no operational software available either within the Project or the Deep Space Network to use routinely to predict when such interference would occur. It was therefore necessary to preclude the possibility of interference (by forbidding ranging during critical spacecraft data return sequences) by operational rule. Also, it was necessary to accept occasional interferences and to acquaint the real-time operations people to the "signature" of these interferences.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.2.4 ("Engineering Practices: Telecommunication Design") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

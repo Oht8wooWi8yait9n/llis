@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6657: Reduce MOS Development Cost/Risk by Matching MOS to Existing AMMOS Capabilities</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6657: Reduce MOS Development Cost/Risk by Matching MOS to Existing AMMOS Capabilities</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6657 (Database ID: 6657)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-06-05</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Ground Operations, Software, Spacecraft, Standard, Software Engineering, Spacecraft and Spacecraft Instruments, Ground support systems, Mission control Planning, Mission operations systems, Mission concepts and life-cycle planning, Requirements critical to costing and cost credibility, Engineering design and project processes and standards, Long term sustainability and maintenance planning, Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6657" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+A Mission Operations System (MOS) is a ground-based control system that commands a spacecraft flight system and spacecraft/ground communications as needed to obtain mission science and programmatic data, while managing mission resources such as the Deep Space Network (DSN). An MOS is composed of hardware, software, people, processes, and facilities designed and implemented for a specific spaceflight mission. In the 1980s, the NASA/Caltech Jet Propulsion Laboratory (JPL) developed the Advanced Multi-Mission Operations System (AMMOS) that provides an MOS framework and functionality (Figure 1) that can be used for multiple deep space NASA missions by adapting it to the needs of different missions. With continuous AMMOS use from decade to decade, its MOS capabilities have continued to expand to meet the needs of new missions (see Figure 2).</br></br>
+
+<CENTER>  <TABLE BORDER=0>
+<TR> <TD><IMG  WIDTH="600"  ALT="Figure 1 is a color diagram that combines four organizational tables representing the four elements of an MOS-- Planning & Sequencing, Downlink, Nav, and Operations Engineering. Each MOS product/service provider is represented by a color, or by a combination of colors representing more than one provider-- blue for AMMOS Services), gold for AMMOS Tools, green for Project-Supplied, and white for DSN Service. Under Planning & Sequencing, we have Command Radiation (white), Sequence & Command Transmission (green & gold), Sequence & Command Generation (blue & gold), Observation Planning (blue & gold), and Mission Planning (blue & gold). Under Downlink, we have Telemetry & NAV Data Capture (white), Flight System Monitoring (green), Telemetry Processing (green & gold), Data Archive (blue & gold), Instrument Health & Performance Analysis (green), Spacecraft Health & Performance Analysis (green & gold), and Instrument Data Processing (blue & gold). Under NAV, we have Mission Design (blue), Solar System Dynamics (blue), and NAIF/SPICE (blue & gold). Under Operations Engineering, we have GDS Integration, Test, Deployment & Support (blue & gold), Operations System Engineering (green), Mission Support Facilities (blue), GDS Engineering Support (blue & gold), Project System Simulation (green), Flight Software Maintenance (green), Configuration Management (blue & gold), Operations Training (green), Ops Mission Assurance (blue), Anomaly Response (green), and Product & Data Accountability (green)."  TITLE="Figure 1 is a color diagram that combines four organizational tables representing the four elements of an MOS-- Planning & Sequencing, Downlink, Nav, and Operations Engineering. Each MOS product/service provider is represented by a color, or by a combination of colors representing more than one provider-- blue for AMMOS Services), gold for AMMOS Tools, green for Project-Supplied, and white for DSN Service. Under Planning & Sequencing, we have Command Radiation (white), Sequence & Command Transmission (green & gold), Sequence & Command Generation (blue & gold), Observation Planning (blue & gold), and Mission Planning (blue & gold). Under Downlink, we have Telemetry & NAV Data Capture (white), Flight System Monitoring (green), Telemetry Processing (green & gold), Data Archive (blue & gold), Instrument Health & Performance Analysis (green), Spacecraft Health & Performance Analysis (green & gold), and Instrument Data Processing (blue & gold). Under NAV, we have Mission Design (blue), Solar System Dynamics (blue), and NAIF/SPICE (blue & gold). Under Operations Engineering, we have GDS Integration, Test, Deployment & Support (blue & gold), Operations System Engineering (green), Mission Support Facilities (blue), GDS Engineering Support (blue & gold), Project System Simulation (green), Flight Software Maintenance (green), Configuration Management (blue & gold), Operations Training (green), Ops Mission Assurance (blue), Anomaly Response (green), and Product & Data Accountability (green)."  SRC="/llis_lib/images/1048517main_2012-04_MOS_Fig1_small_600_517.jpg"  HEIGHT="517"  ALIGN="Bottom"  BORDER="0" /></TD>
+<TR> <TD><b>Figure 1.</b> Typical decomposition of an MOS into functional elements, tools, and services,</br> indicating elements that can be provided from the AMMOS.</TD>
+</TABLE> </CENTER>
+</br>
+
+The desire by projects to maximize spacecraft and instrument capabilities may tempt them to develop unique MOS hardware and software instead of maximizing the use of AMMOS resources. However, use of a multi-mission MOS (MMOS) like AMMOS offers the opportunity for reduced development and operations costs. Almost all deep space (and some Earth orbital) missions make use of AMMOS tools and services (Figure 2) maintained by the JPL Multimission Ground Systems and Services Office (MGSS), although the extent of use varies. Table 1 illustrates the percentage of AMMOS software that was used by several JPL projects in developing their Ground Data System (GDS), the software and hardware elements of the MOS. Only 68 percent of Mars Exploration Rover's (MER's) GDS software was obtained from AMMOS because MER had unique rover surface navigation and control needs. In contrast, Dawn is a recent project with a non-planetary mission that was able to take advantage of increasing AMMOS maturity to make extensive use of it. In addition to the software development cost savings, an AMMOS-derived GDS may feature lower recurring operations costs and risk because many anomalies that would have occurred during flight operations have already been fixed and because personnel have gained prior experience using the system. AMMOS use also promises a shorter development cycle because AMMOS adaptation takes less time than development of a unique MOS.</br></br>
+
+<CENTER>  <TABLE BORDER=0>
+<TR><TD><IMG  WIDTH="600"  ALT="Figure 2 is a color matrix that associates a list of MGSS-provided tools and services (along the Y-axis) with a list of 6 Earth/Lunar, 5 Heliophysics, 20 Planetary Science, and 5 Astrophysics projects (along the X-axis). The cells are either blank or populated with an “X” to indicate whether the project uses the MGSS tool or service. The matrix shows that a few (particularly Earth/Lunar) projects use only a few AMMOS capabilities, but most of the projects (particularly Planetary Science) are heavy users, with most of the cells in the column filled with an “X”."  TITLE="Figure 2 is a color matrix that associates a list of MGSS-provided tools and services (along the Y-axis) with a list of 6 Earth/Lunar, 5 Heliophysics, 20 Planetary Science, and 5 Astrophysics projects (along the X-axis). The cells are either blank or populated with an “X” to indicate whether the project uses the MGSS tool or service. The matrix shows that a few (particularly Earth/Lunar) projects use only a few AMMOS capabilities, but most of the projects (particularly Planetary Science) are heavy users, with most of the cells in the column filled with an “X”."  SRC="/llis_lib/images/1048518main_2012-04_MOS_Fig2_small_600_434.jpg"  HEIGHT="434"  ALIGN="Bottom"  BORDER="0" />
+<br/><span class="detailImageDesc"></span></TD>
+<TR> <TD><b>Figure 2.</b> List of current MGSS customers (Reference (1)). The yellow highlighted projects</br> are JPL-managed.</TD>
+</TABLE> </CENTER></br>
+
+For heavy AMMOS users, much of the project’s MOS development cost may involve the cost of customizing AMMOS capabilities: it is mostly AMMOS hardware and software that needs to be customized by a project. The Gravity Recovery and Interior Laboratory (GRAIL) project was able to customize a GDS by adapting AMMOS software at minimal cost, whereas developing a unique GDS instead would have required development of up to 10 million source lines of new code (MSLOC) at a cost of at least ten-fold. Even with the maximum use of AMMOS capabilities, however, projects still need to develop some project-specific MOS elements or tools. For example, it would not be practical for AMMOS to supply instrument-specific science data analysis software because it would have to be so heavily customized to meet the needs of the particular instrument. The recent GRAIL (Reference (2)), Stardust/NExT (New Exploration of Comet Tempel 1) (Reference (3)), and EPOXI (Extrasolar Planet Observation and Deep Impact Extended Investigation) projects were very successful in containing MOS development costs and experienced few performance problems during the mission because they tailored their MOS needs to the established AMMOS capabilities.</br></br>
+
+Despite the cost, schedule, and risk mitigation benefits, adapting an MOS to a project presents some challenges. AMMOS must provide mission operations engineering tools and services that can support a wide and increasing range of deep space mission types (e.g., orbiters, landers, rovers, penetrators, balloons). Reference (4) provides an example of the complexity of the operations and science data return planning process for a Mars rover. Novel hardware on a spacecraft may necessitate operating software, tools, and processes that are not in the AMMOS inventory. However, the present AMMOS bears little resemblance to the AMMOS of the 1980s: with each additional spaceflight project it has served, AMMOS capabilities have expanded to allow a new project to select more AMMOS elements for adaptation to their MOS. Without AMMOS, it would cost NASA approximately an additional $300M over 10 years to design and implement an MOS for each project. </br></br>
+
+<U>References</U>:</br> <ol><li> 
+Terry D. (Dave) Linick, "NASA's Advanced Multimission Operations System (AMMOS)," Presentation to the NASA Director of Science and Robotic Exploration, revised November 28, 2011.</li><li> 
+Charles E. Bell, "GRAIL Project Lessons Learned (Initial Release)," NASA Structure Management (NSM) No. 408256, October 7, 2011, Paragraph MOS-5.</li><li> 
+Don Sweetnam, NExT Lessons Learned Project Document, July 5, 2011, Paragraph GDS-4.</li><li>  
+"Managing Rover-Orbiter Relay Link Prediction Variability," LLIS #1765, NASA Engineering Network, October 6, 2006. <small>http://www.nasa.gov/offices/oce/llis/imported_content/lesson_1765.html</small></li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The NASA engineering culture prizes MOS development plans that offer to maximize the performance achievable by ground and flight systems. Nevertheless, NASA projects have saved significant MOS development costs and mitigated risk by adapting existing AMMOS capabilities to the new mission, instead of developing a new MOS, to the maximum extent feasible. Rather than constraining innovation, the use of proven AMMOS capabilities may provide projects with more freedom to innovate because most of the risks have been mitigated by fixing anomalies on previous projects.
+</section>
+<section><h2>Recommendation(s)</h2>
+Spaceflight projects may derive significant benefits from being AMMOS “capability-driven,” matching their MOS needs to the established AMMOS capabilities instead of selecting only those AMMOS elements that precisely match mission needs. They should perform a review of the AMMOS system to determine which AMMOS software, tools, and services can be customized to match their mission characteristics, and which project MOS needs are unique and truly require new MOS development.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.2.3 (“Management Practices: Planning”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 7,” JPL DocID 58032, September 30, 2008.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

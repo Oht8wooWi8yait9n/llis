@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0736: Arcjet Thruster Design Considerations for Satellites</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0736: Arcjet Thruster Design Considerations for Satellites</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0736 (Database ID: 736)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/736" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1253; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Long-term spacecraft and propulsion system compatibility in near earth orbital environment has been demonstrated by several experimental test flights. This thruster system is currently being incorporated into the new series of Martin Marietta satellites as well as a new series of military reconnaissance satellites. The benefits are a decrease in propulsion system weight, a potential reduction in mission cost, and an increase in orbital lifetime and satellite reliability.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Electrothermal (arcjet) engines and thrusters have been around for the past thirty years. It has only been in the last ten years that these devices have gained popularity due to the decrease in weight of the power conditioning systems and improved performance of the thrusters. Lewis Research Center and Olin Aerospace Corporation are jointly working on several varieties of low power arcjet thrusters for use as North-South stationkeeping thrusters for satellites.</p>
+
+    <p>The mechanics of electrothermal propulsion is shown in the schematic of Figure 1. Propellant is pumped into a chamber where it is passed through an arc and electrically heated. This hot gas is then thermodynamically expanded through a nozzle and accelerated to supersonic speeds. Exhaust velocities of 1000 to 5000 m/sec have been produced with thrust ranges of 0.01 N to 0.5 N.<sup><small>1</small></sup></p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009191main_0736-1.jpg"  HEIGHT="289"  BORDER="0" /><A HREF="/llis_lib/txt/1009670main_0736-1.txt"  >[D]</A>
+    </center>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009192main_0736-2.jpg"  HEIGHT="305"  BORDER="0" /><A HREF="/llis_lib/txt/1009671main_0736-2.txt"  >[D]</A>
+    </center>
+
+    <p>Several areas of development at Lewis Research Center in cooperation with outside vendors, have focused on the advancement of electrothermal propulsion and integration of this into commercial and military satellites as a reliable maneuvering propulsion system. These areas include investigations into new propellants, low power capabilities, and advanced power processing.</p>
+
+    <p><u>Propellant considerations</u></p>
+
+    <p>Current propellant considerations for north-south stationkeeping have been ammonia, hydrogen, and hydrazine. The ideal propellant for arcjet engines is one which can be stored easily, has a low atomic mass, and favorable thermodynamic conditions during heating and expansion. The chart below shows the advantages and disadvantages for the various arcjet thruster propellants.</p>
+
+    <center>
+      <table border="0" width="95%">
+        <tr>
+          <th align="CENTER">Table 1. Electrothermal Propellant Considerations<sup><small>2</small></sup></th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1" width="100%">
+              <tr align="CENTER">
+                <td><b>Electrothermal Propellants</b></td>
+
+                <td><b>Advantages</b></td>
+
+                <td><b>Disadvantages</b></td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">Hydrogen (H<sub><small>2</small></sub>)</td>
+
+                <td>High specific heat and thermal conductivity.</td>
+
+                <td>Difficulty in storage. Suffers from frozen flow losses in the nozzle expansion.</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">Ammonia (NH<sub><small>3</small></sub>)</td>
+
+                <td>Liquid phase does not require refrigeration.</td>
+
+                <td>Heavy molecule which dissociates into low-molecular-mass constituents which introduces frozen flow loses.</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">Hydrazine (N<sub><small>2</small></sub>H<sub><small>4</small></sub>)</td>
+
+                <td>Can be dual used for a combination propulsion system on satellites. Can be easily stored.</td>
+
+                <td>Chemical erosion problems are intensified at higher specific impulses. Heat transfer problems at the nozzle and chamber.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p><u>Power Processing Development</u></p>
+
+    <p>The current research and testing of arcjet thrusters is the low power (1-2kW) range. NASA LeRC and Olin Aerospace are investigating the use of a low power arcjet thrusters on the new generation of satellites. Early work on low power arcjet thrusters used a ballasted DC power supply hich transitioned the arc to steady-state operating conditions<sup><small>4</small></sup>. This caused significant electrode erosion and nonuniform arcs. These problems were overcome through changing the geometry of the electrode, providing vortex flow stabilization, and development of a pulse-width modulated power processor with limiting current circuit for startups.<sup><small>5</small></sup></p>
+
+    <p>These improvements have lead to a 1000h/500 cycle lifetest which demonstrated long-term, reliable, non-damaging arcjet operation. Also demonstrated was an 891 hr qualification lifetest of a 1.8 kW hydrazine arcjet with 918 restarts and a specific impulse of 520s.<sup><small>6</small></sup> The 1.8 kW hydrazine has been developed and approved for use on Lockheed Martin Series 7000 geosynchronous telecommunications satellites to provide a highly efficient means of north/south stationkeeping. AT&amp;T's Telstar 401 spacecraft was the first application of Lockheed Martin's Series 7000.</p>
+
+    <p><u>Technical Rationale</u></p>
+
+    <p>Due to the gravitational perturbations caused by a combination of forces from the sun/moon/earth system, most geosynchronous satellites require north/south (N/S) stationkeeping. For a satellite to maintain a positional accuracy of between 0.05 and 0.1 degrees, a delta velocity of approximately 49 m/s/year must be added in the north or south direction, perpendicular to the orbital plane.<sup><small>7</small></sup> The propellant requirements for N/S stationkeeping can represent up to 80% of the mass of total propellant and up to 20% of the on-board "wet" mass of the satellite. Therefore to improve the efficiency of stationkeeping class thrusters various designs and improvements have been developed. The latest and most efficient thruster design developed thus far is the hydrazine arcjet system.</p>
+
+    <p>Table 2 compares the use of hydrazine in various thruster configurations. The high specific impulse and the decrease in propellant weight add to the arcjet's competitive edge over other propulsion thruster systems.</p>
+
+    <center>
+      <table border="0" width="95%">
+        <tr>
+          <th align="CENTER">Table 2. N/S stationkeeping propellant mass comparison for a 12 Year, 1700 kg dry mass satellite.<sup><small>7</small></sup></th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1" width="100%">
+              <tr align="CENTER">
+                <td><b>Thruster Systems</b></td>
+
+                <td><b>Typical Thrust Level (N)</b></td>
+
+                <td><b>Specific Impulse (lbf-s/lbm)</b></td>
+
+                <td><b>N/S Stationkeeping Propellant (kg)</b></td>
+              </tr>
+
+              <tr align="CENTER" valign="TOP">
+                <td>Hydrazine (N<sub><small>2</small></sub>H<sub><small>4</small></sub>)</td>
+
+                <td>0.4-20</td>
+
+                <td>220</td>
+
+                <td>532</td>
+              </tr>
+
+              <tr align="CENTER" valign="TOP">
+                <td>Bipropellant (MMH/N<sub><small>2</small></sub>H<sub><small>4</small></sub>)</td>
+
+                <td>20-40</td>
+
+                <td>302</td>
+
+                <td>373</td>
+              </tr>
+
+              <tr align="CENTER" valign="TOP">
+                <td>Resistojet (N<sub><small>2</small></sub>H<sub><small>4</small></sub>)</td>
+
+                <td>0.2-0.4</td>
+
+                <td>302</td>
+
+                <td>373</td>
+              </tr>
+
+              <tr align="CENTER" valign="TOP">
+                <td>Arcjet (N<sub><small>2</small></sub>H<sub><small>4</small></sub>)</td>
+
+                <td>0.15-0.3</td>
+
+                <td>520</td>
+
+                <td>207*</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>*Does not include dry mass penalty of approximately 20 kg.</td>
+        </tr>
+      </table>
+    </center>
+
+    <p>The hydrazine arcjet not only outperforms existing propulsion options, it also has several key advantages over other electric propulsion options. The performance and economic edge is derived from three major areas. The first is that arcjets have a relatively higher thrust than other electric propulsion devices which reduces duty cycles and battery demands. Second, the arcjet's use of hydrazine propellant allows commonality and simplicity in the feed system. Third, the arcjet system is relatively compact in size and has a very high thermal efficiency which provides relatively simple structural and thermal spacecraft integration.</p>
+
+    <p>While trade studies for different satellite masses and lifetimes will show a greater or lesser advantage for the arcjet, the conclusion reached is the same: arcjet thrusters will have a major impact on reducing propellant mass and increasing the economic return on investment for many commercial satellite systems.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Sutton, George P. , Rocket Propulsion Elements: Introduction to the Engineering of Rockets, John Wiley &amp; Sons, 1992</li>
+
+      <li>Jahn, Robert, Physics of Electric Propulsion., McGraw-Hill Series in Missile and Space Technology, McGraw-Hill Book Company, 1968</li>
+
+      <li>Smith, W.W., Smith, R.D.,Yano, S.E., "Low Power Hydrazine Arcjet Flight Qualification", IEPC-91-148, October 1991.</li>
+
+      <li>Smith, R.D., Roberts, C.R., Davies, K. and Vaz, J., "Development and Demonstration of a 1.8 kW Hydrazine Arcjet Thruster", AIAA-90-2547, July 1990.</li>
+
+      <li>Curran, Francis M., Sovey, James S.,and Myers, Roger M.,"Electric Propulsion: An Evolutionary Technology", Acta Astronautica Vol. 29, No. 9 pp. 651-665, 1993.</li>
+
+      <li>Sovey, James S., Curran, Francis M., Haag, Thomas W., Patterson, Micheal J., Pencil, Eric J., Rawlin, Vincent K., "Development of Arcjet and Ion Propulsion For Spacecraft Stationkeeping", NASA TM-106102.</li>
+
+      <li>Sovey, James S., Pidgeon, David J., "Advance Propulsion For LEO and GEO Platforms", AIAA 90-2551, July 1990.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to use the design concepts presented in this guideline could result in more complex thruster designs, lower reliability, and higher launch vehicle costs.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use flight proven arcjet thrusters in the design of satellites and as a lightweight reliable propulsion maneuvering system to lower propellant mass, increase orbital lifetime, and use smaller less costly launch vehicles.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on ELITE, STS 5 &amp; 6, FLTSATCOM.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

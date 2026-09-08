@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0651: Environmental Test Methods for Ground Support Equipment</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0651: Environmental Test Methods for Ground Support Equipment</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0651 (Database ID: 651)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/651" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3006 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The test methods described herein specify conditions obtainable in the laboratory that will give test results similar to actual service conditions.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <ol>
+      <li>
+        Design and Testing Considerations.
+
+        <ul>
+          <li>The basic purpose of this practice is to provide a guide to uniform testing of Ground Support Equipment (GSE) and other facility components to assess the ability of the hardware to withstand the environmental stresses it will encounter during its life cycle and to ensure that plans and test results are adequately documented.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Tests should be conducted to the maximum extent practicable to ensure operational suitability of the item for the anticipated environmental conditions to be encountered during its required usage. Consideration should be given to natural and induced environments and to combinations and sequences of stresses.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>The environmental conditions to which GSE is exposed in the KSC area vary considerably by virtue of its location on the center. The environmental conditions of computer equipment installed in an air-conditioned, sound-absorbent room on vibration-isolated floors is negligible compared to the severe conditions a holddown system experiences; i.e., the daily natural environments and the blast of the launch vehicle during lift-off. Designing or testing all equipment to the most severe of these conditions is impractical and expensive.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Design and testing should be accomplished with both the actual environmental and reliability requirements in mind. KSC-STD-164 may be used as a guide to define test conditions.</li>
+        </ul>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Testing Procedures.
+
+        <ul>
+          <li>Test Requirements. - The anticipated environmental conditions should be carefully considered before determining which tests are to be conducted. Generally, only those conditions that reflect launch and prelaunch usage of the test item should be considered. Where possible, data should be obtained on actual operating and field environments to which the GSE will be exposed to aid in the test selection process.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>When considering the applicable environmental conditions, combined environmental testing should also be considered as a means for more closely simulating service conditions, and in fact, may be the only method of attaining valid test results.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>
+            Test Sequence. - Those tests that require the successful operation of the test item during exposure to the environment should normally be conducted first, and those tests where the test item remains static throughout the environment should be conducted last. In either case, the test should be conducted in the order of the likely severity on the item; the least severe being conducted first. Unless otherwise stated in the test requirements, the following sequence is recommended;
+
+            <ul>
+              <li>Electromagnetic interference</li>
+
+              <li>Low temperature</li>
+
+              <li>High temperature</li>
+
+              <li>Temperature shock</li>
+
+              <li>Acoustics</li>
+
+              <li>Vibration</li>
+
+              <li>Shock</li>
+
+              <li>Humidity</li>
+
+              <li>Rain</li>
+
+              <li>Icing</li>
+
+              <li>Solar radiation</li>
+
+              <li>Fungus</li>
+
+              <li>Salt fog</li>
+
+              <li>Sand and dust</li>
+
+              <li>Explosion</li>
+
+              <li>Lift-off blast</li>
+            </ul>
+          </li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Receiving Inspection. - Prior to conducting any tests, the test item should be subjected to a receiving inspection. This inspection should be made to determine conformance with applicable drawings and specifications to the extent possible without disassembly of the test item. When quality acceptance tests are specified, they should be conducted as part of the receiving inspection.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Functional Test. - The functional test is the means by which it can be determined whether or not the environmental tests are adversely affecting the performance capabilities of the test item. Because the functional test is required to monitor the very "pulse" of the test item, it is obvious that it must be comprehensive enough to include all possible aspects which could affect the operation of the item.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>The determination of what checks to make as part of the functional test requires a good understanding of the operation and application of the test item and its possible failure modes. Prior to conducting a functional test, the functional parameters to be monitored should be specified and should include allowable limits on permissible degradation.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Installation in Environment Facilities. - The test item should be installed in the test facility at ambient conditions in a manner that will simulate service usage. Install instrumentation in, on, or around the item as required by the test. Plugs, covers, and inspection plates used in service should remain in place. When mechanical or electrical connections are not used, the connections normally protected in service should be adequately covered in the same manner as service usage. The test item should then be functionally tested to determine that no malfunction or damage was caused due to faulty installation or handling. The requirement to conduct a functional test following installation is applicable only when a functional test is required during exposure to the specified environments.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Frequency. - Functional tests should be conducted at least three times before and after each test environment. If the functional test performed after an environmental test is satisfactory, the test item should be qualified for the succeeding environment without further testing, provided (1) the succeeding test is started within 72 hours after the previous functional test and (2) installation changes are not required. When a test environment simulates conditions under which the test item would be required to operate during service, the item should be functionally tested at least three times during the test environment.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Characteristic Tests. - Tests to establish the basic design characteristic of the item are also required. These tests should not be confused with the functional-type test which is repeated throughout the test program. Characteristic tests are conducted once, generally prior to the environmental tests, unless they are destructive in nature. Examples of characteristic tests for pneumatic components may include proof test, flow test, surge test, and the burst test which is destructive. For electrical components, characteristic tests may include voltage drop test, ampere test, resistance test, and repeatability test.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Life Cycle Reliability Testing. - Testing is conducted to provide statistical data for determining the reliability of the test item with a reasonable degree of confidence. Failures that would occur "once-in-a-thousand" are looked for in the life-cycle test. After exposure to all the environments the item would normally be exposed to during use with no deterioration of operation found, the life-cycle test can provide a valid method for determining reliability. Failures that occur due to wearing out of parts beyond service life expectancy must not be considered a design failure, but may be considered for establishing maintenance time periods. The number of life cycles to be conducted should be established by the testing agency.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Documentation. - The environmental tests required for a particular hardware item should be documented in a test plan or test requirements document. Inspections, data requirements, test tolerances, functional tests, and installation requirements should be indicated along with any deviations from the standard tests established herein. KSC-DF-107 may be used as a guide in preparing the plan. The testing agency should develop a detailed test procedure based upon the test requirements specified in the test plan. Test results should be documented, approved, and published in accordance with KSC-STD-128.</li>
+        </ul>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Test Methods.
+
+        <ul>
+          <li>Electromagnetic Interference. - The electromagnetic interference test is performed to determine if the electronic or electrical equipment under test will exhibit malfunction or degradation in performance when subjected to undesired external signals. Electrical and electronic equipment includes components that are susceptible to malfunction from external electromagnetic interference. Such interference can change the calculations of a computer, alter the sequence of planned commands of computer programs, and cause recorders to erroneously indicate that a function occured, failed, or even altered the time of the recording function. Components, such as solenoid valves, power contacts, and signal relays that are not susceptible to malfunction from external electrical interference, generate transient pulses when deenergized. These impulses may exceed the normal operating voltage ratings of much associated connecting circuitry as well as transmit electromagnetic interference to
+          external electronic circuits.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Low Temperature. - The low temperature test is performed to determine the operational performance of the item at low temperatures which might be encountered during its life cycle. The test item should be functionally tested during exposure to ascertain whether or not the environment causes degradation of performance. Some of the difficulties which may result from low temperature exposure are binding due to differential contraction of parts, loss of resiliency of gaskets, and congealing of lubricants. Testing to this environment is applicable to components not installed in a temperature controlled environment.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>High Temperature. - The high temperature test is performed to determine the operational performance of the item at high temperatures that might be encountered during its life cycle. The test item should be functionally tested during exposure to ascertain whether or not the environment causes degradation of performance. High temperature conditions may cause permanent setting of packings and gaskets, binding of parts due to differential expansion, and cracking or bulging of rubber and plastic. This test is applicable to components that are not installed in a temperature controlled environment.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Temperature Shock. - The temperature shock test is performed to determine the effect of an anticipated sudden change in temperature on the operational performance of an item. Cracking or rupturing of materials (particularly valve seats) due to changes in material characteristics and dimensions is the principal difficulty to be anticipated. A thermal shock is experienced when (1) gases expand upstream or immediately downstream of a pneumatic component, (2) hydraulic fluid is forced through restrictions at high flow, and (3) when cryogenic fluids are used in items that are not gradually chilled down.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Acoustics. - The acoustic test is performed to determine the effects on performance that acoustics will have on GSE and other facility hardware located at or near the launch pad at the time of launch vehicle holddown and lift-off. In an acoustic noise field, pressure fluctuations impinge directly on the equipment providing a distributed type of dynamic load. Broadband spectra of these loads contain resonance frequencies of most, if not all, structural components of equipment. The resulting resonant vibration is generally different from that which occurs when excitation is applied only at discrete points. Further, components that are effectively isolated from a mechanical transmission of vibration from the supporting structure will be excited directly. Electronic chatter at friction-held contacts, chafing of wires, cracking and collisions of printed circuit boards, and malfunction/failure of waveguides and Klystron tubes are examples of acoustically induced problems.
+          Acoustic! test specifications provide guidance for the performance of acoustic tests on GSE or other facility hardware. Acoustic tests are subject to restraints imposed by the capabilities of existing test facilities.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Vibration. - Vibration test specifications provide guidance for the performance of vibration tests on GSE or other facility hardware used to support the launch of a space vehicle. These specifications apply to a vibration environment occurring during a launch for the purpose of providing criteria for acceptance and qualification of GSE. The extent of concern is limited to equipment located on and in the proximity of the launch pad, generally within a 300-meter (1000-foot) radius of the launch pad.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Shock. - The launch of a space vehicle generates pressure acoustic environments that do not contain shocks. A pressure pulse generated by some engines at the time of ignition does not induce as a response a distinct vibration shock, rather it results in a transient vibration with peak amplitudes that are substantially lower than the peak vibration during a lift-off period. True vibration shocks occurring during a launch are true anomalies caused by collisions between structural elements and by bottoming of vibration isolators. High shocks can be generated by a hard bottoming of vibration isolators that do not have snubbers and that involve metal-on-metal impacts.<br />
+          <br />
+          Whenever possible, the cause of shocks should be corrected rather than trying to qualify equipment for an operation in the shock environment by testing. Exceptional shock occurrences covered by these specifications are those that cannot be corrected by a structure/isolator redesign or by moving equipment to another location free from shocks. Because there are exceptions, test specifications, testing procedures, and tolerances should be handled on a case-by-case basis.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Humidity. - The humidity test is performed to determine the resistance of equipment to the effects of exposure to a warm, highly humid atmosphere such as that encountered in the KSC area. This is an accelerated environmental test, accomplished by the continuous exposure of the equipment to high relative humidity at an elevated temperature. These conditions create a vapor pressure, which is the force behind moisture migration and penetration. Corrosion is one of the principal effects of humidity. Hygroscopic materials are sensitive to moisture and deteriorate rapidly under humid conditions. Many materials lose their functional utility and physical strength and change their important mechanical properties. Insulating materials that absorb moisture may lose their insulating properties.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Rain. - The rain test determines the resistance of GSE to the effects of exposure to rainfall rates that are encountered in the KSC area. The rain test determines the capability of equipment or component seals to resist water intrusion and determines the efficiency of protective covers or cases designed to shield the item from rain.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Icing. - The icing test is conducted on GSE that is susceptible to the formation of ice on its external surface. This formation can occur during the normal operation of cryogenic systems and during the normal operation of pneumatic systems that require high flow rates and large pressure drops across individual components. Ice will also form on component surfaces that are physically located within the thermal gradient of these systems. For this reason, when selecting components for this test, the moisture and temperature conditions must be considered in relation to the proximity of the component to the system. Each component subjected to this test must be selected judiciously and its physical location must be adequately defined. Damage that can be expected from the accumulation of ice is mechanical binding or sticking, short circuiting of the electrical wiring, and sealing of the vent ports.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Solar Radiation (Sunshine). - The solar radiation test is performed to determine the effect of solar radiant energy on equipment. Solar radiant energy causes heating of equipment, photo degradation (such as fading of fabric colors), and cracking of paints, natural rubber, and plastics. The solar radiation test is applicable to any item of equipment that may be exposed to solar radiation during service and that is constructed of materials that may be adversely affected by this environment.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Fungus. - The fungus test is performed to determine the susceptibility of GSE to fungus attack and to ascertain the detrimental effects that are incurred when such equipment is subjected to the test environmental condition. During the normal growth of fungi, there is an enzymatic secretion that accelerates a chemical transformation of organic substances. Once attacked, most organic materials will be destroyed by the fungi. Many minerals are also destroyed by these spores. Fungi affect insulation, wood and wood derivatives (paper), some types of seals, lens coatings, as well as many other types of materials. This is an accelerated environmental test; therefore, the temperature and moisture condition are specified to support rapid growth of fungi and accelerated deterioration of materials.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Salt Fog. - The salt fog test is performed to determine the resistance of equipment to the effects of a salt atmosphere. The expected damage from exposure to salt fog is primarily corrosion of metals, although in some instances salt deposits may result in clogging or binding of moving parts. This is an accelerated environmental test; therefore the specified concentration of moisture and salt is greater than that found in normal service.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Sand and Dust. - The sand and dust test is performed to determine the resistance of equipment to blowing fine sand and dust particles. Because of their abrasive character, sand and dust can affect items into which sand may enter. Sand and dust can also cause parts to bind and can interfere with electrical contacts. Due to the high sand concentrations of the soils at KSC, dust will not be part of this test. The sand and dust test is applicable to those items that are exposed to wind-blown sand conditions common in the KSC area. This is an accelerated accelerated environmental test; therefore the conditions are more severe than those found in normal service.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Explosion. - The explosion test is conducted to determine the explosion-producing or explosion-containment characteristics of hardware when operated in a hazardous location.<br />
+          <br />
+          Explosions may be initiated by mechanical or electrical sparking, flashes, temperature, or chemical reactions. Hardware can be placed into one of two categories: (1) intrinsically safe or (2) explosionproof. GSE and other facility hardware located near propellant storage or fueling areas may be considered in a hazardous location due to the possible exposure to high-atmospheric concentrations of hydrogen and hypergol propellants. Dust ignition requirements are not considered to be applicable to GSE or other facility hardware; therefore, dust ignition will not be part of explosion testing.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Lift-Off Blast. - The lift-off blast test is performed to determine the effects of rocket engine exhaust on GSE and other facility hardware at the time of launch vehicle holddown and lift-off. The detrimental effects of a blast are due to extremely high temperatures and pressure and the erosion characteristics of the rocket engine exhaust plume. The extent of damage depends on the exposure time, velocity of exhaust gases, type of propellants, and most importantly, the location of the item in relation to the rocket engine exhaust. Blast conditions may cause erosion of hardware surfaces, loss of protective coatings, permanent set or binding of parts, cracking or bulging of rubber and plastic due to high temperatures, and bent or deformed material due to the pressure load. The lift-off blast test should only be performed on those hardware items that cannot be shielded or protected from the lift-off environment.</li>
+        </ul>
+      </li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The environmental conditions to which equipment is exposed varies considerably by virtue of its location. Designing or testing all equipment to the most severe of these conditions is impractical and expensive. To ensure that reliability goals are met, design and testing must be accomplished with both the actual environmental and reliability requirements in mind.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>KSC-STD-164 Environmental Test Methods for Ground Support Equipment.</li>
+
+      <li>MIL-STD-810 Environmental Test Methods and Engineering Guidelines.</li>
+
+      <li>KSC-STD-128 Preparation of Test Reports.</li>
+
+      <li>KSC-DF-107 DE Technical Documentation Style Guide.</li>
+
+      <li>KSC-DE-512-SM Guide for Design Engineering of Ground Support Equipment and Facilities for Use at Kennedy Space Center.</li>
+
+      <li>KSC-STD-G-0003 Qualification of Launch Support and Facility Components.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The difficulty of designing equipment to meet the design specification is greatly compounded when the specification includes requirements excessive to the actual service environment.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Defines test methods for determining the capability of ground support equipment (GSE) and other facility hardware to function when exposed to the natural and induced environments peculiar to the prelaunch and launch conditions at Kennedy Space Center (KSC). Provides guidelines for the preparation of detailed test procedures and for the preparation of the environmental test portions of design specifications.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, at the Kennedy Space Center, Launch Complex 39 Ground Support Equipment.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

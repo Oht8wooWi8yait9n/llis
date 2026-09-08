@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0828: Thermographic Mapping of PC Boards</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0828: Thermographic Mapping of PC Boards</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0828 (Database ID: 828)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/828" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1403, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Quick find of electronic components operating at or above recommended temperatures. Also, this technique can validate the derating factors and thermal design via low cost testing versus analysis.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Using an infrared camera and the flight PC board, make thermographic pictures of the prototype PC boards in operation. Verify the thermograph and determine the delta T to the actual use environment with thermocouples. Shut down the equipment and prepare it for a vacuum test.</p> 
+<p>The board to be tested is placed in a mother board with the appropriate +5 V and ±12 V power supplies. Power is applied to the board, and after a short period, a video recording of the board is made with an infrared camera.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>The following procedure is used to determine the temperature of each component:</p> 
+<p>Junction temperature:</p> T 
+<small><sub>J</sub></small> = T 
+<small><sub>A</sub></small> + T 
+<small><sub>JA</sub></small> 
+<p>Where:</p> 
+<ul> 
+ <li>T<small><sub>J</sub></small> = Junction Temperature</li> 
+ <li>T<small><sub>A</sub></small> = Ambient Temperature</li> 
+ <li>T<small><sub>JA</sub></small> = Junction to Ambient Temperature Rise</li> 
+ <li>T<small><sub>J</sub></small> = 40<small><sup>o</sup></small> C for this example</li> 
+</ul> 
+<p>The case temperature, T<small><sub>C</sub></small>, which is measured on the bench at room ambient is given by Equation(2):</p> T 
+<small><sub>C</sub></small> = T 
+<small><sub>J</sub></small> - Q 
+<small><sub>CA</sub></small>P 
+<p>Where:</p> 
+<ul> 
+ <li>T<small><sub>C</sub></small> = case temperature</li> 
+ <li>Q<small><sub>CA</sub></small> = case to ambient thermal resistance</li> 
+ <li>P = Power dissipated</li> 
+</ul> 
+<p>For reliability purposes, it is necessary to keep junction temperatures for CMOS devices at or below 49 degrees C. The case temperature to be measured on the bench comes out to be T<small><sub>C</sub></small>= 34 degrees C for this application.</p> 
+<p>Infrared pictures are made of the PCB mounted outside the package on extended connectors while the equipment is operating on the bench. The logic IC temperature is determined from the infrared picture. If less than or equal to 34 degrees C, the junctions are at the desired operatingtemperature. If greater than 34 degrees C, the reason for the higher temperature is determined.Corrective action is worked out and approved by the Engineering Review Board.</p> 
+<p>Figure 1 is a drawing of the component layout of the SCSI card, and Figure 2 is a thermographic photograph of the board. Thermographic pictures are usually in color, but in this monochrome reproduction, the cross hairs are at the hottest location (128 degrees F), black represents 108 degrees F, white is 98 degrees F, dark grey is 88 degrees F, and light grey is 78 degrees F.</p> 
+<img alt="refer to [D] description" border="0" height="368" title="refer to [D] description" width="459"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009805main_0828-1.txt">[D]</a> 
+<br> Figure 1. SCSI Card 
+<p><img alt="refer to [D] description" border="0" height="361" title="refer to [D] description" width="476"><a href="https://llis.nasa.gov/llis_lib/txt/1009806main_0828-2.txt">[D]</a><br> Figure 2. Thermograph</p> 
+<p>The operating temperature with the board back in the case is checked by several thermocouples attached to the hottest observed components. This is done in a simulated use environment, perhaps during the thermal environment tests. The resultant delta-T is added to the measured case temperature as a final check of the junction temperature, T<small><sub>J</sub></small>, in the end-use environment. For sample logic IC, the delta-T was 5 degrees C so the resultant junction temperature is 45 degrees C in the package. This is below the guideline of 49 degrees C.</p> 
+<p>References:</p> 
+<ol> 
+ <li>Crall, R. F., quotThermal Imaging Benchtop Analysis for Reliability,quot Evaluation Engineering, December 1989.</li> 
+ <li>Masi, C. G., quotWhat Can Thermal Imaging Do for You?, quot Test &amp; Measurement World, May 1988.</li> 
+ <li>MIL-HDBK-217E, quotReliability Prediction of Electronic Equipment,quot Rome Air Defense Center, October 27, 1986.</li> 
+ <li>Foster, W. M., quotThermal Test Report for the Space Acceleration Measurement System Circuit Boardsquot, NASA LeRC Code 6730 Internal Report, November 1987.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Allowing undetected hot spots to exist in flight hardware can be very expensive since the later a problem is detected in a flight program, the more it costs to repair. Using thermography to verify system engineering models is a fast, low-cost technique.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use thermographic mapping methods to locate hot spots on operating PC boards.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Acceleration Measurement System (SAMS), Isothermal Dendritic Growth experiment (IDGE), and STDCE</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

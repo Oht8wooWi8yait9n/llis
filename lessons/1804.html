@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1804: Design and Analysis of Electronic Circuits for Worst Case Environments and Part Variations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1804: Design and Analysis of Electronic Circuits for Worst Case Environments and Part Variations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1804 (Database ID: 1804)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-08-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Environment,  Flight Equipment,  Hardware,  Parts,  Materials,  & Processes,  Payloads,  Risk Management / Assessment,  Safety & Mission Assurance,  Spacecraft,  Product Assurance,  Reliability</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1804" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This lesson learned is based on Reliability Practice number PD-ED-1212, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.<br> <br> <u>Benefit</u>:<br> <br> The practice of designing and analyzing electronic circuits for worst case environments and part variations maximizes the probability of mission success by assuring that all assemblies meet their mission electrical performance requirements at all times.<br> <br> <u>Implementation Method</u>:<br> <br> Worst Case Analysis (WCA) evaluates factors that may cause hardware to degrade or perform out-of-specification based upon a variety of input factors. For electronic circuits, the analysis generally includes the effects of temperature, initial tolerances, aging, radiation, and other effects as appropriate. The analyst derives part parameter variations for the environments and life of a specific mission and combines them with the initial tolerances of the parts as procured to produce a worst case part variation database for each mission or project. Applying classical circuit analysis techniques, the analyst can determine if each circuit and each assembly meets its specified performance attributes over the most extreme but realizable combinations of part variation sources.<br> <br> <u>Technical Rationale</u>:<br> <br> Classical reliability practice is generally associated with minimizing catastrophic failures of parts. Of equal importance, however, is assuring that the desired essential mission controls and scientific measurements are made with the intended accuracy, fidelity, and stability. To this end, a uniform, disciplined, systematic approach to performance design verification is essential. Uniformity is achieved by use of a common part variation database by all analysts on a specific project. Discipline is achieved by a common analysis containing qualitative and quantitative circuit performance attributes which are traceable to the assembly, subsystem, and system requirements. Also required is a stated or implied level of statistical confidence which results from the use of either an EVA (Extreme Value Analysis) or an RSS (Root Sum Squared) approach to the circuit performance variation at some statistical level, usually 2¿ or 3¿. Another statistical approach is the Monte Carlo (MC) method of repeated trials with randomly selected combinations of part variations. Table 1 compares the relative merits of these three approaches and summarizes the differences in input and output formats and information content.</p> 
+<p>&nbsp;</p> 
+<p><img alt="Table of Comparison of Advantages/Disadvanteges" border="0" height="495" src="https://llis.nasa.gov/llis_lib/images/1015835main_NEN1804-WCA_Table_1.jpg" title="Table of Comparison of Advantages/Disadvanteges" width="510"></p> 
+<p>&nbsp;</p> 
+<p>It is generally recommended that the EVA be applied as the required method for non-serviceable hardware because of its extreme conservatism. The RSS and MC methods are considered approximately equal to each other if utilized at the same statistical level. Both methods can be safely employed for serviceable or recalibrateable equipment, but are considered the lowest level of confidence allowable for non serviceable (i.e. satellites, spacecraft, etc.) hardware. Both the RSS and MC methods should be accepted only as a formal waiver to the EVA process. Any circuit which does not meet its attributes at 3¿ extremes cannot be considered high reliability in the functional sense.</p> 
+<p>To achieve the project benefits from performing a WCA, the commitment must be mission wide to prevent any quotweak linksquot in the performance chain. For critical circuitry, preliminary analyses may be required to validate a conceptual design approach at Preliminary Design Review (PDR). For maximum benefit, the WCA is typically conducted concurrently with detailed design and completed in advance of, and in support of, the Critical Design Review (CDR).</p> 
+<u>Impact of Nonpractice</u>: 
+<br> 
+<br> Early designs of electronic circuits were either empirical or considered initial part tolerances only. This proved to be inadequate in that equipment often failed to remain within specifications at extreme temperatures or over prolonged life. More disciplined approaches followed, but analysts functioning independently were inconsistent in their part variation assumptions. The number of test and field failures fell, but still remained intolerably high, and large systems suffered from inconsistent risk levels. Since WCA first came into practice around 1965, its systematic use by a competent circuit designer has been found to increase the probability of the output design passing all WCA criteria. 
+<br> 
+<br> The absence of a structured WCA activity jeopardizes the long term integrity of the initial design. The probability of failing a hardware qualification test and subsequently needing design modifications is greatly increased. Using inherited hardware designs in environments which are different from the original adds an additional degree of jeopardy if there is no documented WCA from which to extrapolate. 
+<br> 
+<br> 
+<b>Reference:</b> 
+<br> 
+<br> 1. JPL Publication D 5703, quotReliability Analysis Handbookquot, July 1990. 
+<p>&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The absence of a structured WCA activity jeopardizes the long term integrity of the initial design. The probability of failing a hardware qualification test and of subsequently needing design modifications is greatly increased.
+</section>
+<section><h2>Recommendation(s)</h2>
+Design all circuits to perform within defined tolerance limits over a given mission lifetime while experiencing the worst possible variations of electronic piece parts and environments.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+Not applicable: this document is not a lesson learned, but rather one of the Reliability Preferred Practices that were moved to the LLIS. Since the narrative is not based upon an event, there is no issue of a quotrecurrencequot to control.
+</section>
+<section><h2>Related Policies & Standards</h2>
+ECSS Q-30-01A, Worst Case Circuit Performance Analysis
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

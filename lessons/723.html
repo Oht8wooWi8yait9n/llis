@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0723: Independent Verification and Validation of Embedded Software</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0723: Independent Verification and Validation of Embedded Software</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0723 (Database ID: 723)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/723" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1228; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The use of Independent Verification and Validation (IV&amp;V) processes ensures that computer software is developed in accordance with original specifications, that the software performs the functions satisfactorily in the operational mission environment for which it was designed, and that it does not perform unintended functions. Identification and correction of errors early in the development cycle are less costly than identification and correction of errors in later phases, and the quality and reliability of software are significantly improved.</p> 
+<p><u>Implementation:</u></p> 
+<p>Independent verification and validation is defined as a series of technical and management activities performed by someone other than the developer of a system to improve the quality and reliability of that system and to assure that the delivered product satisfies the user's operational needs. Verification is an iterative process aimed at determining whether the product of each step in the development cycle (a) fulfills all of the requirements levied on it by the previous step and (b) is internally complete, consistent, and correct enough to support the next phase. Validation is the process of executing the software to exercise the hardware, and comparing the results to the required performance. Embedded software is software that is designed to execute in a computational device to control or perform a specific process in support of an end item. End item examples include payloads, vehicles, experiments, flight avionics, ground support equipment, and other mission support activities such as mission, payload, and science operations. It could also be incorporated into laboratory experiments or simulations such as training, verification, or breadboard simulators. Embedded software is not used for general purpose computing applications. Some of the technical and management activities included in IV&amp;V for embedded software are: requirements analysis and tracing; peer reviews; status monitoring and reporting; walk-throughs; dynamic analysis; simulations; risk analysis; code inspection; software library maintenance; audits; and IV&amp;V testing using software analysis tools. These activities come into play during the various phases of the software development life cycle, and are usually documented in a family of reports as shown on Figure 1.</p> 
+<img alt="refer to [D] description" border="0" height="413" src="https://llis.nasa.gov/llis_lib/images/1009181main_0723-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009660main_0723-1.txt">[D]</a> 
+<br> Figure 1: Synchronizing IV&amp;V with the Software Development Life Cycle 
+<p>Although the IV&amp;V is generally concurrent with the software developer's life cycle phases, the completion of the IV&amp;V corresponding phases lags the completion of the software development phase slightly as shown on Figure 1. Typical key IV&amp;V functions that are performed in each phase are summarized as follows:</p> 
+<p>1. Concept Analysis Phase: Documentation that is produced in the software development conceptual phase is independently evaluated. These documents include the statement of work, advanced planning reports, project initiation descriptions, and feasibility study reports. The allocation of functions to hardware and software elements, and the criticality of each software element are assessed.</p> 
+<p>2. Requirements Analysis Phase: Software requirements are verified through independent derivation of requirements, comparison to standard reference systems, functional simulations, and timing and sizing analysis. A software requirements traceability analysis and a software interface analysis are performed. A system test plan is developed, and acceptance test requirements are established. IV&amp;V software is designed, and requirements analysis phase reports are prepared.</p> 
+<p>3. Design Analysis Phase: A number of techniques are used to verify the satisfaction of software requirements. These techniques include correlation of traceability between design elements, functional simulations, independent derivation of equations and algorithms, comparison with standard references and models, analysis of interfaces, and identification and development of a software test program. Design analysis techniques to be used for any particular function are dependent on the nature of the function (such as filtering, display output, and device interfacing). For example, logic analysis techniques are appropriate for executive control functions while mathematical methods are better suited for numerical functions. The proposed design of each software function is verified by using the selected method to determine the extent to which it satisfies the corresponding software requirements. Control logic is similarly verified to ensure proper interaction between software functions.</p> 
+<p>4. Implementation Analysis Phase: During this IV&amp;V phase, two parallel activities are performed: (1) coding analysis and (2) testing. Coding analysis includes version comparison, textual and syntactical analysis, standards auditing, equation reconstruction, data structure analysis, flow charting, logic reconstruction, manual code inspection, traceability analysis, interface analysis, and database analysis. Software tools are employed to automate many of these program analysis techniques. They are used to help identify actual or potential errors in the developed code, and to reformat and consolidate information to facilitate manual analysis, software tools present a reliable, cost-effective means to supplement manual program analysis techniques. To maximize the visibility of software development quality, coding analysis is performed in parallel with code development. Coding analysis is achieved by analyzing the incremental code deliveries and modifications introduced in the updated program versions. Testing analysis includes the application of independent tests performed to determine compliance with software and system requirements. Component testing and interface testing are planned for both nominal and extreme conditions within the required performance limits.</p> 
+<p>5. Independent Verification and Validation Phase: Simulation, testing, inspection and computer-aided software verification and validation are performed during this phase. Problem reports are prepared which identify anomalies in formal documentation, source code analysis, software database analysis, and the software developer's test results. Component test results and interface test results are documented.</p> 
+<p>6. System Integration Analysis Phase: The credibility of the system in its operational environment is established in this phase. In this phase, the final results of the software development effort are evaluated after the software has been fully tested in IV&amp;V, and all problems and discrepancies have been corrected. During this IV&amp;V phase, integration, system, and acceptance tests are performed in a serial fashion to validate the software.</p> 
+<p>7. Operational and Maintenance Analysis Phase: The validated system is placed under configuration control during installation, checkout, operation, and maintenance. IV&amp;V functions during the operation and maintenance analysis phase include monitoring problems reported and ensuring that they are resolved according to established configuration management procedures. Outputs of this phase are IV&amp;V problem reports, installation and checkout reports, configuration management reports, and flight software problem reports.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>IV&amp;V has proven to be a necessary function for software projects of all sizes, but is particularly important in large, critical software packages. Although the level of IV&amp;V performed will be proportional to project size, its performance in embedded flight software projects is widely considered to be mandatory.</p> 
+<p>References:</p> 
+<ol> 
+ <li>1. Lewis, Robert O.: <q>Independent Verification and Validation.</q> John Wiley &amp; Sons, Publishers, New York, NY, 1992.</li> 
+ <li><q>MSFC Software Management and Development Requirements Manual.</q> MM8075, George C. Marshall Space Flight Center, Huntsville, AL, January 21, 1991.</li> 
+ <li><q>IEEE Guide for the Use of IEEE Standard Dictionary of Measures to Produce Reliable Software.</q> IEEE Standard No. 982.2-1988, Institute of Electrical and Electronics Engineers, New York, NY, June 12, 1989.</li> 
+ <li><q>IEEE Standard Dictionary of Measures to Produce Reliable Software.</q> IEEE Standard No. 982.1-1988, Institute of Electrical and Electronic Engineers, New York, NY, April 30, 1989.</li> 
+ <li>Beizer, Boris: <q>Software Testing Techniques, Second Edition.</q> Van Nostrand Reinhold, New York, NY, 1990.</li> 
+ <li>Perry, William E.: <q>How to Test Software Packages.</q> John Wiley &amp; Sons, Publishers, New York, NY, 1986.</li> 
+ <li>Hollocker, Charles P.: <q>Software Reviews and Audits Handbook.</q> John Wiley &amp; Sons, Publishers, New York, NY, 1990.</li> 
+ <li>Wallace, Dolores R. and Fujii, Roger F.: <q>Software Verification and Validation: Its Role in Computer Assurance and Its Relationship with Software Project Management Standards.</q> NIST Special Publication No. 500-165, National Institute of Standards and Technology, Gaithersburg, MD, September 1989.</li> 
+ <li>Tauswarthe, Robert C.: <q>A General Software Reliability Process Simulation Technique.</q> JPL Publication No. 91-7, Jet Propulsion Laboratory, Pasadena, CA, April 1, 1991.</li> 
+ <li><q>Cost-Effectiveness of Software Independent Verification and Validation.</q> NASA RTOP No. 323-51-72, Jet Propulsion Laboratory, Pasadena, CA, October 15, 1985.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to perform IV&V for software projects could result in software system weaknesses, performance of unintentional functions, and failure of the system and the mission. Anything less than a methodical, systematic rigorous treatment of IV&V could cause loss of mission, life, and valuable resources.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>To produce high quality, reliable software, use Independent Verification and Validation (IV&V) in an independent, systematic evaluation process throughout the software life cycle. Using the IV&V process; locate, identify, and correct software problems and errors early in the development cycle.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Apollo Launch Vehicles and Engines, and Space Shuttle Elements, Payloads, and Experiments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

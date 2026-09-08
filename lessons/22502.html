@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #22502: CloudSat Battery Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #22502: CloudSat Battery Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #22502 (Database ID: 22502)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-10-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Operations,  Hardware,  Payloads,  Procurement,  Small Business & Industrial Relations,  Spacecraft,  Orbiting Vehicles,  Power,  Spacecraft and Spacecraft Instruments,  Mission control Planning,  Communications between different offices and contractor personnel,  Contractor relationships</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/22502" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>CloudSat is an Earth orbiter that uses a radar instrument to advance understanding of cloud abundance, distribution, structure, and radiative properties. Designed and operated by the NASA/Caltech Jet Propulsion Laboratory (JPL), CloudSat performs 16 orbits each day in formation as part of the A-Train constellation of satellites (currently <a href="https://oco.jpl.nasa.gov/">OCO-2</a>, <a href="http://global.jaxa.jp/projects/sat/gcom_w/">GCOM-W</a>, <a href="http://aqua.nasa.gov/">Aqua</a>, <a href="https://www.nasa.gov/mission_pages/cloudsat/mission/index.html">CloudSat</a>, <a href="https://eosweb.larc.nasa.gov/project/calipso/calipso_table">CALIPSO</a>, <a href="http://smsc.cnes.fr/PARASOL/">PARASOL</a>, and <a href="http://aura.gsfc.nasa.gov/">Aura</a>). CloudSat employs two articulating solar arrays to generate 1,000 watts of electrical power to recharge a 40 amp-hr battery. A Power Control Unit (PCU) regulates battery charging and distributes power to the spacecraft over a hardwired power bus and four switchable power buses.</p> 
+<p>CloudSat completed its two-year primary mission successfully. Five years after the 2006 launch into sun-synchronous orbit, the CloudSat spacecraft battery experienced the first of a series of under-voltage (UV) conditions that triggered a spacecraft emergency mode and turned off the spacecraft computer. Telemetry was available in real time only during ground passes. The first and each successive UV event (i.e., UV-3 fault) caused autonomous switching to a lower battery charge rate that required the ground controllers to repeatedly command a higher charge rate. With the battery temperature dropping, ground was unable to repeat these commands for a couple days due to an unrelated ground network problem, and another day without this charge rate commanding would have caused battery discharge, battery freezing, and the loss of the spacecraft. It took 8 weeks to regain enough control of the spacecraft computer to begin recovery efforts.</p> 
+<p>The battery anomaly was attributed (Reference (1)) to “diffusion-limiting current, a condition caused by corrosion of the positive electrode which results in the net loss of electrolyte (i.e., dry-out of electrolyte in the membrane). The reduced amount of electrolyte reduces the ability to support the current demands and there is a sudden drop in voltage when the diffusion-limit is reached.” This failure mechanism had never before been seen on orbit.</p> 
+<p>The requirements for recovering the spacecraft to normal operations were daunting (Reference (2)):</p> 
+<ul> 
+ <li style="margin-top:6.0pt">The peak discharge current during the sun-eclipse part of the orbit had to be &lt;5.25 amps, but the spacecraft normally used ~15 amps during eclipse.</li> 
+ <li style="margin-top:3.0pt">Only ~2.3 amp-hrs (10% of pre-anomaly performance) was available during the 34-minute eclipse.</li> 
+ <li style="margin-top:3.0pt">The Attitude Control System (ACS) had to be powered off during eclipse because it alone used ~7 amps.</li> 
+ <li style="margin-top:3.0pt">The spacecraft and the Cloud Radar had to be kept warm enough during the sunlit period so that the thermostatically-controlled heaters would not power on during eclipse.</li> 
+</ul> 
+<p>The innovative solution implemented 6 months after the anomaly was to go to a Daylight-Only Operations (DO-Op) Mode in which the 3-axis stabilized spacecraft and nadir-pointing radar were transitioned into a spinning spacecraft during every eclipse (Figure 1). That is, at each umbra exit from eclipse, the power from the solar arrays are used to spin the reaction wheels to quickly orient the science boresight so that the vehicle recovers from hibernation and resumes science data collection in only a few minutes. No science is performed during eclipse, so CloudSat achieves 56 percent of the pre-anomaly science product each orbit.</p> 
+<div> 
+ <img alt=" Figure 1 is a black and white line graphic that contains a simple white circle that represents the Earth, with a circular line that represents the higher orbit of the spacecraft. On the left side is the word “Sun” and on the right side is a grey shadow area representing the night side of the Earth. The graphic contains five models of the CloudSat spacecraft located around the Earth. Starting from the topmost position the Cloudsat model is at the sundown position labeled “Transition to Hibernate”. The next position shows the spacecraft model in the dark shadowed area of night on the Earth with the position labeled as “Hibernate”. The next position shows the spacecraft model emerging from the shadow on the sunrise side labeled as “Transition to DO-Op Mode”. The next position the spacecraft is on the daylight side of the Earth labeled “Day-Light Operations Mode”. The final position also has the spacecraft on the daylight side of the Earth labeled “Heater Management”.  The science boresight of the spacecraft model is pointing to the Earth in all positions except for the one nightside position.  The star trackers in all positions point towards open sky that is not in the direction of the Sun nor the Earth. The graphic shows how the radar instrument becomes active only 9.5 minutes after eclipse exit." src="/lessons/22502/2017-07_Cloudsat_Fig1.jpg"> 
+ <p><strong>Figure 1</strong>. The new nominal operating mode, DO-Op (Daylight-Only Operations), astounded the project team when it was first proposed.</p> 
+</div> 
+<p><b>References:</b></p> 
+<ol> 
+ <li>Nayak, Witkowski, Vane, et al, “CloudSat Anomaly Recovery and Operational Lessons Learned,” 12th International Conference on Space Operations, Stockholm, Sweden, June 2012. <a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a568401.pdf">http://www.dtic.mil/dtic/tr/fulltext/u2/a568401.pdf</a></li> 
+ <li>Deborah Vane, “CloudSat Battery Anomaly 2011,” JPL project managers’ Pause &amp; Learn session, April 18, 2017.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">You can’t anticipate every problem you will see in extended mission operations. 
+  <ul> 
+   <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">This type of battery anomaly had been seen in the laboratory, but never before on-orbit.</li> 
+  </ul> </li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Design tradeoffs and choices made in the development phases may have implications for the operations phase (Phase E). 
+  <ul> 
+   <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Though they would have facilitated anomaly recovery, the cost-constrained CloudSat project eliminated gyros from the flight system design during Phase B.</li> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Due to unanticipated launch delays, CloudSat launched with a battery that had aged after its activation.</li> 
+   <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">The CloudSat spacecraft battery design did not permit the independent switching (off) of cells, so the spare cells could not be used due to the risk of overcharge during sunlight.</li> 
+  </ul> </li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Robust spacecraft fault protection (i.e., load shedding during under-voltage events) and redundancy (i.e., the receiver and Power Distribution Unit (PDU)) were critical to spacecraft survival. Instead of being used for redundancy, one PDU was reassigned to control charging and the other to control UV limits, thereby enabling lower UV fault settings.</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">A failure in one system can cause other failures: the battery UV condition caused the loss of Receiver #1.</li> 
+ <li style="margin-top:6.0pt">Following the anomaly, JPL project management, the system subcontractor, and the U.S. Air Force quickly drew in experienced personnel to assist in anomaly resolution. This included veteran CloudSat project design engineers thoroughly acquainted with the spacecraft systems and experienced operations personnel familiar with CloudSat on-orbit operations. 
+  <ul> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">It’s always about the people</li> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Experience – we had the best people with real experience</li> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Imagination – out-of-the-box thinkers</li> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Teamwork</li> 
+   <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Determination</li> 
+  </ul> </li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Luck is sometimes part of the solution: 
+  <ul> 
+   <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">CloudSat has just enough (~5A) current available during eclipse to make DOOp work.</li> 
+  </ul> </li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">The NASA program manager was very supportive in providing the funding needed for CloudSat mission recovery.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Maintain access to key spacecraft and operations design staff, so they can be consulted in the event of in-flight surprises. (JPL project team members and experts were imbedded with the system subcontractor spacecraft team, facilitating face-to-face interaction to ensure smooth communication and rapid decision making.)</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Give project managers whose experience is mainly with the project development phases some operational experience so they appreciate that the design tradeoffs they make can have operational implications.</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Provide robust fault protection and redundancy to allow Operations to trade functional redundancy for flexibility and performance.</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Facing catastrophic mission failure, persevere to bring in the most experienced, imaginative, and determined NASA Center and subcontractor team personnel.</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Provide ample margin so the project need not depend upon luck.</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Never give up-- unless they take away your charge number.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.8 (“Engineering Practices: Flight System Fault Tolerance/Redundancy”) and Paragraph 6.13.10 (“Engineering Practices: Project and System Level Functional Verification and Validation ”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. In addition, JPL has referenced it supporting Paragraph 4.9 (“Flight System Design: System Fault Protection Design”), Paragraph 6.3.1.1 (“Managed Margins: Flight System Technical Resource Margins - Technical resource margins during development”), Paragraph 6.3.3.2 (“Managed Margins: System Power/Energy Margins - System power/energy margins”), Paragraph 8.1.3 (“Flight System Verification and Validation Design: Allocation and Tracking of Life Limited Items”), and Paragraph 9.5.1 (“Flight System Flight Operations Design: Operating Margins”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

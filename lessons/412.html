@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0412: Voyager-Power Subsystem Coded Commands Interface with the Computer Command Subsystem (CCS) (~1975)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0412: Voyager-Power Subsystem Coded Commands Interface with the Computer Command Subsystem (CCS) (~1975)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0412 (Database ID: 412)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1996-06-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/412" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>(Relevant Historical Lesson(s) Learned)</p>
+
+    <p>A digital, coded interface was utilized on Voyager for the first time, at JPL, for transferring basic commands between CCS and Power. It was not until the Proof Test Module Spacecraft System Test Phase, in the Spacecraft Assembly Facility, that an incompatibility appeared that prevented reliable commanding from CCS to Power. The problem was caused by spacecraft system noise that resulted in spurious triggering of interface circuit elements. Circuit modifications, in this case, were troublesome.</p>
+
+    <p>This configuration was adopted late in the subsystem design phase. For simplicity, an existing power supply was used for this circuitry which resulted in the signal return being common with the spacecraft 30V power return.</p>
+
+    <p>Additional Keyword(s): Electrical Isolations</p>
+
+    <p>Reference(s): Voyager PFR 39934, 39935, 39940, 39948 SSEF #343.2</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The system test phase is too late to discover hardware interface incompatibilities after subsystems have completed qualification testing.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Coded interface circuits should employ isolated power supply and grounding schemes.</li>
+
+      <li>System level requirements must be generated for the design of grounding of interfaces.</li>
+
+      <li>Compatibility tests, using representative equipment (prototype or breadboard) should be conducted as early as possible for subsystems having new, or complex interfaces. Where noise immunity is critical, injection of noise on the signal lines may be necessary to demonstrate that adequate margin exists.</li>
+    </ol>
+
+    <p>These tests (and the design/analysis that precedes them) should account for the fact that differences will exist between subsystem and system configurations. The noise characteristics in the lab may be different than the system configuration, for example.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.4.6 ("Engineering Practices: System Engineering") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br><br>
+ 
+In addition, JPL has referenced the lesson as supporting Paragraph 4.10.1.1 ("System EMC/EMI Design: General - EMC Approach") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

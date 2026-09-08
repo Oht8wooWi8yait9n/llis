@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0718: Star Image Metrology Part 1: Visual Measurements</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0718: Star Image Metrology Part 1: Visual Measurements</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0718 (Database ID: 718)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/718" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GT-TE-2405 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Star image measurements provide the primary means of appraising the end-to-end health of an optical imaging system. These tests represent good engineering practice, and are reliable indicators of system performance. Star image tests are thus the final arbiter of quality control. A system passing the star tests discussed here ensures that the optical instrument is performing in a reliable manner.</p> 
+<p>Visual inspection of the star image pattern is a simple and efficient means of determining whether a problem exists. If something is wrong, important clues as to its nature (e.g., decentered component, inappropriate conic constant) can be provided.</p> 
+<p><u>Implementation Method:</u></p> 
+<p><u>1. Description of Star Image Test Apparatus</u></p> 
+<p>The basic equipment needed to perform laboratory star image visual measurements is indicated in Figure 1. The optical system on the left half of the drawing is a Star Simulator. This is a Collimator with a back-illuminated pinhole located in the focal plane. The Collimator can be either reflective or refractive, and its pupil should be larger than the imaging system being tested. The pinhole represents the star, and its diameter should be smaller than the Collimator Airy Disc, (i.e., unresolved). Depending on the application, the pinhole back-illumination can be either from a coherent or incoherent source. An example of the former is a laser; the latter, a point arc lamp. Between the source and the pinhole there is usually some coupling optics to maximize the power through the pinhole, and to fill the aperture of the Collimator with light. (Caution: The pinhole acts like a quotpinhole camera.quot If a coiled filament lamp is used, an image of the coil will be formed on the collimator pupil and the output irradiance will be quite nonuniform).</p> 
+<img alt="refer to [D] description" border="0" height="149" src="https://llis.nasa.gov/llis_lib/images/1009144main_0718-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009623main_0718-1.txt">[D]</a> 
+<br> Figure 1. Basic layout of a star image test setup 
+<p>A support structure is needed to hold the optical system under test. This mounting fixture should provide modest azimuth and elevation tilt control to allow alignment of the quottest systemquot to the Collimator optical axis. The test support fixture should also allow the quottest systemquot to be accurately rotated through its operational field of view. For refractive quottest systemsquot, the rotation axis should ideally pass through the system's rear nodal point. A mechanical support fixture that accomplishes this is called a T-Bar Nodal Slide (Reference 1). However, for catadioptric and reflective systems rotation through the rear nodal point is impractical because this point is usually far removed from the physical embodiment of the quottest system.quot In this Guideline, the rotation axis will be at, or near the entrance aperture of the quottest system.quot</p> 
+<p>For visual measurements the quottest systemquot star image needs to be magnified. This can be accomplished using a high quality microscope. The microscope objective should be well-corrected for both axial color and spherical aberration. Its numerical aperture must be sufficient to collect all the light from the quottest system.quot The eyepiece must also be of good quality, and contain at least a cross-hair reticle to provide reference lines. The reticle plane will be coincident with the image formed by the objective. The microscope should have micrometer controlled XYZ-translation capability.</p> 
+<p><u>2. Ideal Star Image</u></p> 
+<p>The structure of the star image is controlled by diffraction and aberrations in the imaging system. If aberrations are negligible, the system is said to be diffraction-limited. For a given focal length, the size and shape of the stop (i.e., the limiting aperture) determines the size and shape of the star image. This is considered the best one can do. The diffraction-limit is a benchmark or standard by which all other imagery is judged. Since most systems have circular unobscured stops, the resultant star image has a special name. It is called an Airy pattern and is shown in Figure 2.</p> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p>The central core is called the Airy Disc (and is measured across a diameter to the center of the first dark ring). Figure 3 (a &amp; b) shows theoretical lateral and axial profiles about paraxial focus. (Although they look similar they actually represent two different mathematical functions). The separation between the zero intensity points on both plots is directly related to the system F-number (f/#). Note: F-number is the effective focal length divided by the entrance pupil diameter.</p> (1) Lateral Scale = 2.44 l(f/#)<br> (2) Axial Scale = 16 l (f/#)<small><sup>2</sup></small> <br> &nbsp;</td> 
+   <td> <img alt="refer to [D] description" border="0" height="250" src="https://llis.nasa.gov/llis_lib/images/1009147main_0718-2.jpg" title="refer to [D] description" width="250"><a href="https://llis.nasa.gov/llis_lib/txt/1009626main_0718-2.txt">[D]</a><br> Figure 2. Airy Pattern </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>For an unaberrated diffraction-limited optical imaging system, the monochromatic star image is symmetric for an equal ± focus shift.</p> 
+<p>Reflective imaging systems (e.g., Cassegrain telescope) typically contain central obscurations which modify the profile shapes shown in Figure 3. The extent of the modification depends on the obscuration ratio. As the obscuration ratio increases, the diameter of the central core contracts and more relative power enters the first bright ring.</p> 
+<img alt="refer to [D] description" border="0" height="279" src="https://llis.nasa.gov/llis_lib/images/1009148main_0718-3.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009627main_0718-3.txt">[D]</a> 
+<br> Figure 3. Profiles of diffraction-limited star image 
+<p>Most optical systems are not diffraction-limited across their entire field. They suffer from defects called aberration (Reference 2). Given a single color (monochromatic), there are five primary (Seidel) aberrations. Two of these, field curvature and distortion, do not affect star image structure but rather its axial and lateral location with respect to the paraxial image plane. The remaining three aberrations, spherical aberration, coma, and astigmatism, do change the size and shape of the star image. It is the latter three that are of interest in this Guideline. (Note: There are higher order aberrations that can affect star image structure. But their influence is usually minor).</p> 
+<p>For chromatic aberration, the effective focal length of a system and its magnification varies as a function of color or wavelength. This is because the refractive index of glass components in the imaging system are color dependent. This is called dispersion. In refractive systems the primary aberrations are also color dependent. It is common practice to measure the aberration over a restricted spectral bandwidth. The width and center wavelength of the band will depend on the application of the optical system.</p> 
+<p><u>3. Direct Visual Measurements on Star Image</u></p> 
+<p><u>3.1. Unaberrated System</u></p> 
+<p>Align the microscope with the quottest systemquot and view the star image. Center the cross-hair on the pattern. Adjust the focus of the microscope until the Airy pattern is found. (This can be accomplished by: minimizing the number of observed rings; making the first dark ring as dark as possible; minimizing the power in the first bright ring). This establishes the location of paraxial focus. Offset the microscope laterally until the center of the cross-hair is in the middle of the first dark ring. Note the position on the lateral micrometer. Traverse to the opposite side and place the cross-hair center in the middle of the first dark ring. Note this position on the micrometer. Subtract these two micrometer readings to obtain the diameter of the Airy Disc. As a confirmation of F-number, substitute the measured Airy Disc value into Eq.1 and solve for f/#.</p> 
+<p>Center the cross-hair on the Airy Disc. Adjust the focus and locate the first zero axial intensity positions on either side of paraxial focus. Note the Z-micrometer readings for both positions. Subtract these two Z values. Substitute this difference into Eq.2 and solve for f/#.</p> 
+<p><u>3.2. Axial Color</u></p> 
+<p>In refractive imaging systems we rely on the curvatures, thicknesses, and refractive indices of the glasses used to form a point image at a certain plane. Unfortunately, the index of refraction of glass is wavelength dependent, a phenomenon known as dispersion. This is illustrated in Figure 4. A white light collimated input beam is imaged at various points along the optical axis according to color.</p> 
+<img alt="refer to [D] description" border="0" height="169" src="https://llis.nasa.gov/llis_lib/images/1009149main_0718-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009628main_0718-4.txt">[D]</a> 
+<br> Figure 4. Dispersion in simple lens results in color dependent axial image points 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <img alt="refer to [D] description" border="0" height="246" src="https://llis.nasa.gov/llis_lib/images/1009150main_0718-5.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009629main_0718-5.txt">[D]</a><br> Figure 5. Axial Color of Complex Lens </td> 
+   <td> <p>To measure axial color (Reference 1), align the quottest systemquot to the Collimator. A white light source is needed but the source housing should have a provision for supporting narrow band color filters between the source and the pinhole. Five to ten spectrally separated filters should be enough to sufficiently sample the visible region. (Note: If there is significant spherical aberration, stop the lens down to about 3/4 of the aperture). Using the microscope, we measure the axial location of the Airy pattern for each filter. A sample plot is shown in Figure 5 for a 6quot f/1.5 airborne surveillance objective.</p> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p><u>3.3. Primary Aberrations</u></p> 
+<p>The success with which one can visually measure an aberration type in the star image depends on the relative purity of the aberration. On-axis there should only be spherical aberration. Off-axis will be a mixture of spherical, coma, and astigmatism. If spherical is well-corrected, coma will tend to dominate small field angles. As field angle increases, a point is reached where astigmatism and coma are the same magnitude. Thereafter, astigmatism increases at a faster rate than coma, and dominates the larger field angles.</p> 
+<p><u>3.3.1. Spherical Aberration</u></p> 
+<p>Spherical aberration (References 2 and 3) arises when different annular zones of a lens focus at different points along the optical axis as illustrated in Figure 6. The location of the minimum blur circle is where the marginal ray intersects the caustic. (In Figure 6 note the point where the marginal ray crosses the next innermost ray. This point starts the caustic which is the envelope of crossover points of adjacent rays.)</p> 
+<img alt="refer to [D] description" border="0" height="153" src="https://llis.nasa.gov/llis_lib/images/1009151main_0718-6.jpg" title="refer to [D] description" width="300"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009630main_0718-6.txt">[D]</a> 
+<br> Figure 6. Ray fan showing the caustic and minimum blur circle (courtesy Dr. John Loomis) 
+<p>We examine the aberrated star image with the microscope and adjust the focus back and forth until we find the minimum blur circle. Using the lateral translation capability on the microscope, we measure the diameter, D<small><sub>mb</sub></small>, of this blur circle (in a manner similar to the Airy Disc measurement). D<small><sub>mb</sub></small> is related to the wavefront aberration coefficient W<small><sub>040</sub></small> (References 1 and 2) by:</p> (3) D 
+<small><sub>mb</sub></small>= 4(f/#) W 
+<small><sub>040</sub></small> 
+<p>The above method will generally work for spherical aberration magnitudes above 2 waves. i.e., W<small><sub>040</sub></small>= 2l. Below this a different technique can be used for unobscured systems. (Reference 4). Stop the quottest systemquot down by centering a small circular aperture in the entrance aperture. Observe the enlarged diffraction pattern. Move the microscope axially back and forth to identify the best Airy pattern as discussed in Sec.3.1. This establishes the paraxial plane. Note the reading on the micrometer. Remove the small circular aperture. Readjust the microscope axially once again to identify the best Airy-like pattern. Note the new micrometer reading. Take the difference, d, between the two micrometer readings. This difference can be related to the aberration coefficient by:</p> (4) d = 8 (f/#) 
+<small><sup>2</sup></small> W 
+<small><sub>040</sub></small> 
+<p>By averaging over 10 readings an accuracy of a quarter wave should be attainable.</p> 
+<p><u>3.3.2. Astigmatism</u></p> 
+<p>Astigmatism (Reference 2 and 3) arises in a system because sagittal and tangential rays from an off-axis point source do not come to a common focus as is illustrated in Figure 7. The images formed by the two fans both lie on the chief (or principal) ray but are longitudinally separated. Further, the images formed at these two locations appear as lines orthogonal to each other. These are called the tangential and the sagittal line images.</p> 
+<img alt="refer to [D] description" border="0" height="384" src="https://llis.nasa.gov/llis_lib/images/1009152main_0718-7.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009631main_0718-7.txt">[D]</a> 
+<br> Figure 7. Illustration of astigmatism showing sagittal and tangential ray fans (Modern Optical Engineering) 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p>Astigmatism can be measured (Reference 1) by determining the separation between the two line foci (along the chief ray) as a function of field position. (Note: If the quottest systemquot has a significant amount of spherical aberration it would be helpful to stop the system down to about 3/4 of its aperture). Referring back to Figure 1, we rotate the quottest systemquot about the rotation axis to some field angle. Because this rotation does not take place at the rear nodal point, the microscope will have to be translated laterally to reacquire the image. Center the microscope cross-hairs the on the star pattern at medial focus (or circle of least confusion). Adjust the focus of the microscope and locate each line focus. Note the Z-micrometer readings. These can be plotted up as a function of field angle, and the separations between the line focii will be readily apparent as illustrated in Figure 8. If higher order astigmatism is negligible, the longitudinal separation at maximum field angle can be related to the 4th order aberration coefficient by:</p> (5) d = 8 (f/#)<small><sup>2</sup></small>W<small><sub>222</sub></small> </td> 
+   <td> <img alt="refer to [D] description" border="0" height="335" src="https://llis.nasa.gov/llis_lib/images/1009153main_0718-8.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009632main_0718-8.txt">[D]</a><br> Figure 8. Astigmatism plot for Aerojet lens (Ref. 1). Significant higher order astigmatism is present. </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p><u>3.3.3. Coma</u></p> 
+<p>Coma (Reference 2 and 3) is zonal dependent like spherical aberration. Coma formation is illustrated in Figure 9. (Reference 1). Each circular zone in the lens pupil forms a ring in the image plane. The rings are of different sizes, and are shifted relative to each other as shown in Figure 9 (b). The pattern resembles an ice cream cone. The chief ray intersects this image plane at the tip of the cone. The line bisecting the coma pattern in the image plane passes through the optical axis. The lines tangent to the ensemble of rings on either side form a 60<small><sup>o</sup></small> angle. The ring from the marginal ray zone is the largest and its center is farthest from the chief ray intersection point. The paraxial-like zone about the chief ray forms the smallest ring and its center is closest to the chief ray. The length from the chief ray to the farthest point on the marginal ring is called tangential coma. The radius of this ring is termed sagittal coma. It can be shown that:</p> (6)Tangential coma = 3 Sagittal coma 
+<br> &nbsp; &nbsp; 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <img alt="refer to [D] description" border="0" height="328" src="https://llis.nasa.gov/llis_lib/images/1009154main_0718-9a.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009633main_0718-9a.txt">[D]</a> </td> 
+  </tr> 
+  <tr> 
+   <td> Figure 9a. Formation of coma from an off-axis object point </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td width="10%">&nbsp;</td> 
+   <td> <img alt="refer to [D] description" border="0" height="304" src="https://llis.nasa.gov/llis_lib/images/1009155main_0718-9b.jpg" title="refer to [D] description" width="284"><a href="https://llis.nasa.gov/llis_lib/txt/1009634main_0718-9b.txt">[D]</a> </td> 
+  </tr> 
+  <tr> 
+   <td> Figure 9b. Coma pattern </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>Coma is usually measured in the paraxial plane. This means that in addition to moving the microscope laterally to reacquire the image after rotation, some predetermined axial adjustment must also be made to place our point of observation in the paraxial plane. (If a T-Bar nodal Slide is being used, such adjustments are accomplished automatically). Tangential coma is then measured. Tangential coma (TC) can be related to the aberration coefficient at the maximum field position by:</p> (7) TC = 6(f/#)W 
+<small><sub>131</sub></small> 
+<p>Unfortunately, unless coma is pure or heavily dominant, it will be difficult to measure. Unlike axial color and astigmatism, stopping the lens down does not help us because coma, like spherical, is zonal dependent. Hence, in the presence of competing aberrations, the anchor points for the lateral coma measurement become difficult to define.</p> Note: Further information on star image testing can be found in Reference 6. 
+<p><u>4. Indirect Visual Measurements ... Knife Edge Test</u></p> 
+<p>In this procedure a knife edge (e.g. a razor blade) explores the region around the star image while the observer views the quottest systemquot pupil directly by eye or on an observation screen. The setup is illustrated in Figure 10. The microscope has been removed from the XYZ-translator, and a knife edge put in its place.</p> 
+<img alt="refer to [D] description" border="0" height="145" src="https://llis.nasa.gov/llis_lib/images/1009145main_0718-10.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009624main_0718-10.txt">[D]</a> 
+<br> Figure 10. Knife edge test on star image 
+<p>Figure 11 illustrates the basic operating principle of the knife edge test for an unaberrated quottest system.quot In the exit pupil, we have a spherical wavefront. Ray normals to the wavefront converge to a point focus. We place an observation screen well outside of the focal region. On the screen we see a circular patch of uniform light (essentially a scaled version of the light distribution in the pupil). Next, we set up a razor blade on an Y-Z translator in the neighborhood of the focal point. Assume we are inside focus (between the pupil and the image point). As we translate the knife edge laterally and start blocking light, we see a straight edge shadow move across the box of light on the observation screen in a direction opposite the knife edge motion.</p> 
+<img alt="refer to [D] description" border="0" height="287" src="https://llis.nasa.gov/llis_lib/images/1009146main_0718-11.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009625main_0718-11.txt">[D]</a> 
+<br> Figure 11. Knife edge scan inside focus 
+<p>We then move the knife edge axially the same distance outside of focus (between the image point and the screen), and then cut across. Again we see a straight edge shadow creep across the light box, but now in the same direction as the scan.</p> 
+<p>At paraxial focus the observer is not aware of a shadow transition...just a general dimming and then darkness. This effect occurs very quickly as the knife edge is translated.</p> 
+<p>If we rotate the knife edge about the optical axis so that it cuts the beam along a different vector, the shadow pattern behavior rotates through the same angle as the knife edge. This holds true not only for unaberrated systems but for all rotationally symmetric aberrations as well. It is not true, however, for asymmetric aberrations. When aberrations are present, the shadow and its boundaries can take on rather complicated behavior. Further, pattern behavior depends on the axial location of the knife edge relative to paraxial focus. (Reference 7).</p> 
+<p>Knife edge testing has been used in optical shops for generations. Though not easily quantifiable, it is quite sensitive and provides an important source of information to the trained eye of an optician. The knife edge patterns guide the optician to locate and correct sources of figure error. In recent years a modified knife edge test coupled with sophisticated software has successfully quantified this venerable technique. (References 8 and 9).</p> 
+<p>Note: Further information on knife edge testing can be found in Reference 10.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>All optical imaging systems used on spaceborne or space-related instruments should undergo an end-to-end systems check to validate performance. Star image testing is the primary means of conducting this validation process. It provides data pertinent to the pass/fail criteria associated with the optical imaging system.</p> 
+<p>References:</p> 
+<ol> 
+ <li>J. Geary, Introduction to Optical Testing, Tutorial Text TT-15, SPIE Press (1993).</li> 
+ <li>J. Wyant and K. Creath, Applied Optics and Optical Engineering, Vol. 11, Chap. 1, ed. R. Shannon and J. Wyant, Academic Press (1992).</li> 
+ <li>J. Hecht and E. Zajac, Optics Addison-Wesley (1975).</li> 
+ <li>J. Geary and P. Peterson.quotSpherical Aberration: a Possible New Measurement Approach,quot Opt. Eng. 25, 2 (1986).</li> 
+ <li>M. Born and E. Wolf, Principles of Optics, Pergamon, 6th Ed. (1980).</li> 
+ <li>W. Welford, in Optical Shop Testing, 2nd Ed. Chap. 11, ed. D. Malacara, John Wiley (1991).</li> 
+ <li>M. Cagnet, M. Francon, and J. C. Thrierr, Atlas of Optical Phenomenon, Springer-Verlag (1963).</li> 
+ <li>D. Vandenberg, W. Humbei, and A. Wertheimer, quotQuantitative Evaluation of Optical Surfaces by Means of an Improved Foucault Test Approach,quot Opt. Eng. 32, 8, pp 1951-1954 (1993).</li> 
+ <li>J. Geary, M. Yoo, P. Davila, A. Wirth, A. Jankevics, M. Ruda, B. Zielinski, and L. Petrilli, quotComparison of Wavefront Sensor Techniques,quot SPIE Proc. Vol. 1776 (1992).</li> 
+ <li>J. Ojeda-Castaneda, in Optical Shop Testing, 2nd Ed. Chap. 8, ed. D. Malacara, John Wiley (1991).</li> 
+ <li>Reliability Preferred Practices Guideline No. GT-TE-2404 - Guideline for Use of Fizeau Interferometer in Optical Testing.</li> 
+ <li>Reliability Preferred Practices Guideline No GT-TE-2406 - Star Image Metrology: Part II Irradiance Measurements.</li> 
+</ol> 
+<br> &nbsp;
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If end-to-end systems measurements are not made on spaceborne or space-related optical imaging systems, then the consequences could be the ultimate failure of the mission in-whole or in-part. The Hubble Telescope should be a constant reminder of this.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The fundamental behavior of a spaceborne (or space-related) optical imaging system is contained in its response to an impulse, i.e., a point source. The point source image is referred to by a variety of names: star image, point spread function, far field pattern, impulse response, Fraunhofer diffraction pattern. Here we will use quotstar image.quot This guideline provides information on instruments and procedures used in visual star image measurements.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

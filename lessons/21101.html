@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #21101: Preserve End-of-Mission Knowledge</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #21101: Preserve End-of-Mission Knowledge</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #21101 (Database ID: 21101)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-05-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Formulation &amp;raquo; Phase B</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research,  Human Exploration and Operations,  Science,  Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Operations,  Human Resources & Education,  Information Technology / Systems,  Software,  Spacecraft,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Mission control Planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/21101" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> A spaceflight project at the NASA/Caltech Jet Propulsion Laboratory (JPL) generates vast quantities of spacecraft design and operational data. The data is collected and stored in either existing repositories and applications shared across the institution, or in tools specifically developed for the mission. (For example, special tools may be needed to enable collaboration between geographically dispersed operations teams.) Support for such tools may be terminated by a project at certain milestones—spacecraft launch or end-of-mission—when they are no longer needed and/or the project no longer has funds to maintain them. However, this retained knowledge may remain valuable to the institution for reuse on future projects. Whether it resided in a repository or within a mind, restoring lost project knowledge is not only costly and time-consuming, but it imposes additional risk because the original knowledge was proven in ground test and spaceflight. In addition, reflight of JPL flight systems is becoming more common—MSL to M2020; Jason 1, 2 and 3; OCO, OCO-2, and OCO-3.</p> 
+<p> Mars Phoenix was a JPL mission that alighted a stationary lander in the Martian polar region in May 2008; it successfully completed its mission in August 2008. During this period, the Mars Phoenix operations team employed a JPL-developed software tool named Sol Runner that resided on a computer located on the JPL campus. Sol Runner was a collaborative tool that enabled a mission operations team monitoring a lander subsystem to post reports and subsystem status data. This product was intended for view not only by the subsystem team members, but it was also used for handover to the next shift and used by the other subsystem and system teams who based decisions on the subsystem status. This single source of truth helped make a complex, dispersed, and time-consuming daily mission operations planning process (Figure 1) more manageable.</p> 
+<p> <img alt="Figure 1 is a black and white diagram of a flow chart that contains nine boxes on six levels. The top level starts with a box labeled Downlink Telemetry from Phoenix. There are two down arrows that connect to boxes, Engineering Tactical Review, and Science Tactical Review each. The Science Tactical Review box is connected to a greyed-out box, Science Strategic Planning and Science Template Plans which is connected to a box Daily Plan Review. The box Daily Plan Review is below both the Engineering Tactical Review box, and Science Tactical Review Box.&nbsp; The Daily Plan Review box connects to Subsystem Sequencing, then Sequence Integration, then finally Uplink Commands to Phoenix." src="/lessons/21101/2017-04_Phoenix_Ops_small.jpg"></p> 
+<p> <strong>Figure 1.</strong> The Mars Phoenix operations process required the teams<br> to work 14-hour shifts on “Mars time”</p> 
+<p> Although the cold temperatures and reduced sunlight associated with the onset of the Martian winter effectively ended the mission (as expected) in 2008, JPL entertained the possibility that the Martian spring might warm the lander batteries. When it was clear that communications with the lander could not be restored, the project was formally ended in May 2010, and project resources like Sol Runner that weren’t thought to be needed for another JPL project were decommissioned or scrapped.</p> 
+<p> Three years later, operations planning was underway for a future Mars lander that was based on the successful Mars Phoenix design. The JPL InSight (Interior Exploration using Seismic Investigations, Geodesy and Heat Transport) project has been approved to place a geophysics lander on Mars to study its deep interior. In August 2013, an InSight software systems architect sought some of the captured knowledge from the Phoenix mission that had been stored in Sol Runner. He contacted one of the Sol Runner developers, who informed him that the tool had been decommissioned. Such decommissioning is in accordance with JPL project close-out guidance (Reference (1)). However, the developer also reported that he had, on his own initiative, made a complete copy of the Sol Runner system before it was deactivated. &nbsp;The copy included the code and user-uploaded attachments, plus the entire set of database entries.&nbsp; He had copied all this data to his laptop because he felt it might someday be needed.</p> 
+<p> The Sol Runner developer restored the Mars Phoenix content and provided it to the InSight engineers and scientists for reuse in planning InSight mission operations.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> Paragraph 5.29: “Project Closeout,” JPL Flight Project Practices (Rev. 11), JPL DocID 58032, January 4, 2017.</li> 
+ <li> Paragraph 5.11, "Information Management," JPL Flight Project Practices (Rev. 11), JPL DocID 58032, January 4, 2017.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> Follow-on projects with significant heritage content (e.g., the Mars 2020 design is based on that of Mars Science Laboratory) are increasingly common at JPL. Yet, institutions commonly act as if the knowledge gained during the lifespan of a project has little or no residual value past the end of the project. Even when the specific systems (i.e., the hardware and software) are not inherited from a previous project, JPL is always building upon its knowledge of how to design spacecraft autonomy, perform Entry, Descent, and Landing (EDL), etc. If JPL were not funded to develop another Mars lander every 5 or 10 years, it is not clear that JPL could maintain its knowledge of how to perform EDL. Loss of critical knowledge has become a more acute problem due to turnover related to the aging of the NASA and JPL workforce.</li> 
+ <br /> 
+ <li> Project tools developed and maintained by JPL, as well as subscribed commercial tools obtained under a license, pose monthly maintenance costs. For example, the license for the commercial platform JPL uses to host project wikis costs about $30 per month. Although JPL recognizes the residual value of a wiki’s content after project completion, JPL lacks a mechanism to fund the $30 after the project accounts are closed.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> In response to a 2012 Agency initiative, JPL has established a knowledge management program to capture, retain, and share key JPL knowledge for reuse. The program supports such activities as lessons learned capture, enhanced search technology, Pause & Learn sessions, wiki development, and storytelling. But because progress requires some cultural change, the line and project organizations need to actively promote knowledge husbandry. For example, an employee must be encouraged to save a newly completed, important study to somewhere other than just their computer drive so it can be accessed by someone who may need the knowledge.</li> 
+ <br /> 
+ <li> JPL projects are required to archive project records no later than the project closeout that occurs near and after the end of mission (Reference (2)). The JPL program that archives each completed project’s electronic library should be expanded in recognition of the increased JPL use of tools other than content management systems (CMSs)—wikis, communities of practice, internally-built tools such as Sol Runner, etc. JPL personnel’s awareness of read/write knowledge networks like the JPL Tube searchable video library, the JPL Wired wiki, Spark, and the NASA Lesson Learned Information System (LLIS) should be enhanced (Reference (2)).</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.11 (“Management Practices: Information Management”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. </p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> NPD 7120.6, Knowledge Policy on Programs and Projects</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

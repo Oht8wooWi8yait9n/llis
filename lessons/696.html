@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0696: Spectral Fatigue Reliability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0696: Spectral Fatigue Reliability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0696 (Database ID: 696)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/696" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> This Lesson Learned is based on Reliability Guideline Number GD-AP-2303 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p> <u>Benefit:</u></p> 
+<p> Consideration of fatigue reliability during the design process can assist in the prevention of failures of structural and mechanical components subject to fluctuating loads in service. Explicit consideration of the reliability of structural and mechanical components provides the means to evaluate alternative designs and to ensure that specified risk levels are met. Probabilistic fatigue analyses may also be applied to life extension of existing structures, and for problem assessment of in-service fatigue failures.</p> 
+<p> Potential applications of this guideline to the Space Shuttle or International Space Station Alpha Programs include: landing gear, control surfaces, main engine components, auxiliary power unit components, external tank and solid rocket booster welds, pressure vessels, propulsion modules, and logistics modules.</p> 
+<p> <u>Implementation Method:</u></p> 
+<p> A detailed discussion of the procedures for performing a spectral fatigue reliability analysis may be found in reference 1. A &quot;classical&quot; fatigue approach is described which utilizes the constant amplitude S-N curve characterization of a material&apos;s or component&apos;s fatigue resistance capability. The applied random loads are characterized by their power spectral density (PSD), and crack initiation locations (or hot spots) are determined by an analytical or experimental stress analysis. A structural dynamic analysis or test is used to determine the harmonic response function, H(w), which relates external loads to nominal internal stress.</p> 
+<p> The mean or average fatigue life, T, is computed using either the Rayleigh [references 2, 3, and 4] or Single-Moment methods [references 5 and 6]. For high-cycle fatigue (high number of cycles) the uncertainty or randomness in the fatigue life due to the random loading is negligible (although load uncertainty is generally problem specific) [reference 2], but considerable uncertainty remains due to intrinsic metallurgical and geometric variations. In the usual deterministic fatigue analysis practice this uncertainty is accounted for by reducing the computed fatigue life by a &quot;scatter factor&quot; of 2 to 4 to determine the &quot;safe&quot; life. In a probabilistic approach the metallurgical and geometric variations are more rationally included by modeling them as random variables, using data from the S-N curve fitting and/or from the stress analysis. Sufficient data is necessary for statistical treatment (such as correlation analysis and distribution fitting) and is discussed in reference 1. However, even in cases for which sufficient problem specific data does not yet exist for rigorous statistical treatment, probabilistic risk assessment (PRA) methods may be used to construct distributions for the variables based on experts&apos; opinions of the variables&apos; range and likely values. Such an approach is useful as a first approximation until problem specific data becomes available and has the advantage of formally using the same &quot;expert data&quot; (engineering experience) that is usually only informally used in selecting the &quot;scatter factor&quot;.</p> 
+<p> The resulting expressions for the distribution of the time to failure are generally not amenable to solution by analytic techniques. However, modern numerical structural reliability methods [reference 7] are available for solving these types of problems in several commercial software packages, such as PROBAN [reference 8], STRUREL, and NESSUS. These programs allow the characterization of any number of parameters in a problem as random variables. Usually this requires the characterization of the problem in the form of a mathematical expression or a computer subroutine which relates the input variables to some characteristic output variables which determine the failed or safe state of the system modeled. Simulation methods such as Monte Carlo, importance sampling, latin hypercubes, directional sampling, or axis-orthogonal sampling are also available in PROBAN. A Monte Carlo simulation approach to a Space Shuttle Main Engine fatigue problem is also described in reference 9. These methods are compared and their relative merits are discussed in reference 1.</p> 
+<p> The results of a probabilistic fatigue analysis are usually expressed as the probability of failure as a function of time. For dealing with very high reliabilities, the reliability index, b, is often used as defined by:</p> 
+<img alt="refer to [D] description" src="https://llis.nasa.gov/llis_lib/images/1009078main_0696-1.jpg" style="border-width: 0px; border-style: solid; width: 500px; height: 184px;" title="refer to [D] description" /> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009560main_0696-1.txt">[D]</a> 
+<p> An example of the change in reliability with time due to fatigue is given in Figure 1. The corresponding plot of reliability index as a function of time is given in Figure 2. The details of this example are given in reference 1. The expected or average time to failure for this example is 1265 seconds, at which time the reliability is 50% and the reliability index is zero. Also shown in Figures 1 and 2 are the times corresponding to the usual definition of &quot;safe life&quot; determined by using a scatter factor of 2 to 4. Using a scatter factor of 4 results in a safe life of 316 seconds, while a scatter factor of 2 gives a safe life of 632 seconds. Adoption of a reliability approach would allow specification of the safe life as the time at which the reliability or reliability index decreased below some minimum acceptable level. In this example that level was chosen to be the &quot;3-sigma&quot; level, at which the reliability is 99.865% or the reliability index is 3.0. This results in a safe (or allowable) life of 869 seconds, a 37% increase in allowable life compared to the scatter factor of 2 life, and a 175% increase compared to the scatter factor of 4 life. The conservatism inherent in the deterministic scatter factor approach is illustrated more clearly in Figure 2. In this example a scatter factor of 2 corresponds to a reliability index of 5.6, while a scatter factor of 4 corresponds to a reliability index of 11.2.</p> 
+<b>Fatigue Reliability Index as a Function of Time</b> 
+<br /> 
+<img alt="refer to [D] description" src="https://llis.nasa.gov/llis_lib/images/1009079main_0696-2.jpg" style="border-width: 0px; border-style: solid; width: 500px; height: 399px;" title="refer to [D] description" /> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009561main_0696-2.txt">[D]</a> 
+<img alt="refer to [D] description" src="https://llis.nasa.gov/llis_lib/images/1009080main_0696-3.jpg" style="border-width: 0px; border-style: solid; width: 500px; height: 348px;" title="refer to [D] description" /> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009562main_0696-3.txt">[D]</a> 
+<p> Use of a probabilistic method allows the uncertainty in fatigue life or time to failure to be more explicitly accounted for than is possible in the &quot;scatter factor&quot; approach. Sensitivity analysis methods are also available in some of the commercial software packages, allowing the uncertain input variables to be ranked according to their contribution to the uncertainty in the resulting life estimate. This enables a more timely and cost effective design optimization by identifying the most important input parameters upon which resources should be concentrated to gain the greatest increase in life. This approach naturally leads to a design risk assessment and requires the development and selection of a specific criteria for defining acceptable risk or probability of failure. The acceptable risk value should be specified in the appropriate program requirements, but the selection process is a program and policy issue which is beyond the scope of this guideline. Some guidance is available from the various national civil structural requirements codes that have been formulated to provide reliability indices of 3 to 5, depending on the importance of the structure and the consequences of failure [reference 7].</p> 
+<p> This method is primarily useful as a design evaluation or optimization tool and cannot easily be used to evaluate the remaining life of an in-service component unless instrumentation (such as strain gages, accelerometers, or load cells) is in place to allow collection of data on the actual performance of the component. In cases where the necessary in-service data is available, this method may prove very useful for extending the life of the component or structure beyond its original predicted service life. If inspection of the component or structure by a non-destructive evaluation (NDE) method is feasible, the probabilistic fracture mechanics method described in the companion guideline is more useful for estimating damage and remaining life of in-service components than the fatigue analysis method. A measured crack length provides information about the in-service state of the structure, and the probabilistic fracture analysis may be updated following the inspection to this new information. If inspection is not feasible, the fracture mechanics method has no particular advantage over the fatigue method for in-service assessments.</p> 
+<p> <u>Technical Rationale:</u></p> 
+<p> The potential loss of strength in structural/mechanical components due to the cumulative damage effect of fluctuating applied loads is well known. Spectacular failures have resulted from fatigue since the beginning of the industrial revolution. The danger of fatigue in new applications, however, has not always been adequately considered in the design process and continues to be a concern to this day. A classic example is the British Comet airliner, which was one of the first aircraft to employ an aluminum-skin, pressurized fuselage. The loss of three aircraft and many lives in 1953 and 1954 occurred before the potential for fatigue in this application was understood.</p> 
+<p> Results from the theory of stochastic process and modern structural reliability methods enable the design engineer to assess the expected fatigue life of structural and mechanical components subject to randomly varying loads, and to estimate how the probability of failure of the component increases over time. The application of these data will enable optimal designs to be achieved which balance the initial costs of design and fabrication against the expected costs of repair, replacement, and/or failure.</p> 
+<p> References:</p> 
+<ol> 
+ <li> NASA Contractor Report, Larsen, C.E., &quot;Probabilistic Fatigue and Fracture Mechanics Analysis for Structural/Mechanical Reliability&quot;, To be released, 1994.</li> 
+ <li> Crandall, S.H., and Mark, W.D., Random Vibration in Mechanical Systems, Academic Press, New York, 1973</li> 
+ <li> Miles, J.W., &quot;On Statistical Fatigue Under Random Loading&quot;, Journal of Aeronautical Sciences, Vol. 21, 1954, pp. 753-762</li> 
+ <li> Wirsching, P.H., and Light, M.C., &quot;Fatigue Under Wide Band Random Stress&quot;, Journal of the Structural Division, ASCE, Vol. 106, No. ST7, July, 1980, paper 15574, pp. 1593-1607</li> 
+ <li> Lutes, L.D., and Larsen, C.E., &quot;Improved Spectral Method for Variable Amplitude Fatigue Prediction&quot;, Journal of Structural Engineering, ASCE, Vol. 116, No. 4, April, 1990, paper 24612, pp. 1149-1164</li> 
+ <li> Larsen, C.E., and Lutes, L.D., &quot;Predicting the Fatigue Life of Offshore Structures by the Single-Moment Spectral Method&quot;, Probabilistic Engineering Mechanics, Vol. 6, No. 2, June, 1991, pp. 96-108</li> 
+ <li> Madsen, H.O., Krenk, S., and Lind, N.C., Methods of Structural Safety, Prentice-Hall, Englewood Cliffs, NJ, 1986</li> 
+ <li> PROBAN-2: Example Manual, Report No. 89-2025, A.S Veritas Research, Hovik, Norway, August, 1989</li> 
+ <li> Sutharshana, S., et al., &quot;Probabilistic High Cycle Fatigue Failure Analysis Applicable to Liquid Propellant Rocket Engines&quot;, Proceedings of the AIAA/ASME/ASCE/AHS/ASC 31st Annual Structures, Structural Dynamics and Materials Conference, April, 1990</li> 
+ <li> Reliability Preferred Practice Guideline Number GD-AP-2304: Fracture Mechanics Reliability</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Failure to adequately consider fatigue in the design of structural and mechanical components subject to fluctuating loads may, at best, result in recurring costs for repair or replacement of components before their intended design life. At worst, a catastrophic failure, in terms of economic loss and loss of life, may result.</p> 
+<p> Alternatively, outdated design practices which do not take advantage of modern methods of reliability analysis may result in overconservative and uneconomical structures and mechanisms.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> A spectral (frequency domain) technique is used to estimate the design fatigue life and reliability of structural and mechanical components subject to randomly varying stress.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #16901: Propellant Tank Protection Against Orbital Debris</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #16901: Propellant Tank Protection Against Orbital Debris</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #16901 (Database ID: 16901)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-05-10</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations,  Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Safety and Mission Assurance,  Flight Equipment,  Hardware,  Payloads,  Pressure Vessels,  Spacecraft,  Orbiting Vehicles,  Spacecraft and Spacecraft Instruments,  Advanced planning of safety systems</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/16901" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> Unenclosed propellant tanks on satellites in Earth orbit have long been a concern due to the risk of orbital debris colliding with the tanks. Propellant tanks in deep space too may need additional protection beyond that provided by the tank structure, depending on the severity of the micrometeoroid flux and the spacecraft orientation along the spacecraft trajectory (Reference (1). For Earth-orbiting spacecraft, however, additional design measures to protect propulsion systems may be goaded by a recently updated NASA orbital debris model (ORDEM). The most recent version of the model (Reference (2)) provides a larger set of observational data on the orbital debris environment (debris spatial density, flux, etc.) than found in the 2001 release of ORDEM 2.0— new data that suggests spacecraft will incur a higher risk of damage. In addition to the increased debris in space and the higher risk to orbiters documented in the revised model, NASA policies related to debris in low Earth orbit (LEO) became more stringent in 2007 (Reference (3)).</p> 
+<p> For Earth orbiters, particle strikes on propellant tanks comprise two failure modes:</p> 
+<ol> 
+ <li style="margin-left: 0.5in;"> The impact will cause a breach in the tank, leading to a loss of propellant that may shorten or end the mission.</li> 
+ <br> 
+ <li style="margin-left: 0.5in;"> The strike will cause an explosion or catastrophic failure of the tank, resulting in both mission termination and an addition to the orbital debris field. This added debris may increase the risk to other spacecraft.<sup>1</sup></li> 
+</ol> 
+<p> Mitigation of the micrometeoroid and orbital debris (MMOD) risk has typically involved adding multi-layer insulation (MLI) shielding to the tanks. Because Reference (2) adds steel debris to the ORDEM model, making MLI ineffective as a shielding wall, the SMAP project considered additional protection measures. Launched in January 2015, SMAP measures soil moisture and freeze-thaw state using a lightweight, deployable, reflector antenna system that rotates around the nadir axis and makes conical scans of the Earth’s surface. A spherical titanium propellant tank (Figure 1) equipped with an elastomeric diaphragm expulsion device held 81 kilograms of hydrazine at launch, was pressurized pre-launch, and is operated in (mono-propellant) blowdown mode throughout the 3-year or longer mission.&nbsp;</p> 
+<p> <a href="/lessons/16901/2016-04_SMAP_tank_fig1.jpg" style="text-decoration: underline; color: rgb(51, 57, 64);"><img alt="Figure 1 Four engineers dressed in white clean room protective suits bunny suits are standing with the assembled propellant tank with the installed hemispherical aluminum tank cap" src="/lessons/16901/2016-04_SMAP_tank_fig1.jpg" style="width: 400px; height: 300px;"></a></p> 
+<p> <em><strong>Figure 1. </strong>SMAP propellant tank after installation at JPL</em></p> 
+<p> In the original design, the SMAP propellant tank was only partially enclosed by the spacecraft structure, with the expulsion outlet and dome oriented outward, and with an offset thermal blanket attached to the surface of the tank. This left the tank exposed at the base via the open end of the launch vehicle interface (Figure 2).</p> 
+<p> <a href="/lessons/16901/2016-04_SMAP_tank_fig2.jpg"><img alt="Figure 2 A computer drawn engineering image of the SMAP spacecraft on the left with a cutaway diagram on the right is shown Inside the right image the propellant tank is positioned as a protrusion on the bottom of a threelevel open box" src="/lessons/16901/2016-04_SMAP_tank_fig2.jpg" style="width: 400px; height: 401px;"></a></p> 
+<blockquote> 
+ <i><strong>Figure 2.</strong> Cutaway of spacecraft structure showing the location of the<br> propellant tank. The underside of the tank is exposed to space</i> 
+</blockquote> 
+<p> At Preliminary Design Review (PDR), it was estimated that the spacecraft would be in compliance with NASA requirements; i.e., it would have a 99 percent probability of surviving MMOD through post-mission disposal (Reference (4)). However, the initial analysis of the risk of impact-induced tank rupture showed the risk was not in compliance. Because the SMAP spacecraft design had an adequate mass margin, and because it was destined for an orbit with a high debris flux, JPL decided to add a hemispherical aluminum tank cover to protect the tank (Figure 3).&nbsp;</p> 
+<p> <a href="/lessons/16901/2016-04_SMAP_tank_fig3.jpg"><img alt="Figure 3 A computerdrawn engineering image of the propellant tank is shown in purple color protruding through a pink colored base floor structure A grey colored conic ring extends up from the base supporting a second limegreen colored conic ring extending above the height of the surrounded propellant tank" src="/lessons/16901/2016-04_SMAP_tank_fig3.jpg" style="width: 400px; height: 349px;"></a></p> 
+<blockquote> 
+ <em><strong>Figure 3.</strong> MMOD shield (purple domed structure) covering the SMAP<br> propellant tank, viewed through the (green) launch vehicle adapter ring.</em> 
+ <p> &nbsp;</p> 
+ <p> <strong><sup>1</sup></strong>Mitigating the impact of a strike by venting the pressurant gas when the spacecraft is decommissioned is infeasible because the helium is behind a bladder. Adding a pressurant vent valve to the design is an option, but it would add to propulsion system complexity and might introduce new failure modes.</p> 
+ <p> <strong>References:</strong></p> 
+ <ol> 
+  <li> “Micrometeoroid Protection,” NASA Preferred Practice No. PD-EC-1107, May 1996. <a href="http://oce.jpl.nasa.gov/practices/1107.pdf">http://oce.jpl.nasa.gov/practices/1107.pdf</a></li> 
+  <li> NASA Orbital Debris Engineering Model, ORDEM 3.0, April 2014. <a href="http://orbitaldebris.jsc.nasa.gov/model/engrmodel.html">http://orbitaldebris.jsc.nasa.gov/model/engrmodel.html</a></li> 
+  <li> NASA Procedural Requirement (NPR) 8715.6 “NASA Procedural Requirements for Limiting Orbital Debris,” 2007. (Current version is Rev. A with Change 1, dated May 14, 2009.)</li> 
+  <li> SMAP Orbital Debris Assessment Report, Rev. C, JPL Document No. D-45953, December 15, 2014, p. 82.</li> 
+ </ol> 
+</blockquote>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Propulsion system designers may not be aware of the recent update to the debris model (Reference (2)), which is yielding a higher estimate of MMOD risk to exposed propellant tanks on Earth orbiters. An MLI blanket may no longer provide sufficient protection.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Depending on the orbit and other factors, consider placing metal or composite overwrapped pressure vessel (COPV) propellant tanks destined for Earth orbit behind structure. Such “structure” may be furnished by the existing spacecraft structure, or by a dedicated tank cover. In addition to decommissioning the tanks, assure the safing of other stored energy sources (e.g., battery, reaction wheels, etc.) as required (Reference (4)) for any planned post-mission spacecraft disposal operation.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.1.5 (“Flight System Design: Earth Orbital Debris”) in the Jet Propulsion Laboratory standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<ul> 
+ <li> NASA Procedural Requirement (NPR) 8715.6, NASA Procedural Requirements for Limiting Orbital Debris</li> 
+ <li> NASA-STD-8719.14, Process for Limiting Orbital Debris</li> 
+ <li> ISO 14200, space environment (natural and artificial) - guide to process-based implementation of meteoroid and debris environmental models</li> 
+ <li> AIAA SP-016, Orbital Debris Mitigation Techniques: Technical, Legal, and Economic Aspects</li> 
+ <li> SMC-T-003, Limiting Orbital Debris SMC Tailoring Of NASA-STD-8719.14</li> 
+ <li> NASA-HDBK-8719.14, Handbook For Limiting Orbital Debris</li> 
+ <li> NASA NPD 8710.3 REV B, NASA Policy For Limiting Orbital Debris Generation</li> 
+ <li> NASA/NSS-1740.14, NASA Safety Standard Guidelines And Assessment Procedures For Limiting Orbital Debris</li> 
+ <li> AIAA SP-016-2, MEO/LEO Constellations: U.S. Laws, Policies, and Regulations on Orbital Debris Mitigation</li> 
+ <li> SMC-S-022, End-Of-Life Disposal Of Satellites In Low-Earth Orbit</li> 
+ <li> ISO 11227, Space systems - Test procedure to evaluate spacecraft material ejecta upon hypervelocity impact</li> 
+</ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

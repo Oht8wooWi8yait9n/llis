@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #5636: Use of Natural, Flight-Like Spectra in Instrument Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #5636: Use of Natural, Flight-Like Spectra in Instrument Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #5636 (Database ID: 5636)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-04-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/5636" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Orbiting Carbon Observatory (OCO), an Earth orbiting satellite mission managed by the NASA/Caltech Jet Propulsion Laboratory, was designed to make precise, time-dependent, global measurements of atmospheric carbon dioxide (CO2). Prelaunch testing of the primary instrument used to detect CO2 from orbit revealed residual image problems with two of the three focal plane array (FPA) detectors (Reference (1)). The residual image in the detector used for the 760 nm Oxygen A-band channel was found to be an intrinsic property of the detector design. The residual image in the 1610 nm Weak CO2 channel was traced to a focal plane fabrication anomaly. The residual image problems in both FPAs were remedied by developing a correction algorithm implemented in the ground data processing system used to processes the science data. 
+<br> 
+<br> An innovation that proved to be one of the most critical assets of the OCO pre-launch instrument test program was a heliostat (Figure 1) on the roof of the JPL Environmental Test Facility. This facility was installed to allow direct observations of the sun, to validate the spectroscopic calibration against a high-precision reference spectrometer. A heliostat incorporates a mirror that turns to track the sun's apparent motion across the sky and maintain a beam of reflected sunlight pointing toward a target. The OCO heliostat used a pair of mirrors to capture the sunlight and direct it though a window into the thermal-vacuum chamber and into the flight instrument (Reference (2)). While the residual image in the Weak CO2 channel was discovered and characterized using white light, heliostat observations were essential for characterizing and quantifying the detector residual image problem in the A-band Channel. Heliostat observations therefore provided the data needed to correct for its effects in post acquisition data processing. In addition, observations of atmospheric absorption lines obtained with the heliostat played a critical role in verifying the dispersion and instrument line shape function of the OCO spectrometers. It also provided an efficient means to test the throughput of the on-orbit calibration system. Observations of the moon through the heliostat provided a sanity check on the geometric calibration of the instrument, and provided a means to validate instrument slit misalignment. 
+<br> &nbsp; 
+<table border="0"> 
+ <tbody> 
+  <tr> 
+   <td><img alt="Figure 1 is a color photo of a rooftop installation. Three people are standing on the roof observing a gold-colored disk approximately 18-24 inches in diameter. The disk is mounted on a platform that is raised approximately 12 inches above the roof. The platform appears to be designed similar to a drawer that can slide into an enclosed housing for protection, and the whole contraption appears capable of rotating around its horizontal axis." border="0" height="179" src="https://llis.nasa.gov/llis_lib/images/1040659main_upload_00003734.jpg" title="Figure 1 is a color photo of a rooftop installation. Three people are standing on the roof observing a gold-colored disk approximately 18-24 inches in diameter. The disk is mounted on a platform that is raised approximately 12 inches above the roof. The platform appears to be designed similar to a drawer that can slide into an enclosed housing for protection, and the whole contraption appears capable of rotating around its horizontal axis." width="238"></td> 
+  </tr> 
+  <tr> 
+   <td><b>Figure 1.</b> Configuration of the roof-<br> mounted heliostat</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<u>References</u>: 
+<ol> 
+ <li><q>PFR # 6716: O2 A-Band Focal Plane Residual Image,</q> JPL Problem/Failure Report No. 6716, October 16, 2008.</li> 
+ <li>P.J. Guske, <q>OCO (Orbiting Carbon Observatory) Project Lessons Learned Document (Final),</q> JPL Document No. D-26172, July 7, 2009, Paragraph 3.7.4.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Installation of a heliostat on the roof of the principal JPL environmental test facility at an estimated cost in the range of $250-300K, allowed the OCO project to utilize natural, flight-like spectra instead of artificial light. This innovation facilitated both diagnosis of a test problem and compliance with the institutional 
+<q>test-as-you-fly</q> principle, and the JPL OCO-2 project also plans to use the heliostat.
+</section>
+<section><h2>Recommendation(s)</h2>
+Pre-launch testing of optical instruments intended to observe sunlight reflected from the surface and atmosphere should consider utilizing the measurement of natural, flight-like spectra if at all possible as opposed to artificially generated spectra. Installation of a heliostat may be a practical method of routing natural sunlight into an enclosed test facility.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.17.6 ( 
+<q>Engineering Practices: Hardware Development</q>) in the Jet Propulsion Laboratory standard 
+<q>Flight Project Practices, Rev. 7,</q> JPL DocID 58032, September 30, 2008.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

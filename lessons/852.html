@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0852: Programmable Logic Controllers (PLC)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0852: Programmable Logic Controllers (PLC)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0852 (Database ID: 852)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/852" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> This Lesson Learned is based on Maintainability Technique number OPS-05 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p> System/equipment design using PLC&apos;s is a prime example of the application of maintainability design objectives. PLC&apos;s are designed with ease of maintenance and troubleshooting as a major function. When virtually all components are solid state, maintenance is reduced to the replacement of a modular, plug-in type component. Fault detection circuits and diagnostic indicators, incorporated in each major component, can tell whether the component is working properly. With the programming tool, any programmed logic can be viewed to see if input or outputs are on or off.</p> 
+<p> PLC&apos;s provide control capabilities not possible in the past. Control systems incorporating programmable controllers are now able to operate machines and processes with an efficiency and accuracy never before achievable with conventional relay-based control systems. Usually, PLC architecture is modular and flexible, allowing hardware and software elements to expand as the application requirements change. If an application outgrows the limitations of the PLC, the unit can easily be replaced with a unit having greater memory and input/output capacity, and the old hardware can be reused for a smaller application.</p> 
+<p> PLC attributes make installation easy and cost effective. Their small size allows PLC&apos;s to be located conveniently, often in less than half the space required by an equivalent relay control panel. On a small scale changeover from relays, the PLC&apos;s&apos; small and modular construction allows it to be mounted near the relay enclosure and pre-wired to existing terminal strips. Actual changeover can be made quickly by simply connecting the input/output devices to the pre-wired terminal strips. Table 1 lists some features available and benefits of PLC&apos;s.</p> 
+<p> <img alt="refer to [D] description" src="https://llis.nasa.gov//llis_lib/images/1009378main_0852-table1.jpg" style="border-width: 0px; border-style: solid; width: 399px; height: 956px;" title="refer to [D] description" /> <a href="https://llis.nasa.gov/llis_lib/txt/1009853main_0852-table1.txt">[D]</a></p> 
+<p> In large installations, remote input/output stations are placed at optimum locations. The remote station is connected to the processor by a pair of twisted wires. This configuration results in a considerable reduction of material and labor cost that would have been associated with running multiple wires and conduits.</p> 
+<p> PLC Components and Operation</p> 
+<p> PLC&apos;s, regardless of size, complexity, or cost, contain a basic set of parts. Some of the parts are hardware; others are software or programs. Figure 1, identifies the basic parts of the PLC. In addition to a power supply system and a housing that is appropriate for the physical and electrical environment, PLC&apos;s consist of the following parts: an input interface, central processor unit (CPU), memory section, programming language, programming tool, and an output interface.</p> 
+<p> <img alt="refer to [D] description" src="https://llis.nasa.gov/llis_lib/images/1009377main_0852-1.jpg" style="border-width: 0px; border-style: solid; width: 450px; height: 617px;" title="refer to [D] description" /> <a href="https://llis.nasa.gov/llis_lib/txt/1009852main_0852-1.txt">[D]</a></p> 
+<p> The Input Interface provides connection to the machine or process being controlled. The principal function of the interface is to receive and convert field signals into a form that can be used by the central processing unit.</p> 
+<p> The Processor and Memory provide the main intelligence of the PLC. Fundamental operating information is stored in memory as a pattern of bits that is organized into working groups called words. Each word stored in memory is either an instruction or piece of data. The data may be reference data or a stored signal from the process that has been brought in through the input interface. The operation of the processor and memory of the PLC can be described as a fairly simple repetitive sequence:</p> 
+<ol> 
+ <li> Look at the process being controlled. This is accomplished by examining the information from the input interface.</li> 
+ <li> Compare the information with control information supplied by and stored in the program.</li> 
+ <li> Decide whether any control action is needed.</li> 
+ <li> Execute the control action by transmitting signals to the output interface.</li> 
+ <li> Look again at the inputs.</li> 
+</ol> 
+<p> The processor continually refers to the program stored in memory for instructions concerning its next action and for reference data.</p> 
+<p> The Output Interface takes signals from the processor and translates them into forms that are appropriate to produce control actions by external devices.</p> 
+<p> The Program and Program Language. The program is written by the user and stored in the PLC. The program is a representation of the actions that are necessary to produce the desired output control signals for a given process condition. The program includes sections that deal with bringing the process data into the controller memory, sections that represent decision making, and sections that deal with converting the decision into physical output action. Programming languages have many forms. Early versions were restricted to match the conventions of relay logic which consisted of ladder diagrams that specified contact closure types and coils. This type of program consists of a representation of a relay logic control scheme. The relay ladder language types are still popular. Alternative languages use Boolean representation control schemes as the base of the computer representation.</p> 
+<p> The Programming Tools provide connection between the programmer and the PLC. The programmer devises the necessary control concepts and then translates them into the particular program form required by the selected PLC. The tool produces the pattern of electrical signals that corresponds to the symbols, letters, or numbers in the version of the program that is used by humans.</p> 
+<p> Process Improvements</p> 
+<p> The use of control and monitor equipment with the benefit of a PLC could lead to:</p> 
+<ul> 
+ <li> Increased system availability</li> 
+ <li> Decreased downtime requirements to recover from a failure</li> 
+ <li> Decreased cost in materials and man-hours for installation</li> 
+ <li> Increased system visibility</li> 
+ <li> Increased flexibility to meet new requirements.</li> 
+</ul> 
+<p> Reference:</p> 
+<ol> 
+ <li> National Technology Transfer Inc. (PLC Seminar, Aurora, Colorado, 1992)</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Conventional relay-based control systems are more subject to failure and cannot handle complex processing as efficiently as PLC&apos;s. Use of PLC&apos;s in system design will reduce failure rates and subsequent downtime, ultimately saving a program money.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Use solid state Programmable Logic Controllers (PLC&apos;s) in system/equipment design to control and monitor systems and processes.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> This practice has been used on the Space Transportation System (STS), Facilities and KSC Ground Support Systems.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

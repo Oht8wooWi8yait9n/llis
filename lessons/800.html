@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0800: Thick Dielectric Charging/Internal Electrostatic Discharge (IESD)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0800: Thick Dielectric Charging/Internal Electrostatic Discharge (IESD)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0800 (Database ID: 800)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/800" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1316, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Materials and design structures which represent possible internal electrostatic discharge (IESD) sources can be identified early in the program. Risk to hardware may be reduced through design changes which substitute materials having sufficient conductivity to permit charge bleed-off. Sensitive cable runs may be rerouted or shielded to reduce exposure to energetic electrons. Grounding schemes may be changed to ensure that otherwise isolated conductors are grounded and that grounds are designed to maximize the opportunity to bleed-off the charge from dielectric materials.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Utilize the electron environment specified for the mission and a transport code (such as NOVICE) to estimate the electron flux at interior locations where dielectric materials pose an IESD problem. When the electron flux exceeds the guideline values, apply ameliorating strategies:</p>
+
+    <ol>
+      <li>Replace dielectric with a more conductive material,</li>
+
+      <li>Relocate the dielectric structure to a more suitable location within the spacecraft, and</li>
+
+      <li>Review the grounding scheme to maximize charge bleed-off.</li>
+    </ol>
+
+    <p>Good design practices can minimize IESD risk by optimizing the spacecraft structure to provide shielding for otherwise exposed cable runs and highly resistive materials. Shielding reduces the ability of incident energetic electrons to cause IESD by shifting the flux spectra to lower energies, resulting in fewer high energy particles. Providing a shield thickness of 400 mg/cm<small><sup>2</sup></small> has been found sufficient to reduce most electron environments below the IESD threshold.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>IESD is caused by electron flux present in the earth's magnetosphere which is sufficiently energetic to penetrate the spacecraft skin and imbed in cable insulation, thermal blankets, circuit boards, and other non-conductors. Ungrounded islands of metalization can also develop a charge. When the charge build-up results in an electric field sufficient to break down the dielectric, an arc to an adjacent material at a lower potential will occur. Material damage (burn-out) and an electromagnetic pulse occurs which can couple into the subsystem electronics with the possibility of undesirable anomalous subsystem behavior.</p>
+
+    <p>Electrons responsible for bulk dielectric charging are more energetic than those responsible for surface charging. The IESD threshold current density is approximately 2x10<small><sup>5</sup></small> electrons/(cm<small><sup>2</sup></small>-s) for integral electron flux above approximately 100keV. The frequency of IESD increases as the electron flux increases above threshold. Dielectric breakdown begins to occur when the concentration of electrons exceeds approximately 10<small><sup>11</sup></small> electrons/cm<small><sup>2</sup></small>.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Vampola, A.L. (1987), "Thick Dielectric Charging on High-Altitude Spacecraft", Journal of Electrostatics, 20, pp 21-30.</li>
+
+      <li>Fredericks,A.R., Holeman, E.G, Mullem, E.G. (Dec. 1992)," Characteristics of Spontaneous Electrical Discharging of Various Insulators in Space Radiations", IEEE Trans. on Nucl. Sci., 39, 6.</li>
+
+      <li>Purvis, C.K., Garrett, H.B., Whittlesey, A., Stevens, N.J. (Sept. 1984), "Handbook of Design Guidelines for Assessing and Controlling Spacecraft Charging Effects", NASA Technical Paper 2361.</li>
+
+      <li>Mizera, P.F., Fennell, J.F., Hall, D.F., Koons, H.C., and Vampola, A.L., "Spacecraft Charging Handbook", SD-TR-85- 26, 1985.</li>
+
+      <li>Rudie, N.J., "Electron Caused Electromagnetic Pulse", DS&amp;E Magazine, pp 58-59, June 1987.</li>
+
+      <li>Design Practice to Control Interference From Electrostatic Discharge (ESD), Reliability Preferred Practice No. PD-ED-1244</li>
+
+      <li>Surface Charging/ESD Analysis, Reliability Preferred Practice No. PD-AP-1301</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Non-compliance with the IESD practice will result in increased risk of deep dielectric charging when energetic electrons are encountered. Internal discharges result from severe electron environments; they produce electromagnetic pulses that can couple into subsystem electronics, resulting in anomalous spacecraft behavior. Dielectric breakdown and material failure also occurs.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Dielectric compositions used in such spacecraft materials as circuit boards, cable insulation and thermal blankets will build up an imbedded charge when exposed to a natural space environment featuring energetic electrons. If the electric field resulting from the imbedded charge exceeds the breakdown threshold for the dielectric, an arc will occur, damaging the dielectric and producing an electromagnetic pulse which can couple into subsystem electronics.</p>
+
+    <p>Enhance hardware reliability in an energetic electron environment by conducting a materials inventory, resistivity analysis, and shielding assessment. Ascertain material susceptibility to deep dielectric charging and explosive discharge when the material:</p>
+
+    <ol>
+      <li>Is exposed to an energetic electron flux exceeding 2x10<small><sup>5</sup></small> electrons/(cm<small><sup>2</sup></small> -s), and</li>
+
+      <li>Achieves an imbedded charge density greater than a threshold of 10<small><sup>11</sup></small> electrons/cm<small><sup>2</sup></small>.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Voyager, Galileo, Spacecraft Charging at High Altitudes (SCATHA) and Chemical Release &amp; Radiation Effects Satellite (CRRES) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

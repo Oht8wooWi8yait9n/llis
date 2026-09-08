@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6216: MSL Mobility Assembly Lift Mishap</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6216: MSL Mobility Assembly Lift Mishap</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6216 (Database ID: 6216)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-06-21</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Flight Equipment, Ground Equipment, Hardware, Lifting Devices, Payloads, Safety and Mission Assurance, Spacecraft, Test and Verification, Test Article, Test Facility, Advanced planning of safety systems, Human factors planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6216" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+In January 2010, a characterization test was performed at the NASA/Caltech Jet Propulsion Laboratory (JPL) on the Mars Science Laboratory (MSL) Mobility Assembly (References (1) and (2)). The assembly was stored on a ground support equipment (GSE) Mobility Cart used for storage and transportation of this Mars rover flight hardware. The purpose of the test, using only one three-wheeled side of the rover suspension, was to move the bogie pivot through its full range of motion in order to verify bogie resolver functionality and obtain resolver calibration data. <br><br>
+
+MSL has six wheels, each with its own motor (actuator). Like the previous Mars rovers, the MSL suspension connecting the drive wheels to the rover body employs a "rocker-bogie" design that allows the rover to drive over obstacles while keeping the rover body balanced. With no axles or springs in the suspension, the three wheels on each side of the rover are connected by rockers, bogies, and pivots that distribute the load over the terrain (Figure 1). Resolvers are assemblies that sense the position of the actuator output shafts and mobility pivots; they are monitored during driving to halt the vehicle if the resolver readings fail to stay within an expected range.<br><br>
+
+<CENTER><TABLE BORDER=0>
+<TR> <TD><IMG  WIDTH="560"  ALT="Figure 1 is a color diagram of the test configuration of the MSL Mobility Assembly. It shows a wheeled platform: mounted to the platform and orthogonal to its base is a stand. At the top of the stand, a red fixture and pivot is mounted, which serves as the attachment point for the test article. The test article is depicted as three spoked wheels connected by arms. One arm, with a pivot in its middle has a wheel at each end. The larger arm is connected to the first arm at one end, connected to the third wheel at the other end, and connected to the test stand in the middle. Both arms are not straight, but are angled approximately 25 degrees at their center pivots."  TITLE="Figure 1 is a color diagram of the test configuration of the MSL Mobility Assembly. It shows a wheeled platform: mounted to the platform and orthogonal to its base is a stand. At the top of the stand, a red fixture and pivot is mounted, which serves as the attachment point for the test article. The test article is depicted as three spoked wheels connected by arms. One arm, with a pivot in its middle has a wheel at each end. The larger arm is connected to the first arm at one end, connected to the third wheel at the other end, and connected to the test stand in the middle. Both arms are not straight, but are angled approximately 25 degrees at their center pivots."  SRC="/llis_lib/images/1045878main_upload_00009459.jpg"  HEIGHT="258"  BORDER="0" /></TD>  </TR>
+
+<TR> <TD><span class="detailImageDesc"><b>Figure 1.</b> Initial MSL test configuration with the hardware mounted on the Mobility Cart <br>and the “steering wheel” MGSE installed. A “rocker-bogie” design features a two-wheeled <br>rocker arm on a passive pivot attached to a one-wheeled bogie. During rover driving, this <br>design allows the terrain to lift one wheel vertically while the other two wheels remain in <br>contact with the ground.</span></TD></TR>
+</TABLE> </CENTER><br>
+
+The test (Figure 2) took place in the JPL Spacecraft Assembly Facility (SAF), which is well equipped for mechanical testing. An overhead crane was used to raise the aft rocker assembly high enough off of the GSE cart that the bogie can be moved through its full range of motion without making contact with the cart. During the lift, the cognizant engineer (CogE) for the Mobility Assembly was standing at the front of the test article at the rocker deploy pivot, and a flight hardware technician was standing at the back of the test article-- also at the rocker deploy pivot. An additional mobility engineer was on hand calling the lift. Additional flight hardware technicians were stationed at the bogie pivot, on the crane, at the crane control (as the lift operator), at the aft wheel of the test article, and at the forward wheel. A quality assurance engineer and a safety engineer were also present. Because the flight harness was new to testing, emphasis was placed on watching the harness during the lift to ensure that there were no pinch points and no over stressing of cables. <br><br>
+
+<CENTER>  <TABLE BORDER=0>
+<TR> <TD><IMG  WIDTH="650"  ALT="Figure 2 is similar to Figure 1, except instead of a diagram it is a color photo of the actual test article in the test configuration. The actual flight hardware is mounted on the Mobility Cart in a high bay test facility. A sling is visible, attached to a lift point on the Mobility Assembly Aft Rocker and extending upwards to a crane. The side and rear of the test article is enshrouded by a clear protective film extending from the bed of the Mobility Cart to the top of the Mobility Assembly. Two technicians are visible next to the cart."  TITLE="Figure 2 is similar to Figure 1, except instead of a diagram it is a color photo of the actual test article in the test configuration. The actual flight hardware is mounted on the Mobility Cart in a high bay test facility. A sling is visible, attached to a lift point on the Mobility Assembly Aft Rocker and extending upwards to a crane. The side and rear of the test article is enshrouded by a clear protective film extending from the bed of the Mobility Cart to the top of the Mobility Assembly. Two technicians are visible next to the cart."  SRC="/llis_lib/images/1045939main_2011-10_MBSE_Fig2_small.jpg"  HEIGHT="418"  ALIGN="Bottom"  BORDER="0" /></TD></TR>
+<TR> <TD><span class="detailImageDesc">Figure 2. Lift configuration with lifting sling attached to the flight hardware</span></TD></TR>
+</TABLE> </CENTER><br>
+
+When a soft rubbing sound was heard during the lift, the hardware CogE halted the operation and investigated. The sound was attributed to a zip tie that secured the cable service loop at the rocker deploy pivot rubbing on the "steering wheel"--a mechanical GSE (MGSE) clamshell ring attached to the Mobility Assembly support stand tower (Figure 3). The CogE directed the flight technicians to cut and remove the zip tie. The lift operation was continued, the sound was heard again, and the CogE stopped the lift. This time the sound was attributed to the flight harness because the harness had not been present in previous lifts. The many service loops were checked for the location of the sound, as were the rocker deploy pivot and the bogie pivot, with no visible evidence that anything was amiss. <br><br>
+
+The lift was resumed. One of the technicians noticed that the load cell read ~330 lbs., and asked if that was expected. The CogE nodded, performed a quick calculation to determine that the load was over twice the nominal reading, and began to call a halt to the lift. Just then the hardware made a loud pop and the load cell reading decreased to 150 lbs. Searching for the location of the pop, the team discovered that a nut on the back side of the latch pin that goes through the aft fitting of the rocker deploy pivot interfered with the "steering wheel" MGSE (Figure 4). The pop sound and the high load resulted from the nut embedding in the MGSE, and the load was released when this nut sheared off. <br><br>
+
+<CENTER>  <TABLE BORDER=0>
+<TR> <TD><IMG  WIDTH="600"  ALT="Figure 3 is a color photo that provides a close-up of Figure 2, centering on the center portion of the test article where it is attached to the MGSE test mount. An arrow points to an Aft Rocker RDP Latch Pin, which appears in the photo as a bolt head located at the 9 o’clock position on the face of pivot that is attached to the MGSE test mount. Another arrow points to the “steering wheel” attached to the rear of the pivot that has the Latch Pin. The photo is taken from the front of the pivot at the photographer’s chest level, shooting back toward the steering wheel."  TITLE="Figure 3 is a color photo that provides a close-up of Figure 2, centering on the center portion of the test article where it is attached to the MGSE test mount. An arrow points to an Aft Rocker RDP Latch Pin, which appears in the photo as a bolt head located at the 9 o’clock position on the face of pivot that is attached to the MGSE test mount. Another arrow points to the “steering wheel” attached to the rear of the pivot that has the Latch Pin. The photo is taken from the front of the pivot at the photographer’s chest level, shooting back toward the steering wheel."  SRC="/llis_lib/images/1045880main_upload_00009465.jpg"  HEIGHT="396"  BORDER="0" /><FONT COLOR="#FFFFFF">....................</FONT></TD>
+
+<TD><IMG  WIDTH="600"  ALT="Figure 4 is a color photo that appears to be a yet closer close-up of the central pivot area. The steering wheel fixture and the adjacent test article attachment to the fixture fills the field of view of the photo, and the camera angle appears to be shooting down from above the hardware. A headless pin juts from a plate on the test article, with only a small gap between the plate and the steering wheel. Perhaps a couple inches to the left of the pin, the severed bolt head is visible where it is jammed in the interface between the steering wheel and the plate—where the gap is significantly less."  TITLE="Figure 4 is a color photo that appears to be a yet closer close-up of the central pivot area. The steering wheel fixture and the adjacent test article attachment to the fixture fills the field of view of the photo, and the camera angle appears to be shooting down from above the hardware. A headless pin juts from a plate on the test article, with only a small gap between the plate and the steering wheel. Perhaps a couple inches to the left of the pin, the severed bolt head is visible where it is jammed in the interface between the steering wheel and the plate—where the gap is significantly less."  SRC="/llis_lib/images/1045915main_2011-05_Mobility_Fig4_small.jpg"  HEIGHT="362"  ALIGN="Bottom"  BORDER="0" /></TD> </TR>
+<TR> <TD><span class="detailImageDesc">Figure 3. Position of latch pin relative to MGSE in the flight hardware test</span></TD>
+<TD><span class="detailImageDesc">Figure 4. Test failure, in which the "steering wheel" MGSE (red fitting) has sheared the <br>latching bolt and jammed the nut and washer, which blocked initial attempts to lower the <br>flight hardware back onto the Mobility Cart</span></TD> </TR>
+</TABLE> </CENTER><br>
+
+
+The hardware was repaired. Stress analysis indicated it was unlikely that damage occurred outside of the localized region where the latch pin and aft fitting were in contact during the loading event. <br><br>
+
+The lack of a disciplined methodology to identify potential test interferences between the flight hardware and the MGSE was an error in test preparations that contributed to the mishap. Previous bogie resolver testing on the rover chassis using the development test model (DTM) of the vehicle had been performed without the “steering wheel” MGSE present. The location of the interference was not clearly visible during the flight hardware lift activity and would not have been noticed unless it was disclosed during test preparations. A second error in preparing for the test was that the maximum expected load cell reading was not calculated by the CogE prior to the activity and communicated to the lift team. <br><br>
+
+<U>References</U>: 
+<ol><li>“Mobility Rocker Deploy Pivot Hinge Pin Failure,” JPL Problem/Failure Report No. 15868, January 21, 2010.</li><li> 
+
+“MSL Mobility Assembly Mishap Summary,” January 25, 2010.</li><li>
+J. Waydo, “Mobility Rocker Deploy Pivot: Path Forward,” January 25, 2010.</li><li>
+“MSL Backshell Crane Incident,” NASA Lesson Learned No. 5796, NASA Engineering Network, June 28, 2011.</li><li> 
+“Aquarius EGSE Shipping Mishap,” NASA Lesson Learned No. 2456, NASA Engineering Network, February 16, 2010.</li><li> 
+“NOAA-N Prime Mishap,” NASA Lesson Learned No. 1580, NASA Engineering Network, January 18, 2005.</li><li> 
+“Genesis Canister Lift Incident,” NASA Lesson Learned No. 0914, NASA Engineering Network, July 20, 2000.</li><li> 
+“MRO Articulation Keep-Out Zone Anomaly,” NASA Lesson Learned No. 2044, NASA Engineering Network, April 7, 2009.</li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol><li>
+Damage still occurs to NASA spacecraft flight systems or to other critical equipment that is preventable with proper adherence to good handling practices. References (4) through (7) list other such incidents. Reference (8) further illustrates the need to identify range-of-motion interferences.</li><br><li> 
+
+Neither drawings, nor the experience from previous tests of the developing system, can be relied upon to identify interference points or close approaches during lift operations. In the case of the MSL mobility assembly lift, discovering the interference point between the flight hardware pin and the GSE would have required personnel watching the rotation from the rear of the GSE and knowing exactly where to look.</li><br><li>
+
+Errors in the planning and implementation of the MSL test indicate that training in lift operations is important. JPL classes to train CogEs in lift operations were once scheduled periodically. Since the trainer retired and these classes were discontinued, these skills may have deteriorated.</li></ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol><li>
+
+The CogE for the flight hardware under test is fully responsible for planning and conducting the test, including lift operations. The CogE should assure that: <ul><br><li> 
+The JPL Assembly and Inspection Data Sheet (AIDS) or procedures for the lift always list a step for verifying and recording the expected load cell reading.</li><br/><li>
+Pre-lift briefings always contain a communication of the expected maximum load cell reading and identification of any expected hardware close approaches. Also, conduct an inspection of the test setup by the lift team to familiarize these personnel with the hardware and lift sequence. </li><br/><li>
+When load cells cannot be used, the CogE employs and communicates alternative processes to ensure hardware safety is not compromised. </li><br></ul><li>
+
+Instead of placing total reliance on computer-aided design (CAD) drawings to identify interference points or close approaches that may be manifested during lift operations: <br><ul><br><li>
+It is always prudent to perform a fit or rotation check prior to engaging critical hardware (flight hardware or GSE). </li><br/><li>
+Assign an individual throughout the lift operation to observe the load cell and call out the numbers to assure that the expected load is not exceeded.</li><br/><li>
+During this time, the CogE should perform a very active role, calling out “lift and hold, lift and hold” while moving around the test article and verbalizing possible anomalies.</li></ul><br><li>
+
+Center-wide training classes should be held periodically to train JPL CogEs in conducting lift operations, covering such topics as mandatory lift procedures and lessons learned, participant qualifications and responsibilities, system safety and personnel safety practices, Center points-of-contact, etc.
+
+</li></ul></blockquote></li></ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.5.3 (“Engineering Practices: Protection and Security of Flight Hardware”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 7,” JPL DocID 58032, September 30, 2008. <br><br>
+
+In addition, JPL has issued a Corrective Action Notice, CAN #1647, “Lift Operations Training / Good Handling Practices,” to track JPL-wide, closed-loop action on this mishap.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD 8719.9A, “Standard for Lifting Devices and Equipment
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

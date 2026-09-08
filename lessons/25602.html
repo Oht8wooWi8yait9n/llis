@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #25602: Following Design Guidelines to Reduce Atmospheric Buffeting in Launch Vehicles</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #25602: Following Design Guidelines to Reduce Atmospheric Buffeting in Launch Vehicles</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #25602 (Database ID: 25602)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2015-01-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> nesc</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Launch Vehicle,  NASA Standards,  Spacecraft,  Launch Systems,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/25602" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin-bottom:12.0pt">In the first few decades after World War II, NACA and NASA engineers developed launch vehicle aerodynamic design Guidelines which, if followed, will mitigate severe unacceptable behavior such as buffeting, bimodality, and hysteresis. An example is the set of rules developed for blunted hammerhead launch vehicles. The Guidelines, which are over 50 years old, are given in the chart below taken from Figure 2 of the cited reference.</p> 
+<p style="margin-bottom:12.0pt"><img alt=""><img alt="Figure 2 from NASA SP 8001" src="/lessons/25602/SP8001 Fig2.pg.jpg" style="width: 600px; height: 394px;"></p> 
+<p style="margin-bottom:12.0pt">Despite the very long history of the above rules, two recent designs for NASA did not follow them, resulting in problematic behavior that required costly redesign. The problematic behavior in both cases was discovered in wind tunnel tests. It was also found that the problematic behavior could not be replicated with Reynolds-Averaged Navier-Stokes Computational Fluid Dynamics (CFD), which has been the code type of choice for conceptual design.</p> 
+<p>The problematic behavior in both cases begins at the cone-cylinder junction formed (ℓ<sub>1</sub> and&nbsp; ℓ<sub> 2</sub> in the figure), in both cases, at the intersection of ℓ<sub> 1</sub> which was a blunted cone with a half-angle of roughly 30 degrees and ℓ<sub> 2</sub>, which was a cylinder. But it could occur with any hammerhead design as pictured above. At subsonic speeds, the air flow separates at the junction. In transonic flow, in addition, shock waves form on the ℓ<sub> 2</sub> cylindrical section, which are unsteady and also cause (and interfere with) separated flow. The Guidelines call for a half-angle of no more than 15 degrees. Wind tunnel tests of both vehicles showed severe unsteady buffeting flow in the region of the junction. In both cases, the junction was redesigned to mitigate the behavior which could include buffeting, bimodality, and hysteresis.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The two designs described above were developed more than 50 years after the Guidelines were published in the open literature. The first lesson here is that<i> <u>physics doesn’t change over time</u></i> and the Guidelines should not be ignored. A second lesson is to <i><u>avoid using codes which cannot check whether such behavior can occur</u></i>. The second lesson follows from the current practice of using Reynolds-Averaged CFD codes to predict the vehicle flow behavior and acquire loads for the initial databases. Such codes are not capable of predicting the kinds of flow behavior that violating the NASA Guidelines can produce. Hence, a false sense of security can prevail unless the Guidelines are known and promulgated to the designers and analysts.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>It is recommended that all of the launch vehicle aerodynamic lessons learned over the years and the Guidelines which have resulted be compiled and taught to all of the aerodynamicists working on launch vehicles in the US. Posters with Guidelines such as the one above could be placed in conference rooms used by the aerodynamicists. It is also recommended that the supervisors and program managers be made aware of the Guidelines.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<i>Buffet During Atmospheric Ascent - </i>SP 8001
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

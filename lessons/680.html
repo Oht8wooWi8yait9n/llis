@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0680: Design Checklists for Microcircuits</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0680: Design Checklists for Microcircuits</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0680 (Database ID: 680)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/680" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2203 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Use of this guideline will ensure continued improvement with the use of microcircuits in circuit designs by incorporating data from previously experienced problems into a design checklist. This will apply the experience base from the past and thus provide improved reliability for future space programs.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Information gathered from a history base of known problem areas is presented in easy-to-use checklist form to be used by designers, etc. The checklists are separated into three categories, based on device technology (TTL, CMOS and memory). The guideline can then be used as a reference to avoid incorrect utilization of these component types in circuit design applications which may result in potentially poor reliability.</p>
+
+    <center>
+      <table border="1" width="75%">
+        <tr>
+          <th colspan="3">TTL DESIGN CHECKLIST</th>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              1
+            </center>
+          </td>
+
+          <td valign="top">Only gates from the same package should be connected in parallel.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              2
+            </center>
+          </td>
+
+          <td valign="top">Take note not to exceed fan-out limit (maximum number of circuits fed input signals from a single output terminal).</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              3
+            </center>
+          </td>
+
+          <td valign="top">Check pin compatibility when using devices from different families or manufacturers.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              4
+            </center>
+          </td>
+
+          <td valign="top">Check manufacturer interchangeability for minor functional differences.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              5
+            </center>
+          </td>
+
+          <td valign="top">Maintain equal loading in ac and dc terms on multiple output devices with internal feedback.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              6
+            </center>
+          </td>
+
+          <td valign="top">The dynamic threshold of low-power schottky (LS) gates varies between 1.1 V and 1.4 V depending on circuit configuration; therefore, slow rise times (greater than 50 nanoseconds) will possibly cause pattern sensitivity.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              7
+            </center>
+          </td>
+
+          <td valign="top">Gates with outputs driving transmission lines should be situated close to the board periphery.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              8
+            </center>
+          </td>
+
+          <td valign="top">Consider full-range temperature effects on switching characteristics relative to design application.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              9
+            </center>
+          </td>
+
+          <td valign="top">Use pull-up resistors on devices with open collector gates.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              10
+            </center>
+          </td>
+
+          <td valign="top">Consider the frequency dependency of power dissipation when the operating frequency is greater than 1 to 2 MHz.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              11
+            </center>
+          </td>
+
+          <td valign="top">If decoded outputs from counters, particularly from ripple counters, are being used as clocks to drive counters or memory devices, the decoded outputs of interest should be examined for multiple pulses at counter transitions that might ambiguously operate the driven counters or memory devices, and corrective measures should be taken to non-ambiguously operate the driven circuits.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              12
+            </center>
+          </td>
+
+          <td valign="top">Take note that low-power, low-power Schottky, and Schottky TTL circuits are known to fail when exposed to 5 microjoules or more of electrostatic discharge (ESD) energy.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              13
+            </center>
+          </td>
+
+          <td valign="top">Consider "current dumping" effects when a multiple input gate is terminated to a single high impedance source such as a 150-ohm line.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              14
+            </center>
+          </td>
+
+          <td valign="top">All unused input pins should be tied to high- or low-logic levels, depending on the circuit application. When devices approaching their maximum speed for TTL are used, unused inputs should be "commoned" to used inputs rather than tied high; whereas for low-power Schottky devices with diode inputs, the unused ones can be directly connected to V<small><sub>CC</sub></small>.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              15
+            </center>
+          </td>
+
+          <td valign="top">Provide isolation for test points so that any foreseeable occurrence, such as shorting between, grounding or external excitation at the test points will not disrupt operational use of the circuit being monitored by the test points.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              16
+            </center>
+          </td>
+
+          <td valign="top">Consider potential problems involving the use of multiple flip-flops controlled by one or more asynchronous output.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              17
+            </center>
+          </td>
+
+          <td valign="top">Check interfacing parameters (fan-out, loading, and threshold) when using devices from different families.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+      <br />
+      <br />
+
+      <table border="1" width="75%">
+        <tr>
+          <th colspan="3">CMOS DESIGN CHECKLIST</th>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              1
+            </center>
+          </td>
+
+          <td valign="top">Allow for hold-time and setup-time requirements of CMOS flip-flops, registers, and latches. Inputs to CMOS devices must be stable before and remain stable even after the active clock pulse edge. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              2
+            </center>
+          </td>
+
+          <td valign="top">Take adequate precautions to avoid ESD damage. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              3
+            </center>
+          </td>
+
+          <td valign="top">Account for possible incompatibilities with similar part numbers from different manufacturers when establishing parts lists. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              4
+            </center>
+          </td>
+
+          <td valign="top">Investigate the package choice/reliability tradeoff for each design application. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              5
+            </center>
+          </td>
+
+          <td valign="top">When using single-stage (unbuffered) multiple-input CMOS devices, consider that both dynamic and static performance of these circuits can deteriorate under certain logic conditions to the extent that logic systems display pattern sensitivity. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              6
+            </center>
+          </td>
+
+          <td valign="top">Protect signal inputs against overvoltage spikes and input currents exceeding ratings, i.e. many CMOS devices have ten milliamperes as the maximum allowable input current. Consider that if the overvoltage spike is greater than the supply voltage, the parasitic PNP or NPN transistors become forward biased and latch-up can occur. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              7
+            </center>
+          </td>
+
+          <td valign="top">Excessive current through switches results in latching and destructive breakdown; therefore, protective circuitry is essential. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              8
+            </center>
+          </td>
+
+          <td valign="top">Consider the noise margin when using 5-volt supply levels. CMOS has an order of magnitude less energy noise margin than TTL (approximately 0.4 nanojoules for CMOS and 4.0 nanojoules for standard TTL). </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              9
+            </center>
+          </td>
+
+          <td valign="top">The power supply should switch on by itself first before signal inputs are applied, since damage may occur if the diode between input and V<small><sub>DD</sub></small> is forward biased.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              10
+            </center>
+          </td>
+
+          <td valign="top">Slowly rising or falling input signals can lead to multiple triggering, particularly if the supply voltage is poorly regulated, and also to higher supply (I<small><sub>DD</sub></small>) currents.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              11
+            </center>
+          </td>
+
+          <td valign="top">Maximum power dissipation of the device could be exceeded if input rise and fall times are greater than 15 microseconds, (depending on device type) especially using high current drivers with high supply voltages. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              12
+            </center>
+          </td>
+
+          <td valign="top">Terminate all unused inputs; a floating input can turn a CMOS device on, causing faulty operation and possible damage, and also uses increased power since both p- and n-transistors are partially conducting. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              13
+            </center>
+          </td>
+
+          <td valign="top">Ensure that interfacing parameters between CMOS and other logic families are correct, particularly with regard to loading and thresholds. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              14
+            </center>
+          </td>
+
+          <td valign="top">Keep interconnections short or use terminations, as long interconnections in high speed systems behave like transmission lines, which can cause reflections and ringing. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              15
+            </center>
+          </td>
+
+          <td valign="top">Do not use CMOS gates as linear amplifiers; this can destroy buffer gates, cause failure of the device to operate below 4 volts, and make supplier interchangeability even more problematical. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              16
+            </center>
+          </td>
+
+          <td valign="top">Avoid long, closely spaced, parallel traces on PCB's to minimize crosstalk. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              17
+            </center>
+          </td>
+
+          <td valign="top">Flip-flops with transmission gate inputs are particularly prone to malfunction if the inputs are driven above and below the supply voltages. This can occur when interfacing from other logic families and from distant boards. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              18
+            </center>
+          </td>
+
+          <td valign="top">Try not to design to typical values because of the large part-to-part process variations. In many cases guaranteed values are several orders of magnitude larger than typical values. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              19
+            </center>
+          </td>
+
+          <td valign="top">Reduce ground/power supply inductance (power/ground planes) and use sufficient decoupling capacitors, as simultaneous switching of multiple outputs causes noise and voltage drops on power supplies.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+      <br />
+      <br />
+
+      <table border="1" width="75%">
+        <tr>
+          <th colspan="3">MEMORY DESIGN CHECKLIST</th>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              1
+            </center>
+          </td>
+
+          <td valign="top">Avoid using parts at their maximum supply voltage tolerance and/or at their maximum speed. In a large memory system, noise, loading, and skew problems result in reduced apparent working area and reduced effective speed. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              2
+            </center>
+          </td>
+
+          <td valign="top">Consider carefully the difficulty in "second sourcing" with memory components, since they are far more complex than standard medium scale integration components (MSI); and very few, if any, have identical replacements. </td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              3
+            </center>
+          </td>
+
+          <td valign="top">Avoid mixing several technologies within the same memory system. If this is done great care must be taken to ensure that at no time are the pins of any memory component pulled beyond the component's substrate voltage.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              4
+            </center>
+          </td>
+
+          <td valign="top">When read-only memories (ROM's) are used to replace wired logic gates, the outputs may show noise or extra transitions, since the ROM is not guaranteed to give a single output transition for a single input transition.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              5
+            </center>
+          </td>
+
+          <td valign="top">In the use of nichrome fused bipolar programmable read-only memories (PROM's) there has been evidence of fuses growing back after programming and of unblown fuses being subject to decay. Ensure that special freezeout tests and high voltage stressing have been carried out, and also consider the greatly delayed production cycles involved.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              6
+            </center>
+          </td>
+
+          <td valign="top">Take note when using PROM's that the programming operation on devices from the same family are not necessarily compatible. Examples are the 1602 and 1702 devices in which the programming operation forces "ones" to "zeros," and the 1602A and 1702A devices which force "zeros" to "ones."</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              7
+            </center>
+          </td>
+
+          <td valign="top">Caution must be taken when using common bus lines not to allow more than one device to be enabled at a time. System noise and incorrect data problems could result, and depending on output drive capability, physical damage to the device could occur.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              8
+            </center>
+          </td>
+
+          <td valign="top">In order to minimize transmission line problems, the driver elements should be located as closely as possible to the memory elements, keeping the connecting printed circuit lines as short as possible.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              9
+            </center>
+          </td>
+
+          <td valign="top">Asynchronous input signals applied to a ROM should be permitted to change within an access time sufficient to meet setup and hold times, prior to clocking the output register. If this does not occur the contents of the output register may be completely unpredictable.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              10
+            </center>
+          </td>
+
+          <td valign="top">Periodically check PROM programming electrical specifications, since manufacturers often change their recommended programming method to improve programming yields.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              11
+            </center>
+          </td>
+
+          <td valign="top">Ensure the correct programming conditions (voltage, duration, etc.) when programming PROM's.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              12
+            </center>
+          </td>
+
+          <td valign="top">Ensure that shift register drivers have sufficient dumping capabilities, otherwise positive or negative spikes may be coupled from one clock to the opposite phase. Spikes may reach over the substrate voltage and activate parasitic substrated transistors and destroy data.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              13
+            </center>
+          </td>
+
+          <td valign="top">Memory products usually dissipate power at significantly higher levels per package than most large-scale integration (LSI) and MSI components. It is therefore very important that adequate cooling arrangements be made, because the power dissipation per unit area can approach an order of magnitude greater than ordinary TTL.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              14
+            </center>
+          </td>
+
+          <td valign="top">Allow in the design for the ROM/PROM access time differences from various parts of the array. Differences of four to one have been found for various address locations.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              15
+            </center>
+          </td>
+
+          <td valign="top">Take caution when using dynamic MOS shift registers (SR's) as low-speed power-saving circuits, since data can be lost if the SR clock speed is reduced instantaneously. The lower frequency limit applies only at high ambient temperatures and not at self-heated high-junction temperatures produced at high clock frequencies.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              16
+            </center>
+          </td>
+
+          <td valign="top">Take note that when using floating gate metal oxide semiconductor (MOS) PROM's, bit loss occurs under x-ray and nuclear radiation. In addition, problems of inadequate erasure due to poorly calibrated ultraviolet sources can arise.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              17
+            </center>
+          </td>
+
+          <td valign="top">Take caution when using MOS electrically alterable PROM's, since data loss can occur from cells subjected to greater than 10<small><sup>9</sup></small> accesses. Given an access time of 1 microsecond, the data could be lost within an hour if continuous reads are made from one location.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              18
+            </center>
+          </td>
+
+          <td valign="top">Power supply slew characteristics should be evaluated carefully. Two separate problems have been noted. One problem is that at switch-on, a slowly rising power supply may not initialize the random access memory (RAM) logic correctly so that a subsequent initializing procedure is required. Another problem is that sharp, small supply voltage changes that occur in normal memory system operation can cause data loss in some supplier dynamic memory products.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              19
+            </center>
+          </td>
+
+          <td valign="top">Operating temperatures have to be considered very carefully. Because of their complexity, memory components tend to be more sensitive to temperature extremes than other types of devices.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              20
+            </center>
+          </td>
+
+          <td valign="top">Consider that large MOS memory systems often require error correction and detection (the inclusion of "Hamming" error correction codes in the design). This approach improves the effective system reliability by two orders of magnitude, and the associated error indicators simplify scheduled maintenance.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              21
+            </center>
+          </td>
+
+          <td valign="top">Consider access time measurement criteria carefully. While some manufacturers measure access times to the V<small><sub>OL</sub></small> and V<small><sub>OH</sub></small> voltage levels, others measure access to the 1.5 voltage level for both high- and low-level outputs. Additionally, some suppliers specify two output loads in their dc characteristics, but measure access time against one output load.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              22
+            </center>
+          </td>
+
+          <td valign="top">Many dynamic RAM's require a substrate bias supply (V<small><sub>BB</sub></small>) to ensure correct operation. Unless this bias supply is raised before the main supply and dropped after the main supply, high currents may be drawn. Also, if the bias supply is reversed even in a transient mode, the parasitic substrate transistor will draw extremely high currents. Since the internal capacitances of the RAM are terminated to the substrate, very good transient bypassing is required.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              23
+            </center>
+          </td>
+
+          <td valign="top">Take care when using bipolar memory devices (e.g., many ROM/PROM devices) with PNP transistor low-power Schottky style inputs. It is important that the inputs not be pulled below ground until the PNP device is saturated; otherwise, very long access times will be observed.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <center>
+              24
+            </center>
+          </td>
+
+          <td valign="top">Allow for input/output coupling features of static RAM's in the system design. Although possibly not shown on the write-cycle data published by the manufacturers, the input data may appear on the output during the write mode.</td>
+
+          <td valign="top" width="20">&nbsp;&nbsp;</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>References:</p>
+
+    <ol>
+      <li>MIL-M-38510 Microcircuits, General Specification for</li>
+
+      <li>MIL-STD-975 NASA Standard Parts List</li>
+
+      <li>MIL-STD-978 NASA Parts Applications Handbook</li>
+
+      <li>MIL-STD-1547 Electronic Parts, Materials and Processes for Space and Launch Vehicles</li>
+
+      <li>MIL-STD-1562 Lists of Standard Microcircuits</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>In many situations, new circuit designs may not adequately incorporate all the relevant past history from a wide data base of previous experience, and hence will not achieve the best possible performance and reliability.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This guideline provides checklists taken from Government-Industry Data Exchange Program (GIDEP) files to be used as a measure to avoid commonly experienced problems in transistor-to-transistor logic (TTL), complementary-metal-oxide-semiconductor (CMOS), and memory circuit design applications.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1618: Design Circuits to Facilitate Pre-I&amp;T Inspection (2002)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1618: Design Circuits to Facilitate Pre-I&amp;T Inspection (2002)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1618 (Database ID: 1618)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-07-28</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1618" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The Rover Power Distribution Unit (RPDU) on Mars Exploration Rover (MER) contains over 140 power switches controlling rover loads (e.g., heaters) and relays. During MER system integration and test, errors were discovered in the fabrication of two Rover Electronics Module (REM) heater circuits. The primary heater circuit for the REM was mistakenly wired to short the output from an RPDU switch to ground, immediately blowing a fuse. The backup REM heater circuit was also defective, but was miswired to produce no heat. The test incident caused no damage to the heaters or thermostats, but it demonstrated the need for an additional test to screen short circuits and other electronic fabrication defects that could stress flight hardware powered during Assembly, Test, and Launch Operations (ATLO).<br> <br> &nbsp;</p> 
+<table border="0" cellpadding="0"> 
+ <tbody> 
+  <tr> 
+   <td><a href="https://llis.nasa.gov/llis_lib/images/1013851main_NEN1618-Testability-1A.gif"><img align="Bottom" alt="MER ALTO test configuration" border="0" src="https://llis.nasa.gov/llis_lib/images/1013854main_NEN1618-Testability-1A_small.gif" title="MER ALTO test configuration"></a></td> 
+   <td><a href="https://llis.nasa.gov/llis_lib/images/1013852main_NEN1618-Testability-1B.gif"><img align="Bottom" alt="Configuration is a test point were added that would permit validation of the circuit (by bypassing the normally open thermostats)" border="0" src="https://llis.nasa.gov/llis_lib/images/1013853main_NEN1618-Testability-1B_small.gif" title="Configuration is a test point were added that would permit validation of the circuit (by bypassing the normally open thermostats)"></a></td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(A) MER ALTO test configuration</td> 
+   <td valign="top">(B) Configuration is a test point were added that would permit validation of the circuit (by bypassing the normally open thermostats)</td> 
+  </tr> 
+  <tr> 
+   <td colspan="2">Figure 1. Thermostatically Controlled Heater Design</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> 
+<br> 
+<br> However, performance of this step was inhibited by a lack of adequate test points in the circuit design. Because the thermostats only close when heater output is required, an ohmmeter placed across the connector input power pin and the return pin will always show an open circuit when tested at room temperature (Figure 1A). If the design had provided a pin (top of Figure 1B) on the connector that bypassed the thermostats, ATLO personnel could have directly measured the circuit resistance and determined that the wiring was incorrect. The cost of adding additional test points during circuit design is much less than the cost of dismantling the flight hardware to fix a flaw during ATLO. 
+<br> 
+<br> 
+<u>References</u> 
+<p>&nbsp;</p> 
+<ol> 
+ <li>JPL Problem/Failure Report No. Z77947, October 16, MIL-HDBK-2165, Testability Program for Systems and Equipments,July 31, 1995, Para 202.2.4.</li> 
+ <li>MIL-HDBK-2165, Testability Program for Systems and Equipments, July 31, 1995, Para 202.2.4.</li> 
+</ol> 
+<br> Additional Key Words: design-for-test; test-induced failure, Manufacturing/ Engineering
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Disassembly of a highly integrated spacecraft like MER during ATLO for replacement of a fuse, or of a defective assembly, may not be a trivial action. Spacecraft circuitry needs to be designed for testability, as well as for post- launch performance.</li> 
+ <li>Evaluating the appropriate placement of test points can greatly enhance the testability of flight hardware, and it can assure system safety by aiding in the inspection of test readiness.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Ensure that the production process for electronic modules includes a provision for inspecting (i.e., “buzzing out”) each circuit after the build.</li> 
+ <li>Design-in enough test points to get proper access to circuits for post-build and pre-I&T (pre-ATLO) inspection.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 4.12.10.1 ( 
+<q>Flight Electronics Hardware System Design: Verification -Testability</q>) in the JPL standard 
+<q>Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),</q> JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

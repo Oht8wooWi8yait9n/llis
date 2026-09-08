@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1483: MER Spirit Flash Memory Anomaly (2004)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1483: MER Spirit Flash Memory Anomaly (2004)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1483 (Database ID: 1483)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-08-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1483" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Shortly after the commencement of science activities on Mars, the &ldquo;Spirit&rdquo; rover lost the ability to execute any task that requested memory from the flight computer. The rover operated in a degraded mode until 15 days later, when normal operations were restored and science activities resumed.<br />
+    <br />
+    The root cause of the failure was traced to incorrect configuration parameters in two operating system software modules that control the storage of files in system memory (heap) and flash memory. A parameter in the dosFsLib module permitted the unlimited consumption of system memory as the flash memory space was exhausted. A parameter in the memPartLib module was incorrectly set to suspend the execution of any task employing memory when no additional memory was available. Task suspension forces a reset of the flight computer, and it is never supposed to occur.<br />
+    <br />
+    The initial reset event was triggered by the creation of a large number of files associated with MER instrument calibration that overburdened flash memory, and then system memory. The reset did not clear flash memory because flash memory is non-volatile by design. Although the reset did delete the files in system memory, the total size of the file system structure is determined not by the number of current files but rather by the maximum number of files that has ever existed. Since neither memory was cleared by the initial reset, a cycle of repetitive computer resets and flight software re-initializations ensued.<br />
+    <br />
+    The effects of overburdened flash and system memory were not recognized nor tested during system level ground testing.<br />
+    <br />
+    Mission Operations recovered the mission by manually reallocating system memory, deleting unnecessary directories and files, and commanding the rover to create a new file system. Because revision of flight software was considered too risky, operational changes were implemented for both MER vehicles to improve oversight of rover file management.<br />
+    <br />
+    <u>References</u><br />
+    </p>
+
+    <ol>
+      <li>JPL Incident Surprise Anomaly Report (ISA) No. Z83174, January 29, 2004.</li>
+
+      <li>Glenn Reeves, Tracy Neilson &amp; Todd Litwin, &ldquo;Mars Exploration Rover Spirit Vehicle Anomaly Report,&rdquo; Jet Propulsion Laboratory Document No. D-22919, May 12, 2004.</li>
+
+      <li>Mars Exploration Rover Project Library, Collections 13788 and 13664.</li>
+    </ol>
+    Additional Key Words: flight software architecture, flight software design, flight software requirements, file system corruption, shutdown failure, autonomous shutdown, system memory space, repetitive resets, avionics, system reboot<br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>A severely compressed flight software development schedule may prevent the achievement of a full understanding of software functions. During the MER software development process there was a continuous reprioritization of activities and focus. One impact of this dynamic process was that only the highest priority flight software issues and problems could be addressed, and memory management problems were viewed as a low risk.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Enforce the project-specific design guidelines for COTS software, as well as for NASA-developed software. Assure that the flight software development team reviews the basic logic and functions of commercial off-the-shelf (COTS) software, with briefings and participation by the vendor.</li>
+
+          <li>Verify assumptions regarding the expected behavior of software modules. Do not use a module without detailed peer review, and assure that all design and test issues are addressed.</li>
+
+      <li>Where the software development schedule forestalls completion of lower priority action items, maintain a list of incomplete items that require resolution before final configuration of the flight software.</li>
+
+      <li>Place high priority on completing tests to verify the execution of flight software internal functions.</li>
+
+      <li>Early in the software development process, create a comprehensive suite of tests and automated analysis tools. Ensure that reporting flight computer related resource usage is included.</li>
+
+      <li>Ensure that the flight software downlinks data on system resources (such as the free system memory) so that the actual and expected behavior of the system can be compared.</li>
+
+      <li>For future missions, implement a more robust version of the dosFsLib module, and/or use a different type of file system and a less complex directory structure.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced the lesson as supporting Paragraph 4.11.4.5 ("Flight Software System Design: Design Robustness - Response to Resource Over-Subscription") and Paragraph 4.11.6.3 ("Flight Software System Design: Diagnostic and Self-Test Capability - Measurement of Constrained Resources"), in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

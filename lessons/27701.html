@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #27701: Proximate Cause of the SMAP Radar Failure</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #27701: Proximate Cause of the SMAP Radar Failure</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #27701 (Database ID: 27701)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2019-03-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Systems Engineering and Analysis,  Configuration Management,  Flight Equipment,  Hardware,  Parts,  Materials,  & Processes,  Payloads,  Risk Management / Assessment,  Safety & Mission Assurance,  Spacecraft,  Test & Verification,  Power,  Spacecraft and Spacecraft Instruments,  Configuration Change Control,  Product Assurance,  Quality,  Reliability,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/27701" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Soil Moisture Active Passive (SMAP) is an Earth-orbiting observatory designed to create global, high-resolution mapping of soil moisture and its freeze/thaw state. SMAP consists of a 3-axis stabilized spacecraft bus and a spun instrument assembly (SIA) (Figure 1). The SMAP science instrument payload consists of an L-band radiometer provided by the NASA Goddard Space Flight Center and an L-band radar provided by the NASA/Caltech Jet Propulsion Laboratory (JPL).</p> 
+<div> 
+ <table style="border:1pt solid windowtext"> 
+  <tbody> 
+   <tr> 
+    <td style="border:1pt solid windowtext"> <p style="text-align:center; padding:0in 5.4pt"><img src="/lessons/27701/2019-04_SMAP_Fig1.jpg"></p> </td> 
+   </tr> 
+   <tr> 
+    <td style="border-right-width:1pt; border-bottom-width:1pt; border-left-width:1pt; border-style:none solid solid; border-right-color:windowtext; border-bottom-color:windowtext; border-left-color:windowtext"> <p style="padding:0in 5.4pt"><b>Figure 1. </b>SMAP on-orbit architecture</p> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p>&nbsp;</p> 
+<p>On July 7, 2015, the radar portion of the SMAP Radar/Radiometer instrument failed in a high-energy proton rich portion of the orbit called the South Atlantic Anomaly (SAA), after two months of nominal science operations. The project team attempted to recover radar operability, but was unsuccessful. The SMAP project determined that the failure was in the radar LVPS. JPL convened a Failure Review Board (FRB), which issued a report (Reference (2)) concurring with the conclusion that the failure is located within the radar’s LVPS. However, in the course of the investigation the FRB was unable to identify a single specific proximate cause or root cause of the failure. Instead, Reference (2) states on Page 1, “<i>it is clear that the failure of the SMAP Radar LVPS likely resulted from an interaction among several contributing causes, any one of which may or may not have directly resulted in a failure if it had occurred in isolation In effect, this failure was a circumstance that managed to evade the integrated set of checks and balances put in place to ensure mission success.</i>”</p> 
+<p>However, additional testing conducted subsequent to the completion of Reference (2) revealed a likely proximate cause of the radar failure (Reference (3)) — still within the LVPS. The investigation revealed that back voltage (i.e., counter-electromotive force, or CEMF) resulting from leakage inductance in the load transformer in the LVPS circuit caused voltage spikes that significantly exceeded the 250 V rated voltage applied between the source and drain of the MOSFET. (All transformers produce leakage inductance, the amount and adverse effects subject to design tradeoffs.) MOSFETs are known to be vulnerable to Single-Event Burnout (SEB) and Single-Event Gate Rupture (SEGR) when, and only when, a MOSFET’s drain-to-source voltage exceeds a failure threshold.</p> 
+<p>To verify that the SMAP on-orbit anomaly could have been caused by this condition, nine power MOSFETs were tested for heavy-ion induced Single-Event Effect (SEE) failures on April 11, 2016. Another nine were tested for protons using a different radiation facility on June 10, 2016. To ensure flight-like testing, both sets of tests used the SMAP LVPS breadboard assembly (Figure 2). The tested parts were not from the flight lot; however, they were verified by the manufacturer to have been made from the same mask set of a high-reliability foundry, so SEE response was expected to be very similar, or identical, to the flight lot. SEE response is tightly controlled by the manufacturer, so lot-to-lot process variations matter very little. Thus, Reference (3) concludes that the SEE response of the tested devices is representative of the flight lot. Once the manufacturer’s voltage rating was exceeded in the course of the tests, all 18 irradiated test parts exhibited catastrophic SEE, identified as single-event burnout (SEB), which resulted in circuit failure.</p> 
+<div> 
+ <table style="border:1pt solid windowtext"> 
+  <tbody> 
+   <tr> 
+    <td style="border:1pt solid windowtext"> <p style="padding:0in 5.4pt"><img src="https://nen.nasa.gov/documents/17793/0/NEN27701_SMAP_Fig2.png/619525fd-6318-face-2d63-f047ff629225?t=1595974817497">​​​​​​​</p> <p style="padding:0in 5.4pt">&nbsp;</p> <p style="padding:0in 5.4pt">&nbsp;</p> </td> 
+   </tr> 
+   <tr> 
+    <td style="border-right-width:1pt; border-bottom-width:1pt; border-left-width:1pt; border-style:none solid solid; border-right-color:windowtext; border-bottom-color:windowtext; border-left-color:windowtext"> <p style="padding:0in 5.4pt"><b>Figure 2.</b> SMAP LVPS breadboard circuit. MOSFET device is circled in red</p> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p>&nbsp;</p> 
+<p>The amount of proton radiation fluence estimated over the 208 days of total spacecraft orbital exposure results in a failure likelihood that supports the conclusion that it suffered a radiation-related failure. The characterization that the anomaly was a radiation-induced destructive Single Event Effect (SEE) is supported by the instantaneous onset of the on-orbit failure.</p> 
+<p style="margin-top:6pt; margin-bottom:3pt"><b>References:</b></p> 
+<ol> 
+ <li>“SMAP SAR HPA turned off unexpectedly,” JPL Incident Surprise Anomaly (ISA) No. 58469, July 7, 2015.</li> 
+ <li style="margin-top:3pt; margin-bottom:3pt">JPL “Soil Moisture Active Passive (SMAP) Failure Review Board Report,” April 22, 2016.</li> 
+ <li style="margin-top:3pt; margin-bottom:3pt">Leif Scheick, et al, “Single-Event Testing of the IRHMS57264SE power MOSFET in the Low Voltage Power Supply Circuit for SMAP,” JPL-internal test report, October 18, 2016.</li> 
+ <li style="margin-top:6pt; margin-bottom:3pt">The as yet unpublished lesson learned that covers the JPL FRB report will be referenced here.</li> 
+</ol> 
+<p style="margin-top:6pt; margin-bottom:3pt">(To obtain a copy of a <a href="https://gateway.jpl.nasa.gov/sites/ESD/Chief%20Engineer/Forms/AllItems.aspx?RootFolder=%2Fsites%2FESD%2FChief%20Engineer%2FKnowledge%20Management%2FLessons%20Learned%2FReferences%20in%20LLs&amp;FolderCTID=0x0120006E607BC1AB62DD49A7D31C4F2C730561&amp;View=%7BE3DD4B8A-C5B1-4271-9556-12ED294E4189%7D">lesson learned reference</a>, contact <u><a href="mailto:michelle.drabik@jpl.nasa.gov">Michelle Drabik</a></u> or the JPL Office of the Chief Engineer.)</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin-top:12.0pt">Field effect transistors (FETs) may become vulnerable to radiation damage after being subjected to an over-voltage condition-- even where the drain-to-source (D-S) voltage exceeds the manufacturer’s limits only briefly. When leakage inductance is present in a system, transient over-voltage conditions may result that could contribute to this susceptibility. Circuit design and analysis may not consider that the risk to radiation-hardened FETs from this overvoltage condition is due to SEE susceptibility (as opposed to voltage stress or other factors commonly included in circuit analysis.) This vulnerability as the proximate cause of the SMAP failure is supported by the tests described above, where 100 percent of the test article devices failed when the SMAP on-orbit conditions were reproduced.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="margin-top:6.0pt">Switching voltage transients caused by leakage inductance should be characterized through simulation and test, and protective circuity (e.g., snubbers, clamps) employed where needed.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">For circuit devices that are susceptible to SEE and are intended to be operated in a radiation environment over the course of a mission, ensure that the devices are protected from even transitory over-voltage conditions that could trigger SEB or SEGR.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:6.0pt; margin-left:0in">JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.4.2 (“Safety and Mission Assurance Practices - Electronic Parts Reliability, Application, and Acquisition.”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 12,” JPL DocID 58032, December 14, 2017.</p> 
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:6.0pt; margin-left:0in">In addition, JPL has referenced it supporting Paragraph  4.12.1.5.3 (“Flight System Design: Flight Electronics Hardware System Design  - Radiation Design Factors - Science instruments”) in the JPL standard “Design Principles,” JPL Document D-17868, Rev. 7, March 27, 2018.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

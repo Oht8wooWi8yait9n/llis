@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0807: Penetrant Testing of Aerospace Materials</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0807: Penetrant Testing of Aerospace Materials</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0807 (Database ID: 807)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/807" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1426 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Penetrant Testing is a cost effective, nondestructive method for determining cracks, porosity, gouges, laps, seams, and other flaws that are open to the surface of metallics and selected non-metallics.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Liquid penetrant testing is a nondestructive method of detecting surface flaws in solid material and structures. Cracks, porosity, gouges, laps, seams, and other types of flaws can be found using this technique. Penetrant testing is a process in which the liquid penetrant is drawn into small openings by capillary action when it is applied to a surface. After a specified time, excess penetrant is removed from the surface and developer is applied to the surface. The developer absorbs residual penetrant drawn from the flaw leaving a bright-colored penetrant ìbleedingî through the developer&iacute;s white background giving a clear visual indication of cracks, porosity, and other flaws.</p>
+
+    <p>There are numerous types and sensitivities of penetrants. The penetrant systems, consisting of penetrant, developer, and cleaner, must be selected for component compatibility and be suitable for use on the test article. In addition to the specific requirements for actual penetrant test, initial surface preparation and final cleaning often requires detailed procedures. Table 1 shows five sensitivity levels for penetrants.</p>
+
+    <p>Penetrants have been developed for specific applications for ferrous metals, nonferrous metals, glass, polymers and ceramics. The penetrant must also be compatible with the test article to avoid material degradation and possible explosion. For example, the chemical combination of incompatible penetrant materials, the container material, and liquid oxygen, combined with impact or shock, can cause an explosion. Common properties and characteristics of suitable penetrants are listed in Table 2.</p>
+
+    <center>
+      <table>
+        <tr>
+          <td>
+            <center>
+              <IMG  WIDTH="336"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009284main_0807-1.jpg"  HEIGHT="399"  BORDER="0" /><A HREF="/llis_lib/txt/1009759main_0807-1.txt"  >[D]</A><br />
+              Table 1. Sensitivity Levels for Penetrants
+            </center>
+          </td>
+
+          <td>
+            <center>
+              <IMG  WIDTH="326"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009285main_0807-2.jpg"  HEIGHT="399"  BORDER="0" /><A HREF="/llis_lib/txt/1009760main_0807-2.txt"  >[D]</A><br />
+              Table 2. Properties and Characteristics of Penetrants
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>There are six basic steps required to perform a penetrant test. These six basic steps are shown in the flow diagram on Figure 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009286main_0807-3.jpg"  HEIGHT="234"  BORDER="0" /><A HREF="/llis_lib/txt/1009761main_0807-3.txt"  >[D]</A><br />
+      Figure 1. Penetrant Test Flow Diagram
+    </center>
+
+    <p>The most common cleaning methods are application of solvents, vapor degreasing, detergent cleaning, steam cleaning and ultrasonic cleaning. Mechanical cleaning using wire brushes, abrasives, emery cloths, or metal scraping are not recommended. However, if mechanical cleaning must be used, light chemical etching is required to reopen any closed flaws. Penetrant testing should be accomplished before any paint or metallic coating is applied since these coatings will close any flaws.</p>
+
+    <p>The success of penetrant testing depends upon the visibility of flaw indications. To ensure visibility, the penetrant contains either a colored dye easily seen in white light, or a fluorescent dye visible under black (ultraviolet) light. A list of penetrants typically used is listed in reference 4. The penetrant is applied by either dipping, spraying, brushing, or flowing. After penetrant application, a sufficient time (dwell time) is provided to permit the penetrant to permeate the flaw. The manufacturers of penetrants provide the minimum dwell times charts. A typical dwell time chart is shown in Table 3. The penetrant must not be allowed to dry during the dwell time, and must remain wet until the excess penetrant is removed. If penetrant has dried, then the process must be repeated.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009287main_0807-4.jpg"  HEIGHT="168"  BORDER="0" /><A HREF="/llis_lib/txt/1009762main_0807-4.txt"  >[D]</A><br />
+      Table 3. Typical Dwell Time Chart
+    </center>
+
+    <p>Removal of the penetrant depends upon the type used. The most common methods used are water washable, post emulsified, and solvent removed. Care must be exercised to ensure that the specimen is not over cleaned, thereby removing the penetrant from the flaw.</p>
+
+    <p>Generally, a developer is required, although some penetrants are formulated for use without a developer. A whitish powder in the developer is very absorbent and acts as a blotter. This blotting action carries the penetrant from the flaw into the powder, forming a flaw pattern.</p>
+
+    <p>Inspection of the specimen consists of analysis of the patterns on the developer and determining their cause. Inspection may reveal patterns that are either true indications or false indications of a flaw. The true indications are those caused by penetrant bleeding from the actual flaws. Improper cleaning in the initial cleaning step and incomplete removal of the excess penetrant are common causes of false indications. False indications sometimes look like and may hide true indications. If there is doubt about the source of a pattern on the developer, the test should be repeated and the patterns carefully analyzed as they develop.</p>
+
+    <p>The ability to identify true indications requires much practice. For example, cracks, cold shunts, seams, and forging laps all show up as a continuous line. The same flaws may show up as an intermittent line indicating that the flaw may be partially closed at the surface. Small dots and round indications generally indicate porosity, small inclusions, or blow holes. If the defect is located below the surface, the sensitivity of this method diminishes rapidly with depth.</p>
+
+    <p>Penetrant inspectors should be qualified and certified in accordance with MIL-STD-410E or SNT-TC-1A. To provide permanent records, photographs of the specimen should be taken prior to post cleaning. Post cleaning is only required of those specimens that are found free of defects. Defects are described by engineering or as specified in MIL-STD-1907. Post inspection cleaning is necessary since the penetrant and developer residue tend to attract moisture, which can cause corrosion or can interfere with subsequent processing or usage. The cleaning methods for post inspection cleaning are generally the same as those recommended for precleaning. Advantages and disadvantages of the penetrant testing method are shown in Table 4.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009288main_0807-5.jpg"  HEIGHT="245"  BORDER="0" /><A HREF="/llis_lib/txt/1009763main_0807-5.txt"  >[D]</A><br />
+      Table 4. Advantages and Disadvantages of Penetrant Testing Method
+    </center>
+
+    <p>The hazardous properties that should always be considered when using a dye penetrant are liquid flashpoint and toxicity. The flashpoint of penetrant processes can be as low as 40<small><sup>o</sup></small>F to as high as 200<small><sup>o</sup></small>F. The penetrants should be used per manufacturer's instructions. Most penetrants are not actually toxic and do not present a particular hazard in normal use. However, there are precautions that should be followed. Practically all liquid materials used in penetrant, cleaner, and developer have good wetting and detergent properties. Therefore, they exhibit excellent solvent power for fats and oils. These materials, when allowed to contact the skin for an extended period, will dry out the natural oils from the skin, causing it to become rough, red, and if left untreated to eventually crack open, which could cause a severe secondary infection. This is preventable by wearing neoprene-type gloves and aprons, face shield, and protective
+    clothing. If exposed to this skin drying, replenishing the oils on the exposed skin should prevent any cracking.</p>
+
+    <p>Another hazard with penetrants is the using of dry developers which could be inhaled and become a health hazard. The use of any of the penetrant processes should be performed in a well-ventilated area. If working in a confined area such as a tank, the inspector should have an individual air supply with a full helmet over the head.</p>
+
+    <p>The black light used when inspecting fluorescent penetrants can cause severe sunburn and damage to the eyes. The blacklight source should always be checked for missing, cracked, or broken filters and repaired before use. Store penetrants in an approved fire container.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Marshall Space Flight Center has successfully used the penetrant testing method for years. It is a proven method for locating flaws in surface areas of highly stressed areas of components and structures. In addition, it is an effective method for both metallic and nonmetallic materials.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Bray, Don E. and Don McBride: "Nondestructive Testing Techniques," John Wiley &amp; Sons, Inc., New York, NY, 1992.</li>
+
+      <li>Metals Handbook, Vol. 17: "Nondestructive Inspection and Quality Control," pp. 71-88 ASM International, Metals Park, OH 1989.</li>
+
+      <li>CT-6-2: "Nondestructive Testing Liquid Penetrant," Fourth Edition, Class Room Training Handbook, General Dynamics, Convair Division, 1977.</li>
+
+      <li>P1-4-2: "Nondestructive Testing, Liquid Penetrant," Fourth Edition, Programmed Instruction Handbook, General Dynamics, Convair Division, 1977.</li>
+
+      <li>MIL-STD-410E: "Nondestructive Testing Personnel Qualification and Certification," Military Standard, January 1991.</li>
+
+      <li>MIL-STD-6866: "Liquid Penetrant Inspection," Military Standard, 1989.</li>
+
+      <li>MIL-I-25135: "Penetrant Inspection Materials," Military Specification, 1989.</li>
+
+      <li>MIL-STD-1907: "Penetrant and Magnetic Particle Inspection, Soundness Requirements for Materials, Parts and Weldments," Military Standard, 1990.</li>
+
+      <li>SNT-TC-1A, "Recommended Practice, Personnel Qualification and Certification in Nondestructive Testing," American Society for Nondestructive Testing, Columbus, OH, 1988.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to locate surface flaws in critical stressed areas of parts and structures could result in loss of part or structure, loss of mission, and in extreme cases loss of life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Penetrant testing improves hardware reliability by detecting surface flaws and defects in solid materials and structures. The discontinuities must be open to the material surface.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I, IB&amp;V, Apollo, Skylab, Space Shuttle External Tank (ET), Space Shuttle Solid Rocket Motor (SRM), Space Shuttle Main Engine (SSME), Space Shuttle Solid Rocket Booster (SRB), and other Marshall Space Flight Center programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

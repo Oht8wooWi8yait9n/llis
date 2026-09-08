@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0637: Wide-Field Infrared Explorer (WIRE) Mishap Investigation Board</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0637: Wide-Field Infrared Explorer (WIRE) Mishap Investigation Board</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0637 (Database ID: 637)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1998-10-20</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/637" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> <img align="right" alt="Graphic of the WIRE SPACECRAFT Orbiter with labels. Labels read Clockwise from the top: 'APERTURE SHADE', 'INSTRUMENT', 'SEPARATION RING', 'COMPOSITE SPACECRAFT', 'MODULAR SOLAR ARRAY', 'STAR TRACKER'" border="0" height="278" src="https://nen.nasa.gov/llis_lib/images/1008995main1_0637.jpg" title="Graphic of the WIRE SPACECRAFT Orbiter with labels. Labels read Clockwise from the top: 'APERTURE SHADE', 'INSTRUMENT', 'SEPARATION RING', 'COMPOSITE SPACECRAFT', 'MODULAR SOLAR ARRAY', 'STAR TRACKER'" width="250">The Wide-Field Infrared Explorer Mission objective was to conduct a deep infrared, extra galactic science survey. The Wide-Field Infrared Explorer was launched on March 4, 1999, and was observed to be initially tumbling at a rate higher than expected during its initial pass over the Poker Flat, Alaska, ground station. After significant recovery efforts, WIRE was declared a loss on March 8, 1999.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> The WIRE Mishap Review Board has determined that the telescope instrument cover was ejected earlier than planned and at approximately the time the WIRE pyro electronics box was first powered on. The instrument&#39;s solid hydrogen cryogen supply started to sublimate faster than planned, causing the spacecraft to spin up to a rate of sixty revolutions per minute over the twelve hours following the opening of the secondary cryogen vent. Without any solid hydrogen remaining, the instrument could not perform its observations.</p> 
+<p> The root cause of the WIRE mission loss is a digital logic design error in the instrument pyro electronics box. The transient performance of components was not adequately considered in the box design. The failure was caused by two distinct mechanisms that, either singly or in concert, result in inadvertent pyrotechnic device firing during the initial pyro electronics box power-up. The control logic design utilized a synchronous reset to force the logic into a safe state. However, the start-up time of the Vectron crystal clock oscillator was not taken into consideration, leaving the circuit in a non-deterministic state for a time sufficient for pyrotechnic actuation. Likewise, the startup characteristics of the Actel A1020 FPGA were not considered. These devices are not guaranteed to follow their &quot;truth table&quot; until an internal charge pump &quot;starts&quot; the part. These uncontrolled outputs were not blocked from the pyrotechnic devices&#39; driver circuitry. There has been no evidence or indication of any component failure although component failures were considered in the investigation.</p> 
+<p> A significant contributing cause of the anomaly was the failure to identify, understand, and correct the electronic design of the pyro electronics box. Design errors in the circuitry, which controlled pyro functions, were not identified. The pyro electronics box design was not peer reviewed, and other system reviews conducted by the instrument design organization did not focus on the electronics box. At the time the Systems Design Review was conducted for WIRE the design of the pyro electronics box was not completed. It is the assessment of the WIRE Mishap Investigation Board that a peer review held during the design process, by people with knowledge of and expertise regarding pyro circuit design would have identified the turn-on characteristics that led to failure.</p> 
+<p> A large number of failure scenarios were evaluated during the investigation to determine the cause of the cover ejection. These included; pre-launch, launch, powered flight, separation, software, operations, design and component reliability faults. Based on comprehensive, systematic review of data, it was determined the cover was most likely ejected at the time the WIRE pyro electronics box was turned on due to a transient condition that exists in the pyro electronics during startup. This transient condition is the direct result of the non-deterministic initialization of a Field-Programmable Gate Array (FPGA) that controls both the arming and firing circuits in the pyro electronics.</p> 
+<p> Although some design attention was given to the startup behavior of the FPGA, the design contained unidentified idiosyncrasies that triggered the cover ejection. The system design did not contain sufficient start-up lockout protection or independent provisions to prevent the FPGA startup operation from propagating to the firing circuits.</p> 
+<p> The anomalous characteristics of the pyro electronics unit were not detected during subsystem or system functional testing due to the limited fidelity and detection capabilities of the electrical ground support equipment. Post-flight circuit analyses conducted as part of the failure investigation have predicted the existence of the anomaly and it has been reproduced confidently using engineering model hardware.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Independent, separate pyro inhibits should be considered for mission critical events, particularly if all pyro functions can be simultaneously armed and enabled. Hence, activitation of a pyro event would require two separate actions - one separate action to enable the inhibit and another to fire the pyros. This approach would preclude spurious transient pyro firings during turn-on and preclude sympathetic firings induced by sneak path and/or crosstalk/magnetic field interactions that may occur in cabling.</li> 
+ <li> Testing only for correct functional behavior should be augmented with a significant effort in testing for anomalous behavior, especially during intitial turn-on and power-on reset conditions.</li> 
+ <li> Peer reviews should be required by Project Management and held as often as necessary.</li> 
+ <li> Peer reviews should consider the heritage capability and limitations of the support equipment to be used for testing the flight design.</li> 
+ <li> Project review board members should consistently penetrate the system and subsystem functional design and implementation to expose risk areas, particularly where multiple/complex interfaces exist. Reviews should fully define spacecraft and payload interface requirements, and have a cognizant systems person from each program element review the other persons&#39; test program and payload/spacecraft simulators for fidelity.</li> 
+ <li> System and subsystem engineers should consistently evaluate functional designs and implementation to expose risk areas, particularly where multiple/complex interfaces exist. Projects with multiple components, i.e. spacecraft bus and a separate instrument, require complete team coopoeration, openness, and the ability to penetrate and understand each other&#39;s design responsibilities in a timely manner.</li> 
+</ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

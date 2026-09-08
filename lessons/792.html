@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0792: Radiation Design Margin Requirement</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0792: Radiation Design Margin Requirement</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0792 (Database ID: 792)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/792" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1260; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The Radiation Design Margin (RDM) requirement is imposed on assemblies or subsystems to assure reliable operation and to minimize the risk, especially in mission critical applications. The general use of an RDM connotes action to overcome the inevitable uncertainties in environmental calculations and part radiation hardness determinations.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>RDM is defined as the ratio of the part or component radiation capability in the given application to the expected radiation environment at the part or component location during the mission. The part/component radiation capability is defined to be the fluence (or dose), flux (or dose rate) of charged particles, or nuclear radiation which will produce enough change (degradation or radiation induced interference) in the part characteristics to cause the part to operate outside of specification for the particular circuit application. An RDM value of 2, for example, would mean that the hardware is designed to withstand twice the radiation predicted by the radiation model.</p>
+
+    <p>Based on flight experiences, it is standard practice at JPL for most applications to require an RDM of 2 if only the inadvertent shielding of the surrounding spacecraft or instrument enclosure materials are considered in the radiation/shielding analysis. However it is required to invoke an RDM of 3 when the local shielding, such as component/part packaging or spot shielding, is taken into account.</p>
+
+    <p>The RDM requirement does not apply directly to single event effects (SEE) such as single event upset (SEU), single event latchup (SEL), etc. However, SEE margins are derived by placing limits on minimum SEE sensitivity and by using design-case mission environments that account for the statistical probabilities of solar flares.</p>
+
+    <p>Radiation Effects</p>
+
+    <div style="margin-left: 2em">
+      (1) Long-Term Ionization Effects
+    </div>
+
+    <p>Damage to electronics and materials may arise from the long-term effects of ionizing radiation. Ionization occurs when charged particles (or electrons from gamma-ray interactions) transfer small amounts of energy to electrons in the target material. The unit of ionization is the rad (material must be specified), which is defined as 100 erg/g of material.</p>
+
+    <p>In semiconductor devices, ionization produces electron-hole pairs within the semiconductor and insulators (such as oxides). Some of this charge will be trapped at the semiconductor/insulator surface. In MOS structures, the trapped charge will cause a shift in the gate threshold voltage. Mobility (which affects switching speed and drive current) is also degraded. In addition to the gate oxide, ionization also affects the field oxide, which is used for isolation in MOS integrated circuits. This will result in extremely large leakage currents if the threshold shifts are large enough to cause inversion. Field oxide failure is an important failure mode for many commercial CMOS devices.</p>
+
+    <p>In bipolar devices, trapped charges at oxide layers cause two effects. The traps increase surface recombination, decreasing the gain of bipolar transistors. If the trap density is high enough, an inversion layer can be created in p-doped regions that increases the surface area of the junction. This also affects transistor gain, and may cause substantial increases in leakage current.</p>
+
+    <p>In optical materials, long-term ionization effects appear primarily as an increase in optical absorption. These usually are manifestations of charge trapping at a pre-existing defect, so the absorption rate is a strong function of the initial material properties. For example, fused quartz generally colors less than alkali glasses from a given ionizing dose.</p>
+
+    <p>In quartz crystal used for precision oscillators or filters, long-term ionization effects can produce significant resonant frequency shifts. Again, there is a strong dependence upon the type of material used. Natural quartz shows the largest frequency shift for a given ionizing dose; synthetic quartz shows less, and swept synthetic quartz even less. In these cases, selection of the quartz crystal growth method can minimize the potential effect.</p>
+
+    <p>The devices and materials of concern and the most serious radiation induced effects are:</p>
+
+    <ol>
+      <li>MOS devices (threshold voltage shift, decrease in drive current and switching speed, increase in leakage current).</li>
+
+      <li>Bipolar transistors (h<small><sub>FE</sub></small> degradation, especially at low collector current; leakage current), and junction field effects transistors (JFETs) (enhanced source-drain leakage current).</li>
+
+      <li>Analog microcircuits (offset voltage, offset current and bias-current changes, gain degradation).</li>
+
+      <li>Digital microcircuits (enhanced transistor leakage, or logic failure due to decrease in gain (bipolar devices) or changes in threshold voltage and switching speed (CMOS)).</li>
+
+      <li>Quartz resonant crystals (frequency shifts).</li>
+
+      <li>Optical materials (increased absorption).</li>
+
+      <li>External polymeric surfaces (mechanical degradation).</li>
+    </ol>
+
+    <div style="margin-left: 2em">
+      (2) Transient Ionization Effects (Interference)
+    </div>
+
+    <p>Interference is defined as transient ionization effects that persist only while the electronics are being irradiated, and whose severity is generally proportional to the dose rate. Interference effects depend primarily on the rate of ionization energy deposition, i.e., the dose rate measured in rads (material)/sec.</p>
+
+    <p>There are four types of interference in electronic devices and optical materials:</p>
+
+    <ol>
+      <li>Primary photocurrents in low current input stages to the electronics.</li>
+
+      <li>Electron emission from cathodes of electron multiplier-type detectors.</li>
+
+      <li>Ionization-induced conductivity in photo-sensitive materials, such as those in detector surfaces.</li>
+
+      <li>Ionization-induced fluorescence in optical materials such as detector windows and lenses (fluorescence efficiencies vary strongly with the material).</li>
+    </ol>
+
+    <div style="margin-left: 2em">
+      (3) Displacement Effects
+    </div>
+
+    <p>Displacement of atoms in crystal lattices cause permanent changes in material properties. The expected proton and electron fluences usually do not represent as severe an environment for displacement effects as for long-term ionization effects. Therefore, only the most sensitive devices will be affected significantly by displacement effects.</p>
+
+    <p>Displacement effects can impact the following electronic devices and properties:</p>
+
+    <ol>
+      <li>Bipolar transistors (gain, saturation voltage)</li>
+
+      <li>PN junction diodes (forward voltage, leakage current).</li>
+
+      <li>Light emitting diodes (LED) (light emitting efficiency).</li>
+
+      <li>Semiconductor photodetectors (sensitivity).</li>
+
+      <li>Linear integrated circuits incorporating lateral p-n-p transistors.</li>
+    </ol>
+
+    <p>RDM Factor Determination</p>
+
+    <div style="margin-left: 2em">
+      (1) Radiation Hardness Determination
+    </div>
+
+    <p>There are at least five quantities that can contribute to uncertainty in part radiation susceptibility:</p>
+
+    <ol>
+      <li>Statistical variations in parts from a specific manufacturing line,</li>
+
+      <li>Part type,</li>
+
+      <li>Manufacturing process,</li>
+
+      <li>Circuit design, and</li>
+
+      <li>Circuit application.</li>
+    </ol>
+
+    <p>There are many different part types, many circuit designs and applications and perhaps several different manufacturing processes. Consequently, the uncertainty in the capability of the part to withstand radiation has to be sufficiently large to account for the large variations from part to part. Most of these part variations are difficult to quantify. Testing is the only method for determining the radiation capability to be expected in a given flight lot, but this typically is done with only a small sample of devices. Testing conditions may also affect results. For some linear integrated circuit devices, the total ionizing dose (TID) capability could drop dramatically if tested with a low dose rate instead of a high dose rate. For example, OP42 was formerly rated a radiation-hard device (&gt; 100 Krads), but was recently found very soft (~ 15 Krads or lower) when tested with the low dose rate more typical of a flight environment.</p>
+
+    <p>As modern electronic parts have higher capacity and smaller volume compared to those used on Voyager and other older spacecraft, they may be more delicate and vulnerable to deposited charges. (See "Radiation Effects.") It will be prudent to carefully examine RDMs of higher magnitude on future spacecraft programs or to refine the part radiation hardness determination technique if an RDM of 2 or lower is demanded. Part radiation hardness testing is considered a cost driver because more accurate testing requires more samples, more realistic radiation sources and conditions simulating spaceflight, and longer test time.</p>
+
+    <div style="margin-left: 2em">
+      (2) Radiation Environment Calculation
+    </div>
+
+    <p>Definition of the local ambient radiation environment is dependent on the mission design, the environmental radiation models, the radiation transport code, and the spacecraft mass model. The calculated radiation environment might be the total ionizing dose (TID), the 20 MeV equivalent proton fluence for displacement damage, or the flux for detector interference effects.</p>
+
+    <p>The uncertainty in the radiation model depends on the modeled environment and on the mission design. Uncertainties in the mission design are difficult to quantify. Parameters include the trajectory (heliocentric distance, mission length, altitude, inclination, etc.) and launch date. The uncertainty in the radiation environment depends on the environment in question. For example, prediction of the proton fluences from solar flares is treated probabilistically, and the discrepancy between predictions for the 10 MeV fluence between two different solar flare models is a factor of 2 (at the 95 percent confidence level) (Ref. 1). Similarly, the uncertainties in the Jovian trapped electron environment and the Earth&iacute;s trapped radiation proton model AP8 are estimated to be also a factor of 2. The uncertainties resulting from the use of different radiation transport codes and different spacecraft mass models are generally less than a factor of 2 (Ref. 1).</p>
+
+    <p>Typically, once the mission design is confirmed, the TID as a function of shielding thickness (dose-depth data) are generated for a simplified geometric mass model such as a spherical shell model. Figure 1 is an example for a flight mission at 1 AU from the sun during the solar max period. It is standard practice to apply the dose-depth curve of 95 percent confidence level for the flight assembly design. This radiation dose curve can be used to obtain conservative "first-look" shielded dose values without hardware configuration modeling. These dose plots should only be used to obtain dose value by using the minimum shield thickness applicable to a given hardware location. Since these plots do not represent the flight hardware configurations, they should be used for design assessment only if they are applied in a conservative manner (minimum shield thickness used). If a part does not meet the RDM value of 2 requirement based on this conservative TID level, a three-dimensional
+    mass model simulating the flight assembly is then constructed for the radiation transport code. The resulting TID level will be lower than the TID data from the spherical shell model, and therefore the part is more likely to meet the RDM requirement. However, when the part/component package has to be included in the 3D mass model or a spot shield has to be added, the RDM is increased from 2 to 3 as explained earlier. The more extensive radiation/shielding calculations tend to be a cost driver, but it relieves the shielding requirement and saves more mass.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009262main_0792-1.jpg"  HEIGHT="350"  BORDER="0" /><A HREF="/llis_lib/txt/1009737main_0792-1.txt"  >[D]</A><br />
+      Figure 1. Radiation Dose from Solar Flare Protons for 1 Year at 1 AU
+    </center>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The uncertainties in radiation environment estimates and the part or component radiation capability determinations lead to RDM values between 3.5 to 11.5 (Ref. 1). Historically, the introduction of an RDM value of 2 stems from the Voyager project and was established based solely on available mass. An RDM much greater than 2, perhaps as high as 10, would have been selected to cover all uncertainties were there sufficient mass available (Ref. 1).</p>
+
+    <p>The RDM of 3 is imposed when the local shielding such as component/part packaging or spot shielding is taken into account. There is an implied greater risk associated with taking the local shielding into consideration because this is done in cases where soft parts must be used; one is dependent on local shielding and its calculated effectiveness rather than on an inherently hard part.</p>
+
+    <p>The selection of an RDM may be somewhat arbitrary and will tend to be driven by mass limitations, acceptable risk versus cost, and the overall radiation hardness program. Resource and mass limitations which preclude usage of conservative RDMs are typically imposed on flight projects. Based on the ìbestî radiation model at the time, the part radiation hardness test data, and the expected mass and other resource limitations, a radiation design factor of 2 (3 if local shielding is considered) is required for spacecraft elements intended to operate during a flight mission.</p>
+
+    <p>The term used to describe this radiation design factor, radiation design margin or RDM, may be a misnomer. "Design margin" suggests a known factor of safety, which translates as a high degree of certainty of survival in the radiation environment. Instead, the RDM arises from significant uncertainties in all the elements of the radiation susceptibility calculations. It may be more appropriate to refer to a radiation design factor instead of implying the existence of a conservative margin. An RDM value of 2 should not be interpreted as a 100 percent margin as it is sometimes misconstrued. Although an RDM of 2 does not cover the uncertainties, it proved affordable and effective on the Voyager mission.</p>
+
+    <p>As defined earlier, the RDM is the ratio of the part or component radiation capability, in the given application, to withstand the expected radiation environment at the part or component location for a flight mission. The use of RDM as a spacecraft design tool acknowledges that there are uncertainties in environmental calculations and part radiation hardness determinations.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>JPL IOM 5217-88-39, "Radiation Design Margins," S. B. Gabriel to Distribution, September 22, 1988.</li>
+
+      <li>JPL IOM 5217-91-208, "Radiation Design Margin for CRAF/Cassini Missions," G. Murphy and R. Kemski to Distribution, February 14, 1992.</li>
+
+      <li>JPL IOM 5137-87-233, "Comparison of Predicted and Observed Radiation Levels for Voyager Outer Planet Flybys," N. Divine and R. Ridenoure to C.E. Kohlhase, August 5, 1987.</li>
+
+      <li>"Total Dose Hardness Assurance Design Guidelines," Defense Nuclear Agency Report No. DNA5909F, February, 1982.</li>
+
+      <li>Environmental Factors, Reliability Preferred Practice No. PD-ED-1101</li>
+
+      <li>Design and Analysis of Electronic Circuits for Worst Case Environments and Part Variations, Reliability Preferred Practice No. PD-ED-1212.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The RDM requirement provides a systematic approach to managing the mission risk posed by uncertainties in both the radiation model and hardware susceptibility to radiation. The failure to apply a radiation factor to part selection and shielding design represents a significant risk that a critical subsystem or assembly will prove vulnerable to the radiation environment encountered during the mission.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Design spacecraft hardware assemblies with the required radiation design margin (RDM) to assure that they can withstand ionization effects and displacement damage resulting from the flight radiation environment. The term "margin" does not imply a known factor of safety but rather accommodates the uncertainty in the radiation susceptibility predictions. The reliability requirement to survive for a period of time in the anticipated mission radiation environment is a spacecraft design driver.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has applied an RDM requirement to Voyager and all subsequent flight projects.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

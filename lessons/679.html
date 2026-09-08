@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0679: Meteoroids &amp; Space Debris</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0679: Meteoroids &amp; Space Debris</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0679 (Database ID: 679)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/679" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-EC-1102; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Reliability is greatly enhanced because the likelihood of serious mission degradation or spacecraft loss is significantly reduced.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Prepare design requirements which specify mean velocity, mass density, and mass distribution for the impacting particles in terms of the integral fluence. This fluence (sample units m<small><sup>-2</sup></small>) represents the expected number of impacting particles per unit area, above several different mass thresholds for the mission (using the worst case trajectory if more than one is contemplated). The design must then satisfy two separate requirements: (1) that the smallest penetrating particle have a probability of impact below 5%, using the product of fluence with vulnerable area and a Poisson distribution, and (2) that for smaller particles, of which many will impact any given spacecraft surface, the resulting degradation of surface properties (e.g., optical, thermal, dielectric) does not exceed allowable ranges for surface performance (considering, e.g., pitting, spallation, contamination, etc.).</p> 
+<p>In practice, the first of these refers to a sum of probabilities over a variety of vulnerable spacecraft surfaces (each having specific values for area and threshold penetrating mass), allocated so as to make effective use of resources (e.g., shielding mass) and to achieve the desired probability for mission success. For this purpose, experience dictates that a two-surface configuration, of which the outer surface serves as the thermal blanket as well, provides the least massive meteoroid protection.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>For a given mission (specified in terms of geocentric and heliocentric positions as functions of time, for example), the environments comprising impacting solid particles are both independent of mission control and rather uncertain. The flux and fluence of such particles can be evaluated from suitable numerical models (here for space debris and for interplanetary meteoroids, although others may occur, e.g., for Saturn ring particles). The integral fluence typically decreases as mass increases according to a power law, illustrated here using the exponent a:</p> 
+<table width="99%"> 
+ <tbody> 
+  <tr> 
+   <td> <img alt="refer to [D] description" border="0" height="130" src="https://llis.nasa.gov/llis_lib/images/1009051main_0679eq1.jpg" title="refer to [D] description" width="200"><a href="https://llis.nasa.gov/llis_lib/txt/1009538main_0679eq1.txt">[D]</a> </td> 
+   <td><b>(1)</b></td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p>Here F and F<small><sub>1</sub></small> represent the integral fluences (sample units m<small><sup>-2</sup></small>) for particles with masses greater than m and m<small><sub>1</sub></small> respectively, accumulated over the mission. Table 1 provides examples of such distributions (where the exponent is not necessarily constant over the range of masses of interest) and additionally specifies mean density and impact velocity.</p> 
+<p>For large particles, the distributions represented by equation (1) or Table 1 imply that the exposed surface area A<small><sub>s</sub></small> of a spacecraft subsystem has a probability</p> 
+<table width="99%"> 
+ <tbody> 
+  <tr> 
+   <td> <img alt="refer to [D] description" border="0" height="55" src="https://llis.nasa.gov/llis_lib/images/1009052main_0679eq2.jpg" title="refer to [D] description" width="200"><a href="https://llis.nasa.gov/llis_lib/txt/1009539main_0679eq2.txt">[D]</a> </td> 
+   <td><b>(2)</b></td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p>that no particle larger than the mass m<small><sub>s</sub></small> (corresponding to the fluence F) will hit, where equation (2) is obtained assuming Poisson statistics for the particle impacts. If the surface is designed so that no particle of mass m<small><sub>s</sub></small> or larger, impacting at the mean velocity, can penetrate or lead to other component failure (e.g., by spallation), then the probability of no failure is also P<small><sub>s</sub></small> (assuming that penetration leads to component failure with unit probability). When P<small><sub>s</sub></small> is small for each subsystem (as is the case when the area-fluence product in eq. 2 is much less than unity), the sum</p> 
+<table width="99%"> 
+ <tbody> 
+  <tr> 
+   <td> <img alt="refer to [D] description" border="0" height="70" src="https://llis.nasa.gov/llis_lib/images/1009053main_0679eq3.jpg" title="refer to [D] description" width="200"><a href="https://llis.nasa.gov/llis_lib/txt/1009540main_0679eq3.txt">[D]</a> </td> 
+   <td><b>(3)</b></td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p>represents the probability of failure (P<small><sub>t</sub></small>) of the system, where p<small><sub>s</sub></small> is the conditional probability that the system fails when subsystem s fails. If the values of p<small><sub>s</sub></small> are not independent then equation (3) must be replaced by the appropriate combination of probabilities. Finally, the probability of mission success, considering particle impact alone, becomes (1-P<small><sub>t</sub></small>), and design must proceed to ensure that this quantity exceeds the 95% probability cited above.</p> 
+<p>To protect a subsystem against those large particles for which equation (2) applies, and for impact velocities larger than a few km/s, hypervelocity impact experiments show that a two-surface configuration (often named a bumper shield) prevents penetration far more effectively than a single surface of the same mass. This is so because the kinetic energy of impact leads to the vaporization (or liquefaction or disintegration) of the projectile when it hits the outer target surface; the momentum is thereby dispersed over a large area as the vapor expands in the space between the surfaces, and becomes less capable of rupturing the second surface than had the latter been hit directly. Typically a thickness of a few tenths of a millimeter, and a standoff distance of a few centimeters, suffice to prevent penetration of a spacecraft structural wall by a milligram particle arriving normally at 15 km/s. For a sample configuration, Figure 1 displays the threshold penetration mass as a function of impact velocity. Such a figure can be used to verify by analysis that the design does not fail for the mass necessary for equations (1) through (3) to provide the required probability; and a parametric set of such figures spanning a suitable design space can be used to select the design appropriate for a given spacecraft assembly. In this design process, the uncertainties in penetration threshold and the variability thereof with angle of incidence (Fig. 1 and related data are commonly presented for normal impact, oblique impacts being less well characterized) must be considered, possibly by application of margin to some measure of shield effectiveness (the use of Poisson statistics for probability of impact is intended to cover only environment uncertainties, not shielding ones). In many cases, thermal blankets of a single design and standoff will serve as an appropriate bumper shield for much of the spacecraft body. Analytic formulations for hypervelocity penetration, and for bumper spacing and other parameters, should be selected carefully for relevance to the specific impact regime (e.g., projectile speed, direction, density, etc.). The resulting design should be verified by testing whenever possible, and the tests should span or simulate the range of expected projectile sizes and velocities.</p> 
+<p>For much smaller particles, the power-law distribution (eq. 1) ensures that the area-fluence product exceeds unity for most exposed spacecraft surfaces, and that numerous small particles will strike the surface. For surfaces which are shielded as described above, these smaller particles are of no consequence, except as they alter the thermal properties of the surface; the thermal control design must provide enough latitude that these changes do not lead to internal temperatures beyond the acceptable range for flight. For other surfaces, concern arises only if a few critical surface properties must be maintained; for example, structural integrity and magnetic cleanliness are not threatened by these small impacts. Among such critical properties, optical quality is often the most serious, as in lenses or mirrors whose performance can be degraded by pitting, erosion, or contamination. For such components, ad hoc solutions to the particle impact problem, possibly involving articulating covers, may be necessary if analysis demonstrates that the particle fluence represents a significant hazard to unprotected surfaces. Typically, if a specific fluence value is required for design purposes in these cases, a margin of a factor 2 is applied to the nominal values (e.g., Table 1) to account for the uncertainty in the environment of these smaller particles.</p> 
+<table width="550"> 
+ <tbody> 
+  <tr> 
+   <td valign="top"><b>Table 1.</b></td> 
+   <td><b>Integral fluence of cometary meteoroids as a function of particle mass for three subsets of the Galileo mission (columns two and three include interplanetary meteoroids near Jupiter, as focused by Jupiter's gravitational field).</b></td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<table border="1"> 
+ <tbody> 
+  <tr> 
+   <td>Particle Mass-M<br> (grams)</td> 
+   <td>Integral Fluence<small><sup>(1)</sup></small> Received<br> during Transit*<br> <br> (Particles-m<small><sup>-2</sup></small> of mass greater<br> than M)</td> 
+   <td>Integral Fluence<small><sup>(2)</sup></small> Received<br> during Orbit**<br> <br> (Particles-m<small><sup>-2</sup></small> of mass greater<br> than M)</td> 
+   <td>Mission Integral<br> Fluence<small><sup>(3)</sup></small><br> <br> (Particles-m<small><sup>-2</sup></small> of mass greater<br> than M)</td> 
+  </tr> 
+  <tr> 
+   <td> 10<small><sup>-12</sup></small><br> 10<small><sup>-10</sup></small><br> 10<small><sup>-8</sup></small><br> 10<small><sup>-6</sup></small><br> 10<small><sup>-5</sup></small><br> 10<small><sup>-4</sup></small><br> 10<small><sup>-3</sup></small><br> 10<small><sup>-2</sup></small><br> 10<small><sup>-1</sup></small><br> 10<small><sup>-0</sup></small> </td> 
+   <td> 1.06 x 10<small><sup>4</sup></small><br> 4.27 x 10<small><sup>3</sup></small><br> 5.37 x 10<small><sup>2</sup></small><br> 21.2<br> 1.33<br> 8.15 x 10<small><sup>-2</sup></small><br> 4.99 x 10<small><sup>-3</sup></small><br> 3.06 x 10<small><sup>-4</sup></small><br> 1.87 x 10<small><sup>-5</sup></small><br> 1.15 x 10<small><sup>-6</sup></small> </td> 
+   <td> 7.89 x 10<small><sup>3</sup></small><br> 3.17 x 10<small><sup>3</sup></small><br> 3.99 x 10<small><sup>2</sup></small><br> 15.7<br> 9.6 x 10<small><sup>-1</sup></small><br> 5.9 x 10<small><sup>-2</sup></small><br> 3.6 x 10<small><sup>-3</sup></small><br> 2.2 x 10<small><sup>-4</sup></small><br> 1.36 x 10<small><sup>-5</sup></small><br> 8.3 x 10<small><sup>-7</sup></small> </td> 
+   <td> 1.85 x 10<small><sup>4</sup></small><br> 7.44 x 10<small><sup>3</sup></small><br> 9.36 x 10<small><sup>2</sup></small><br> 36.9<br> 2.29<br> 1.41 x 10<small><sup>-1</sup></small><br> 8.59 x 10<small><sup>-3</sup></small><br> 5.26 x 10<small><sup>-4</sup></small><br> 3.23 x 10<small><sup>-5</sup></small><br> 1.98 x 10<small><sup>-6</sup></small> </td> 
+  </tr> 
+  <tr> 
+   <td>Mean relative<br> speed (km/s)</td> 
+   <td> 15.9 </td> 
+   <td> 15.9 </td> 
+   <td> 15.9 </td> 
+  </tr> 
+  <tr> 
+   <td>Particle mass<br> density (g/cm<small><sup>3</sup></small>)<br> (cometary origin)</td> 
+   <td> 0.5 </td> 
+   <td> 0.5 </td> 
+   <td> 0.5 </td> 
+  </tr> 
+  <tr> 
+   <td colspan="4">*Tabulated values envelope the Galileo transfer trajectories including VEEGA, delta VEGA 2 , delta VEGA 3 , and direct.<br> <br> ** Fluence resulting from JOI and the first 5 orbits of the Galileo 79-1 Tour, includes gravitational focusing from Jupiter.<br> <br> (1) 95% confidence environment - 2.0 x fluence spectra<br> (2) 95% confidence environment - 5.6 x fluence spectra<br> (3) 95% confidence environment - 4.4 x fluence spectra</td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<table width="550"> 
+ <tbody> 
+  <tr> 
+   <td valign="top">Figure 1.</td> 
+   <td>Meteoroid critical mass as a function of impact speed for the Cassini propellant tanks, including a bumper shield and fluid within the tanks. The lines are for different densities of the impacting meteoroid, with and without fluid in the tanks, and the power-law segments represent different regimes of failure.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> (Click image for a larger view) 
+<br> 
+<a href="https://llis.nasa.gov/llis_lib/images/1009054main_0679l.jpg"><img alt="refer to [D] description" border="0" height="539" src="https://llis.nasa.gov/llis_lib/images/1009055main_0679s.jpg" title="refer to [D] description" width="500"></a> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009537main_0679-4.txt">[D]</a> 
+<br> &nbsp;
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br /> <br /> As an example of noncompliance, consider a spacecraft bus, containing critical electronic parts, whose shear plate and thermal blanket are adjacent (i.e., not separated by the standoff which characterizes a suitable two-surface particle shield). The largest incident particle, namely that for which the area-fluence product is near unity (ref. Table 1) is then, for long-duration missions in low Earth orbit or in the inner solar system, capable of penetrating the electronics housing or of producing spallation from the inner surface. In either case a single impact introduces numerous fast-moving fragments into the electronics themselves, several electronic parts will be disabled simultaneously, and the probability is high that the subsystem's function will be severely compromised, resulting in mission failure if the subsystem is critical. Even if redundant assemblies are provided, they should not be packaged together, because one particle impact may destroy them both. Even if packaged separately, the likelihood of two impacts (of a penetrating particle) is only modestly smaller than that of one impact, so that redundancy is a far more expensive and less effective option than the provision of suitable particle impact shielding in the first place.</p> 
+<p>An equally serious failure resulting from noncompliance is illustrated by the scenario, extensively investigated for the Galileo spacecraft, that a meteoroid penetration of the propellant tanks could result in loss of fuel, a consequent change in the spacecraft velocity vector, unintended reentry into the Earth's atmosphere (instead of the intended close flyby for gravitational assist), and widespread atmospheric dispersion of radioactive fuel from the RTGs (radioisotope thermoelectric generators). In this scenario, failure to provide adequate meteoroid protection could have both life-threatening and major legal consequences, albeit with small probability. An exceptionally thorough analysis, in which the velocity distributions and the time dependence of the meteoroid flux were used in addition to the appropriate analogs of the above equations, was needed to quantify this small probability.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br /> <br /> Design spacecraft external surfaces to ensure 95 percent probability of no mission-critical failures from particle impact.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0654: Assessment and Control of Electrical Charges</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0654: Assessment and Control of Electrical Charges</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0654 (Database ID: 654)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/654" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1210; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The Earth's space environment (geospace) is uniquely comprised of dynamic and complex regions of interacting plasmas, ionized particles, magnetic fields and electrical currents. Proper grounding/bonding of the space vehicle's shell and its electronic equipment can provide protection against lightning strikes in geospace, and also can eliminate or control most of its internal electrical and electrostatic hazards. This results in lower failure rates and significant reliability and safety enhancement of space systems and space vehicles.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>For space vehicles all sections of the vehicle's outer shell should be bonded together to permit large quantities of electric charge to distribute across the shell by conducting paths. The bonded shell of the space vehicle then acts as an electrical shield to protect internal structures from lightning and atmospheric electricity.</p>
+
+    <p>Ground wires should be used for individual systems when appropriate. Wires should be adequate to carry a surge without mechanical damage.</p>
+
+    <p>NASA has established lightning protection requirements for design, and procedures to demonstrate that these requirements are implemented for the Space Shuttle program in NASA document NSTS 07636, which is a subtier to NSTS 07700, Volume X. NSTS 07636 defines the conducted current lightning environment for design, and imposes the requirements that the design must satisfy to ensure the protection of the Space Shuttle from the direct and indirect effects of lightning. A practical approach to lightning protection problems is presented in the appendices of NSTS 07636, which are: Appendix A, "Conducted Current Lightning Environment"; Appendix B, "Lightning Strike Zones"; Appendix C, "Test Waveforms and Methods"; Appendix D, "Methods for Estimating the Internal Induced Voltage and Current Environment"; Appendix E, "Analysis Methodology", and Appendix F, "Lightning Bonds".</p>
+
+    <p>Bonding and grounding requirements are defined in MIL-B-5087B(ASG), "Bonding, Electrical, and Lightning Protection for Aerospace Systems". Table 1 provides typical classifications for electrical bonds from that document.</p>
+
+    <center>
+      TABLE 1. Electrical Bond Classes of Application<small><sup>1</sup></small><br />
+
+      <table border="0" width="75%">
+        <tr>
+          <td>
+            <center>
+              <u>CLASS</u>
+            </center>
+          </td>
+
+          <td>
+            <center>
+              <u>APPLICATION</u>
+            </center>
+          </td>
+
+          <td>
+            <center>
+              MIL-B-5087B(ASG)<br />
+              <u>REFERENCE PARAGRAPH</u>
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              A
+            </center>
+          </td>
+
+          <td>Antenna installation</td>
+        </tr>
+      </table>
+    </center>
+
+    <table>
+      <tr>
+        <td>
+          <center>
+            3.3.1
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <center>
+            C
+          </center>
+        </td>
+
+        <td>Current path return</td>
+
+        <td>
+          <center>
+            3.3.2
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <center>
+            H
+          </center>
+        </td>
+
+        <td>Shock hazard</td>
+
+        <td>
+          <center>
+            3.3.3
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <center>
+            L
+          </center>
+        </td>
+
+        <td>Lightning protection</td>
+
+        <td>
+          <center>
+            3.3.4
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <center>
+            R
+          </center>
+        </td>
+
+        <td>Rf potentials</td>
+
+        <td>
+          <center>
+            3.3.5
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <center>
+            S
+          </center>
+        </td>
+
+        <td>Static charge</td>
+
+        <td>
+          <center>
+            3.3.6
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3"><small><sup>1</sup></small>Where a single bond is used to serve two or more classes of application, the design shall conform to the most critical requirement of bonding.</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+
+    <p>Class L bonding requirements are designed to achieve protection against lightning discharge current carried between the extremities of an airborne vehicle without risk of damaging flight controls or producing sparking or voltages within the vehicle in excess of 500 volts. These requirements are based upon a lightning current waveform of 200,000 amperes peak, a width of 5 to 10 microseconds at the 90% point, not less than 20 microseconds width at the 50% point, and a rate of at least 100,000 amperes per microsecond.</p>
+
+    <p>Test requirements are described in MIL-STD-1757A, "Lightning Qualification Test Techniques for Aerospace Vehicles and Hardware" (The term "aerospace vehicles" includes fixed/variable wing aircraft, helicopters, missles, and spacecraft.) This document presents a set of standard test waveforms and techniques for lightning qualification testing of aerospace vehicles and hardware. The test waveforms presented in this document are intended to reproduce the significant effects of the natural environment and are therefore independent of vehicle type or configuration. The tests include high voltage and high current physical damage tests of fuel, structural and electrical hardware, as well as indirect effects associated with lightning strikes to externally mounted electrical hardware.</p>
+
+    <p>The capability to test hardware and design concepts in a lightning environment has been very limited in the past. However, there are presently test facilities that are able to generate and simulate the levels of voltage, current and charge transfers typical of lightning phenomena. Therefore full scale, full threat lightning tests that meet the requirements of MIL-STD-1757A and NSTS 07636 are now available.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>LIGHTNING ENVIRONMENT. The currents in a lightning flash are conveniently separated into three categories:</p>
+
+    <ol type="A">
+      <li>Return stroke surges with peak currents of up to 200,000 amps or more and with durations on the order of tens of microseconds.</li>
+
+      <li>Intermediate currents of up to 10,000 amps or more and with durations on the order of milliseconds.</li>
+
+      <li>Continuing currents of up to 1000 amps and with durations on the order of hundreds of milliseconds.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Intermediate and continuing currents are primarily responsible for damage such as hole-burning while return stroke currents mainly produce explosive effects and indirect effects.</p>
+
+    <p>There are also currents associated with subsequent return strokes and there are phases of return strokes characterized by rapid rates of change. These categories are represented by idealized waveforms designated A,B,C,D, and H. These waveforms and their mathematical definitions are described in Appendix A of NSTS 07636E.</p>
+
+    <p>The accumulation of electrostatic charges on the electrically isolated bodies could lead to a number of results that might affect the success of a space mission. Breakdown occurs when the electric field exceeds the dielectric strength of the medium. Charge then crosses the dielectric between oppositely-charged bodies. Heat and electromagnetic energy are emitted with the passage of the charge. Besides the electric field strength imposed on the medium, the occurrence and severity of the discharge depend on system geometry and secondary discharge effects.</p>
+
+    <p>The gaseous medium that surrounds the components of a space vehicle is particularly vulnerable to breakdown in altitudes around 30 km. The dielectric strength of the atmosphere passes through a minimum at the reduced pressures associated with those altitudes. The various field strengths that might be present on the space vehicle can cause atmospheric breakdown.</p>
+
+    <p>Breakdown could still be possible at much higher altitudes or even in orbit because of residual gases and outgassing materials in the space vehicle that could increase the localized gas pressure until it reached the breakdown region.</p>
+
+    <p>Air launched spacecraft such as Pegasus must minimize tribo-electric charging even during fair weather. This is done by conductive surfaces and/or discharge wicks. This is of particular concern when composite fairings are used.</p>
+
+    <p>Breakdown of the gaseous medium occurs when the electric fields on the vehicle are strong enough to break apart the atoms or molecules of the medium into ions and electrons that then move according to the voltage gradient. If recombination takes place before the ions or electrons impinge on their respective electrodes, the breakdown is considered a partial one and is designated corona. If the gaseous ions impinge on both electrodes, then breakdown of the dielectric between them is complete and is referred to as arcing or an arc discharge.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>NASA, "Space Shuttle Lightning Protection, Test and Analysis Requirements", NSTS 07636, REV. E, Sept. 27, 1990.</li>
+
+      <li>"Assessment and Control of Electrostatic Charges", Space Vehicle Design Criteria Environment, NASA SP-8111, May 1974.</li>
+
+      <li>NASA, Guidelines for Standard Payload Assurance Requirements (SPAR) for GSFC Orbital Projects, NASA SPAR-3, March 1990.</li>
+
+      <li>DOD-MIL-HDBK-263, Electrostatic Discharge Control (ESD) Handbook for Protection of Electrical and Electronic Parts, Assemblies and Equipment.</li>
+
+      <li>DOD-STD-1686, Electrostatic Discharge Control (ESD) Control Program for Protection of Electrical and Electro Assemblies and Equipment.</li>
+
+      <li>MIL-B-5087B(ASG), "Bonding, Electrical, and Lightning Protection, for Aerospace Systems", Amendment 3, Dec. 24, 1984.</li>
+
+      <li>MIL-STD-1757A, "Lightning Qualification Test Techniques for Aerospace Vehicles and Hardware", July 20, 1983.</li>
+
+      <li>NFPA-78, "Lightning Protection Code of the National Fire Protection Association", Adopted by the American National Standards Institute (ANSI) as ANSI/NFPA-78.</li>
+
+      <li>IEEE 4-1978, "Standard Techniques for Dielectric Test", Institute of Electronic Engineers (IEEE).</li>
+
+      <li>Langley, M.E., "Lightning Test Capabilities", Trip Report, Wendover, NV, Thiokol Corp., Wendover Test Facility, NASA MSFC CS21(90-355), Aug. 24, 1990.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    Adverse effects of electrostatic charges on space vehicle design, development, test and operation sometimes have been serious. Such effects include inadvertent ignition of electroexplosive devices, spurious triggering of electronics, and damage to insulating materials. The ignition, by electrostatic discharge, of the final stage solid rocket motor of the Delta launch vehicle for the Orbiting Solar Observatory spacecraft during test operations killed three men in 1964. Electrostatic discharges previously had ignited a similar motor without loss of life. In addition, failures of several vehicles after launch have been attributed to electrostatic discharges.</p>
+
+    <p>Electrostatic discharges in the atmosphere can have adverse effects on launch operation. NASA SP-8084, revision of June 1974, gives models that should be applied to electrostatic problems. The lightning strikes on Apollo 12, shortly after liftoff, caused major disturbances to on-board electrical systems. Fortunately, most of the effects in this case were of a temporary nature and the mission was able to continue.</p>
+
+    <p>To be effective, a program to minimize the hazards of the electrostatic discharges must be instituted early in the design phase and must consider all aspects of the design, test, launch, and operations of the launch vehicle, spacecraft, and experiments.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Provide protection against electrostatic charges, discharges, and lightning strikes by shielding and bonding space systems, structures, and their components in accordance with Standard Payload Assurance Requirements (SPAR-3) for GSFC Orbital Projects. This reliability practice does not cover Electrostatic Discharge (ESD) control due to an energetic space plasma environment.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br />
+    <br />
+    Apollo, Space Shuttle, All GSFC Flight Programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

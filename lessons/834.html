@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0834: Maintainability Considerations in Extravehicular Activities (EVA) Design: An Astronaut's Perspective</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0834: Maintainability Considerations in Extravehicular Activities (EVA) Design: An Astronaut's Perspective</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0834 (Database ID: 834)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/834" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-19 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>A well thought out and properly designed EVA incorporating ease of crew maintainability leads to mission success. Failure to properly address crew maintainability in the EVA design can lead to time-consuming "work-arounds," the inability of the crew to fully complete the desired and/or required tasks, and may expose the crew to unnecessary safety hazards.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Background</p>
+
+    <p>Astronaut Jerry Ross has participated in the development of almost all of the EVA hardware and procedures for the Space program since 1981. This includes being the support crewman and EVA Capsule Communicator (CAPCOM) for the first manned maneuvering unit (MMU) flight (STS-41B), the Solar Max repair mission (STS-41C), the WESTAR and PALAPA retrievals (STS-51A), and the attempted "flyswatter" activation of the SYNCOM satellite. He has also performed four EVAs on STS-61B and STS-37 to investigate space construction techniques and prototype Space Station EVA equipment and to repair the Gamma Ray Observatory. In addition, he has participated in the testing of advanced space suits since 1984 and in the design of Space Station EVA systems since 1985.</p>
+
+    <p>Primary Crew Considerations</p>
+
+    <p>First and foremost, a human being can do almost anything during a space walk that can be done on the Earth's surface. However, working in zero gravity and in a spacesuit necessitates certain design compromises to facilitate the productivity of the spacewalker and to enhance the probable success of the EVA. Two factors that must always be considered when designing EVAs are: (1) that the spacesuit is stiff, restricts visibility and movement, is fatiguing to work in, and all work is done with gloves that significantly reduce tactility and dexterity; and (2) that all things must be tethered (including the crew persons) to preclude them from drifting away and becoming lost.</p>
+
+    <p>EVA Design Considerations</p>
+
+    <p>There are several design considerations that must be kept in mind when developing an EVA.</p>
+
+    <ul>
+      <li>Compatibility - EVA equipment and tasks should be designed to be EVA compatible. This will maximize the probability of success, minimize the expense, eliminate EVA hazards, and prevent the need for inefficient, time-consuming operational workarounds due to bad design concepts.</li>
+
+      <li>
+        Task Design - Tasks should be designed, when possible, so that tools are not required. For example, a doorknob should be used instead of bolts to provide access behind a panel. If tools are required, standard tools and interfaces should be used. This minimizes the number of tools that need to be flown and training required, and enhances the probability of success. Tools should be stowed at work sites when possible to minimize the movement of tools and equipment. Power tools should be used for tasks that are repetitive. This increases productivity and will reduce crew fatigue.
+
+        <p>For the most part, tasks should be designed so that only one hand is required. This is due to considerations of working in the spacesuit and the frequent requirement to stabilize oneself with the other hand. The maximum force to perform a task should be designed to &lt; 113 N (25 lbs.) and the task should be designed to use large muscle groups whenever possible to reduce crew fatigue.</p>
+      </li>
+
+      <li>Proven Design Concepts - Proven design concepts should be standardized and used; e.g., double high bolt heads, electrical wing tab connections, and ganged connectors. Designs should also minimize the number of loose parts by using self-retaining fasteners and panel hinges.</li>
+
+      <li>Good Visual Indicators - Good markings, feedback's, and indicators need to be provided so the EVA crewperson can visually verify that the proper condition has been achieved, such as closed, locked, open, or over-center.</li>
+
+      <li>Restraints - The right types of restraints, foot restraints, hand-holds, tether points, and translation aids need to be provided in the right locations. Their placement, type, and number must be determined through suited zero-gravity simulations in an underwater facility.</li>
+
+      <li>Involvement of Safety and Quality Assurance - The Quality Assurance and Safety organizations should be involved in the design process at an early stage. This will help to ensure a good and safe design and help minimize the need for costly redesign.</li>
+    </ul>
+
+    <p>EVA Simulation</p>
+
+    <p>Water tanks provide an excellent analog simulation capability. They should be used early in the design process with mock-ups of the flight hardware and tasks to be performed. Astronaut participation in these early water tank evaluations is essential to a cost-effective and efficient design process. The mock-up should be upgraded as the design matures and the fidelity of the mock-up to the flight hardware can be critical to the success of an EVA.</p>
+
+    <p>Functional Testing and Fit Checks</p>
+
+    <p>Functional tests of EVA hardware and tools in a thermal/vacuum chamber have proven to be mandatory. Many design changes have resulted from such tests.</p>
+
+    <p>Fit checks of all flight hardware to all flight (and flight spares) hardware and tools are mandatory. Develop a matrix of all interfaces and perform physical fit checks. Numerous on-orbit problems have been avoided through this process.</p>
+
+    <p>Space Shuttle EVA Operations</p>
+
+    <p>For the Space Shuttle, EVA is at least a three person task (two EVA crew members and a third crewman on the aft flight deck to observe and act as an EVA activity manager). This third crewperson or activity manager serves as a time line prompter, procedure reader, picture taker, and keeps track of all of the loose hardware items. Crew coordination is essential when EVA operations are combined with remote manipulator system operations and Orbiter operations.</p>
+
+    <p>Use conservative EVA timelines so that there will be time to deal with any unanticipated problems or delays. Convenient break points should be developed so that hardware can be left in a safe and stable configuration between EVAs. Backup procedures should be developed to overcome significant problems should they occur on orbit. Such preflight work saved the Solar Max repair mission and the WESTAR and PALAPA satellite retrievals.</p>
+
+    <p>Develop and maintain good documentation of flight hardware configurations. Closeout (prelaunch) photographs are important to the EVA design and development process. The lack of good closeout photos and other detailed information on the "as flown" hardware configuration almost caused the failure of both the Solar Max and WESTAR/PALAPA EVA missions.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Proper EVA design consists of working early and closely with the astronaut(s). Tasks and operations that are desired by the payload/system need to be reviewed early by the crew to ensure that the design is directed toward ease of EVA operability and maintainability. This will increase the probability of EVA mission success.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Extravehicular Activities (EVAs) are very demanding and specialized space flight activities. With the substantial costs from any unsuccessful EVA and the limited opportunities for work-arounds, careful maintainability design of payloads/systems and their operations are essential for complete mission success.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Shuttle Orbiter Missions with EVA's.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #24503: Static Software Analysis of the NASA Autonomous Flight Termination Software</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #24503: Static Software Analysis of the NASA Autonomous Flight Termination Software</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #24503 (Database ID: 24503)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2018-08-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> nesc</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Launch Vehicle,  Range Operations,  Software,  Launch Systems,  Software Engineering</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/24503" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The NASA Engineering and Safety Center (NESC) was requested by the Commercial Crew Program (CCP) Chief Engineer to identify deficiencies within certain AFTS CASS software builds. The AFTS CASS assessed was version 1.1 (CASS OR1 Update1), a very early release.</p> Note: The CASS developers improved the software development processes for the development of the CASS Operational Release 2 (OR2) release. The issues reported by the static code analysis of CASS OR1.1 have all been addressed in the CASS OR2 release. The static analysis tools verified complete adherence to&nbsp;Motor Industry Software Reliability Association&nbsp;(MISRA) C++ 2008 with no issues.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin: 6pt 0in 0.0001pt;">The Lessons Learned from the Static Software Analysis of the NASA Autonomous Flight Termination Software (AFTS) were:</p> 
+<p style="margin-bottom: 0.0001pt;"> </p> 
+<ul> 
+ <li style="margin-bottom: 0.0001pt;">The definition of the software coding standards was non-specific. A general statement of “C++ is a suboptimal language for use in safety critical systems, deficiencies in the language are mitigated to an acceptable level by adherence to the MISRA C++ 2008 coding standard”. The “acceptable level” was never defined.</li> 
+</ul>   
+<ul> 
+ <li>No procedures were documented in the software development plan regarding the configuration of the analysis tools, or the process of assessing the reported issues</li> 
+</ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p style="margin-top:3.0pt">Recommendations made at the conclusion of the NESC assessment involve updating sections of NPR 7150.2, “Software Engineering,” which pertain to software coding standards and software static analysis.</p> 
+<p style="margin-top:3.0pt"> </p> 
+<p style="margin-top:3.0pt">In general:</p> 
+<ul> 
+ <li style="margin-top:3.0pt; margin-bottom:.0001pt">Software development teams should specify specific coding standards to be applied to the software development for both ground utilities and flight software.</li> 
+ <li style="margin-top:3.0pt; margin-bottom:.0001pt">Software development teams should configure the static analysis tool to best match the specified coding standard. Matching the coding standard and the static analysis tool capability leverages the tool as a verification asset.</li> 
+ <li style="margin-top:3.0pt; margin-bottom:.0001pt">Software development teams should define how the reported issues are to be reviewed, and what defines an issue that should be corrected.</li> 
+</ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

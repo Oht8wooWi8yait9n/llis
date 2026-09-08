@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1340: SSME 2032 Test 901-674 Shutdown Mishap Investigation Board Report of March 3, 1992</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1340: SSME 2032 Test 901-674 Shutdown Mishap Investigation Board Report of March 3, 1992</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1340 (Database ID: 1340)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1992-03-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Stennis Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1340" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Space Shuttle Main Engine (SSME) test 901-0674 was conducted on November 6, 1991 at 11:31 am CDT. The scheduled 400 second test was terminated by the Command and Data Simulator (CADS) at engine start plus 3.72 seconds when the Low Pressure Fuel pump (LPFP) discharge pressure sensor was disqualified by exceeding its maximum qualification limit of 300 psia. The controller responded by issuing a Major Component Failure (MCF) which initiated the CADS cutoff.</p>
+
+    <p>The main objectives of test 901-0674 were: reacceptance of flight engine 2032 with replaced oversized piston ring seal wave spring, facility flow meter calibrations, and the greenrun of the following flight hardware: Controller U/N F48, High Pressure Fuel Turbopump U/N 2226, Low Pressure Fuel Turbopump U/N 4018, Low Pressure Oxygen Turbopump U/N 2035, and Chamber Coolant Valve Actuator (CCVA) S/N 037-71008. The propellant system chilidown and prestart engine conditioning phase of the test was normal.</p>
+
+    <p>Post test inspections indicated no external engine or facility damage. Internal borescope inspections revealed heavy erosion of the High Pressure Fuel Turbopump (HPFTP) first stage nozzle and turbine blades. No other internal damage was noted. Post test inspection of the CCV/CCVA assembly revealed the coupler which links the CCVA to the CCV was missing. Inspection of the CCV also revealed the valve to be fully closed throughout the test.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>With the actuator coupling component left out, the actuator movement did not translate into actual Chamber Coolant Valve movement. This resulted in additional fuel flow to the MCC and Nozzle coolant circuit and reduced fuel flow to the preburners. The increased MCC coolant flow resulted in an increased LPFP turbine flow which increased its speed and its discharge pressure which in turn exceeded the LPFP discharge pressure sensor qualification limit and resulted in an MCF. The lack of sufficient fuel to the preburners caused the high turbine discharge temperatures which approached the redlines. The shutdown due to the MCF occurred via the standard hydraulic sequence and it was a safe shutdown.</p>
+
+    <p>For additional lessons learned please also see the findings listed under the "recommendation" section below.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Finding: The procedures at Stennis Space Center (SSC) are designed to provide maximum flexibility and adaptability. Each procedure attempts to anticipate all possible situations which leads to very voluminous and complex procedures that are difficult to follow.</li>
+    </ol>
+
+    <ol start="1">
+      <li>Recommendation: Restructure and re-format the SSC procedures to reduce complexity, ambiguity and to enhance the probability of being understood by technicians and inspectors prior to performing the work. Consider individual planning for unique jobs with the aid of computers and include/adopt either the KSC or Canoga Park system or elements thereof.</li>
+    </ol>
+
+    <ol start="2">
+      <li>Finding: The initial release of a SSC procedure is formally controlled, however, subsequent modifications in the field are not, and the responsibility for establishing the options is unclear. The system relies on redlining and DNAing major sections by technicians, inspectors, engineering, and quality engineering to custom fit the procedure to the specific circumstances at hand. Technicians and inspectors routinely DNA and redline procedures. In some cases, the hardware is not subsequently under the control of the person selecting the DNA option.</li>
+    </ol>
+
+    <ol start="2">
+      <li>Recommendation: Procedures should be reviewed and approved by engineering for accuracy and revision as required for the identified task prior to release to the floor. Decisions affecting hardware configuration should be made by engineering in the course of the review; not left up to the floor technicians and inspectors. DNA/NA options to be exercised on the floor should be limited to those actions where results are immediately verifiable and obvious. DNA/NA options which require decisions where the results are not under the control of the affected line personnel should be disallowed, and if situation changes, new planning should be issued. A procedure deviation system for initiating deviations to correct errors/oversights would be helpful. Deviations should be reviewed prior to the use of a procedure. Redlines should be limited to minor pen and ink changes not affecting intent, e.g., typographical errors.</li>
+    </ol>
+
+    <ol start="3">
+      <li>Finding: Disciplined implementation of existing procedures was inadequate by floor technicians and quality assurance personnel. Technicians performed five procedural steps in the CCVA procedure (Rework #49) that, if properly accomplished, would have disclosed the missing hardware. The QA inspector stamped four of these five. Three other steps were performed in this procedure that would have possibly disclosed the deficiency. The procedure was clear in these areas and the careful accomplishment of these actions with all parties properly fulfilling their roles would have prevented this problem.</li>
+    </ol>
+
+    <ol start="3">
+      <li>Recommendation: Personnel performing operations must fully understand the importance of their tasks and consequences of incorrect action(s). They must understand the significance of their stamps on the planning whereby they certify and agree to the accomplishment/verification of the specific task(s). Technicians and inspectors should not stamp work they have not personally witnessed. Reinforcement of these responsibilities through additional training/orientation by supervision appears to be warranted to assure the proper level of discipline is in place.</li>
+    </ol>
+
+    <ol start="4">
+      <li>Finding: Performance in accordance with the current procedural system does not assure that the hardware configuration is under control through all phases of disassembly/reassembly.</li>
+    </ol>
+
+    <ol start="4">
+      <li>Recommendation: The procedural control of hardware configuration needs to be addressed and changes instituted to assure the hardware configuration is known and under control at all times. This should apply to the transfer of hardware status from one type of paper to another, to procedures controlling the hardware transfer, storage, issuance, and to the procedures for verifying configuration integrity.</li>
+    </ol>
+
+    <ol start="5">
+      <li>Finding: A major SSC planning document deficiency is the absence of a list of parts required to start the job and of parts to be left over after the job.</li>
+    </ol>
+
+    <ol start="5">
+      <li>Recommendation: Incorporate in planning a list of required parts and a list of parts to be left after the job.</li>
+    </ol>
+
+    <ol start="6">
+      <li>Finding: The existence and location of flight and test hardware on test stand A-1 appears to be uncontrolled. The uninstalled coupling was found on level 5. There was a line assembly on level 5 that belonged on level 8. On level 8, a shim was found that should have been left in building 3202.</li>
+    </ol>
+
+    <ol start="6">
+      <li>Recommendation: Institute a system that inventories and controls the location of test and flight hardware on all test stands. A preferred approach would be a centralized location rather than multiple locations. The parts crib should be a controlled access area with an individual responsible for inventory of incoming parts and issue to technicians. Parts should be segregated and identified in the crib in such a manner that they can be unambiguously located and retrieved for a particular job/engine.</li>
+    </ol>
+
+    <ol start="7">
+      <li>Finding: Flight engine 2032 was shipped from building 3202 to the A-1 test stand with a considerable amount of open work and a sizable box approximately 4 X 8 X 4 feet with loose parts. The exact configuration of the engine as shipped was not clearly defined and the absence of parts lists did not force reacting to an unaccounted left-over part like the coupling.</li>
+    </ol>
+
+    <ol start="7">
+      <li>Recommendation: Discontinue the practice of shipping flight engines with open work unless the work is related to high pressure pumps. Provide an inventory list of loose parts shipped with the engine and to be installed, and a list of parts to be removed from the engine and centrally collected prior to hot fire testing. Institute a system that reacts to parts left over and unaccounted for. If parts to be installed are shipped separately, they are to be identified on the inventory list not as being in the shipping box but as still to be delivered. A verification system should be in place at the engine position that provides assurance of hardware configuration.</li>
+    </ol>
+
+    <ol start="8">
+      <li>Finding: Technicians and inspectors interviewed did not know that the actuator which was to be installed was new and being installed for green run purposes. It appeared that the working people in general are not being briefed as to long term objectives.</li>
+    </ol>
+
+    <ol start="8">
+      <li>Recommendation: Establish an information system such that also technicians are aware of long term objectives and not just near term objectives of getting dates, paragraphs stamped off, and the paper closed.</li>
+    </ol>
+
+    <ol start="9">
+      <li>Finding: No clear identification of a responsible development engineer having full responsibility for the successful accomplishment of a given task.</li>
+    </ol>
+
+    <ol start="9">
+      <li>Recommendation: Assure the clear identification of a lead development engineer and full delineation of his responsibilities for each job.</li>
+    </ol>
+
+    <ol start="10">
+      <li>Finding: Integration of Government Agency and contractor procedures is inadequate as evidenced by the existence of conflicting instructions concerning mandatory inspection points.</li>
+    </ol>
+
+    <ol start="10">
+      <li>Recommendation: The Government Agency letter dated November 24, 1987, concerning a post activity closed paper review of DNA/NA operations having a Government Agency review within them should be rescinded.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

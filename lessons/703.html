@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0703: Part Junction Temperature</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0703: Part Junction Temperature</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0703 (Database ID: 703)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/703" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1204; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Reliability is greatly increased because the failure rate is directly related to the long-term flight temperature.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Establish in-specification design (and test) temperatures <u>&gt;</u>75&deg;C and limit part junction temperatures (J<small><sub>T</sub></small>) to <u>&lt;&lt;/u&gt;110&deg;C which constrains permissible part junction temperature rise (DJ<small><sub>T</sub></small>) to</u> &lt;&lt;/u&gt;35&deg;C. (This practice has been verified on programs in place before the release of MIL-STD-975H. If the MIL-STD-975H junction temperature of 100&deg;C is used, junction temperature rise should be changed to assure that long-term flight junctions stay below 60&deg;C.)</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Basic reliability is directly related to temperature and time, i.e., l = f(T,t). The following relationship is obtained either theoretically from the Arrhenius relationship (l= Aexp[-E<small><sub>a</sub></small>/k (1/T - 1/T<small><sub>0</sub></small>)]) or empirically from the data in MIL-HDBK-217E.</p>
+
+    <center>
+      <table>
+        <tr>
+          <td align="left"><IMG  WIDTH="300"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009106main_0703-1.jpg"  HEIGHT="178"  BORDER="0" /><A HREF="/llis_lib/txt/1009588main_0703-1.txt"  >[D]</A></td>
+
+          <td>
+            Given:
+
+            <ul>
+              <li>Specific part</li>
+
+              <li>Specific derating factor</li>
+
+              <li>Specific chemical activation energy</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>The curve shape is representative of all electronic parts (and most mechanical processes) in the range of temperature typified by space exposure. Simply stated, the higher the long-term flight temperatures, the lower the reliability:</p>
+
+    <center>
+      <IMG  WIDTH="189"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009110main_0703eq1.jpg"  HEIGHT="80"  BORDER="0" /><A HREF="/llis_lib/txt/1009591main_0703eq1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Assume that a design and test temperature of 75&deg;C is chosen. In the graph from MIL-STD-883B observe that a 25&deg;C D T corresponds to a failure rate increase of more than an order of magnitude-- i.e., &gt;1000% difference. MIL-HDBK-217E has different values, but the factor is up to approximately 3X on some parts (depends on derating criteria and parts qualification). The following example illustrates the effect of this relationship on design and test temperatures.</p>
+
+    <p>Assume the following conditions as an example:</p>
+
+    <dl>
+      <dd><b>Case A:</b> T = 75&deg;C in-specification design temperature for baseplate</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd><b>Case B:</b> T = 50&deg;C in-specification design temperature for baseplate</dd>
+
+      <dd><br />
+      <br />
+      </dd>
+
+      <dd>
+        <b>Case A and Case B:</b><br />
+        <br />
+
+        <dl>
+          <dd>T = 25&deg;C long-duration flight temperature for baseplate</dd>
+
+          <dd><br />
+          <br />
+          </dd>
+
+          <dd>J<small><sub>T</sub></small> = 110&deg;C limit for any exposure or analysis</dd>
+        </dl>
+      </dd>
+    </dl>
+
+    <p>Then:</p>
+
+    <center>
+      <b>Design/Test Parameters</b>
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <table width="550">
+        <tr>
+          <th>&nbsp;</th>
+
+          <th><u>Case A</u></th>
+
+          <th><u>Case B</u></th>
+        </tr>
+
+        <tr>
+          <td>Design Baseplate</td>
+
+          <td>
+            <center>
+              75&deg;C
+            </center>
+          </td>
+
+          <td>
+            <center>
+              50&deg;C
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>J<small><sub>T</sub></small> limit</td>
+
+          <td>
+            <center>
+              110&deg;C
+            </center>
+          </td>
+
+          <td>
+            <center>
+              110&deg;C
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Permitted DJ<small><sub>T</sub></small> rise</td>
+
+          <td>
+            <center>
+              35&deg;C
+            </center>
+          </td>
+
+          <td>
+            <center>
+              60&deg;C
+            </center>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <b>Flight Conditions</b><br />
+      <IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009107main_0703-2.jpg"  HEIGHT="111"  BORDER="0" /><A HREF="/llis_lib/txt/1009589main_0703-2.txt"  >[D]</A>
+    </center>
+
+    <center>
+      <b>from Arrhenius</b><br />
+      <IMG  WIDTH="286"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009111main_0703eq2.jpg"  HEIGHT="80"  BORDER="0" /><A HREF="/llis_lib/txt/1009592main_0703eq2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>NOTE: In the example given, short-term ground test exposure on the order of 1-2 weeks will use an insignificant amount of life in hardware designed for long-life and high reliability. For example, a 1-week thermal vacuum test at 75&deg;C provides a short-term high temperature screen in the actual circuit usage configuration to provide confidence for a long-term exposure under flight conditions (J<small><sub>T</sub></small>&lt;60&deg;C), and uses only 0.018% of the parts capability. This demonstration is an important element in establishing pre-launch confidence in design adequacy.</p>
+
+    <center>
+      <a href="https://llis.nasa.gov/llis_lib/images/1009108main_0703-3l.jpg"><IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009109main_0703-3s.jpg"  HEIGHT="356"  BORDER="0" /></a><A HREF="/llis_lib/txt/1009590main_0703-3.txt"  >[D]</A><br />
+      <font size="-1">(Click image for a larger view)
+    </center>
+    <br />
+    <br />
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Gibbel, M. and Clawson, J.F., "Electronic Assembly Thermal Testing Dwell/Duration/Cycling," Proceeding of the 12th Aerospace Testing Seminar, March 13-15, 1990.</li>
+
+      <li>Gibbel, M. And Cornford, S.L., "Surface Mount Technology Qualification Methodology (Testing and Verification)," Proceeding of the NASA Surface Mount Technology Workshop, NASA Lyndon B. Johnson Space Center, Houston, Texas, July 28-29, 1992.</li>
+
+      <li>Thermal Design Practices for Electronic Assemblies, Reliability Preferred Practice No. PD-ED-1226</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Reliability of electronic parts will be reduced significantly if junction temperatures exceed 60&deg;C.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Maintain part junction temperatures during flight below 60&deg;C. (Short-term mission excursions associated with transient mission events are permissible.)</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Viking, Mariner series, Galileo.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

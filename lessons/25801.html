@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #25801: Sine Burst Testing with Wire Rope Isolators</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #25801: Sine Burst Testing with Wire Rope Isolators</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #25801 (Database ID: 25801)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2015-06-12</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Test & Verification,  Test Article,  Test Facility</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/25801" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin: 0in 0in 0pt;">The SAGE III project performed sine burst tests on the IAM to verify an acceleration loads requirement. Originally, the IAM was designed with the CMP installed directly to the top of the IAM. (See Figure 1 for nomenclature and general configuration. All figures are from the SAGE III-10-054-TR-001 IAM SN002 Protoflight Vibration Test Report – modified to emphasize features of relevance for this submission).</p> 
+<p style="margin: 0in 0in 0pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 0pt;"><img alt="Figure 1 SAGE III Configuration" src="/lessons/25801/Figure 1.png" style="width: 500px; height: 201px; margin-right: 100px; margin-left: 100px;"></p> 
+<p style="margin: 0in 0in 0pt; text-align: center;">Figure 1 SAGE III Configuration</p> 
+<p style="margin: 0in 0in 0pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 0pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 0pt;">Vibration testing of the IAM Engineering Development Unit (EDU) was performed using a CMP mass model installed directly to the top of the IAM EDU and there were no issues during the sine bursts. The predicted vehicle flight vibration loads increased around the same time as the IAM EDU test, leading to higher than acceptable vibration responses for the CMP sensors on top of the IAM. This required a redesign to include wire rope isolators between the IAM and CMP, which reduced vibration levels on the CMP sensors but also introduced additional low frequency lateral modes of the CMP. The IAM flight unit vibration test was performed with a CMP mass model installed to the top of the IAM using wire rope isolators, and the low frequency lateral modes of the CMP mass model caused difficulties during the sine burst testing.</p> 
+<p style="margin: 0in 0in 0pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 8pt;">Standard practice during sine burst testing is to perform the test at less than one-third of the first resonant frequency of the test article to avoid dynamic amplification [NASA-STD-7008 Section 5.4.1.3]. During testing of the IAM flight unit, the resonant frequency of the CMP mass model on isolators was identified during low level sine sweeps as 34 Hz or higher for lateral axis testing, and the sine burst frequency in those axes was 11 Hz [SAGE III-10-054-TR-001]. This would appear to meet the requirement of being less than one-third of the first resonant frequency, but the wire rope isolators have nonlinear stiffness and damping characteristics, so the predictions from the low level sine sweeps do not apply to higher amplitude tests such as sine bursts. This behavior of the wire rope isolators was generally understood and accounted for in pre-test analysis, but the actual response of the CMP mass model during the sine burst tests had more displacement than expected.</p> 
+<p style="margin: 0in 0in 8pt;">The first sine burst in a lateral axis resulted in a wire rope of one of the isolators contacting one of the accelerometers. The accelerometer was moved prior to the second test to avoid contact. Another observation during the first sine burst was that the contamination control bag placed around the IAM (see Figure 2) was also covering the CMP mass model, which resulted in the bag being pulled taut several times during the sine burst. The contamination control bag was modified to only cover the IAM for the remaining tests (See Figure 3), leaving the CMP mass model and wire rope isolators free to move without restriction for the following test.</p> 
+<p style="margin: 0in 0in 8pt;"><img alt="Figure 2. X-Axis setup with contamination control bag covering CMP (located near side on top)" src="/lessons/25801/Figure 2.png" style="width: 400px; height: 428px; margin-right: 50px; margin-left: 50px;"></p> 
+<p style="margin: 0in 0in 10pt; text-align: center;">Figure 2 X-Axis setup with contamination control bag covering CMP (located near side on top)</p> 
+<p style="margin: 0in 0in 8pt;"><img alt="Figure 3 Y-Axis setup with contamination control bag NOT covering CMP (visible on top)" src="/lessons/25801/Figure 3.png" style="width: 500px; height: 482px; margin-right: 50px; margin-left: 50px;"></p> 
+<p style="margin: 0in 0in 10pt; text-align: center;">Figure 3 Y-Axis setup with contamination control bag NOT covering CMP (visible on top)</p> 
+<p style="margin: 0in 0in 10pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 8pt;">The second sine burst in a lateral axis exhibited displacements of a similar magnitude to the first sine burst due to dynamic amplification, but there was no contact of wire ropes with other hardware or instrumentation during that test. The final sine burst in the vertical axis had very little dynamic amplification and the CMP mass model response closely matched the input.</p> 
+<p style="margin: 0in 0in 8pt;">&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin: 0in 0in 8pt;">Sine burst testing is inherently risky due to the short duration and high amplitude of the test. Performing sine burst testing of hardware with nonlinear dynamics adds an increased level of risk.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p style="margin: 0in 0in 8pt;">Generally, it would be more appropriate to perform static load tests on the individual wire rope isolators and only perform the sine burst testing on the electronics box in a rigid configuration. However, if individual circumstances warrant the use of sine burst testing with wire rope isolators, the following recommendations should be considered.</p> 
+<ol> 
+ <li style="margin: 0in 0in 0pt 0.25in;">If possible, sine burst testing should be performed at the EDU level [NASA-STD-7008, NESC-TB-15-02].*</li> 
+ <li style="margin: 0in 0in 0pt 0.25in;">If sine burst testing must be performed on a flight unit, either perform additional testing to fully understand the nonlinearities or remove the source of the nonlinearities from the test.**</li> 
+ <li style="margin: 0in 0in 8pt 0.25in;">Ensure that test-related hardware such as instrumentation and contamination control bags are configured so that they will not interfere with the dynamic response of the test article during the sine burst test.</li> 
+</ol> 
+<p style="margin: 0in 0in 8pt;">*In this example, IAM EDU testing was performed, but the EDU did not adequately represent the flight unit for several reasons, including the fact that wire rope isolators were not included.</p> 
+<p style="margin: 0in 0in 8pt;">**In this example, the wire rope isolators could have been replaced with more rigid mass simulators for the sine burst test to remove the source of nonlinearity. However, the wire rope isolators were required for the random vibration test, so this option would have resulted in a significant number of configuration changes, adding additional time to the schedule and several more fastener insertions into locking Helicoils on the flight hardware.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p style="margin: 0in 0in 8pt;">NASA-HDBK-7008: “Spacecraft Dynamic Environments Testing”:</p> 
+<p style="margin: 0in 0in 8pt;"><a href="https://standards.nasa.gov/standard/nasa/nasa-hdbk-7008">https://standards.nasa.gov/standard/nasa/nasa-hdbk-7008</a></p> 
+<p style="margin: 0in 0in 8pt;"> </p> 
+<p style="margin: 0in 0in 8pt;">NESC-TB-15-02: “Best Practices for Use of Sine Burst Testing”:</p> 
+<p style="margin: 0in 0in 8pt;"><a href="https://www.nasa.gov/sites/default/files/atoms/files/nesc_tb_15-02_best_practices_for_use_of_sine_burst_testing.pdf"><u>https://www.nasa.gov/sites/default/files/atoms/files/nesc_tb_15-02_best_practices_for_use_of_sine_burst_testing.pdf</u></a></p> 
+<p style="margin: 0in 0in 8pt;"> </p> 
+<p style="margin: 0in 0in 8pt;">SAGE III-10-054-TR-001 IAM SN002 Protoflight Vibration Test Report</p> 
+<p style="margin: 0in 0in 8pt;"> </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0713: Vehicle Integration/Tolerance Buildup Practices</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0713: Vehicle Integration/Tolerance Buildup Practices</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0713 (Database ID: 713)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/713" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1219; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Using prudent and carefully planned methods for specifying tolerances and for designing, manufacturing and mating major elements of aerospace hardware, will result in a cost-effective program with minimal rejects and waivers, and will avoid costly schedule delays due to potential mismatching or misfitting of major components and assemblies.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Introduction:</p>
+
+    <p>Elements of large aerospace hardware, such as those encountered in the Space Shuttle program, are often (1) manufactured in diverse locations; (2) manufactured and assembled by different centers, prime contractors, and subcontractors; and (3) manufactured and assembled in varying climates and environments. Several additional factors must be considered in establishing design tolerances and in providing jigs and fixtures to assure that the major elements can be mated successfully prior to launch. Specifically, the size and weight of these major components and assemblies (such as the ET and SRB) are so great that special consideration must be given to hardware deflection and deformation due to vehicle mass; wind loads; and environmental factors, such as temperature, humidity, and atmospheric contamination. A variety of methods of calculating and allowing for tolerance buildup and for ensuring matching components at the assembly site have been developed to meet the specific needs
+    of these large hardware elements of the Space Shuttle program. No one method suits all needs. In some instances (in the ET project, for example), the overall tolerance between major critical dimensions is the sum of all of the "worst-case" tolerances of the subassemblies. In the SRB project, for example, the root sum square of the tolerances of segments is used to arrive at the tolerance on major critical dimensions. In addition, adjustable supports are used at critical attach points to permit minor variations in matching and assembling these two major Space Shuttle hardware elements.</p>
+
+    <p>This practice provides selected methods that have proven successful in ensuring that major elements of aerospace hardware will be successfully and accurately assembled both in the factory and in the field; and it provides methods and definitions of dimension and tolerance buildup practices that have proven successful in designing, building, and flying large aerospace vehicles.</p>
+
+    <p>Master Tooling/Jigs And Fixtures:</p>
+
+    <p>Master tooling should be used when machining a number of interchangeable parts to ensure that each part will fit and function properly. Another method of assuring interchangeability of parts during manufacturing is through the use of jigs or fixtures. This method is used primarily when an operation such as welding, drilling, or reaming is performed by hand on interchangeable parts.</p>
+
+    <p>Example:</p>
+
+    <p>Thiokol, Inc. is under contract to NASA MSFC to fabricate the motor segments of the SRB. These segments must fit together precisely when they are assembled at KSC; therefore, each segment must be indexed when it is manufactured by drilling the indexing holes in the tang and clevis joints of the Solid Rocket Motor (SRM) segment using a master tool. All of the master tools are made from transfer gauges, and the transfer gauges are made from a master gauge, resulting in the same indexing regardless of where the segments are manufactured (see Figure 1).</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009122main_0713-1.jpg"  HEIGHT="268"  BORDER="0" /><A HREF="/llis_lib/txt/1009603main_0713-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p><IMG  WIDTH="350"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009123main_0713-2.jpg"  HEIGHT="420"  ALIGN="LEFT"  BORDER="0" /><A HREF="/llis_lib/txt/1009604main_0713-2.txt"  >[D]</A>Master Gauge:</p>
+
+    <p>The master gauge is a stable, heavy cast iron fixture into which the master interface hole pattern has been precision bored. The bored holes are lined with pressed-in, hardened bushings (see Figure 2).</p>
+
+    <p>The exact location of each hole is determined by independent inspection and is entered on the master gauge drawing as a basic no-tolerance dimension. This drawing, and the master gauge it depicts, describe and establish the mastered hole pattern. The master gauge is used as a template when bushings are potted into the transfer gauge.</p>
+
+    <p>Transfer Gauge:</p>
+
+    <p>Transfer gauges are stable, rigid fixtures into which hardened bushings are potted with an epoxy compound. During potting, the bushings for the transfer gauge are held in the correct position by potting pins located in the master gauge. (As shown in Figure 2), transfer gauge is fitted over the master gauge before potting, and the transfer gauge bushings are located precisely before potting using the potting pins. After the potting material has cured, check pins are inserted first through the master tool and then through the new bushing location.</p>
+    <br clear="all" />
+
+    <p><IMG  WIDTH="350"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009124main_0713-3.jpg"  HEIGHT="259"  ALIGN="RIGHT"  BORDER="0" />Master Tool/Drill Jig: <A HREF="/llis_lib/txt/1009605main_0713-3.txt"  >[D]</A></p>
+
+    <p>Master tools are fixtures into which hardened bushings are potted with an epoxy compound. The transfer gauge is used as a template when bushing are potted in the master tool (see Figure 3). The bushings are held in position by the transfer gauge and potting pins. After the potting material has cured, check pins are inserted through the transfer gauge into the master tool to verify the location of the potted bushings.</p>
+
+    <p>Master tools are used as drill jigs to assure that the assembly holes and pins and the indexing holes and pins in the tangs and clevis joints of the SRM segments are precisely the same (see Figure 4). Master tools are made from the same material as the SRB segment casings. Therefore, the coefficient of expansion is the same for both. It is critical that the master tools and the SRB segments be subjected to the same environment until they stabilize with the area temperature before attempting to mate them or initiate drilling.</p>
+
+    <p><IMG  WIDTH="350"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009125main_0713-4.jpg"  HEIGHT="363"  ALIGN="RIGHT"  BORDER="0" />Inspection pins are used to verify hole locations in the SRM segment relative to the master tool.</p>
+
+    <p>Mobile Launch Platform (MLP) Preparation for SRB Stack: <A HREF="/llis_lib/txt/1009606main_0713-4.txt"  >[D]</A></p>
+
+    <ol>
+      <li>The support post #2 under the MLP is adjusted to a certain height in reference to a benchmark in the Vehicle Assembly Building (VAB). There is a corresponding support post #2 and benchmark at the launch pad.</li>
+
+      <li>Once support post #2 has been adjusted to the correct height, a triangular reference plane is established using two other points under the MLP.</li>
+
+      <li>This reference plane is then transferred to the top of the MLP.</li>
+
+      <li>
+        The eight support posts (four per SRB) are then adjusted by the following means:
+
+        <ol type="A">
+          <li>Shims are added between each support post and the haunch which is permanently attached to the MLP to raise the support post to a reasonable height.</li>
+
+          <li>Shims may be added under each spherical bearing for height adjustment up to a maximum of 0.5" (see Figure 5).</li>
+
+          <li>Eccentric bushings and the eccentric spherical bearings are rotated to bring them into alignment with a bias to give the SRBs a very slight inward pitch (towards ET). The bearings are then locked so they cannot move when the SRB aft skirt is installed.</li>
+        </ol>
+      </li>
+    </ol>
+    <br />
+    <br />
+
+    <p><IMG  WIDTH="350"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009126main_0713-5.jpg"  HEIGHT="405"  ALIGN="RIGHT"  BORDER="0" />SRB Stacking: <A HREF="/llis_lib/txt/1009607main_0713-5.txt"  >[D]</A></p>
+
+    <p>The SRBs are stacked on the spherical bearings on the MLP in five separate sections, one section at a time. The aft skirt, kick ring, and aft motor segment are preassembled in another area and stacked on the MLP as the aft booster assembly. The aft center segment is then stacked on top of the aft booster assembly. The forward center segment is stacked on top of the aft center segment. The forward motor segment is stacked on top of the forward center segment. The forward skirt, separation ring, frustum and nose cap are also preassembled and stacked on top of the forward motor segment as one unit. All of these sections make up one SRB. The fit of one section with the next is ensured because their mating parts (tangs and clevis joints) were all drilled using a master tool. There is no alignment adjustment between the sections and the deviation from vertical in the "y" plane is +0.8299" per stack.</p>
+
+    <p>Tolerance Buildup Practices: External Tank:</p>
+
+    <p>In the External Tank project, manufacturing drawings have tighter tolerances than the interface control documents (ICD) to eliminate the need for waivers if tolerances are exceeded slightly. The ICD tolerance for the overall length of the external tank (ET) is +0.74", while the manufacture drawing tolerance is +0.62".</p>
+
+    <p>The ET assembly drawing overall length tolerance represents the worst-case stack-up of the major ET assemblies, and the lower level assembly drawings use the same philosophy. For instance, the aft dome roundness is +0.50", the barrel attach points are +0.02", the machined and fabricated (formed) parts are +0.03", and thin sections are +0.10".</p>
+
+    <p>ET design engineers strive for tolerances of fabrication tools up to 10 times better than the flight hardware tolerances. For example, if the target tolerance on a part is +0.1", engineers strive to make the tool tolerance +0.01". If the worst-case tolerance on a part is +0.1", they strive to make the tool worst case tolerance +0.05", or no greater than one-half of the part tolerances.</p>
+
+    <p>ET design engineers use the ANSI Standard for Dimensioning and Tolerancing for block tolerances; i.e., x.x=+0.10", x.xx=+0.03", x.xxx=+0.010", and x.xxxx=+0.000x".</p>
+
+    <p>In some instances, match drilling is used during ET fabrication to ensure a perfect fit rather than using machine-to-drawing holes which would require a very tight tolerance on the machining process.</p>
+
+    <p>Methods of Calculating Tolerance Buildup:</p>
+
+    <p>In aerospace hardware, two methods are normally used to calculate tolerance buildup. They are the root sum square (RSS) method and the root mean square (RMS) method. Each seems to serve best for particular applications.</p>
+
+    <p>The RSS method is generally used for calculating the tolerance buildup of large pieces of hardware like the SRBs when they are assembled at KSC. This method of tolerance buildup assumes a random ordering of the various combinations of the interface theoretical tolerances and resulting misalignments.</p>
+
+    <p>The following formula is used for RSS calculations:</p>
+
+    <center>
+      <IMG  WIDTH="229"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009127main_0713eq1.jpg"  HEIGHT="36"  BORDER="0" /><A HREF="/llis_lib/txt/1009608main_0713eq1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Where: A, B, C, and D are the tolerances of mating segments of an assembly.</p>
+
+    <p>The RMS method is generally used in calculating the tolerances of piece parts for small assemblies such as pumps and valves. The RMS method is also used in connection with surface roughness. The roughness value is assumed to be approximately equal to the square root of the mean value of the squares of the heights and depths of the surface roughness irregularities measured from the nominal surface in micro-inches. This value is considered to be representative of the surface condition because it is assumed to give appropriate emphasis to the peaks and valleys comprising the surface. The following formula is used for RMS calculations:</p>
+
+    <center>
+      <IMG  WIDTH="267"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009128main_0713eq2.jpg"  HEIGHT="70"  BORDER="0" /><A HREF="/llis_lib/txt/1009609main_0713eq2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Where: A, B, C, and D are the tolerances of mating segments of an assembly, and N is the number of tolerances.</p>
+
+    <p>Environmental and Physical Factors:</p>
+
+    <p>When designing a part and establishing tolerances, it is important to consider both the environment where the part is initially manufactured and assembled, and the environment where the part may have to be replaced or reassembled. Factors to be considered include assumptions as to whether the part has to be disassembled and reassembled at a later time and/or different location from the initial assembly. Tolerances of the part will be determined by expected variations in temperature, material, coefficient of expansion, humidity, wind load, or cleanliness.</p>
+
+    <p>Example:</p>
+
+    <p>Several precision components such as the LO<small><sub>2</sub></small> and LH<small><sub>2</sub></small> pumps and valves in the Space Shuttle Main Engine may be assembled initially in a clean environment of 68 degrees and low humidity. If it is anticipated that one of these parts may have to be replaced on the launch pad at KSC, the fit of its parts could be affected if the temperature was 98 degrees and the humidity 95 percent, if the wind was blowing at 45 mph, or if sand and dirt were present in the local atmosphere.</p>
+
+    <p>Potential Cost/Schedule Impact Avoidance:</p>
+
+    <p>Cost and schedule are two of the most important factors to consider when establishing tolerances. Designers should never specify a tighter tolerance on any part or component than is absolutely necessary for that part to fit and function properly. Tighter tolerances require more precise machining, and result in potential scrappage of parts or components at inspection. Excessively tight tolerances also require more time for machine setup and machining as well as extra time for inspection. The loss of material, the extra time for machining and inspection, and the potential overtime required to meet a schedule can result in higher overall costs.</p>
+
+    <p>Example:</p>
+
+    <p>The critical mating surfaces for interface mounting flanges designed for a pump or valve are required to be flat within .002". If the designer were to unnecessarily require the same tight tolerance on the size and location of the mounting holes, flanges could be unnecessarily rejected if the holes did not meet the specifications. This could increase the cost of the flanges because of the wasted material and machining time.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The rationale for tolerancing is to assure that the majority of small and large parts will fit and function as they were designed to when they finally come together as an overall assembly. It is also essential that these parts can be disassembled and reassembled if necessary under less than ideal conditions with the minimum amount of effort in the least amount of time.</p>
+
+    <p>The selected tolerance buildup and hardware integration approaches described in this practice have evolved over the past four decades of developing launch vehicles and their related propulsion systems and structures. Minor deviations have been made from standard ANSI practices in instances where the prior U. S. standards were not applicable to large aerospace hardware components, subassemblies, and assemblies. Specific design requirements, specifications, and procedures are described in detail in the references and in documents identified in the references.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>ANSI Standard for Dimensioning and Tolerancing Y14.5M 1982, published 1983, The American Society of Mechanical Engineers, United Engineering Center, 345 East 47th Street, New York, NY 10017.</li>
+
+      <li>External Tank Tolerance Control Drawing Number 82600209001, W.E. Warren, May 24, 1974, Martin Marietta Corporation, P. O. Box 179, Denver CO 80201.</li>
+
+      <li>Modern Geometric Dimensioning and Tolerancing, Second Edition, 1982, Lowell Foster, National Tooling and Machining Association, 9300 Livingston Road, Fort Washington, MD 20744, Catalog Number 5021.</li>
+
+      <li>Space Shuttle Stacking Tolerance and Mating Assessment for (MLP/ASRB/ET) 20ENR-0001, S. Fisher, July 30, 1991, United Technologies USBI, P. O. Box 1900, Huntsville, AL 35807.</li>
+
+      <li>Space Shuttle Vehicle MLP/SRB/ET Stacking Tolerancing and Mating Assessment, 30A90507, Bill Cole, March 4, 1977, National Aeronautics and Space Administration, George C. Marshall Space Flight Center, Huntsville, AL.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The principal effect of nonadherence to proven and verified vehicle hardware integration and tolerance specification practices is the potential delay and attendant costs that would be encountered either in the factory or in the field due to the attempted mating or assembly of parts that do not fit together properly. In such cases, waivers need to be obtained, parts may need to be exchanged, or factory/field modification may be required. The effects of specifying tolerances that are too stringent for the application are increased machining, inspection, and shipping protection time and costs. Since tolerances that are either too tight or too loose can create schedule and cost impacts, optimum tolerances and related tooling provisions must be derived for each specific application.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use master gauges, tooling, jigs, and fixtures to transfer precise dimensions to ensure accurate mating of interfacing aerospace hardware. Calculate overall worst-case tolerances using the root sum square method of element tolerances when integrating multiple elements of aerospace hardware.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I and Saturn V, Space Shuttle External Tank (ET), and Space Shuttle Solid Rocket Booster (SRB) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

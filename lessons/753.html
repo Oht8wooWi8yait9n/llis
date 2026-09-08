@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0753: Integrated Optical Performance Modeling of X-Ray Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0753: Integrated Optical Performance Modeling of X-Ray Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0753 (Database ID: 753)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/753" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1264; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The use of computer-based models for integrated x-ray optical performance modeling will provide an independent check of optical systems design and will ensure high quality optical systems by providing in-process verification of the fabrication process. These models can save time and money in optical systems design and development, and should result in highly reliable x-ray imaging.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Software has been developed and is being refined to model the images produced by the grazing incidence optics of the Advanced X-ray Astrophysics Facility (AXAF-I) based on a number of optical system and mirror parameters. Commercial optical design and analysis programs are not tailored for grazing incidence mirror systems with their highly annular entrance apertures and cylindrically shaped mirrors. Analytical modeling is required to verify the design and to check fabrication in real time based on in-process mirror inspection metrology. A computer model has been developed that includes the effects of x-ray source position, x-ray source size, mirror figure errors, mirror surface roughness, mirror reflectivity, mirror alignment, and detector shape. Links are provided in the program to mirror surface metrology data and the mirror distortion predictions of standard structural analyses programs. Mirror figure errors are incorporated into a ray trace model by interpolating metrology
+    data and structural model results onto a finely spaced grid. Individual surface parameters such as curvature and slope errors can also be applied to influence model results. The ray trace results can be convolved with the x-ray scattering predicted from the roughness of the mirror surfaces, and with the detector aperture shape and x-ray source size.</p>
+
+    <p>An integrated, interactive program has been developed which will produce various two and three-dimensional image plots as well as parameters such as x-ray collecting area, root mean square image size, and image encircled energy distribution. This model is being developed as part of the AXAF-I project, but it is applicable to other grazing incidence x-ray optical systems. Figure 1 is an illustration of the Wolter I combined paraboloid/hyperboloid mirror system used for x-ray telescopes.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009203main_0753-1.jpg"  HEIGHT="324"  BORDER="0" /><A HREF="/llis_lib/txt/1009683main_0753-1.txt"  >[D]</A><br />
+      Figure 1. Combined Paraboloid/Hyperboloid Mirror Systems Used in X-ray Telescopes
+    </center>
+
+    <p><font>Where:</p>
+
+    <div style="margin-left: 2em">
+      <font>r = radius<br />
+      z = coordinate along the optical axis (z = 0 at midpoint between the mirrors, z &gt; 0 at system focus)<br />
+      r<small><sub>o</sub></small> = radius at z = 0<br />
+      S = subnormal<br />
+      k = conic constant = 1 - e<small><sup>2</sup></small><br />
+      2 = eccentricity<br />
+      |R| = |vertex radius of curvature| =<br />
+      <IMG  WIDTH="120"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009202main_0753-1-1.jpg"  HEIGHT="38"  BORDER="0" /><A HREF="/llis_lib/txt/1009682main_0753-1-1.txt"  >[D]</A>
+    </div>
+    <br />
+    <br />
+
+    <p>The mirrors are bodies of revolution around the longitudinal or z- axis.</p>
+
+    <p>A flow diagram of the integrated optical performance computer model is shown on Figure 2. The model will produce a three-dimensional picture of the image intensity distribution as well as an X/Y plane contour map of this intensity distribution at preselected intensity intervals. These outputs can be compared with the ideal output configurations by running test cases from a collection of stored parameters and by comparison with the results of ground tests and the analyses of independent investigators. Contamination and gravity (weight) effects are not included in the model's parameters and must be considered separately. Gravity structural and thermal effects for the ground test can be analyzed by exercising the structural/thermal distortion program inputs.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009204main_0753-2.jpg"  HEIGHT="384"  BORDER="0" /><A HREF="/llis_lib/txt/1009684main_0753-2.txt"  >[D]</A><br />
+      Figure 2. Flow Diagram of Integrated Optical Performance
+    </center>
+
+    <p>Technical Rationale:</p>
+
+    <p>Due to the expense of ground x-ray tests of precision grazing incidence x-ray mirrors for aerospace applications and the extensive time required for fabrication, it is imperative to have performance predictions ahead of time and to evaluate actual configurations in near real time as they reach completion during the manufacturing process. Optical performance modeling is necessary to ensure accurate and reliable performance before the mirror is put into service.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Final Report: "Software to Model AXAF Image Quality," Center for Applied Optics, University of Alabama in Huntsville, Huntsville, AL, June 1993.</li>
+
+      <li>Zissa, D. E.: "AXAF-I Performance Analysis Software Development," (a presentation), Marshall Space Flight Center, AL, February 1, 1994.</li>
+
+      <li>"Software for AXAF-I Performance Analysis," (a presentation), Center for Applied Optics, University of Alabama in Huntsville, February 1, 1994.</li>
+
+      <li>D. E. Zissa: "Comparison of Ring-Focus Image Profile with Predictions for the AXAF VETA-I Teat," Proc. SPIE, Vol. 1742, pp. 91-103, 1992.</li>
+
+      <li>P. Glenn, P. Reid, A. Slomba, and L. Van Speybroeck: "Performance Prediction of the AXAF Technology Mirror Assembly using Measured Mirror Surface Errors," Proc. SPIE, Vol. 830, pp. 278-282, 1987.</li>
+
+      <li>M. Freeman: "Interim Report, Transfit, Finite Element Analysis Data Fitting Software," Smithsonian Astrophysical Observatory Memorandum SAO-AXAF-DR-93-052, September 1993.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to employ optical performance modeling, coupled with inadequate testing and comparison with modeling results, could result in blurred x-ray images, inaccurate energy level results, and loss of scientific data. Repeat flights to regain lost data could be enormously expensive.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>To ensure that high resolution mirror assemblies for grazing incidence x-ray optical systems meet their requirements, image quality must be predicted during design and verified during fabrication by modeling the system for in-orbit and x-ray test configurations. Computer based modeling programs should be used to verify that both the initial design and the as-built configurations will reliably produce the required image quality.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

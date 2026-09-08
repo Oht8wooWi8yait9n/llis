@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0586: Verify Vendor Certifications of Commercial Equipment (1996)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0586: Verify Vendor Certifications of Commercial Equipment (1996)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0586 (Database ID: 586)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1998-04-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/586" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>JPL required the use of a reference antenna to verify the Huygens Probe to Cassini high gain antenna (HGA) RF link. A test had been developed to use right and left-circular polarized (RHCP and LHCP) antennas to verify the polarization of both the Probe and HGA antennas, used for the transfer of science data during the probe's descent to the surface of Titan. JPL purchased an off-the-shelf RHCP conical log spiral antenna for this test; the vendor provided a calibration certificate which certified the candidate ground support equipment (GSE) antenna to be right-circular polarized.</p> 
+<p>When the commercial antenna was used as a reference standard during a spacecraft-level RF compatibility test, it indicated that the spacecraft and probe antenna polarizations were both incorrect. When further investigation between international partners could not substantiate this indication, the GSE reference antenna was tested against other antennas of known polarization and found to be mislabeled. The product featured a biwire winding which effectively reversed the polarization to LHCP, resulting in a left polarized emission from an apparently clockwise-wound spiral antenna.</p> 
+<p>The manufacturer revealed that the antenna labeling was not in accordance with accepted standards, and that the product had been marketed as RHCP for over 10 years. Since the antenna had been used in EMC testing mostly as a broadband source or receiver, users were rarely concerned with polarization. As shown in Figure 1, the physical appearance of the reference antenna structure - a clockwise helix - supports the standard definition of RHCP, but the electrical performance indicates LHCP.</p> 
+<img alt="refer to [D] description" border="0" height="216" src="https://llis.nasa.gov/llis_lib/images/1008979main_0586.gif" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009479main_0586.txt">[D]</a> 
+<br> 
+<i>A Typical Conical Log Spiral Antenna</i> 
+<p>Additional Keyword(s): COTS, Receiving Inspection</p> 
+<p>Reference(s):</p> 
+<ol> 
+ <li>Cassini Problem/Failure Report No. Z23529, October 21, 1996.</li> 
+ <li>K. Kellogg &amp; W. Moore, quotProbe-Spacecraft Antenna End-to-End Failure Investigation Report,quot JPL IOM 3360-96-14, October 17, 1996.</li> 
+ <li>Lesson Learned #11-121, Ground Support Equipment Failure Caused Damage to SEASAT-A</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The functional attributes of vendor provided equipment cannot be assumed to match specifications, particularly when an item is to be used as a reference standard.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Assure adequate independent testing of critical features of any commercial instrumentation used in a test of flight or critical hardware.</li> 
+ <li>Continue present practice of reviewing interface control documents and drawings to determine whether they adequately define and control interface conflicts between subsystem and spacecraft elements. To prevent gaps in system-level interface control and monitoring, conduct spacecraft-level tests, where practical, of all telecom interfaces, including polarization.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.14.2.2 (quotEngineering Practices: Project and System Level Functional Verification and Validation - Verification and Validationquot), in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

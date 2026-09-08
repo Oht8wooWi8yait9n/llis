@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0817: Vibroacoustic Qualification Testing of Payloads, Subsystems, and Components</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0817: Vibroacoustic Qualification Testing of Payloads, Subsystems, and Components</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0817 (Database ID: 817)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/817" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1419 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Adherence to the practice alleviates vibroacoustic-induced failures of structural stress and fatigue, unacceptable workmanship, and performance degradation of sensitive subsystems including instruments and components. Implementation of this practice assures that minimal degradation of "design reliability" has occurred during prior fabrication, integration and test activities.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The GSFC vibroacoustic qualification program for flight hardware requires an acoustics test at the payload level of assembly and random vibration tests on all components. In addition, a random vibration test is required on the payload when practical to better simulate the structure borne inputs. For small payloads, such as those launched by the Scout class launch vehicle, random vibration tests are required and the need for an acoustic test must be assessed.</p>
+
+    <p>Subsystem level random vibration tests and component level acoustic tests are required when the payload configuration indicates that these exposures are likely to induce significant stress during the mission. In addition, subsystem level acoustic tests may be required.</p>
+
+    <p>GSFC uses protoflight hardware for verification testing and the basic provisions of this method apply to protoflight hardware but are in general applicable to prototype. Protoflight hardware is flight hardware of a new design and is subjected to a test program that combines elements of prototype and flight acceptance verification; that is, the application of design qualification test levels and flight acceptance test durations. Prototype hardware is hardware of a new design that is not intended for flight and is subjected to a design qualification test program.</p>
+
+    <p>Vibroacoustic test level limits for protoflight qualification are defined as the maximum expected flight levels (limit levels) plus 3 dB (reference 2). Random vibration levels are determined by responses to the acoustic inputs plus the effects of vibration transmitted through the structure. As a minimum, payload and component vibroacoustic test limits must be sufficient as determined on a case by case basis to demonstrate acceptable workmanship.</p>
+
+    <p>The acoustic environment at launch is usually the primary source of vibration; however, other transients and sources of vibration must be considered. These sources include possible torsional oscillation imparted by the launch vehicle, vibrations produced by retro/apogee motors on the payload, and sustained oscillations due to Main Engine CutOff (MECO) and pogo effects. Additional vibration tests (such as sine vibration) are required to qualify payload and payload hardware for these inputs if they are expected to occur during the mission.</p>
+
+    <p>Payload Vibroacoustic Tests:</p>
+
+    <p>a. Payload acoustic testing - Protoflight payloads must be subjected to an acoustic test to verify their ability to survive the launch acoustic environment and to provide final workmanship acoustic tests. The test specification is dependent on the payload-launch vehicle configuration and must be determined on a case-by-case basis; however, guideline specifications are given in appendix A of reference 2.</p>
+
+    <ol>
+      <li>
+        Facilities and test control - Acoustic tests must be conducted in a reverberant chamber large enough to maintain a uniform sound field at all points surrounding the test item and to produce reverberant acoustic modes in the lowest third octave band specified. The sound pressure level must be controlled at one-third octave band resolution. The preferred method of control is to average four or more microphones with a real-time device that effectively averages the sound pressure level in each filter band. When real-time averaging is not practical, a survey of the chamber must be performed to determine the single point that is most suitable for control of the acoustic test.
+
+        <p>Additional information on the test facility, the test control methods, and the test setup are contained in paragraph 2.4.2 of reference 2.</p>
+      </li>
+    </ol>
+
+    <p>b. Payload vibration tests - Random vibration tests must be performed on the protoflight payloads subject to any limitations of the available test facilities to verify the ability of the payloads to survive the launch environments and to provide a final assessment of workmanship. The test is required for small payloads (&lt;1000 lb) and must be assessed for larger payloads on a case-by-case basis. Appendix A of reference 2 provides the maximum expected random vibration levels at the spacecraft interface for various expendable launch vehicles (ELV) and other information and guidance on vibration testing. Additional qualification tests must be performed if expected environments are not enveloped by this test. Sine vibration tests must be added to the verification program if sustained oscillations are expected to occur, or to satisfy other load requirements.</p>
+
+    <ol>
+      <li>
+        Launch random vibration: Protoflight as well as prototype payloads must be subjected to a random vibration test to verify flight worthiness and workmanship. The qualification test limits are the maximum flight levels plus 3 dB. The test is intended for payloads of low (&lt;1000 pounds) to moderate (1000 to 5000 pounds) weight and size such as Scout launched spacecraft, small attached STS payloads, etc. The test covers the full 20 - 20,000 Hz frequency range. For moderate-sized payloads, the test is intended to verify the hardware in the frequency band below 200 Hz where acoustic tests do not excite the payload to the levels it will encounter during launch.
+
+        <p>The payload in its launch configuration is attached to a vibration fixture by use of a flight-type launch-vehicle adapter and attachment hardware. Vibration is applied sequentially at the base of the adapter in each of three orthogonal axes, one of which is parallel to the thrust axis. The excitation spectrum as measured by a control accelerometer(s) equalized such that the acceleration spectral density is maintained within ± 3 dB of the specified level at all frequencies within the test range and the overall RMS level is within ± 10% of the specified level.</p>
+
+        <p>If the random vibration test is not performed at the payload level, the feasibility of performing the test at the next lower level of assembly must be assessed.</p>
+      </li>
+
+      <li>
+        Additional Vibration Tests - If additional vibration tests are required to qualify its performance, the payload is tested in a configuration representative of the time the stress occurs during flight with appropriate flight type hardware used for attachment.
+
+        <p>Subsystem Vibroacoustic Tests:</p>
+
+        <p>Subsystem vibroacoustic testing - Subsystems must be exposed to random vibration testing unless analyses show that the test exposures are not needed. Specific test levels are determined on a case-by-case basis. The test levels must be equal to the qualification level (highest predicted flight level +3 dB) predicted at the location where the input is controlled. Subsystem acoustic tests must also be performed if the subsystem is judged to be sensitive to this environment.</p>
+
+        <p>Additional vibration tests to simulate expected mission environments such as sustained periodic oscillations must be performed if applicable.</p>
+
+        <p>For very large payloads, the random vibration tests may be impractical because of test facility limitations. In these cases, testing at the subsystem or instrument level must be considered.</p>
+
+        <p>Component Vibroacoustic Test:</p>
+
+        <p>Component Vibroacoustic Testing - For qualification as well as screening for design and workmanship defects, components must be subjected to a random vibration test along each of three mutually perpendicular axes. In addition, an acoustic test must be considered when components are particularly sensitive to the acoustic environment.</p>
+
+        <p>Random vibration testing - Components must be subjected to random vibration along each of three mutually perpendicular axes for one minute each. When possible, the component random vibration spectrum is based on levels measured at the component mounting locations during previous subsystem or payload testing. When such measurements are not available, the levels must be based on statistically estimated responses of similar components on similar structures or on analysis of the payload. In the absence of any knowledge of the expected level, the generalized vibration test specification given in Table 1 must be used. If the hardware contains delicate optics, detectors, sensors, etc., that could be damaged by the levels of the workmanship test in certain frequency bands, the test levels may be reduced in those frequency bands after appropriate management review.</p>
+
+        <center>
+          <IMG  WIDTH="480"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009308main_0817-1.jpg"  HEIGHT="457"  BORDER="0" /><A HREF="/llis_lib/txt/1009783main_0817-1.txt"  >[D]</A><br />
+          Table 1. Generalized Vibration Test Levels Protoflight Components (STS or ELV) (50lb or Less)
+        </center>
+
+        <p>If possible the hardware, less the sensitive items, should be subjected to the full test levels. As a minimum, all components are subjected to the levels of Table 2, which represent a workmanship screening test.</p>
+
+        <center>
+          <IMG  WIDTH="480"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009309main_0817-2.jpg"  HEIGHT="641"  BORDER="0" /><A HREF="/llis_lib/txt/1009784main_0817-2.txt"  >[D]</A><br />
+          Table 2. Component Minimum Workmanship Random Vibration Levels (50 lb or Less)
+        </center>
+
+        <p>Refer to Reference 2 for requirements on the mounting of components to test fixtures and other test setup requirements.</p>
+
+        <p>For very large components, the random vibration tests may have to be supplemented or replaced by an acoustic test if the vibration test levels are insufficient to excite internal hardware. If neither the acoustic nor vibration excitation is sufficient to provide an adequate workmanship test, a screening program should be initiated at lower levels of assembly; down to the board level, if necessary.</p>
+
+        <p>2. Acoustic Test - If a component level acoustic test is required, the test set-up and control are in accordance with the requirements for payload testing.</p>
+
+        <p>3. Additional Vibration Tests - Additional vibration tests may have to be performed to qualify the hardware for other vibrational inputs expected during the mission; such as a sine sweep to simulate periodic oscillations.</p>
+
+        <p>Fatigue Life Considerations - The nature of the protoflight test program prevents a demonstration of hardware lifetime because the same hardware is both tested and flown. When hardware reliability considerations demand the demonstration of a specific hardware lifetime, a prototype verification program must be employed, the test durations modified accordingly. Specifically, the duration of the vibroacoustic exposures is extended to account for the life that the flight hardware will experience during the mission . In order to account for the scatter factor associated with the demonstration of fatigue, the duration of prototype exposures are at least four times the intended life of the flight hardware.</p>
+
+        <p>Acceptance Testing - Vibroacoustic and other vibration testing for the acceptance of previously qualified hardware are conducted at the maximum expected flight levels using the same duration (1 min.) as used for protoflight hardware. The payload is subjected to an acoustic test, and the payload (when practical) and components levels are subjected to random vibration tests in the three axes. As a minimum, the random vibration levels shall represent the workmanship test levels. In addition, subsystems receive vibroacoustic testing as required by project specific requirements.</p>
+
+        <p>Retest of reflight hardware - The amount of retest that is needed is determined by considering the amount of rework done after flight and by comparing the stresses of the upcoming flight with those of the previous flight. The principle objective is to verify the workmanship and to ensure that structural degradation has not occurred. If no disassembly and rework was done, retests may not be required. The effects of storage and elapsed time since last exposure are considered in determining the need for retest. Subsystems that have been taken apart and reassembled must be subjected ,as a minimum, to an acoustic test (levels are equal to the limit levels) and a random vibration test in at least one axis. More comprehensive exposures must be considered if the rework has been extensive.</p>
+      </li>
+    </ol>
+
+    <p>Performance Monitoring:</p>
+
+    <p>Before and after each vibroacoustic test, the test item must be examined and functionally tested. During the test, power is applied when appropriate and the performance of the test item is monitored.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Payloads can be sensitive to the vibroacoustic environment depending upon the degree of coupling between the acoustic excitation and the payload structure. Lightly stiffened, thin-panel type payload structures with large surface areas and low-mass loading are most susceptible to direct acoustic excitation. Truss-type structures are less susceptible to direct acoustic excitation because they have relatively high stiffness and small surface areas; however, the response of truss-type structures to acoustically induced random interface motions may be severe if the truss structure is mechanically coupled to the acoustically sensitive panel-type structures.</p>
+
+    <p>The acoustic environment at launch is usually the primary source of vibration; however, other transients and sources of vibration can cause hardware problems. These sources include possible torsional oscillations imparted by the launch vehicle, vibrations produced by retro/apogee motors on the payload, and sustained oscillations due to MECO and pogo effects.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>SPAR-3, Guidelines For Standard Payload Assurance Requirements (SPAR) For Goddard Orbital Projects, March 1990</li>
+
+      <li>GEVS-SE, General Environmental Verification Specification For STS And ELV Payloads, Subsystems, And Components, January 1990</li>
+
+      <li>D-EH-1, Engineering Handbook For STS Payloads, Part 1: Loads And Structures, September 1982</li>
+
+      <li>Space Vehicle Design, Michael D. Griffin and James R. French, 1991</li>
+
+      <li>Design of Geosynchronous Spacecraft, Brin N. Agrawal, 1986</li>
+
+      <li>"Powered-On Vibration", Reliability Preferred Practice PT-TE-1405</li>
+
+      <li>"Sinusoidal Vibration", Reliability Preferred Practice PT-TE-1406</li>
+
+      <li>"Assembly Acoustic Tests", Reliability Preferred Practice PT-TE-1407.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to perform vibroacoustic testing could result in payload failures when subjected to the vibroacoustic environments of the mission, particularly the severe acoustic environment of launch. In addition, the simultaneous occurrence of low-frequency random vibration with high-intensity, low-frequency acoustics can cause failure of load-carrying elements. Examples of components that are susceptible to failure due to random vibration excitation are thin films, filaments, electronic circuit boards, and optical elements.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform acoustic and random vibration testing supplemented with additional sine vibration testing as appropriate to qualify payload hardware to the vibroacoustic environments of the mission, particularly the launch environment and to demonstrate acceptable workmanship.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on All Flight Programs Managed By GSFC including GOES, HST, COBE, etc.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

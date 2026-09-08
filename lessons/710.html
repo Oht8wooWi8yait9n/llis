@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0710: EMC Guideline for Payloads, Subsystems, and Components</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0710: EMC Guideline for Payloads, Subsystems, and Components</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0710 (Database ID: 710)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/710" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline number GT-TE-2401 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Implementing the Guideline provides the following technical controls in the Electromagnetic Compatibility characteristics of hardware:</p>
+
+    <p>a. The payload and its elements do not generate electromagnetic interference that could adversely affect its own subsystems and components or the safety and operation of the launch vehicle (STS or ELV), or the launch site.</p>
+
+    <p>b. The payload and its subsystems are not susceptible to emissions that could adversely affect their safety and performance. This applies whether the emissions are self-generated or derived from other sources, or whether they are intentional or unintentional.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Electromagnetic compatibility requirements have been established to ensure that a payload or its elements do not generate electromagnetic interference that can adversely affect its own subsystems and components, or other payloads, or the safety and operation of the launch vehicle (STS or ELV) and launch site. Additionally, the payload (spacecraft) and its subsystems and components should not be susceptible to emissions that could adversely affect their safety and performance. This applies whether the emissions are self-generated or emanate from other sources, or whether they are intentional or unintentional.</p>
+
+    <p>The Guideline consists of verification requirements in each of the following categories: conducted emissions, conducted susceptibility, radiated emissions, and radiated susceptibility. Most of these requirements are taken from the widely used MIL-STD-461, 462, and 463 EMC specifications and have been tailored by the GSFC for space flight application and incorporated into the GSFC's General Environmental Verification Specifications For STS &amp; ELV Payloads, Subsystems, and Components (GEVS-SE). The Guideline also incorporates the applicable EMC requirements defined in the Shuttle Orbital/Cargo Standard Interfaces Document (JSC 07700 Volume XIV Attachment 1 (ICD 2-19001).</p>
+
+    <p>These EMC test requirements when performed as a set are intended to provide an adequate measure of hardware quality and workmanship. The tests are performed to fixed levels which are intended to envelope those that may be expected during a typical mission and allow for some degradation of the hardware during the mission. The levels are tailored by the user to meet mission specific requirements, such as the enveloping of launch vehicle and launch site environments, or the inclusion of very sensitive detectors or instruments in the payload.</p>
+
+    <p>The following table is a matrix of EMC tests that apply to a wide range of hardware intended for launch either by the STS or an expendable launch vehicle (ELV). Tests are prescribed at the component, subsystem, and payload levels of assembly. Not all tests apply to all levels of assembly or to all types of payloads. A project or hardware designer must select the requirements that fit the characteristics of the mission and the hardware, e.g., a transmitter would require a different group of EMC tests than a receiver. Symbols in the hardware levels of assembly columns assist in the selection of an appropriate EMC test program.</p>
+
+    <center>
+      <b>Table 1. EMC Requirements per Level of Assembly</b><br />
+
+      <table border="1" width="90%" cellpadding="4" cellspacing="2">
+        <tr>
+          <th>Type</th>
+
+          <th>Test</th>
+
+          <th>STS</th>
+
+          <th>ELV</th>
+
+          <th>Component</th>
+
+          <th>Subsystem/<br />
+          Instrument</th>
+
+          <th>Payload<sup>*</sup><br />
+          Spacecraft</th>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CE
+            </center>
+          </td>
+
+          <td>DC power leads</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Sb,Rb,R</td>
+
+          <td>Sb,Rb,R</td>
+
+          <td>Sb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CE
+            </center>
+          </td>
+
+          <td>AC power leads</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>Sb,Rb</td>
+
+          <td>Sb,Rb</td>
+
+          <td>Sb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CE
+            </center>
+          </td>
+
+          <td>Spikes on orbiter DC power lines</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>Sb</td>
+
+          <td>Sb</td>
+
+          <td>Sb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CE
+            </center>
+          </td>
+
+          <td>Spikes on orbiter AC power lines</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>Sb</td>
+
+          <td>Sb</td>
+
+          <td>Sb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CE
+            </center>
+          </td>
+
+          <td>Antenna terminals</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>R</td>
+
+          <td>-</td>
+
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RE
+            </center>
+          </td>
+
+          <td>Magnetic fields (STS payloads)</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>-</td>
+
+          <td>-</td>
+
+          <td>Sb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RE
+            </center>
+          </td>
+
+          <td>AC magnetic field</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RE
+            </center>
+          </td>
+
+          <td>E-fields</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Sd,Rb,R</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RE
+            </center>
+          </td>
+
+          <td>Payload transmitters</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>-</td>
+
+          <td>-</td>
+
+          <td>Sd,**</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RE
+            </center>
+          </td>
+
+          <td>Spurious (transmitter antenna)</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>-</td>
+
+          <td>Rb,R</td>
+
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CS
+            </center>
+          </td>
+
+          <td>Power line</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Rb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CS
+            </center>
+          </td>
+
+          <td>Intermodulation products</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>-</td>
+
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CS
+            </center>
+          </td>
+
+          <td>Signal rejection</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>-</td>
+
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CS
+            </center>
+          </td>
+
+          <td>Cross modulation</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>-</td>
+
+          <td>-</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              CS
+            </center>
+          </td>
+
+          <td>Power line transients</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Rb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RS
+            </center>
+          </td>
+
+          <td>E-field (general compatibility)</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RS
+            </center>
+          </td>
+
+          <td>Compatibility with orbiter<br />
+          transmitters</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>-</td>
+
+          <td>-</td>
+
+          <td>Rb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RS
+            </center>
+          </td>
+
+          <td>Orbiter unintentional E-field</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>-</td>
+
+          <td>-</td>
+
+          <td>Rb</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RS
+            </center>
+          </td>
+
+          <td>Magnetic-field susceptibility</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+
+          <td>Rb,R</td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              RS
+            </center>
+          </td>
+
+          <td>Magnetic properties</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>R</td>
+
+          <td>R</td>
+
+          <td>R</td>
+        </tr>
+      </table>
+      <br />
+
+      <table width="90%">
+        <tr>
+          <td>
+            <dl>
+              <dt>CE - Conducted Emission<br />
+              CS - Conducted Susceptibility</dt>
+
+              <dt>R - Test to insure reliable operation of payload, and to help ensure compatibility with the launch vehicle and launch site</dt>
+
+              <dt>Rb - Test to ensure reliable operation of orbiter attached payloads</dt>
+
+              <dt>RE - Radiated emission</dt>
+
+              <dt>RS - Radiated Susceptibility</dt>
+
+              <dt>Sb - Items interfacing with orbiter power in payload bay or in the cabin: required by ICD 2-19001</dt>
+
+              <dt>Sd - Items operating on or near orbiter: required by ICD 2-19001</dt>
+
+              <dt>* - Payload, Mission, or highest level of assembly</dt>
+
+              <dt>** - Must meet any unique requirement of launch vehicle and launch site for transmitters that are on during launch</dt>
+            </dl>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>Once the program is selected, all flight hardware is tested. The EMC test program is meant to uncover workmanship defects and unit-to-unit variations in electromagnetic characteristics, as well as design flaws. The qualification and flight acceptance EMC programs are the same. Performance of both will provide a margin of hardware reliability.</p>
+
+    <p>A wide range of EMC test requirements are provided to cover a variety of free flyer and shuttle-attached operating modes. For example, some free flyers will be operated with the orbiter during prerelease and checkout procedures and must be tested to ensure EMC with the orbiter. In other cases, the most stringent EMC requirements can occur after the free flyer moves away from the orbiter when it or its sensitive instruments can become susceptible to the operation of its own subsystems. Because some free flyers will not be operated or checked out before release from the orbiter, they do not have to meet the orbiter EMC requirement and the tests need only ensure self-compatibility and survival to exposure to the high-level emissions from the orbiter's transmitters. Requirements are also provided for attached payloads that may be subjected throughout the mission to EMI from the orbiter and from other payloads.</p>
+
+    <p>It is recommended that testing be performed at the component, subsystem, and payload levels of assembly. Testing at lower levels of assembly has many advantages: it uncovers problems early in the program when they are less costly to correct and less disruptive to the program schedule; it characterizes box-to-box EMI performance, providing a baseline that can be used to alert the project to potential problems at higher levels of assembly: and it aids in troubleshooting.</p>
+
+    <p>The tests and their limits are considered minimum requirements, however they may be revised as appropriate for a particular payload or mission.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The Guideline presents EMC verification requirements for GSFC payloads, subsystems, and components and includes a baseline for demonstrating by test satisfactory performance of hardware in the expected mission environments. The Guideline includes the applicable requirements for Shuttle carried hardware.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>General Environmental Verification Specification for STS &amp; ELV Payloads, Subsystems, And Components (GEVS-SE)</li>
+
+      <li>Shuttle Orbiter/Cargo Standard Interfaces Document (JSC 07700 Volume XIV Attachment 1 (ICD 2-19001).</li>
+
+      <li>Power Line Filters - Reliability Preferred Practice No. PD-ED-1206</li>
+
+      <li>Electrical Shielding Of Power, Signal, and Control Cables - Reliability Preferred Practice No. PD-ED-1213</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not establishing EMC design and test requirements for space hardware and payloads could lead to an adverse affect of its own subsystems or components or the safety of the launch vehicle or launch site.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Guidance is provided for establishing design and test requirements for the control of electromagnetic emission and susceptibility characteristics of space hardware and payloads.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

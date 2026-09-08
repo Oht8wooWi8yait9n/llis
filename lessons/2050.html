@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2050: NASA Study of Flight Software Complexity</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2050: NASA Study of Flight Software Complexity</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2050 (Database ID: 2050)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-05-05</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Flight Operations, Payloads, Risk Management / Assessment, Software, Test and Verification, Software Engineering, Spacecraft and Spacecraft Instruments, Mission control Planning, Mission operations systems, Early requirements and standards definition, Review systems and boards, Engineering design and project processes and standards, Level II/III requirements definition, Mission and systems trade studies, Mission definition and planning, Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2050" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Since 1968, the flight software (FSW) used aboard NASA human and robotic spacecraft has grown in size by a factor of ten every ten years. The primary FSW for the NASA Crew Exploration Vehicle (Orion) and the Mars Science Laboratory (MSL) are each expected to exceed one million lines of code (LOC). The growth trend is expected to continue because of increasingly ambitious mission requirements and because of the advantages (e.g., zero mass, flexibility) of situating new functionality in software or firmware rather than in hardware. An increase in FSW size is often accompanied by an increase in FSW "complexity"-- defined as a state in which the FSW is difficult to understand and verify-- and an increase in risk.
+<br/>
+<br/>Problems with FSW during a variety of NASA spaceflight missions, like those recently reported in References (1) and (2), led NASA to conduct a study (Reference (3)) of the engineering activities-- from requirements development through operations-- that lead to growth in FSW size and complexity. The final report from the study attributes NASA's lack of control over these FSW characteristics to cultural factors such as: 
+<ol><li>Cost and schedule pressures that lead FSW managers and developers to reduce or eliminate activities where the benefits are not as easy to quantify as those from the production of code.
+<br><br/></li><li>Lack of enforcement of FSW standards and local best practices.
+<br><br/></li><li>Pressure to re-use software from a previous mission because it is "flight-proven" and presumed to be of lower risk.
+<br><br/></li><li>Emphasis on the flight project at hand, with few programmatic incentives for project management to contribute to infrastructure and process improvements that benefit future missions. 
+</li></ol>
+The NASA final report's findings in the areas of systems engineering, software architecture, testing, and project management are summarized in the Lessons Learned section below, and its corresponding recommendations are summarized in the Recommendations section.
+<br/>
+<br/><U>References</U>:  
+<ol><li>"MRO Spaceflight Computer Side Swap Anomalies," NASA Lesson Learned No. 2041, NASA Engineering Network, December 16, 2008. <small>http://www.nasa.gov/offices/oce/llis/imported_content/lesson_2041.html</small>
+<br><br/></li><li>"MRO Articulation Keep-Out Zone Anomaly,"NASA Lesson Learned No. 2044, NASA Engineering Network, April 7, 2009.  <small>http://www.nasa.gov/offices/oce/llis/imported_content/lesson_2044.html</small>
+<br><br/></li><li>"Final Report: NASA Study on Flight Software Complexity," NASA Office of Chief Engineer, March 5, 2009
+<br><br/></li><li>"NASA Systems Engineering Handbook," NASA SP-2007-6105, December 31, 2007.
+<br><br/></li><li>"Improving Fault Management for Spaceflight Missions," NASA Lesson Learned No. 2049, NASA Engineering Network, April 21, 2009.  <small>http://www.nasa.gov/offices/oce/llis/imported_content/lesson_2049.html</small>
+</li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol><li>Engineers and scientists often don't realize the downstream complexity (and cost) that result from their local decisions. Overly stringent requirements and simplistic hardware interfaces can complicate software; FSW descope decisions and ill-conceived autonomy can complicate operations; and inattention to testability can complicate verification efforts.
+<br><br/></li><li>Unsubstantiated requirements have caused unnecessary FSW complexity where the requirement was either unnecessary or overly stringent. Rationale statements have often been omitted or misused in spite of a best practice that calls for a rationale for every requirement. Reference (4) places great emphasis on the need to provide rationales.
+<br><br/></li><li>Although overall complexity can be reduced through engineering trade studies involving multiple stakeholders (e.g., flight, ground, hardware, software, testing, operations), Reference (3) found that trade studies were often omitted or performed superficially. 
+<br><br/></li><li>Good software architecture is the most important defense against incidental complexity in software designs, but good architecting skills are not common. 
+<br><br/></li><li>A decision is often made not to implement a FSW function, or not to fix a FSW defect, principally because an operational workaround is feasible. This practice transfers complexity from FSW to mission operations where it is a continuing cost rather than a one-time cost and where it increases the risk of an operational error. 
+<br><br/></li><li>Fault management (aka fault protection) software is among the most difficult FSW to specify, design, and test. Other fault management problems (Reference (5)) include inconsistent fault management terminology used by NASA centers and their contractors, mismatches between mission requirements and the fault management approach, and lack of attention to fault management in university curricula.
+<br><br/></li><li>Commercial off-the-shelf (COTS) software can provide valuable functionality, but it often comes with unneeded features that interact with other features and complicate testing. 
+<br><br/></li><li>Because software development can generate at least 1 defect per 10,000 LOC, FSW with 1 million LOC will have 100 defects, some of which will likely manifest during mission operations.  Mature software may contain latent defects that may manifest in new applications.
+</li></ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol><li>Furnish appropriate educational materials, such as a &quot;complexity primer,&quot; and submit lessons learned on FSW complexity to the NASA Lesson Learned Information System (LLIS).
+<br><br/></li><li>Where well-substantiated requirements are exceedingly difficult to implement in software, software managers should proactively inform the project of the impact. In some cases this might stimulate new discussion to relax hard-to-achieve requirements.
+<br><br/></li><li>Project managers should promote the value of multi-disciplinary trade studies in reducing downstream complexity, and project engineers should raise complexity concerns as they become apparent.
+<br><br/></li><li>Allocate a larger percentage of project funds to up-front architectural analysis in order to achieve project cost savings. Increase the number and authority of software architects. Create a professional architecture review board to provide constructive early feedback to projects.
+<br><br/></li><li>Involve mission operators in flight/ground trade studies and in decisions to descope FSW. Quantify the costs and risks of operational workarounds before reassigning a FSW function or fix to mission operations. 
+<br><br/></li><li>Develop a NASA Fault Management Handbook to provide guidance in fault management requirements specification, design, and test. Schedule fault management reviews in proposals and project plans. Sponsor or facilitate the inclusion of fault management courses within university engineering programs.
+<br><br/></li><li>Analyze a candidate COTS product for the ability to separate its components and features, and weigh the cost of testing unwanted features against the cost of in-house development.
+<br><br/></li><li>To cope with the inevitable defects in new or revised FSW, conduct randomized testing to avoid bias toward specific sources of error, extend fault protection to cover software faults as well as hardware faults, and employ fault containment techniques to mitigate the likelihood that residual defects will combine to produce complex error scenarios. 
+</li></ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.4.3 ("Engineering Practices: System Engineering") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br/><br/>
+
+In addition, JPL has referenced it supporting Paragraph 4.11 ("Flight System Design: Flight Software System Design") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-8719.13a, Software Safety
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

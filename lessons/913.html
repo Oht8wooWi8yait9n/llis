@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0913: Space Mechanisms Reliability (2000)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0913: Space Mechanisms Reliability (2000)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0913 (Database ID: 913)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-08-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/913" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Studies of NASA robotic spacecraft by JPL reliability engineers have shown that mechanism failures are more likely to have a significant impact on mission success than the majority of electronic failures. Spaceflight mechanisms are usually unique designs that lack the years of testing and usage common to electrical devices. They also generally cannot be designed with the same level of block or functional redundancy, or graceful degradation, common with electronic circuit design. Mechanisms, such as deployables, intended for use after a prolonged or severe exposure to space environments provide a special challenge to designers.</p>
+
+    <center>
+      <IMG  WIDTH="350"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009412main_0913-1.jpg"  HEIGHT="232"  BORDER="0" /><A HREF="/llis_lib/txt/1009885main_0913-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>60-meter SRTM mast is an example of increasingly large and mechanically complex space mechanisms. Two resources are available to assist in the design and qualification of flight mechanisms:</p>
+
+    <ol>
+      <li>A NASA Space Mechanisms Lessons Learned Study (Reference 1) identifies common mechanical failure modes and suggests preventive measures. The study, which employed an industry survey and a literature search, covers three major categories of mechanisms-- deployable appendages, rotating systems (gears, motors, bearings, reaction wheels, etc.), and oscillating systems (i.e., gimbal bearings).</li>
+
+      <li>JPL has prepared a Checklist for Reliable Mechanism Usage. This checklist is provided in the Recommendations. Reference 2 also provides a link to the latest version of this checklist. It provides a list of key measures that can be taken to avoid design and test oversights. Some of these items may appear obvious to the experienced mechanical engineer, but may be overlooked under deadline pressure. The Space Mechanisms Lessons Learned Study is used by JPL as a primary design reference, and the Checklist has recently been used to identify high probability/major impact failure modes subject to risk management.</li>
+    </ol>
+
+    <p>Reference(s):</p>
+
+    <ol>
+      <li>Space Mechanisms Lessons Learned Study, NASA Technical Memorandum 107046, Mechanical Technology Inc., November 1994, at http://www-rel.jpl.nasa.gov/reltec/mechpart/mti95tr4.pdf</li>
+
+      <li>Checklist for Reliable Mechanism Usage, James Newell, Jet Propulsion Laboratory, May 2000, at http://www-rel.jpl.nasa.gov/reltec/mechpart/ mechlist.htm</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Overall reliability, ease of fabrication, testability, maintainability, and robustness of mechanical designs can all be enhanced by early and continuous application of the following checklist.</p>
+
+    <p>Parts, Materials &amp; Processes</p>
+
+    <ul>
+      <li>Electronics Parts per MIL-STD-1547</li>
+
+      <li>Low outgassing materials per NASA JSC SP-R-0022</li>
+
+      <li>Limit use of hygroscopic materials</li>
+
+      <li>Galvanic corrosion control per MIL-STD-889</li>
+
+      <li>Stress corrosion cracking control per MIL-STD-1568</li>
+
+      <li>Limit use of magnetic materials</li>
+
+      <li>Insulating materials resistivity less than 10 Mohm-meters</li>
+
+      <li>Honeycomb panels properly vented</li>
+
+      <li>Anti corrosion coatings per MIL-F-7179 Deployables</li>
+
+      <li>Self supporting in 1 g</li>
+
+      <li>Power sufficient for deployment in 1 g</li>
+
+      <li>Redundancy for deployment mechanism</li>
+
+      <li>Redundancy for release mechanism</li>
+
+      <li>Stress analysis complete</li>
+
+      <li>Fatigue analysis complete</li>
+
+      <li>Sliding surfaces lubricated to prevent galling or seizure</li>
+
+      <li>Sliding surface contact pressure analyzed</li>
+
+      <li>Pin pullers acting in double shear</li>
+
+      <li>Pin puller misalignment loads checked</li>
+
+      <li>Pin puller retraction force margin &gt; 100%</li>
+
+      <li>Pin puller stroke tolerance analysis conducted</li>
+
+      <li>Pin puller retraction &gt; 2 mm beyond release point</li>
+
+      <li>Pyro cartridge devices per DOD-E-83578 Bearings</li>
+
+      <li>Self aligning bearing used for deployables, hinges and linkages</li>
+
+      <li>Bearings not used as electrical paths</li>
+
+      <li>Ferrous materials corrosion resistant</li>
+
+      <li>Ball bearing tolerances per ABEC 7, 7P or 7T</li>
+
+      <li>CRES bearings per MIL-B-81793</li>
+
+      <li>Environmental loading analysis complete</li>
+
+      <li>Preload checked under alignment, fit, tolerance, thermal and load induced distortions</li>
+
+      <li>Fatigue analysis complete</li>
+
+      <li>Hertzian contact stress &lt; 335 ksi</li>
+
+      <li>Runout tolerances checked on shafts and housings Lubricants</li>
+
+      <li>Coefficient of friction measured</li>
+
+      <li>Property changes in vacuum understood</li>
+
+      <li>Checked for depletion and wear-out</li>
+
+      <li>Operating temperatures checked</li>
+
+      <li>Viscosity vs. temperature understood</li>
+
+      <li>Outgassing properties known</li>
+
+      <li>Provides corrosion protection</li>
+
+      <li>Cleanliness controlled</li>
+
+      <li>Run-in requirements checked</li>
+
+      <li>Okay in humidity and salt spray environments</li>
+
+      <li>Material compatibility understood</li>
+
+      <li>Dry lubricants sputtered, plated or vacuum deposited</li>
+
+      <li>Humidity controlled for MoS2</li>
+
+      <li>Hard coatings applied by ion implantation or CVD</li>
+
+      <li>Hydraulic fluids per MIL-H-6083 or MIL-H-5605 Brush and Slip Ring Assemblies</li>
+
+      <li>Carbon brushes avoided</li>
+
+      <li>Contact forces checked</li>
+
+      <li>Wear rate of brushes and rings understood</li>
+
+      <li>Outgassing properties understood</li>
+
+      <li>Sealing provisions okay</li>
+
+      <li>Wear debris controlled or contained</li>
+
+      <li>Lubrication applied</li>
+
+      <li>Ring/brush corrosion prevented</li>
+
+      <li>Lubricant depletion checked under environmental loading Electrical and Electronic</li>
+
+      <li>Wiring routed to avoid moving interfaces</li>
+
+      <li>Metal mechanism components well grounded to avoid charge build up</li>
+
+      <li>Power draw checked under min, max and nominal source conditions Electric Motors</li>
+
+      <li>A/C motors per MIL-M-13787</li>
+
+      <li>DC motors per MIL-M-8609 or MIL-M-13786</li>
+
+      <li>Adequate position and rate feedback for closed loop control</li>
+
+      <li>Motors characterized for: rotor inertia, friction, damping, speed vs. torque, temperature effects, backdrive torque and margin</li>
+
+      <li>Stepper motors - check detent torque and margin Springs</li>
+
+      <li>Helical springs per MIL-S-13572 and MIL-STD-29</li>
+
+      <li>Fatigue life checked</li>
+
+      <li>Temperature effects checked</li>
+
+      <li>Redundant springs used where possible</li>
+
+      <li>Dry film lubricant used (sans carbon) when low friction needed Dampers</li>
+
+      <li>Viscous dampers per MIL-STD-1246</li>
+
+      <li>Clean fluid fill for viscous dampers (filter fluid and fill in vacuum)</li>
+
+      <li>Seals tested to ensure no leakage Gears</li>
+
+      <li>Manufactured per American Gear Manufacturers Assn (AGMA)</li>
+
+      <li>Proper materials, surface hardness, and lubrication assured</li>
+
+      <li>Proper load distribution (eg no edge or non-uniform tooth face loads during operation)</li>
+
+      <li>No tooth pitting, brinelling and bending stresses under operating loads</li>
+
+      <li>Impact tooth loads understood and checked</li>
+
+      <li>Service life and duty cycle analyzed Fasteners</li>
+
+      <li>Fastening systems per MIL-STD-1515</li>
+
+      <li>Threaded parts per MIL-S-8879</li>
+
+      <li>Minimum 5-thread engagement</li>
+
+      <li>No screws smaller than #8</li>
+
+      <li>Fastener loads and stresses adequately checked</li>
+
+      <li>Locking devices used on all fasteners (use pin, safety wire, lock thread or plastic insert; avoid compounds, springs or star type lock washers) Structure</li>
+
+      <li>Load, stress, fatigue and fracture analyses completed</li>
+
+      <li>Material properties from MIL-HDBK-5 and MIL-HDBK-17</li>
+
+      <li>Pressurized components designed per MIL-STD-1522 General</li>
+
+      <li>Launch and operating environments defined; tests and analyses conducted</li>
+
+      <li>Clearances checked over temperature and load conditions</li>
+
+      <li>Failure Mode and Effects Criticality Analysis conducted</li>
+
+      <li>Minimum integrity check: benchtop performance, followed by vibe and thermal</li>
+    </ul>
+
+    <p>Several of the referenced standards have been withdrawn but still represent an excellent source of guidelines.</p>
+
+    <p>Additional Key Words: failure mechanism, mechanical faults, design analysis, design margin, mechanical anomaly, gyros, mechanism design</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>(See "Lessons Learned")</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.2 ("Flight System Design: Mechanical Configuration/Systems Design"), and Paragraph 4.2.3 ("Flight System Design: Mechanical Configuration/Systems Design - Mechanisms"), in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

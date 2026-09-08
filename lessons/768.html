@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0768: Thermal Design Practices for Electronic Assemblies</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0768: Thermal Design Practices for Electronic Assemblies</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0768 (Database ID: 768)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/768" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1226; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Constraining the electronic component junction temperature through proper design practices will ensure that the assemblies can withstand the mission's environmental conditions.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Sound thermal design practices are followed from the conceptual stage through the final design stage. A system for doing thermal design that takes into account the materials, fabrication methods and processes from the conceptual stage will increase the overall design flexibility as well as the reliability. This practice is primarily coupled to the JPL dual shear plate packaging approach. Packaging design reviews should be conducted with technical personnel participating. The results of these packaging reviews should then be summarized in the formal subsystem Preliminary Design Review and Critical Design Review.</p>
+
+    <p>Electronic components that require higher thermal conductance than normal assembly methods can support should be mounted with thermally conductive material. High power dissipation axial lead components can be cooled through a thermal window in the printed wiring board providing a heat path directly to the chassis. Conductive heat sinks are also used to maintain the electronic components within their derated temperature range.</p>
+
+    <p>Selection of the proper high power parts is very important to the success of the mission. Design of the system should avoid using high power analog devices as much as possible. Stud mount or screw mount devices should be used whenever possible. High power TO-type metal can devices should be mounted and bonded top down on the board or chassis using qualified thermal adhesives coupled to an efficient method for removing the excess heat.</p>
+
+    <p>Placement of parts is as important as the selection. Good thermal design for electronic boards should provide the heat flow toward the mounting edge of the module. The end plates are considered as structural support only and not included as part of the thermal path. The path to the metal chassis or thermal control surface should be as short as possible.</p>
+
+    <p>Surfaces and finishes should be selected to provide low resistant thermal paths through interfaces. Spacecraft or instruments used in low earth orbit or in the space shuttle payload bay should have a thermal control finish that is designed to withstand erosion from an atomic-oxygen environment.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>A spacecraft chassis and its electronic subassemblies are designed to meet the environmental conditions encountered by the given mission. Thermal analyses of heat dissipation, junction temperature control, and the elimination of hot spots during the design phase should be provided to ensure proper thermal design. Special emphasis is placed on reducing the junction temperatures of all semiconductors to safe levels throughout the mission.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Part Junction Temperature, Reliability Preferred Practice No. PD-ED-1204</li>
+
+      <li>Thermal Test Levels/Durations, Reliability Preferred Practice No. PT-TE-1404</li>
+
+      <li>Thermographic Mapping of PC Boards, Reliability Preferred Practice No. PT-TE-1403</li>
+
+      <li>Thermal Analysis of Electronic Assemblies to the Piece Part Level, Reliability Preferred Practice No. PD-AP-1306</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Designs that do not follow proper thermal design practices are subject to failure and loss of the mission or science data.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Insure that thermal design practices for electronic assemblies will meet the requirements of the combined ground and flight environmental conditions defined by the spacecraft mission. Special emphasis should be placed on limiting the junction temperature of all active components. Proper thermal design practices take into consideration the need for ease of operation and repairability to enhance overall system reliability. The environmental conditions that the spacecraft encounters, both on the ground and in flight, are designed to include adequate margin. The use of proper thermal design practices ensures that the assemblies will survive the expected environmental conditions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Magellan, Galileo.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

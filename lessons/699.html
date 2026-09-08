@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0699: Structural Analysis in the Design of Optical Mirrors</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0699: Structural Analysis in the Design of Optical Mirrors</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0699 (Database ID: 699)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/699" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline number GD-AP-2305 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The use of detailed structural analyses throughout the design/development process of a mirror, either stand-alone or as part of a concurrent engineering structural-thermal-optical performance (STOP) analysis, will result in a minimum weight mirror design which is able to meet all of its performance criteria and enhance the reliability of the overall optical system.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A detailed structural analysis of an optical mirror and its mounting performed throughout the design/development cycle is crucial to developing a design which will meet all mirror requirements. The first step in being able to predict reliable mirror performance characteristics is in the development of an accurate detailed finite element model (FEM). This involves not only developing a model using good modeling techniques, but also ensuring mathematical validity of the model. Next, the required analyses must be identified. Besides having to meet optical requirements under effects such as deformations due to thermal profiles and 1-G release, the design will have to exhibit adequate strength capability due to loads from launch and possibly thermal induced growth. Also, desired design features such as coating thicknesses can be derived from early analyses.</p>
+
+    <p>Because of the extremely small deformations involved in mirror distortion analyses, the validity of the use of finite element models has been suspect. As long as the disturbance sources (typically temperatures) are large enough to develop forces large enough to be out of the numerical noise of the computer, the resulting results should be linear and valid from a numerical standpoint.</p>
+
+    <p><u><i>Finite Element Modeling Techniques</i></u></p>
+
+    <p><IMG  VSPACE="10"  WIDTH="300"  ALT="refer to [D] description"  TITLE="refer to [D] description"  HSPACE="10"  SRC="/llis_lib/images/1009089main_0699-1.jpg"  HEIGHT="202"  ALIGN="right"  BORDER="0" /><A HREF="/llis_lib/txt/1009571main_0699-1.txt"  >[D]</A></p>
+
+    <p>Because extremely small deformations can significantly degrade mirror performance (on the order of micro-inches), the use of good modeling techniques is essential. A typical lightweight mirror design is based on a rib-stiffened facesheet. This structure may be either closed on the back with a back facesheet or left open. In either case, plate elements are typically used for the facesheet and ribs, and the back close-out if appropriate. An example of an open back lightweight mirror is shown in Figure 1. A minimum of three nodes of resolution through the thickness of the structure is often desired. This level of detail will allow a 2nd order variation in temperature through the thickness of the mirror to be applied in subsequent analyses. The minimum facesheet nodal resolution may be dictated by the rib mesh necessary to maintain good aspect ratios in the rib elements. Beyond this level of detail, it is many times of interest to include at least one grid on the facesheet interior
+    to a given cell (i.e., not a part of any rib structure). This will allow the facesheet deformations typical of quilting to be portrayed. Plated facesheets are commonly represented as composites using composite property behavior. In addition, the supporting rib structure may also be represented as a composite material if it is also plated. By doing this, deformations due to the coefficient of thermal expansion (CTE) difference between the base material and the plating when undergoing bulk temperature changes will be able to be portrayed (many times a very significant factor).</p>
+
+    <p>Because of the relatively large uncertainty in the disturbance sources and the material property characteristics relative to the deformation magnitudes being calculated, many times it is more desirable to do the analyses on a parametric basis where sensitivities of the deformations to various parameters may be more significant than the absolute answers themselves. By identifying the most sensitive parameters, mirror design trades can be made on a relative basis for a given environmental condition. Also, an already selected mirror design may either be modified, or the fabrication process closely monitored to minimize the effect of these parameters instead of having to rely on the absolute correctness of the optical degradation. For example if the interface flatness of a mirror is found to be an unusually critical design factor, this finding alone may be enough to cause the design details to be modified or to trade off different mirror designs in an attempt to minimize this
+    effect.</p>
+
+    <p><u><i>Finite Element Model Validation</i></u></p>
+
+    <p>Again, because of the typically small deformations of interest in mirror distortion analyses, the importance of performing a complete mathematical validity check of the FEM cannot be overemphasized. To ensure proper mathematical FEM behavior, following are some of the model checks which should be performed:</p>
+
+    <ol>
+      <li>Line-by-line check of input data decks to ensure input accuracy.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Static run with fixed boundary conditions and 1-G loads applied separately in each axis, reviewing resultant displacements, forces, and stresses for reasonableness, symmetry, etc.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Free-free modal run to calculate rigid body modes. These modes should be two orders of magnitude less than the first flexible mode, generally less than .001 Hz to ensure that there is no inadvertent grounding of the structure. Equilibrium checks of the model which are calculated by multiplying the free-free stiffness matrix by the geometrically derived rigid body modes. Nodes at which the structure is grounded should be displayed in a tabular form.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>A thermal equilibrium check in which a bulk temperature change is imposed on a kinematically constrained model which has all thermal expansion coefficients set equal to a common value. Negligible element forces should be generated with the model exhibiting free expansion with relative deformation values between points equal to CTE x L x DT where CTE is the coefficient of thermal expansion of the mirror material, L is the distance between the points, and DT is the temperature difference from reference being imposed. RMS and peak-to-valley mirror surface deformations calculated should be equal to theoretical values. The difference being the "noise" level inherent in all subsequent analyses (analysis predictions can only be made to levels approaching this level).</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>A bulk temperature check with all CTE values set to their correct values. The resulting structure should deform in a predictable way (i.e., concave or convex) depending on material mismatches and platings present.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Inspection of all FEM software messages and warnings which might indicate among other things, improperly shaped elements, ill-conditioning, mechanisms, etc. Comments relative to automatically imposed constraints in particular must be verified to be appropriate.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Mass properties should be compared to approximate hand calculations during the early stages of design and to the actual value if the mirror has been fabricated.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Correlation with actual mirror fundamental mode shapes and frequencies if data exists.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>A duplicate analysis run should be made with the input disturbance (typically temperatures) doubled. Results should also double indicating that the actual solution is not operating in the numerical noise of the computer.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u><i>Data Reduction and Reporting</i></u></p>
+
+    <p>Optical distortions are typically reported as a wavefront error in units of waves where one wave is equal to the shortest wavelength of interest. The performance of an optical system is frequently given in terms of cumulative RMS wavefront error at the focal plane. Errors in the wavefront are twice the mirror surface deformations. Typically these values are specified in both RMS and peak-to-valley relationships. Initial structural analyses may only report the mechanical distortions of the mirror surface in these terms for a quick assessment of optical performance. Later analyses, however, should not only report these mechanical deformations, but should be evaluated in terms of the Zernike coefficients. These coefficients are typically calculated as part of an optical analysis and provide a mathematical means of describing the mirror surface.</p>
+
+    <p>When analyzing an existing mirror design for distortion, it may be desired to include the effect of the actual mirror surface figure errors as polished. Because these surface figure errors are small and will not alter the mechanical behavior of the mirror FEM if included in the undeformed geometry data, their effect should be added to the deformations resulting from a structural distortion analysis.</p>
+
+    <p><u><i>Initial Design Activity</i></u></p>
+
+    <p>During the initial phase of a lightweight mirror design, the first design parameters that must be specified are the rib thicknesses, rib spacing, and facesheet thickness. The minimum facesheet thickness required for a given rib spacing (described by the diameter of an inscribed circle in a single cell pocket) is determined by deciding on an acceptable level of optical distortion at ambient conditions due to quilting &#151; the phenomenon whereby the facesheet material is pushed away from the polishing tool as opposed to being polished away. As a result, once the tool passes a given cell, the center of the facesheet in that cell will tend to spring back close to its original position. Because of the higher stiffness of the facesheet along the ribs, this motion does not occur and relatively larger amount of facesheet material is removed along the ribs. As a result, when finished, the facesheet is higher at the center of each cell pocket as opposed to along the rib paths and the
+    mirror surface appears to be "quilted" when tested optically. Once an acceptable level of quilting is determined (many times as low as 1/80th of a wave), the facesheet thickness is fixed for a given rib spacing and assumed mechanical polishing pressure. It should be noted that for certain optical figuring techniques, e.g. ion beam figuring, there is no mechanical pressure applied to the mirror surface and therefor no resulting quilting. During this initial design phase, mirror optical performance is typically tracked primarily mechanically in terms of RMS and peak-to-valley deformations of the mirror surface. Because thermal conditions are not typically known to a detailed level, optical degradation is calculated for general thermal conditions such as uniform bulk temperature changes, linear gradients in each axis, and a radial gradient from the center of the mirror to its edges. These initial studies are not only necessary for preliminary optical performance assessment, but give
+    an early insight into sensitivities to certain thermal conditions which can possibly impact the thermal design. Also, simultaneously during this phase, various means of supporting the mirror are investigated. At this time preferred support points and methods are selected based not only on thermal growth requirements, but on stress requirements due to launch loads.</p>
+
+    <p><u><i>Detailed Design Activity</i></u></p>
+
+    <p>The anticipated thermal environment has been defined prior to detailed design and can be incorporated into the structural model for on-orbit thermal distortion optical degradation calculations. Depending on the thermal model employed and where temperature data is calculated, different methods of mapping these temperatures onto the structural model are employed.</p>
+
+    <center>
+      <table>
+        <tr>
+          <td><IMG  WIDTH="300"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009090main_0699-2.jpg"  HEIGHT="332"  BORDER="0" /><A HREF="/llis_lib/txt/1009572main_0699-2.txt"  >[D]</A></td>
+
+          <td><IMG  WIDTH="300"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009091main_0699-3.jpg"  HEIGHT="332"  BORDER="0" /><A HREF="/llis_lib/txt/1009573main_0699-3.txt"  >[D]</A></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>A common method is to rely on a thermal model developed similar to the structural model, ie. thermal nodes corresponding to individual rib elements and the facesheet. Temperatures at thermal nodes then will have a physical point on the structural model at which this temperature can be specified. By doing this for all thermal node points, which is typically a much smaller set of points than the structural grids, a thermal analysis is performed on the structural model to determine temperatures at all remaining structural grid points. A potential problem exists with this technique, however, due to the fact that unspecified structural temperatures are interpolated from surrounding temperatures in an iterative fashion until thermal equilibrium is achieved (relaxation technique). Figures 2 and 3 illustrate this potential problem by showing vastly different thermal equilibrium temperature distributions resulting from attempting to specify a 1. to 10. degree linear gradient in a plate
+    two different ways. Figure 2 shows the resulting equilibrium temperature distribution when the temperatures are specified only at the four corners. Figure 3 shows the temperature distribution when the same gradient is applied by specifying a fixed temperature along both edges of constant temperature. The structural distortions which would result from the imposition of these two thermal environments would be vastly different. Therefore it is advised that the structural analyst work closely with the thermal analyst to determine if additional temperature constraints need to be imposed upon the set of discrete temperatures specified at distinct thermal nodes obtained from the thermal analysis.</p>
+
+    <p>Another technique used to map thermal analysis temperature results onto a structural model is based on developing a thermal model consisting of homogeneous bricks for the rib structure with the thermal behavior of these bricks modified to account for discreet rib behavior. Temperatures at individual structural grids can then be calculated by a using a simple three dimensional interpolation of the surrounding thermal nodes.</p>
+
+    <p>A third technique which eliminates all thermal mapping errors is for the thermal structural analysts to use the same model. A potential problem with this method, however, is the long computation time necessary for full orbital temperature calculations.</p>
+
+    <p>Mechanical surface deformations at this time are then input to an optical analysis for an assessment of the optical quality of the surface. These deformations can be directly input into certain optical analysis software packages (CODE-V for example) or by calculating Zernike polynomials for the deformed surface which can then be used for further optical analysis.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The use of finite element analyses to predict structural deformations due to loads (both mechanical and thermal) is a widely understood and used practice that is readily available. With a relatively minor effort, the major sources of distortion in a mirror can be identified and minimized.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Valenta, Tina M. and Vukobratovich Daniel, "A Comparison of the Merits of Open-Back, Symmetric Sandwich, and Contoured Back Mirrors as Light-Weighted Optics," SPIE - the International Society for Optical Engineering, Vol. 1167, 1989.</li>
+
+      <li>Yoder, Paul R., "Opto-Mechanical Systems Design," Marcel Dekker, Inc., New York, 1986.</li>
+
+      <li>Mehta, Pravin K., "Flexural Rigidity Characteristics of Lightweighted Mirrors," SPIE - the International Society for Optical Engineering, Vol. 748, 1987.</li>
+
+      <li>Cho, Myung K., Richard, Ralph M., and Hileman, Edward A., "A Comparison of Performance of Lightweight Mirrors," SPIE - the International Society for Optical Engineering, Vol. 1340, 1990.</li>
+
+      <li>Pepi, John W., "Analytical Predictions for Lightweight Optics in a Gravitational and Thermal Environment," SPIE - the International Society for Optical Engineering, Vol 748, 1987.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not using a detailed structural analysis of a mirror/mount design can lead to a design which in the worst case will not meet its optical performance objectives. Even if optical performance objectives are met, the design may be overly conservative in certain aspects resulting in a design that is overweight, more complex, and more expensive than necessary, For example, an interface flatness may be over specified in the design when in reality it may not be a major source of overall mirror distortion, thereby greatly increasing manufacturing cost.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The use of structural analysis as part of a concurrent engineering effort including thermal and optical analysis in the design of optical mirrors and assessment of their optical performance to assure reliable optical and structural performance. Early in the design process, structural analysis can assist in determining allowable thermal conditions, evaluate various mounting concepts, and provide initial optical performance for assumed thermal environments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

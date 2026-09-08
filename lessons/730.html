@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0730: Sine-Burst Load Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0730: Sine-Burst Load Test</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0730 (Database ID: 730)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/730" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PT-TE-1420 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>The sine-burst test is a simple method to apply a quasi-static load using a vibration shaker and shock testing software. Depending on the complexity of the test item, it often can be used in lieu of , and is more economical than, acceleration (centrifuge) or static tests. For components and subsystems, the fixture used for vibration testing often can also be used for sine-burst strength testing. For this reason, strength qualification and random vibration qualification can often be performed during the same test session which saves time and money.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The process involves subjecting each orthogonal axis of the test item to five-to ten cycles of a sine wave whose peak is equivalent to the qualification load level. The qualification load root-sum-squaring (RSSing) the limit loads that cause the most significant stress to the critical elements in the test item and multiplying this value by a qualification margin of 1.25 (Reference 1) . If the item can be placed in a combined axis fixture that orientates the test item in a manner that allows application of the correct combined qualification load vector, only one test has to be conducted. This option often prevents any overtesting of elements in the test item.</p>
+
+    <p>Since the test is intended to impart a quasi-static load to the test item, the test frequency must be below the fundamental resonant frequency of the test item. As a general guideline, the test frequency should be less than one-third the test item resonant frequency to avoid dynamic amplification during the test. This is a strongly recommended guideline. In some cases, it is allowable to use a sinal-burst closer to the test items fundamental frequency if it solves a test procedure problem. Such a case would be where the qualification load input can not be theoretically applied due to constraints of the equipment such as exceeding shaker stroke. Using a sine-burst whose frequency is closer to the first primary resonant frequency, thus taking advantage of the first modes dynamic amplification factor, will result in achieving the correct loading. If test item/fixture weight rather than stroke is the limiting constraint, it is possible to achieve the desired level by overdriving
+    the shaker current. The short duration of the test will allow this overdrive of shaker current.</p>
+
+    <p>After the test level and fixturing method is determined, a sine-burst open loop program must be built to drive the vibration table. The practice at GSFC has been to synthesize the waveform using a short program, written in Time Series Language, a general purpose application program from GenRad. The resulting waveform is then transferred to the shaker control program, "Transient Waveform Control", which runs on a GenRad 2514 Vibration Control System.</p>
+
+    <p>The actual test is conducted in a stepwise manner applying a number of lower level sine-bursts that are fractions of the full load. For example 1/8,1/4, and then 1/2 of full level. This assures the test conductor that the test item/fixture/shaker table is reacting in a linear manner. If it is not the waveform can be modified by outputting only a percentage of the programmed level, i.e., 90%. After these preliminary runs with corrections are made then the full load is applied to the item under test.</p>
+
+    <p>The figure shown below is a typical sine-burst waveform. The waveform is sinusoidal with a ramp up to maximum level, several cycles at maximum level, and then ramp down to zero. The number of cycles at maximum level is usually 5 to 10 cycles. The sine-burst test is performed with the same fixturing used for sine and random vibration.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009186main_0730-1.jpg"  HEIGHT="339"  BORDER="0" /><A HREF="/llis_lib/txt/1009665main_0730-1.txt"  >[D]</A>
+    </center>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The sine-burst test was developed at GSFC to satisfy requirements for strength qualifying structures to quasi-static load specifications. The primary objective of the sine-burst test is to apply the specified acceleration to the test item in a uniform manner. A secondary objective is to minimize potential fatigue damage to the test item. At GSFC the test item can be a flight unit undergoing Protoflight qualification . Protoflight hardware is flight hardware that is flown after qualification testing. Since the applied loads in this test are significant, it is important that the total number of cycles of peak strain be minimized. The test frequency must be sufficiently below any resonant frequencies of the test item. This requirement will preclude sine-burst testing of large structures, which usually have lower resonant frequencies. The sine-burst test has been shown to be a cost effective alternative to either static loads or to centrifuge testing.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>General Environmental Verification Specification for STS and ELV Payloads, Subsystems, and Components, GEVS-SE, January 1990, GSFC</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If sine-burst testing is not performed, structural load requirements should be satisfied by a static, sine sweep/dwell, or centrifuge load test or by conservative analysis.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The sine-burst test is used to apply a quasi-static load to a test item in order to strength qualify the item and its design for flight.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Sampex Spacecraft, COBE instruments and electronic boxes, and ISTP instruments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

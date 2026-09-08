@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #7217: Program Management of ISERV Design, Development, and Qualification Class D Hardware Integration</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #7217: Program Management of ISERV Design, Development, and Qualification Class D Hardware Integration</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #7217 (Database ID: 7217)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-03-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Evaluation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Manufacturing and Assembly, Configuration Management, Flight Equipment, Flight Operations, Hardware, Independent Verification and Validation, Parts Materials and Processes, Payloads, Program and Project Management, Risk Management / Assessment, Test and Verification, Power, Spacecraft and Spacecraft Instruments, Logistics and maintenance, Configuration control and data management, Requirements critical to costing and cost credibility, Review boards, Acquisition / procurement strategy and planning, Communications between different offices and contractor personnel, Configuration and data management, Contractor relationships, Cross Agency coordination, Program planning / development and management, Configuration Change Control, Early requirements and standards definition, Product Assurance, Quality, Reliability, Level II/III requirements definition, Mission and systems trade studies, Mission definition and planning, Planning of requirements verification processes, Systems analysis - cost analysis</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/7217" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The ISERV payload was developed to provide data and images for the SERVIR team through a downlink from the ISS. Health and status information of the ISERV system was required through the downlink also. The ISERV payload has the capability for issuing commands at predetermined times and accepts file transfers from the WORF. Specific events and obstacles encountered during the design and development of the payload provide the basis of the lessons learned. They are:</p> 
+<ol> 
+ <li> There were insufficient foundational documents for the ISERV payload due to cost and schedule constraints.  </li> 
+ <li> The introduction of COTS components and systems into projects challenged the traditional MSFC approach to designing, developing and testing flight hardware. Standard operating procedures have evolved to meet Class A and B projects. The likelihood of more COTS-based or COTS-involved flight programs (Class D) being worked by MSFC Engineering is increasing and this new reality must be integrated into our defined ways of doing work.</li> 
+ <li> The procedures and tools are not the same for JSC and MSFC Export Control Offices. Inputs into the Relational Database Management System (RDBMS) were required for payloads to be launched on HTV-3. The inputs were very specific and complicated. MSFC does not use this database at this time. The person coordinating this was not experienced with this process, but was able to get help from a Boeing person at JSC to walk her through. Added complications were that the manifest and Launch / Return / On-orbit Data  Set (LRODS) were still being finalized when Export Control evaluation was needed, due to the shortened schedule and serial development of these products. The team was also dealing with holiday leave during December and early January, which limited the availability of personnel needed for review and approval. An MSFC Export Control Representative could not approve the inputs, so the team had to rely on the JSC Export Control Representative to approve the inputs. He didn’t understand why the approval request was coming to him, which further complicated the situation. The MSFC Export Control Representatives were instrumental in working with the JSC Export Control Representatives to resolve the difficulties and get the process moving in the right direction to closure.</li> 
+ <li> As the project was formulating, the MSFC ISS Payloads Office had little time to review and comment on the presentation to HQ and all the affected Engineering organizations were not consulted with in preparation for the HQ presentation. Areas where the presentations needed better coordination included:</li> 
+</ol> 
+<p style="margin-left: 1in;"> a.      Adequate funding allocations for manpower, materials, and testing</p> 
+<p style="margin-left:1.0in;"> b.      Better scope of the job to be done</p> 
+<p style="margin-left:1.0in;"> c.      “Reasonableness” of the quote</p> 
+<p> 5. Since the ISS Payload Office project and engineering teams were not included in the preliminary discussions with HQ on the proposal, the team had little knowledge of the system being proposed. In fact, due to space limitations in WORF (which is where the camera/telescope was to reside), the hardware selection had to be changed before the team was given approval to proceed. We had to do the best with what we were given. Initial size estimates were way off of the final system.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> Foundational documents, critical for the initial planning and subsequent control of project activities, should be developed and widely distributed, published and advertised to the team early in the process. For projects limited in manpower and financial resources, these foundational documents will be equally limited in their complexity, but they should exist from the beginning of the project to provide guidance to the entire team.</li> 
+ <li> A clear flight certification process is needed for COTS hardware.  Qualification requirements for all disciplines need to be clearly and explicitly stated up front.</li> 
+ <li> The approval process for changes can burden the flow of work with unnecessary steps if it is not tailored to the size, scope, and complexity of the project. Approval process for changes should be agreed to at the beginning of the project in line with configuration management for the size and scope of the project.</li> 
+ <li> Wise use of analyses and evaluation of interfaces at all stages of the life cycle can save time and resource expenditures during build, test, and milestone reviews.</li> 
+ <li> During any design, development, integration and test project that has a compressed schedule, it is essential for the team to communicate to avoid having the hardware wait for the next step in the process.</li> 
+ <li> Coordination is needed between MSFC and JSC Export Control offices. Seek out local (MSFC) help with database inputs before going to JSC for help. A payload with a normal schedule, would not have the issues with parts lists, Interface Control Document (ICD), manifest requests, and LRODS that we had on ISERV. Parallel development of the products is very difficult and fraught with potential mistakes. Check internally to see if another project, such as Microgravity Science Glovebox  (MSG), might have experience with the system/database.</li> 
+ <li> Using COTS equipment, while faster to procure, requires extra testing and communication to ensure it meets standards, which must be factored into the schedule. To meet implied requirements, minimum NASA standards must be met, which implies additional quality engineering support, specific test requirements, and part traceability. 
+  <ol style="list-style-type:lower-alpha;"> 
+   <li> It is a good idea to get S&MA involved up front, even if only to understand the qualification requirements that may be encountered when the hardware needs to be integrated into the higher class system.</li> 
+   <li> If too many assumptions about the plug-and-play nature of the equipment and supporting hardware are made up front, the team will spend more hours reiterating design and testing activities.</li> 
+   <li> Assuming that COTS is faster and cheaper without understanding the implied requirements unnecessarily increases the risk of not meeting schedule, budget, and delivery agreements.</li> 
+  </ol> </li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Provide the basic foundational documentation at the onset of the project. Some items that should be included are: - A simple Concept of Operations description, even in pictorial form. Reference to this ConOps will allow for the team to stay on the same page and make good decisions when issues arise. - A schedule, readily accessible to the entire team, updated twice a week during high-volume work periods such as testing. Schedule Developer will be best able to perform this by integrating into the team and following the work. This will relieve the rest of the team from the burden of reporting status. - A listing of all identifiable risks and at a minimum a skeleton of a mitigation strategy to be followed in the event that the risk turns into an issue. This will give all team members a basis upon which to make decisions and execute tasks more quickly while staying aligned with the agreed-upon process.</li> 
+ <li> The team should have a schedule and a designated scheduler. The schedule should be updated when information is available and during team meetings.</li> 
+ <li> Flexibility should be built into all plans and procedures, to allow for alternate paths when problems arise. Careful thought should be given to the necessary approval process for changes to agreed-upon plans to ensure that proper authorization is given without burdening the flow of work with unnecessary steps. Existing Organizational Work Instructions (OWI) should be reviewed and modified as appropriate to allow for the required flexibility.</li> 
+ <li> The ISERV team implemented a bi-weekly integration status meeting toward the end to meet pre-ship schedule. The meeting proved to be beneficial and kept the hardware in flow with little to no wait time because the team knew what to expect and when it was to occur. This could have been started a little earlier perhaps.</li> 
+ <li> Seek out local help with database inputs before going to JSC for help. Check internally to see if another project, such as MSG, might have experience with the system/database.</li> 
+ <li> Before management commits to a project like ISERV, there needs to be a thorough assessment of the job performed by Engineering along with the Project Office. The core engineering team that will be responsible for the project needs to be in place and a part of the development of a project proposal.</li> 
+ <li> Explicitly define and agree to the qualification requirements and processes up front, involving all stakeholders in the agreement negotiations at the start of the project. Get the requirements in writing.</li> 
+ <li> Have adequate funding with reserves for the project</li> 
+ <li> Establish a checklist or other guidance to define best practices for developing COTS-inclusive systems at the Center, where to find integrated system requirements, and how to identify risks introduced by using COTS equipment.</li> 
+ <li> Work processes tailored to dealing with configuration, information, and certification of COTS equipment should be put in place to assist projects in anticipating development, testing, and certification challenges.</li> 
+</ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

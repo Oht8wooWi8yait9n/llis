@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0682: Design and Manufacturing Guideline for Aerospace Composites</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0682: Design and Manufacturing Guideline for Aerospace Composites</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0682 (Database ID: 682)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/682" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2205 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Conscientious adherence to proven concurrent engineering principles and careful design and material selection guidelines in the design, manufacture, and testing of aerospace composites will result in low rejection rates and high product integrity. Successful composite designs can provide design flexibility, lightweight parts, ease of fabrication and installation (generally fewer parts), corrosion resistance, impact resistance, high fatigue strength (compared to metal structures with the same dimensions), and product simplicity when compared to conventional fabricated metal structures.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><u>Introduction:</u></p>
+
+    <p>Composites are combinations of two or more distinct materials present as separate phases and combined to form desired structures. They take advantage of the desirable properties of each component. The manufacturing technique used to fabricate a composite structure is dependent upon material performance requirements, structure configuration, and production rates. The composite design and manufacturing methods discussed in this guideline are primarily for structural and mechanical applications and are composed of a resin (matrix) and a fiber reinforcement. Typical reinforcements are shown on Figure 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009057main_0682.jpg"  HEIGHT="405"  BORDER="0" /><A HREF="/llis_lib/txt/1009542main_0682.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Performance of composite materials in aerospace applications is superior to conventional structural materials such as steel and aluminum. Composite materials and their manufacturing processes can be tailored specifically to given design constraints. The superior physical properties of composites allow for design with minimum concern for dimensional stability, corrosion, and crack formation. While it is possible to tailor the properties of a composite structure to minimize problems in these areas, it is imperative that this be taken into consideration during the design process. Composite materials are significantly superior to conventional materials in strength-to-weight ratio, one of the most important requirements of aerospace structures.</p>
+
+    <p><u>Design:</u></p>
+
+    <p>Concurrent engineering principles (i.e., the team approach to design using designers, thermal and structural analysts, manufacturing engineers, materials process engineers, tool designers, machinists, quality engineers, quality control specialists, and reliability engineers) contribute noticeably to the success of a composite materials program. Designs of composite components which are fault tolerant to known manufacturing conditions and variables should be selected.</p>
+
+    <p>The success of a composite program is dependent upon establishing material properties early in the program. Establishing an accurate and reliable material property data base is one of the most important steps toward achieving a functional design. Experience indicates that the basic material allowables of a specific composite product should be determined utilizing the manufacturing facilities where production will take place prior to finalizing design. The preferred process should approximate the following: (1) define environmental and performance requirements; (2) review available materials against requirements to determine the family of material to be used; (3) determine materials; (4) determine materials allowables using material processed at the intended manufacturer; (5) proceed with design based on known material allowables; (6) test geometric configurations (i.e., special joints, specific contours, special ply layups, etc.); (7) along with nondestructive evaluation (NDE),
+    use destructive evaluation to determine voids, ply dropoff, resin rich areas, etc., during initial manufacturing process development; (8) begin manufacturing production. Typical mechanical and impact damage properties of selected composites are shown in Tables 1 and 2.</p>
+
+    <center>
+      <b>Table 1. Typical Mechanical Properties of Selected Composites</b><br />
+
+      <table border="1" width="90%">
+        <tr>
+          <th>Material Type</th>
+
+          <th>Nomenclature</th>
+
+          <th>Tensile Strength<br />
+          (ksi)</th>
+
+          <th>Modulus (Msi)</th>
+
+          <th>Strain (%)</th>
+        </tr>
+
+        <tr>
+          <td valign="top">Carbon/Epoxy<br />
+          <br />
+          <br />
+          <br />
+          <br />
+          Glass/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic</td>
+
+          <td valign="top">
+            <center>
+              T300/934<br />
+              IM7/8551-7<br />
+              P75/934<br />
+              AS4/3501-6<br />
+              IM6/3501-6<br />
+              E-glass/934<br />
+              K-49/7934<br />
+              IM7/APC-2<br />
+              FM5055
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              245<br />
+              400<br />
+              135<br />
+              100<br />
+              330<br />
+              150-170<br />
+              80-85<br />
+              419<br />
+              15-20
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              20<br />
+              24<br />
+              44<br />
+              10<br />
+              23<br />
+              6-8<br />
+              4<br />
+              24<br />
+              2.6-2.8
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              1.0-1.2<br />
+              1.62<br />
+              0.2-0.5<br />
+              1.0<br />
+              1.5<br />
+              2.75<br />
+              1.85<br />
+              1.6<br />
+              1.0-1.2
+            </center>
+          </td>
+        </tr>
+      </table>
+
+      <table width="90%">
+        <tr>
+          <td>PEEK= Polyetheretherketone<br />
+          Note: All samples were prepared from 16-ply quasi-isotropic layups.</td>
+        </tr>
+      </table>
+      <br />
+      <br />
+      <b>Table 2. Typical Impact Damage Properties of Selected Composites (1), (4)</b><br />
+
+      <table border="1" width="90%">
+        <tr>
+          <th>Nomenclature</th>
+
+          <th>Max Impact Load (lb)</th>
+
+          <th>Energy at Max Load<br />
+          (ft-lb)</th>
+
+          <th>Compression After<br />
+          Impact (CAI) (ksi) (2)</th>
+        </tr>
+
+        <tr>
+          <td valign="top">IM6/3501<br />
+          IM7/SP500<br />
+          IM7/F3900<br />
+          IM7/977-2<br />
+          T300/934<br />
+          T650-42/1939-3<br />
+          IM7/8551<br />
+          IM8/8553</td>
+
+          <td valign="top">
+            <center>
+              850<br />
+              1100<br />
+              1080<br />
+              1170<br />
+              560<br />
+              1010<br />
+              1240<br />
+              900
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              9.2<br />
+              9.1<br />
+              9.7<br />
+              10.3<br />
+              3.7<br />
+              8.5<br />
+              12.1<br />
+              7.4
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              23.2<br />
+              36.2<br />
+              39.9<br />
+              47.1<br />
+              (3)<br />
+              (3)<br />
+              50<br />
+              (3)
+            </center>
+          </td>
+        </tr>
+      </table>
+
+      <table width="90%">
+        <tr>
+          <td valign="top">Notes:</td>
+
+          <td valign="top">(1) All samples prepared from 16-ply quasi-isotropic layups.<br />
+          (2) CAI values are normalized to approximately 125 ft-lb impact energy per inch thickness. MSFC M&amp;P Lab data unless noted otherwise.<br />
+          (3) MSFC M&amp;P Lab CAI testing planned for these materials.<br />
+          (4) Hercules data unless otherwise noted.<br />
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The factors of safety shown in Table 3 should be used in the analysis and design of composites. During design and manufacturing process development, credible accept/reject criteria and acceptable repair methods should be developed.</p>
+
+    <center>
+      <b>Table 3. Safety Factors for Composites</b><br />
+
+      <table border="1" width="90%">
+        <tr>
+          <th rowspan="2">Item</th>
+
+          <th rowspan="2">Ultimate</th>
+
+          <th colspan="2">Minimum Test Factor</th>
+
+          <th rowspan="2">Acceptance Test<br />
+          Flight Units</th>
+        </tr>
+
+        <tr>
+          <th>Qual Unit</th>
+
+          <th>Flight Unit</th>
+        </tr>
+
+        <tr>
+          <td valign="top">Nonprotoflight (1)<br />
+          Structure<br />
+          <br />
+          Protoflight (2)<br />
+          Structure</td>
+
+          <td valign="top">
+            <center>
+              1.4<br />
+              2.0 (3)<br />
+              <br />
+              1.5<br />
+              2.0 (3)
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              1.4<br />
+              <br />
+              <br />
+              <br />
+              
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              <br />
+              <br />
+              <br />
+              1.2<br />
+              
+            </center>
+          </td>
+
+          <td valign="top">
+            <center>
+              1.05<br />
+              <br />
+              <br />
+              <br />
+              
+            </center>
+          </td>
+        </tr>
+      </table>
+
+      <table width="90%">
+        <tr>
+          <td valign="top">Notes:</td>
+
+          <td valign="top">(1) Fly separate test article.<br />
+          (2) Fly the article tested.<br />
+          (3) Stress riser or discontinuity</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><u>Recommended Design and Analysis Guidelines for Composites:</u></p>
+
+    <p>During the concept definition phase of the composite part design cycle, all of the critical design parameters are established. Geometric constraints and material considerations are outlined in order to establish the amount of design flexibility allowable. Maximum loads, both mechanical and thermal, are estimated. Weight, cost, and producibility concerns should be considered at this juncture. These factors should then be weighted and balanced to produce an initial design concept. For example, thermal material limitations should be balanced against cost and producibility concerns to select the appropriate composite material. Likewise, the layup of the laminate should be chosen considering not only the desired load capability, but also the thermal environment. High heat transfer areas could be cooled by using additional plies to act as a heat sink. These two factors in turn are offset by weight considerations. Several preliminary analysis and sizing tools can be used at this
+    stage. PANDA, an elastic-plastic composite shell optimization program, is used in the analysis of stiffened panels. For flat composite panels, PASCO is sometimes used for preliminary sizing. The use of a Computer Aided Design (CAD) package is highly desirable in drawing the initial configuration.</p>
+
+    <p>The configuration is then subjected to stress analysis. Depending on complexity, the part may be subdivided into subcomponents for separate analysis. If required, a structural computer model may be generated. For most parts, a finite element model is generated using PDA/PATRAN and the surface definitions from the CAD drawing. PATRAN is used as preprocessor and post-processor for MSC/NASTRAN, which has the capability of analyzing composite plate elements. Aerodynamic, vibroacoustic and thermal loads are obtained from the appropriate discipline areas for input into the stress analysis. The vibroacoustic analysis is performed by dynamics loads engineers using MSC/NASTRAN as a processor and IDEAS as a preprocessor and post-processor. A temperature profile for the part is provided by thermal engineers using MIDAS, a finite difference thermal analyzer, and thermal material properties supplied by the composites materials engineers.</p>
+
+    <p>For shells of revolution under axisymmetric loading, BOSOR, a finite difference structural analysis program, may be employed. A simple general shell element finite element program, STAGS, is sometimes used to obtain input loads for BOSOR models. For more detailed analysis at a particular point, SQ5, a point stress laminate analysis program, is used. Edge loads for a critical element from a finite element or finite difference model are input into this program to obtain more detailed results. Thermal effects may be approximated using this program. However, if temperature gradients become excessive, in-house developed software may be required. Although buckling coefficients may be obtained from NASTRAN, NASA-supplied buckling knockdown factors for plates with complex curvature are used to compensate for inaccuracies inherent in the finite element program.</p>
+
+    <p>Specialized computer programs are used to analyze joints and fasteners and their interface with the composite parts. Bolt programs determine the capability of bolted joints under combined bending, tension and shear applied loads, as well as tension due to preload and differential thermal expansion. Clip analysis programs analyze metal clips using empirical data. Composite joint programs are also employed; for example, BJSFM is used for bearing loads, and JOINT is used for elastoplastic multiple bolt joints.</p>
+
+    <p>Below is a list of representative commercial computer programs that are available for analyzing stresses and strains in composite materials under various conditions. The ones most often used by MSFC are indicated as: [MSFC]. These computer programs are available from the company or source shown in parentheses.</p>
+
+    <ol>
+      <li>ABAQUS (Hibbitt, Carlson &amp; Solenson, Inc.)</li>
+
+      <li>ADINA (ADINA Engineering)</li>
+
+      <li>ANSYS [MSFC] (Swanson Analysis Systems, Inc.)</li>
+
+      <li>BOSOR [MSFC] (David Bushnell)</li>
+
+      <li>NASTRAN (MacNeal-Schwendles Corp.)</li>
+
+      <li>STAGS (COSMIC)</li>
+
+      <li>CHAMPION (MSFC-used but not commercially available)</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Critical factors affecting strength and stiffness for fiber are modulus of elasticity, strength, strain to failure, and curvature. Critical factors for the matrix are modulus of elasticity, elongation to failure, stress-strain behavior, void content, and fatigue performance.</p>
+
+    <p><u>Manufacturing:</u></p>
+
+    <p>Typical aerospace composite manufacturing processes consist of filament winding, fiber placement, pultrusion, tape laying, tape wrapping, press molding, hand layup and resin transfer molding. Typical fiber/matrix composite uses and processing techniques for various MSFC programs are shown in Table 4 and Table 5, respectively. A summary of composite manufacturing processes is shown in Table 6.</p>
+
+    <center>
+      <b>Table 4. Typical MSFC Users of Fiber/Matrix</b><br />
+
+      <table width="90%" border="1" cellpadding="4">
+        <tr>
+          <th>FIBER/MATRIX</th>
+
+          <th>USAGE</th>
+        </tr>
+
+        <tr>
+          <td>Carbon (Graphite)/Epoxies</td>
+
+          <td>1. Most used material for structural composites<br />
+          2. Used in trusses, pressure vessels, optical benches, racks<br />
+          3. Available in low, intermediate, and high modulus forms<br />
+          4. Damage tolerance typically varies inversely with modulus</td>
+        </tr>
+
+        <tr>
+          <td>Glass/Epoxies</td>
+
+          <td>1. Used in pressure vessels and sacrificial layers<br />
+          2. Used as flame barriers for carbon/epoxy structures and as galvanic corrosion barrier between carbon/epoxy, carbon/phenolics and aluminum components</td>
+        </tr>
+
+        <tr>
+          <td>Kevlar<small><sup>&reg;</sup></small>/Epoxies</td>
+
+          <td>1. Used in pressure vessels and small solid rocket motors<br />
+          2. Excellent damage tolerance<br />
+          3. Low compressive strength</td>
+        </tr>
+
+        <tr>
+          <td>Fiber-Reinforced Thermoplastics</td>
+
+          <td>1. Excellent damage tolerance<br />
+          2. Good repairability<br />
+          3. Lower structural performance thermosets</td>
+        </tr>
+
+        <tr>
+          <td>Fiber-Reinforced Bismalemides, Phenolics</td>
+
+          <td>1. Excellent high temperature properties<br />
+          2. Used in areas of high heat flux (nozzles, fairings, nosecaps)<br />
+          3. Requires higher processing temperatures</td>
+        </tr>
+      </table>
+      <br />
+      <b>Table 5. Processing Techniques</b><br />
+
+      <table width="90%" border="1" cellpadding="4">
+        <tr>
+          <th>SUPPLIED FORMS</th>
+
+          <th>PREPARATION<br />
+          METHODS</th>
+
+          <th>CURING METHODS</th>
+        </tr>
+
+        <tr>
+          <td valign="top">
+            <ul>
+              <li>Prepreg tape of varying widths - unidirectional or fabric</li>
+
+              <li>Prepreg "tow" - preimpregnation fiber bundles</li>
+
+              <li>Dry fiber plus wet resin</li>
+
+              <li>Fiber-reinforced bulk modulus compound</li>
+            </ul>
+          </td>
+
+          <td valign="top">
+            <ul>
+              <li>Filament winding-wet winding or prepreg tool</li>
+
+              <li>Hand layup</li>
+
+              <li>Tape wrapping</li>
+
+              <li>Tape laying</li>
+
+              <li>Pultrusion</li>
+
+              <li>Polar winding</li>
+
+              <li>Braiding</li>
+
+              <li>Resin transfer molding</li>
+
+              <li>Fiber placement</li>
+            </ul>
+          </td>
+
+          <td valign="top">
+            <ul>
+              <li>Autoclave/hydroclave</li>
+
+              <li>Oven</li>
+
+              <li>Press</li>
+
+              <li>Compression molding</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <b>Table 6. Summary of Composite Manufacturing Processes</b><br />
+
+      <table width="90%" border="1" cellpadding="4">
+        <tr>
+          <th>PROCESS</th>
+
+          <th>COMPOSITE<br />
+          MATERIAL</th>
+
+          <th>COMMON USES</th>
+
+          <th>TYPICAL TOOLING<br />
+          AND/OR EQUIPMENT</th>
+        </tr>
+
+        <tr>
+          <td valign="top">Filament Winding</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic<br />
+          Thermosets</td>
+
+          <td valign="top">Solid Rocket Motor cases,<br />
+          pressure vessels</td>
+
+          <td valign="top">Removable mandrels, automated<br />
+          lathe, resin bath, heat source,<br />
+          vacuum source, curing oven,<br />
+          autoclave, hydroclave, handling<br />
+          tools, trial fixtures, drill fixtures,<br />
+          and assembly tools.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Pultrusion</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Thermosets<br />
+          Thermoplastics</td>
+
+          <td valign="top">Structural shapes of constant<br />
+          cross-section, e.g., tees,<br />
+          angles, channels, rods,<br />
+          tubing, and squares</td>
+
+          <td valign="top">Pultrusion machine similar to<br />
+          metal extrusion machine, heat<br />
+          source, resin bath, cut-off device.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Resin Transfer<br />
+          Molding</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic</td>
+
+          <td valign="top">Small to large structures of<br />
+          simple to complex shapes.<br />
+          Ply fibers placed in mold,<br />
+          mold closed, resin injected<br />
+          into mold (heated or room<br />
+          temp.)</td>
+
+          <td valign="top">Low tonnage press, contoured<br />
+          molds (male and female), low-<br />
+          cost tooling using standard<br />
+          production steel, room<br />
+          temperature cure, over or<br />
+          autoclave.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Hand Laying</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic</td>
+
+          <td valign="top">Small quantity production of<br />
+          test panels, prototype parts,<br />
+          or parts of complex contour</td>
+
+          <td valign="top">Lay-up molds, vacuum bags,<br />
+          vacuum source, autoclave or<br />
+          hydroclave, and curing oven.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Mechanized Tape<br />
+          Laying</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Thermosets<br />
+          Thermoplastics</td>
+
+          <td valign="top">Small to large structures of<br />
+          simple or complex shapes</td>
+
+          <td valign="top">Molds, computer-controlled ply<br />
+          cutting, flat and contoured tape<br />
+          laying, automated ply<br />
+          lamination, autoclave,<br />
+          hydroclave, curing oven.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Fully Automatic<br />
+          Tape Laying</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic<br />
+          Bismalemides<br />
+          Thermoplastics</td>
+
+          <td valign="top">Small to large structural<br />
+          components of simple to<br />
+          complex shapes</td>
+
+          <td valign="top">Contoured molds, automatic tape<br />
+          laying equipment consists of<br />
+          automatic cutter, broadgood<br />
+          dispenser, trim table, ply transfer<br />
+          table, tape laying, stitching<br />
+          module and contour ply handling<br />
+          system, autoclave, hydroclave,<br />
+          curing oven, handling tools, trim<br />
+          fixture, drill fixture, and<br />
+          assembly tools.</td>
+        </tr>
+
+        <tr>
+          <td valign="top">Press Molding</td>
+
+          <td valign="top">Glass/Epoxy<br />
+          Graphite/Epoxy<br />
+          Kevlar<small><sup>&reg;</sup></small>/Epoxy<br />
+          Carbon/PEEK<br />
+          Carbon/Phenolic</td>
+
+          <td valign="top">Flat panels, molded<br />
+          components for subscale<br />
+          solid rocket motor ablative<br />
+          materials</td>
+
+          <td valign="top">Planten press molds (top and<br />
+          bottom) and heat source to mold.</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>There are sensitive manufacturing variables that must be closely controlled during composite fabrication. Therefore, using certified and highly skilled technicians is required. Typical manufacturing variables are heat input, cooling input, roller pressure, machine speed, tape tension, curing temperatures and curing pressures. Technicians must understand what to do when one of these variables changes. Properly controlled manufacturing processes will result in proper tensile strength, density, thermal conductivity, and interlaminar shear strength.</p>
+
+    <p><u>Tooling:</u></p>
+
+    <p>Major factors to be considered in the design and fabrication of tooling for structural and mechanical components are: (1) dimensional tolerance control and configuration stability, (2) location of parts in a structurally reliable assembly to give the lowest possible cost, (3) contour and size of the part, and (4) control of fiber orientation. Other significant factors which control final tool concept selection are cost, tool service life, heat up rate, total energy requirements, production rates and related facility costs.</p>
+
+    <p>The tooling required to fabricate most composite parts can be subdivided into several major categories including ply layup tools, skin or mold forms, curing aids, handling tools, drilling and trimming tools, assembly tools, molds and mandrels. Additional tooling and equipment are shown in Table 6.</p>
+
+    <p><u>Testing:</u></p>
+
+    <p>Component, subcomponent, and generic structural tests are performed to verify analysis. Particular component tests may include elements of aerodynamics, vibroacoustic and thermal loading conditions, as well as significant externally applied mechanical loads. Subcomponent tests may be performed for critical areas of the component. Generic tests include flange and stiffened panel tensile tests, damage tolerance tests, and standard temperature effect tensile and compressive coupon tests.</p>
+
+    <p><u>Inspection:</u></p>
+
+    <p>Quality assurance for composite parts centers on techniques for validating the physical and mechanical properties of a cured composite. However, quality assurance begins long before the end item is tested. A logical approach to quality control follows the fundamentals of composite reaction control: (1) raw material validation reaction control; (2) material characteristics; (3) in-process fabrication/handling/tooling effects; (4) cure process control and documentation; (5) post cure machining.</p>
+
+    <p>Visual inspection is used to inspect bond lines that are visible in the various bond stages and to detect any visible surface discontinuities and/or delaminations. Mechanical inspection is used to verify design dimensions, acoustics, input resistance, static loads and dynamic loads. Non-destructive evaluation is perhaps the most important inspection technique for determining defects in composites, particularly the defects specified in Table 7.</p>
+
+    <center>
+      <b>Table 7. NDE Techniques for Detecting Defects in Composite Materials</b><br />
+
+      <table width="90%" border="1" cellpadding="4">
+        <tr>
+          <th>Defect/<br />
+          Composite<br />
+          Method*</th>
+
+          <th>X-ray</th>
+
+          <th>Ultrasonics</th>
+
+          <th>Computer<br />
+          Tomography</th>
+
+          <th>Alcohol<br />
+          Wipe</th>
+
+          <th>Thermography</th>
+
+          <th>Eddy<br />
+          Current</th>
+
+          <th>Dye<br />
+          Penetrant</th>
+        </tr>
+
+        <tr>
+          <td>Delaminations/<br />
+          All 8</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Density<br />
+          Variations/<br />
+          #5</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Resin<br />
+          Rich-Resin<br />
+          Poor/All 8</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Voids/#1</td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Crazing<br />
+          (Micro-cracks)/<br />
+          All 8</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Wrinkles/<br />
+          All 8</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Conductive<br />
+          Materials/<br />
+          #2</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              X
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+      </table>
+
+      <table width="90%">
+        <tr>
+          <td valign="top" width="20%">* Composite Methods:</td>
+
+          <td valign="top" width="20%">1. Filament winding<br />
+          2. Fiber placement<br />
+          3. Pultrusion<br />
+          4. Tape laying</td>
+
+          <td valign="top" width="20%">5. Tape wrapping<br />
+          6. Press molding<br />
+          7. Hand layout<br />
+          8. Resin transfer molding</td>
+
+          <td width="40%">&nbsp;</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>MSFC experience with composites includes filament winding, tape laying, fiber placement, hand layup, computerized pultrusion, and automated tape wrapping. Computer programs are available to assist in the composite design process. The mechanical properties and impact damage properties that have been derived from tests of various composite materials can be used by designers to select the proper material and configuration for the job. Research is continuing to expand the available storehouse of design guidelines, leading to the production of reliable aerospace composite components. Valuable references which provide detailed design and analysis parameters for composite materials are provided in this guideline.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Agarwal, B.D., Broutman, L.J.: "Analysis and Performance of Fiber Composites," John Wiley and Sons, Inc., Second Edition, 1990.</li>
+
+      <li>ASM International Handbook Committee: "Composite, Engineered Materials Handbook," Volume 1, Third Printing, August 1989.</li>
+
+      <li>DOD/NASA: "Advanced Composites Design Guide," Volume I-IV, 1989.</li>
+
+      <li>Jones, W.K.: "Test Report Graphite/Bismalemide Allowables Data Base," Martin Marietta Composites Technology Group, August 1987.</li>
+
+      <li>Lubin: "Handbook of Composite Materials," 1982.</li>
+
+      <li>MSFC-HDBK-505A: "Structural Strength Program Requirements," January 1981.</li>
+
+      <li>MSFC-HDBK-1453: "Fracture Control Program Requirements," October 1987.</li>
+
+      <li>Morgan, Jr. L., Sigur, W.A.: "Fastening Techniques for Composite Materials," Martin Marietta Composites Technology Group, August 1985.</li>
+
+      <li>NHB 8071.1: "Fracture Control Requirements for Payloads," September 1988.</li>
+
+      <li>Sherrouse, M., Blum, C.: "Recommend Practices for Composites, Design and Analysis," Martin Marietta, Michoud, LA, March 1992.</li>
+
+      <li>Strong, Dr. A. Brent: "Fundamentals of Composites Manufacturing; Materials; Methods, and Applications," Society of Manufacturing Engineers, Dearborn, MI, 1989.</li>
+
+      <li>Whitney, J.M., Daniel, I.M., Pipes, R.B.: "Experimental Methods of Fiber Reinforced Composite Materials," SESA Monograph Number 4, Prentice-Hall, Englewood Cliffs, NJ, 1982.</li>
+
+      <li>Applications of Ablative Composites in Solid Rocket Motor Nozzles Reliability Preferred Practice No. PD-ED-1218; Marshall Space Flight Center.</li>
+
+      <li>Structural Laminate Composites for Space Applications Reliability Preferred Practice No. PD-ED-1217; Marshall Space Flight Center.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to use state-of-the-art design techniques, tooling, manufacturing techniques, and automated manufacturing and inspection techniques for composite materials could result in the choice of inappropriate materials, costly scrappage, and potential failures in use. Failure to use composites in appropriate applications could result in noncompetitive products with greater complexity, weight, or damage susceptibility.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Composites must be considered as unique materials in the design and manufacturing process because manufacturing equipment, tooling, and inspection equipment and processes have a pronounced effect on design. Since the material is formulated while the part is being built; (1) multidisciplinary, concurrent engineering design principles and (2) careful material selection and fabrication processes must be used to obtain optimum properties in aerospace composites.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

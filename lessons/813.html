@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0813: Power System Corona Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0813: Power System Corona Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0813 (Database ID: 813)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/813" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1415 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Knowledge of the presence or absence of corona discharge will help in controlling the reliability of high voltage components/systems. Corona testing can reveal potential and unaccounted-for corona discharges that may shorten the service-life of electrical insulating systems, seriously interfere with high voltage system operation and communication links, and result in failure and loss of mission objectives.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Corona current pulses can be detected using electrical measuring instruments. Numerous corona tests performed at LeRC concluded that the corona discharge acceptable limit should be less than 5 picocoulombs. Paschen's curve defines the regions of breakdown as a function of the dielectric media and the product of the pressure times the spacing between the conducting surfaces. The minimum voltage for a common dielectric medium is approximately 300 volts; therefore, testing should be considered for power systems operating at 300 volts and greater.</p>
+
+    <p>Generally, the corona inception voltage tends to decrease with increasing frequency of the alternating voltage under the influence of which corona takes place. It is reported that the inception voltage decreases somewhat at frequencies above approximately 20 kilohertz and more rapidly at frequencies in the megahertz range (Ref. 9).</p>
+
+    <p>Several variations of corona test apparatus and circuits are available and can be utilized to generate typical corona environments for the specific power system component type and operating conditions. The basic components of any corona test set consist of a detector, power separation filter and calibration signal coupler. A more general test apparatus that has been used to test corona (partial discharge) is shown in Figure 1. This set up consists of a 40 kilovolt AC and DC partial discharge test set that includes a buffer-isolation amplifier circuit which couples output pulses to a multichannel pulse height analyzer or an oscilloscope. The same partial discharge system of Figure 1 can be connected to a thermal vacuum chamber for testing space power system components to determine corona threshold level. In this test setup, the following modifications are necessary to convert a vacuum pumping test station into a corona threshold test facility: 1) Each O-ring sealed surface is
+    clamped to withstand a maximum test pressure of 1.69X10<small><sup>5</sup></small> newton per square meter (1270 Torr); 2) A 1/2-inch diameter high-voltage transmission line (of copper tubing) is run from the corona tester to the test sample; 3) The tubing from the corona tester to the vacuum chamber is shielded with a 6-inch galvanized pipe; 4) The 1/2 inch tubing is supported with polystyrene standoffs; 5) All directional changes are guarded with 1-inch corona balls; and the vacuum feedthrough is guarded with 1/2 inch radius cover rings. Detailed test setup, procedures and test equipment manuals should be obtained from the test equipment manufacturers. Also, military standards and specifications listed in the References section of this document provide a test apparatus/circuit guide for the different types of components used in high voltage systems. Reference to these standards and specification should be made whenever possible to ensure that the proper component screening
+    procedures and requirements are observed.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009303main_0813-1.jpg"  HEIGHT="473"  BORDER="0" /><A HREF="/llis_lib/txt/1009778main_0813-1.txt"  >[D]</A><br />
+      Figure 1: Typical Partial Discharge Test Setup
+    </center>
+
+    <p>In general, all measurements should be carried out in an electrically shielded room with its own isolated and filtered power lines. Care should be taken to see that cabling and vacuum feedthroughs are corona free (Ref. 15). With the help of the information contained in the publications referenced herein, detailed procedures should be developed for the various required tests and evaluation of corona.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The term "corona" is used as a generic name for any electrical discharges which take place in an energized electrical insulation as the result of accelerated ionization under the influence of the electric field in the insulation (Ref. 9). The reliability of high voltage power systems is related to an electrical discharge (corona) parameter on a component level. Corona causes insulation deterioration, therefore, failure of components becomes more probable as the component degrades. All power system components should be tested to verify that this parameter can be held to a specified minimum for extended periods to ensure system reliability through corona testing (Ref. 1).</p>
+
+    <p>Corona is sometimes visible in the form of an arc, but visual inspection for presence of corona is grossly inadequate. The voltage at which visible corona can be observed is at a threshold well above the actual corona inception. Although corona-caused arcing is damaging to power systems, the greater concern is the internal invisible corona within a device. Corona originating within an enclosed item is also damaging and can degrade dielectrics. Corona discharges in insulation systems cause momentary changes of potential and consequently current pulses. These current pulses are superimposed on the test voltage signals and may be detected at the terminals of the device under test.</p>
+
+    <p>Corona testing should be a part of the design tests to verify that the components meet the less than 5 picocoulombs requirement. Components (any electrical devices, such as transformers, cables, connectors, terminations, etc., which incorporate conductors with suitable insulated regions) that have potential for degradation inherent in their insulation system can be identified. This degradation is due to small voids, fractures, separations, delaminations and other defects that are not detectable by visual inspection, and can be detected in insulating systems by corona testing. The presence of corona, because of these defects, subjects a material to ozone, acid, ultra-violet light and bombardment by electrons and ions. An ionization process takes place as a result of gas in a void located within a dielectric or adjacent to the surface of a dielectric that separates two conductors with electric field. Corona discharge, due to electron or ion bombardment in an ionized region,
+    initiates and can erode almost all dielectrics. This erosion is permanent and cumulative. The cumulative effects of corona will cause failure, without warning at a later date, when the dielectric strength becomes less than the applied stresses. This can occur after installation of high voltage components within a system of assumed high reliability.</p>
+
+    <p>Corona deteriorates insulation in the vicinity of the discharge, reduces distribution efficiency, and disassociates some gases creating noxious gases and odors. Corona within an electric power system generates spurious high-frequency voltages that produce interference in communication links and malfunctions in sensitive electronic circuits. The current pulses it produces in the circuits of high voltage equipment may have very short rise time, high recurrence frequency and sufficient amplitude for simulating, falsifying, distorting or masking signals which are used in electrical communication, control and measurements.</p>
+
+    <p>At the development and design of the SERT's Power Conditioner, an arcing problem (due to corona discharge) occurred in the ion thruster and caused power source interruption and overload conditions. Using high voltage components that are screened for corona, and elimination of sharp corners on terminals and connectors, reduced the amount of corona-caused arcing in the high voltage system.</p>
+
+    <p>An example of an early flight failure caused by corona discharge was a short that developed between two pins of a high voltage connector. The gas trapped inside connector voids gradually decreased in pressure until corona discharge began to decompose the insulating system and caused leakage and a short. The failure disabled the experiment. Definitions of Corona terms discussed in this document are provided in Table 1.</p>
+
+    <center>
+      <table width="80%" border="2" cellpadding="5">
+        <tr>
+          <td>
+            <b>Corona (partial discarge)</b>
+
+            <div style="margin-left: 2em">
+              A type of localized discharge resulting from transient gaseous ionization in an insulation system when the voltage stress exceeds a critical value. The ionization is usually localized over a portion of the distance between the electrodes of the system.
+            </div>
+
+            <p><b>Corona inception voltage (CIV)</b></p>
+
+            <div style="margin-left: 2em">
+              The lowest voltage at which continuous corona of specified pulse amplitude occurs as the applied voltage is gradually increased.
+            </div>
+
+            <p><b>Current pulse</b></p>
+
+            <div style="margin-left: 2em">
+              A pulse which occurs at some location in a device as a result of a corona discharge.
+            </div>
+
+            <p><b>Ionization</b></p>
+
+            <div style="margin-left: 2em">
+              Any process by which neutral molecules or atoms dissociate to form positively and negatively charged particles
+            </div>
+          </td>
+        </tr>
+      </table>
+      Table 1. Corona Related Terms
+    </center>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Lalli, Vincent R., Mueller, Lawrence A., and Koutnik, Ernest A.: "System Reliability Analysis Through Corona Testing," NASA TM X-3287, Lewis Research Center, Ohio, 1975.</li>
+
+      <li>Klima, Stanley J., and Riley, Thomas J.: "Ultrasonic Evaluation of High Voltage Circuit Boards," NASA TM X-73432, Lewis Research Center, Ohio, 1976.</li>
+
+      <li>Bagwell, James W., Hoffman, Anthony C., Leser, Robert J., Reader, Karl F., Stover, John B., and Vasicek, Richard W.: "Review of SERT II Power Conditioning," NASA TM X-52858, Lewis Research Center, Ohio, 1970.</li>
+
+      <li>"Navy Power Supply Reliability, Design and Manufacturing Guidelines," Department of the Navy, NAVMAT P-4855-1A, 1989.</li>
+
+      <li>"Military Handbook, NASA Parts Application Handbook," NASA, MIL-HDBK-978-B (NASA), 1989.</li>
+
+      <li>"Military Specification, Transformers and Inductors," Department of Defense, Washington DC, MIL-T-27E, 1985.</li>
+
+      <li>"Military Specification, Connectors, Coaxial, Radio Frequency," Department of Defense, Washington DC, MIL-C-39012C, 1991.</li>
+
+      <li>"Military Specification, Cables, Radio Frequency, Flexible and Semirigid," Department of Defense, Washington DC, MIL-T-17F, 1984.</li>
+
+      <li>Heinrich, Oswald X.: "Corona Measuring Techniques and Their Use in Insulation System Evaluation," James G. Biddle Co., Plymouth Meeting, Pennsylvania 19462, Technical Bulletin 66T1, May 1964.</li>
+
+      <li>Instruction Manual 66J , "Partial Discharge (Corona) Test Equipment," Biddle Instruments, James G. Biddle Co. Plymouth Meeting, Pennsylvania 19462.</li>
+
+      <li>Galambos, Louis G., P.E.: "Corona: What it is; Damage it causes; How to Avoid It," James G. Biddle Co., Plymouth Meeting, Pennsylvania 19462, Printed from Electronic Products Magazine, April 1965 Issue.</li>
+
+      <li>The Institute of Electrical and Electronics Engineers, Inc., "IEEE Guide for Making Corona (Discharge) Measurements on Electronics Transformers," IEEE Std. 436-1977, December 15, 1977.</li>
+
+      <li>Bartnikas, R.:, Institut de Recherche, Hydro-Quebec, Varennes, Quebec, Canada and McMahon, E. J., E. I. duPont de Nemours &amp; Co., Inc., Wilmington, Delaware, U.S.A., "Engineering Dielectrics, Volume I, Corona Measurement and Interpretation," American Society for Testing and Materials (ASTM) STP 669, February 1979.</li>
+
+      <li>Bever, Renate S., and Westron, John L.: "Partial Discharge Testing Under Direct Voltage Conditions," IEEE Transactions on Aerospace and Electronic Systems, Vol. AES-18 No.1, January 1982.</li>
+
+      <li>Bever, Renate S.: "Ramp Technique for DC Partial Discharge Testing," IEEE Transactions on Electrical Insulation, Vol. EI-20 No.1, February 1985.</li>
+
+      <li>Kreuger, Frederick Hendrik: "Partial Discharge Detection in High Voltage Equipment," Stoneham, Massachusetts, Butterworth-Heinemann Pub. Co., 1989.</li>
+
+      <li>"High Voltage Power Supply Design and Manufacturing Practices", Reliability Preferred Practice PD-ED-1202.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Insulation breakdown due to undetected corona discharge can cause power system components to degrade and fail in time. High voltage power supplies that are not tested for corona could experience failures that disrupt mission objectives due to corona-caused shorts.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Test power system components for corona to ensure that their insulation system will meet the design requirements imposed on the equipment and to verify that the gas discharges are not deteriorating the insulation system. The acceptable corona levels are verified in power system components.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Communications Technology Satellite (CTS), Space Plasma High Voltage Interaction Experiment (SPHINX), Space Electronic Rocket (SERT) Tests I and II, and 30 cm Thruster Bi-module.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

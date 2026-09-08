@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #5776: Mission Collaborations for International Projects</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #5776: Mission Collaborations for International Projects</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #5776 (Database ID: 5776)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-10-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Manufacturing and Assembly, Cryogenic Systems, Flight Operations, Spacecraft, Test and Verification, Spacecraft and Spacecraft Instruments, Mission operations systems, Organizational Planning, Program level review processes, Science integration, Early requirements and standards definition, Product Assurance, Review systems and boards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/5776" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The XRS uses calorimetric detectors that must be cooled to near absolute zero (operating at 60mK). This is accomplished by a multi-stage Dewar which includes liquid He and solid Ne. Dewar operations are initiated on ascent by blowing pyro valves allowing the He and Ne to vent. The Dewar was also equipped with a pyro-driven vent that exposes the Dewar guard vacuum to ambient. This design feature was intended to vent the guard vacuum to deep space once on orbit. This would allow any cryogen leakage to be effectively prevented from contaminating this volume. There is another pyro gate valve at the telescope's aperture that protects the internal detectors until on orbit. By blowing the aperture gate valve the instrument becomes fully operational and is enabled to view its entire desired spectrum. Once the XRS was on orbit it was successfully calibrated and configured for full operations (i.e. guard vacuum and gate valves blown). However, prior to opening either the aperture valve or the valve to the guard vacuum (i.e. He and Ne are venting) significant science can acquired (although only over a small spectrum) in this configuration (see LL#2116 for a related lesson). 
+<p>
+ Unfortunately, the space craft design included a fatal flaw. For most missions that fly cryogens the Dewar comprises the main structural component of the spacecraft. The XRS was buried inside the spacecraft in what turned out to be a confined space. Once integrated into the spacecraft the Dewar was supposed to have been vented to the exterior of it and then overboard. The entire spacecraft exterior was covered with thermal blankets which enclosed the volume that held XRS. The venting He and Ne accumulated in the confined space. Although the confined space was not airtight the venting area provided by the blanket seams restricted the venting sufficiently enough to establish a level of atmosphere to pose a contamination issue. When the guard and aperture valves were blown the confined He and Ne were ingested into the guard vacuum shorting out the vacuum causing unacceptable heat loads on the tanks. The cryogens were rapidly depleted and a planned 3-year mission was over in 19 days with no science having been acquired. As noted earlier that Astro E-2, as the name implies, was a build to print reflight of the first Astro which also was launched on a Japanese rocket. It was identically flawed and would have failed in the same fashion but the launch vehicle failed to achieve orbit and was lost. Also notable is that the design review process failed to identify the design flaw. This lesson is limited to mission operations planning. The genesis and propagation of the original design flaw is covered in detail in the Astro E-2 Mishap Investigation Board report and LL#2116. The Astro E-2 Mishap Investigation Board (MIB) found that there were significant cultural and communications issues that contributed greatly to the program's unsuccessful execution. Moreover, the build to print philosophy leads to an unfounded confidence, which also compromised the design review process.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+From the Astro E-2 MIB: NASA and ISAS did not develop a common approach to project management, joint mission level reviews with shared understanding of those reviews, configuration management, interface control documents, systems integration, and project management standards. The Suzaku team failed to create a mission-level review process that allowed the full participation of both partners, partly due to language and cultural barriers (as is Japanese tradition missions are renamed upon launch). Design reviews were primarily conducted in Japanese; GSFC had no in-plant representative; the provisions of a Letter of Agreement (LOA) were not implemented; and of the seven ICDs generated only two were approved and the approval signatories were all GSFC personnel, Japanese concurrence was never documented. The board also believed that the “build to print” approach compromised the collaborations, as well as the design review process for Astro E-2. The reviews were neither thorough nor incisive, perhaps due to the assumed success of Astro E. When the absence of some required approved ICDs was noted during the investigation, the Critical Design Review (CDR) chair replied, ”There is no need for ICDs, it’s already built?” Thus, GSFC did not have sufficient interaction with the ISAS partner in the areas of project management and system engineering at the mission and integrated instrument levels. Specifically,
+
+<ul><li>No GSFC XRS instrument manager or system engineer was appointed. GSFC was, in reality, in charge of only the helium insert portion of XRS and supporting electronics, and not the entire instrument.    
+
+</li> <li>Mission-level reviews were conducted in Japanese, with the exception of GSFC-specific portions. The Institute of Space and Astronautical  Science (ISAS) Critical Design Review had no NASA participants and the JAXA/ISAS major reliability review (called Soutenken) had no NASA participation.  
+
+</li> <li>No joint systems, subsystem, test, or operations engineering working groups were put in place.  
+</li> <li>NASA was not involved in mission-level Failure Modes and Effects Analysis (FMEA).  </li></ul>
+
+ISAS and GSFC did not adequately plan and rehearse mission operations. Specifically,  <ul><li>The Suzaku team departed from normal practices in that mission-critical operations—for example, the irreversible opening of the He and Ne vents and valve V12), and the (planned) opening of the aperture gate valve—were performed for the first time in flight with little rehearsal or analysis.  </li> <li>The Board could find no evidence that the ISAS/GSFC team conducted any operations contingency planning. </li></ul>
+
+When planning any mission a cohesive, coherent, and effective approach should be implemented and communicated to all of the parties involved. Organizational responsibilities and interfaces need to be defined and maintained throughout the project’s life cycle. This is particularly true for International missions where there are inherent geographic, cultural and communication barriers and ITAR requirements that must be overcome. Many GSFC-managed projects/organizations built by domestic contractors station project personnel in-house to monitor the build/integration. Astro E-2 chose not to place personnel in-house for the integration in Japan.
+</section>
+<section><h2>Recommendation(s)</h2>
+From the Astor E-2 MIB: <ol> <li>  To promote success in collaborations with Japan or other international organizations, NASA should form a high-level team to work directly with that organization to create a general framework for the management and system engineering of joint programs. This framework would define an organizational structure with clear roles and responsibilities, and required joint working groups in system engineering, integration, test, and operations. Specific areas of clarification should include but not be limited to: conduct of project reviews; management of review action items; and shared change management, requirements, test, and operations. 
+
+</li> <li>To promote success in international collaborations, NASA should include a specific budget line item for international missions that recognizes and quantifies the cost of collaboration and build these cost estimates into the budget. This line item should include, but not be limited to: travel, in-plant representatives, translators, CM system management, and additional schedule requirements. 
+
+</li> <li>To promote mission success in international collaborations, NASA must actively participate in spacecraft-level system engineering and spacecraft-level system reviews. Reviews must be conducted in a common language or translated simultaneously. 
+
+</li> <li>To promote mission success in instances in which NASA chooses to reuse a design (that is, build-to-print) that has not operated in space and met its design goals, NASA must conduct the formulation, design reviews, tests, integration, and operation as if it were a new design. The management team must approach development with the attitude that the previous design may still have major deficiencies. An independent team chartered to discover deficiencies in the original program must review all verification and test procedures. 
+
+</li> <li>To minimize surprises during mission operations and to maximize operational efficiency and safety, all projects should have pre-launch rehearsals for initialization activities and other important operations to ensure that no mission-critical activity is performed in flight without prior test or analysis. Any irreversible operation must be considered mission critical (see LL#2116 for a related lesson).  </li> </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

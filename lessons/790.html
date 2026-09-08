@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0790: Problem/Failure Report Independent Review/Approval</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0790: Problem/Failure Report Independent Review/Approval</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0790 (Database ID: 790)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/790" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1304, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Any independent review process increases the level of compliance of the subject process. It also broadens the scope and depth of experience available for each individual issue without the need for a large supporting staff at each supplier organization. Also, an in-place independent review structure improves the rate of data flow for a given level of effort.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>There are several levels of independent review in a sequential review process. A Problem/Failure (P/F) not only affects the subject hardware/software but other elements of the system as well. At the first level of independent review, the project/task system engineering organization reviews all identified system related P/F reports, all unknown cause P/F reports, all design related P/F reports, and all critical concern P/F reports that are identified as "Red Flag."</p>
+
+    <p>At any level of the independent review process, specialists in the area of the P/F can be consulted for their expertise. As a subset of the system level review all project/task systems test or ground operations P/F reports are routed to the test and operations manager for verification of closure adequacy.</p>
+
+    <p>All P/F reports not initially sent to systems, as well as those P/F reports that have been approved by systems, are sent to the project/task reliability engineering organization. Reliability engineering reviews each P/F report for adherence to the P/F reporting requirements, for completeness and lucidity of the technical contents, for uniformity of rating standards, and for identification of generic P/F or broad issue-related P/F.</p>
+
+    <p>At this point in the P/F review process, issue-specific specialists can be consulted on issues requiring their field of expertise (safety, environmental factors, etc.) or to explore broader issues raised by an examination of the P/F that were not apparent at the internal P/F reporting level. P/F reports can be recycled back up the review chain if conditions are uncovered in the review process that warrant such an occurrence.</p>
+
+    <p>The final step in the independent P/F closure process is the Project Management review and approval cycle. In the optimum review process, the status of closed, nonrisk P/F reports is provided by periodic P/F reporting status reports. The critical P/F reports, classified by the "Red Flag" rating, are routed through the appropriate Project Management officials to determine the P/F impact on schedule and future funding, and to identify an element of residual mission risk.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Independent P/F reporting closure is a key to reducing mission risk. On a recent mission, 25 percent of the contractor-submitted Problem/Failure Reports (P/FRs) had risk rating changes as a result of independent review by Reliability Engineering. Of the 25 percent changed, 1/4 were significant or red flag P/FRs (i.e., 1/16 or 6 percent were major issues). This process results in fewer schedule delays and attendant funding problems late in the Project/Task, by providing the earliest isolation and documentation of P/F that can pose serious mission consequences. Generic P/F can be detected and consolidated in an efficient manner, with attendant cost savings. The P/F reporting system is a resource for providing visibility to all levels of management in near real-time.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"Risk Rating of Problem/Failure Reports," Reliability Preferred Practice PD-AP-1305.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The utilization of a P/F reporting system that has an effective independent P/F closure process is a major factor in the elimination of in-flight hardware/software failures attributed to preflight P/F that were not resolved adequately prior to launch.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Problem/Failure (P/F) Reports are reviewed independently and approved by reliability engineering specialists to ensure objectivity and integrity in the closure process. This practice assures that the analysis realistically bounds the extent of the P/F, and the corrective action and its verification are successfully accomplished. The key elements are:</p>
+
+    <ul>
+      <li>Analysis must address the problem.</li>
+
+      <li>Corrective action must address the analysis and the problem.</li>
+
+      <li>Analysis must address the effect on other items.</li>
+
+      <li>Corrective action must have been implemented.</li>
+
+      <li>Item must have passed the gate that caused the P/F - the hardware/software must be successfully retested.</li>
+    </ul>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Mariners, Seasat, IRAS, VGR, VIK, GLL and MGN programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0671: Demagnetization of Ferromagnetic Parts</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0671: Demagnetization of Ferromagnetic Parts</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0671 (Database ID: 671)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/671" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1220; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>In an unassembled state, ferromagnetic parts can be exposed to stronger AC demagnetizing fields, as high as 60 mT (600 Gauss), thus assuring a lower level of remanent magnetization than can be achieved after the parts are mounted on assemblies.</p>
+
+    <p>Attaining a low level of remanent magnetization minimizes the adverse effects of unwanted fields. In those cases where magnetic compensation may be required, the ability to apply high level fields to an unmounted part enables the utilization of techniques to stabilize the magnetic moment of the part.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The part being demagnetized is placed in a controlled AC magnetic field and rotated on all three of its axes as the field is exponentially increased and then returned exponentially to its lowest level. During this process, the ambient magnetic field must be reduced to near zero intensity (&lt; 500 nT) while the parts are being demagnetized. This condition can be established either through the use of a triaxial coil system, to generate nulling fields, or by placing the parts in a magnetically shielded container. Effective demagnetization cannot be achieved in the presence of the earth's field (0.05 mT) because a significant number of magnetic domains will remain aligned along the ambient field vector and result in a residual dipole moment.</p>
+
+    <p>After the demagnetization process is completed, the part and the assembly to which it is mounted should not be exposed to magnetic fields in excess of 2 mT. This control assures that any subsequent demagnetization of the assembly at 5 mT will be adequate.</p>
+
+    <p>The size and configuration of the demagnetizing coil may vary depending upon the specific parts being treated. However, in most cases, a simple solenoid provides the adequate flexibility for such items as connectors, fasteners, and small parts. In some cases a commercial 60 Hz magnetic tape degausser can be used. For a solenoid, the wire size and number of turns are determined by the size of the AC source (voltage and current capacity). Series capacitors are used to tune the coil for resonance. The physical access to the center of the solenoid must be adequate to allow for the rotation of the part on all three of its axes while exposed to the demagnetizing field.</p>
+
+    <p>At JPL two systems are in use to provide a near zero static magnetic field environment for high level demagnetization. For smaller test items, a double walled mumetal shield can, approximately 60 cm in diameter and 120 cm long, is used. Within the shield can, the AC demagnetizing field is generated by a solenoid. Larger test items are treated in a zero DC environment produced by a triaxial Helmholtz coil system having a maximum diameter of 3.6 meters. AC fields up to 10 mT are generated by a coil pair 2 meters in diameter contained within the triaxial system. Other demagnetizing solenoids and coils available for use include the following:</p>
+
+    <center>
+      <table border="1" width="90%">
+        <tr>
+          <td>&nbsp;</td>
+
+          <td>14 cm i.d.<br />
+          coil</td>
+
+          <td>42 cm i.d.<br />
+          coil</td>
+
+          <td>60 cm i.d.<br />
+          solenoid</td>
+
+          <td>116 cm i.d.<br />
+          Helmholtz</td>
+        </tr>
+
+        <tr>
+          <td>Max. Field<small><sup>1</sup></small></td>
+
+          <td>60 mT</td>
+
+          <td>50 mT</td>
+
+          <td>24 mT</td>
+
+          <td>0.6 mT</td>
+        </tr>
+
+        <tr>
+          <td>Wire Size</td>
+
+          <td>20 AWG</td>
+
+          <td>20 AWG</td>
+
+          <td>10 AWG</td>
+
+          <td>10 AWG</td>
+        </tr>
+
+        <tr>
+          <td>Windings</td>
+
+          <td>1</td>
+
+          <td>2</td>
+
+          <td>3</td>
+
+          <td>2/coil</td>
+        </tr>
+
+        <tr>
+          <td>Turns</td>
+
+          <td>1600</td>
+
+          <td>1368</td>
+
+          <td>426</td>
+
+          <td>58/coil</td>
+        </tr>
+
+        <tr>
+          <td>Ohms/Winding</td>
+
+          <td>30.5</td>
+
+          <td>25.7</td>
+
+          <td>3.1</td>
+
+          <td>0.8</td>
+        </tr>
+
+        <tr>
+          <td>L/Winding</td>
+
+          <td>506 mH</td>
+
+          <td>100 mH</td>
+
+          <td>57.5 mH</td>
+
+          <td>9.6 mH</td>
+        </tr>
+
+        <tr>
+          <td>Series Capacitance</td>
+
+          <td>14 uf</td>
+
+          <td>80 uf</td>
+
+          <td>14 uf</td>
+
+          <td>&#151;</td>
+        </tr>
+
+        <tr>
+          <td>Coil Construction</td>
+
+          <td>10 mT/amp</td>
+
+          <td>2.8 mT/amp</td>
+
+          <td>1.2 mT/amp</td>
+
+          <td>.08 mT/amp</td>
+        </tr>
+
+        <tr>
+          <td>Weight</td>
+
+          <td>4.5 kg</td>
+
+          <td>10 kg</td>
+
+          <td>5.3 kg</td>
+
+          <td>58 kg</td>
+        </tr>
+
+        <tr>
+          <td colspan="5">
+            <center>
+              <small><sup>1</sup></small> 230 volts at 60 Hz
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Ferromagnetic materials, such as the alloys of nickel and cobalt, are of concern because they exhibit hysteresis and have permeabilities which are dependent upon the ambient field strength and temperature. Parts made of these materials exhibit dipole moments which can create disturbance torques and also produce unwanted external magnetic fields.</p>
+
+    <p>The demagnetization process has either of two objectives: first, to reduce the remanent dipole moment to its lowest practical level or second, to stabilize the moment with respect to the expected environmental extremes for temperature and field exposure.</p>
+
+    <p>Because of the potential adverse effects of strong magnetic fields on electronic components, spacecraft assemblies are not exposed to demagnetizing fields in excess of 5 mT (50 Gauss). This level of demagnetizing field is based on the conservative assumption that the spacecraft hardware will not be exposed to magnetizing fields in excess of 1-2 mT.</p>
+
+    <p>Frequently, in the process of fabrication, parts made of ferromagnetic materials are exposed to magnetic fields far in excess of 1-2 mT and, in some cases, are received in a saturated state. Ideally, the demagnetization process should remove the saturated remanence by a complete randomization of the domains in the material. However this typically requires a much higher field intensity than the 5 mT demagnetization field used on completed assemblies and subsystems.</p>
+
+    <p>In those cases where demagnetization is not adequate, the magnetic moment of the part must be stabilized and compensation obtained through the addition of an equal but oppositely directed dipole moment (a permanent magnet). For this technique to be effective a strong magnetizing field must be applied to make sure that the ferromagnetic part is in a saturated state prior to compensation. This would not be practical to do with the part installed on a completed assembly.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"Magnetic Field Restraints For Spacecraft Systems And Subsystems", N68-11295, Goddard Space Flight Center, Greenbelt, Maryland, February 1967</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    External magnetic fields produced by spacecraft assemblies and subsystems can result in the contamination of science magnetometer data and the distortion of plasma wave and charged particle measurements.</p>
+
+    <p>On Earth orbiting and Jovian missions, the interaction of spacecraft dipole moments and the ambient field can result in disturbance torques which adversely affect attitude control systems.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    In those cases where spacecraft science requirements or attitude control systems impose constraints on the magnetic characteristics of components and the use of ferromagnetic material cannot be avoided, perform a complete demagnetization of the ferromagnetic parts, individually, prior to assembly.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Mariner Mars 64, Voyager, Galileo, Ulysses.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

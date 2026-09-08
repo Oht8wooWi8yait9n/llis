@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2046: Limitations of Internal Protective Devices in High-Voltage/High- Capacity Batteries Using Lithium-Ion</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2046: Limitations of Internal Protective Devices in High-Voltage/High- Capacity Batteries Using Lithium-Ion</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2046 (Database ID: 2046)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-05-10</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Specified</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Energy</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2046" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The internal protective devices (PTC and CID) used in the most common commercial-off-the-shelf (COTS) Li-Ion cells (cylindrical 18650's) have been extremely reliable at a single-cell level and have resulted in total prevention of the cell reaching a hazardous condition. However, test programs have indicated that batteries built with cylindrical COTS cells in multi-cell configurations (series and/or parallel) have experienced thermal runaway under various test conditions.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Test data analysis indicated that the two major causes for the thermal runaway are over voltage (overcharge) and external short conditions.<br> <br> In these cases, the internal protective devices were either not protecting as expected or were a cause for the hazards encountered. PTC ignition above its withstanding (threshold) voltage has been shown to cause thermal runaway under external short conditions in high-voltage battery modules. Thermal runaway has also been observed during overcharge conditions in high-voltage and high-capacity modules, indicating that the CIDs did not protect the cells from catastrophic events, as seen in single cells. The NESC sponsored study was conducted to understand the causes for the thermal runaway in high-voltage and high-capacity battery modules, and to determine the limitations of the cell internal protective devices.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>PTC characteristics and limitations vary with cell manufacturer and are rarely provided. This information should be obtained by testing prior to considering a battery design for a specific application. The cell series voltage should not exceed the PTC withstanding voltage. For high-voltage batteries, diodes added to a series string of cells can improve their safety under external short conditions. The diodes must be carefully matched to battery characteristics.<br> <br> In high-voltage and high-capacity batteries where the CID is used as a level of safety control, overcharge tests need to be performed to confirm its safe operation. The number of cells recommended for use in parallel depends on the charge current. The total charge current used to charge a bank (cells in parallel) should in no way cause an increase in PTC resistance of any single cell. In other words, in the event that all cell CIDs but one have opened, the current seen by the remaining cell should not cause an increase in PTC resistance. The CID voltage tolerance should also be characterized. The charger voltage limit should be set so that the difference between the voltage limit value and the end-of-charge battery voltage does not cause CID arcing. The main causes of failure that prevent the CID from proper safing are the charge current (causing inadvertent PTC activation), high temperatures (causing PTC activation or uncontrollable thermal runaway), and high voltages (causing PTC ignition).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

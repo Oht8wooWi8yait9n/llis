@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1956: 100+ Lessons Learned for Project Managers</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1956: 100+ Lessons Learned for Project Managers</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1956 (Database ID: 1956)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-09-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Engineering Design, Integration and Testing, Program Management, Safety and Mission Assurance, Financial Management, Risk Management / Assessment, Software Engineering, Spacecraft and Spacecraft Instruments, Affect of Cultural factors on long-term human and robotic missions, Business processes, Center distribution of programs and management activities, Communications between different offices and contractor personnel, Configuration and data management, Contractor relationships, Cross Agency coordination, Program level review processes, Program planning / development and management, Risk management, Early requirements and standards definition, Quality, Review systems and boards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1956" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Jerry Madden retired in 1995 as Associate Director of Flight Projects at NASA Goddard Space Flight Center (GSFC). Over his 37 years with NASA, he collected the following lesson learned nuggets that are instructive to managers of NASA spaceflight projects. As he obtained them from a variety of sources, they are not clearly traceable to any specific set of originating projects or "driving events." Arguably, it is difficult to identify project management lessons learned that are widely applicable but not obvious, and these should be accepted where they may provide insight into NASA project management success. This material first appeared in the October 2003 issue of NASA's ASK Magazine, which now lists 122 of these aphorisms (Reference (1)):
+<br/>
+<br/><U>Design Engineering</U>
+<ol> <li> There is no such thing as previously flown hardware, i.e., the people who build the next unit probably never saw the previous unit; there are probably minor changes; the operational environment has probably changed; and the people who check the unit out will in most cases not understand the unit or the test equipment. </li><br/> <li>
+Most equipment works "as built," i.e., not as the designer planned. This is due to layout of the design, poor understanding on the designer's part, or poor understanding of component specifications.</li><br/> <li>
+In case of a failure, make a timeline of events and include everything that is known. Put down known facts, and check every theory against them. Don't beat the data until it confesses: i.e., know when to stop trying to force-fit a scenario. Do not arrive at a conclusion too rapidly. Make sure any deviation from the norm is explained; remember the wrong conclusion is prologue to the next failure. Know when to stop.</li><br/> <li>
+
+Redundancy in hardware can be a fiction. We are adept at building things to be identical so that if one fails, the other will also fail. Make sure all hardware is treated in a build as if it were one of a kind and needed for mission success.</li><br/> <li>
+
+Don't be afraid to fail or you will not succeed, but always work at your skill to recover. Part of that skill is knowing who can help.</li><br/> <li>
+Experience may be fine but testing is better. Knowing something will work never takes the place of proving that it will.</li><br/> <li>Reviews are for the reviewed and not the reviewer. The review is a failure if the reviewed learn nothing from it.</li><br/> <li>
+
+The amount of reviews and reports are proportional to management's understanding, i.e., the less management knows or understands the activities, the more it requires reviews and reports. It is necessary in this type of environment to make sure the data is presented so that the average person, slightly familiar with activities, can understand it. Keeping the data simple and clear never insults anyone's intelligence.</li><br/> <li>
+In olden times, engineers had hands-on experience, technicians understood how the electronics worked and what it was supposed to do, and layout technicians knew too. But today only the computer knows for sure, and it's not talking.</li><br/> <li>
+Mistakes are all right, but failure is not. Failure is just a mistake you can't recover from; therefore, try to create contingency plans and alternate approaches for the items or plans that have high risk.</li><br/> <li>
+The old NASA pushed the limits of technology and science; therefore, it did not worry about "requirements creep" or over-runs. The new NASA has to work as if all are fixed price; therefore, &quot;requirements creep&quot; has become a deadly sin.</li><br/> <li>
+The number of reviews is increasing but the knowledge transfer remains the same; therefore, all your charts and presentation material should be constructed with this fact in mind. This means you should be able to construct a set of slides that only needs to be shuffled from presentation to presentation.</li><br/> <li>
+Occasionally things go right. The lesson learned here is: try to duplicate that which works.</li><br/> <li>
+The first sign of trouble comes from the schedule or the cost curve. Engineers are the last to know they are in trouble. Engineers are born optimists.</li><br/> <li>
+External reviews are scheduled at the worst possible time: therefore, keep an up-to-date set of technical data so that you can rapidly respond. Having to update business data should be cause for dismissal.</li><br/> <li>
+Hide nothing from the reviewers. Their reputation and yours is on the line. Expose all the warts and pimples. Don't offer excuses: just state facts.</li><br/> <li>
+NASA is establishing a set of reviewers and a set of reviews. Once firmly established, the system will fight to stay alive, so make the most of it. Try to find a way for the reviews to work for you.</li><br/> <li>
+Knowledge is often confounded by test. Computer models have hidden flaws, not the least of which is poor input data.</li><br/> <li>
+
+Software now has taken on all the parameters of hardware, i.e., requirement creep, high percent-age of flight mission cost, need for quality control, need for validation procedures, etc. It has the added feature that it is hard as hell to determine it is not flawed. Get the basic system working and then add the bells and whistles. Never throw away a version that works even if you have all the confidence in the world the newer version works. It is necessary to have contingency plans for software.</li><br/> <li>
+History is prologue. There has not been a project yet that has not had a parts problem despite all the qualification and testing done on parts. Time and being prepared to react are the only safeguards.</li><br/> <li>
+The seeds of problems are laid down early. Initial planning is the most vital part of a project. Review of most failed projects or of project problems indicates that the disasters were well planned to happen from the start.</li><br/> <li>
+Talk is not cheap. The best way to understand a personnel or technical problem is to talk to the right people. Lack of talk at the right levels is deadly.</li><br/> <li>
+Never make a decision from a cartoon. Look at the actual hardware or what real information is available, such as layouts. Too much time is wasted by people trying to cure a cartoon whose function is to explain the principle.</li><br/> <li>
+Though most of us in our youth have heard the poem that states "for want of a nail the race was lost," few of us realize that most space failures have a similar origin. It is the commonplace items that tend to be overlooked and thus do us in. The tough and difficult tasks are normally done well. The simple and easy tasks seem to be the ones done sloppily.</li> <br/><li>
+Reviews, meetings, and reality have little in common.</li> </ol>
+
+<U>Planning, Decision-making, Documentation, and Reporting</U>
+<br/>
+<ol start="26"><li>Wrong decisions made early can be salvaged, but "right" decisions made late cannot.
+</li> <br/><li>
+Never make excuses; instead, present plans of actions to be taken.
+</li> <br/><li>
+Never try to get even for some slight by another project. It is not good form. It puts you on the same level as the other person, and often ends up hindering the project getting done.
+</li> <br/><li>
+If you cultivate too much egotism, you may find it difficult to change your position, especially if your personnel tell you that you are wrong. You should instill an attitude on the project whereby your personnel know they can tell you of wrong decisions.
+</li> <br/><li>
+One of the advantages of NASA in the early days was the fact that everyone knew that the facts that we were absolutely sure of could be wrong.
+</li> <br/><li>
+Not all successful managers are competent and not all failed managers are incompetent. Luck still plays a part in success or failure, but luck favors the competent, hard-working manager.
+</li> <br/><li>
+Documentation does not take the place of knowledge. There is a great difference in what is supposed to be, what is thought to have been, and what the reality is. Documents are normally a static picture in time which is outdated rapidly.
+</li> <br/><li>
+You cannot be ignorant of the language of the area you manage or with that of areas with which you interface. Education is a must for the modern manager. There are simple courses available to learn "computerese," "communicationese," and all the rest of the modern ese's of the world. You can't manage if you don't understand what is being said or written.
+</li> <br/><li>
+All problems are solvable in time, so make sure you have enough schedule contingency. If you don't, the next project manager that takes your place will.
+</li> <br/><li>
+Abbreviations are getting to be a pain. Each project now has a few thousand. This calls on senior management to know a couple hundred thousand. Use them sparingly in presentations unless your objective is to confuse.
+</li> <br/><li>
+Running does not take the place of thinking. For yourself, you must take time to smell the roses. For your work, you must take time to understand the consequences of your actions.
+</li> <br/><li>
+Next year is always the year with adequate funding and schedule. Next year arrives on the 50th year of your career.
+</li> <br/><li>
+Today one must push the state of the art: be within budget, take risks, not fail, and be on time. Strangely, all these are consistent as long, as the ground rules, such as funding profile and schedule, are established up front and maintained.
+</li> <br/><li>
+Most of yesteryear's projects overran because of poor estimates and not because of mistakes. Getting better estimates may not lower cost but will improve NASA's business reputation. Actually, there is a high probability that the cost of getting better estimates will increase cost and assure a higher profit to industry, unless the fee is reduced to reflect lower risk on the part of industry. A better reputation is necessary in the present environment.
+</li> <br/><li>
+People who monitor work and don't help get it done, never seem to know exactly what is going on.
+</li> <br/><li>
+Bastards, gentlemen, and ladies can be project manager. Lost souls, procrastinators, and "wishywashers" cannot.
+</li> <br/><li>
+A good technician, quality inspector, and straw boss are more important in obtaining a good product than all the paper and reviews.
+</li> <br/><li>
+A comfortable project manager is one waiting for his next assignment or one on the verge of failure. Security is not normal to project management.
+</li> <br/><li>
+False starts are normal in today's environment. More than ever, in this type of environment, one must keep an ear open for the starting gun and be prepared to move out in quick and orderly fashion once it is sounded. In the past, too many false starts have resulted in the project not hearing the real starting gun or jumping off and falling on its face.
+</li> <br/><li>
+There are still some individuals who think important decisions are made in meetings. This is rarely the case. Normally, the decision-makers meet over lunch or have a brief meeting to decide the issue and then (at a meeting called to discuss the issue) make it appear that the decision is made as a result of this discussion.
+</li> <br/><li>
+Too many project managers think a spoken agreement carries the same weight as one put in writing. It doesn't. People vanish and change positions. Important decisions must be documented.</li> </ol>
+
+<U>Managing Project Staff</U>
+
+<ol start="47"><li>The source of most problems is people, but damned if they will admit it. Know the people working on your project, so you know what the real weak spots are. 
+</li> <br/><li>
+Most managers succeed on the strength and skill of their staff.
+</li> <br/><li>
+A manager who is his own systems engineer or financial manager is one who will probably try to do open heart surgery on himself.
+</li> <br/><li>
+One must pay attention to workaholics. If they get going in the wrong direction, they can do a lot of damage in a short time. It is possible to overload them, causing premature burnout, but hard to determine if the load is too much, since much of it is self-generated. It is important to make sure such people take enough time off and that the workload does not exceed 1-1/4 to 1-1/2 times what is normal.
+</li> <br/><li>
+Never undercut your staff in public; i.e., don't make decisions on work that you have given them to do in public meetings. Even if you direct a change, never take the responsibility for implementing away from your staff.
+
+</li> <br/><li>The project has many resources within itself. There probably are five to ten system engineers considering all the contractors and instrument developers. This is a powerful resource that can be used to attack problems.
+
+</li> <br/><li>A project manager should visit everyone who is building anything for his project at least once, should know all the managers on his project (both government and contractor), and know the integration team members. People like to know that the project manager is interested in their work, and the best proof is for the manager to visit them and see first hand what they are doing.
+
+</li> <br/><li>If you have a problem that requires the addition of people to solve, you should approach recruiting people like a cook who has under-salted, i.e., a little at a time.
+
+</li> <br/><li>Other than original budget information prior to the President's submittal to Congress, there is probably no secret information on the project, so don't treat anything like it is secret. Everyone does better if they can see the whole picture, so don't hide any of it from anyone.
+
+</li> <br/><li>People have reasons for doing things the way they do them. Most people want to do a good job, and if they don't, the problem is they probably don't know how or exactly what is expected.
+
+</li> <br/><li>A puzzle is hard to discern from just one piece, so don't be surprised if team members deprived of information reach the wrong conclusion.
+
+</li> <br/><li>Not using modern techniques like computer systems is a great mistake, but forgetting the computer simulates thinking is still greater.
+
+</li> <br/><li>Management principles are still the same. It is just the tools that have changed. You still should find the right people to do the work and get out of the way so they can do it.
+
+</li> <br/><li>It is mainly the incompetent that don't like to show off their work.
+
+</li> <br/><li>A working meeting has about six people attending. Meetings larger than this are for information transfer.
+
+</li> <br/><li>Sometimes the best thing to do is nothing. It is also occasionally the best help you can give. Just listening is all that is needed on many occasions. You may be the boss but, if you constantly have to solve someone's problems, you are working for him.
+
+</li> <br/><li>We have developed a set of people whose self interest is more paramount than the work or at least it appears so to older managers. It appears to the older managers that the newer ones are more interested in form than in substance. The question is-- are old managers right or just old?
+
+</li> <br/><li>Integrity means your subordinates trust you.
+
+</li> <br/><li>You cannot watch everything. What you can watch is the people. They have to know you will not accept a poor job.
+
+</li> <br/><li>There are rare times when only one man can do the job. These are in technical areas that are more art and skill than normal. Cherish these people and employ their services when necessary as soon as possible. Getting the work done by someone else takes two to three times longer, and the product is normally below standard.
+
+</li> <br/><li>There is no greater motivation than giving a good person his piece of the puzzle to control, but a pat on the back or an award helps.
+
+</li> <br/><li>Never assume someone knows something or has done something unless you have asked them. Even the obvious is overlooked or ignored on occasion-- especially in a high-stress activity.
+
+</li> <br/><li>If you have someone who doesn't look, ask, and analyze, ask them to transfer.
+
+</li> <br/><li>A person's time is very important. You must be careful as a manager that you realize the value of other people's time; i.e., work you hand out and meetings should be necessary. You must, where possible, shield your staff from unnecessary work; i.e., some requests should be ignored or a refusal sent to the requester.
+
+</li> <br/><li>Always try to negotiate your internal support at the lowest level. What you want is the support of the person doing the work, and the closer you can get to him in negotiations the better.
+
+</li> <br/><li>Whoever said beggars can't be choosers doesn't understand project management. Many times it is better to trust to luck than to get known poor support.
+
+</li> <br/><li>Projects require teamwork to succeed. Remember most teams have a coach and not a boss, but the coach still has to call some of the plays.
+
+</li> <br/><li>Gentlemen and ladies can get things done just as well as bastards. What is needed is a strong will and respect-- not "strong arm" tactics. It must be admitted that the latter does work but leaves a residue that has to be cleaned up.
+
+</li> <br/><li>Meetings, meetings. A projects manager's staff meeting should last 5 minutes minimum-- 1 hour max. Less than 5 minutes and you probably didn't need the meeting; longer than 1 hour, it becomes a bull session.
+
+</li> <br/><li>You should always check to see how long a change or action takes to get to the implementer: this time should be measured in hours and not days.
+
+</li> <br/><li>Let your staff argue you into doing something even if you intended to do it anyway. It gives them the feeling that they won one! There are a lot of advantages to gamesmanship as long as no one detects the game.
+
+</li><br/><li>The project manager who is the smartest man on his project has done a lousy job of recruitment.</li> </ol>
+
+<U>Working with Superiors</U>
+
+<ol start="79"><li>
+You and the program manager should work as a team. The program manager is your advocate at NASA HQ, must be tied in to the decision-making, and should aid your efforts to be tied in too.
+
+</li><br/><li>Never ask management to make a decision that you can make. Assume you have the authority to make decisions unless you know there is a document that states unequivocally that you cannot.
+
+</li><br/><li>Managers who rely on the paperwork to do the reporting of activities are known failures.
+
+</li><br/><li>Remember the boss has the right to make decisions, even if you think they are wrong. Tell the boss what you think but, if he still wants it done his way, do your best to make sure the outcome is successful.
+
+</li><br/><li>The boss may not know how to do the work, but he has to know what he wants. The boss had better find out what he expects and wants, if he doesn't know. A blind leader tends to go in circles.
+
+</li><br/><li>Just because you give monthly reports, don't think that you can abbreviate anything in a yearly report. If management understood the monthlies, they wouldn't need a yearly.
+
+</li><br/><li>One problem new managers face is that everyone wants to solve their problems. Old managers were told by senior management, "solve your damn problems; that is what we hired you to do."
+
+</li><br/><li>Know your management. Some like a good joke; others only like a joke if they tell it.
+
+</li><br/><li>Don't assume you know why senior management has done something. If you feel you need to know, ask. You get some amazing answers that will dumbfound you.
+
+</li><br/><li>In the rush to get things done, it is always important to remember who you work for. Blindsiding the boss will not be to your benefit in the long run. Over-engineering is common. Engineers like puzzles and mazes: try to make them keep their designs simple.</li> </ol>
+
+<U>Customer/Stakeholder Relations</U>
+
+<ol start="89"><li>Remember who the customer is and what his objectives are; i.e., check with him when you go to change anything of significance.
+
+</li><br/><li>NASA programs compete for budget funds-- they do not compete with each other. That is, you never attack any other program or NASA work with the idea you should get their funding. Sell what you have on its own merit.
+
+</li><br/><li>Know who the decision makers on the program are. It may be someone on the outside who has the ear of Congress, or the Administrator, or the Associate Administrator, or one of the scientists, or someone in the chain of command. Whoever they are, try to get a line of communication to them on a formal or informal basis.
+
+</li><br/><li>Know the resources of your center and if possible other centers. Other centers, if they have the resources, are normally happy to help. It is always surprising how much good help one can get by just asking.
+
+</li><br/><li>Whoever you deal with, deal fairly. Space is not a big playing field. You may be surprised how often you have to work with the same people. Better they respect you than carry a grudge.
+
+</li><br/><li>Most international meetings are held in English. This is a foreign language to most participants such as Americans, Germans, Italians, etc. It is important to have adequate discussions so that there are no misinterpretations of what is said.
+
+</li><br/><li>NASA Management Instructions (NMIs) are written by another NASA employee like yourself; therefore, challenge them if they don't make sense. It is possible another NASA employee will rewrite them or waive them for you.
+
+</li><br/><li>Many managers, just because they have the scientists under contract on their project, forget that the scientists are their customers and many times have easier access to top management than the managers do.
+
+</li><br/><li>Most scientists are rational unless you endanger their chance to do their experiment. They will work with you if they believe you are telling them the truth. This includes reducing their own plans.
+
+</li><br/><li>Cooperative efforts require good communications and early warning systems. A project manager should try to keep his partners aware of what is going on and should be the one who tells them first of any rumor or actual changes in plan. The partners should be consulted before things are put in final form, even if they only have a small piece of the action. A project manager who blindsides his partners will be treated in kind and will be considered a person of no integrity.
+
+</li><br/><li>A scientific proposal takes about 9 months to put together. It takes NASA HQ about 9 months to a year to select the winning proposals. Then, it takes 3 to 4 years to sell the program. This means 5 to 6 years after the initial thoughts, the real work starts. Managers, for some strange reason, do not understand why a scientist wants to build something different than proposed. Managers are strange people.
+
+</li><br/><li>Remember, the President, Congress, OMB, NASA HQ, senior center management, and your customers all have jobs to do. All you have to do is keep them all happy.
+
+</li><br/><li>An agency's age can be estimated by the number of reports and meetings it has. The older it gets, the more the paperwork increases and the less product is delivered per dollar. Many people have suggested that an agency self-destruct every 25 years and be reborn starting from scratch.
+
+</li><br/><li>The pioneering phase of NASA is mostly done, if not actually, by fiat. This means the difficult and more important work has started. This work requires more discipline, but there should still be room for innovation.
+
+</li><br/><li>In political decisions, do not look for logic-- look for politics.
+
+</li><br/><li>Interagency agreements are hard to make even if there is no conflict in the responsibilities and the requirements do satisfy both parties. Conflict in these areas normally leads to failure no matter how hard the people involved try to make an agreement.
+
+</li><br/><li>In dealing with international partners, the usual strategy is to go 1 day early, meet with your counterpart, discuss all issues to be brought up at a meeting, arrive at an agreeable response (or a decision to table the issue for later discussion), and agree not to take any firm positions on any new issues brought up at the meeting. This makes it appear to the rest of the world that you and your counterpart are of one mind and that the work is in good hands. All disputes are held behind closed doors with the minimum number of participants.
+
+</li><br/><li>In the "old NASA," a job done within schedule and cost was deemed to be simple. The present NASA wants to push the start of the art, be innovative, and be a risk taker but stay on schedule and cost. One gets the feeling that either the new jobs will be simple or that the reign of saints has finally occurred.
+
+</li><br/><li>Too many people at Headquarters believe the myth that you can reduce the food to the horse every day till you get a horse that requires no food. They try to do the same with projects, which eventually end up as dead as the horse.</li> </ol>
+
+<U>Contractor Relations</U>
+
+<ol start="108"><li>Contractors respond well to the customer who pays attention to what they are doing, but not too well to the customer that continually second-guesses their activity. The basic rule is: a customer is always right, but the cost will escalate if a customer always has things done his way, instead of the way the contractor had planned. The ground rule is never change a contractor's plans unless they are flawed or too costly: "better is the enemy of good."
+
+</li><br/><li>A project manager must know what motivates the project contractors, i.e., their award system, their fiscal system, their policies, and their company culture.
+
+</li><br/><li>Contractors tend to size up their government counterparts, and staff their part of the project accordingly. If they think yours are clunkers, they will take their poorer people to put on your project.
+
+</li><br/><li>Award fee is a good tool that puts discipline both on the contractor and the government. The score given represents the status of the project as well as the management skills of both parties. The Performance Measurement System (PMS) should be used to verify the scores. Consistent poor scores require senior management intervention to determine the reason. Consistent good scores, which are consistent with PMS, reflect a well-run project, but if these scores are not consistent with the PMS, senior management must take action to find out why.
+
+</li><br/><li>A project manager is not the monitor of the work but is to be the driver. In award fee situations, the government personnel should be making every effort possible to make sure the contractor gets a high score, i.e., be on schedule and produce good work. Contractors don't fail, NASA does, and that is why one must be proactive in support. This is also why a low score damages the government project manager as much as the contractor's manager because it means he is not doing his job.
+
+</li><br/><li>Being friendly with a contractor is fine: being a friend of a contractor is dangerous to your objectivity.
+
+</li><br/><li>Morale of the contractor's personnel is important to a government manager. Just as you don't want to buy a car built by disgruntled employees, you don't want to buy flight hardware built by them. You should take an active role in motivating all personnel on the project.
+
+</li><br/><li>Remember your contractor has a tendency to have a one-to-one interface with your staff; so every member of your staff costs you at least one person (about a 1/4 of a million) on the contract per year.
+
+</li><br/><li>There is only one solution to a weak project manager in industry: get rid of him fast. The main job of a project manager in industry is to keep the customer happy. Make sure the one working with you knows that "on schedule, on cost, and a good product"-- not flattery-- is all that makes you happy.
+
+</li><br/><li>Taking too many people to visit a contractor or other government agency puts them in the entertainment business-- not the space hardware or software business.
+
+</li><br/><li>Too many engineers get in the habit of supporting support contractors and of using them as a crutch. In many cases it is getting to the point where one has to wonder who is who.
+
+</li><br/><li>Some contractors are good, some are bad, but they seem to change places over time, making the past no guarantee of the future. Thus, constant vigilance is a project requirement.
+
+</li><br/><li>It is rare that a contractor or instrumentor does not know your budget and does not intend to get every bit of it from you. This is why you have to constantly pay attention to the manpower they use and to judge their activities in order to assure that they are not overloading the system.
+
+</li><br/><li>Too much cost data on a proposal can blind you to the real risks or forgotten items. On a project we thoroughly knew, we spent 6 months of government and contractor time validating the cost, had rooms full of data, and presented our findings to Headquarters. Two weeks later, the contractor found an "Oh I forgot" that costs $30 million. One should look at how past programs spent their money to try to avoid these traps.
+
+</li><br/><li>There are some small companies that make the same subsystem correctly every time because the same people do it. There are some large companies that can never make the same unit correctly every time because different people do the work each time. Heritage should be questioned when the people doing the work all have peach fuzz on their faces.</li> </ol>
+
+<U>References</U>: <ol><li>ASK Magazine, October 2003, NASA Academy of Program/Project and Engineering Leadership (APPEL), http://appel.nasa.gov/ask/issues/14/practices/ask14_lessons_madden.html
+</li> </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Guiding principles exist that are widely applicable to NASA flight projects and other high risk development efforts.
+</section>
+<section><h2>Recommendation(s)</h2>
+See "Description of Driving Event"
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.4 ("Management Practices: Project Organization, Roles and Responsibilities, Internal Communications, and Decision-Making") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 6," JPL DocID 58032, March 6, 2006.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NPR 7120.5D, NASA Space Flight Program and Project Management Requirements http://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_7120_005D_
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

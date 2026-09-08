@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0878: Orbiter S-Band Uplink Monitoring System</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0878: Orbiter S-Band Uplink Monitoring System</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0878 (Database ID: 878)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/878" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-18 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p>Maintainability of the S-Band Uplink Monitoring System is enhanced by providing a means to pinpoint faults should they occur. Reliability is also enhanced by ensuring the communication signals are transmitted as intended.</p> 
+<p>The Goddard Unified S-Band (GUSB) system transmits voice and data signals via free space to two antennas at the launch pad; the Orbiter S-Band Antenna and the Monitor S-Band Antenna on the Fixed Service Structure (FSS). Both antennas receive the same signal. The signal from the Monitor Antenna is retransmitted over an optional link, demodulated at the Orbiter Processing Facility (OPF) and compared to the signal being sent from GUSB (See Figure 1).</p> 
+<img alt="refer to [D] description" border="0" height="713" src="https://llis.nasa.gov/llis_lib/images/1009384main_0878-1.jpg" title="refer to [D] description" width="467"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009859main_0878-1.txt">[D]</a> 
+<br> 
+<b>Figure 1. S-Band Uplink Monitoring System Block Diagram</b> 
+<p>The GUSB voice and data communications are critical, particularly during launch countdown. However, transmissions can be distorted because of a transmission frame error, a discontinuity in Radio Frequency (RF) signal level, or a response to harmonics. Concerns arise about the information reaching the Orbiter: Is it error free? Is it identical to that which was transmitted? The S-Band Uplink Monitor System answers these questions continuously throughout launch countdown. This system detects such problems; furthermore, it provides a frame of reference whereby engineers can troubleshoot and pinpoint the errors to the following areas:</p> 
+<ul> 
+ <li>The GUSB transmitter</li> 
+ <li>The receiver on-board the Orbiter</li> 
+ <li>The Orbiter's on-board sensor</li> 
+ <li>The monitoring receiver in the OPF</li> 
+</ul> 
+<p>This capability enhances the maintainability of the monitoring system, as well as the GUSB transmission system, by providing this pinpointing capability.</p> 
+<p>RF Transmission</p> 
+<p>The GUSB antenna transmits the modulated S-Band signal (2106 or 2041 MHZ, payload dependant) at several levels during the countdown: 10KW, 1KW, 200 W, 16 µW. The Uplink Monitor S-Band Antenna receives the incoming S-Band Signal at the 295-foot level of the FSS. The antenna was designed to be located as close as possible to the Orbiter S-Band Antenna in order to receive the same signal in terms of strength and noise content. The signal is then split at half power between two channels.</p> 
+<p>The channel selected depends on the GUSB signal power. The channels are identical except for their variable attenuator settings. The high power channel has high attenuation so the optical transmitter does not saturate; the low power channel has low attenuation so the signal has considerable strength when it reaches the optical transmitter input.</p> 
+<p>After the signal passes through the directional coupler, the RF amplifier in each channel boosts the signal with a +52dB gain to acquire optimum signal strength through the optical link. This assures an adequate signal strength at the receiver in the OPF after passing through the final directional coupler.</p> 
+<p>Fiber-Optic Link</p> 
+<p>The signal is now transmitted to the OPF through an optical link. The use of fiber over a long distance minimizes both attenuation and noise interference. In addition, electromagnetic interference is non-existent when transmitting over fiber optics. For these reasons, the fiber-optical link covers a sizable distance of the system's total transmission range (up to 8 KM for Pad B).</p> 
+<p>The optical power at the transmitter is set to allow for losses in the optical link and still be above the sensitivity of the optical receiver in the OPF. The number of patch panels and fiber optic connectors are kept to a minimum to minimize losses during the routing of the signal to the OPF.</p> 
+<p>Two fiber optic couplers are used because the system is required to transmit the signal from either launch pad to OPF-1, 2 or OPF-3. The first coupler is a single-mode 2X2 which allows two inputs such as the low-power channels from Pads A and B to transmit to OPF 1, 2 on output 1 and to OPF-3 on output 2. The second coupler is configured similarly, except that the high power channels feed the inputs.</p> 
+<p>The fiber optical receivers in the OPF communications and Tracking Laboratory receive the modulated optical signal. At this point the signal is demodulated off the light wave and coupled to the S-Band receiver in the OPF where it is compared with that coming off an S-band receiver that is monitoring the GUSB. Information is demodulated from the carrier and recorded by a frame-check computer that indicates the bit-error count. It is at this point that engineers can determine if the S-Band signal received at the Orbiter is accurate and detectable.</p> 
+<p>Reference:</p> 
+<ol> 
+ <li>KSC Drawing 80K54080.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>During the Space Shuttle launch countdown, various computers and multilogic Command Control Units (CCUs) aboard the Orbiter await data feeds from Control Centers at both Kennedy and Johnson Space Centers. These CCUs activate Orbiter sensors that provide the launch team with vital data such as temperature and pressure readings. In addition to data, voice communications from JSC are transmitted directly to the Orbiter Flight Crew.</p> 
+<p>The S-Band Monitoring System provides verification that these signals arrive at the launch pad error-free. It also provides the means to pinpoint the source of any errors, should they occur.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The S-Band Uplink Monitoring System provides the means to verify the voice and data communications received by the Orbiter while at the launch pad are complete and error-free.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

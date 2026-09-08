@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0692: Coordinate Systems for Attitude Determination and Control</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0692: Coordinate Systems for Attitude Determination and Control</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0692 (Database ID: 692)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/692" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2211 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The primary benefit is increased mission reliability due to a reduction in design errors occurring during spacecraft development caused by inconsistent coordinate frame definitions. A document will be created early in the development of a spacecraft mission defining Attitude Control System (ACS) coordinate frames which will facilitate data transfer among subsystem engineers, speed documentation and communication during design and analysis reviews, expedite verification of instrument and sensor pointing, and assure that a record of the coordinate frames used will be available throughout mission planning, design, analysis, and flight.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Early in the development stages of a mission program, a document should be created, published, and distributed to all ACS and ACS related mission engineers. This document will list coordinate frame definitions needed for ACS design and analysis. It should also be periodically updated as mission objectives evolve and hardware changes are made. The following discusses ACS coordinate frame definitions and the format for listing them in the ACS Coordinate Frames Definition Document.</p>
+
+    <p>1. <u>Overview of Coordinate Frame Definitions for ACS Design and Analysis:</u></p>
+
+    <p>ACS coordinate frames contain an origin location and three unit vectors emanating from that origin. "The most convenient set of these vectors is a dextral (i.e., right-handed), orthonormal (i.e., mutually perpendicular and of unit length) triad" [reference 4, p. 6]. Vector quantities can be expressed as projections onto each of the three triad unit vectors of a coordinate frame. Triads or frames can be related to each other through the use of rotation matrices [reference 4, pp. 8-10], thus permitting the expression of vectors in any desired frame. With the use of coordinate frames and vectors, the orientation and changes in orientation of spacecraft, celestial bodies, instruments, mechanisms, and other ACS related hardware and objects can be described.</p>
+
+    <p>An <i>overall</i> base coordinate frame must be defined relative to which all other coordinate frames (discussed below) are defined. In many cases, this overall base frame will be an inertial frame which is used to determine overall mission success. For example, if the primary mission of the spacecraft is to point instruments at the sun, a good choice for the <i>overall</i> base frame might be the heliocentric reference frame [reference 7, p. 29] since the sun's motion can be easily established in this frame.</p>
+
+    <p>Typically, within the ACS subsystem, several design issues must be addressed. These design issues can often be arranged into categories, such as overall spacecraft pointing; environmental disturbances; spacecraft mass properties; sensor, actuator, and instrument motion; and flexible body dynamics. A category reference frame should be established to address each design issue. For example, when modeling environmental disturbances in Earth orbit, an Earth centered inertial frame is usually used as the category reference frame. For defining the spacecraft mass properties, sensor, actuator, and instrument motion, and flexible body dynamics the category reference is some sort of spacecraft body fixed coordinate frame. If information is to be transferred between these ACS categories, transformations can be established through the overall base coordinate frame discussed above.</p>
+
+    <p>Additional coordinate frames may be needed to define the motion or effect to be modeled within an ACS category. The effect to be analyzed may be defined in terms of an intermediate axis with this intermediate axis related back to the category reference frame. The coordinate frames needed for defining spacecraft motion within the orbital plane provide a good example of this process. A frame which is fixed to the spacecraft is defined first. This frame is used to define the motion of the spacecraft relative to the orbit plane. Then, a frame which is fixed to the orbital plane is used to define the motion of the orbit plane relative to an inertial frame. The result will determine the spacecraft motion relative to the inertial frame.</p>
+
+    <p>Another example of the use of intermediate axes for addressing ACS design issues is the relationship among sensor and instrument reference frames. One axis of these frames is almost always defined along the boresight of the sensor or instrument. The other two axes should match some other characteristics (e.g., parallel to the edges of a square field of view). The origin is at any convenient point. The relationships of the nominal and "tracking" (a frame that moves with the boresight to track the sensor motion) boresight frames to the category reference can be achieved in many different ways depending on accuracy and knowledge requirements. Several intermediate frames might be needed to achieve these relationships. Often, both the nominal and tracking boresight frames must be related to a payload interface frame, and all requirements of alignment are specified between this interface frame and another frame, the spacecraft optical frame. Typically, the interface frame axes are
+    nominally parallel to the spacecraft optical axes, and the optical axes are defined with respect to an optical master reference cube. The nominal position of this cube relative to the spacecraft mechanical build axes (used for defining hardware locations within the spacecraft) must be defined next. Finally, this mechanical build frame may be used as the category reference or is then related to the category reference. The figure below shows the nominal orientations of these frames used in the SOHO spacecraft [reference 1, p. 2.8].</p>
+
+    <p>This example demonstrates the process of how coordinate frames are used to define the sensor and instrument pointing relative to its category reference frame.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009068main_0692-1.jpg"  HEIGHT="474"  BORDER="0" /><A HREF="/llis_lib/txt/1009550main_0692-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>A discussion of the frames needed to model how actuators are used for attitude control is presented as a final example of the use of intermediate frames. Momentum wheels, control moment gyros (CMG's), torque rods, and thrusters are commonly used control actuators. Frames are needed to represent the nominal orientation and location, misalignments produced when installing, and movement of the actuators. Also, rotation matrices which relate these frames to the category reference, usually the spacecraft ACS axes, must be determined. As a specific example, consider the frames needed in distributing control torques among a reaction wheel set containing 4 wheels. The wheels are usually aligned in a pyramid configuration as shown below. A frame is first defined for each wheel with one axis along the spin axis of each wheel. Then, rotation matrices are created relating each wheel frame to the spacecraft ACS frame (called roll, pitch, and yaw for this case). This example demonstrates how
+    intermediate and category frames are used to relate the orientation and motion of actuators (in this case, reaction wheels) to achieve desired torques.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009069main_0692-2.jpg"  HEIGHT="130"  BORDER="0" /><A HREF="/llis_lib/txt/1009551main_0692-2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>2. <u>Document Format</u></p>
+
+    <p>A suggested format or outline for the coordinate frame definitions document is summarized below. However, this format is only a guide, and the user may need to change or add to the format depending on the spacecraft mission. Since the choices of ACS coordinate frames to be defined are dependent on the overall spacecraft pointing objectives and the proposed ACS mission hardware required, these topics should be discussed first. To avoid any ambiguity, coordinate system symbols and nomenclature to be used should be listed next. Specific coordinate frame definitions should follow -- an overall base frame, category reference frames, and frames needed within each category. Finally, a way of relating all the coordinate frame definitions should be included.</p>
+
+    <center>
+      <table border="1" width="90%">
+        <tr>
+          <th colspan="2">ACS Coordinate Frames Definition Outline</th>
+        </tr>
+
+        <tr>
+          <td>Document Title</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>Table of Contents</td>
+
+          <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+          <td>Mission Objectives,<br />
+          Requirements, and Criteria for<br />
+          Success</td>
+
+          <td>State overall spacecraft pointing objectives and specifications</td>
+        </tr>
+
+        <tr>
+          <td>Overview of ACS Hardware</td>
+
+          <td>State what instruments, control actuators, and other mechanisms are being used for sensing, data collection, and control actuation</td>
+        </tr>
+
+        <tr>
+          <td>Nomenclature and Symbols</td>
+
+          <td>Discuss the nomenclature and symbols to be used for the coordinate frame definitions</td>
+        </tr>
+
+        <tr>
+          <td>Overall Base Frame Definition</td>
+
+          <td>Define a frame to which all other frames are referenced.</td>
+        </tr>
+
+        <tr>
+          <td>Category Frames</td>
+
+          <td>Group design issues into appropriate categories, e.g., spacecraft, instrument, and sensor pointing, actuator sizing, environmental disturbances, spacecraft mass properties, etc.<br />
+          <br />
+          Within each category, a category reference frame should be listed along with all other frames needed to address design and analysis issues. Figures showing the physical relationships among these frames would be helpful.</td>
+        </tr>
+
+        <tr>
+          <td>Coordinate Frame<br />
+          Transformations</td>
+
+          <td>Relate each frame to the overall base frame.</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The first section of the document (after the table of contents) states the overall mission objectives and the criteria for a successful operation. The objectives include a list of celestial, Earth based, or other bodies to which the spacecraft and instruments must point. A discussion of the pointing accuracy and knowledge error definitions and specifications for performance needs to be given. Orbit parameters, spacecraft mass properties, and any issues that might affect the mission objectives or success criteria are provided in this section. This section will aid the reader in understanding the rationale behind the choice of coordinate frames.</p>
+
+    <p>The second section of the document contains an overview of ACS hardware. Included in this discussion are locations, orientations, and functions of all ACS related hardware. The locations and orientations are best shown with a figure or a reference to an interface drawing. If the hardware moves or reorients itself (such as solar array rotation to track the sun) relative to the spacecraft, this change is to be documented. The anticipated effects of flexibility should also be considered.</p>
+
+    <p>Instrument and attitude sensor functions are given in relation to the overall ACS concept. For example, a magnetometer is used to determine the magnetic field of the Earth relative to the spacecraft. The location and orientation of the magnetometer relative to the spacecraft needs to be given, along with a statement of how the magnetometer may be used in conjunction with other ACS hardware and software. The magnetometer output may be used for attitude sensing or for determining when to pulse a torque rod to provide an attitude control moment. These different functions for the magnetometer may result in different coordinate frame choices.</p>
+
+    <p>The third section of the document needs to discuss the nomenclature and symbols to be used for the coordinate frame definitions. The format may vary depending on the spacecraft mission. An example definition taken from reference 6 [p. 4], and shown below, demonstrates a possible format which may be used for defining reference frames. A descriptive or commonly used name is given first. A one or two letter symbol is listed next, which is also used for labeling the vectors comprising the axes of the frame. Then, a description of the frame is provided, and this description is to contain enough detail to unambiguously locate the frame.</p>
+
+    <center>
+      <table width="75%">
+        <tr>
+          <td><b>Equatorial Inertial Coordinate System, E (E1, E2, E3)</b><br />
+          This is the basic inertial coordinate system. All other coordinate systems are defined with respect to E. The origin is at the center of the Earth. The E3 axis is in the equatorial plane and it is positive toward the vernal equinox. The E2 axis is perpendicular to the equatorial plane, and it is positive toward the Earth's North Pole. (The E1 axis completes the orthogonal triad.) The vernal equinox position is defined as its mean position at 1950.0.</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>All the frames included in the document are related to the overall base frame. Rotation matrices are commonly used to convert components of vectors from one frame to another, and the development of the mathematics is available in the literature [reference 4, pp. 6-31], [reference 6, pp. 10-20], and [reference 7, pp. 410-420, 758-759]. To avoid any ambiguity in the definitions of coordinate frame rotations and their matrices, a discussion of this topic is to be included at the beginning of this section of the document. This discussion should include definitions of Euler angles, quaternions, direction cosine matrices, or other mathematics to be used to relate the frames. Then, a table or any convenient format is included at the end of the document which contains information relating each frame back to the overall base frame. Finally, figures illustrating the nominal relationships among all these frames and the possible reorientations of the frames during flight is essential and
+    is included in the document.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Due to the increased complexity of ACS work for spacecraft, a document is needed in the early stages of the project development which contains consistent and well-defined coordinate system definitions. Definitions are needed to accurately communicate within and between various design and analysis disciplines affecting ACS performance. These disciplines include spacecraft pointing, environmental disturbances, spacecraft mass properties, sensors, actuators, and instrument motion, structural dynamics, and mechanisms.</p>
+
+    <p>Analytical and design mistakes can occur due to communicating erroneous information within and between design and analysis groups. This erroneous communication can be caused by inconsistent or ambiguous coordinate frame definitions. If a document listing coordinate frames to be used for ACS design and analysis is published and adhered to, then many problems can be avoided. For example, an ACS engineer may need to know the mass and inertia of the spacecraft in order to simulate the dynamics. However, when obtaining this information from structural or design engineers, often the ACS and the structural body frames are not consistent. If a mission standard was established early in the program life, both body frames would be consistent, or at least, the creation of a rotation matrix between frames would be readily obtained.</p>
+
+    <p>Documentation of ACS frames would also be clear, consistent, and complete if this guideline is followed. During preliminary and critical design reviews, much time is spent searching for definitions of ACS frames and information relating those frames. If all the frames are compiled into one document and are related to an overall base frame, considerable time and effort will be saved.</p>
+
+    <p>Verification of spacecraft, instrument hardware, and other mechanism pointing will be facilitated. Often it is necessary to visually or otherwise make "sanity" checks to make sure that component rotations will result in the desired orientation. For example, for Earth orbiting spacecraft it is necessary as part of the mission systems verification to make sure that spacecraft solar arrays "track" the sun. To make this verification, the sun and the solar array normal vectors must be written in the same frame and compared. This process involves several coordinate frame rotations which should be defined in the document generated through this guideline.</p>
+
+    <p>An accurate record of these coordinate frames will be available throughout mission planning, development, and flight. If during development of hardware and software for flight a technical glitch occurs, it will be necessary to review the ACS design analysis work performed. Without documented ACS coordinate definitions, analyses may be difficult to validate causing additional costs and delays in the mission. Also, ACS engineers will be able to review coordinate frame definitions created with this guideline enabling them to better plan and analyze for future spacecraft missions.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Berner, C., "SOHO Solar Terrestrial Science Programme Experiment Interface Document, Part A," PLP/410/EID A, January 7, 1990.</li>
+
+      <li>Ford, Terry, Spacecraft PDR Update, "EOS Pointing Error Budgets, Prediction, and Verification Concept," EOS-DN-SE&amp;I-043 Rev A, August, 1993.</li>
+
+      <li>Frederick, Martin E., "Tropical Rainfall Measurement Mission, Attitude Control System Specification," Goddard Space Flight Center, Greenbelt, Maryland, TRMM -712 - 046, August 13, 1993.</li>
+
+      <li>Hughes, Peter, C., Spacecraft Attitude Dynamics, John Wiley and Sons, Inc., 1986.</li>
+
+      <li>Kaplan, Marshall, H., Modern Spacecraft Dynamics and Control, John Wiley and Sons, Inc., 1976.</li>
+
+      <li>Kennel, Hans F. , "Space Telescope Coordinate Systems, Symbols, and Nomenclature Definitions", Systems Dynamic Laboratory, George C. Marshall Space Flight Center, Alabama, NASA TM X-73343, September, 1976.</li>
+
+      <li>Wertz, James R., "Attitude Geometry," Spacecraft Attitude Determination and Control, Kluwer Academic Publishers, Netherlands, 1991.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The primary impact of nonpractice is reduced reliability of ACS caused by mis-communication of technical information. The result of mis-communication can vary in severity -- from a delay in schedule to resolve any discrepancies, to the cost of reworking ACS components, to (in the extreme) an un-recoverable mission failure due to ACS design errors.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This guideline provides a procedure which specifies and documents consistent, useful, and well-defined coordinate system (or frame) definitions for spacecraft attitude control design and analysis. Several example coordinate frames and transformations are presented to show how these definitions are used to address various Attitude Control System (ACS) design issues. Past experience has shown the most efficient convention varies from project to project as a function of mission type, constraints, and performance requirements. This procedure addresses the process and documentation to reliably define the most efficient reference frame convention for a given mission or spacecraft.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2044: MRO Articulation Keep-Out Zone Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2044: MRO Articulation Keep-Out Zone Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2044 (Database ID: 2044)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-04-06</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Operations,  Software,  Spacecraft,  Test & Verification,  Orbiting Vehicles,  Robotics,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Ground support systems,  Mission operations systems,  Planetary Operations,  Configuration Change Control,  Early requirements and standards definition,  Engineering design and project processes and standards,  Level II/III requirements definition,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2044" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Mars Reconnaissance Orbiter (MRO) was launched in August 2005 with a mission to study the Martian climate, identify water-related landforms and aqueous deposits, characterize potential landing sites for Mars landers, and provide UHF relay for science data produced by these future missions. The spacecraft features three articulated, motorized, appendages: one High Gain Antenna (HGA) that tracks Earth to downlink science data and two Solar Arrays (SA) that track the Sun to supply spacecraft power. Their pointing is controlled by flight software (FSW) that limits each appendage's acceleration/deceleration and rate of motion, in each axis, toward the final inner and outer gimbal angles needed to point the appendage at the target. All FSW pointing commands must pass through a Keep Out Zone (KOZ) algorithm that constrains each appendage's motion within a swept volume that prevents inadvertent contact with the spacecraft structure, another appendage, or the payload field-of-view. 
+<br> 
+<br> The MRO KOZ, instead of being defined as an inviolate area, was defined as a space where appendage motion would be arrested and reversed. A KOZ boundary that was somewhat flexible-- often referred to as a quotreaction zonequot-- was implemented so that appendage motion could be safely constrained without incurring sudden stops and jitter that could degrade high resolution imaging. The KOZ algorithm's control parameters limited the depth of penetration into this area to a fraction of the distance between the boundary and any possible physical contact. Such an implementation, rather than inviolate boundaries with the familiar 'hard' and 'soft' stops on the actuators, was chosen for implementing the movement of the two-axis gimbal called upon to execute MRO's complex coordinated motions. Keeping the penetrations small and benign was accomplished by setting appropriate control parameters. The allowed spaces (Figure 1) were determined through pre-flight analysis and were verified by testing. 
+<br> &nbsp; 
+<img alt="Figure 1 is a color diagram of the three-dimensional geometry of MRO appendage motion. It depicts the spacecraft bus as connected to the HGA and the two SAs. The HGA sweeps an area, separate from the volume that contains the bus, that is depicted as a grey torus. Each SA sweeps a yellow-colored area about the bus that occupies a slice of pie that (in a plane orthogonal to the HGA volume) each represents about a third of a pie." border="0" height="268" src="https://llis.nasa.gov/llis_lib/images/1022016main_2009-01_Appendage_Fig1.jpg" title="Figure 1 is a color diagram of the three-dimensional geometry of MRO appendage motion. It depicts the spacecraft bus as connected to the HGA and the two SAs. The HGA sweeps an area, separate from the volume that contains the bus, that is depicted as a grey torus. Each SA sweeps a yellow-colored area about the bus that occupies a slice of pie that (in a plane orthogonal to the HGA volume) each represents about a third of a pie." width="450"> &nbsp; 
+<b>Figure 1.</b> Three shaded areas depict the geometry of MRO two-axis gimbal management 
+<br> In November 2007, one year after MRO began science operations, an anomalously large SA appendage KOZ violation occurred, resulting in actual appendage contact with a thermal blanket (Reference (1)). Mechanical resistance by the blanket caused motor rate errors that onboard fault protection interpreted as failure of both redundant gimbal motors, and fault protection commanded a warm reset of the flight computer and entry into safe mode. The SA contacted the spacecraft because the appendage motion needed to reach the targeted gimbal angles placed it near a quotkinematic singularity.quot 
+<sup>1</sup> Travelling at the maximum allowed rate, the appendage's maximum allowed deceleration was insufficient to arrest the appendage's motion after it penetrated the KOZ and before it resulted in contact. The parameters for the combination of maximum rate and maximum acceleration had been set pre-launch to values that were incorrect for KOZ enforcement. The interactions between these critical parameters were not well-documented, and their effect on KOZ penetration escaped detection in the pre-launch verification and validation process. 
+<br> 
+<br> The non-standard implementation approach for the KOZ was exacerbated by miscommunications caused by imprecise terminology, and by staff turnover. Hence, the elastic nature of the boundary and the potential for a kinematic singularity were not widely understood throughout the MRO flight system team (Reference (2)) or by the FSW developers responsible for the algorithm implementation. The project failed to write and verify a spacecraft system-level design requirement that completely defined all potential combinations of appendage movement directions and rates in order to prevent inadvertent contact. There were also no requirements for back-up measures to prevent collisions. 
+<br> 
+<br> The KOZ violation and spacecraft contact by the SA caused no detectable damage, but science operations were halted for two months until it was determined that the mission could safely continue. The MRO project has implemented corrective actions that have greatly reduced the residual risk of future MRO appendage collisions. 
+<p style="font-size:smaller;"><sup>1</sup>Two-axis gimbal systems can be used to point anywhere in three-dimensional space, except when the inner gimbal axis (fixed to the spacecraft body) becomes aligned with the desired target vector. In this case the inner axis becomes useless for pointing control. This is known as a quotkinematic singularity.quot Near the singularity, small pointing changes require that the inner axis moves a very large amount at very high speed (in the limit it must move 180 degrees at infinite speed).</p> 
+<u>References</u>: 
+<ol> 
+ <li>quotMRO Reboot on 2007-311T15:20:59,quot JPL Problem/Failure Report No. Z92078 (ISA Z91824), January 15, 2008.</li> 
+ <li>quotMars Reconnaissance Orbiter Articulation Keep-Out Zone Anomaly Final Report,quot JPL Document Nos. MRO-565-86 and JPL D-37648, October 27, 2008.</li> 
+ <li>Todd J. Bayer, quotSystems Engineering Lessons Learned from the Mars Reconnaissance Orbiter Mission,quot NASA/Caltech Jet Propulsion Laboratory, December 2, 2008.</li> 
+ <li>Robert D. Rasmussen, Gurkirpal Singh, David B. Rathbun, and Glenn A. Macala, quotBehavioral Model Pointing on Cassini Using Target Vectors,quot Proc. SPIE 2803, 271 (1996), DOI:10.1117/12.25342. http://spiedl.aip.org/getpdf/servlet/GetPDFServlet?filetype=pdf&amp;id=PSISDG002803000001000271000001&amp;idtype=cvips&amp;prog=normal</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>MRO appendage KOZ Level 3 design requirements proved insufficient to prevent collision between an appendage and the spacecraft. Even faithful compliance with the quottest-as-you-flyquot rule does not cover all circumstances-- in this case motion associated with a unique geometric configuration. A requirement for a design implementation that would prevent penetration into a KOZ should have been written and verified. An early, relatively simple, parametric or Systems Modeling Language (SysML) diagramming activity would have quickly cleared up misunderstandings and led to correct and complete requirements (Reference (3)).<br />  </li> 
+ <li>Robust and fault resistant pointing capabilities are essential to the ultimate development of fully autonomous systems for future missions.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+Design and verification of kinematically complex systems such as spacecraft appendage control should observe the following principles: 
+<ol> 
+ <li>Re-affirm the importance of precision in requirements language.<br />  </li> 
+ <li>Consider applying special techniques to increase confidence in requirements quality and verification completeness. For example, construct SysML or State Analysis models to ensure requirements discovery is complete and to allow early simulations.<br />  </li> 
+ <li>Consider implementing a robust appendage motion backstop capability, such as an independent software stop, in the design of configurable articulation KOZs.<br />  </li> 
+ <li>Never ask control laws to exceed your control authority. For example, the Cassini project profiled all inputs to control laws such that any rate that would violate a keep-out constraint would be changed (i.e., to something achievable by the control laws) or would be aborted (Reference (4)).</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.4.4 (quotEngineering Practices: System Engineeringquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008. 
+<br /> 
+<br /> In addition, JPL has referenced it supporting Paragraph 4.11.5 (quotFlight System Design: Flight Software System Design - Verificationquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

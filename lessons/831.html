@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0831: Maintainability Program Management Considerations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0831: Maintainability Program Management Considerations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0831 (Database ID: 831)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/831" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number PM-2 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Early and effective planning and implementation of a maintainability program can significantly lower the risk of reduced system operational effectiveness resulting from maintainability design shortfalls. This reduces maintenance time/support, which directly relates to reduced operating costs and increased system operational time.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>This technique outlines management considerations to observe when applying the principles of maintainability on a program at NASA. It also provides information on how to realize cost savings and reduced system downtime. This information complements PM-1, "Benefits of Implementing Maintainability on NASA Programs," by providing guidelines for establishing a maintainability program once the benefits have been understood.</p>
+
+    <p>Program management is responsible for establishing proper integration of maintainability early in program development and ensuring adequate control of the application of the maintainability discipline throughout the development program. Figure 1 provides flow diagram for an effective Maintainability program beginning with development of its goals and objectives , followed by development of the program/system maintenance concept and the Maintainability Program Plan, and establishment of program control and evaluation during design, production (manufacturing) and operations. The order of these program development elements is important, as each affects the next step in the process.</p>
+
+    <center>
+      <IMG  WIDTH="475"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009337main_0831-1.jpg"  HEIGHT="550"  BORDER="0" /><A HREF="/llis_lib/txt/1009812main_0831-1.txt"  >[D]</A><br />
+      Figure 1: Maintainability Program Development
+    </center>
+
+    <p>(1) ESTABLISH MAINTAINABILITY AS PART OF THE OVERALL SYSTEMS ENGINEERING AND OPERATION PLANNING PROCESS.</p>
+
+    <p>Set Goals and Objectives</p>
+
+    <p>One of the missions of the maintainability program is to measure the ability of an item to be retained or restored to a specified condition when maintenance is performed. The degree of maintainability designed into a system should reflect the function (mission) of the system/subsystem and the impact on operational objectives of the program if the system is non-operational for any length of time. System availability (the ability of the system to operate whenever called upon to do so) is very important, and maximum availability should be a goal of the program. Program maintainability goals and objectives must be developed with cost and schedule in mind; however, careful consideration must also be given to the technical and operational goals of the program. These qualitative goals and objectives are developed by analyzing the system operating cycle, the physical and maintenance support environments, and other equipment characteristics consistent with mission and cost
+    objectives.</p>
+
+    <p>Attention must also be given to existing support programs to avoid needless duplication during development of new support systems. Development of the maintainability goals and objectives will lead to derivation of the maintenance concept, maintainability plan, and definition of maintainability requirements discussed in the following paragraphs.</p>
+
+    <p>Establish Interfaces with Other Engineering Disciplines</p>
+
+    <p>Maintainability engineering is a system engineering discipline that combines system analysis and equipment design with a knowledge of safety, reliability, human factors, and life-cycle costing to optimize the maintenance characteristics of system design and to provide an awareness of interface problems. Its goal is to optimize the combination of design features, repair policies, and maintenance resources to the desired level of maintainability at acceptable life-cycle costs. The many interfaces and feedback paths between maintainability engineering and other product development and operational disciplines are shown in Figure 2.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009338main_0831-2.jpg"  HEIGHT="373"  BORDER="0" /><A HREF="/llis_lib/txt/1009813main_0831-2.txt"  >[D]</A><br />
+      Figure 2: System Reliability, Maintainability and Support Relationships (typical)
+    </center>
+
+    <p>While maintainability personnel must be intimately involved in the product development process and provide inputs to design through design techniques and analysis, it is program management's responsibility to develop and support the relationship between maintainability and the rest of the system engineering disciplines. This support is key to establishment of a concurrent engineering process. These relationships must be mirrored in the Maintainability Program Plan.</p>
+
+    <p>(2) DEVELOP MAINTENANCE AND LOGISTICS CONCEPTS EARLY IN THE CONCEPTUAL PHASE OF THE PROGRAM.</p>
+
+    <p>The program maintenance concept provides the basis for establishing overall maintainability design requirements on the program, and contains detailed planning on maintenance policy.</p>
+
+    <p>It defines overall repair policy, organizational and depot maintenance, system availability, repair vs. replacement policy, level of replacement, skill level requirements, sparing philosophy, diagnostic/testing principles and concepts, contractor maintenance responsibilities, payload maintenance responsibilities, and crew time allocations for maintenance (Maintainability Technique PM-3 provides details on each of these elements). Development of the maintenance concept is based on initial maintainability analysis and program inputs such as mission profile, system availability and reliability requirements, system mass properties constraints, and personnel considerations. The maintenance concept may be developed from the ground up, or may come from a similar successful program, tailored to meet the needs of the new program. New technology may also dictate the maintenance concept, e.g. maintainable items may be scrapped instead of repaired because the cost of repair outweighs the
+    replacement cost.</p>
+
+    <p>Definition of logistics and support concepts is a function of the maintenance concept. The operational environment of the system, the level of support personnel defined by the maintenance concept, and cost and schedule are important drivers for the logistics/support programs.</p>
+
+    <p>These elements are also important contributors to system maintainability in that logistics planning can define how much system down time is required during maintenance operations.</p>
+
+    <p>For example, downtime can be held to a minimum if spares are co-located with the system during operations. It is important that Program management closely monitor all logistics development to ensure inclusion of maintenance and logistics concepts early in the program. Both concepts drive the development of lower-level requirements.</p>
+
+    <p>Assess Existing Resources</p>
+
+    <p>Another important aspect of planning for a new program is assessment of the existing logistic and support infrastructure. As an example, the infrastructure of the NSTS system at KSC comprises the launch pad, numerous assembly and support buildings, and support personnel and equipment. These are important factors to consider when planning for new programs that will use KSC as the central operations base. If some of the existing structures and equipment can be used by the new program, then the developmental and operational costs of the program will be reduced. During early planning stages, management should also look at how the new program can adapt to the existing support infrastructure, and what equipment and personnel may be used to eliminate unnecessary costs.</p>
+
+    <p>Establish a Maintainability Program Plan</p>
+
+    <p>The maintainability program plan is the master planning and control document for the maintainability program. It provides detailed activities and resources necessary to attain the goals and objectives of the maintainability program. It must be developed with the program contractor(s) if they exist, or if the program is in-house, all developmental and operational disciplines must be represented. The plan must be consistent with the type and complexity of the system or equipment and must be integrated with the systems engineering process. It identifies how the contractor/program office will tailor the maintainability program to meet requirements throughout the three major program phases: Development, Production, and Operations/ Support. Typically it contains the following elements shown in Table 1:</p>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ul class="noindent">
+              <li>Duties of each organizational element involved in the accomplishment of the maintainability tasks cited in the product specification or statement of work.</li>
+            </ul>
+
+            <ul class="noindent">
+              <li>Interfaces between maintainability and other project organizations, such as design engineering, software, reliability, safety, maintenance, and logistics.</li>
+            </ul>
+
+            <ul class="noindent">
+              <li>Identification of each maintainability task, narrative task descriptions, schedules, and supporting documentation of plans for task exectuation and management.</li>
+            </ul>
+
+            <ul class="noindent">
+              <li>Description of the nature and extent that the maintainability function participates in formal and informal design reviews, and authority of maintainability personnel in approval for drawing release.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      Table 1. Elements of the Maintainability Program Plan
+    </center>
+
+    <p>(3) PROVIDE UNIFORM QUALITATIVE AND QUANTITATIVE MAINTAINABILITY REQUIREMENTS.</p>
+
+    <p>Maintainability design requirements are established from the Maintainability Program Plan and the derived maintenance concept.</p>
+
+    <p>These requirements are intended as rules system designers follow to meet overall program goals and objectives. They include mission, operational environment, and system concepts. They must be baselined early and not changed unless absolutely necessary.</p>
+
+    <p>The requirements can include both quantitative and qualitative values of maintainability parameters. Quantitative maintainability requirements are usually the result of maintainability allocations based on system availability and operational timing requirements, with allocations made at each level down to the replaceable module, assembly or component level as needed. Examples of quantitative requirements are shown in Table 2:</p>
+
+    <center>
+      <table border="1" width="450" cellpadding="5">
+        <tr>
+          <td align="left">
+            <ul class="noindent">
+              <li>Maintenance manhours per operating hour (MMH/OH)</li>
+
+              <li>Mean-Time-To-Repair (MTTR)</li>
+
+              <li>Mean-Time-To-Restore-System (MTTRS)</li>
+
+              <li>Fault detection and isolation of sub-systems task times</li>
+
+              <li>End item change out time</li>
+
+              <li>Unit removal/installation times</li>
+
+              <li>Availability</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      Table 2. Examples of Quantitative Requirements
+    </center>
+
+    <p>They may be established at any, or all, levels of maintenance and can help define maintenance criticalities and reduction of necessary system components. Qualitative requirements are used to accomplish two purposes. First, they address maintainability design features which are vital in achieving the maintainability goals, but cannot be measured. For example, elimination of safetywire/lockwire, standardization of fasteners, use of captive fasteners, and color-coding of electrical wiring are some basic qualitative maintainability requirements used on orbital programs. Second, qualitative requirements are used to meet customer/program requirements and enhance the maintainability characteristics of the system. Examples include specification of common handtools only for organizational and intermediate levels of maintenance, and designing so that only one skill level is required for all organizational level maintenance personnel.</p>
+
+    <p>(4) EXERCISE PROGRAM CONTROL AND EVALUATION.</p>
+
+    <p>The maintainability program must be an integral part of the systems engineering process and all design and development activities. Activities include design reviews, development and implementation of methods for assessing maintainability effectiveness, dissemination of maintainability data, and proper implementation of program test and evaluation. Subcontractor/supplier control is also a key area for program evaluation and monitoring.</p>
+
+    <p>Summary</p>
+
+    <p>Program management's participation in the development and implementation of sound maintainability practices on NASA programs is extremely important. Whether the program contains ground based systems, or is orbital and beyond, maintainability plays a key role in system operations, providing for increased system effectiveness and availability, and lower life cycle costs. The steps outlined above are guidelines towards success, and can be tailored depending on the type of program. However, the importance of a concurrent engineering approach and the existence of intimate professional relationships between maintainability personnel and other systems engineering disciplines can not be overstated, and existence of these examples will enhance the chance of program success (based on historical experience).</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>NASA Handbook 5300.4(1E), "Maintainability Program Requirements for Space Systems," March 10, 1987, NASA Headquarters.</li>
+
+      <li>Air Force Design Handbook 1-9, "Maintainability (for Ground Electronic Systems)," Second Edition, Revision 7, February 25, 1988, United States Air Force Aeronautical Systems Division.</li>
+
+      <li>"Maintainability Engineering Design and Cost of Maintainability," Revision II, January, 1975, Rome Air Development Center.</li>
+
+      <li>Reliability, Maintainability, and Supportability (RMS) Guidebook, Second Edition, 1992, Society of Automotive Engineers G-11 International RMS Committee.</li>
+
+      <li>Maintainability Technique PM-1, "Benefits of Implementing Maintainability on NASA Programs"</li>
+
+      <li>Maintainability Technique PM-3: "Maintenance Concept for Space Systems."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Decisions by program management to establish maintainability requirements early in the program will provide design impetus towards a system with higher operational availability at lower operational costs. Lower downtime and less complicated maintenance actions will be needed when maintenance is required.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Identify program management considerations necessary when implementing maintainability principles for NASA space flight, atmospheric, or ground support programs.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Hubble Space Telescope, SRB's, Shuttle GSE, and Space Acceleration Measurement System.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

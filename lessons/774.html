@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0774: Electrical Isolation Verification (DC)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0774: Electrical Isolation Verification (DC)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0774 (Database ID: 774)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/774" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1417 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Inadvertent grounds of isolated circuits and ground loops are detected directly by this test. In some cases, such grounds may pass other tests with no apparent degradation. Failure may not occur until the vehicle is subjected to high level electromagnetic radiation.</p>
+
+    <p>Since this test requires minimal test equipment and can be performed in a short time, its benefits are achieved at low cost.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Electrical isolation verification is a direct current resistance measurement of all circuits that are required to have electrical isolation from subsystem circuit common or subsystem chassis. The resistance must be at least 1 megohm between each isolated circuit and circuit common or chassis when measured with a suitable multimeter. A multimeter must be selected that will not overstress sensitive components.</p>
+
+    <p>There are five types of isolation circuits which are tested in slightly different ways. Differences between the five types are shown in Figures 1 through 5 and in Table 1 below:</p>
+
+    <center>
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009231main_0774-1.jpg"  HEIGHT="312"  BORDER="0" /><A HREF="/llis_lib/txt/1009707main_0774-1.txt"  >[D]</A><br />
+      Figure 1: Single Unreferenced End-Circuit General Isolation Test Configuration<br />
+      <hr width="90%" />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009232main_0774-2.jpg"  HEIGHT="446"  BORDER="0" /><A HREF="/llis_lib/txt/1009708main_0774-2.txt"  >[D]</A><br />
+      Figure 2: Multiple Unreferenced End-Circuits, Single Return General Isolation Test Configuration<br />
+      <hr width="90%" />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009233main_0774-3.jpg"  HEIGHT="295"  BORDER="0" /><A HREF="/llis_lib/txt/1009709main_0774-3.txt"  >[D]</A><br />
+      Figure 3: DC Isolation Resistance for Subsystem or Assemblies Isolated from Chassis Ground<br />
+      <hr width="90%" />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009234main_0774-4.jpg"  HEIGHT="178"  BORDER="0" /><A HREF="/llis_lib/txt/1009710main_0774-4.txt"  >[D]</A><br />
+      Figure 4: DC Isolation, Circuit Common to Chassis Ground<br />
+      <hr width="90%" />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009235main_0774-5.jpg"  HEIGHT="291"  BORDER="0" /><A HREF="/llis_lib/txt/1009711main_0774-5.txt"  >[D]</A><br />
+      Figure 5: Isolated Circuit Common Configuration<br />
+      <hr width="90%" />
+    </center>
+
+    <center>
+      <center>
+        <b><font face="arial, helvetica" size="+1">- C O N D I T I O N S -</b>
+      </center>
+
+      <table>
+        <tr>
+          <td border="1"><b>Figure</b></td>
+        </tr>
+      </table>
+    </center>
+
+    <table cellpadding="2" cellspacing="2" border="1">
+      <tr>
+        <td>
+          <center>
+            <b>Isolation Test</b>
+          </center>
+        </td>
+
+        <td>
+          <center>
+            <b>Signal</b>
+          </center>
+        </td>
+
+        <td>
+          <center>
+            <b>Chassis</b>
+          </center>
+        </td>
+
+        <td>
+          <center>
+            <b>Common</b>
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td border="1">
+          <center>
+            1.
+          </center>
+        </td>
+
+        <td>
+          <center>
+            Signal to Common
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td border="1">
+          <center>
+            2.
+          </center>
+        </td>
+
+        <td>
+          <center>
+            Signal to Common
+          </center>
+        </td>
+
+        <td>
+          <center>
+            multiple/isolation
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td border="1">
+          <center>
+            3.
+          </center>
+        </td>
+
+        <td>
+          <center>
+            Signal to Common
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td border="1">
+          <center>
+            4.
+          </center>
+        </td>
+
+        <td>
+          <center>
+            Common to Ground
+          </center>
+        </td>
+
+        <td>
+          <center>
+            --
+          </center>
+        </td>
+
+        <td>
+          <center>
+            ground
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td border="1">
+          <center>
+            5.
+          </center>
+        </td>
+
+        <td>
+          <center>
+            Common to Chassis
+          </center>
+        </td>
+
+        <td>
+          <center>
+            --
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+
+        <td>
+          <center>
+            isolated
+          </center>
+        </td>
+      </tr>
+    </table>
+    Table 1: Testing of Five Types of Isolation Circuits
+    <hr width="90%" />
+
+    <p>When more than one end circuit shares a common return, as in Figure 2, the minimum allowable resistance is divided by the number of end circuits.</p>
+
+    <p>Each measurement is made with the subsystem or assembly unpowered and disconnected from support equipment. The measurements are made in both polarities of the multimeter because semiconductors have polarity dependent resistance. No attempt is made to record the actual resistance; the only requirement is that it exceed 1 megohm per circuit (0.5 megohm for two circuits, etc.).</p>
+
+    <p>This is a relatively simple measurement which can be made with minimum impact on other activities during spacecraft assembly. A number of problems, such as inadvertent grounds have been detected by this test which may have passed the normal checkout test operations.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Erratic or uncontrolled performance may occur which could compromise or abort the mission.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Direct current (DC) electrical isolation verification tests are made as part of the EMC test of hardware prior to final spacecraft assembly. Flight acceptance isolation retest is required after any hardware rework of subsystems with electrical interfaces that utilize system wiring.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Magellan, Galileo, and Ocean Topographic Experiment (TOPEX/POSEIDON)</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

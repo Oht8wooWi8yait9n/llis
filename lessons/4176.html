@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #4176: Do Not Reuse Anti-Static Bags</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #4176: Do Not Reuse Anti-Static Bags</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #4176 (Database ID: 4176)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-11-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/4176" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Anti-static bags-- plastic envelopes coated with a metallic film-- are used to ship electronic parts and assemblies that are prone to damage from electrostatic discharge (ESD). After the shipped items are received, they are often stored in the bags for protection against ESD damage incidental to handling. 
+<br> 
+<br> A digital processing circuit board, destined for use as flight equipment for the Gravity Recovery and Interior Laboratory (GRAIL) project, failed the initial power-on test procedure during assembly functional testing at the NASA/Caltech Jet Propulsion Laboratory (JPL). A visual inspection (Reference (1)) revealed that a fine piece of copper wire debris, similar to No. 2 solder braid, had created a short circuit (Figure 1) from a memory pin to an adjacent data pin (Reference (2)). Since the test was conducted in a clean room, the contamination is believed to have resulted from placing the board into a quotusedquot anti-static bag for storage. It has been documented (Reference (3)) that anti-static bags are frequently reused in JPL shops and labs and may accumulate rosin and other contaminants. 
+<br> &nbsp; 
+<img alt="Figure 1 is a color diagram of a section of the top of a circuit board in which two rows of parallel solder pads are visible in red on a green background (i.e., the board surface). Two solder pads, which are labeled 58-DH6 and 57-VDD, are bridged by a small yellow line that is bent into a chevron (V-shape) that is just long enough to bridge the pads." border="0" height="289" src="https://llis.nasa.gov/llis_lib/images/1034916main_upload_00011083.jpg" title="Figure 1 is a color diagram of a section of the top of a circuit board in which two rows of parallel solder pads are visible in red on a green background (i.e., the board surface). Two solder pads, which are labeled 58-DH6 and 57-VDD, are bridged by a small yellow line that is bent into a chevron (V-shape) that is just long enough to bridge the pads." width="300"> 
+<br> Figure 1. Arrow indicates location and 
+<br> approximate size of copper debris 
+<br> Analysis determined that the stress to the components resulting from the short was minimal. However, because the data pin connects to a field-programmable gate array (FPGA) and a microprocessor, the short could instead have caused mission-critical latent damage to these components. Following this incident, the GRAIL project banned the reuse of anti-static bags and purchased a supply of new anti-static bags. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li><q>Conductive debris on FM103,</q> JPL Problem/Failure Report No. 15446, September 21, 2009.</li> 
+ <li><q>PFR 15446 - MMFL16016604S-C-MS Stress and Risk Mitigation,</q> JPL IOM 335-JAD-20091015-016, October 15, 2009.</li> 
+ <li><q>Manufacturing Processes and Procedures for Assembly and Wiring of Electronic Equipment and Assemblies,</q> Revision I, JPL Document No. DocID 35514, July 20, 2004, p. 435.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The reuse of anti-static bags previously used to ship or store electronic parts and assemblies can introduce debris and contamination that can damage flight equipment.
+</section>
+<section><h2>Recommendation(s)</h2>
+Do not return an electronic part or assembly to the anti-static bag or envelope from which the item, or another item, was withdrawn. Dispose of the original bag, and use a new anti-static bag.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.5.4 ( 
+<q>Engineering Practices: Protection and Security of Flight Hardware</q>) in the Jet Propulsion Laboratory standard 
+<q>Flight Project Practices, Rev. 7,</q> JPL DocID 58032, September 30, 2008.
+</section>
+<section><h2>Related Policies & Standards</h2>
+MIL-HDBK-1547, Electronic Parts, Materials, And Processes For Space And Launch Vehicles; AFNOR UTE C90-720-1, Electronic assembly technology - Manufacturing line certification for electronic boards (QML) - Part 1 : guide for design and manufacturing of electronic assemblies
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

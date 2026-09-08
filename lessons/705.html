@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0705: Micrometeoroid Protection</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0705: Micrometeoroid Protection</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0705 (Database ID: 705)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/705" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice Number PD-EC-1107; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Micrometeoroid protection minimizes the risk of impacts that can damage spacecraft systems and jeopardize flightworthiness. Sources of meteoroids include planetary ejecta and particles of asteroidal and cometary origin. Impacts on spacecraft can cause partial penetration, perforation, spalling, local deformation, or secondary fractures, any of which can result in failure of a critical system. Typical failure modes include:</p>
+
+    <ul>
+      <li>Catastrophic rupture.</li>
+
+      <li>Leakage.</li>
+
+      <li>Deflagration.</li>
+
+      <li>Vaporific flash.</li>
+
+      <li>Reduced structural strength.</li>
+
+      <li>Erosion.</li>
+    </ul>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Micrometeoroid protection is designed to attain an acceptable failure probability for critical spacecraft subsystems. It involves the application of spacecraft and mission design measures which are also used to control other aspects of the spacecraft environment &#151; radiation protection, thermal protection, thermal insulation, and space radiators &#151; requiring an integrated approach to environmental design.</p>
+
+    <p><i>Damage Assessment</i></p>
+
+    <p>The first step in determining the appropriate level of spacecraft protection is evaluation of the environment as defined by the meteoroid fluence, defined as the number of impacts per square meter (m<small><sup>2</sup></small>) of the spacecraft over the mission duration. The meteoroid environment is calculated based on models of near-Earth and interplanetary space (Ref. 4, 5), with particular attention to the asteroid belt between Mars and Jupiter. The current models describe meteoroid mass and orbital distributions based on data from impact detectors aboard the Pioneer 10 and 11, Helios 1, Galileo, and Ulysses spacecraft and measurements of the interplanetary flux (particles/m<small><sup>2</sup></small>/second) near Earth. Meteoroid fluence models are continously updated based on flight experience. However, because the major portion of the meteoroid flux has a random distribution, a statistical model is used to determine the probability of a spacecraft encountering a
+    meteoroid of a given critical mass. The meteoroid fluences /m<small><sup>2</sup></small> are then evaluated for different mission phases &#151; for example, transit, aerobraking, mapping, and relay. The fluences as a function of particle mass may then be calculated from the spacecraft trajectory and velocity as determined by the mission profile.</p>
+
+    <p>Following evaluation of the meteoroid environment for each mission phase, three additional factors &#151; areas of interest, field of view, and spacecraft attitude &#151; are then factored into the fluences for all mission phases. For the <i>areas of interest,</i> spacecraft drawings are reviewed to obtain the surface areas in m<small><sup>2</sup></small> for each critical spacecraft system. The <i>field of view,</i> or geometric factor corresponding to all visible surfaces of an object, is calculated using a ray tracing computer code. The geometric factor specifies the fraction of the fluence that will be detected by a detector placed on one of the surfaces. The <i>spacecraft attitude</i> during the mission is important because the surface perpendicular to the velocity vector will receive the highest fluence, while the trailing edge surface will receive the lowest fluence. To derive the probability of failure of each spacecraft system, the fluence (as a function of velocity)
+    is multiplied by the appropriate area (m<small><sup>2</sup></small>), geometric factor, and attitude factor to give the expected number of impacts on the area of interest.</p>
+
+    <p>Penetration equations are then used to estimate the critical mass as a function of velocity necessary to cause penetration of a surface. For example, a review of Mars Global Surveyor (MGS) propellant and helium tanks indicated that the probability of propellant tank No. 1 being struck by a meteoroid (though not necessarily damaged) during the mission is 30 percent, and 25 percent for propellant tank No. 2. Based on the damage assessment, a decision is made on suitable protective measures to minimize damage to critical spacecraft subsystems. (For a linear component, calculation of the surface area may not be feasible. Damage assessment for the cables along the MGS high gain antenna boom, for example, was based on a determination that only one side of the cables is vulnerable: the other side is protected by the boom.)</p>
+
+    <p><i>Protective Measures</i></p>
+
+    <p><b>System Design Measures.</b> Micrometeoroid protection is considered in the design of the spacecraft structure and the location of critical assemblies relative to the spacecraft structure. Critical assemblies may be positioned so that their field of view is shielded by less critical assemblies or by structures which may be penetrated or deformed without resultant mission-critical damage. With this approach, the most crucial or easily damaged circuit board, for example, should be placed deepest in the electronics bay; the board's long axis could also be positioned parallel to the velocity vector to minimize the fluence. More realistically, however, meteoroid protection requirements must be balanced against the need for radiation and thermal protection in an integrated environmental design.</p>
+
+    <p><b>Operational Measures.</b> Due to the directional properties of particle impact velocities, spacecraft attitude has an effect on the micrometeoroid fluences that each side of the spacecraft receives. Certain mission phases, such as planetary mapping, place the spacecraft in a high flux location in interplanetary or orbital space. Hence, a measure of protection may be attained from a mission profile which adjusts spacecraft attitude to minimize damage to critical systems during hazardous mission phases.</p>
+
+    <p>For the Mars Global Surveyor (MGS) project, fluences were calculated for the different sides of the spacecraft (+X, -X, +Y, -Y, +Z, and -Z). For the Cruise phase of the mission, the +X side of the spacecraft will face the Earth, and the varying attitude will cause the -Y and -X sides to receive similar fluences. During the Mapping and Relay phases, with MGS orbiting Mars while moving with Mars in its orbit around the sun, the +Z side of MGS will face the planet while the +Y side will face in the direction of Mars orbital velocity. The net effect is a rotation of MGS about its Y axis. Calculations indicate that the flux at the leading edge of the spacecraft (+Y) will be approximately 20 times larger than the trailing edge.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009112main_0705-1.jpg"  HEIGHT="276"  BORDER="0" /><A HREF="/llis_lib/txt/1009593main_0705-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>The MGS propellant and helium tanks are located on the +Y side of the spacecraft, as indicated in Figure 1. Combining the formulas for penetration with the meteoroid fluences, and multiplying by the field of view (geometric factor), the attitude factor, and the area of each side of the spacecraft, gives the number of impacts per unit area that can produce failures. Applying a Poisson distribution gives the probability of failures over each mission phase. Figure 2 indicates the probability of success for the MGS tanks.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009113main_0705-2.jpg"  HEIGHT="295"  BORDER="0" /><A HREF="/llis_lib/txt/1009594main_0705-2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p><b>Protective Shielding.</b> The primary technique for meteoroid protection is placement of multi-layer insulation (MLI) blankets on critical areas of the spacecraft, such as propellant and helium tanks. MLI blankets are composed of layers of a Kapton polyamide or mylar; gold foil on one side and silver on the other provides very effective thermal insulation and thermal radiation transfer. In its use as a projectile shield, the blanket function is to break up the projectile before it strikes an exterior wall, disperse the fragments, and reduce the velocity of the fragments below that of the original projectile. Spacecraft damage is caused by the debris from the projectile and the shield. MLI effectiveness in preventing damage to critical spacecraft subsystems depends on the:</p>
+
+    <ol>
+      <li>Blanket material, location, and number of layers.</li>
+
+      <li>Meteoroid mass, impact velocity, density, and angle of impact.</li>
+
+      <li>Impacted structure material, thickness, temperature, stress level, and the number and spacing of the plates composing the structure and the subsystem package.</li>
+    </ol>
+
+    <p>However, an MLI layer density approximating that of tissue paper is sufficient to stop most strikes due to the very small mass of the typical micrometeoroid.</p>
+
+    <p>Specification of MLI blankets for meteoroid protection is not generally practiced because the blanket characteristics are established for the objective of maximizing thermal control, with penetration shielding as a secondary benefit. A single exception is the use of MLI specifically to shield certain components of the rocket nozzles on the Cassini spacecraft. However, the spacecraft MLI design &#151; the MLI integration with the spacecraft structure &#151; is planned to provide the optimal level of meteoroid protection.</p>
+
+    <p>The primary MLI design variable for providing micrometeoroid protection is the blanket-structure separation distance. Modeling and ground test have demonstrated that the likelihood of micrometeoroid damage decreases with increasing separation between the blanket and external spacecraft structural surfaces. This is mostly due to the dispersion of the projectile and shield fragments with increasing distance. Where a tight cluster would result in penetration by debris approaching the mass of the original projectile, dispersion may produce scattered separate craters, bulges, or holes.</p>
+
+    <p>Penetration equations derived from modeling, and from tests using particle accelerators and light-gas guns, are used to calculate the critical meteoroid mass (m<small><sub>c</sub></small>) necessary to cause the failure (i.e., penetration) of a given surface. Separate equations are used for single surfaces (e.g., the spacecraft wall and attached shield) and double surfaces (e.g., spacing between the spacecraft wall and blanket). Equation 1 calculates the critical penetration mass (m<small><sub>c</sub></small>) of the meteoroid in grams for a single surface geometry.</p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td>
+            <center>
+              <IMG  WIDTH="235"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009115main_0705eq1.jpg"  HEIGHT="75"  BORDER="0" /><A HREF="/llis_lib/txt/1009596main_0705eq1.txt"  >[D]</A>
+            </center>
+          </td>
+
+          <td align="right">Eq 1. (Single Surfaces)</td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Where:</p>
+
+    <dl>
+      <dd>m<small><sub>c</sub></small> = critical penetration mass of the meteoroid (grams)</dd>
+
+      <dd>t = wall thickness (inches)</dd>
+
+      <dd>K<small><sub>t</sub></small> = material constant (0.54 for aluminum alloys)</dd>
+
+      <dd>r<small><sub>m</sub></small> = meteoroid mass density (2.5 g/cm<small><sup>3</sup></small>)</dd>
+
+      <dd>V = impact velocity (km/s)</dd>
+    </dl>
+
+    <p>Equation 2 is used to calculate the critical mass (m<small><sub>c</sub></small>) for a double-wall structure where a blanket shields the exterior of a spacecraft structure (such as a propellant tank) or component (such as a cable along a spacecraft boom).</p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td>
+            <center>
+              <IMG  WIDTH="286"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009116main_0705eq2.jpg"  HEIGHT="75"  BORDER="0" /><A HREF="/llis_lib/txt/1009597main_0705eq2.txt"  >[D]</A>
+            </center>
+          </td>
+
+          <td align="right">Eq 2. (Double Surfaces)</td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Where:</p>
+
+    <dl>
+      <dd>S = spacing between blanket and tank wall (cm)</dd>
+
+      <dd>t<small><sub>b</sub></small> = thickness of tank wall (cm)</dd>
+
+      <dd>s<small><sub>y</sub></small> = yield stress for the tank wall (47,000 lb/in<small><sup>2</sup></small>)</dd>
+
+      <dd>r<small><sub>m</sub></small> = meteoroid mass density (2.5 g/cm<small><sup>3</sup></small>)</dd>
+
+      <dd>r<small><sub>t</sub></small> = blanket mass density (0.3 g/cm<small><sup>3</sup></small>)</dd>
+
+      <dd>V = impact velocity (km/s)</dd>
+    </dl>
+
+    <p>Equation 2 demonstrates that the critical penetration mass will increase and the probability of failure will decrease with increased spacing between the blanket and the shielded surface. For example, when applied to a review of Mars Global Surveyor (MGS) propellant tanks, Equation 2 showed that a 2-inch spacing between the surface of each tank and the MLI blanket will decrease the probability of failure during the mission to about 6 percent on both tanks, given the expected meteoroid fluences. This represents a decrease from the 30 percent probability of failure for propellant tank No. 1 and 25 percent for propellant tank No. 2, given no separation, which was previously mentioned. Figure 3 depicts the effect of blanket separation on the probability of success for the MGS tanks.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D} description"  TITLE="refer to [D} description"  SRC="/llis_lib/images/1009114main_0705-3.jpg"  HEIGHT="309"  BORDER="0" /><A HREF="/llis_lib/txt/1009595main_0705-3.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>The applicability of these equations is limited by data availability. The practice has been to extrapolate the equations over the micrometeoroid mass and velocity anticipated during a spacecraft mission. They provide the best available estimate of penetration in the 0 to 10 km/s velocity range; lacking experimental test data for higher impact velocities, they have also been used for velocities exceeding 10 km/s. However, there may be insufficient validating data on impact velocities exceeding 7 km/s. Although JPL is presently working on extending the penetration equations to higher velocities, JPL has no reason to believe that micrometeoroid protection practices for long missions have been other than successful.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The ability of meteoroids to penetrate the external skin of a spacecraft has been amply demonstrated by meteoroid detection satellites and other near-earth spacecraft. The ability of micrometeoroids in interplanetary space to damage spacecraft is inferred.</p>
+
+    <p>Environmental models of meteoroids in near-earth and interplanetary space, and particularly in the asteroid belt between Mars and Jupiter, are continuously updated. However, because the major portion of the meteoroid flux has a random distribution, a statistical model is used to determine the probability of a spacecraft encountering a meteoroid of a given critical mass.</p>
+
+    <p>The damage capability of a meteoroid depends on its mass, velocity, density, and angle of impact. The physical response of an impacted structure depends on the material, thickness, temperature, stress level, and the number and spacing of the plates (including shielding) composing the structure. Based on models of the micrometeoroid fluence and calculations of the number of impacts that can lead to failure, the degree of damage can be estimated and appropriate design or operational measures can be implemented.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Aguero, R.C., "Meteoroid Impacts on MGS," (Mars Global Surveyor Project), Jet Propulsion Laboratory IOM 5050-95-316 to T.D. Newell, November 6, 1995.</li>
+
+      <li>Frost, V.C., Meteoroid Damage Assessment, Space Vehicle Design Criteria (Structures) Document SP-8042, National Aeronautics and Space Administration, May 1970.</li>
+
+      <li>"Spacecraft Environmental Estimates," (Mars Global Surveyor Project), Jet Propulsion Laboratory Document MGS 542-203, October 14, 1994.</li>
+
+      <li>Divine, N., "Five Populations of Interplanetary Meteoroids," Journal of Geophysics Research, 98, pp. 17,029- 17,048, 1993.</li>
+
+      <li>Divine, N. and Gruen, R., "Modeling the Meteoroid Distributions in Interplanetary Space and Near-Earth," Proceedings of the First European Conference on Space Debris, Darmstadt, Germany, April, 1993.</li>
+
+      <li>"Meteoroids/Space Debris," Reliability Preferred Practice No. PD-EC-1102.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The absence of micrometeoroid protection measures in spacecraft and mission design will increase the risk of significant damage to the spacecraft, particularly in areas of high meteoroid flux and during vulnerable mission phases. Micrometeoroid protection requirements are difficult to verify due to the absence of data on actual meteoroid damage in interplanetary flight. However, use of micrometeoroid protection measures within technical and economic constraints is a prudent design approach.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Provide protection for the spacecraft structure and instruments to minimize damage from micrometeoroid penetration. (For the purpose of environmental modeling, a micrometeoroid is defined as being in the range of 10<small><sup>-18</sup></small> to 1.0 grams in mass.) Typical reliability engineering measures range from structural positioning to protect sensitive hardware to placement of protective blankets on the spacecraft exterior. The extent of the protective measures is based on estimates of the meteoroid environment for the flight profile, the ability of micrometeoroids to penetrate the external skin, and the likelihood of critical damage from a penetration.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Magellan and Galileo. The Mars Global Surveyor (MGS) and Cassini programs utilize new, updated interplanetary fluence models and penetration formulas.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

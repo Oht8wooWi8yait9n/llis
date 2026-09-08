@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0657: Critical Design Review for Unmanned Missions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0657: Critical Design Review for Unmanned Missions</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0657 (Database ID: 657)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/657" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1215.3; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>The Critical Design Review (CDR) provides increased assurance that the proposed design, and the planned manufacturing and test methods and procedures, will result in an acceptable product, with minimal project risk.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><i><u>Responsibilities</u></i></p>
+
+    <p>The responsible project or task manager defines the need to conduct a formal review and initiates action by contacting the convening authority (generally, the next higher management level). The convening authority, in consultation with the responsible manager, appoints the review board and a chair and defines the board charter and schedule.</p>
+
+    <p>The CDR ensures that all design considerations have been adequately incorporated and that all engineering analyses have been completed. Results of engineering model tests are presented to demonstrate that the hardware and software can be built to perform as planned. In addition, plans are presented for fabrication and testing, including qualification and acceptance.</p>
+
+    <p>The review board, under direction of the chair, conducts the review and prepares a written report to the responsible manager on the findings and recommendations. The responsible manager then prepares a written response to the convening authority addressing the disposition of the review board findings and recommendations. The convening authority reviews and approves these dispositions.</p>
+
+    <p><i><u>CDR Agenda</u></i></p>
+
+    <p>The following items and issues are addressed at the CDR, where applicable:</p>
+
+    <ol>
+      <li>Functional description and block diagram.</li>
+
+      <li>Functional requirements and compliance of the design, presented in matrix format with traceability references.</li>
+
+      <li>Disposition of subassembly/subsystem Preliminary Design Review (PDR) action items.</li>
+
+      <li>Compliance of the design with accuracy requirements.</li>
+
+      <li>Compliance of the design with interface requirements.</li>
+
+      <li>Compliance of the design with mass requirements.</li>
+
+      <li>Compliance of the design with power requirements.</li>
+
+      <li>Compliance of the design with memory requirements.</li>
+
+      <li>Compliance of the design with environmental requirements.</li>
+
+      <li>Compliance of the design with project Single Point Failure (SPF) policy.</li>
+
+      <li>Compliance of the design with maintainability requirements.</li>
+
+      <li>Status and plans for electronic piece part acquisition.</li>
+
+      <li>Make or buy decisions and rationale.</li>
+
+      <li>Compliance with project requirements for inherited hardware and software. Consideration of inheritance review results.</li>
+
+      <li>Plans for compliance with spares requirements.</li>
+
+      <li>Status of plan for meeting quality assurance requirements, procedures, and workmanship standards.</li>
+
+      <li>Status of plan for meeting software assurance requirements.</li>
+
+      <li>Status or results of plan for meeting reliability analyses requirements.</li>
+
+      <li>Status or results of plan for meeting safety analyses requirements.</li>
+
+      <li>Status of plan for meeting documentation requirements.</li>
+
+      <li>Status of plan for meeting support equipment requirements.</li>
+
+      <li>Status or results of plan for meeting structural analysis requirements.</li>
+
+      <li>Status or results of plan for meeting thermal analysis requirements.</li>
+
+      <li>Fabrication, assembly, and test schedule and constraints.</li>
+
+      <li>Status or results of plan for meeting calibration requirements.</li>
+
+      <li>Plans for compliance with testability requirements.</li>
+
+      <li>Qualification (protoflight) test requirements and implementation plans.</li>
+
+      <li>Acceptance test requirements and plans.</li>
+
+      <li>Manufacturing and test facility requirements, availability and acceptability. Certification status and plans.</li>
+
+      <li>Hazardous operations facility requirements, availability and acceptability. Certification status and plans.</li>
+
+      <li>Results of detailed peer reviews, conclusions, and implementation plans.</li>
+    </ol>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The CDR provides for the assessment of the design and fabrication plans by a group of knowledgeable persons not directly involved in the activity being reviewed. A formal review can focus many years of experience on the subject at hand.</p>
+
+    <p>The CDR aids the responsible manager in evaluating the quality of the work and in making important decisions, including those concerning completion of critical milestones and resolution of identified issues. The review process should aid in the identification of problems and the evaluation of design approaches and options.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Preliminary Design Review, Reliability Preferred Practice No. PD-ED-1215.1.</li>
+
+      <li>Subsystem Inheritance Review, Reliability Preferred Practice No. PD-ED-1262.</li>
+
+      <li>Common Review Methods for Engineering Products, Reliability Preferred Practice No. PD-ED-1215.4</li>
+    </ol>
+
+    <p>References:</p>
+
+    <ol>
+      <li>JPL Standard Practice Instruction (SPI) 4-16-1.</li>
+
+      <li>Guidelines for Planning and Conducting Formal Reviews, Jet Propulsion Laboratory document JPL D-10401 (Office of Engineering and Mission Assurance).</li>
+
+      <li>Technical Reviews and Audits for Systems, Equipment and Computer Software, MIL-STD-1521 (USAF).</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Non-Practice:<br />
+    <br />
+    In the absence of a CDR, potential problems with adverse impacts on the subsystem, system, or project may not be identified in a timely manner. This oversight may later result in a condition having a significant effect on quality, reliability, capability, schedule, or cost.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Conduct a formal Critical Design Review (CDR) of hardware, software, and firmware at the subsystem and system levels. Schedule the review prior to the start of subsystem fabrication and assembly to assure that the design solutions satisfy the performance requirements established in the development specifications. Establish this review as a standard reliability engineering practice for flight hardware.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br />
+    <br />
+    The CDR process has been used on all JPL-managed projects and science instrument tasks, including Ranger, Mariner, Voyager, Galileo, Magellan, Topex/Poseidon, Mars Observer, Microwave Limb Sounder, Wide Field Planetary Camera, and numerous other science instruments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

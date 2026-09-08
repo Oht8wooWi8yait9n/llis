@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #12401: Battery Fire at the Madrid DSN Facility</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #12401: Battery Fire at the Madrid DSN Facility</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #12401 (Database ID: 12401)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-10-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Accident Investigation, Emergency Preparedness, External Relations, Facilities, Fire Protection, Ground Equipment, Ground Operations, Hardware, Human Resources and Education, Occupational Health, Ground support systems, Logistics and maintenance, Mission operations systems, Training and simulation systems, Advanced planning of safety systems, Maintenance, Product Assurance, Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/12401" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The DSN is a network of large antennas and communication facilities, managed by the NASA/Caltech Jet Propulsion Laboratory (JPL) and located at Goldstone (California), near Madrid (Spain), and near Canberra (Australia), that provide uplink and downlink services to deep space missions. The geographical distribution of the three antenna complexes around the globe permits continuous communications between the ground and the spacecraft as the Earth revolves. The complexes are each isolated in somewhat remote locations (e.g., Figure 1) that, combined with local terrain features, help prevent radio frequency interference. Facility maintenance, operations, and engineering support are provided mainly by contractors at each complex. Because continuous operation of the DSN antenna complexes is critical to assuring uninterrupted spacecraft commanding and science data reception, UPS electrical backup systems are installed at each complex.</p> 
+<p> <img alt="Figure 1 is an image of the Deep Space Network Complex in Madrid Spain.  There are six radio telescope dish antennas of various sizes from 26m to 70m meters across.  The antennas are stark white against a background of tall green bushes.  There is a small complex of two white buildings about center of the image amid the antennas.  The complex is in a small valley surrounded by low lying hills that are covered with light green to dark green shrubs and bushes.  A few patches of blue sky can be seen in a partly covered sky of grey and white puffy clouds extending to the horizon." src="https://llis.nasa.gov/llis_lib/images/2015-04 Madrid_site.jpg" style="width: 450px; height: 360px;" /><br /> <strong>Figure 1.</strong> View of the entire Madrid Complex</p> 
+<p> The three UPS modules at the Madrid Deep Space Communication Complex (MDSCC) each feature a static frequency converter with 412 large, single-cell, lead acid batteries connected in series. The modules operate in parallel with the incoming commercial power feed so that, in the event of a power failure, they can power the facility until backup diesel generators start up and assume the power load. Functional redundancy derives from the ability of the UPS system to carry the maximum expected load with only two of the three modules.</p> 
+<p> During the late night hours of October 15, 2014, a failure within the battery bank of Module #2 caused a fire and the subsequent loss of its battery bank (see Figures 2 and 3 and References (1) and (2)). The following timeline was established for the incident:</p> 
+<ul> 
+ <li> Just prior to the fire, all three battery banks were fully charged and connected to the converter DC bus.</li> 
+ <br /> 
+ <li> On October 15, Battery Bank #2 began drawing excessive current. At 23:48 local time, this caused Converter 2 to start charging Battery Bank #2, which increased the voltage to Battery Bank #2 and further increased the charging rate.</li> 
+ <br /> 
+ <li> At 23:49 local time, the guard house detected a fire alarm originating in the battery room containing Battery Bank #1 and #2 (References (1) and (2)). The guard visited the power plant and saw flames in the battery room over Rack #10 of Battery Bank #2; multiple detonations were reported. On-site security initiated an emergency protocol that alerted the local police, National Guard, local fire department, and ambulances.</li> 
+ <br /> 
+ <li> At approximately 00:20 local time, the fire brigade arrived at the MDSCC. When CO2 was unsuccessful at controlling the fire, they switched to water to cool the high temperatures in the batteries and quench the fire. The local fire brigade, which may not have been familiar with fighting battery fires, also used a fire axe on some of the involved batteries until it became apparent that it was not effective in extinguishing the fire. Shortly thereafter, the backup diesel generators started and the UPS modules went off line.</li> 
+ <br /> 
+ <li> At 02:55 the fire brigade reported that the fire was under control, but at 03:00 local time the fire reignited in the battery room.</li> 
+ <br /> 
+ <li> At 03:57 local time the fire was fully contained.</li> 
+</ul> 
+<p> <img alt="Figure 2 is an image of an interior room with walls painted a pale yellow.  Discoloration of dark soot permeates the pale yellow paint especially near the ceiling.  A narrow window is can barley be seen in the background corner of  the room.  Adjacent to the window is a type of air conditioner vent.  The foreground is dominated by an industrial metal rack.  The rack consists of 3 bays of 3 shelves per bay.  On each shelf, there are four large blueish/black lead-acid batteries with yellow water caps.  The foreground bay shows batteries on the upper two shelves damaged by fire. The damage is discoloration on the lightly damaged batteries to degraded surfaces on medium damaged batteries.  On the second bay of the rack, the batteries are heavily damaged as they are melted and unrecognizable. This heavy damage is on the upper two shovels of the middle second bay of the rack.  The third and farthest bays of the rack show minor to no damage to the 12 batteries on all three shelves.  The concrete floor is blackish and a reflection of the rack can be seen possibly due to water coating the floor." src="https://llis.nasa.gov/llis_lib/images/2015-04_Madrid_Fig2.png" style="width: 360px; height: 450px;" /><br /> <strong>Figure 2.</strong> Damage to MDSCC Battery Bank #2</p> 
+<p> Two weeks prior to the fire, annual battery maintenance had been performed on all three battery banks. The maintenance contractor stated, however, that they were not able to perform several of the battery maintenance activities due to time constraints. The maintenance report mentioned that four cells had a higher temperature than others during the charging phase of the capacity test. The report said that they needed to be replaced; however, three hot cells had also been reported during the previous annual maintenance, but they were never replaced.</p> 
+<p> The Battery Bank #2 cells were too badly damaged for failure analysis. But a diagnostic test of the surviving battery banks (#1 and #3) performed by the battery manufacturer found an overheating (>50<sup>o</sup>C) cell, and Destructive Physical Analysis (DPA) traced it to an internal short circuit. Further analysis revealed the direct cause of the failure to be a pre-existing DC current path from the battery line to ground through the circuitry of the converter.  </p> 
+<p> <img alt="Figure 3 is a close up image of batteries that were damaged and destroyed by fire. This close up only shows the upper two shelves of a three-shelf rack. The upper self has four batteries where there should be five.  The two batteries directly adjacent to the missing battery are fire corroded beyond recognition.  The batteries that are further away on the same shelf show significant damage.  The batteries on the second lower shelf are also significantly damaged.  The electrical leads on the lower bank of batteries show signs of melting, corrosion, and drippings of melted material from the batteries above.  The black industrial rack has a large spot on the upper shelf where the paint was burned off to the bare metal. " src="https://llis.nasa.gov/llis_lib/images/2015-04_Madrid_Fig3.png" style="width: 360px; height: 450px;" /><br /> <strong>Figure 3.</strong> Close up of fire damage Battery Bank #2</p> 
+<p> A JPL Special Review Board (SRB) (Reference (2)) identified two root causes of the fire:</p> 
+<ol> 
+ <li> Lack of a single and comprehensive written battery maintenance program, and</li> 
+ <br /> 
+ <li> Inadequate oversight of the converter system design and commissioning that allowed for an uncontrolled DC current path from the battery line to ground through the circuitry of the converter.  This undetected ground fault then created a cascading event as the converter continued to supply power to the ground fault through the batteries.</li> 
+</ol> 
+<p> The SRB found that there were multiple contributing causes of the fire. These included:</p> 
+<ol> 
+ <li> Lack of a ground fault detection circuit in the converters to shut off and isolate the converter’s batteries in the event of a ground fault.</li> 
+ <br /> 
+ <li> Lack of an interconnection between the battery room fire alarm and the converters to shut down the system in the event of fire.</li> 
+ <br /> 
+ <li> Lack of a proper fire suppression system for the hazard presented by the batteries.</li> 
+ <br /> 
+ <li> The existing automatic fire sprinkler system did not reach listed/designated activation temperature immediately in the early fire event.</li> 
+ <br /> 
+ <li> The local Fire Brigade was not familiar with the hazard presented by the battery fire and was not prepared to efficiently fight the battery fire.</li> 
+ <br /> 
+ <li> There was no single, site-specific, comprehensive, and clear maintenance procedure with pass/fail criteria for converter batteries.</li> 
+ <br /> 
+ <li> Power plant transformer grounds, converter grounds, and the ground from the battery racks are not tied together to establish a single point grounding system. They are instead taken to separate ground fields and not explicitly bonded together.</li> 
+</ol> 
+<p> Damage from the fire included the destruction of Battery Bank #2, damage to battery supporting frames, and the possible exposure of Battery Bank #1 to high temperature and water. The overall cost was estimated to be over $360K. However, no DSN spacecraft tracking/communications operations were disrupted, no spacecraft data were lost, and no personnel were injured.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> JPL Mishap Report No. 3148, October 15, 2014.</li> 
+ <li> MDSCC Power Plant Battery Fire Special Review Board Report, January 5, 2015.</li> 
+ <li> “Provide Adequate Maintenance and Hazard Response for UPS Units,” NASA Lesson Learned Information System (LLIS), NEN #12101, March 24, 2015.</li> 
+ <li> “Poor Coordination of Routine Maintenance Spoiled an Important Test,” NASA Lesson Learned Information System (LLIS), NEN #10401, August 26, 2014.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> The October 2014 Madrid fire incident bears similarities to the July 2014 on-Lab building evacuation due to UPS overheating (Reference (3)). The dual incidents, along with the February 2014 maintenance-induced damage described in Reference (4), suggest that adequate oversight of maintenance contractors and use of formal maintenance procedures are safety-critical functions. Although no injuries were reported from this mishap (Reference (1)), this was potentially a safety-critical incident because the batteries caught fire and exploded.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Recommendations No. 1, 2, 3, 4, and 7 in Reference (3) are also valid for this lesson learned. Reference (3) calls for validation of maintenance agreements, surveys to assure planned maintenance is performed, checks of critical equipment against manufacturer recommendations, remote monitoring of malfunctions, and isolation of the mishap scene. In addition, the Madrid incident warrants the following:</p> 
+<ol> 
+ <li> The fire alarm detection system in the complex’s powerplant Converter Room or the converter Battery Rooms should be interlocked with the power plant controller and the converters to take appropriate actions based on the location of the alarm initiation.</li> 
+ <br /> 
+ <li> The Static Converter should be equipped with a DC bus ground fault detection system to automatically shut down the converter battery charging system.</li> 
+ <br /> 
+ <li> The battery mounting should be able to provide an electrical isolation between the battery and battery rack, such that if the electrolyte leaks, a conductive path to ground is not generated.</li> 
+ <br /> 
+ <li> Ensure and verify maintenance personnel are properly trained such that the correct maintenance procedures are executed, the records of maintenance activities are properly recorded, the maintenance status is tracked, and unsafe conditions are immediately reported.</li> 
+ <br /> 
+ <li> Clear written instructions in both English and the predominant local language should be readily available, along with training of the Supervisor on Duty and designated staff, on how to respond to an emergency situation involving the converters and batteries.</li> 
+ <br /> 
+ <li> Provide site-specific information to the local Fire Brigade for training and familiarization with the complex and its unique operations and hazards.  Sensitize the personnel stationed at the facility with OSHA regulations (or OSHA-equivalent rules for foreign facilities) and local emergency services practices. Install a portable fire extinguisher outside each door leading to the battery room and provide portable fire extinguisher training.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> The physical configuration of the power system, and the established maintenance and emergency procedures at, the three DSN complexes are being investigated. A power review team chartered by the JPL Interplanetary Network Directorate (9x) is evaluating similar vulnerabilities at DSN complexes, and a program of corrective action will be implemented by 9X (with oversight by the JPL Safety Office) as part of the close-out of Reference (1).  In addition to the JPL Mishap Reporting System, the close-out may be documented in the NASA Mishap Information System.</p> 
+<p> Also, JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.3 (“Engineering Practices: Protection and Security of Flight Hardware”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 10,” JPL DocID 58032, October 23, 2013. (This paragraph also covers hazards to operations facilities.) </p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> EN 62040-1-1:2006, Uninterruptible power systems (UPS)</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

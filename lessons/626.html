@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0626: Inadvertent Powering of the Deep Space 2 Mars Microprobe (1998)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0626: Inadvertent Powering of the Deep Space 2 Mars Microprobe (1998)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0626 (Database ID: 626)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-06-20</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/626" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During final assembly of the Deep Space 2 (DS2) Mars Microprobes, each of the two flight probes was inadvertently powered.</p> 
+<img alt="refer to [D] description" border="0" height="390" src="https://llis.nasa.gov/llis_lib/images/1008992main_0626.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009487main_0626.txt">[D]</a> 
+<p>When Mars 98 lander reaches Mars and the DS2 probes are released from the lander cruise ring, a MOSFET electronic switch will apply battery power to each probe. This switch, whose design heritage is unclear, is to be operated only once during the mission. Two mechanical switches are used to provide hold-off bias voltage to prevent the electronic switch from turning on until the probes are released. Both mechanical switches must be activated to power the probes, which then remain powered unless all system power is lost. Although a safing plug keeps the electronic switch biased to the off condition during early phases of assembly, the design required its removal well before the completion of electrical assembly.</p> 
+<p>The overall system implementation included the following deficiencies and vulnerabilities that were not well understood and were not adequately accounted for in the system design, the Failure Modes and Effects Criticality Analysis (FMECA), and assembly planning:</p> 
+<ol> 
+ <li>The electronic switch design permitted the probes to be powered if any of the wires connected to the mechanical switches were even partially connected to ground. An estimated resistance to ground of 1.5 megohm or less is sufficient to turn on the switch. The anomaly investigation determined that even the body resistance of the assemblers connecting the wires was sufficient to cause this very sensitive electronic switch to turn on.</li> 
+ <li style="list-style: none"><br> &nbsp;</li> 
+ <li>The design of the mechanical switches allowed an unintentional ground path to the probe aeroshell. This would inadvertently power the probes during assembly, causing loss of the DS2 mission due to an undetected battery depletion prior to launch.</li> 
+ <li style="list-style: none"><br> &nbsp;</li> 
+ <li>The design did not permit the safing plug to remain installed throughout electrical assembly.</li> 
+ <li style="list-style: none"><br> &nbsp;</li> 
+ <li>The electronic switch circuit design required external power while the batteries were being connected.</li> 
+</ol> 
+<p>Following completion of the anomaly investigation, design changes were made to electrically isolate the mechanical switches and retain the safing plug in place during electrical installation of these switches. Procedures were changed to require extreme care to avoid stray resistances due to handling following removal of the safing plug.</p> 
+<p>Additional Keyword(s): Power Switch, Design for Testability, Design for Manufacturability, Inherited Design, Sneak Circuit Analysis (SCA), System Integration and Test, Hardware Fabrication and Test, Hardware Safety, System Development</p> 
+<p>Reference(s): JPL Problem/Failure Report (PFR) No. Z48923, November 8, 1998.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Design analyses should include (a) Failure Modes and Effects Criticality Analysis (FMECA) and sneak circuit evaluation for potential electrical issues, and (b) Fault Tree Analysis (FTA) for potential mechanical issues. These analyses must be conducted in an integrated manner at the system level to ensure that the electrical implications of mechanical/packaging design decisions are understood.</li> 
+ <li>System design planning and processes must address hardware performance during assembly and test as well as during flight (the DS2 electronic switch design was almost impossible to assemble without an anomaly).</li> 
+ <li>Where the use of safing devices is required, the system design and assembly/test procedures must accommodate their use throughout assembly and test operations.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>See lesson(s) learned.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced the lesson as supporting Paragraph 4.12.8.2 (quotFlight Electronics Hardware System Design: Hazard Controls - Visibility Into State of Safety Inhibitsquot), and Paragraph 4.9.2.1 (quotSystem Fault Protection Design: Fault Protection Response - Fault Protection Prioritiesquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

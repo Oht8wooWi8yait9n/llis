@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1384: Kennedy Space Center (KSC) Projects and Resources Online (KPRO) Software Development and Implementation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1384: Kennedy Space Center (KSC) Projects and Resources Online (KPRO) Software Development and Implementation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1384 (Database ID: 1384)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-07-20</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1384" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>KPRO, developed by the Spaceport Engineering and Technology Directorate, is a centralized project management information system tailored to the unique project management practices of NASA. The primary objective of the KPRO project is to provide a web-based project management tool that enhances the efficiency of KSC project managers, facilitates project compliance to NPG 7120.5, standardizes project management practices, and increases customer satisfaction. In developing this tool, several experiences occurred that should be shared with anyone taking on a similar software development project.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Advantages to KPRO were the direct consultation with Microsoft, participation on the P10 (Microsoft Project 2002) Beta Team, and being a member of the Microsoft Joint Development Program. This gave KSC the ability to counter consult with Microsoft and deliver the initial product earlier than the normal life cycle.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+
+      <li>A signed agreement should be in place before proceeding with implementation of an interface with another database management system. KPRO had a verbal agreement with a NASA counterpart to support an interface between KPRO and a contractor database to provide actual expense data. The KPRO developer proceeded with coding as agreed to verbally. When the verbal agreement was presented in a written format in the form of a Memorandum of Understanding (MOU), the decision was made not to provide the verbally agreed-upon interface. Another method was selected. The developer was required to get an account on the contractor reporting system and develop a report rather than receiving the data electronically per a verbal agreement. It is suspected that the reason for the reversal was that upper management was not informed early-on of the terms of the verbal agreement. The new direction resulted in approximately 4 weeks lost time in implementing a requirement to obtain actual expense data
+      for projects in KPRO.</li>
+
+      <li>The project management workforce should be thoroughly trained and engaged in implementing Agency project management processes before introducing a new tool that adds capabilities in support of the Agency processes. The lack of rigorous project management practices delayed efficient and broad use of the new tool and initially reduced its effectiveness. After emphasizing the processes and offering intensified training on the use of the capabilities of KPRO, there was a noticeable improvement in the project management environment. Project managers managed their projects more efficiently and increased their productivity.</li>
+
+      <li>The project manager should obtain a commitment to ensure that a dedicated systems engineer is assigned to the project full time during the requirements phase. A systems engineer was assigned to KPRO and attempted to gather KPRO requirements. The individual was spread too thin and pulled off too often to successfully complete his KPRO assignment. This resulted in about 3 months of development time lost while the developers pitched in and assisted the project manager with the requirements document.</li>
+
+      <li>Building a team with people who work well together and have the proper expertise can make or break a project. KPRO was very fortunate to have formed a small talented, cohesive team to work on the project. The original development team is still intact after more than 2 years. This has been a major factor in the successful implementation of this project management tool at KSC.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Provide in-depth participation (earlier in the life cycle) as a team member with a COTS vendor to jointly develop an enhancement to a software product that can be beneficial to both parties. KSC and Microsoft were able to work together on P10 with each providing input for a more usable product for both parties.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+
+      <li>Establish a Memorandum of Understanding (MOU) or some type of contractual agreement to ensure that management is in agreement before implementing an interface between two database management systems that are managed by different NASA organizations.</li>
+
+      <li>Provide sufficient project management training when implementing a software product that enhances the project management environment and enforce adherence to Agency and Center processes.</li>
+
+      <li>Establish a commitment with the management of all team resources that the resources will be dedicated to the software project for a reasonable amount of time needed to accomplish their assigned tasks.</li>
+
+      <li>When planning and selecting team resources for a project, consider how the resources can work together and support each other, along with the skills required. This can be a factor in meeting or delaying software project milestones if an alternative resource has not been endorsed by the team members.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

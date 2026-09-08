@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1743: Mitigating the Risk of Single String Spacecraft Architecture</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1743: Mitigating the Risk of Single String Spacecraft Architecture</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1743 (Database ID: 1743)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2006-04-07</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Engineering Design, Missions and Systems Requirements Definition, Program Management, Safety and Mission Assurance, Systems Engineering and Analysis, Environment, Flight Equipment, Flight Operations, Hardware, Payloads, Risk Management / Assessment, Software, Spacecraft, Test Facility, Lander Systems, Robotics, Spacecraft and Spacecraft Instruments, Level 0/1 Requirements, Planetary entry and landing concepts, Requirements critical to costing and cost credibility, Acquisition / procurement strategy and planning, Contractor relationships, Program planning / development and management, Risk management, Early requirements and standards definition, Reliability, Mission and systems trade studies, Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1743" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Mars Exploration Rover (MER) project was extremely successful despite the largely single string flight system, which included such single string elements as the flight computer and the panoramic camera (Pancam). The lack of backups for many mission-critical system functions was largely due to spacecraft mass limitations. Constrained project resources were also responsible for other design tradeoffs (Reference 1) that increased the risk to mission success. The following 7 design features or program provisions (Reference 2) mitigated the risks posed by MER's design constraints:
+<ol>
+<li>Effective Risk Management. The MER risk management approach involved the identification of risks and failure modes at project inception and their continuous modeling throughout development. For example:<br/>
+<ul>
+<li>MER probabilistic risk assessment (PRA) included development of high level fault trees for the entry, descent, and landing (EDL) event that were completed for the Project Mission, System Design, and Cost Review (PMSDCR). Subsequent preparation and refinement of event trees and lower level fault trees were performed, not to pass reviews, but rather to understand system vulnerabilities and threats to EDL success. Significant failure modes were checked against contingency plans and reported at mission readiness reviews.<br/>
+</ul>
+The Mars Polar Lander (MPL) 1999 mission failure encouraged MER project management to impose a healthy skepticism towards success. The project continuously demanded proof that the system would work, rather than assuming that risks were acceptable unless shown to the contrary.<br/>
+<li>Ample Fault Tolerance. The MER design featured extensive fault tolerance to allow full or degraded operation in the presence of a fault. Examples of this approach include: <br/>
+<ul> 
+<li>The MER design did not include a backup flight computer, but multiple EPROMs provided redundant copies of the boot code and of the flight software.  <br/>
+<li>The MER flight system design was tolerant to nearly all transient errors (e.g., power-on-resets) during EDL or on the Martian surface. <br/>
+<li>The Heat Rejection System, which provided active cooling during the Cruise phase, featured a single coolant filter that could become clogged. However, a check valve permitted the coolant to bypass the filter if the coolant pressure reached a threshold value. <br/>
+<li>The Pancam cameras were effectively single string as both needed to be operational to permit stereoscopic imaging, and both the failure modes, effects and criticality analysis (FMECA) and the PRA identified failure of a camera as a major risk to rover mobility. JPL planned for a degraded operational mode that could acquire an image from a single working camera, shift the rover several centimeters, take a second picture with the camera, and use ground software to combine the two images into a stereo image. <br/>
+<li>A software commanding error could power a warm-up heater during the Mars daytime when it was not normally powered, and cause overheating. Hence, thermostats were added for fault mitigation. <br/>
+</ul>
+<li>Flight System Flexibility. MER featured a very flexible design that, though it resulted in a very complex vehicle, permitted flaws to be corrected after launch: <br/>
+<ul>
+<li>The MER PRA identified EDL as the most risky mission phase. Arguably, this held true for the Genesis and Stardust missions, which hard wired the EDL sequences such that they could not be changed after launch. In contrast, MER retained an ability to update critical EDL parameters during the latter stages of encounter and EDL. (See Reference (3).) This included both a flight system capability to uplink software updates during entry, and the operational plan, process, and tools for ground personnel to prepare the updates. <br/>
+<li>Rover egress from the lander required the removal of various launch locks by firing pyrotechnic cable cutters and pin pullers in a predetermined sequential order. The firing of the pyro to permit deployment of the rover robotic arm had been timed to mitigate the risk that the arm might encounter higher than expected dynamic forces during egress. After launch, extensive analysis of the sequence revealed a yet greater risk that another, earlier, pyro firing to cut the final rover-lander cable could enable a sneak circuit that could be triggered by any subsequent pyro events. (see Reference (4)). So a decision was made to reorder the deployment sequence to release the rover arm before the final rover-lander cable cut to prevent activating any sneak circuits set up by the rover-lander cable cutter. <br/>
+</ul>
+<li>Experienced Personnel. The lead engineers in each area had an unusually high level of experience, and were in many cases drawn from other current flight projects. These individuals were well acquainted with the MER mission failure space, and recent JPL mission failures had negated any complacency about mission risks. The JPL line/project matrix organization facilitates such project access to key personnel. With JPL's reputation at stake, the MER project made sure that each critical failure mode was fully understood and the risk mitigated before the risk item was retired. (See Reference (5).)
+<li>Ample Stress Testing. Significant resources were devoted to testing flight system robustness. MER utilized multiple flight system testbeds that were very flight-like. Compared to a project like Stardust that had only pieces of certain subsystems, the MER testbeds were hardware-rich and were not as dependent on simulators. (See Reference (6).)
+<br/>	Long after launch, the project continued to perform system-level stress testing to identify system performance margins. Just prior to EDL, for example, a decision was made to enable all pyros. This posed a risk of premature pyro firing, but the additional test data indicated a higher risk that the safeties might inhibit a pyro during the firing sequence. 
+<li>Mars Program Synergy. Despite the short MER development schedule, the MER project was able to take advantage of the avionics concept and rover designs developed for the 1999 version of the Mars Sample Return project architecture. 
+<li>In-House Project. Because the MER flight system was largely an in-house development, the designers and testers understood how the subsystems worked. Although some items like the radar altimeter and solar arrays were procured, JPL's lesser dependence on major subsystems provided by other organizations or countries permitted the same rigorous approach to fault protection to be employed at all hardware levels. 
+</ol><p>
+<p>
+<b>References:</b> 
+<ol> 
+<li> Rob Manning, "MER Project: Stealing Success from the Jaws of Failure, Video Presentation AVC-2005-200," September 23, 2005.
+<li> David Oberhettinger, "Mitigation of Risks Associated with MER Single String Architecture,"   OCE DJO 05-001, November 28, 2005.
+<li>"Provide In-flight Capability to Modify Mission Plans During All Operations, NEN No.1480," NASA Engineering Network (NEN), June 21, 2004.
+<li>"Plasma Arcs from Pyro Firing May Cause Prolonged NSI Shorts," NEN No.1412, NASA Engineering Network (NEN), April 19, 2004.
+<li>"If You Dont Understand an Environment, Provide 'Well-Margined' Capabilities to Encompass the Worst Case," NEN No. 1712, NASA Engineering Network (NEN), December 16, 2005.
+<li>"The Risk Reduction From 'Two-fers' (Multiple Sister Spacecraft) May Outweigh the Incremental Cost," NEN No.1485, NASA Engineering Network (NEN), May 17, 2004.
+<br/>
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+A system architecture that is highly dependent on single string subsystems can succeed by focusing project resources on intensive analysis of known failure modes and on ample testing.
+</section>
+<section><h2>Recommendation(s)</h2>
+Balance the risks of single string spacecraft architectures with effective risk management, ample fault tolerance, flight system flexibility, access to experienced designers, ample stress testing, use of proven designs, and a rigorous approach to fault protection.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 4.1.3.1 ("Flight System Design: Design Robustness -- Single Failure Tolerance") in the Jet Propulsion Laboratory standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br/>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

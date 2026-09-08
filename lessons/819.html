@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0819: Structural Stress Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0819: Structural Stress Analysis</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0819 (Database ID: 819)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/819" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1318, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Reliability of spacecraft structural components is greatly increased, and their cost and weight reduced by the systematic and rigorous application of sound stress analysis principles as an integral part of the design process.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Objectives:</p>
+
+    <p>Structural stress analysis is performed in order to ensure that a structure will fulfill its intended function in a given loads environment. It is important to anticipate all the possible failure modes and design against them. For a space structure, the most common modes of failure are as follows:</p>
+
+    <ol type="a">
+      <li>Ultimate failure, rupture, and collapse due to stresses exceeding material ultimate strength,</li>
+
+      <li>Detrimental yielding that undermines structural integrity or performance due to stresses exceeding material yield strength,</li>
+
+      <li>Instability (buckling) under a combination of loads, deformations, and part geometry such that the structure faces collapse before material strength is reached,</li>
+
+      <li>Fatigue of material due to crack initiation and propagation under cyclic loads and fracture due to unstable crack propagation,</li>
+
+      <li>"Excessive" elastic static or dynamic deformations causing loss of function, preload or alignment, interference, and undesirable vibrational noise,</li>
+
+      <li>Other time dependent material failure modes including stress corrosion, creep, stress rupture, and thermal fatigue.</li>
+    </ol>
+
+    <p>A spacecraft (S/C) structure is usually classified as primary or secondary. The primary structure consists of those elements which react to the overall S/C bending, axial, shear, and torsional loads. Secondary structure comprises those elements which do not appreciably contribute to overall S/C stiffness. Non-flight components are referred to as mechanical ground support equipment (MGSE). Structural stress analysis should define and address all the loads acting on the S/C primary and secondary structures. Table 1 summarizes the most common loads encountered in the space applications.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009313main_0819-1.jpg"  HEIGHT="388"  BORDER="0" /><A HREF="/llis_lib/txt/1009788main_0819-1.txt"  >[D]</A><br />
+      Table 1. Summary of Spacecraft Loads
+    </center>
+
+    <p>Structural loads are specified at the maximum expected level and referred to as the design or limit loads. Usually, two or more of these loads act simultaneously and their combined effect needs to be considered. Note that the loads environment applied to the structure during the verification testing may be more significant than the loads experienced during flight. Many structural failures have occurred during testing in the past. Therefore, these loads must be considered very carefully in the strength and fatigue calculations. It should be noted that this practice does not address all the possible loads a structure may encounter, such as impact with orbital debris.</p>
+
+    <p>Analysis Philosophy:</p>
+
+    <p>The structural analysis should guide the design of the S/C and sizing of the components and provide a high degree of confidence. The analysis should be an integral part of the design process, thus minimizing design effort and time by eliminating redesign caused by failure during structural verification testing. An important benefit of performing stress analyses is the ability to determine design sensitivities and to conduct trade studies. Thus, effective optimization of the structure can be achieved, enhancing reliability while reducing cost and weight.</p>
+
+    <p>It is essential for the analysis to be conservative, i.e., the failure load predicted should be less than the actual load the structure can withstand. This is necessary in view of the uncertainties in the analysis assumptions and the variations in the applied loads and material properties within normal bounds. The concept of an overall safety factor (SF) is introduced to account for various uncertainties and the limit loads are increased in proportion to the SF (Ultimate Load = SF x Limit Load). A typical SF value used for the ultimate failure of flight structures is 1.4. In addition, a yield SF typically equal to 1.25 is selected to prevent structural damage or detrimental yielding during structural testing or flight. Additional safety factors may be used for fittings, castings, etc. to account for related uncertainties. The SF requirements may change depending on the responsible NASA center, the sponsoring agency, and the project.</p>
+
+    <p>In addition to applying a SF, care should be given to conduct a conservative analysis using lower bounds for estimating the structure's load carrying capacity. This will lead to a more reliable design; however, there will be a weight penalty. It should also be noted that the analysis effort decreases with increasing conservatism. Therefore, at the start of the analysis, factors such as weight criticality of the structure, uncertainties in data, and available time for analysis should be considered.</p>
+
+    <p>Analysis Overview:</p>
+
+    <p>Stress analysis activities vary depending on the function and maturity of the phase, namely: (a) the Conceptual and Preliminary Design, (b) the Detail Design, and (c) the Verification phases.For the conceptual and the preliminary design activities, the design loads and the safety factors are considered to evaluate the feasibility and adequacy of the load paths and to size the major structural elements. Most of the trade/optimization studies are conducted in this phase. In the detail design phase, the bulk of the stress analysis activities takes place. Sizing and checking of the load paths is carried out in detail and the design is finalized. In the verification phase, stress analysis is used to analytically show that the structural testing will create the required minimum response (usually 1.25 times the limit loads) and the maximum response will not cause structural damage or detrimental yielding.</p>
+
+    <p>Analysis Methods:</p>
+
+    <p>The general method and techniques used in structural stress analysis are outlined in Table 2. A description of each of these activities is given below.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009314main_0819-2.jpg"  HEIGHT="449"  BORDER="0" /><A HREF="/llis_lib/txt/1009789main_0819-2.txt"  >[D]</A><br />
+      Table 2. Stress/Failure Analysis Outline
+    </center>
+
+    <p>1. Determination of the Structural Requirements and Loads: The first step of the analysis is the establishment of the requirements concerning strength, loads, displacements, service (cyclic) life, and verification (reference 1). In addition to strength, the design and sizing is sometimes dictated by maximum displacement requirements. The service life requirements may also dictate design and are to be clearly defined in every structural design and stress analysis activity.</p>
+
+    <p>A S/C structure is subjected to a dynamic loads environment due to time varying accelerations, pressures, temperatures, and structurally or acoustically transmitted vibratory disturbances. The time history of loads seen by a specific component will be determined by its relative location as well as its stiffness and thermal paths to the rest of the S/C. This is determined by means of a dynamic structural analysis of the overall S/C referred to as "Coupled Loads Analysis." This is usually performed by the "Loads Group" and is out of the scope of this paper. The "Loads Group" provides the stress analyst with given equivalent static loads which envelope the dynamic loads. It is important to make sure that the component does not see higher mechanical forces and this can usually be accomplished by means of checking the resonant frequencies of the structure as discussed under activity 4 below. Coupled loads transient analysis is repeated and refined as the design progresses to provide
+    more realistic and less conservative load levels. Dynamic or time-phased stresses can also be calculated for a structure to determine the actual stress history and peaks. This requires calculation of stresses in conjunction with the coupled loads transient analysis.</p>
+
+    <p>2. Material Characterization: Selection of proper materials for a given structure is based on various considerations such as strength to weight (specific strength) and stiffness to weight (specific stiffness) ratios, ductility, resistance to corrosion (reference 2), thermal characteristics, cost, and ease of manufacturability. These and other structurally important material parameters are summarized in Table 3.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009315main_0819-3.jpg"  HEIGHT="333"  BORDER="0" /><A HREF="/llis_lib/txt/1009790main_0819-3.txt"  >[D]</A><br />
+      Table 3. Structural Goals Versus Material Parameters
+    </center>
+
+    <p>The stress analyst must understand the pros and cons of stock type, material temper, and fabrication processes, since these may significantly affect material characteristics. (reference 3). Certain types of materials, for example, graphite bonded joints, require special consideration and development testing may be necessary for each specific application.</p>
+
+    <p>For structural model development and stress analysis, the selected material can be classified as follows:</p>
+
+    <ol type="a">
+      <li>Homogeneity - Characterizes the dependence of structural properties on location within the material.</li>
+
+      <li>Isotropy - A measure of directional dependence of properties. Conventional metals can be classified as homogeneous, isotropic. A composite lamina is homogeneous (macroscopically), transversely isotropic; whereas a laminate is in general nonhomogeneous and anisotropic.</li>
+
+      <li>Ductility - A ductile material can undergo a significant amount of plastic deformation before ultimate failure as opposed to a brittle material, which fails without any appreciable yield or warning. A ductile material is less sensitive to cracks and flaws since it can yield locally and redistribute the excessive stresses. Reasonable fracture criterion will quantitatively screen out many non-ductile material applications.</li>
+    </ol>
+
+    <p>The classification of materials determines the type and the number of structural properties required in modeling the structure, which is discussed next.</p>
+
+    <p>3. Structural Modeling: A mathematical model of the structure is developed in order to predict deformations, internal forces, and stresses. It is based on an idealization of the actual structure using simplifying assumptions on geometry, loads, and boundary conditions. There are basically two different kinds of structural modeling the stress analyst can resort to:</p>
+
+    <ol type="a">
+      <li>Computer model based on a numerical solution of the elasticity equations and boundary conditions that govern structural response. The part is represented using a finite number of degrees of freedom, by approximating the geometry using discretization. The most common numerical method used in structural analysis is the Finite Element (FE) Method. (Reference 4). There are several commercially available FE analysis computer programs. The one most widely used in the industry is NASTRAN. (Reference 5). The structure is represented by a collection of "elements" connected at "nodal points," or nodes, to each other. The governing equilibrium and compatibility equations are satisfied at each of the modal points and solved numerically. Results in the form of modal displacements, element internal forces, and stresses are output. Different kinds of structural analyses (e.g., stress, normal modes, forced dynamic response) that need to be performed should be identified so that the model
+      can be built with necessary and sufficient detail.</li>
+
+      <li>Analytical or hand calculations based on closed form solutions or empirical data given in various sources for different geometries and loading conditions (References 6 and 7). The concept of a "freebody diagram" is used to isolate and identify the internal forces or reactions acting on the part. For a "statically determinate" case these reactions are calculated based on the equations of static equilibrium. For "statically indeterminate" reactions, additional simplifying assumptions and analyses need to be made regarding structure deformations and load paths. Structure stresses and deformations are determined using the applied loads and the calculated reactions, and based on the solutions or data available in the literature. The analyst can also utilize specialized and proven computer programs such as for the analysis of composites, pressure vessels, and truss structures.</li>
+    </ol>
+
+    <p>It is recommended that both approaches to structural modeling be used. The FE model should contain sufficient detail to represent the overall geometry and the important load paths.However, including "too much" detail such as fillets, joints, and fasteners may increase the modeling (pre-processing), computing (processing), and results (post-processing) times significantly and sometimes without any appreciable advantage. Including too much detail also compounds the difficulty of the model and the results assessment. Therefore, it is recommended that these structural details be analyzed using the internal forces obtained from the "coarse" FE model and hand calculations. Hand calculations should also be used for the overall structure to approximately verify FE analysis results.</p>
+
+    <p>4. Determination of Structural Response: The structural model(s) developed, material properties, and loading conditions are used to calculate the structural response, which consists of displacement, internal force, and stress distributions.</p>
+
+    <p>An important consideration in the determination of structure's response is whether or not it is linear. For a linear system the response is proportional to applied loads, and the principle of superposition applies, that is, the response due to the application of many loads is equal to the sum of individual responses to each one of the loads. This is not the case for a nonlinear system, e.g., a structure undergoing "large" strain (material nonlinearity). The determination of response for a nonlinear system is much more involved and time consuming than that of a linear system. It also needs to be repeated for different magnitudes of the applied forces and cannot simply be obtained using the principle of superposition as for a linear system.</p>
+
+    <p>The FE model should be designed to output the internal forces at various critical points of the structure. Corresponding stresses can then be calculated analytically using hand calculations. These calculations can be based on the basic strength of materials equations (References 8 and 9) as well as on solutions given for more complicated geometries in the literature. Some of the most common cases are listed here: bending of beams, torsion of bars, flat plates, shells of revolution and pressure vessels (References 6 and 7), direct bearing and shear stress (lugs and shear pins) (Reference 6), joints and fasteners (Reference 7), and honeycomb sandwich panels (References 10 and 11). For ductile materials under cyclic loading and for brittle materials, stress concentration factors given in the literature (Reference 12) should be used to predict the local stress peaks around geometry/loading discontinuities.</p>
+
+    <p>It is necessary to ensure that the equivalent static loads used in the stress analysis conservatively represent the effect of the actual dynamic forces the structure will experience. In the early phases of design (i.e., conceptual and preliminary), this can be verified by determining the resonant frequencies of the structure and making sure they fall within the acceptable ranges determined by the coupled loads analysis. Note that natural frequencies and mode shapes of a structure are defined only for a linear system. They can be determined using the FEM and running an eigenvalue analysis on the structural model, which must possess the correct mass properties. For a nonlinear system, resonance conditions are determined not only by the frequency but also the magnitude of load fluctuations. A forced dynamic response simulation of the structure may be run using the FE model to investigate the resonances of a nonlinear structure.</p>
+
+    <p>5. Failure Modes Check: Adequacy of the structure to withstand the calculated forces and stresses is checked by calculating a margin of safety (MS) which is defined as</p>
+
+    <center>
+      <table>
+        <tr>
+          <td><font face="arial, helvetica" size="+1">MS =</td>
+
+          <td><u>Structure Strength (Force or Stress)</u> - 1<br />
+          SF x Applied Force or Stress Structure Strength</td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Failure is predicted for MS &lt; 0. Failure stress or force is determined by means of failure theories (References 13 and 14). Some of the most commonly used ones are summarized below:</p>
+
+    <ol type="a">
+      <li>Maximum Normal Stress Theory is used to predict ultimate failure withMS = F<small><sub>tu</sub></small> /(SFx s<small><sub>max</sub></small> ) - 1. Here F<small><sub>tu</sub></small> is the ultimate tensile strength of the material and s<small><sub>max</sub></small> is the maximum normal stress due to the external loading. In general, this theory is more applicable to brittle materials.</li>
+
+      <li>
+        <p>Maximum Shear Stress (Tresca) Theory is used to conservatively predict ultimate failure for ductile materials. MS = F<small><sub>su</sub></small> /(SF x t<small><sub>max</sub></small> ) - 1,where F<small><sub>su</sub></small> is the ultimate shear strength of the material and t<small><sub>max</sub></small> is the predicted maximum shear stress. This theory can also be used to predict the onset of yield by replacing F<small><sub>su</sub></small> by F<small><sub>sy</sub></small>, the shear yield strength of the material.</p>
+      </li>
+
+      <li>Distortion Energy Theory is used for predicting the initiation of yield in a structure and gives more accurate results than the maximum shear stress theory. The margin of safety is given byMS = F<small><sub>ty</sub></small> /(SF x s<small><sub>VM</sub></small>) - 1, where F<small><sub>ty</sub></small> is the tensile yield strength, and s<small><sub>VM</sub></small> is the so called Von Mises stress. A similar criterion used for the failure prediction of laminated composite materials is the Tsai-Hill Theory (Reference 15).</li>
+
+      <li>Structural Instability is predicted by first determining the critical buckling load of a structure P<small><sub>cr</sub></small>. The margin of safety is given byMS = P<small><sub>cr</sub></small> /(SF x P<small><sub>a</sub></small>) - 1,where P<small><sub>a</sub></small> is the load (compressive, shear) acting on the structure. P<small><sub>cr</sub></small> for common shapes and loading can be found in the literature, e.g.; buckling strength of columns, flat and curved sheet panels with and without stiffeners, composite shapes, cylinders, crippling References 6 and 10). It is recommended that a conservative approach be taken in the modeling of boundary conditions because they significantly affect the critical buckling load. In certain weight critical cases, a post buckling analysis may be performed to access the remaining load carrying capacity of the structure. It is unconservative to use the "low" stress modulus of elasticity (Young's Modulus) at "high" stresses. The
+      value of P<small><sub>cr</sub></small> depends on the modulus of elasticity which in turn depends on the stress level.</li>
+
+      <li>Fracture Control Requirements of S/C parts are outlined in detail in related NASA documents (References 16 and 17). Parts are classified as contained, fail-safe, safe-life or low-release mass and analyzed accordingly. A part is considered contained if it can be shown that even if it broke and became loose, is contained within an enclosure and does not endanger the S/C (Reference 18). A fail-safe structure is a component with redundant load paths such that failure of one does not lead to the failure of the overall structure. A safe-life part must be inspected for cracks. Also, a crack propagation analysis needs to be performed to ensure adequate service life (Reference 19). A scatter factor typically equal to 4.0 and analogous to SF is used in this analysis. A low release-mass part weighs less than a specified threshold value and is considered non-fracture critical.</li>
+
+      <li>The effect of simultaneously applied loads on certain structural components is assessed by means of interaction equations. These are empirically based relations used especially for stability (Reference 10) and fastener integrity (Reference 3).</li>
+
+      <li>Strength of various mechanical components such as springs, bearings, and gears can be assessed based on machine design equations (Reference 14) or load ratings and specifications given by the manufacturer.</li>
+    </ol>
+
+    <p>6. Optimization and Redesign (if Necessary): Several iterations may be made on the material, configuration, and the dimensions of a component before its design is finalized. Major trade studies and design modifications are considered in the preliminary design phase. Finer details are tuned in the later stages of the design using a similar iterative approach.</p>
+
+    <p>7. Documentation: All stress analysis results need to be properly documented with correct references to the models used in analysis, flight and test loads cases, and the safety factors. Proper documentation is essential to a successful stress analysis activity during design, fabrication, and verification testing.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Systematic application of the stress analysis techniques outlined in the previous section enables the design engineer to establish accurate relationships between structural configuration, size, loading, and strength margins thus leading to more reliable and efficient structural designs.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"General Environmental Verification for STS &amp; ELV Payloads, Subsystems, and Components," GEVS-SE, NASA Goddard Space Flight Center, Jan. 1990.</li>
+
+      <li>"Design Criteria for Controlling Stress Corrosion Cracking," MSFC-SPEC-522B, July 1, 1987.</li>
+
+      <li>"Military Handbook - Metallic Materials and Elements for Aerospace Vehicle Structures," MIL-HDBK-5F, Vol. 1&amp;2, 1 Nov. 1990.</li>
+
+      <li>"Concepts and Applications of Finite Element Analysis," R. D. Cook, 2nd ed., John Wiley &amp; Sons, 1981.</li>
+
+      <li>"USERS MANUAL - MSC/NASTRAN VERSION 66," The MacNeal-Schwendler Corporation, Vol. 1 &amp; 2, Nov. 1988.</li>
+
+      <li>"Roark's Formulas for Stress and Strain," W. C. Young, 6 ed., 1989.</li>
+
+      <li>"Aeronautic Structures Manual," NASA Technical Memorandum, NASA TM X-73305, Vol.1-3, Marshall Space Flight Center, Aug. 1975.</li>
+
+      <li>"Strength of Materials/Elementary Theory and Problems," S. Timoshenko, 3nd ed., Robert E. Krieger Pub. Co., 1976.</li>
+
+      <li>"Aircraft Structures," D. J. Peery and J. J. Azar, McGraw Hill, 1982.</li>
+
+      <li>"Analysis and Design of Flight Vehicle Structures," E. F. Bruhn, S. R. Jacobs and Assoc., Inc., 1973.</li>
+
+      <li>"Design Handbook for Honeycomb Sandwich Structures," Hexcel Corporation, 1988.</li>
+
+      <li>"Stress Concentration Design Factors," R. E. Peterson, John Wiley &amp; Sons, 1953.</li>
+
+      <li>"Failure of Materials in Mechanical Design - Analysis/Prediction/Prevention," J. A. Collins, John Wiley &amp; Sons, 1981.</li>
+
+      <li>"Mechanical Engineering Design," J. E. Shigley and L. D. Mitchell, McGraw Hill, 1983.</li>
+
+      <li>"Mechanics of Composite Materials," R. M. Jones, McGraw Hill, 1975.</li>
+
+      <li>"Fracture Control Requirements for Payloads using the National Space Transportation System," NHB 8071.1, NASA, Washington, D. C., 1988.</li>
+
+      <li>"General Fracture Control Plan for Payloads using the Space Transportation System," NASA Goddard Space Flight Center, 1988.</li>
+
+      <li>"Containment Analysis for Fracture Control of STS Payloads," Swales and Associates, Inc., 1985.</li>
+
+      <li>"Fatigue Crack Growth Computer Program - NASA/FLAGRO," Version 2.0, NASA Lyndon B. Johnson Space Flight Center, 1992.</li>
+
+      <li>Assembly Acoustic Tests, Reliability Preferred Practice PT-TE-1407.</li>
+
+      <li>Fiber Reinforced Polymer Composite Material Selection, Reliability Preferred Practice GD-DE-2210.</li>
+
+      <li>Guidelines for Using Flight Loads Analysis as a Spacecraft Design Tool, Reliability Preferred PracticePD-AP-1317.</li>
+
+      <li>Meteoroids/Space Debris, Reliability Preferred Practice PD-EC-1102.</li>
+
+      <li>Pyrotechnic Shock, Reliability Preferred Practice PT-TE-1408.</li>
+
+      <li>Random Vibration Testing, Reliability Preferred Practice PT-TE-1413.</li>
+
+      <li>Sinusoidal Vibration, Reliability Preferred Practice PT-TE-1406.</li>
+
+      <li>Structural Laminate Composites for Space Applications, Reliability Preferred Practice PD-ED-1217.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not performing a complete and comprehensive stress analysis on the spacecraft structural components may lead to an inadequate design with unsafe or inefficient load paths. Without proper stress analysis, the objectives of minimum weight and a balanced design will not be met. Structural testing may also be misguided in that some components may be inadequately tested while others may be over-stressed.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This paper describes the general methodology for performing stress analysis for structures used in space applications.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on theHubble Space Telescope, Gamma Ray Observatory, Superfluid Helium On-Orbit Transfer and Get Away Special (GAS) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

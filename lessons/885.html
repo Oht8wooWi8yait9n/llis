@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0885: Verify Configuration of Flight Hardware Prior to Test (1998)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0885: Verify Configuration of Flight Hardware Prior to Test (1998)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0885 (Database ID: 885)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-06-08</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/885" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Flight hardware was damaged, and personnel safety potentially compromised, during a system-level ambient functional test of the Mars Polar Lander (MPL) spacecraft intended to simulate the mission profile immediately after landing. The software test sequence that was programmed into the vehicle commanded the gimbaled medium gain antenna (MGA) through its full range of motion. This inadvertently drove the MGA into one of the undeployed solar panels, cracking the composite antenna reflector dish and scratching the substrate of that solar panel.</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009395main_0885-1.jpg"  HEIGHT="260"  BORDER="0" /><A HREF="/llis_lib/txt/1009870main_0885-1.txt"  >[D]</A><br />
+      <b>MPL in the "Landed" Configuration</b>
+    </center>
+
+    <p>A previous test left the solar array configured on the lander in the stowed position. This undeployed mechanical configuration obstructs a full-range-of-motion test of the MGA. As the impending collision was observed, the test conductor attempted to command a halt to the motion. However, the commands did not execute because the uplink path was then in the process of being reconfigured from hard-line to radio frequency. Furthermore, the emergency power-off switch only governed the ground support equipment and could not shut down the spacecraft since it was in a battery-powered flight configuration.</p>
+
+    <p>The primary causes of this test incident were:</p>
+
+    <ol>
+      <li>Configuration Control. Failure to confirm, prior to testing, that the lander was in the "landed" configuration with the solar array deployed to allow full motion of the MGA.</li>
+
+      <li>Flight Design. Omission of a method for emergency removal of battery power to the vehicle. Reference (2) describes a similar omission.</li>
+    </ol>
+
+    <p>Reference:</p>
+
+    <ol>
+      <li>Jet Propulsion Laboratory Problem/Failure Report No. Z47115, September 8, 1998.</li>
+
+      <li>Inadvertent Powering of the Deep Space 2 Mars Microprobe, JPL Lesson Learned No. 0626, June 21, 1999.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>It is necessary to confirm that developmental and flight hardware is in a configuration that has been reviewed for hardware and personnel safety prior to beginning any test sequence.</li>
+
+      <li>Real and potential structural interferences should be mapped and documented for all deployable/articulated components on the spacecraft. This should be done for all spacecraft test and operational configurations.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Where movement of articulated or deployable mechanism is commanded in any test of developmental and flight hardware:</p>
+
+    <ol>
+      <li>Determine the appropriate method and procedure of powering down flight hardware in all test configurations under any potential emergency condition. Never compromise the ability to command the spacecraft/test article while a test is in progress.</li>
+
+      <li>Hold a thorough Test Readiness Review using the most current checklist that addresses personnel safety, software and hardware safety, test operations and constraints, fault protection actions, kinematics and interference analysis, commandability, emergency shutdown, and restart procedures. This review should include a vehicle walkdown prior to test and should be attended by subsystem and flight operations specialists to assure that the test remains consistent with constraints.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraphs 6.12.5.3 and 6.12.5.7 ("Engineering Practices: Protection and Security of Flight Hardware"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

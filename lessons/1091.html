@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1091: Synchronizing Customer Requirements with Service Provisions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1091: Synchronizing Customer Requirements with Service Provisions</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1091 (Database ID: 1091)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-07-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1091" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During pre-operations for the 5A US Lab Closed Hatch Environmental Control &amp; Life Support System/Thermal Control System (ECLSS/TCS) testing, a water separator fault occurred in the Common Cabin Air Assembly (CCAA). The inlet ORU was pulled and found to be wet inside. Three to four ounces of water were noted on the rack floor under the separator/heat exchanger. A small amount of water was found inside the separator but not enough to touch electronics. Water was also found in other areas (hydroflow fitting and coupler of the inlet hose and the inside of the inlet).</p>
+
+    <p>Root cause: The Test Procedure (TP) and Test Preparaton and Restoration Document (TP&amp;RD) were not synchronized. The TP&amp;RD placed a valve in series between the water separator and the GSE collection tank. The TP&amp;RD also, appropriately, had the valve closed to keep water in the line after it was filled and before water separator was started. The TP did not open the valve before initaiation of water separator operations. The TP&amp;RD &amp; TP WERE NOT carefully reviewed for complete integration.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The requirements of the test requestor must be fully consistent with the resulting test procedure developed by the service provider though a two-way collaboration / discipline</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Include a walkthrough, dry run, or mental simulation of the TP prior to start of test and have the TP&amp;RD a part of that review. The TP&amp;RD and TP must be very carefully reviewed for complete integration by several groups test, quality/safety and engineering. Have qualified technicians follow the procedure as written. The procedures should go through a dry run with the test technicians.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Test safety requirements at JSC use a two-way review system for this type of test. The customer requesting a test will provide a test plan to be reviewed by the service provider. Once the test provider understands the test plan and objectives, the provider will write a test procedure that is reviewed by test participants and the test requestor. Theory behind this approach is that both the requestor and reviewer will arrive at a consensus on the test that will minimize any escapes such as occurred in the described event. Dry runs are also done where warranted.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

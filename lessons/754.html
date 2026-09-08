@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0754: Contamination Control of Space Optical Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0754: Contamination Control of Space Optical Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0754 (Database ID: 754)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/754" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1263; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Controlling contamination of space optical systems limits the amount of particulate and molecular contamination which could cause performance degradation. Contamination causes diminished optical throughput, creates off-axis radiation scattering due to particle clouds, and increases mirror scattering. Controlling molecular contaminates minimizes performance degradation caused by the deposition of molecular contaminants on mirrors, optical sensors and critical surfaces; improves cost-effectiveness of mission results; and improves reliability.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Contamination control of space optical systems consists of the planning, organization, and implementation of all activities needed to determine, achieve, and maintain the required cleanliness level of the optical system. Each optical system has its own unique contamination control requirements. To effectively control contamination, concurrent engineering procedures should be employed during design, manufacturing, precleaning, assembly, testing/checkout, transportation, storage, launch and on-orbit operations.</p>
+
+    <p>The desired level of cleanliness, established during the design phase, determines the techniques required to accomplish the desired results. These steps should be documented in a contamination control plan which can be developed by utilizing the following steps:</p>
+
+    <ol>
+      <li>Determine degree of cleanliness required.</li>
+
+      <li>Prepare design with optimum materials, configuration, and tolerances to help accomplish the desired cleanliness level.</li>
+
+      <li>Select and train personnel in contamination control techniques.</li>
+
+      <li>Select and use the proper materials, equipment, and processes to accomplish the desired end result.</li>
+
+      <li>Implement contamination budgeting and monitoring throughout each program phase.</li>
+
+      <li>Plan the product flow to minimize the chance of recontamination after cleaning.</li>
+
+      <li>Select qualified personnel and equipment to monitor the cleaning processes.</li>
+    </ol>
+
+    <p>The major sources of particulate contamination are:</p>
+
+    <ul>
+      <li>Airborne particulates settling on hardware surfaces during manufacturing, assembling, and testing operations.</li>
+
+      <li>Paint overspray, insulation shreds, clothing fibers, and other human-induced substances.</li>
+
+      <li>Trapped particles on internal surfaces of subassemblies and in other hardware crevices. These are released and redispersed from acoustic vibration, transportation, and launch.</li>
+
+      <li>Reaction control system (RCS) or main propulsion system plume exhaust and flash evaporator water release that may create residual cloud environments.</li>
+    </ul>
+
+    <p>The major sources of molecular contamination are:</p>
+
+    <ul>
+      <li>Manufacturing residues (machine and cutting oils) which result from fabrication of hardware.</li>
+
+      <li>Material outgassing.</li>
+
+      <li>Space vehicle surface outgassing during ascent, deployment, and retrieval operations.</li>
+
+      <li>Ground and air transportation environments.</li>
+
+      <li>Volatile condensable materials in the environment to which contamination-sensitive, critical surfaces may be exposed during assembly operations.</li>
+
+      <li>Return flux of outgassed molecules due to collisions with residual atmospheric molecules.</li>
+
+      <li>Propulsion system plume impingements causing deposition of nonvolatile substances (MMH-Nitrate) on optical surfaces.</li>
+
+      <li>Oxidation through exposure to atomic oxygen present in low-earth orbit.</li>
+    </ul>
+
+    <p>A contamination control engineer should be assigned the responsibility for coordinating contamination control requirements. This person should not only interface with the systems engineers, but with the engineers and technicians responsible for design, materials, manufacturing, testing, checkout, facilities, and quality assurance. The contamination control engineer's responsibilities should include: 1) contamination control coordination, planning, and budgeting; 2) coordination of materials selection and testing; 3) participation in design reviews; 4) preparation of detailed contamination control requirements; 5) review and sign-off of engineering drawings, specifications, and procedures; and 6) monitoring with witness samples to meet budgeting allocations throughout each program phase. The contamination engineer and the quality assurance engineer should establish contamination control procedures for the assembly and test facilities. Monitoring of the facilities should be
+    performed by quality assurance personnel.</p>
+
+    <p>To avoid contamination of the optical critical surfaces, contamination control should be a foremost consideration in the design. Contamination sources can be minimized in the design by careful selection and testing of materials, coatings, and processes. Purging the optical system with clean, dry nitrogen during time the system is not in a clean environment (i.e., storage, transportation, idle times during test, etc.) is an effective method of controlling contamination. The selection and testing of organic materials should be accomplished per MSFC-SPEC-1443 (ref. 6).</p>
+
+    <p>Clean room assembly areas should be maintained to class 10,000 and clean benches to class 100 per MSFC-STD-246. After fabrication, all parts should be cleaned, outgassed per established procedures, doubled-bagged using approved material and sealing methods, and placed in bonded storage. Electronic assemblies should be assembled in a separate class 10,000 or better clean environment and double bagged. Mechanical assemblies should be assembled in a separate class 10,000 or better clean environment. Electronic assemblies, mechanic assemblies, and structural subassemblies should remain double-bagged until brought into final assembly clean area. Structural assemblies and optical instrument assemblies should be assembled in a closely-monitored and controlled class 10,000 clean room. All required personnel required for assembly must be trained for work in a clean room environment.</p>
+
+    <p>After assembly, optical instruments should be double-bagged for purging with dry nitrogen to help maintain cleanliness. The final assembly should be tested in at least a class 100,000 clean area. Optics should be protected when they are exposed during the test and monitored with witness samples which should be checked after the test. After testing, the optical instrument is double-bagged and prepared for purging with dry nitrogen during storage or shipping to the launch site.</p>
+
+    <p><u>Measurement, Tracking, and Control</u></p>
+
+    <p>The following training in precision cleaning should be provided to personnel required to enter a clean room: clean room maintenance, hardware handling, and clean room operational procedures and principles. The optical system and clean room should be monitored and measurements recorded using automatic particle counters, total hydrocarbon analyzers, temperature/relative humidity measurements, and pressure fallout sampling of particulate and molecular contaminants. These measurements should be tracked against the contamination budgeting plan. Fallout sampling is usually checked with optical witness samples that are strategically placed throughout the clean room and optical system.</p>
+
+    <p>During the monitoring for contamination of the clean room and optical system, any contamination control discrepancy should be resolved with the contamination control engineer to determine the impact on the optical system. This impact will be weighed against the contamination budget and should be dispositioned by the materials review board.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Contamination control is vital in aerospace optical systems to maintain high reliability and clarity of images. Ground and space contamination prevention, detection, and control are essential for the high-resolution space optical systems now in development or planned. In-depth studies have shown that contamination avoidance is feasible and enhances mission success.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>SPIE 967: "Stray Light and Contamination in Optical Systems." The International Society for Optical Engineering, Proceedings 17-19, August 1988.</li>
+
+      <li>SPIE 1329: "Optical System Contamination Effects, Measurement, Control II." The International Society for Optical Engineering Proceedings, July 10-12, 1990.</li>
+
+      <li>SPIE 1754: "Optical System Contamination Effects, Measurement, Control III." The International Society for Optical Engineering, Proceedings, July 23-24, 1992.</li>
+
+      <li>SPIE 777: "Optical System Contamination Effects, Measurement, Control." The International Society of Optical Engineering Proceedings, May 19-22, 1987.</li>
+
+      <li>NASA SP-5076: "Contamination Control Handbook." Technology Utilization Division, Office of Technology Utilization, NASA, 1969.</li>
+
+      <li>MSFC-SPEC-1443: "Outgassing Test for Non-Metallic Materials Associated with Sensitive Optical Surfaces in a Space Environment." Materials and Processes Laboratory, Marshall Space Flight Center, December 3, 1987.</li>
+
+      <li>MSFC-SPEC-2223: "Outgassing Test for Materials Associated with Sensitive Surfaces Used in an Ambient Environment." Materials and Processes Laboratory, Marshall Space Flight Center, May 17, 1993.</li>
+
+      <li>MSFC-STD-246: "Standard Design and Operational Criteria for Controlled</li>
+
+      <li style="list-style: none">Environmental Areas." Rev. B, Marshall Space Flight Center, NASA, March 1992.</li>
+
+      <li>SP-R-0022A: "General Specification Vacuum Stability Requirements of Polymeric Material for Spacecraft Application." Johnson Space Center, NASA, September 9, 1974.</li>
+
+      <li>PA 01: "Space Telescope Project, Wide Field Planetary Camera Cleanliness and Control Plan." Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, May 16, 1978.</li>
+
+      <li>CON 218: "Passive Contamination Control Monitoring Plan for the Hubble Space Telescope During Transportation through Launch." Lockheed Missiles and Space Company, Inc. Engineering Memorandum, July 14, 1985.</li>
+
+      <li>MSFC-RQMT-691.8A: "Space Telescope On-Orbit Maintenance Mission Contamination Control Requirements." Space Telescope Systems Integration Branch, Marshall Space Flight Center, July 1984.</li>
+
+      <li>K-DPM-11.96.1: "Contamination Control Implementation Plan for Hubble Space Telescope Maintenance and Refurbishment (HST M&amp;R)." Kennedy Space Center, September 1987.</li>
+
+      <li>FED-STD-209: "Clean Room and Work Station Requirements Controlled Environments."</li>
+
+      <li>MIL-STD-1246: "Product Cleanliness Levels and Contamination Control Program."</li>
+
+      <li>LMSC/D975220D: "Hubble Space Telescope Maintenance and Refurbishment Contamination Control Master Plan." Lockheed Missiles and Space Company, Inc. June 30, 1988.</li>
+
+      <li>LMSC4176437D: "Hubble Space Telescope Contamination Control Program Plan." Lockheed Missiles and Space Company, Inc., January 30, 1987.</li>
+
+      <li>LMSC/F157834: "Contamination Control Implementation Plan for HST Rework and Storage." Lockheed Missiles and Space Company, Inc., November 1, 1986.</li>
+
+      <li>52100.200.90.0039: "Advanced X-Ray Astrophysics Facility, VETA-1 Contamination Control Plan." TRW Space and Technology Group, Redondo Beach, CA, June 1, 1990.</li>
+
+      <li>Reliability Preferred Practice PD-ED-1241, "Contamination Budgeting of Space Optical Systems."</li>
+
+      <li>Reliability Preferred Practice PD-ED-1233, "Contamination Control Program."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to sound contamination control for optical systems could result in degradation of the expected scientific data return by obscuring the optical surfaces with particles and molecular deposits.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Contamination of space optical systems is controlled through the use of proper design techniques, selection of proper materials, hardware/component precleaning, and maintenance of cleanliness during assembly, testing, checkout, transportation, storage, launch and on-orbit operations. These practices will improve reliability through avoidance of the primary sources of space optical systems particulate and molecular contamination.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Apollo Telescope Mount (ATM), Hubble Space Telescope (HST), and High Energy Astronomy Observatory (HEAO).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0783: Thermal Test Levels &amp; Durations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0783: Thermal Test Levels &amp; Durations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0783 (Database ID: 783)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/783" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1404, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p> 
+<p>This test, coupled with rigorous design practices, provides high confidence that the hardware design is not marginal during its intended long life high reliability mission.</p> 
+<p>Establish a minimum hardware test temperature level range of -20°C / +75°C and specify that a single cycle thermal dwell test be performed for the appropriate durations (24 hours cold and 144 to 288 hours hot).</p> 
+<p>In the early 1960s, JPL adopted a conservative set of thermal design and test temperature levels to demonstrate hardware design adequacy. As a starting point, a reasonable short term flight temperature excursion (+5°C to +50°C) was established for thermal control surfaces (shearplates). The +5°C lower level is a few degrees Celsius above the freezing point of hydrazine, thus integrated thermal control of bus electronics and propulsion systems is possible. The 50°C upper limit is the approximate level reached by a louvered bus electronics bay after about one hour of full (perpendicular) solar irradiance at one A.U. (astronomical unit) and accommodates near earth maneuvers. The long term desired thermal control range is typically 25±5°C, but this range may be broader depending on the tradeoffs of long term reliability and thermal control costs. This original approach reduced the overall complexity of the system thermal control design process: the wide range reduced the sensitivity to louver/radiator size, heater size, power variations, etc. A margin of ±25°C was then applied to the allowable flight range for qualification and protoflight test levels of assemblies mounted to such thermal control surfaces. These levels accommodate thermal compromises in the design where the short term extremes may be approached during steady state operation; they also have been demonstrated to provide an effective screen of assemblies. This resulted in the JPL standard minimum test range of -20°C to +75°C (for electronic assemblies in particular).</p> 
+<p>These conservative test level ranges lead to several desirable features. The conservative high temperature limit restricts the permitted temperature rise from the shearplate to the junction of electronic piece parts. Thus junction temperatures during the bulk of a mission are much cooler than assemblies designed and tested at lower shearplate temperatures. The increase in theoretical reliability is on the order of a factor of 10 per 25°C. (refer to quotPart junction Temperaturequot, Reliability Preferred Practice No. PD-ED-1204)</p> 
+<p>There are at least two failure mechanisms for both design and workmanship that should be screened by an adequate thermal environmental test of any given assembly. The first is based on Arrhenius rate related physics where time at high temperature is the key to demonstrating reliability during testing. Electronic part life is a prime example of an Arrhenius mechanism, but so are other elements of assemblies including interactions between metal traces within printed wiring boards (PWB's), certain component to board joints, and even solder joints to a certain extent. The other identifiable mechanism is thermally induced mechanical stress (including fatigue) as between components and the board and especially solder joints.</p> 
+<p><i>Arrhenius Rate Physics:</i></p> 
+<p>Contrast the test level of 75°C (shearplate) to 50°C short term worst case transients during flight and 25°C for the bulk of the mission. Based on Arrhenius reaction rate physics described in the following figures, the 75°C test provides a demonstrated reliability some 2 to 8 times that of short transients to 50°C, (typical of thermal cycling tests), and some 4 to 94 times that of long term mission shearplate temperatures (25°C). These reliability ratios are based on activation energies of 0.3 eV to 1.0 eV which cover most assembly element reaction physics.</p> 
+<img alt="refer to [D] description" border="0" height="358" src="https://llis.nasa.gov/llis_lib/images/1009246main_0783-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009722main_0783-1.txt">[D]</a> 
+<br> 
+<img alt="refer to [D] description" border="0" height="327" src="https://llis.nasa.gov/llis_lib/images/1009247main_0783-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009723main_0783-2.txt">[D]</a> 
+<p>The Mariner and Viking spacecraft performed a hot dwell test (75°C) of 288 hours duration. This was reduced to 144 hours for the Voyager and Galileo spacecraft. The statistical database supporting this shorter test is unique to the JPL design rules and processes; therefore, the longer hot dwell duration of 288 hours is recommended for assemblies designed to non-equivalent or less conservative practices.</p> 
+<p>The following figure shows the percentage of the screening test capability for Class S parts that is used by a JPL assembly test at 75°C for 144 hours. A very conservative assumption here is that all parts in the assembly test have a 35°C temperature rise and that they are at 110°C for the entire test. Even given this over-conservative assumption, the JPL test uses only 0.018% of the class S parts minimum screened capability. Clearly less than 2/10000's of the minimum parts capability being dedicated to the assembly protoflight test is not a concern. The parts are not over-stressed by this test.</p> 
+<a href="https://llis.nasa.gov/llis_lib/images/1009249main_0783-3l.jpg"><img alt="refer to [D] description" border="0" height="375" src="https://llis.nasa.gov/llis_lib/images/1009248main_0783-3.jpg" title="refer to [D] description" width="500"></a> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009724main_0783-3.txt">[D]</a> 
+<p><i>Thermally Induced Mechanical Stress (Fatigue):</i></p> 
+<p>JPL has historically done a thermal dwell test rather than a specific thermal cycle test. There are data that indicate thermal cycling uses up hardware life and therefore is degrading to the flight hardware. In practice, the JPL test approach is never really just a one-cycle dwell test. The assembly test program (plus any retest) and the systems test program (frequently two phases) result in a minimum of two cycles and as many as four (or more) are possible although they are not continuous and the transients are controlled to &lt; 30°C/hr to prevent thermal shock. The Voyager hardware was tested as follows:</p> 
+<img alt="refer to [D] description" border="0" height="160" src="https://llis.nasa.gov/llis_lib/images/1009250main_0783-4.jpg" title="refer to [D] description" width="480"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009725main_0783-4.txt">[D]</a> 
+<p>In a recent JPL study, a fatigue life relationship of equivalent thermal cycles was determined over different temperature ranges as follows:</p> 
+<img alt="refer to [D] description" border="0" height="92" src="https://llis.nasa.gov/llis_lib/images/1009253main_0783-eq1.jpg" title="refer to [D] description" width="200"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009728main_0783-eq1.txt">[D]</a> 
+<p>where:</p> 
+<blockquote>
+  C 
+ <sub><small>1</small></sub> is the number of thermal cycles over a T 
+ <sub><small>1</small></sub> range 
+ <br> C 
+ <sub><small>2</small></sub> is the number of thermal cycles over a T 
+ <sub><small>2</small></sub> range 
+ <br> and Y = 2.6 for eutectic solder. 
+</blockquote> 
+<p>As a frame of comparison for workmanship purposes, the JPL protoflight test of 1 cycle over -20/75°C range can be correlated to an acceptance test of 6 cycles over a 0/50°C range. In this case:</p> 
+<p>C<sub><small>1</small></sub> = 1, T<sub><small>1</small></sub> = 95°C,<br> C<sub><small>2</small></sub> = TBD, T<sub><small>2</small></sub> = 50°C</p> 
+<p>and the equivalent cycles of the JPL test are:</p> 
+<p>C<sub><small>2</small></sub> = 1(95°C/50°C)<sup><small>2.6</small></sup> = 5.3 cycles.</p> 
+<p>Therefore, in terms of solder joint fatigue life, the JPL protoflight test equivalency to 5.3 cycles over a 50°C range says that, for workmanship acceptance purposes, the JPL protoflight test is essentially the same as the example thermal cycle acceptance test, i.e., 5.3 equals approximately 6 cycles.</p> 
+<p>The following figure provides comparison of solder joint fatigue life. The recommended -20/+75°C single cycle dwell test uses only 0.14% of the fatigue life of a solder joint qualified to NHB 5300.4 (3A-1). The point of this comparison is that the JPL protoflight test is less strenuous to solder joints than thermal cycle testing performed by most organizations.</p> 
+<img alt="refer to [D] description" border="0" height="278" src="https://llis.nasa.gov/llis_lib/images/1009251main_0783-5.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009726main_0783-5.txt">[D]</a> 
+<p><i>Ground Test &amp; Thermally Related Problem/Failure Statistics:</i></p> 
+<p>These practices were applied to the Mariner spacecraft series, the two Viking 75 spacecraft, the two Voyager 77 spacecraft, and more recently Galileo. These spacecraft all completed (or exceeded) their intended mission successfully (the Galileo mission is still underway at the time of this edition). In fact, the Voyager spacecraft have worked for over 13 years.</p> 
+<p>The total number of assembly problems/failures during these missions is small, and the number of thermally induced problems even smaller. This is shown in the following table where the number of problem/failures identified during assembly level thermal testing are compared with suspected flight problems/failures for the Viking, Voyager, and Galileo programs:</p> 
+<img alt="refer to [D] description" border="0" height="166" src="https://llis.nasa.gov/llis_lib/images/1009252main_0783-6.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009727main_0783-6.txt">[D]</a>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Demonstrated design adequacy and its implications to long term reliability are affected. For example, testing at 50°C instead of 75°C and for about 20 hours instead of 144 hours reduces test demonstrated reliability by a factor on the order of 50.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform thermal dwell test on protoflight hardware over the temperature range of +75°C/-20°C (applied at the thermal control/mounting surface or shearplate) for 24 hours at the cold end and 144 to 288 hours at the hot end. Note: Thermal dwell testing is the standard practice at JPL for systems and components which do not thermally cycle during flight. For systems and components that do thermally cycle (generally over a range > 20°C) in flight, the JPL practice is to cycle over a conservative range for three times the number of flight cycles.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Voyager, Galileo, Viking and Mariner Series programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

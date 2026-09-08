@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6776: Triggering an Office Fire Alarm Shut Down an Adjacent Data Center</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6776: Triggering an Office Fire Alarm Shut Down an Adjacent Data Center</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6776 (Database ID: 6776)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-09-25</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Facilities, Fire Protection, Security, Advanced planning of safety systems</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6776" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+On August 26, 2011, a fire suppression sprinkler head leaked and then failed in Building 600 at the NASA/Caltech Jet Propulsion Laboratory (JPL), inundating several office cubicles. The initial leak was reported earlier in the day to the JPL Office of Protective Services (OPS), OPS contacted the building owner, and a maintenance crew was responding when the sprinkler head triggered the full water release. <br><br>
+
+The impact of the water damage was minor. However, the affected office space shares the fire alarm system with an adjacent data center that, among other activities, supported Mars Science Laboratory (MSL) Assembly, Test, and Launch Operations (ATLO). There was no water release in the data center, but it was believed that the fire alarm system was programmed to shut down power to the data center unless the shutdown was manually countermanded within ten minutes. The data center was not staffed because August 26 was an RDO*, the security guard arrived after the ten-minute period had elapsed, and the data center suffered a power outage.<br><br>
+
+Building 600 is one of the few JPL buildings that is leased from a private owner. Although the procedure for placing the data center electrical system in bypass is posted in the electrical room of the data center, subsequent investigation found that the shutdown was immediate: there is no ten-minute delay in triggering the power shutdown after the fire alarm is triggered. JPL was misinformed, and such a delay is not compatible with the fire code.<br><br>
+
+To prevent a recurrence of this incident, JPL installed a double-interlock, preaction, fire suppression system to replace the existing system in the Building 600 data center. Preaction systems are suitable for water sensitive environments like data centers because (until a valve is electrically activated) they contain no water in the sprinkler piping so a sprinkler head failure does not release water. The double-interlock feature prevents flow of water until both a sprinkler head and a separate detector are triggered simultaneously. (Triggering only one of the two devices will produce an alarm, but no water flow into the system.) Because this fire suppression system is separate and isolated from the system in the Building 600 office space, an alarm in the office space will not trigger an electrical shutdown in the data center.</br>
+
+<blockquote><small>*Most JPL personnel work a schedule that allows them an additional day off work every other Friday, and August 26, 2011 was such a Regular Day Off (RDO).</small></blockquote>
+
+<u>References</u>: <ol><li> 
+"B600 Power Failure," Incident Surprise Anomaly Report No. 49896, NASA/Caltech Jet Propulsion Laboratory, August 30, 2011.</li><li> 
+
+"DNS Server Outage Caused Loss of Uplink In MSTB During ORT2," Incident Surprise Anomaly Report No. 49699, NASA/Caltech Jet Propulsion Laboratory, August 11, 2011.</li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Electrical outages in data centers and other critical facilities that are triggered in error may have a major impact on critical NASA operations. Two weeks prior to the Building 600 incident, a server outage (Reference (2)), caused loss of telemetry flow to an MSL testbed during operational readiness testing. The Building 600 incident might have had even more serious consequences had it occurred in an MSL command and telemetry processing facility because the MSL spacecraft was due to launch in another three months.<br><br>
+
+Especially water-sensitive facilities like major data centers and museums are known to require special (i.e., double-interlock, preaction) fire suppression systems. Although JPL is continuing to install double-lock isolated systems in major data centers where appropriate (e.g., the new data center in Building 230), they are not suitable for all data processing facilities. (Small rooms with one or two servers may not warrant special measures, and a gas suppression system (e.g., halon) is often preferable for data centers.) Because protective systems may be triggered during night or weekend hours when cognizant personnel are not present, potential first responders (e.g., security guards) must be familiar with the required steps to be taken.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol><li>Assure that the NASA Center security and facilities organizations are familiar with the configuration and features of fire suppression systems in any leased facilities. For special purpose facilities that may operate without trained personnel present (e.g., data centers, certain hardware test facilities, and mission operations centers), ensure that:<ul><br><li>
+
+Cognizant personnel for critical facilities identify any special measures that need to be taken by first responders during emergency incidents.</li><br><li>
+
+Security guards are fully trained and aware of their responsibilities as first responders to automated electrical shutdown events. Assure that clear instructions are posted for any special emergency procedures. The instructions should also provide contact information so the guards can promptly inform the responsible person(s) for the facility, and inform Center Facilities about the incident.</li></ul>
+
+</li><br/><li>For major data centers, and for other major facilities having a potentially mission-critical sensitivity to power loss, assess the need for an isolated fire alarm/suppression system that will not be triggered by an alarm originating in the building’s non-critical spaces.</li></ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+The JPL Office of the Chief Information Officer submitted FSR 139013 to JPL Facilities requesting them to provide a double lock, preaction, fire suppression replacement for the B600 data center, and the system has been installed.
+<br><br>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.19 (“Management Practices: Crisis Response”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 9,” JPL DocID 58032, August 21, 2012.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-8719.11A, NASA Safety Standard for Fire Protection
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

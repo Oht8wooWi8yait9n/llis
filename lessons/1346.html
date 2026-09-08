@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1346: ADEOS-II NASA Ground Network (NGN) Development and Early Operations -- Central/Standard Autonomous File Server (CSAFS/SAFS) Lessons Learned</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1346: ADEOS-II NASA Ground Network (NGN) Development and Early Operations -- Central/Standard Autonomous File Server (CSAFS/SAFS) Lessons Learned</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1346 (Database ID: 1346)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-07-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1346" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The purpose of the Standard Autonomous File Server (SAFS) is to provide automated management of large data files without interfering with the assets involved in the acquisition of the data. It operates as a stand-alone solution, monitoring itself, and providing an automated level of fail-over processing to enhance reliability. The successful integration of COTS products into the SAFS system has been key to its becoming accepted as a NASA standard resource for file distribution, and leading to its nomination for NASA's Software of the Year Award in 1999.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Match COTS tools to project requirements. Deciding to use a COTS product as the basis of system software design is potentially risky, but the potential benefits include quicker delivery, less cost, and more reliability in the final product. The following lessons were learned in the definition phase of the SAFS/CSAFS development.</li>
+    </ol>
+
+    <ul>
+      <li>Use COTS products and re-use previously developed internal products.</li>
+
+      <li>Create a prioritized list of desired COTS features.</li>
+
+      <li>Talk with local experts having experience in similar areas.</li>
+
+      <li>Conduct frequent peer and design reviews.</li>
+
+      <li>Obtain demonstration versions of COTS products.</li>
+
+      <li>Obtain customer references from vendors.</li>
+
+      <li>Select a product appropriately sized for your application.</li>
+
+      <li>Choose a product closely aligned with your project's requirements.</li>
+
+      <li>Select a vendor whose size will permit a working relationship.</li>
+
+      <li>Use vendor tutorials, documentation, and vendor contacts during COTS evaluation period.</li>
+    </ul>
+
+    <ol start="2">
+      <li>Test and prototype COTS products in the lab. The prototyping and test phase of the COTS evaluation allows problems to be identified as the system design to matures. These problems can be mitigated (often with the help and cooperation of the COTS vendor) well before the field-testing phase at which time it may be too costly or impossible to retrofit a solution. The following lessons were learned in the prototyping and test phase of the SAFS/CSAFS development.</li>
+    </ol>
+
+    <ul>
+      <li>Prototype your systems hardware and software in a lab setting as similar to the field environment as possible; simulate how the product will work on various customer platforms; model the field operations; develop in stages with ongoing integration and testing</li>
+
+      <li>Pass pertinent information on to your customers</li>
+
+      <li>Accommodate your customers, where possible, by building in alternative options</li>
+
+      <li>Don't approve all requests for additional options by customers or new projects that come on line.</li>
+
+      <li>Select the best COTS components for product performance even if they are from multiple vendors.</li>
+
+      <li>Consider the expansion capability of any COTS product</li>
+
+      <li>Determine if the vendors support is adequate for your requirements</li>
+    </ul>
+
+    <ol start="3">
+      <li>Install, operate and maintain the COTS field and lab components. The following lessons were learned in the installation and operation phase of the SAFS/CSAFS development.</li>
+    </ol>
+
+    <ul>
+      <li>Personally perform on-site installations whenever possible.</li>
+
+      <li>Have support/maintenance contracts for hardware and software through development, deployment, and first year of operation</li>
+
+      <li>Create visual representations of system interactions where possible.</li>
+
+      <li>Obtain feedback from end users</li>
+
+      <li>Maintain the prototype system after deployment.</li>
+
+      <li>Select COTS products with the ability to do internal logging</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Match COTS tools to project requirements. Recommendation: It is essential to conduct a thorough evaluation of project requirements and to compare these requirements against COTS features and vendor capabilities.</li>
+
+      <li>Test and prototype COTS products in the lab. Recommendation: Prototype COTS hardware and software in a lab setting as similar to the field environment as possible. Develop the prototype system in stages in the lab environment with on-going integration and testing through the design&raquo;s maturity.</li>
+
+      <li>Install, operate and maintain the COTS field and lab components. Recommendation: It is essential to be physically present when performing on-site installations, and that support/maintenance contracts be in place for COTS hardware and software. It is also recommended that a lab-based prototype system be maintained and staffed to permit the test of enhancements, upgrades and configuration changes to COTS software prior to field delivery of these upgrades.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

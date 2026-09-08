@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0782: Part Electrical Stress Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0782: Part Electrical Stress Analysis</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0782 (Database ID: 782)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/782" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1303, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Part failure rates are proportional to their applied electrical and thermal stresses. By predicting the stress through analysis, and applying conservative stresses, the probability of mission success can be greatly enhanced.</p>
+
+    <p>Electrical circuits are analyzed to determine the maximum stress on each part when all applied voltages or currents are maximized and when all variations of other parts in the circuit are set to that combination of minimum and maximum values that produce worst-case maximum stress. This requires a new choice of "other" part combinations in the circuit each time the stress on a new part is determined. The stresses are aggravated by imposing maximum operating temperature when comparing the part stress to its required derating. The initial analysis usually is made without benefit of a detailed part level thermal analysis; therefore, a conservative temperature assumption is made. Highly stressed parts are identified for possible replacement with more robust parts or for possible circuit changes. The final design is confirmed by analysis, with part temperatures based on a part level thermal analysis, and with voltages and currents derived from either specification limits or the
+    results of worst-case circuit analysis.</p>
+
+    <p>Numerous life tests have been performed on electrical parts that establish the relationship of part life to applied stresses. There is a very strong dependence. The life expectancy typically can be doubled or tripled by operating at half the manufacturers full rated (100 percent) stresses, which typically are commensurate with a 10,000-hour life expectancy. Complex, multiple year missions must achieve very low part failure rates to achieve mission goals; therefore, operation at derated conditions is mandatory. Although typical reliability predictions are based on nominal stresses, circuit nonlinearities and part and voltage variations can cause large operating point variations. Therefore, it is essential that the conservative approach of using worst-case stresses be implemented as standard practice.</p>
+
+    <p>Although average temperatures during a mission may be nominal, typical qualification test philosophy results in test temperatures that stress the design to assure margin against possible flight contingencies (typically 75 degrees C). It is essential that negligible aging of the parts be introduced during protoflight testing to assure mission reserve life. For this reason, it is prudent to show that the deratings are met while operating in the worst qualification or protoflight test environment. Historical evidence has shown that significant (&gt;40 degree C) temperature rises can exist between the thermal mounting surface of an assembly and the part body if good thermal design of the assembly is not rigorously pursued. For this reason, the results of a part level detailed thermal analysis must be an input to the part stress analysis.</p>
+
+    <p>In summary, the stress derating requirements of every part at worst-case circuit conditions and contingency temperatures must be met. This will ensure a design that will function with a high degree of confidence at these extremes. It also will force a conservative thermal design (small temperature rises), which will produce even greater mission life margins under the expected nominal flight conditions.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Part Junction Temperature, Reliability Preferred Practice No. PD-ED-1204.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The failure to perform part stress analysis likely will result in several overstressed parts in the design. These will become the life limiting items of the design and produce unacceptably short-lived hardware. If the analysis is performed at nominal temperature and operating points, without derating, or without a detailed thermal analysis, there will be no margin for contingencies and the nominal life expectancy also will be degraded.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Every part in an electrical design is subjected to a worst-case part stress analysis performed at the anticipated part temperature experienced during the assembly qualification test (typically 75 degrees C). Every part must meet the project stress derating requirements or be accepted by a formal project waiver.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Voyager, Magellan and Galileo programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

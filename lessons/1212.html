@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1212: Contingency Planning for Control of Test Hardware During Anomalous Episodes</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1212: Contingency Planning for Control of Test Hardware During Anomalous Episodes</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1212 (Database ID: 1212)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1998-12-07</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1212" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During functional test of the Qualification Model of the Mobile Transporter (MT) Linear Drive Unit (LDU), mounted on the Functional Test Fixture (FTF) a power surge followed by a facility power outage occurred. A sequence of events began that resulted in two incidents.</p>
+
+    <p>Incident #1: When power was restored, the Special Test Equipment (STE) console and data acquisition systems (computers) were restarted. For the STE, the operator selected the appropriate program to power up the fixture motors to warm them up, in preparation for the start of the Fixture Characterization Procedure. Unexpectedly the X-axis motor started, raising the carriage until the screw securing the load cell contacted the lower end of the motor ball screw, causing the flexible coupling to be sheared off. Investigating of the uncommanded movement revealed that several Test Console electrical/electronic components were defective, most likely as a result of the power surge. The fixture motor controller PMAC card, the X-axis motor servo amplifier and the Y-axis motor relay were removed and replaced. The flexible coupling was also removed and replaced.</p>
+
+    <p>Incident #2: Under the assumption that the motor was still disconnected from the X-axis ball screw, the system check-out was started. The motor drove the X-axis to the lower end of travel at which point the kill switch was activated to disable the unit. During the uncontrolled motion the LDU qualification unit bogie wheels contacted the lower flange of the test rail and became loaded (no damage found, only superficial scratch) but damage was incurred by the STE X-axis load cell and related hardware.<br />
+    <br />
+     Root cause:<br />
+    <br />
+     Incident #1:<br />
+     Primary Cause: Failure to properly check out the electronic equipment following a known power surge/power outage. Contributing Causes:<br />
+    </p>
+
+    <ol>
+      <li>The ball screw mechanism was not disconnected from the actuator (motor) to guard against inadvertent/unintended motion.</li>
+
+      <li>An Uninterruptible Power Supply was not installed.</li>
+    </ol>
+    Incident #2: <br />
+    Primary Cause: The safety of personnel and hardware was jeopardized when two different groups worked on the hardware simultaneously and without proper coordination.<br />
+    Contributing Factor: It should have been confirmed first that the motor was still disconnected from the test fixture before the motor system checkout was performed .<br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The safe back-out of a test when anomalous conditions occur must be built into the test design and operations to ensure the safety of costly test equipment and hardware</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Management needs to clearly delineate responsibilities and appoint one individual to be in charge. This individual must plan and coordinate all activities between personnel involved to ensure no conflicts or hazards arise. Before commencing testing, the software and hardware functions must be checked-out in a manner that does not endanger the test article. In the above case, the test fixture motor(s) should have been physically disconnected (flex coupling removed) prior to check-out of the system functionality.</li>
+
+      <li>An Uninterruptible Power Supply with proper surge protection is a preferred practice to protect expensive and delicate electronic test equipment from electrical power surge damage.</li>
+
+      <li>All personnel involved in designing, assembling, handling and testing ISS hardware should know how to "Murphy" proof the process. A "Can Not Fail" briefing was developed by Boeing-Huntington Beach which addresses two different approaches to maintaining a safe environment during Production and Test.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

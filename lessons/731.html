@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0731: Spacecraft Data System (SDS) Hardware Design Practice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0731: Spacecraft Data System (SDS) Hardware Design Practice</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0731 (Database ID: 731)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/731" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1248; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>This practice enhances reliability of the SDS and the probability of mission success by simplifying the design and operation of the SDS system and providing capability to work-around spacecraft and instrument problems.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p>The first SDS system described in this practice was successfully flown on the SAMPEX mission that was launched in 1992. This SDS system is being used on a number of later missions such as the X-Ray Timing Explorer (XTE), the Earth Observing System (EOS), and the Tropical Rainfall Measuring Mission (TRMM).</p>
+
+    <p>The SDS is a dual-redundant command and data handling system which functions as a command decoding and distribution system, a telemetry/data handling system, and a data storage system. It provides on-board computational capability for processing attitude sensor data and generating commands for the attitude control actuators in a closed loop fashion. It also provides stored command processing and monitoring of the health and safety functions for the spacecraft and instrument subsystems. The system design allows for modularity and flexibility in adapting the system for many different spacecraft. The use of standard interfaces and space qualified versions of widely used processors and related software, translates into higher reliability and major cost and schedule reductions not possible with the use of spacecraft unique interfaces, processors and software. The higher reliability results from widespread experience with the standard hardware and software in both space and nonspace
+    related applications. The following are design practices incorporated into the SDS to improve reliability.</p>
+
+    <p>1) <i>Use of MIL-STD-1773 Protocol For Data Bus Interfaces:</i> The use of the MIL-STD-1773 fiber optic data bus and associated standard processors and operating systems significantly simplifies the design of command and data handling systems and the test and integration of spacecraft systems. This approach also significantly reduces the number of failure prone wires and electrical connections previously needed in the discrete wiring method. The fiber optics also reduces the probability of upsets and other radiation problems due to the radiation environment. A SDS for a typical spacecraft, such as the X-Ray Timing Explorer (XTE),will provide three data buses, namely Attitude Control, Spacecraft, and Instruments. Figure 1 is a block diagram of the XTE SDS system architecture.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009187main_0731-1.jpg"  HEIGHT="554"  BORDER="0" /><A HREF="/llis_lib/txt/1009666main_0731-1.txt"  >[D]</A>
+    </center>
+
+    <p>2) <i>Redundancy and Cross-strapping:</i> The reliability of the SDS system is significantly enhanced by the total redundancy of the system with each unit provided an identical backup unit to the other. The SDS units are cross-strapped to their respective data buses which provide the interconnections between them. All bus connected subsystems, components, and instruments are cross-strapped to their respective data buses. The cross-strapping of the SDS with the up and down links is shown in Figure 2. This figure does not show the cross-strapping of the transponders with their antennas. The SDS receives both primary and redundant power lines.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009188main_0731-2.jpg"  HEIGHT="635"  BORDER="0" /><A HREF="/llis_lib/txt/1009667main_0731-2.txt"  >[D]</A>
+    </center>
+
+    <p>3) <i>Error Detection and Correction (EDAC):</i> An EDAC capability designed into the SDS system improves reliability by preserving the integrity of data and protecting against induced errors. The backplane for the SDS is based on a modified PC-AT 386 backplane design which has been optimized by the GSFC for use in a space environment. A significant modification is the addition of an 8-bit wide check bit bus to the PC-AT design to support the EDAC function.</p>
+
+    <p>4) <i>Uplink Board:</i> The reliability of spacecraft operations and control are enhanced by ensuring that the uplink board is the sole avenue by which commands and data are received by the spacecraft from ground support systems during orbital operations. The design for this board is modeled after the SAMPEX uplink board design, but incorporates a number of design modifications unique to the SDS design. The primary command link circuitry and operation is fundamentally unchanged, but a capability to accept hardware decoded uplink commands (bypassing the SDS system software) and cross-strapping between dual transponders has been added. A power converter has been added to the board design in order to permit the board's power supply to always remain on and independent from the rest of the SDS system power. The input to this power converter is unswitched power from the essential SDS power bus. The uplink board interfaces to the SDS and the rest of the spacecraft primarily through
+    communication on the SDS MIL-STD-1773 data bus, on which it is designated as a remote terminal. There are 64 discrete hardware decoded command lines from the uplink card to various spacecraft subsystems.</p>
+
+    <p>5) <i>Bulk Memory Boards:</i> The reliability of the Bulk Memory Boards is increased by memory isolation circuitry which isolates a failed segment of the memory board and keeps it from affecting the entire data system. The SDS bulk memory board is modeled after the SAMPEX memory board design, but incorporates the memory isolation as well as a number of other SDS design modifications.</p>
+
+    <p>6) <i>Low Voltage Power Converter Boards (LVPC):</i> The design of the 2 redundant LVPCs in the SDS system are similar to the SAMPEX Recorder/Packetizer/Processor (RPP) power converter board except for two significant SDS changes to enhance reliability by providing capability for improved control of discrete RESET commands. One change was the addition of a redundant power line. The other change was the addition of a hardware-decoded discrete RESET input command which allows commanding of an 80386 reset independent of the SDS MIL-STD-1773 data bus and system software.</p>
+
+    <p>7) <i>Reliability Related Command Execution Capabilities:</i></p>
+
+    <ol type="a">
+      <li>Every SDS autonomous function is capable of being enabled or disabled by command.</li>
+
+      <li>The SDS by command can perform preplanned diagnostic and operations checkout of itself.</li>
+
+      <li>No single command can place the SDS into a configuration from which it cannot recover.</li>
+
+      <li>The SDS can supply telemetry data such as configuration and health and safety status, indications of anomalous conditions, and performance monitoring data to enable ground controllers to assess the operational state of the SDS and its software.</li>
+
+      <li>The SDS will execute only ground commands to exit from "safe" modes.</li>
+    </ol>
+
+    <p>8) <i>Failure Tolerance:</i> The reliability of the SDS is significantly enhanced by its capability to tolerate single failures including the failure of spacecraft harnesses servicing the SDS. The SDS design does not permit a single failure to cause another failure or the loss of a redundant critical function path.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The redundancy and cross-strapping features of the SDS and its data bus provide a wide range of fault isolation and work-around capabilities that can significantly increase the reliability and the useful life of spacecraft missions. In addition, a number of other design features minimize the impact of component failures and prevent the execution of false or inappropriate commands.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>MIL-STD-1773: Fiber Optic Mechanization of an Aircraft Internal Time Division Command/Response Multiplex Data Bus</li>
+
+      <li>Individual Project C&amp;DH Specification and Interface Control Documents</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If these design practices are not incorporated into the design of the SDS, early, partial, or complete curtailment of the mission could occur due to component failure or to false or inappropriate commands. SDS performance data may not be available for failure analyses and the capability for work-around procedures may not be available.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use a standard SDS in spacecraft where possible which utilizes a standard data bus and space flight qualified versions of widely used hardware and operating software systems.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Solar, Anomalous, and Magnetospheric Partial Explorer (SAMPEX).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

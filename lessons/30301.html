@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #30301: System / Facility Impedance Checks</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #30301: System / Facility Impedance Checks</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #30301 (Database ID: 30301)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2018-07-18</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Facilities,  Flight Equipment,  Ground Equipment,  Hardware,  Test & Verification,  Test Article,  Test Facility</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/30301" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p><img alt="" width="287" height="216" src="https://nen.nasa.gov/documents/17793/5b74004e-edd3-192f-aee4-63584a30572c"></p> 
+<p><em>Figure 1. Interface Adapter Module (IAM), Contamination Monitoring Packages (CMPs), and Disturbance Monitoring Package (DMP) test photo</em></p> 
+<p>The SAGE III on ISS IAM, Contamination Monitoring Packages (CMPs), and Disturbance Monitoring Package (DMP) were prepared for testing in the LaRC Building 1220 EMC facility (see Figure 1).</p> 
+<p>During pre-EMI functional testing, noise was observed on the Power Distribution Unit (PDU) 28V monitors (see Figure 2). Troubleshooting tests continued at the facility until two bus fuses were blown.</p> 
+<p><img alt="" width="734" height="1029" src="https://nen.nasa.gov/documents/17793/362a44d3-fe97-726e-d78d-9a0eb58f5c35"></p> 
+<p><em>Figure 2. Voltage and Current Oscillations about the IAM PDU (blue) and the DMP (red)</em></p> 
+<p>The LaRC EMC facility, and many other facilities, use in-wall filters for the Ground Support Equipment (GSE) power delivery. This provides EMC test signal isolation and noise rejection for the GSE power delivery.</p> 
+<p>Configuration 2, used in much of the testing, is shown schematically in Figure 3.</p> 
+<p><img alt="" width="727" height="258" src="https://nen.nasa.gov/documents/17793/af8ef27a-8f3b-87d6-b7b3-fa9796c9813e"></p> 
+<p><em>Figure 3. Ringing Test Setup for Configuration 2</em></p> 
+<p>In this configuration, there is no bulk capacitance between the power feeds on the chamber side of the facility wall filters. The illustrated chamber-side table capacitors are relatively small, 10 microF. This satisfies a specified facility configuration requirement for ISS electromagnetic testing techniques.</p> 
+<p>During troubleshooting, the IAM test team conducted some simple ringing tests on the EMC power system as it was operated during the IAM failure anomaly. With step load current changes, appreciable ringing was observed in the 600 – 700 Hz range. This seemed to correlate to other load changes in the measured IAM data. An incompatibility between the as-tested EMC power system configuration and the flight hardware was postulated. A measurement of the output impedance of the facility was set up as shown in the schematic of Figure 4.</p> 
+<p><img alt="" width="716" height="394" src="https://nen.nasa.gov/documents/17793/c3215901-dda4-4e8f-cf34-f4636331a172"></p> 
+<p><em>Figure 4. Impedance measurement test setup.</em></p> 
+<p>The tool used to measure impedance is the Venable VT350c. The system calculates impedance by measuring voltage at the device divided by current into the device, including phase, where device is either the load or the power system. To do so across frequency, it applies a small voltage oscillation, coupled via the pictured transformer into the supply lead, and observes the resultant voltage and current oscillations. Iteratively, it steps across the specified frequency range to produce impedance vs frequency, both magnitude and phase.</p> 
+<p>The result of the configuration #2 impedance sweep is shown below. On the left axis is the magnitude (blue) and on the right is the phase (red). Light red and blue is a plot of the load impedance applied to the EMC power system during this test, a 70-Ohm resistive load for this example. The flatness and accuracy of the plot confirms the Venable system’s operation. The measurements above 100 kHz are less valid because this is nearer the limits of the Venable system and at these frequencies, the test setup wiring starts to be part of the measurement. Later testing with the Venable system is changed to end at 100 kHz to avoid any confusion and improve testing efficiency.</p> 
+<p><img alt="" width="751" height="352" src="https://nen.nasa.gov/documents/17793/7a6664bc-ab98-9177-c900-b44ec567e414"></p> 
+<p><em>Figure 5. Impedance measurements of Configuration 2.</em></p> 
+<p>The darker traces in Figure 5 are the plots of interest.&nbsp;The dark red is the magnitude and the dark blue is the phase of the output impedance of the EMC power system during the IAM anomaly, Configuration 2. There are several critical features. First, the magnitude of the output impedance from 100 Hz to 10 kHz is very high, above 1 Ohm generally, quickly peaking to 33 Ohms at 660 Hz. This 660 Hz peak corresponds to the frequency of oscillation in the ringing tests. A second peak of 10 Ohms is at 2 kHz.</p> 
+<p>The magnitude of the output impedance shown above would easily prove incompatible with the flight hardware system.</p> 
+<p>As a result of the impedance incompatibility, the facility baseline configuration was adjusted to include a 10,000 microF capacitor in series with a 0.3 Ohm resistance across the power supply and return lines. The new baseline configuration set up for measuring impedance is illustrated in Figure 6.</p> 
+<p><img alt="" width="751" height="421" src="https://nen.nasa.gov/documents/17793/4e8e5eef-a257-7170-b818-30f8649a3a0e"></p> 
+<p><em>Figure 6. New Baseline Configuration Impedance Measurement Setup</em></p> 
+<p>Output impedance of the EMC new baseline configuration was measured and is shown in Figure 7. The plot shows that the impedance is very flat, both in magnitude and phase. The worst-case magnitude is less than 0.5 Ohms. Additional testing with setups appropriate for selected other Conducted Susceptibility (CS) and Conducted Emissions (CE) tests showed the configuration with the 10,000 microF capacitor in series with a 0.3 Ohm resistance across the power supply and return lines to produce appropriately low and flat output impedances.</p> 
+<p><img alt="" width="772" height="355" src="https://nen.nasa.gov/documents/17793/f1e1af19-8515-3a75-7713-3344b8b7f635"></p> 
+<p><em>Figure 7. Output Impedance of New Baseline Power Delivery System</em></p> 
+<p>In addition to the inclusion of the capacitor-resistor, facility process changes were implemented to reduce the chances for future testing problems. In the past, power supplies and much of the cabling was supplied by the respective projects. This produced an unknown in testing that could be eliminated by having standard facility power supply and cables, thereby allowing the EMC test facility to characterize the EMC Power Delivery System for different loads, voltages, and test configurations. The EMC facility power wiring were placed under configuration control and wiring is inspected. The power rack and cabling have a logbook to hold schematics, document any changesto the configuration, and provide for quality inspection. Where generic cables with crimp terminals need to be used, qualified tooling has been used and pull tests conducted successfully and inspected. The EMC facility will now prefer that projects consider their input impedance combined with the facility-provided EMC Power Delivery System output impedance in all test configurations.</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Interplay between Equipment Under Test (EUT) and a testing facility can result in unexpected system behavior that can lead to unanticipated test results and even EUT failure.</p> 
+<p>&#xa0;</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>In general, the output impedance of any power delivery system should be known and compared against the input impedance of any load to ensure the power delivery will be stable and as expected. Middlebrook is a good stability criterion but is very conservative. Gain Margin Phase Margin is less conservative, but the results are stable.</p> 
+<p>Engineering judgement should be used to determine to what extent the analysis is completed. For EUT that is considered to be of high value (either from a monetary or programmatic perspective), those responsible for the EUT should measure the input impedance and perform appropriate analyses to confirm that the entire test configuration will be stable. For EUT of lower value, e.g., hardware from bench top research projects, assumptions about the lower output impedance of supplies can be successfully made, but the concept of power delivery stability, especially as electrical power designs begin to daisy-chain more DC/DC conversion, should always be remembered.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

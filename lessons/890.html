@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0890: High Performance Liquid Oxygen Turbopumps</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0890: High Performance Liquid Oxygen Turbopumps</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0890 (Database ID: 890)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/890" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-ED-1269, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p>The use of special design features, materials, and coatings in high pressure liquid oxygen turbopumps will prevent inadvertent overheating and combustion in the liquid oxygen environment. Special sealing, draining, and purging methods prevent contact between the oxygen in the pump section and the hydrogen rich gasses that drive the turbine. These precision design and manufacturing procedures prevent latent or catastrophic failure of the LOX turbopump. Silicon nitride bearings, coupled with other bearing enhancements, prevent bearing wear in advanced LOX turbopumps.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>I. Background</p>
+
+    <p>The high pressure oxidizer turbopump (HPOTP) of the Space Shuttle Main Engine raises the pressure of liquid oxygen flowing to the main engine combustion chamber injector and preburner injectors sufficiently to ensure positive injection of oxygen into the chambers at all thrust levels. Its centrifugal pump contains both a double-entry main impeller and a single entry preburner oxygen boost impeller. The pump bearings are cooled by internal flows of oxygen from points of higher pressure to points of lower pressure. A hollow retaining bolt and hollow turbopump shaft provides a liquid oxygen coolant flow path to two of the pump bearings. The other two bearings are cooled by liquid oxygen that flows down the back face of the preburner pump impeller, through the hub seal, through the bearings, and into the main pump inducer. The pump bearings consist of two matched pairs of angular-contact ball bearings whose inner races are clamped and whose outer races are preloaded. Excessive
+    axial loads are counteracted by two balance cavities which lie between the front faces of the impeller and adjacent stator rings. The HPOTP turbine is a two-stage, cantilevered turbine powered with hot, hydrogen-rich gas generated in the oxidizer preburner. The second stage turbine wheel is an integral part of the turbopump shaft and the first stage wheel is bolted to the second stage wheel.</p>
+
+    <p>II. Special Considerations for High Pressure Oxidizer Pumps</p>
+
+    <p>Because of the oxygen environment, any condition that results in heat generation must be avoided to prevent inadvertent combustion. Contamination, rubbing, and cracking of components are closely monitored and controlled. More stringent tolerances are required in LOX turbopumps than hydrogen turbopumps, and silver plating is used rather than gold plating because silver does not as readily decompose in an oxygen environment. The cantilevered turbine, coupled with the heavier fluid being pumped, creates a greater load on the oxygen pump bearings. Operation of the bearings in an oxygen environment with these high loads increases their susceptibility to wear. Routine tear-down and inspection of bearings is required to ensure continued reliable operation. The use of silicon nitride bearings has shown promise in long-term component tests for longer lifetime and greater wear resistance. The addition of a preburner liquid oxygen pump to the main liquid oxygen pump makes the pump design
+    more complex. Multiple interference fits require precision assembly procedures.</p>
+
+    <p>III. Sealing, Draining, and Purging Between Liquid Oxygen and Hydrogen-Rich Turbine Gasses</p>
+
+    <p>To prevent contact between the liquid oxygen being pumped and the hot, hydrogen-rich gasses that drive the turbine a sophisticated three-cavity labyrinth seal is used. The first cavity next to the turbine drains the fuel rich gasses overboard. The second cavity is purged with helium to eliminate any other fluids or gasses that may leak in from the first and third cavities, and the third cavity drains off liquid oxygen that leaks in from the oxygen pump side. Cavity pressures are carefully monitored and represent redline values for engine control. It was found early in the SSME liquid oxygen turbopump development effort that three-step shaft mounted labyrinth seals with stationary plastic wear rings were superior to bellows loaded hydrodynamic liftoff seals for isolation of pumped liquid oxygen and turbine hydrogen.</p>
+
+    <p>IV. Reduction of Vibration and Addition of Damping Provisions</p>
+
+    <p>Vibration of liquid oxygen turbopumps, can be reduced significantly by careful analysis of the dimensions, weights, and clocking of turbopump components on the turbopump shaft. Precision optical methods have been developed for computer-based balancing of turbopumps through precise assembly of components at the proper rotational position on the shaft. Two-piece dampers were installed on the first stage turbine blades to reduce dynamic stress and to eliminate transverse blade shank cracks. Resonant frequencies are reduced by the proper design of seals. Internal clearances for bearings was increased by elongating cage pockets in the turbine and preburner pump bearings.</p>
+
+    <p>V. Design, Fabrication, and Assembly Practices</p>
+
+    <p>An effective means of controlling or eliminating cracking in the high pressure oxidizer turbopump components has been to provide higher radius fillets. Assembly process improvements have aided in the effective disassembly, inspection, and reassembly of the turbopump when required. For example, Hot Isostatic Pressure (HIP) Process was performed on turbine nozzle castings to eliminate near-surface porosity. A visual inspection system was developed for the inspection of turbine blades. Bearing defect specifications were tightened, as were the specifications for protective platings and installation procedures.</p>
+
+    <p>VI. Alternate Liquid Oxygen High Pressure Turbopump</p>
+
+    <p>To extend the operational lifetime of liquid oxygen turbopumps for the Space Shuttle Main Engine, an alternate turbopump development program was undertaken by MSFC in conjunction with the cognizant contractors. In the new turbopump development effort, it was necessary to eliminate bearing wear and distress of the pump-end ball bearings, which was the primary failure mode in early development tests. Potential failure mechanisms that were investigated were: (1) misalignment, (2) inadequate prelubrication, (3) bearing cage instability, (4) inadequate inner bearing race clearance, (5) high fixed and dynamic loads on the bearings, (6) inadequate cooling (7) inadequate lubrication, (8) high ball/race heat generation, and (9) inappropriate bearing material configuration. In a detailed fault-tree-based investigation, all but items (6), (7), and (8) were eliminated as not being a likely cause or at the most being a secondary factor in excessive bearing wear. Inadequate cooling can be
+    caused by an inadequate source pressure and resulting inadequate coolant flow rate or by a higher than required coolant temperature. Lubrication of bearings of cryogenic rocket engine turbopumps have traditionally depended upon the transfer of a polytetrafluorethylene (PTFE) film from the bearing cage by rubbing to the bearing balls and races. This film must be of adequate thickness to achieve adequate lubrication. Excessive heat generation is a function of the friction factor of the materials, the contact loads, and bearing geometry. The corrective actions taken to eliminate bearing wear were to improve the coolant supply at the inner bearing race ball contact, to use an outer race guided cage, and to use silicon nitride ball bearings. Larger ball-to-cage pocket clearances were provided, prelubrication was used on the inner race only, and a colder coolant was directed to the inner race. These changes were completely successful in correcting the advanced liquid oxygen turbopump
+    pump-end bearing wear problem. No wear of these bearings has been observed since these incorporations.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The Space Shuttle Main Engine Turbopump has operated successfully in over 200 flight uses, and has steadily improved in resistance to potential failure through three major design phases. Nine improvements were made from Phase II to reflight after Challenger, and ten improvements have been made since the Challenger accident. Engineers at MSFC and the prime contractor continue to closely monitor performance during flight and the condition of the turbopump after flight to determine if additional improvements are necessary to continue to maintain the SSME's record of high reliability.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Engineering Change Proposal #11-17R1: Space Shuttle Main Engine, Rocketdyne Division of Rockwell, International, Canoga Park, CA, 1988.</li>
+
+      <li>Space Transportation System Training Data: Report No. ME-110(a) R1R, Rocketdyne Division of Rockwell, International, Canoga Park, CA, December 1991.</li>
+
+      <li>Reliability Preferred Practice PT-TE-1439, 'Systems Test Considerations for High Performance Liquid Rocket Engines.'</li>
+
+      <li>Reliability Preferred Practice PD-ED-1268, 'High Performance Liquid Hydrogen Turbopumps.'</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to design-in and build-in reliability measures that have been found to create successful operation of the SSME HPOTP could result in less than nominal performance, loss of mission objectives, loss of the vehicle, or loss of life. More likely, subtle inactions or inattention to detail could cause lifetime of the turbopump to be reduced due to the discovery of flaws upon inspection and/or disassembly.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Unique cooling, sealing, draining, and purging methods, along with precision interference fits and vibration damping methods are used in high performance liquid oxygen turbopumps. Coatings and dry lubricants are used to provide protection against cracking, fretting, and generation of contamination. Silicon nitride bearings resist wear and provide long life.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Main Engine, Liquid Oxygen Turbopump, and Alternate Turbopump Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

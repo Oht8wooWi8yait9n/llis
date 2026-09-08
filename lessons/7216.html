@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #7216: Using COTS Equipment in Class D Hardware Integrated with Class A Hardware</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #7216: Using COTS Equipment in Class D Hardware Integrated with Class A Hardware</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #7216 (Database ID: 7216)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-03-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Manufacturing and Assembly, Configuration Management, Flight Equipment, Hardware, Independent Verification and Validation, Parts Materials and Processes, Payloads, Procurement, Small Business and Industrial Relations, Program and Project Management, Spacecraft, Test and Verification, Power, Spacecraft and Spacecraft Instruments, Mission operations systems, Configuration control and data management, Requirements critical to costing and cost credibility, Review boards, Business processes, Communications between different offices and contractor personnel, Configuration and data management, Program level review processes, Program planning / development and management, Risk management, Science integration, Configuration Change Control, Early requirements and standards definition, Impact of human factors on systems requirements and designs, Product Assurance, Quality, Review systems and boards, Level II/III requirements definition, Mission and systems trade studies, Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/7216" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The ISERV payload was developed to provide data and images for the SERVIR team through a downlink from the ISS. Health and status information of the ISERV system was required through the downlink also. The ISERV payload has the capability for issuing commands at predetermined times and accepts file transfers from the WORF. Specific events and obstacles encountered during the design and development of the payload provide the basis of the lessons learned. They are:</p> 
+<ol> 
+ <li> There was a lack of clarity with the flight certification for the COTS hardware. Many agreements concerning what type and condition of hardware is acceptable to fly were verbal and limited to specific disciplines. From a Materials and Processes (M&P) point of view, COTS equipment is normally held to the same standards as flight hardware, but ISERV never had the pedigree to do that.</li> 
+ <li> While ISERV did not have a problem with specific materials, they experienced a failure in Electromagnetic Interference (EMI) verification testing because the camera chip emitted electromagnetic radiation. It was found that a subtier vendor had put a GPS feature on the camera chip, unbeknownst to the camera vendor.</li> 
+ <li> Also during EMI testing, during the troubleshooting efforts, the test team discovered that the telescope pointing mount radiated a significant amount of noise. The Principal Investigator made a request of the vendor to take pictures of the inside of the telescope mount and email them to the test team. The vendor provided the photos by the next day. These photos enabled the team to identify the source of the noise. The photos were also helpful in pointing out a potential issue that could have caused a problem during vibration testing. One of the EMI engineers identified a component (ferrite) in the telescope base that did not look to be securely mounted, which could cause damage to the telescope during vibration testing. Corrective measures were necessary before continuing vibration testing.</li> 
+ <li> A common assumption is that purchased COTS units are identical. This was not the case, and in general, will not be the case. Late discovery of dimensional and configuration differences surprised the mechanical designer and revealed that a planned mechanical stop would not work. The team had to wait until certain development and testing work progressed to a non-critical path intervention point before being able to take the evaluation unit apart, obtain exact dimensions, and develop a new design solution in a quick response recovery situation.</li> 
+ <li> Custom designed cables are often required when using COTS equipment, and custom power supplies are frequently needed. ISS requirements state that if using COTS, certain vehicle requirements must be met. The ISS requirements are intended to protect ISS assets and ensure that the COTS equipment doesn’t cause problems with the ISS vehicle. The ISS requirements do not address the conditions and requirements needed to ensure that the designed system can perform its intended function on the ISS. The project team could have benefited from better guidance on specific requirements in ensuring a system performs in an ISS environment.</li> 
+ <li> Without having a unit for engineering to disassemble and measure dimensions, the stress analyst had to conservatively estimate part thicknesses, masses, and other structural properties. The uncertainties made the analysis more difficult to perform and added to overly conservative estimates.</li> 
+ <li> Interfaces between the COTS hardware and the other payload hardware were not defined and evaluated for expected conditions and interface compatibility early enough in the design cycle. The three threaded bolt holes on the COTS unit were discovered to be insufficient for testing, and another small bolt used as a stop did not function with the precision expected. Early definition of interface requirements could have suggested the need for additional analysis and hardware at these interfaces.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> Integrating COTS equipment on Class D hardware into the ISS WORF rack requires attention to ISS requirements and the attendant pedigree traceability, verification, and validation requirements more typical of Class A and B hardware. Project teams need to be aware of these implied requirements when integrating Class D hardware onto a Class A facility.</li> 
+ <li> Using COTS equipment is not necessarily cheaper. To meet implied requirements, minimum NASA standards must be met, which implies additional quality engineering support, specific test requirements, and part traceability. 
+  <ol style="list-style-type: lower-alpha;"> 
+   <li> It is a good idea to get S&MA involved up front, even if only to understand the qualification requirements that may be encountered when the hardware needs to be integrated into the higher class system.</li> 
+   <li> If too many assumptions about the plug-and-play nature of the equipment and supporting hardware are made up front, the team will spend more hours reiterating design and testing activities.</li> 
+   <li> Assuming that COTS is per print without understanding the implied requirements unnecessarily increases the risk of not meeting schedule, budget, and delivery agreements.</li> 
+  </ol> </li> 
+ <li> Inconsistent configuration and part dimensions and lack of configuration control on COTS equipment by the vendor drives the need for additional care and investigation of purchased hardware. 
+  <ol style="list-style-type: lower-alpha;"> 
+   <li> An additional unit should be purchased as an engineering evaluation unit that can be taken apart and investigated for identifying and quantifying unknown differences. Purchase of a fourth unit for engineering evaluation would have enabled the team to trouble shoot unanticipated configuration and design issues without affecting the critical path or the constraining rework schedule that induced the quick turnaround rework situation.</li> 
+   <li> The project team cannot assume that purchased units will be identical or that all information relevant to the design project will be provided accurately from the vendor.</li> 
+   <li> Engineering evaluation units should undergo some environmental tests early in the project cycle to identify any deficiencies in design, construction, and pertinent engineering data.</li> 
+  </ol> </li> 
+ <li> Any payload, be it COTS or otherwise, must meet interfaces, which ISERV did. </li> 
+ <li> A clear flight certification process is needed for COTS hardware.  Qualification requirements for all disciplines need to be clearly and explicitly stated up front. </li> 
+ <li> Wise use of analyses and evaluation of interfaces at all stages of the life cycle can save time and resource expenditures during build, test, and milestone reviews.</li> 
+ <li> The agreement to use COTS needs to be multi-disciplined with an understanding of the safety and risk implications with limited engineering data on the equipment and less rigorous early-in-life-cycle processes to define and accept the risk.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> COTS has inherent risks to the schedule. Know the risks of limited information, lack of configuration control, and the total scope of the requirements, including implied requirements from the hardware that the COTS-inclusive system will be integrated into.</li> 
+ <li> Ensure external proposals for COTS are vetted with engineering to validate assumptions.</li> 
+ <li> Know your hardware.</li> 
+ <li> Purchase an engineering evaluation unit in addition to the flight, flight spare, and qualification units. Acquire COTS materials and specifications data at kick off to aid in defining possible risks and mitigation steps.</li> 
+ <li> Explicitly define and agree to the qualification requirements and processes up front, involving all stakeholders in the agreement negotiations at the start of the project. Get the requirements in writing.</li> 
+ <li> Establish a checklist or other guidance to define best practices for developing COTS-inclusive systems at MSFC, where to find integrated system requirements, and how to identify risks introduced by using COTS equipment.</li> 
+ <li> The use of COTS devices introduces process steps outside the typical MSFC work flow. Work processes tailored to dealing with configuration, information, and certification of COTS equipment should be put in place to assist projects in anticipating development, testing, and certification challenges.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> N/A</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

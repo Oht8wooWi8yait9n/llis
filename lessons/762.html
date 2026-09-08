@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0762: Systems Design Analysis Applied To Launch Vehicle Configurations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0762: Systems Design Analysis Applied To Launch Vehicle Configurations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0762 (Database ID: 762)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/762" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1230; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>The use of advanced design management methods in each program phase of major launch vehicle developments will maximize reliability and minimize cost overruns. Significant improvements in user satisfaction, error-free performance, and operational effectiveness can be achieved through the use of these methods.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><b>Introduction:</b> As emphasis in the aerospace industry shifts from maximum performance to low life cycle cost and high reliability, the rate of major technological design advancement is giving way to design management improvements. Common to these evolving improvements are the principles and tools of total quality management as applied to systems design analysis. This practice reviews successful systems engineering methodology as it applies to engineering design analyses for launch vehicles, and identifies total quality management applications that provide reliable, low cost aerospace designs. Since designing to high reliability can be correlated to reductions in the long-term cost of failures and spares, cost emerges as the systems common denominator.</p>
+
+    <p>Systems management, systems design, and other systems approaches are well-established processes in the aerospace communities for developing all or any part of large, complex systems. The systems design process provides an orderly transformation of mission objectives into a detailed system design through three continuous and correlated phases: concept formulation, definition, and design. Effective use of these design phases has advanced design practice from an earlier single option procedure to the development of multiple options for trading and selecting optimum performance of mission systems.</p>
+
+    <p>A total system decomposes into tiers of systems, elements, and components throughout the concept formulation, definition, and design phases. Each tier decomposes further into design parameter tasks which expand and interact with systems, elements, or components of the respective tier. Tasks identify design parameter requirements, develop design options to satisfy requirements, perform trades, and formulate criteria by which the best option leading to final design, specifications and plans can be selected. Total quality management procedures consisting of matrix methods, quality techniques, and life cycle cost analyses can be applied within the systems design analysis process throughout all design phases to achieve the simultaneous goals of high reliability and low life-cycle costs.</p>
+
+    <p><b>Matrix Methods:</b> A system is a set of parts whose behavior depends on the behavior of other parts. The need to flow scheduled information in a complex system often results in decisions based on limited analyses and understanding of user requirements and the complex relationship among interacting systems. Matrix methods are used to make these relationships more orderly, visible, and understandable. While the work breakdown structure (WBS) is a hierarchical relationship, it is still one-dimensional and, as such, cannot depict the many interactions between a system's subsystems, components, and parts. Matrices, however, can be multidimensional, and can interact with each other in much the same way they do in a relational data base. As an example, Figure 1 shows a multidimensional matrix progression for payload and launch vehicle subsystem analysis.</p>
+
+    <p>Payload requirements, listed as rows in matrix 1(a), are determined by the characteristics of payload packages A, B, C, or D, which are arranged in columns. Each payload package, transferred to rows in matrix 1(b), can be accommodated by selected vehicle concepts arranged in columns E, F, G, and H. The varying vehicle parameters of each of the vehicle concepts can be displayed in a third matrix 1(c), showing the concept's impact on each launch vehicle system.</p>
+
+    <p>In a three-dimensional matrix, shown on 1(d), the impact on each system element can be assessed. These matrices, which can progress down further into components and parts, permit interactive assessment of requirements flow-down and buildup as the design evolves for a launch vehicle that can accommodate a family of payloads. This arrangement is uniquely adaptable to computer-aided analysis.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009214main_0762-1.jpg"  HEIGHT="338"  BORDER="0" /><A HREF="/llis_lib/txt/1009693main_0762-1.txt"  >[D]</A>
+    </center>
+
+    <p><b>Quality Techniques:</b> Typical quality techniques applicable to systems design phases are quality leverage, quality function deployment, concurrent engineering, and Pareto's principle. Quality leverage, as shown on Figure 2, is greater during the earlier phases of a project. The earlier the control of objectives, the more timely and efficient are the solutions and modifications.</p>
+
+    <p><IMG  WIDTH="350"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009215main_0762-2.jpg"  HEIGHT="232"  ALIGN="RIGHT"  BORDER="0" /><A HREF="/llis_lib/txt/1009694main_0762-2.txt"  >[D]</A>Concurrent or simultaneous systems engineering is a team effort in which all essential disciplines participate in the analysis and selection of concepts, components, materials, manufacturing processes, and major operations. Concurrent engineering is initiated during the concept phase and may expand and branch into systems and element integration working groups as required during the design phases. Team success depends on the adoption of the best available practices, avoidance of previously unsuccessful practices, and on a creative environment fostered by the team's technical leadership.</p>
+
+    <p>Pareto's principle observes that 20 percent of parameters cause 80 percent of results. A reasonable approach for setting priorities to improve products or resolve problems is to first address the top 20 percent of the most significant parameters. These parameters are identified through histograms of their relative sensitivities to goals, e.g., ideal performance and lowest cost. The principle may also help specify hierarchic reliabilities.</p>
+
+    <p><b>Life Cycle Cost Analyses:</b> While user requirements and their accommodations represent one side of the balance, cost to implement them represents the other weighing pan. Judging from past projects, cost goals have not been achieved too well by the space industry. A major overrun cause is stretching the program to match fiscal appropriations. But aside from programmatics, designers have a unique responsibility to minimize overruns by completing design analyses at each design phase, controlling requirements buildup through all design phases, and reducing sources of engineering bottlenecks. The cheapest design changes are early paper changes.</p>
+
+    <p>Cost models are the mechanisms for assessing trades and for tracking and controlling requirements buildup. They are initiated in the concept phase and expanded through all phases and levels of solutions. Models provide the basis for identifying cost driving requirements (Pareto's principle) and sensitivities in support of exploring innovative methods and concepts for reducing cost or for assessing vehicle evolution requirements. They provide the source and basis for making initial high leverage cost decisions and for setting development priorities on critical tasks. Cost models serve to formulate budget controls, detect cost overruns, and pace efforts relative to prevailing funds. Good cost estimates throughout the systems design analysis are the balance and enforcers of successful projects.</p>
+
+    <p><b>Design Phases:</b> The analytical design tools and principles described in the preceding paragraphs are used throughout the engineering analysis process with increasing intensity as greater detail is generated about the final product. In cost-constrained environments, the analytical tools and principles should be used to derive specifications and requirements in a "reverse-engineering" process which designs the system to a life cycle cost target. The following paragraphs describe the activities in each phase that will result in the best design product.</p>
+
+    <p>The concept phase is a first-order activity having the greatest quality leverage and, perhaps, is the most critical for the success of the mission. It is first and foremost a marketing phase which analyzes promising demands and competition for access to and for operation in space. It identifies a potential class of user needs, and it scopes missions within doable schedules and costs. Results of this phase are a set of select, top-level design specifications of customer needs and mission concepts to satisfy them. It includes a comprehensive set of mission requirements and constraints; first-order definition of vehicle configuration, systems, and elements; operation scenarios; and a basis for estimating costs. Subsequent phases peel the systems and elements to lower hierarchies, and expand the systems process of requirements, solutions, and selections.</p>
+
+    <p>The definition phase is a detailed continuation of the concept process in identifying design parameters and requirements of the selected vehicle concept, and in developing solution options and selection criteria leading to a vehicle configuration and to system, element, and component preliminary designs. Results encompass a detailed definition of total vehicle systems and system elements including flight hardware, support equipment, software, and personnel, and the complete operational use definition, configuration description, preliminary design, and systems operational plans. Requirements identified in this phase are documented as vehicle specifications. A total life cycle cost of elements is also required. Concurrent engineering teams develop selection criteria and select and verify solutions. Teams include flight, propulsion, structures, avionics and facilities systems, and should have representation from the mass properties, reliability, manufacturing, verification,
+    operations, safety, and costing disciplines.</p>
+
+    <p>The design phase is the final systems analysis phase and perhaps the most consequential because its detailed design must fit and function as an integrated whole. It is also in the realm of lowest design quality leverage. This phase must proceed with detailed bottoms-up costing adjustments. The systems analysis must penetrate all final component designs for compliance with all tiers of specifications and requirements, and to amend emanating deficiencies through relevant upstream design phases. It must assess and assure that integration conflicts and issues are identified and resolved through all levels of components and systems. It must further analyze and modify detailed component designs and their integrations for (1) high quality performance, (2) manufacture, (3) verification, and (4) operations at lowest cost.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Many years of experience in developing launch vehicles, propulsion systems, and payloads, have been combined with emerging design management techniques to formulate a rigorous methodology for developing low cost, high reliability, launch vehicle for space applications. Greater detail in employing this methodology than presented here can be found in the references, and in the recent classic literature on total quality management, project management, and systems engineering. Conscientious application of these latest methods, coupled with the use of emerging computer-based analysis and simulation tools, cannot only improve product reliability and cost effectiveness, but also reduce the cost and time required for the design process itself.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Ryan, Robert, and Verderaine, V.: "System Design Analysis Applied to Launch Vehicle Configuration," NASA Technical Paper #3326, Marshall Space Flight Center, Alabama, 1993.</li>
+
+      <li>Steward, D.V.: "Systems Analysis and Management," Petrocelli Books, Inc., New York, 1981.</li>
+
+      <li>Blanchard, Benjamin S.: "System Engineering Management," John Wiley &amp; Sons, Inc., New York, 1991.</li>
+
+      <li>Hopkins, J.: "Approaches to Reduced Launch Operations Costs," SAE 901877, Aerospace Technical Conference, October 1990.</li>
+
+      <li>Rutledge, William S.: "Launch Vehicle Cost Trends," Aerospace America, June 1994.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to effectively use the methods and tools described in this practice could result in excessive project development time or cost, and failure to attain the highest achievable reliability.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use design management improvements such as matrix methods, quality techniques, and life cycle cost analyses in a systematic approach to systems analysis.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I, IB and V, Space Shuttle Main Engine (SSME), Space Shuttle External Tank (ET), Space Shuttle Solid Rocket Booster (SRB), Hubble Space Telescope (HST), High Energy Astronomy Observatory (HEAO), Lunar Roving Vehicle (LRV), Skylab, and many others.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

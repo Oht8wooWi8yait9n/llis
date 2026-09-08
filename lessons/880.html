@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0880: AC - Variable Frequency Drive Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0880: AC - Variable Frequency Drive Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0880 (Database ID: 880)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/880" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-07 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>AC variable frequency drive systems for motor speed control offer several advantages over systems that use DC or AC motors coupled with mechanical devices (clutches and pulleys) to achieve motor speed control. These advantages enhance system maintainability resulting in:</p>
+
+    <ul>
+      <li>Improved system maintainability, reliability, and performance.</li>
+
+      <li>Reduction of preventive and corrective maintenance (manhours and materials) by elimination of mechanical devices.</li>
+
+      <li>Increased system availability.</li>
+
+      <li>Self-contained diagnostic test capability.</li>
+
+      <li>Reduced size and mechanical complexity.</li>
+
+      <li>Reduced life cycle costs.</li>
+    </ul>
+
+    <p>The use of A/C variable frequency drive systems provides greater efficiency for motor speed control than mechanical devices with DC or AC motors. AC variable frequency drive systems allow for direct coupling and eliminates the need for mechanical devices such as clutches and pulleys. Elimination of these mechanical devices results in decreased maintenance downtime and repair costs. Adjustable speed AC drives also offer many advantages over DC drives because of simplicity, high-speed capability, and low maintenance requirements of induction motors. These motors are suitable for adverse conditions such as dirty air, explosive atmospheres, and inaccessible locations.</p>
+
+    <p>Components</p>
+
+    <p>Typically, an adjustable frequency drive system for an AC induction motor will consist of a converter module, DC link module, and inverter module. The following is a description of an adjustable frequency drive system. The configuration shown and the type of control scheme used classify the drive as a current source inverter type. Figure 1 illustrates three fundamental steps used in converting the AC input into a variable AC output.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009387main_0880-1.jpg"  HEIGHT="425"  BORDER="0" /><A HREF="/llis_lib/txt/1009862main_0880-1.txt"  >[D]</A>
+    </center>
+
+    <p>The converter module can be thought of as a programmable DC voltage source where the three AC input lines are rectified by silicon controlled rectifiers (SCR's) to provide a variable DC output. An SCR can be thought of as a controlled rectifier or switch that lets current flow in the forward direction when gated or opened. Then it cannot shut off again until the flow reverses or ceases. At this point the SCR regains its forward blocking capability until gated again.</p>
+
+    <p>The control circuitry in the drive turns the SCR's on 60 times per second to obtain the desired current flow. Each time a new SCR is gated, it then forces a previous one to shut off. If it is necessary to turn off all the SCR's, all gate signals are removed and the SCR's then turned off naturally when the AC input voltage is reversed.</p>
+
+    <p>The DC link module is so called because it is a device that connects the inverter and converter modules. Electronically it is an inductor or choke that filters the output of the converter module and provides a more uniform flow of current to the inverter module. Since the inductor tries to maintain a constant flow of current through it, this allows the voltage source converter to function as a current source to the inverter module.</p>
+
+    <p>The inverter module takes the filtered DC from the DC link module and converts it back to AC. Here the SCR's are gated, one after the other, steering this DC into and out of each of three input lines to the motor. The faster the SCR's are fired, the faster the motor turns. Since the AC line is not present here, external commutating capacitors are used to ensure that each time a new SCR is fired, an old or previously conducting one is shut off.</p>
+
+    <p>Drive Operation</p>
+
+    <p>The following paragraphs briefly discuss some of the characteristics of the drive:</p>
+
+    <ol type="a">
+      <li>Output voltage and current normally delivered to a motor from the AC input line are both sinusoidal. This is not true when operating the motor from a current source inverter (see Figure 1). The voltage waveform is closely sinusoidal with disturbances called commutation spikes. The output current is a high quality quasi-square waveform. The current source inverter makes no attempt to define the shape of the output motor voltage. The output voltage is simply a result of the current and rotation of the motor. The shape of the current waveform is defined and its level is increased or decreased to obtain the required voltage. Stated more simply, the control circuitry contains an inner current regulator loop with an outer voltage regulator loop that ensures that the proper current and voltage are supplied to the motor.</li>
+
+      <li>Crowbar: Since during normal operating conditions the DC link or choke is carrying a large current, which implies a large amount of stored energy, it is worth discussing what happens should the input or output to the drive be suddenly disconnected. The inductor would normally develop whatever voltage is needed to maintain the constant flow of DC. To mitigate the danger of these damaging voltage levels, protective circuits are incorporated within the drive to provide a path for this DC. The protective schemes are based on the capability of both the inverter and converter modules to provide a path for this current by firing two series SCR's in the converter and inverter modules, thus generating a direct short circuit path through which the current trapped in the inductor may flow. The process of firing these SCR's to provide a current path is called "crowbar."</li>
+
+      <li>Output clamp: With an abrupt loss of load, the protective mechanism operates as follows. The inverter output leads to the motor are equipped with a device called an "output clamp." If the motor is abruptly disconnected, the output current from the inverter will transfer to this clamp circuit until its level hits 950 volts DC. At this point, the control circuitry will force a "crowbar" and shut off the converter module. This prevents any further increase in output voltage; an orderly shutdown is performed.</li>
+
+      <li>Commutation: Commutation is a process by which an SCR is forced out of a conducting state by reverse biasing. Two types of commutation normally occur in the power circuit, natural and forced.</li>
+
+      <li>Regeneration: The SCR converter is a two-quadrant device capable of accepting power from the DC bus and returning it to the line when the DC bus potential is negative. This capability makes the current source inverter one of the few inverter types that are inherently regenerative without excessive circuit complication.</li>
+
+      <li>Low speed cogging: Each commutation in the inverter module causes the current flow to the motor to be abruptly stopped in one phase and started in another. This action forces the motor to turn one-sixth of a rotation on a 2-pole machine, one-half on a 4-pole machine, etc. This explains why, at very low speeds, the motor appears to move in discrete steps rather than smoothly rotate. At a frequency of 1 Hertz, for example, a two-pole machine would perform one complete rotation in six distinct steps at a rate of six steps per second. This effect is reduced depending on the inertia of the connected load. The visual effect completely disappears at speeds above a few Hertz.</li>
+    </ol>
+
+    <p>Reference:</p>
+
+    <ol>
+      <li>KSC Electrical Advanced Schematic Drawing 79K06382.</li>
+
+      <li>KSC Electrical Advanced Schematic Drawing 79K40029.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Variable frequency drive systems are installed at the Shuttle launch pads at KSC. The system allows for a direct coupling between the main propulsion system liquid oxygen pump and drive motor. This eliminates the motor clutch system, a high maintenance item, and gaseous nitrogen lines used to purge the clutch system.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>During the design of new or modifications to existing systems requiring motor speed control, consider the use of alternating current (AC) variable frequency drive systems for motor control.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Launch Complex 39A &amp; B, Main Propulsion System, Liquid Oxygen Subsystem.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

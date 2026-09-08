@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1021: Computer Software/Software Safety Policy Requirements/Potential Inadequacies</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1021: Computer Software/Software Safety Policy Requirements/Potential Inadequacies</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1021 (Database ID: 1021)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1997-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1021" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Potential Inadequacy of NASA Agencywide Software Safety Policy Requirements</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>NASA's Agencywide software safety policy allows projects latitude to tailor their software safety plan for safety-critical software. It does not, however, require projects to obtain center Safety and Mission Assurance (S&amp;MA) approval of the tailored software safety plans nor does it require Verification and Validation (V&amp;V) per se. While the software assurance standard does mention V&amp;V, it does not require any independence of V&amp;V for safety-critical software.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>27a. NASA should require approval of a project's tailored software safety plan by both the center S&amp;MA organization and by one administrative level higher than that making the request.</p>
+
+    <p>27b. NASA's software safety plan should require formal V&amp;V of safety-critical software. Testing alone does not suffice.</p>
+
+    <p>27c. NASA should develop an explicit policy that requires independent V&amp;V for safety-critical software.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>27a. NASA agrees with the intent of this recommendation but believes the requirements for formal system safety program plans and software management plans exist and, with proper and firm enforcement, fulfill the objective of this recommendation. To be sure that these requirements are perfectly understood, the Office of Safety and Mission Assurance (OSMA) will update NSS 1740.13, "NASA Software Safety Standard," to explicitly state that the program/project manager for programs/projects perform an assessment to determine, based on the level of criticality and risk, the scope and level of Independent Verification and Validation (IV&amp;V) to be planned. The results of the assessment will be formally reviewed by Center Safety and Mission Assurance (SMA). The program/project manager, in consultation with SMA, will tailor an approach to ensure that the appropriate V&amp;V requirements are established and implemented. The OSMA will place more emphasis on the implementation and
+    enforcement of these existing requirements. Process verification, recently established in the OSMA, will be used to evaluate and enforce these existing policy and requirements more aggressively.</p>
+
+    <p>NASA is committed to assuring that required program management plans and any subordinate plans such as software or safety management plans cover the essential requirements for programs where warranted by cost, size, complexity, lifespan, risk, and consequence of failure. Additional changes are being incorporated into NPG 7120.5, "NASA Program/Project Management Guide" (currently under development), to ensure that necessary and sufficient requirements will be fulfilled for programs having software vulnerabilities. SMA organizations at each level are to be a party to these decisions and are to intervene where necessary to assure that proper and clearly documented decisions are made by the appropriate level of management. The Program Management Councils could play a role in adjudicating any issues with the content of program management plans.</p>
+
+    <p>27b. NASA agrees with the intent of this recommendation and is confident that NPD 2820, "NASA Software Policies" (currently under development), will ensure that software management and/or safety plans developed for any NASA program/project will specify the level of V&amp;V and types of testing that should be implemented. NPD 2820 policy relating to software V&amp;V states that NASA will create and/or acquire and maintain software through risk-based management. Risk management products shall be documented or referenced in a management plan. NASA will employ V&amp;V, IV&amp;V, and other trusted verification techniques for appropriate risk mitigation based on the cost, size, complexity, lifespan, risk, and consequence of failure. NSS 1740.13 is not a NASA Software Safety Plan. The level of detailed requirements that the ASAP is recommending be in NSS 1740.13 more appropriately belongs in the documents that the programs and projects will prepare in response to NSS 1740.13. These
+    details need to be documented in the Software Management Plan (SMP), the System Safety Program Plan (SSPP), or the Program Management Plan (PMP). NASA maintains that the requirement stated in NASA-STD-2100-91, "Software Documentation Standard," suffices as a requirement for addressing the issue of V&amp;V for programs.</p>
+
+    <p>NHB 1700.1, "NASA Safety Policy and Requirements Document," requires NASA program managers to publish and maintain an approved NASA Safety Management Plan (SMP). The program manager is responsible for approval of the NASA SMP and contractor Safety Program Plan (SPP). The system safety manager (SSM), assigned by the program manager (PM) from the Center Safety and Mission Assurance organization, prepares the SMP. The SSM, reviews the contractor's SPP and provides recommendations to the PM. The SSM, upon review of the contractor's SPP, will have the required insight into the approach for software V&amp;V to ensure that a proper balance of analyses, inspections, and testing is planned for the entire life cycle of the program. NASA's SMA organizations at the NASA Centers are currently involved in the review of V&amp;V plans for software and do make recommendations to the PM.</p>
+
+    <p>27c. NASA agrees with the premise that safety-critical software is a prime candidate for IV&amp;V; however, it is NASA's position that all software determined to be safety-critical by engineering or safety analyses need not be subjected to IV&amp;V. To be sure that program/project managers plan for the proper level of both V&amp;V and IV&amp;V from the outset, the OSMA will update NSS 1740.13, "NASA Software Safety Standard," to explicitly state that program/project managers perform an assessment to determine the scope and level of IV&amp;V based on the level of criticality and risk. The results of the assessment will be formally reviewed by SMA. This way, the program/project manager, in consultation with SMA, will tailor an approach to ensure that the appropriate V&amp;V requirements are established and implemented. NPD 2820 has incorporated the proper approach for software on NASA programs/projects; the directive requires program managers to employ IV&amp;V, V&amp;V, and
+    other proven verification techniques for risk mitigation, based on cost, complexity, risk, and consequence of failure. NPG 7120.5, "NASA Program/Project Management Guide" (currently under development), will reflect some of the requirements now found in documents that program managers may not normally review for compliance.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

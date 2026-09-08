@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0719: Short Circuit Testing for Nickel/Hydrogen Battery Cells</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0719: Short Circuit Testing for Nickel/Hydrogen Battery Cells</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0719 (Database ID: 719)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/719" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PT-TE-1430 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Ni/H<small><sub>2</sub></small> battery technology is gaining wide acceptance as an energy storage system for use in space applications because of its reliability, weight and long cycle expectancy at deep depths-of-discharge (DOD). When a charged Ni/H<small><sub>2</sub></small> battery is short-circuited, its short circuit current data can be used to calculate the internal resistance of the cells for the purpose of determining the overall characteristics of the energy storage system. Also, by examining the cell impedance only, a Ni/H<small><sub>2</sub></small> battery simulation utilizing low cost lead-acid cells can be developed.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Ni/H<small><sub>2</sub></small> batteries will be used as the secondary source of electric power systems for many space applications, such as a space station. Most long term spaceflight will be orbiting in Low-Earth-Orbit (LEO) once every 90 minutes, which equals to approximately 6000 cycles per year and during each cycle there will be an eclipse period of approximately 30 minutes. During the eclipse period, electric power must be maintained to support many on going activities, such as life support, communication and experiments. A typical Ni/H<small><sub>2</sub></small> battery will contain 76 Ni/H<small><sub>2</sub></small> cells connected in series to produce a nominal battery voltage of 112 volts DC. Each cell has a capacity of 81 Amp-hours and will operate at nominal 35 % DOD. Based on the short-circuit testing conducted here at LeRC, Ni/H<small><sub>2</sub></small> battery is inductive in nature (no large current spike) and this was later confirmed by analysis of its
+    internal cell structure. A 76 cell battery was not available, therefore, characteristics of a single cell and two cells in series were used to extrapolate the overall characteristics of the entire 76-cell Ni/H<small><sub>2</sub></small> battery. Figure 1 shows the external configuration of a typical Nickel/Hydrogen cell.</p>
+
+    <table>
+      <tr>
+        <td>
+          <center>
+            <IMG  WIDTH="311"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009156main_0719-1.jpg"  HEIGHT="306"  BORDER="0" /><A HREF="/llis_lib/txt/1009635main_0719-1.txt"  >[D]</A><br />
+            Figure 1: Typical Nickel/Hydrogen Aerospace Cell
+          </center>
+        </td>
+
+        <td>
+          <p>The test setup for the single cell short circuit test is shown in Figure 2. For safety reasons, the instrumentation and test personnel were separated from the short circuit test stand by means of a separate room. The test equipment located in the control room consisted of: a battery charge/discharge controller to monitor and control state of charge, the relay control panel to control relay activation, and a four channel Digital Oscilloscope to record current and voltage transients. In the energy storage room the Ni/H<small><sub>2</sub></small> cell was mounted on a cold plate and contained in a sealed chamber which was purged with Gaseous Nitrogen (GN<small><sub>2</sub></small>) in case of hydrogen out-gassing. The cell was connected to a 400 Amp relay by a pair of 1/0 welding cables, keeping cable length and inductance to a minimum. Current measurements were obtained using a Pearson current transformer (to capture quick alternating current
+          (AC) transients) and a Hall effect current sensor. Initial tests showed that the Hall effect current probe had ample bandwidth to capture the current transient, and the Pearson current transformer was removed.</p>
+        </td>
+      </tr>
+    </table>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009157main_0719-2.jpg"  HEIGHT="451"  BORDER="0" /><A HREF="/llis_lib/txt/1009636main_0719-2.txt"  >[D]</A><br />
+      Figure 2: Ni/H<small><sub>2</sub></small> Cell Short Circuit Test Block Diagram
+    </center>
+
+    <p>The test setup for the two-cell short circuit test differs only in the configuration of the cells. Instead of a single cell, two cells are connected in series and both are placed inside the test chamber.</p>
+
+    <p>TEST DESCRIPTION:</p>
+
+    <p>The cell(s) are setup as shown in Fig. 2, and the cell(s) are either charged to 100% state-of-charge (SOC) or discharged to a 65% SOC. The digital oscilloscope is set to trigger on the current rise and the relay is closed by the operator. The relay activation switch automatically de-energizes the relay after only 175 milliseconds of short circuit current. The test cells never lost any capacity and were not subjected to any thermal stress.</p>
+
+    <p>The following are brief descriptions of the seven test measurements:</p>
+
+    <ol>
+      <li>Short Circuit Current Response of Ni/H<small><sub>2</sub></small> Cell (100% SOC) with the Pearson Current Transformer. The result shows a peak current of 746 A. During the short, it shows a cell voltage drop from 1.477 to 0.692 Vdc and a relay voltage drop of 0.339 Vdc.</li>
+
+      <li>Short Circuit Current Response of Ni/H<small><sub>2</sub></small> Cell (100% SOC) with the Hall Effect Current Sensor. The result shows a peak current of 775 A. During the short, it shows a cell voltage drop from 1.479 to 0.691 Vdc and a relay voltage drop of 0.329 Vdc.</li>
+
+      <li>Short Circuit of Ni/H<small><sub>2</sub></small> Cell (re-conditioned 100% SOC). The cell was fully discharged then fully charged again. This re-conditioning method has shown to improve the ampere capacity of the cell(s). However, little change in short circuit current (I<small><sub>sc</sub></small>) was measured.</li>
+
+      <li>Same test as NO.3, but the time base was reduced to examine the start-up transient and switch bounce effect It has shown a good transient after the initial bounce.</li>
+
+      <li>Short Circuit of Ni/H<small><sub>2</sub></small> Cell (re-conditioned 65% SOC). After the cell had been discharged to 35% DOD, results were lower cell voltage (1.295 Vdc) and consequently lower I<small><sub>sc</sub></small> of 659 A.</li>
+
+      <li>Short Circuit of two series Ni/H<small><sub>2</sub></small> Cells (100% SOC). The Hall effect current of 987 A peak falling to 950 A within 171 ms. During the short, total cell voltage dropped from 2.967 to 0.795 Vdc.</li>
+
+      <li>Short Circuit of two series Ni/H<small><sub>2</sub></small> Cells (65% SOC). The Hall effect current of 856 A peak falling to 832 A within 171 ms. During the short, total cell voltage dropped from 2.595 to 0.685 Vdc.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Test Result Comparison</p>
+
+    <p>Analyzed test results between single and duel cell test measurements. The short circuit current of a cell is not increasing at the same rate as the voltage from a single cell (test no. 2) to a double cell (test no. 6).</p>
+
+    <p>The dual cell test had the NiH<small><sub>2</sub></small> cells connected in series. The cell voltages would add up to be about double the voltage of a single cell (2.967 V vs. 1.479 V). However, in a series connection, the short circuit current is not expected to double.</p>
+
+    <p>The short circuit current is simply a function of the cell voltage and the resistance in the short (I<small><sub>sc</sub></small>=V<small><sub>oc</sub></small>/R). The resistance, R, is comprised of the internal cell resistance (R<small><sub>b</sub></small>) and the external circuit resistance, R<small><sub>ext</sub></small> (cable and relay contacts). In an ideal test R<small><sub>ext</sub></small>= 0 the short circuit current should not change since both the voltage and the resistance is doubled when the cells are connected in series. However, since the external circuitry adds resistance, the short circuit current will increase as the external resistance becomes a smaller part of the total resistance.</p>
+
+    <p>For example: analysis of the single cell data shows that the external circuit had 0.87 mOhms of resistance and that the internal cell resistance was about 1.06 mOhms. Therefore, the short circuit current should have about 1.479 V/1.93 mOhms = 766 A. The test results were 775 A.</p>
+
+    <p>Analysis of the two cell data goes along the same line. Assuming that both the voltage and the internal resistance were doubled, adding in the external resistance gives the expected short circuit current of: I<small><sub>sc</sub></small>=2.967 V/(1.06 mOhms * 2 +0.87 mOhms)= 2.967 V/2.99 mOhms = 992 A. The Actual test result was 987 A.</p>
+
+    <p>In the same manner the voltage across the cell(s) during the short circuit is a function of the external resistance and the short circuit current (V<small><sub>sc</sub></small>=R<small><sub>ext</sub></small>*I<small><sub>sc</sub></small>). Since I<small><sub>sc</sub></small> does not double and R<small><sub>ext</sub></small> remains constant, then V<small><sub>sc</sub></small> is not expected to double. It will, however, increase as I<small><sub>sc</sub></small> increases.</p>
+
+    <p>Note: Figure 3 shows a data plot of test NO. 7. Please refer to reference 1 for additional data plots of the other tests.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009158main_0719-3.jpg"  HEIGHT="346"  BORDER="0" /><A HREF="/llis_lib/txt/1009637main_0719-3.txt"  >[D]</A><br />
+      Figure 3: Plot No 7, Short Circuit Response of Two Series NI/h<small><sub>2</sub></small> Cells at 65% SOC
+    </center>
+    <br />
+    <br />
+
+    <p>Data Analysis</p>
+
+    <p>The internal impedance of the Ni/H<small><sub>2</sub></small> cell was calculated from the data presented above. Using the single cell and multiple cell tests, an internal resistance/inductance was calculated. The data is used to extrapolate the short circuit current of the entire 76-cell battery.</p>
+
+    <p>The equivalent Ni/H<small><sub>2</sub></small> single and dual cell(s) circuits are shown in Figure 4 and 5 respectively. All of the resistive components' values are derived by using direct-current (DC) circuit analysis. The internal cell inductance is calculated by simplifying the circuit in Figure 4 and 5 to a voltage source switched into a series resistor-inductor (RL) circuit.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009159main_0719-4.jpg"  HEIGHT="228"  BORDER="0" /><A HREF="/llis_lib/txt/1009638main_0719-4.txt"  >[D]</A><br />
+      Figure 4: Single Cell Equivalent Circuit Model
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009160main_0719-5.jpg"  HEIGHT="274"  BORDER="0" /><A HREF="/llis_lib/txt/1009639main_0719-5.txt"  >[D]</A><br />
+      Figure 5: Dual Cell Equivalent Circuit Model
+    </center>
+
+    <p>Single Cell DC Analysis</p>
+
+    <p>Measured values: Open circuit voltage (V<small><sub>oc</sub></small>), short circuit voltage (V<small><sub>sc</sub></small>), battery voltage (V<small><sub>bat</sub></small>), short circuit current (I<small><sub>sc</sub></small>), switch/relay voltage (V<small><sub>sw</sub></small>).</p>
+
+    <p>Cable values: Cable resistance #1 (Rc1), cable resistance #2 (Rc2).</p>
+
+    <p>Calculated component values: Battery resistance (R<small><sub>b</sub></small>), switch/relay contact resistance (R<small><sub>sw</sub></small>).</p>
+
+    <p>&gt;From handbook or manufacturer specifications, look up cable resistance of 1/0 copper stranded welding cable with .09 mOhm/ft. R<small><sub>c1</sub></small>= 2 ft. = 0.18 mOhms, R<small><sub>c2</sub></small> = 3 ft. = 0.27 mOhms, therefore total cable resistance (R<small><sub>ct</sub></small>) equals 0.45 mOhms.</p>
+
+    <p>Relay resistance "ON" calculation: R<small><sub>sw</sub></small>= V<small><sub>sw</sub></small>/I<small><sub>sc</sub></small></p>
+
+    <p>An average value of R<small><sub>sw</sub></small> was obtained: Average R<small><sub>sw</sub></small> = 0.42 mOhm</p>
+
+    <p>Battery resistance calculations: Voc represents the battery cell's ideal voltage source.</p>
+
+    <p>Method #1: I<small><sub>sc</sub></small> = V<small><sub>oc</sub></small> / (R<small><sub>b</sub></small> + R<small><sub>c1</sub></small> + R<small><sub>c2</sub></small> + R<small><sub>sw</sub></small> ), therefore, R<small><sub>b</sub></small> = (V<small><sub>oc</sub></small> / I<small><sub>sc</sub></small> ) - R<small><sub>c1</sub></small> - R<small><sub>c2</sub></small> - R<small><sub>sw</sub></small></p>
+
+    <p>Method #2: I<small><sub>sc</sub></small> = (V<small><sub>oc</sub></small> - V<small><sub>sc</sub></small> ) / R<small><sub>b</sub></small> , therefore, R<small><sub>b</sub></small> = (V<small><sub>oc</sub></small> - V<small><sub>sc</sub></small> ) / I<small><sub>sc</sub></small></p>
+
+    <p>Note: Please refer to reference 1 for the detailed analysis of all the components values and calculation.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>ASA Lewis Research Center has conducted and will continue to support future research on Ni/H<small><sub>2</sub></small> cell battery technology for commercial and aerospace applications. From the current test equipment setup, and with the data obtained through the testing methods of a single cell and two cells in series, the internal cell characteristic impedance has been determined to be of approximately 1.0 mOhm and an internal inductance of approximately 0.55 microhenrys. Based on these test results, the short circuit current depends on the voltage and the resistance in the short. Knowing that the Ni/H<small><sub>2</sub></small> cell internal resistance was about 1.06 mOhms, the ultimate short circuit current could easily be calculated. Therefore a short worst-case short circuit current of 1753 Amps was predicted for a long term spaceflight, 76 Ni/H<small><sub>2</sub></small> cell battery design.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Button, Rob; Pease, Gary; Birchenough, Art; Petrik, John; "Ni/H<small><sub>2</sub></small> Cell Short Circuit Test", Electrical Systems Division, NASA LeRC, Preliminary Test Report # 14, April 20, 1992.</li>
+
+      <li>Button, Robert M., "Ni/H<small><sub>2</sub></small> Short Circuit Test of an Abnormal Cell", Electrical Systems Division, NASA LeRC, PIR #243, May 22, 1990.</li>
+
+      <li>Research &amp; Technology - 1992, NASA LeRC TM 105924, 1992.</li>
+
+      <li>Dunlop, J. D.; NASA Handbook for Nickel-Hydrogen Batteries, Preliminary draft, Goddard Space Flight Center, May 1992.</li>
+
+      <li>Gates Energy Products, Sealed Rechargeable Batteries Application Manual, 1989</li>
+
+      <li>"Battery Selection Practice For Aerospace Power Systems", Reliability Preferred Practice PD-ED-1221</li>
+
+      <li>"Design and Analysis of Electronic Circuits for Worst Case Environments and Part Variations", Reliability Preferred Practice PD-ED-1212</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to proven Ni/H<small><sub>2</sub></small> battery test practices could cause shortened mission life, impact mission success, premature termination of component or experiment operation, and in extreme circumstance, loss of mission or human life. All phases of battery processes, from development, design, fabrication and all the way to installation in the spacecraft, must adhere to the proven reliable design and safe battery practices.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use Short-Circuit testing method or response characteristics on Nickel/Hydrogen (Ni/H<small><sub>2</sub></small>) battery to characterize the battery impedance. This data is necessary for designing power processing equipment and electric power fault protection system.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on NTS-2, INTELSAT V, and Hubble Space Telescope</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

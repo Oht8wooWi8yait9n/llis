@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0711: Magnetic Field Restraints for Spacecraft Systems and Subsystems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0711: Magnetic Field Restraints for Spacecraft Systems and Subsystems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0711 (Database ID: 711)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/711" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1222; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Limits magnetic field interference at flight sensor positions and minimizes magnetic dipole moments that can increase magnetic torquing effects that place additional loads on attitude control systems.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A magnetic test procedure has been established which includes separate determinations of the permanent, induced, and stray field magnetization of parts and sub-assemblies. These three conditions represent the prominent sources of spacecraft magnetic field restraint problems. Applied field vectors are utilized to determine the induced magnetic field properties which the spacecraft will experience in orbit. The stray field measurements are designed to differentiate between the power-on vs power-off conditions of operation as well as the shifts in the stray-field levels during operation of the equipment. In the case of the permanent magnetization measurements, the following conditions or states are normally measured:</p>
+
+    <dl>
+      <dt>A. <b><i>Initial Perm</i></b> - "as received" magnetic state of the item which indicates:<br />
+      <br />
+      </dt>
+
+      <dd>
+        <ol>
+          <li>one possible level of perm which may exist for a newly manufactured item of the same design.</li>
+
+          <li>a relative magnitude of the field used to determine the effectiveness of the deperm treatment.</li>
+
+          <li>the stability of perm by initiating a record of its magnetic history.</li>
+        </ol>
+        <br />
+        <br />
+      </dd>
+
+      <dt>B. <b><i>Post Exposure</i></b> - Magnetic state of the item after exposure to a 15 or 25 gauss D.C. magnetic field which represents the most probable maximum field to which the item is expected to be exposed during the environmental testing.</dt>
+
+      <dd><br />
+      <br />
+      C. <b><i>Post Deperm</i></b> - Magnetic state of the item after being demagnetized in a 50 gauss field (normally 60 Hz AC field). Appendix C of Reference 1 provides further data related to methods of demagnetization and compares the results obtained.</dd>
+    </dl>
+    <br />
+    <br />
+
+    <p>A substantial amount of test data has been accumulated which relates to the magnitudes of magnetic field for various components normally used in spacecraft systems by indicating the magnetic field disturbance in gamma (10<small><sup>-5</sup></small> oersted) at a distance of 12 inches from the center of the item. These magnitudes have been measured directly or extrapolated, (by inverse cube) from supplementary distance data. In many cases two or more identical items were measured to insure more representative data; however, in those cases only the maximum value has been listed. In the case of particular components which are required to be non-magnetic, i.e., resistors and connectors, the data is presented for the distance of 2 inches. This data is intended to represent the various magnetic field levels to be expected from the items rather than representing an acceptable or nonacceptance parts list.</p>
+
+    <p>Magnetic test data has been accumulated from tests of various types of batteries used in flight programs such as IMP, UA-2, OAO, OGO, MMS, and DE. These data show that cells with the nonmagnetic silver cadmium electrodes should be used for spacecraft containing magnetic field experiments. Nickel Cadmium cells should be particularly avoided since these cells have a substantial permanent magnetic field characteristic due to the presence of the nickel material. In the case of other spacecraft where the nonmagnetic requirements are not quite as stringent, it might be more desirable to use the nickel cadmium cells because of their preferred electrical characteristics. While the use of silver cadmium cells will minimize the permanent magnetic field disturbance, their use will not reduce the stray field disturbance which depends on the current flow in the individual cells as well as the combined terminal connection arrangement. Reduction and cancellation of the stray field can be best
+    achieved in those cases where an even number of cells have been combined to form the complete battery pack. Cancellation of the stray field, would be accomplished by combining the cells back-to-back in pairs so that the stray field of one cell effectively opposes that of the other. When an odd number of cells is combined, the stray field of the one unmatched cell can be canceled by adding a supplementary loop of wire which generates a stray field in opposition to that of the single uncompensated cell.</p>
+
+    <p>Similar magnetic test data has been accumulated for a variety of flight capacitors, connectors, various materials and products such as metals and alloys, electric motors, relays, wiring, etc. These tests were performed a number of years ago and the test samples may not represent some of the materials and components used in more recent years. The magnetic test technique and the approach used in selecting materials with suitable magnetic characteristics can provide a guide to the testing and selection of newer materials and components.</p>
+
+    <p>References 1, 2 and 3 provide more details on the testing and include many tables of test data.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The problem associated with magnetic field restraints for components and spacecraft vary according to the spacecraft program requirements. Those spacecraft which include magnetic field experiments must control and limit the magnetic field disturbance of the integrated spacecraft so that no undue magnetic field interference will occur at the flight sensor positions. In the case of spacecraft which employ magnetic or gravity gradient attitude control systems, the magnetic restraint problems are normally not as stringent; however, all spacecraft designers should avoid the use of components and sub-assemblies with significant magnetic moments since these will increase magnetic torquing effects and place additional loads on the attitude control system.</p>
+
+    <p>This practice is primarily intended for use by spacecraft programs subject to magnetic field restraints, i.e., spacecraft containing magnetic field experiments or magnetic attitude control systems. Accordingly it can be used as a guide in the magnetic testing, assessment, and selection of parts and materials to be used by such programs.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>"Magnetic Field Restraints For Spacecraft Systems And Subsystems," Dated February 1967, GSFC Document No. X-325-67-70</li>
+
+      <li>Supplement 1 (1971) to "Magnetic Field Restraints For Pacemaker Systems and Subsystems," Dated December 1971, GSFC Document No. X-325-71-488</li>
+
+      <li>"Spacecraft Magnetic Test Facility (Attitude Control Test Facility)," Dated April 1984, GSFC Document No. X-754-83-9</li>
+
+      <li>Reliability Preferred Practice No. PD-ED-1207, "Magnetic Design Control For Science Instruments"</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Unit Conversions:</u></p>
+
+    <dl>
+      <dd>1 gauss = .1 millitesla (mT)</dd>
+
+      <dd>1 oersted = 79.57747 ampere/meter (A/m)</dd>
+
+      <dd>1 inch = 2.54 centimeter (cm)</dd>
+    </dl>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If this practice is not followed, appropriate magnetic field restraints on components and systems may not be employed and the resulting magnetic interference could significantly interfere with the proper functioning of magnetic field experiments. Also, any high level magnetic dipole moments would increase magnetic torquing effects and place additional loads on attitude control systems.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Control magnetic field disturbance of spacecraft systems by avoiding the use of components and sub-assemblies with significant magnetic dipole moments.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on OGO, EPE-D, IMP, Pioneer, AE-B, ATS, DME, OAO, ISTP, GRO, EUVE, Ulysses.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

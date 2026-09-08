@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1803: CSAM Augments X-Ray Inspection of Die Attach (MRO Ka-Band Anomaly)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1803: CSAM Augments X-Ray Inspection of Die Attach (MRO Ka-Band Anomaly)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1803 (Database ID: 1803)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-07-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Manufacturing and Assembly,  Systems Engineering and Analysis,  Communication Systems,  Flight Equipment,  Flight Operations,  Hardware,  Industrial Operations,  Parts,  Materials,  & Processes,  Payloads,  Risk Management / Assessment,  Safety & Mission Assurance,  Spacecraft,  Test & Verification,  Spacecraft and Spacecraft Instruments,  Risk management,  Early requirements and standards definition,  Product Assurance,  Quality,  Reliability,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1803" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>After 6000 hours of nearly continuous in-flight operation aboard Mars Reconnaissance Orbiter (MRO), the Ka-band circuitry in the primary Small Deep Space Transponder (SDST-1) experienced an abrupt increase in power consumption. It abruptly decreased three hours later, permanently disabling the Ka-band downlink (References (1) and (2)). This was likely due to an internal short circuit within the metal-semiconductor field-effect transistor (MESFET) hybrid amplifier used to derive the Ka-band signal within the SDST, which in turn raised the junction temperature and caused an open circuit in the hybrid. The X-band hybrid amplifier in SDST-1, as well as the X-band hybrid amplifier in the backup SDST-2, may also have been overstressed.<br> <br> A possible cause of the short circuit is a poor or failed eutectic bond between the hybrid device and the copper-molybdenum carrier. The process of mounting a semiconductor die/chip to a substrate or package is known as die attach. Methods include eutectic bonding (soldering) on ceramic or metal substrates, adhesive bonding, and glass bonding. However, soldering is preferred for high power devices because of its good thermal/electrical conductivity and ability to accommodate thermal expansion. A eutectic bond is formed by heating two or more materials in a joint such that they diffuse together to form a (eutectic) alloy. Manufacturing technology has not eliminated voids and disbonds in the bonding layers that can increase the likelihood of die cracking, increase the chip operating temperature, and weaken the die bonds. This hybrid device failure mode is a risk for other SDST builds, and some flight hardware for the Kepler and Juno missions may be replaced.<br> <br> The primary method for non-destructive evaluation (NDE) of die attach fabrication is high resolution X-rays. Following the MRO failure, the eutectic (AuSn solder) bond X-rays used to screen the parts were reexamined and revealed no voids between the die and the package (Reference (3)). Subsequently, JPL employed an ultrasound inspection technique known as C-mode Scanning Acoustic Microscopy (CSAM). Unlike X-rays, which depict the integrated density of material between the X-ray source and detector, CSAM technology can examine a specific layer. This distinction is particularly important when looking for disbonding defects such as non-wetting of surfaces or delamination. Figure 1 is an X-ray of a spare MRO hybrid die; it shows 3 void areas on the left side of the chip, as well as an unfilled via, but does not show areas of poor die attach. In the corresponding CSAM image (Figure 2), the 3 large void areas are clearly visible, as well as some smaller ones. The CSAM ultrasound image provides enough detail that, after conversion to a digital image (Figure 3), a more quantitative assessment can be performed that states the total area of disbonds and voids as a percentage of the total die area.</p> 
+<p><br> &nbsp; <img alt="Figure 1 is a grayscale image of a rectangular die attach. Thirteen filled vias scattered across the die appear as small black circles, and a single unfilled via appears as a white circle. Between the faintly visible traces are three shadowy ovals that are apparently voids." border="0" height="317" src="https://llis.nasa.gov/llis_lib/images/1015832main_NEN1803-Ka-Band_Fig_1.jpg" title="Figure 1 is a grayscale image of a rectangular die attach. Thirteen filled vias scattered across the die appear as small black circles, and a single unfilled via appears as a white circle. Between the faintly visible traces are three shadowy ovals that are apparently voids." width="400"><br> <strong>Figure 1</strong>. Microfocus X-ray of hybrid amplifier die (S/N D209) with lid</p> 
+<p><br> &nbsp; <img alt="Figure 2 is a grayscale image that is clearly the same rectangular die attach. This CSAM image is somewhat grainier, but it shows the voids in great detail and high contrast, and apparent textures are visible in portions of the image that may represent material characteristics of the layer. Now you can tell that there are three large voids with an area of perhaps 3 percent of the total area of the die, plus a few additional very small voids." border="0" height="239" src="https://llis.nasa.gov/llis_lib/images/1015833main_NEN1803-Ka-Band_Fig_2.jpg" title="Figure 2 is a grayscale image that is clearly the same rectangular die attach. This CSAM image is somewhat grainier, but it shows the voids in great detail and high contrast, and apparent textures are visible in portions of the image that may represent material characteristics of the layer. Now you can tell that there are three large voids with an area of perhaps 3 percent of the total area of the die, plus a few additional very small voids." width="475"><br> <strong>Figure 2</strong>. CSAM image of hybrid amplifier die (S/N D209) with lid</p> 
+<p><br> <img alt="Figure 3 is also a grayscale image of a different but similar die, except a center rectangle within the grayscale appears as a binary image-- each pixel is either completely black or it is white-- of that portion of the die. Two small white rectangles have been overlaid on the image to draw attention to areas of interest, and one of the rectangles surrounds a small white dot (that fills about one-tenth of the rectangle)." border="0" height="167" src="https://llis.nasa.gov/llis_lib/images/1015834main_NEN1803-Ka-Band_Fig_3.jpg" title="Figure 3 is also a grayscale image of a different but similar die, except a center rectangle within the grayscale appears as a binary image-- each pixel is either completely black or it is white-- of that portion of the die. Two small white rectangles have been overlaid on the image to draw attention to areas of interest, and one of the rectangles surrounds a small white dot (that fills about one-tenth of the rectangle)." width="400"><br> <strong>Figure 3.</strong> Binary image converted from a CSAM image of hybrid amplifier die (S/N D221). The white boxes identify the most critical (i.e., the FET active) regions<br> <br> The MRO failure investigation suggests that to assure adequate NDE of critical flight hardware, die attach X-rays may need to be supplemented with acoustic images. X-ray imagery can determine that the proper amount of AuSn solder is present between the die and the carrier, but it cannot determine whether the solder has actually wetted the surfaces. Where there is a complete lack of solder, (i.e., a void) the two imaging methods should give similar results.<br> <br> <b>References: </b><br> <br> (1) quotTransponder DC input current and power increased for ~3 hours on DOY 14,quot Jet Propulsion Laboratory Incident Surprise Anomaly No. Z88615, May 31, 2006.<br> (2) quotSDST - 3 Hour Power Surge,quot Jet Propulsion Laboratory Problem/Failure Report No. Z88763, June 30, 2006.<br> (3) MRO Small Deep Space Transponder Ka-Band Exciter Anomaly Final Report, Jet Propulsion Laboratory Document No. JPL D-31195, March 16, 2007.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+For critical flight hardware, the current X-ray process for screening RF hybrids may not be adequate to determine the quality of coverage of the eutectic die attach. CSAM is a non-destructive internal inspection technique that can complement high resolution X-rays by isolating variations in material properties. CSAM detects the extent of air space-type physical defects in components, including cracks, voids, delaminations, and porosity, that occur during manufacturing, environmental test, and operation. 
+<br />
+</section>
+<section><h2>Recommendation(s)</h2>
+When screening RF hybrids and other complex RF parts, consider the use of CSAM to augment high resolution X-ray inspection. 
+<br />
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.12.2.1 (quotFlight Electronics Hardware System Design: Electronic Packaging -- Qualification of Electronic Packaging Designsquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006. 
+<br />
+</section>
+<section><h2>Related Policies & Standards</h2>
+IMAPS STD 01-04, Hybrid Microelectronics Standards Guidelines for Screening Procedures
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

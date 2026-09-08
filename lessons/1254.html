@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1254: Inadvertent Activation of a Flight Termination System on an Army Owned Missile</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1254: Inadvertent Activation of a Flight Termination System on an Army Owned Missile</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1254 (Database ID: 1254)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-11-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1254" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>At approximately T+55 seconds the flight of the Strategic Target System (STARS) missile was terminated due to an inadvertent destruct action that occurred during an attempt to transfer control of the Flight Termination System (FTS) command receiver from the ground transmitter site, located at the Kodiak Launch Complex (KLC, Alaska) to the downrange off-axis airborne transmitter aboard a P3 aircraft. This resulted in total loss of the vehicle and the loss of the anticipated data required to meet the mission objectives. At the time of the destruct action, there were no safety problems with the missile or its trajectory. The vehicle was flying nominally and in control until the moment of destruction, and was within all prescribed safety boundaries and corridor limits for debris impact.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The mechanism by which this inadvertent destruct action occurred is subtle and not readily apparent at first glance. As implemented, the KLC to P3 hand over procedure for FTS responsibility resulted in simultaneous transmission of all three command tones that are necessary to execute a command destruct action, if they are modulated on the carrier in proper sequence. The ground site at KLC was modulating the "OPTIONAL" command on the FTS carrier signal, while the P3 aircraft was modulating the "ARM" command. Note that the "DESTRUCT" command can be executed any time after the "ARM" command is latched.<br />
+    <br />
+    The root cause of the accident was found to be the modulation of all three command tones from two different transmitters during the transfer of FTS control by the Range Safety Officer (RSO), combined with the effects of plume attenuation, caused the onboard receiver to interpret the radiated signals as a "DESTRUCT" sequence.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Recommendations from the accident investigation team include both procedural and hardware modifications. Specifically for future STARS missions (and should be implemented for NASA missions), manual FTS control hand over procedures will be modified to avoid the possibility of this happening again. This can be facilitated by the implementation of an automatic sequencer that rapidly performs the mechanics of the hand over and minimizes (or eliminates) the overlap of multiple carriers and thereby prevents adverse receiver outputs from interfering sources. On the missile, the receiver "MONITOR" output will be incorporated into the telemetry data stream so that the RSO can check the state-of-health and function of the receiver tone decoders and command logic during the flight without having to use the "ARM" command for that purpose. In addition, the team recommends conversion of the existing system to transmit safety commands in a digital format, as opposed to the current analog
+    format, whereby secure provisions may be made to ensure safety commands are only received from intended sources.</p>
+
+    <p>NOTE: NASA is working with DoD to develop a new technology for FTS that will be digital and encrypted.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

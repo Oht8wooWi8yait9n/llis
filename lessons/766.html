@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0766: Reliability Considerations for Launch Vehicle Command Destruct Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0766: Reliability Considerations for Launch Vehicle Command Destruct Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0766 (Database ID: 766)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/766" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1438 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>The benefits of implementing the practices spelled out herein are protection against inadvertent activation of the launch vehicle command destruct system, reliable activation and operation of the command destruct system in the event of vehicle malfunctions, and protection of the mission hardware and personnel prior to and during the launch.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p><b>Introduction:</b></p>
+
+    <p>The Space Shuttle Command Destruct System (CDS) is a triplex configuration providing a redundant subsystem on the SRB. The CDS consists of RF receiving elements, dedicated power sources and pyrotechnics. When activated, the CDS terminates the thrust of the SRB by pyrotechnic charges that sever the Solid Rocket Motor (SRM) cases along 70 percent of their length.</p>
+
+    <p>The SRB onboard command destruct system allows the Range Safety Officer to intentionally destroy the SRB in the event of flight path deviation, improper flight parameters, or inadvertent separations.</p>
+
+    <p>The Command Destruct System consists of the components and quantities listed in Table 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009225main_0766-table1.jpg"  HEIGHT="233"  BORDER="0" /><A HREF="/llis_lib/txt/1009703main_0766-table1.txt"  >[D]</A>
+    </center>
+
+    <p>Figure 1 is the SRB CDS Functional Diagram.</p>
+
+    <center>
+      <a href="https://llis.nasa.gov/llis_lib/images/1009224main_0766-1l.jpg"><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009223main_0766-1.jpg"  HEIGHT="320"  BORDER="0" /></a><A HREF="/llis_lib/txt/1009702main_0766-1.txt"  >[D]</A>
+    </center>
+
+    <p>Ground commands arm the safe and arm (S&amp;A) device approximately five minutes prior to SRB ignition. If destruct action is required, the nominal range safety destruct procedure will consist of energizing the "arm" command several times, application of a one second pause, then energizing the "fire" command several times or until the destruct action is accomplished. The fire command to the Pyrotechnic Initiator Controller (PIC) discharges its capacitor, igniting the NSD. The detonation from the NSD is propagated through the S&amp;A device transfer charge and the CDF train to the linear shaped charge (LSC). The detonation output of the LSC cuts the case along 70 percent of the length of the Solid Rocket Motor causing destruction of the SRB.</p>
+
+    <p><b>Reliability Considerations:</b></p>
+
+    <p>The minimum overall system reliability goal for the Command Destruct System is 0.999 at a 95 percent confidence level. Some reliability considerations considered during design, development, qualification, and acceptance testing are listed below:</p>
+
+    <ol>
+      <li>Elimination of single point failures.</li>
+
+      <li>Redundancy.</li>
+
+      <li>Fail-safe functions.</li>
+
+      <li>Personnel properly trained in handling, assembly, installation, and checkout of command destruct systems.</li>
+
+      <li>Development testing, qualification testing, and, especially, acceptance of every pyrotechnic device lot manufactured are monitored by engineering and quality personnel.</li>
+
+      <li>Adherence to the provisions of NHB 5300.4 (ID-2), "Safety, Reliability, Maintainability, and Quality Provisions for the Space Shuttle Program."</li>
+
+      <li>Redundant paths are verified by test.</li>
+
+      <li>Electronics and cables are checked out after installation down to NSI installed in the NSD.</li>
+
+      <li>NSD bridge wire resistance is verified after installation.</li>
+
+      <li>Safe &amp; Arm device function is verified after installation.</li>
+
+      <li>Other reliability analysis such as Worst Case, Fault Tree, FMECA, Parts Stress, Single Event Effects, Thermal/Structural Strength, and Sneak Circuit Analysis should also be performed, where applicable.</li>
+    </ol>
+
+    <p>Design methods for reliable Command Destruct Systems are listed below:</p>
+
+    <ol>
+      <li>Separation of redundant equipment except the Range Safety Distributor, Hybrid Coupler, Safe and Arming Device, and dual systems mounted on the same mounting panel.</li>
+
+      <li>Provide a fail-safe design for ascent critical functions.</li>
+
+      <li>The Command Destruct System operates in a standby mode for ascent and is exempt from in-flight redundancy verification.</li>
+
+      <li>The Command Destruct System electronics include sufficient instrumentation to provide self-diagnostic ground indicators except for the PIC which uses built-in test equipment for the ground checkout of the pyrotechnic electronics. Demating of electrical cables is not permitted except for the NSD.</li>
+
+      <li>Redundant components susceptible to contamination or environmental failure are separated.</li>
+
+      <li>Inadvertent electrical shorting due to debris is prevented by design.</li>
+    </ol>
+
+    <p>Design engineering and quality engineering review and approve manufacturing procedures and processes. Quality engineering also reviews and approves inspection criteria required to ensure that qualification and flight hardware are free of defects.</p>
+
+    <p>Development testing, qualification testing, and acceptance testing are principal methods by which pyrotechnic devices are proven to meet design requirements and to meet the reliability levels necessary for manned launch vehicles. All test records and data are reviewed by NASA and prime contractor engineering and quality personnel.</p>
+
+    <p>The Eastern Space and Missile Center Range Safety Officer's approval is required for Command Destruct System conceptual design, detailed design, qualification/acceptance test requirements, range prelaunch test requirements, test plans and procedures, installation and checkout procedures, failure corrective action, and launch approval.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The design, manufacture, testing, and launching of the Command Destruct Systems have been proven over a period of more than 30 years. The Command Destruct Systems for the SRB have flown on the Space Shuttle for over 70 flights without a failure.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>AFETRM 127-1: "Eastern Range Regulation," Range Safety Space Command, United States Air Force, June 30, 1993.</li>
+
+      <li>NSTS 007700: "Space Shuttle Flight and Ground System Specification," Program Definition and Requirements, Volume X, Book 1, NASA, Johnson Space Center, Houston, TX, 77058, June 4, 1993.</li>
+
+      <li>NSTS 08060: "Space Shuttle System Pyrotechnic Specification," NASA, Johnson Space Center, Houston, TX, 77508, February 11, 1994.</li>
+
+      <li>30A90506D: "Shuttle Range Safety Command Destruct System Specification," NASA, Marshall Space Flight Center, Marshall Space Flight Center, AL, 35812, June 5, 1989.</li>
+
+      <li>10MNL-0030: "Solid Rocket Booster/External Tank Pyrotechnic System Handbook for Space Shuttle," Volume I and II, NASA, Marshall Space Flight Center, Marshall Space Flight Center, AL, 35812, July 14, 1989.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not adhering to the proven practices for the design, manufacture, and testing of the Command Destruct System could result in premature detonation of pyrotechnic devices which would terminate the SRB resulting in loss of mission, possible loss of crew, and possible injury and loss of life at the launch site.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use built-in redundancies, safe and arm provisions, approved and qualified initiators and detonators, shaped charge development testing to collect empirical data for design (empirical testing), and fail-safe designs to achieve reliability in launch vehicle command destruct systems.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I, IB, and V, External Tank prior to 1996, and Space Shuttle Solid Rocket Booster (SRB).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

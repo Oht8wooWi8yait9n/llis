@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #22101: SMAP Pioneers Automated ‘Lights Out’ Operations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #22101: SMAP Pioneers Automated ‘Lights Out’ Operations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #22101 (Database ID: 22101)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-07-25</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Operations,  Ground Operations,  Information Technology / Systems,  Payloads,  Software,  Spacecraft,  Software Engineering,  Ground support systems,  Mission control Planning,  Mission operations systems,  Planetary Operations,  Mission concepts and life-cycle planning,  Program planning / development and management,  Reliability,  Long term sustainability and maintenance planning,  Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/22101" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>SMAP was recommended by NASA’s 2007 Earth Science Decadal Survey as a Tier 1 mission. Launched in January 2015 into a polar sun-synchronous orbit at 685 km altitude, the SMAP spacecraft has a primary mission duration of three years. The science objective is global, high resolution, mapping of Earth’s soil moisture and the soil’s freeze-thaw state. JPL partners with NASA Goddard Space Flight Center on the mission, and JPL’s role includes mission operations.</p> 
+<p>SMAP is presently facing the challenge (Reference (1)) of going from a fully staffed Commissioning Phase with about 20 operations personnel working extended hours on console, to a Science Phase with about 4 individuals working on console about once per month. (Figure 1 visually redefines what is meant by the ops term “dark room”—the continuously dimly illuminated mission control center where the consoles (e.g., Telecom console) and overhead displays are located.) Although some ground-based automation had been implemented on two previous JPL missions, SMAP Mission Operations was unsure whether the space observatory could be operated by such a small team once SMAP’s in-orbit antenna deployment and initial shakedown were complete.</p> 
+<div> 
+ <table border="0" style="margin: auto;"> 
+  <tbody> 
+   <tr> 
+    <td><img alt=" Figure 1: Two photos are presented side by side. The left photo shows 17 people dressed in matching blue flight mission polo shirts and headsets. The people are sitting in a horseshoe configuration of computer consoles.&nbsp; The caption of the left photo is as follows:
+&nbsp;COMMISSIONING PHASE:
+Extended hours on console 
+(initially 24/7, then 7 days/wk); 
+Systems/Flight/ACE/
+Scheduling staffing: ~10 FTE; 
+Subsystems: 3-4 FTE (each); 
+GDS: ~6 FTE. 
+
+The right figure shows the same room where no people are working and the lights are mostly turned off. The caption of the right photo is as follows:
+OPERATIONS PHASE: 
+9/80 schedule (on console ~once per month;
+Systems/Flight/ACE/; 
+Scheduling staffing: ~2 FTE; 
+Subsystems: 0.2-0.5 FTE (each; 
+GDS: ~1 FTE" src="/lessons/22101/2017-05_lightsout_Fig1a.png" style="height: 177px; width: 250px">&nbsp;</td> 
+    <td><img src="/lessons/22101/2017-05_lightsout_Fig1b.png" style="height: 177px; width: 237px"></td> 
+   </tr> 
+   <tr> 
+    <td>COMMISSIONING PHASE 
+     <ul> 
+      <li>Extended hours on console<br> (initially 24/7, then 7 days/wk)</li> 
+      <li>Systems/Flight/ACE/<br> Scheduling staffing: ~10 FTE</li> 
+      <li>Subsystems: 3-4 FTE (each)</li> 
+      <li>GDS: ~6 FTE</li> 
+     </ul> </td> 
+    <td>OPERATIONS PHASE 
+     <ul> 
+      <li>9/80 schedule (on console ~once<br> per month)</li> 
+      <li>Systems/Flight/ACE/<br> Scheduling staffing: ~2 FTE</li> 
+      <li>Subsystems: 0.2-0.5 FTE (each)</li> 
+      <li>GDS: ~1 FTE</li> 
+     </ul> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Figure 1</strong>. SMAP “lights out” mission operations</p> 
+<p>SMAP completes about 20 orbital communication passes every day that last about 8 minutes apiece. This requires a number of routine ground support activities that potentially lend themselves to automation:</p> 
+<ul> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Connecting to ground stations and processing downlinked data in real time</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Routing downlink data to analysis software</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Generation of spacecraft trajectories from Doppler navigation data</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Generation of spacecraft clock/spacecraft event time (SCLK-SCET) correlation from spacecraft time packets</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Monitoring telemetry, and alerting the operations team to off-nominal events</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">Performing data accountability</li> 
+</ul> 
+<p style="margin-top:6.0pt">Another candidate for automation is the routine commanding of the spacecraft that takes place on demand, or scheduled as frequently as every 6 hours, such as non-volatile memory (NVM) management (i.e., bad blocks), updating the onboard ephemeris, and bulk upload of files. The operator merely has to load in a command file that states what needs to be sent and when it needs to be sent, and the bot does the rest.</p> 
+<p style="margin-top:6.0pt">Rather than a monolithic system, the SMAP automation is distributed throughout the various flight operations and ground data system tools. Many different JPL developers and organizations were involved in automating core SMAP ops functions, which include:</p> 
+<ul> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">PAD: Pass Automation Daemon</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">FNS: File Notification Service</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">TARDIS: Traceable Automation Remote Display Interruptible Scheduler (TARDIS produces ephemeris from Doppler navigation data.)</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">ANF: Alarm Notification Filter</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">TQR: Telemetry Query and Reporting</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">ATCS: Automated Time Correlation Service</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">DMT: Data Management Tool</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:.0001pt">SMAP AUTO: Closed loop commanding of spacecraft.</li> 
+</ul> 
+<p style="margin-top:6.0pt">SMAP also made use of the existing multi-mission command and telemetry system (AMPCS), adding automation interfaces.</p> 
+<p>The goal of the SMAP effort was to automate ground based operations and to increase the reliability and efficiency of the operations team (Reference (2)). For reliability, the driving philosophy has been to avoid complexity, shunning fancy code in favor of simple standalone scripts with minimal dependencies on external infrastructure. For reusability, there is no SMAP-specific code in the core ground-based pass/workflow automation software (~8,000 LOC): JPL plans to reuse the code for automating the upcoming NISAR and SWOT missions. For extensibility and flexibility, additional capabilities (i.e., custom code) can be ingested and executed during a pass without even bringing down the system. Critical to automation, the SMAP Operations Team receives alerts (e-mail and SMS messages) in response to off-nominal scenarios.</p> 
+<p>Automation of SMAP operations has resulted in a huge number of files moved around on a daily basis. As of July 2017, there have been 13,236 passes with 99.3 percent success, and 536,790 workflow activities with a 99.9 percent success rate. In addition, of the 10,347 Science Phase command products, 91% were automated and 9% were produced manually and sent to the spacecraft. Also, the ability to scale commanding without human intervention has encouraged SMAP to command a lot more often, while decreasing data latency and improving on-orbit pointing accuracy. Figure 2 illustrates the decrease in manual commanding and the increase in automated commanding from the beginning of the Commissioning Phase to the beginning of the Science Phase; spikes in human activity during the Science Phase are related to anomalies (e.g., Reference (3)) or significant engineering activities such as the installation of software.</p> 
+<div> 
+ <img alt="Figure 2: This image is a bar graph titled “SMAP Manual vs. Automated Commanding. Two data lines consisting on an orange amount of Auto Commands and a blue line consisting of Manual Commands. The data series begins with date 1/29/2015 and ends at 11/30/2016. During this time period, both lines are measured as Command Products Radiated which are the number of commands sent to the space craft. The chart indicates that manual commands (blue line) ranged from 60 to 350 during the first four months from Jan 2015, while there was from zero to 60 in the same four month period. The rise of auto commands is reflected as a decline of manual commands during the next 19 month period, denoted with occasional spikes of manual commands and reduction of auto commands at 7 instances. The exception was on 9/30/2016 when an upgrade to R4.3.1 required more manual input than auto commands was needed. Overall, the graph shows the inverse relationship of auto commands vs manual commands that averages at 120 radiated commands per month during the 5/31/2015 to 11/30/2016 period." src="/lessons/22101/2017-05_lightsout_Fig2.jpg"> 
+</div> 
+<p><b>Figure 2</b>. SMAP manual vs. automated closed loop commanding (SMAP AUTO) comprises<br> a total of over 100 commands per week. There are weeks during which there are no manual<br> commands radiated to the vehicle. (View <a href="/lessons/22101/2017-05_lightsout_Fig2.jpg">larger image</a>)</p> 
+<b>References:</b> 
+<ol> 
+ <li>“Lights Out Operations: SMAP Mission Operations and Ground Data Systems,” JPL Mission Systems &amp; Operations Division, JPL Tube, April 19, 2017. <a href="https://jpltube.jpl.nasa.gov/Watch=l9XIN6">https://jpltube.jpl.nasa.gov/Watch=l9XIN6</a></li> 
+ <li>Christopher Swan, “Automated Commanding of the SMAP Spacecraft Enables Efficient, Reliable, and Responsive Operations,” 2016 IEEE Aerospace Conference, 5-12 March 2016.</li> 
+ <li>“Missing Record of Commands Radiated,” JPL Incident Surprise Anomaly (ISA) No. 59918, July 20, 2016.</li> 
+ <li>Chris Swan and Antonio Sanders, “Lights Out Operations: SMAP Mission Operations and Ground Data Systems,” Mission Systems and Operations Division Autonomous Operations Seminar Series, April 19, 2017</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The SMAP mission is the first JPL mission to achieve fully lights-out operation for all routine operations. The SMAP approach to operations autonomy borrowed concepts from 10 years of JPL experience with automated operation of the GDS for the Jason-1 and WISE missions. (Jason-1 and WISE proved “lights out” conceptually, but they did not commit to it for routine operations.) SMAP has achieved more than 90 percent lights-out commanding while achieving a level of operational responsiveness that would normally require round-the-clock staffing. The approach used can apply to all missions including both Earth-orbiting missions, which do not always use multi-mission services, and deep space missions.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>For operational responsiveness while minimizing the size of the mission operations team, implement a mission operations automation architecture that features multi-layered autonomy with modular elements building upon each other to accomplish functions that are more complex. Test all paths (nominal and off-nominal) for these ground-based elements at multiple levels, including the highest fidelity testbed available and an extensive on-orbit campaign, to ensure the elements work together as planned.</p> 
+<p>References (1) and (4) provide some specific lessons learned/recommendations:</p> 
+<ol> 
+ <li>“Lights out” operation was largely attributable to management believing it was possible and then empowering the developers to accomplish it.</li> 
+ <br /> 
+ <li>When negotiating interfaces with other, larger, legacy systems such as AMPCS, the project should ask for just the basics so it can make rapid changes. (Larger systems are less agile, with their own priorities and development schedules.)</li> 
+ <br /> 
+ <li>If possible, utilize developers with operational and test experience.</li> 
+ <br /> 
+ <li>Interfacing with the Near Earth Network/Space Network was a challenge because every antenna and every ground station has differences (e.g., in the protocols and configurations).</li> 
+ <br /> 
+ <li>Providing automated components with access to existing multi-mission software presented difficulties. For example, it was not feasible to enable automated access to all AMPCS features.</li> 
+ <br /> 
+ <li>Once an operations component is automated, it can scale fairly easily.</li> 
+ <br /> 
+ <li>Profiling and monitoring a distributed system may be difficult, and it could have been done better for SMAP. (After some tuning, system level monitoring was effective; but monitoring individual applications and their performance could have been improved.)</li> 
+ <br /> 
+ <li>The gradual “phase in” of automation was both necessary and valuable.</li> 
+ <br /> 
+ <li>Because the large number of scripts (many of which are written by the operations team members themselves for their own use), tools must be tested with enough rigor to be assured that they can be trusted to always build the right product and can be placed in an automated workflow.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.3 (“Engineering Practices: Mission Operations”) and Paragraph 6.17 (“Engineering Practices: Mission Operations System Development ”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017.
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p style="margin-left:.5in"><a href="http://specs4.ihserc.com/Document/Document/ViewDoc?docid=UNJNDFAAAAAAAAAA">ISO 18201</a>, Space data and information transfer systems - Mission operations reference model</p> 
+<p style="margin-top:2.0pt; margin-right:0in; margin-bottom:.0001pt; margin-left:.5in"><a>SAE/TP 2007-01-3064</a>, Digital Learning Network Education Events of 2006 NASA’s Extreme Environments Mission Operations</p> 
+<p style="margin-top:2.0pt; margin-right:0in; margin-bottom:.0001pt; margin-left:.5in"><a>ISO 14711</a>, Space systems Unmanned mission operations concepts Guidelines for defining and assessing concept products</p> 
+<p style="margin-top:2.0pt; margin-right:0in; margin-bottom:.0001pt; margin-left:.5in"><a href="http://specs4.ihserc.com/Document/Document/ViewDoc?docid=OJYBIFAAAAAAAAAA">NASA-STD-4009</a>, Space Telecommunications Radio System (STRS) Architecture</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

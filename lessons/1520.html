@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1520: Check Testbed Health Before Beginning or Resuming Flight System Test (2003)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1520: Check Testbed Health Before Beginning or Resuming Flight System Test (2003)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1520 (Database ID: 1520)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-01-28</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1520" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>In a scenario that is most likely to occur on severely time-constrained flight projects, testing is interrupted and test time is lost because of unreported changes to the testbed configuration. During subsystem integration and test (I&amp;T) of Mars Exploration Rover (MER), for example, a software test operator spent two hours at a keyboard preparing for a special MER flight software (FSW) test case. When the test began, the system crashed, and extensive troubleshooting disclosed that the test operator had been unaware that the previous shift had removed the Rover camera from the testbed. Other similar incidents might stem from a loose cable caused by an equipment swap. This problem is exacerbated for projects like MER where system development continues even while testing is underway in dual work shifts.</p>
+
+    <p>JPL flight system I&amp;T programs typically implement the following steps to minimize lost test time:<br />
+    </p>
+
+    <ol>
+      <li>A meeting is held at the beginning of each I&amp;T shift to brief the incoming team on changes to the testbed configuration.</li>
+
+      <li>A startup procedure, maintained for each testbed, is continually updated to reflect the current testbed configuration.</li>
+
+      <li>An on-line reporting tool is used to capture the activities of each test shift, document hand-over instructions to the next shift, report changes to the testbed configuration, and provide links to problem/failure reports generated during the shift.</li>
+
+      <li>A spreadsheet reports the status of connectors and cables that have been mated or demated.</li>
+    </ol>
+
+    <p>A walkthrough of the testbed configuration prior to each work shift would likely have prevented the MER test errors. They were not feasible for MER, though, because there were several hundred connectors in each testbed, and not all of them were visible to the operator.</p>
+
+    <p>References:<br />
+    </p>
+
+    <ol>
+      <li>System Test and Launch Operations (STLO) Guide Executive Summary, Rev. 2, JPL Doc ID 31335, September 18, 2000, Para. II E.</li>
+
+      <li>Subsystem Integration and Test for PPS, C&amp;DH, and GN&amp;C Subsystems, Rev. 0, JPL Doc ID 65633, December 12, 2003, Paras. 5.11, 6.8.<br />
+      </li>
+    </ol>
+
+    <p>Additional Key Words: subsystem test, test configuration, test bed, test procedure, test plan, ATLO, assemble, test, and launch operations<br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When flight system testing is begun or resumed on projects under great time pressure, the test operator may be unaware of changes to the testbed configuration, resulting in delays to the test schedule and an increased risk of flight hardware damage.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Ensure that the four steps listed above in the &ldquo;Description of Driving Event&rdquo; are performed on all flight system I&amp;T programs.</li>
+
+      <li>On system testbeds where it is feasible, perform a walkthrough of the testbed configuration at the beginning of each I&amp;T work shift.<br />
+      </li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.13.6.1 ("Engineering Practices: Design and Verification for Environmental Compatibility - Test Configuration"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

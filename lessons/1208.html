@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1208: Use of "can't fail" process to reduce chances for operator error</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1208: Use of "can't fail" process to reduce chances for operator error</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1208 (Database ID: 1208)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-07-23</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1208" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>A functional test was being performed at one of the subcontractors on Pressure Transducers. The physical setup consisted of a supply pressure bottle connected to a pressure manifold (with 4 pressure transducers installed) and to a test console. The objective of the functional test was to ensure that at various pressures the pressure transducers were within allowable tolerance. The system was to be pressurized to 400 psi (line pressure), then a 40 psi differential pressure applied to the transducers.<br />
+    </p>
+
+    <ul>
+      <li>The technician applied 15 VDC voltage to the pressure standard. This is below required voltage.</li>
+
+      <li>Next, he increased the line pressure expecting an indication from the pressure standard. However, as the pressure increased, the input voltage to the pressure standard dropped from 15 VDC to 11 VDC. At 11 VDC the standard is not able to function due to the low voltage and therefore no increase in pressure was indicated.</li>
+
+      <li>The technician had no indication that pressure buildup was exceeding the allowable limit for the transducers.</li>
+
+      <li>Overpressurization damaged the diaphragms in the pressure transducers.</li>
+    </ul>
+
+    <p>Root cause: Human error.</p>
+
+    <ol type="a">
+      <li>Technician applied incorrect input voltage to the pressure standard. As a result the pressure standard failed to indicate the actual line pressure.</li>
+
+      <li>Technician failed to limit the source pressure. He failed to set the bottle pressure regulator to 440 psi. This would have ensured that the transducers could not be subjected to a pressure exceeding their proof pressure.</li>
+
+      <li>
+        Contributing Causes: 
+
+        <ol>
+          <li>Inadequate training in use of test equipment. Although the technician had received on-the-job-training in test procedures and use of lab equipment, the technician was unaware of the hazardous consequences should the pressure standard be starved for current.</li>
+
+          <li>Adequate failure tolerance (Can't Fail) was not required to be built into the procedure.</li>
+
+          <li>Required input voltage was not readily available. Since this incident the input voltage requirements for the pressure standard have been added to the calibration sheet with a warning to the technicians. In addition the input voltage requirements have been stenciled, as a warning to technicians, in large red letters, directly to the standard.</li>
+        </ol>
+      </li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Use of "can't fail" processes when designing manufacturing, test, and operations can greatly reduce the chances for human error</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Apply "Can't Fail" process to each procedure where hardware is handled, machined, installed or tested to ensure that an operator error, equipment failure or software anomaly will not lead to a significant event.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1267: Hazards of Arc Welding Near Electronics (~1985)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1267: Hazards of Arc Welding Near Electronics (~1985)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1267 (Database ID: 1267)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-07-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1267" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The JPL Galileo project used automatic orbital arc welding to join spacecraft propulsion system tubing, despite a recognized risk to sensitive spacecraft hardware. An orbital arc welding system utilizes a weld head that clamps around the tubing to be butt-welded. The weld electrode is controlled to rotate around the tubing, with the weld current synchronized with the rotation of the electrode. This automated process can provide a quality weld that is not subject to the irregularities of hand welding.<br> <br> Such welding on the Galileo Rocket Propulsion Module (RPM) tubing in the late 1980s, as described in Reference (2) below, led to concern that this high voltage process may pose a risk to spacecraft electronics. Initiation of the weld arc uses starting voltages as high as 40,000 volts, with resultant stray voltages on the tubing in excess of 400 volts. This could propagate at significant levels across interfaces into electronics. Some spacecraft electronic devices (e.g., detectors) may be sensitive to stray voltage levels, even as low as a fraction of a volt.<br> <br> <u>References</u></p> 
+<ol> 
+ <li><a href="https://llis.nasa.gov/llis_lib/pdf/1009459main_1267-1.pdf">Electric Welding Hazard to Spacecraft Electronics</a> (Click on title for .pdf file), A.C. Whittlesey and J.M.Lumsden, Proceedings of the International Symposium on Electromagnetic Compatibility, 8/18-20, 1981, Boulder, pp. 224-228.</li> 
+ <li>quotGalileo Arc Welding Anomaly,quot NASA Lesson Learned No. <a href="https://llis.nasa.gov/llis/0399.html">0399</a>, June 7, 1995.</li> 
+</ol> Additional JPL Key Words: EEE parts electrical overstress, transient voltages, short circuit, sneak circuit
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Automated arc welding may provide results superior to hand welding, but the arc start voltage transient may pose risks to sensitive spacecraft hardware.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>When using automated welding processes with a high voltage arc starter, use the damage mitigation procedures described in Reference 1, updated for the specific welding system and the electronics in proximity. JPL has had no reported electronic parts failures resulting from weld arc starting voltages in those instances where the procedures described in Reference 1 were used.</li> 
+ <li>To mitigate the risks of high voltage arcs, use a weld head that features a quottouch startquot feature. This does not eliminate the need to characterize and evaluate the effects of stray voltage.</li> 
+ <li>The preferred solution is to avoid welding near electronic circuits.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.2.5 (¿Safety and Mission Assurance Practices: Reliability Engineering¿) and Paragraph 7.8.1 (¿Safety and Mission Assurance Practices: Systems Safety¿) in the Jet Propulsion Laboratory standard, ¿Flight Project Practices, Rev. 6,¿ JPL DocID 58032, March 6, 2006.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

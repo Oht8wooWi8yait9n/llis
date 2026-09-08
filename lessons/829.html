@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0829: Availability, Cost and Resource Allocation (ACARA) Model to Support Maintenance Requirements</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0829: Availability, Cost and Resource Allocation (ACARA) Model to Support Maintenance Requirements</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0829 (Database ID: 829)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/829" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-4 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p><u>Benefit:</u></p> 
+<p>The ACARA program is an inexpensive tool for conducting maintainability, reliability and availability simulations to assess a system's maintenance requirements over a prescribed time interval. Also, availability parameters such as equivalent availability, state availability (percentage of time at a particular output state capability), and number of state occurrences can be computed.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>The ACARA program models systems represented by reliability block diagrams comprising series, parallel, and M-of-N parallel redundancy blocks. A hierarchical description of the system is needed to identify the subsystems and blocks contained in the system. Given a reliability block diagram (RBD) representation of a system, the program simulates the behavior of the system over a specified period of time using Monte Carlo techniques to generate block failure and repair intervals as a function of exponential and/or Weibull distributions. ACARA interprets the results of a simulation and displays tables and charts for the following:</p> 
+<ul> 
+ <li>Performance, i.e., availability and reliability of capacity states</li> 
+ <li>Frequency of failure and repair.</li> 
+ <li>Lifecycle cost, including hardware, transportation, and maintenance.</li> 
+ <li>Usage of available resources, including maintenance man-hours.</li> 
+</ul> 
+<p>ACARA Inputs</p> 
+<p>A RBD must be prepared for ACARA to simulate a system's availability. The RBD depicts a system, and the arrangement of the blocks depicts a performed function.</p> 
+<p>RBD does not necessarily depict physical connections in the actual system, but rather shows the role of each block in contributing to the system's function. The blocks are sequentially numbered as B1, B2, B3, etc. and subsystems are numbered as S1, S2, etc, which are defined from the inside out. Figure 1 shows an example of a system with its corresponding blocks and subsystems.</p> 
+<img alt="refer to [D] description" border="0" height="373" src="https://llis.nasa.gov/llis_lib/images/1009332main_0829-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009807main_0829-1.txt">[D]</a> 
+<br> Figure 1: Diagram of Blocks and Subsystems 
+<p>Beginning with the innermost set of blocks, each parallel or series set of blocks is partitioned into a subsystem which in turn may combined with other blocks or subsystems.</p> 
+<p>The system shown in Figure 1 contains 6 subsystems:</p> 
+<ul> 
+ <li>Subsystems 1 and 2 are both variable M-of-N parallel arrangement of batteries. These subsystems respectively contain Blocks 6 through 8 and Blocks 9 through 11.</li> 
+ <li>Subsystem 3 consists of Subsystems 1 and 2 in parallel.</li> 
+ <li>Subsystem 4 is a binary M-of-N parallel arrangement of diodes, Blocks 3 through 5.</li> 
+ <li>Subsystem 5 is a parallel arrangement of two turbines, Blocks 1 and 13.</li> 
+ <li>Subsystem 6 comprises the entire system and is a series arrangement of Subsystems 3 through 5 and Blocks 2 and 12.</li> 
+</ul> 
+<p>Modeling Time-to-Failure</p> 
+<p>The ACARA program uses the Weibull distribution function to model the time-to-failure for the system. The shape and scale factors are adjusted to modify the form of the distribution. Uniform random numbers from 0 to 1 are generated and substituted for the reliability, R. ACARA uses the early failure (i.e., infant mortality), random failure, and wearout failure (life-limiting failure) models. These models are adjusted by user-defined parameters to approximate the failure characteristics of each block.</p> 
+<p>Random failure is modeled by the Weibull distribution function where the shape factor is equal to 1 (equivalent to the exponential distribution) and the scale parameter is equal to the Mean Time Between Failure (MTBF).</p> 
+<p>Wear out failure is also modeled by the Weibull function. The shape factor must be 1 or more. If the block with an initial age (i.e., it is not brand new) is installed, its initial age is subtracted from its first time-to-failure due to wear out. Likewise, if it undergoes a failure-free period, this period is added to its first time-to-failure.</p> 
+<p>ACARA generates time-to-failure events using one or a combination of these models and assigns the minimum resulting time for each block as its next failure event. The early failure model is canceled by assigning to the block type an early failure probability of zero; random failure, by an excessively large MTBF; and wearout failure, by an excessively large mean life.</p> 
+<p>ACARA also simulates redundant pairs of active and standby blocks. A standby block is installed as dormant and its time-to-failure is initially modeled by random failure, in which the MTBF is multiplied by its characteristic <q>Dormant MTBF Factor.</q> Then, the corresponding active time-to-failure is modeled by early, random, and wearout failure until the active block is replaced.</p> 
+<p>Modeling Down Time</p> 
+<p>The downtime for a failed block depends in part upon the availability of spares and resources. These spares may be local spares, i.e., initially located at the site. If a local spare is available when the block fails, the block is immediately replaced and downtime will depend only on the mean-time-to-repair (MTTR). If no local spares are available, ACARA will schedule a replacement according to the schedule production quantities for that block type, the constraints on mass, volume, and delay associated with the manifesting and loading spares to the resupply vehicle. ACARA also checks the constraints on the maintenance agents to determine when the block can be replaced.</p> 
+<p>Once all the above conditions are met to allow the block to be replaced, ACARA then estimates the time required to replace it. The time-to-repair depends upon the MTTR's for that block type. MTTR's may be specified for up to three separate maintenance agents. Examples of maintenance agents are crew, equipment, and robotics. ACARA assumes that the maintenance actions occur simultaneously, so that the block's repair time is determined by the maintenance agent having the maximum MTTR. During the simulation, the time-to-repair may either be set equal to the maximum defined MTTR or to be determined stochastically. Refer to Reference 1 for a complete guide on the use of ACARA and the explanation for entering data and the output of graphs and information. ACARA may be obtained from the Computer Software Management and Information Center (COSMIC) at the University of Georgia, (706) 542-3265.</p> 
+<p>References:</p> 
+<ol> 
+ <li>Stalnaker, Dale K., ACARA User's Manual, NASA-TM-103751, February 1991.</li> 
+ <li>Hines, W.W. and Montgomery, D.C., Probability and Statistics in Engineering and Management Science, 2nd Ed., John Wiley &amp; Sons, 1980</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The development of the Space Station and other space systems (i.e., Space Station payloads and experiments) requiring long-term maintenance support dictates maintenance planning with emphasis on an understanding of the level of support required over a given period of time. The program is written specifically for analyzing availability, life cycle cost, and resource scheduling. A combination of exponential and Weibull probability distribution functions are used to model component failures, and ACARA schedules component replacement to achieve optimum system performance. The scheduling will comply with any constraints on component production, resupply vehicle capacity, on-site spares, crew manpower and equipment.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Employ statistical Monte Carlo methods to analyze availability, life cycle cost, and resource scheduling by using the Availability Cost and Resource Allocation (ACARA) program, which is a software tool developed at Lewis Research Center.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the International Space Station Program and LeRC Micro-gravity Experiments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

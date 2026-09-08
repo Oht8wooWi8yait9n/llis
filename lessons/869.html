@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0869: Prop-Rotor Mishap in 40'x80' Wind Tunnel</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0869: Prop-Rotor Mishap in 40'x80' Wind Tunnel</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0869 (Database ID: 869)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-05-22</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Ames Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/869" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>A mishap occurred with the Propeller Test Rig (PTR) in the 40'x80' Wind Tunnel at an airspeed of about 200 knots. The model was a 25' diameter, three bladed prop rotor, and it was rotating at a speed of about 500 rpm before the mishap.</p>
+
+    <p>The mishap was caused by failure of a bearing set in the collective pitch control system during a run in which several data points had been taken and new conditions were being set up. The rotor torque went from about 10,000 ft-lb to &ntilde;2,000 ft-lb (model motors went from acting as motors to generators), and the rotor control system locked up as it was designed to do at &ntilde;2,000 ft-lb of torque to prevent actuator failures from causing damage to the PTR. At this time it was recognized that there was a problem, and the designated procedure was followed which was to open the breaker to the model motors. Opening the breaker (although it had happened automatically) had been successful during an incident that occurred on March 21, 1991, and it was thought that this was a similar event. As soon as the breaker was opened the rotor began to accelerate. Because the rotor blades had gone to a lower blade angle (unknown at the time) the rotor accelerated to a very high speed.
+    Redlines were rapidly indicated on the Bar Chart Monitor, and as soon as this occurred the Wind Tunnel Emergency Stop was initiated. However, the failure had progressed too far, and the rotor continued to speed up until it self-destructed due to overspeed. The rotor reached a speed of close to 1000 rpm; the safe operating limit was 630 rpm, and the structural limit for the blade tension straps was 930 rpm. At overspeed, one blade tore loose and lodged in the top of the test section. The remaining rotor and mast assembly tore loose from the model drive system due to the imbalance. The mast landed on top of the Rig, and the rotor assembly went down the tunnel coming to rest against the safety fence. Some of the debris went past the first fence, but most was collected against the fence attached to vane set 5 which is the last vane set ahead of the Wind Tunnel drive fans. The only damage to the Wind Tunnel drive was a small gouge in one of the blades.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Ensure that adequate design and stress analysis have been done and documented for all critical components in models and test hardware. Insure that all components have sufficient load capacity.</li>
+
+      <li>Perform comprehensive design review and instrument accordingly for health monitoring. An important goal is to do a comprehensive FMECA by knowledgeable systems engineers or designers, prioritize potential failures based on probability, look at consequences of failure in priority order, and then develop instrumentation and emergency procedures on this basis. This is a difficult task, but when there are many potential single-point failures and the consequences of failure is high, it is worth significant effort. Bearings and fasteners are notorious failure points (even if not highly loaded). They must be monitored, maintained, and replaced accordingly.</li>
+
+      <li>During design reviews, do not overlook parts designed by contractors even though this may be difficult for proprietary reasons. Because some parts have high safety factors does not mean they all do. In fact, hardware that has been used and modified several times is very likely to have a large variation in safety factors.</li>
+
+      <li>If control systems are designed to lock up to preclude further inputs, Wind Tunnel Emergency Stop should be the only course of action when lock up occurs.</li>
+
+      <li>Minimize voice directions during emergencies.</li>
+
+      <li>When open loop control systems are difficult to control, they should be automated (loop closed).</li>
+
+      <li>When doing research in which control rates are sensitive, human factor considerations become important and must be considered.</li>
+
+      <li>There should be inspections or verification during assembly and maintenance procedures at critical points. It should not be up to one person to be responsible for the entire assembly or maintenance. Documentation must be comprehensive.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Select an appropriate sized bearing set and redesign the housings as required.</li>
+
+      <li>Based on an updated analysis decide on components that should be monitored during testing and add appropriate instrumentation such as thermocouples or resistance temperature detectors.</li>
+
+      <li>The adequacy of all components must be carefully checked using appropriate loads; documentation must be completed.</li>
+
+      <li>Modify procedures so that if emergency conditions are encountered when the rotor torque is negative the Emergency Stop is initiated.</li>
+
+      <li>Realistic limits should be set up, and then if they are encountered a Wind Tunnel Emergency Stop should be activated.</li>
+
+      <li>Give the monitor for the Bar Chart Monitor an Emergency Stop button.</li>
+
+      <li>Develop a closed-loop control for E/F and RPM that provides accurate control and relieves the operator of the workload associated with control of these variables.</li>
+
+      <li>Consideration should be given to human engineering the control consoles. Special consideration should be given to emergencies.</li>
+
+      <li>Assembly procedures should be well documented, and there should be mandatory in-process inspection points. It is not fair nor prudent to place full responsibility for accurate assembly on one person.</li>
+
+      <li>Improve maintenance documentation; for example, records of bearing changeout should be maintained.</li>
+
+      <li>When an incident occurs and actions are taken there should be sign-offs by the Branch and Division Chiefs approving actions taken or intended.</li>
+
+      <li>Insist that each manager from section head on up through the NFAC organization be totally accountable to the process of configuration management. NFAC has the written process in place. Management must make sure it does what it's supposed to do; i.e., control all potential hazards. Critical components such as fasteners and bearings must be accurately described.</li>
+
+      <li>Add blade angle (or collective actuator position) to the PCM tape, and incorporate means of ensuring the azimuth position on the tape is reliable before testing. Consider adding Wind Tunnel dynamic pressure to the tape as well.</li>
+
+      <li>Use dual tape machines that overlap tapes so that tapes do not have to be changed during a run, or shorten the runs.</li>
+
+      <li>Modify the Data Acquisition System (DAS) so the data on the PCM tape are not interrupted, or change the procedure to not record data on the DAS during emergencies.</li>
+
+      <li>The outer race retaining nut should be modified (i.e., by extending it and adding a shoulder) to stop the inner race slider from moving very far in the event of a bearing failure.</li>
+
+      <li>Consider locating a collective blade angle transducer closer to the blades as a safety monitor. Because the signal would have to go through the slip rings and would therefore be less reliable, it is recommended that this be a safety monitor only and not replacement for the present system.</li>
+
+      <li>Reinforce the bottom rails of the first fence, and double the height of the second fence.</li>
+
+      <li>A quick verification is to do a hardness test, and hardness testers are not very expensive. Therefore, it would be worthwhile to sensitize the Wind Tunnel operators and mechanics to fastener problems and for them to have their own hardness tester for quickly and conveniently checking all fasteners they have doubts about.</li>
+
+      <li>When doing armor plate/fragmentation calculation it is usual to assume the maximum impact velocity is at the maximum normal tip speed. Because of the over-speed encountered, this assumption should be reconsidered.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0702: Magnetic Design Control for Science Instruments</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0702: Magnetic Design Control for Science Instruments</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0702 (Database ID: 702)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/702" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1207; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Provides for a magnetically clean spacecraft, which increases the quality and accuracy of interplanetary and planetary magnetic field data gathered during the mission.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Because the dipolar portion of a spacecraft's magnetic field at its magnetometer experiment sensor location dominates the nondipolar part, each spacecraft subsystem is assigned a maximum allowable dipole magnetic field specification based on the magnetometer sensor sensitivity and the distance between the bulk of the subsystems and the sensor location. A typical maximum dipolar field allocation is 10 nanoTeslas (gammas) at a distance of 1 meter from the geometric center of a spacecraft's subsystem, assuming the magnetometer sensor is mounted at the end of an 8-meter boom.</p>
+
+    <p>To ensure that each subsystem will meet its respective dipole field specification, several design practices are observed during the early stages of the subsystem design. These practices include:</p>
+
+    <ol>
+      <li>
+        Magnetic Shielding of Magnetic Components<br />
+        <br />
+        A magnetic source can be enclosed in a high permeability material shield, which in effect confines the source's magnetic flux to within the walls of the shield enclosure. The shield should be completely enveloping, with the minimum number of holes and cutouts. The shield must be annealed after all machining and forming operations are completed. A general rule of thumb is to design the shield to operate within the linear range of the permeability curve between points A and B.<br />
+        <br />
+
+        <center>
+          <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009100main_0702-1.jpg"  HEIGHT="339"  BORDER="0" /><A HREF="/llis_lib/txt/1009582main_0702-1.txt"  >[D]</A>
+        </center>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Compensation of Magnetic Components<br />
+        <br />
+        A magnetic component can be neutralized by placing on or near its surface an equal but opposite field vector using compensation magnets or current loops.<br />
+        <br />
+
+        <center>
+          <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009101main_0702-2.jpg"  HEIGHT="359"  BORDER="0" /><A HREF="/llis_lib/txt/1009583main_0702-2.txt"  >[D]</A>
+        </center>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Redesign of Circuit Board Current Paths to Reduce Loop Area Coverage<br />
+        <br />
+        Because a magnetic field B is proportional to loop area geometry A, number of loop turns N, and current flow I through a circuit, a reduction in A produces a reduction in the magnetic field B, while still leaving I and N intact.<br />
+
+        <center>
+          <IMG  WIDTH="113"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009102main_0702eq1.jpg"  HEIGHT="35"  BORDER="0" /><A HREF="/llis_lib/txt/1009584main_0702eq1.txt"  >[D]</A>
+        </center>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Replacement of Ferromagnetic Parts with Nonmagnetic Parts<br />
+        <br />
+        Another method for reducing magnetic fields is by simply replacing ferrous materials with nonmagnetic materials, preferably with relative permeability m<small><sub>r</sub></small> of approximately 1 so that the magnetic susceptibility c<small><sub>m</sub></small> is kept at approximately 0.<br />
+
+        <center>
+          <IMG  WIDTH="105"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009103main_0702eq2.jpg"  HEIGHT="42"  BORDER="0" /><A HREF="/llis_lib/txt/1009585main_0702eq2.txt"  >[D]</A>
+        </center>
+        <br />
+        where m = m<small><sub>o</sub></small>m<small><sub>r</sub></small>, m<small><sub>r</sub></small> = 1 + c<small><sub>m</sub></small>, and m<small><sub>o</sub></small> is the permeability of vacuum.
+      </li>
+    </ol>
+
+    <p>All spacecraft subsystems are individually subjected to a testing program aimed at fully characterizing each of the subsystems' magnetic traits, as well as determining compliance with dipole field specifications. This testing program includes several exposures to magnetizing fields of 25 Gauss and 3 Gauss to uncover easily permeable materials contained within the subsystem, and several exposures to demagnetizing fields of 50 Gauss and 40 Gauss to eliminate or reduce a subsystem's residual magnetic field.</p>
+
+    <p>Based on the above test program, a data base is established containing subsystem information such as the X, Y, and Z spacecraft coordinates, maximum and minimum measured static magnetic fields, measured dynamic fields, and the calculated dipole moment components. From this data base, the total spacecraft static and dynamic dipole fields at the magnetometer sensor location are calculated using computer code, and are continually updated as new information becomes available. Results then are compared with the spacecraft's static and dynamic magnetic field science requirements.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>A spacecraft's total allowable magnetic field at the magnetometer sensor location <i>r</i> usually is determined by the sensor's sensitivity level or by an agreed upon science requirement. The total field can be approximated by N number of dipoles, with N representing all of the spacecraft subsystems. To guarantee that the spacecraft's total magnetic field at <i>r</i> is within the desired allowable range, the individual moments due to N number of dipole sources must be kept to within predetermined dipole moment specifications. These individual specifications are derived by distributing the total allowable spacecraft moment amongst N number of spacecraft sources using a model that consists of a number of randomly oriented dipoles of strength M<small><sub>j</sub></small>. The magnitude of the spacecraft's dipole magnetic moment is approximated by the Pythagorean sum of these individual subsystem dipole moments, with the radial part tending to be greater than either of the
+    transverse components for the dipole portion. The individual magnetic dipole field allocation, therefore, is determined from this model by the following equations:</p>
+
+    <center>
+      <IMG  WIDTH="449"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009104main_0702eq3.jpg"  HEIGHT="220"  BORDER="0" /><A HREF="/llis_lib/txt/1009586main_0702eq3.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+    where B<small><sub>R</sub></small>,B<small><sub>Q</sub></small>, and B<small><sub>F</sub></small> are the field components of the spacecraft's magnetometer experiment sensor sensitivity or the science requirement levels at location <i>r</i>. Thus, M<small><sub>j</sub></small> can be determined for all spacecraft N sources assuming that M<small><sub>j</sub></small> is the same for all j and the magnetic moments determining the far field are linear functions of the vectors M<small><sub>j</sub></small>. Because the dipolar portion of the spacecraft magnetic field dominates the nondipolar part and the spacecraft is dominated by the few largest sources, the general field allocation B<small><sub>s</sub></small> for a subsystem at a normalized distance of R meters is thus derived from M<small><sub>j</sub></small> as follows:
+
+    <center>
+      <IMG  WIDTH="156"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009105main_0702eq4.jpg"  HEIGHT="40"  BORDER="0" /><A HREF="/llis_lib/txt/1009587main_0702eq4.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>By ensuring that the dipole moment specifications of all spacecraft subsystems, as represented by N number of dipolar sources, are within their respective allocated dipole moment specifications, the overall spacecraft magnetic field at the magnetometer sensor location can be kept to within its science requirement or to below the magnetometer's sensitivity level. Final verification is done by measuring the magnetic fields of all spacecraft subsystems and, subsequently, calculating the magnitude and orientation of their respective dipole moment components M<small><sub>xj</sub></small>, M<small><sub>yj</sub></small>, and M<small><sub>zj</sub></small> at spacecraft coordinates X<small><sub>j</sub></small>,Y<small><sub>j</sub></small>, and Z<small><sub>j</sub></small>. The total spacecraft magnetic field at the magnetometer sensor location <i>r</i> then can be modeled using computer code to verify compliance with the specified science requirement or magnetometer experiment
+    sensitivity.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Magnetometer experiment data will be corrupted with variable and unpredictable spacecraft residual magnetic field noise, thus limiting the accuracy of the magnetic field experiment.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Design flight subsystems with low residual dipole magnetic fields to maintain the spacecraft's total static and dynamic magnetic fields within science requirements.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Mariner series, Voyager (VGR), Galileo (GLL), Ulysses.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

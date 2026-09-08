@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #13801: Large Diameter Tubing in Propulsion Subsystems Poses Design Challenges</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #13801: Large Diameter Tubing in Propulsion Subsystems Poses Design Challenges</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #13801 (Database ID: 13801)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2015-03-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment, Hardware, Payloads, Spacecraft, Test and Verification, Lander Systems, Propulsion, Robotics, Spacecraft and Spacecraft Instruments</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/13801" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> Landing the high mass of Mars Science Laboratory (MSL) required a Descent Stage (DS) to descend to the surface of Mars and gently lower the one-ton rover to the ground. This required the most sophisticated propulsion system ever developed by the NASA/Caltech Jet Propulsion Laboratory (JPL). With up to 400 kg of propellant consumed in 30 seconds of powered descent and maneuvering, and relatively high (25,000 N) maximum thrust, MSL required propulsion tubes (up to 1-inch diameter) that were much larger than typical spacecraft propulsion system tubing.</p> 
+<p> Conventional propulsion systems designed by JPL (i.e., with smaller diameter pressurant lines and fittings) are more flexible, and thus the internal pressure loads are the primary driver of mechanical stress. With an increase in the tubing diameter, such as was required for the MSL descent stage, the propulsion system becomes more rigid, and stress from vibration and quasi-static accelerations became quite significant. When propulsion systems require tubing diameters exceeding approximately 3/8 inches, modeling must be done at the structural level for a given routing scheme. This is to assure that the relative motion of propulsion assemblies at different parts of the structure do not induce excessive stress.  The secondary structural plates on which propulsion component subassemblies are mounted should be stiff enough to avoid excessive line stresses or loading of the components in flight environments.</p> 
+<p> This stress analysis for MSL was made more difficult by the extreme complexity of the MSL DS propulsion line layout. This is illustrated in Figure 1, which shows the circuitous propulsion line routing throughout the DS structure. </p> 
+<p> <img alt="Figure 1 shows a semi-transparent box like shape CAD-generated diagram of the DS in which the structural elements appear as shadowy elements. Four short extending arms that appear to support the landing engines, with the propellant tubing superimposed on the diagram as colored lines running over, around and through the structure.  The image shows three four colored lines running through the subsystem representing the Reaction Control System, Mars Lander Engines, propellant, and pressurant for the landing system." src="https://llis.nasa.gov/llis_lib/images/2015-02_lg_tubing_Fig1.png" style="border-width: 3px; border-style: solid; width: 448px; height: 286px;" /></p> 
+<p> <strong>Figure 1.</strong> MSL DS propulsion lines. The purple lines are routed to the Mars Lander<br /> Engines (MLEs) used for terminal descent. The green lines are routed to the Reaction<br /> Control System (RCS) thrusters used to maintain attitude prior to atmospheric entry<br /> and to perform aero maneuvering during the entry. The blue lines connect the<br /> propellant tanks to the pyro valve assemblies. The yellow lines are routed from the<br /> pressurant tank.</p> 
+<p> The propulsion line stress analysis revealed some complex stress states. There were numerous locations within the feed system where the conventional factors-of-safety on yield could not be met, and it was necessary to resort to fatigue life assessments.  Indeed, the standard practice in fabricating propulsion tubing does not include stress relief after bending, so localized yielding is present in the as-fabricated tubes. Experimental testing (Figure 2) was done to confirm the material fatigue life predictions in the complex stress state typical of bent tubing under cyclical loading.  In addition, the very scale of the DS Propulsion Subsystem mandated extensive testing to evaluate and mitigate the potential for water hammer effects produced by the pulsing of the RCS thrusters during atmospheric entry.</p> 
+<p> <img alt="Figure 2 consists of two color photos side by side.  The smaller image shows a close up of a metallic silver-colored tube that had fractured close to a metal cube elbow.  The larger image shows the tube assembly—perhaps three feet in length and one inch in diameter-- attached to a blue colored test machine.  A black arrow from the large image to the close up smaller image indicates the location of the fracture." src="https://llis.nasa.gov/llis_lib/images/2015-02_lg_tubing_Fig2.png" style="border-width: 3px; border-style: solid; width: 448px; height: 371px;" /></p> 
+<p> <strong>Figure 2.</strong> Component strut fatigue testing setup depicting a failure due to accidental<br /> compression over-loading</p> 
+<p> The scope of this analysis and test effort was not fully appreciated until very late in system development—around the time of the Critical Design Review (CDR) for the DS Propulsion Subsystem. This led to many changes to the propulsion line routing, and to the location and configuration of line supports.</p> 
+<p> The MSL DS Propulsion Subsystem testing program demonstrated robust margins over the predicted flight limit load (FLL) stress (Reference (2)), and the DS was successful during Mars Entry, Descent, and Landing (EDL).</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> Carl S. Guernsey and Jeffrey M. Weiss, “Lessons Learned from the Development of the MSL DS Propulsion System,” AAS 13-457, 23rd AAS/AIAA Spaceflight Mechanics Meeting, Kauai, Hawaii, February 10-14 2013, p. 15-16.</li> 
+ <li> Darlene Lee, Gary Wang, and Zensheu Chang, “MSL Prop Line Analysis Summary,” April 29, 2010, p. 14.</li> 
+ <li> Fabrication of Propulsion Tubing for the MSL Descent Stage, NEN #14201, NASA Lesson Learned Information System (LLIS),  December 2, 2014.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> The development of the MSL Descent Stage Propulsion system was an exceedingly complex task that required numerous new developments and was difficult to model and test (Reference (3)).</li> 
+ <br /> 
+ <li> With large diameter propulsion lines, it is possible to induce mechanical stresses that are difficult to model.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Project planning should recognize the scope of a modeling and test program that will be needed for a very advanced and complex propulsion subsystem.</li> 
+ <br /> 
+ <li> With large diameter propulsion lines, designers should seek to either stiffen the structure or introduce compliant elements to the feed system to minimize stress levels.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.2.5.9 (“Mechanical Configuration/Systems Design: Structural Design - Design validation”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p><p><font size="5">Related Policies, Standards, Handbooks, Procedures, or Other Documents</font></p><ul>
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314903" style="line-height: 1.4;">NASA-STD-5001</a>, STRUCTURAL DESIGN AND TEST FACTORS OF SAFETY FOR SPACEFLIGHT HARDWARE</li>
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314904" style="line-height: 1.4;">NASA-STD-5002</a>, LOAD ANALYSES OF SPACECRAFT AND PAYLOADS</li>
+ <li> <a href="https://standards.nasa.gov/documents/detail/3315149" style="line-height: 1.4;">NASA-HDBK-5010</a>, FRACTURE CONTROL IMPLEMENTATION HANDBOOK FOR PAYLOADS, EXPERIMENTS, AND SIMILAR HARDWARE</li>
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314878" style="line-height: 1.4;">NASA-HDBK-7004</a>, FORCE LIMITED VIBRATION TESTING</li>
+ <li> NASA-HDBK-7005, DYNAMIC ENVIRONMENTAL CRITERIA</li>
+ <li> NASA-HDBK-7008, SPACECRAFT DYNAMIC ENVIRONMENTS TESTING</li>
+</ul>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<ul> 
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314903" style="line-height: 1.4;">NASA-STD-5001</a>, STRUCTURAL DESIGN AND TEST FACTORS OF SAFETY FOR SPACEFLIGHT HARDWARE</li> 
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314904" style="line-height: 1.4;">NASA-STD-5002</a>, LOAD ANALYSES OF SPACECRAFT AND PAYLOADS</li> 
+ <li> <a href="https://standards.nasa.gov/documents/detail/3315149" style="line-height: 1.4;">NASA-HDBK-5010</a>, FRACTURE CONTROL IMPLEMENTATION HANDBOOK FOR PAYLOADS, EXPERIMENTS, AND SIMILAR HARDWARE</li> 
+ <li> <a href="https://standards.nasa.gov/documents/detail/3314878" style="line-height: 1.4;">NASA-HDBK-7004</a>, FORCE LIMITED VIBRATION TESTING</li> 
+ <li> NASA-HDBK-7005, DYNAMIC ENVIRONMENTAL CRITERIA</li> 
+ <li> NASA-HDBK-7008, SPACECRAFT DYNAMIC ENVIRONMENTS TESTING</li> 
+</ul> 
+<p>  </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

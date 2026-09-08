@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1180: TDRS-H S-Band Multiple Access Antenna Performance Shortfall</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1180: TDRS-H S-Band Multiple Access Antenna Performance Shortfall</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1180 (Database ID: 1180)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-04-25</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1180" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The TDRS-H was launched on June 30, 2000. The satellite is the first of a new series of Tracking Data Relay Satellites. The satellite incorporated a number of new communication technologies including the Single Access Springback Reflector Antenna, transmitters and receivers operating at Ka-band and the S-band microstrip patch antenna elements used in the Multiple Access (MA) phase arrays. During In-Orbit Test (IOT), performance deficiencies were observed in the MA forward (MAF) and return (MAR) channels. The MA phase array system is complex in design and relies on both hardware and software to perform the on-board beam forming to track user satellites. Based on analysis of test data, a few minor deficiencies were corrected through changes to the software (sign error) and calibration error (phase shift settings). However, the MAR formed beam G/T performance remained significantly below predicted performance. Performance testing of individual return array elements was initiated
+    revealing widely divergent gain and axial ratios for the elements when compared to pre launch factory measurements. In one case, the performance of a single element was seen to degrade significantly in a 12-hour period. BSS initiated a comprehensive anomaly investigation incorporating: 1) On-orbit testing of TDRS-H; 2) Laboratory performance investigation of flight MA antenna elements; and 3) Factory satellite system level MA testing using the TDRS-I then undergoing integration and test. Ultimately, BSS determined that the most probable cause of the observed performance was due to the MA array sunshield (thermal blanket) coming into contact with the antenna array elements. Such contact creates a dielectric loading of the microstrip patch radiators and transmission lines altering the phase relationship of the radiators and shifting the resonant frequency of the elements. Altering the phase relationship causes the element gain pattern to "squint" or move off axis by some 8 degrees.
+    The peak directivity, resistive loss and VSWR (Voltage Standing Wave Ratio) performance of the MA antenna elements degraded as a result of the close proximity of the sunshield. The sunshield is held in contact with the elements by electrostatic force created by deep charging of the dielectric materials used in the construction of the antenna elements. In response, a negative "image" charge appears in the sunshield (since it is conductive and grounded), and the electrostatic attractive force field is created.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>The use of microstrip patch elements was a new design to BSS, and as such, received substantial attention during the design, development and test phase. However, the interrelated physics of the sunshield contact and performance shortfall were never fully understood.</li>
+
+      <li>Designers assumed that the designed spacing between the elements and the sunshield would be achieved. (The designed spacing of approximately 1/2 inch is more than sufficient to eliminate the effect.)</li>
+
+      <li>Designers of the sunshield mechanical retention were unaware of the electrostatic attraction force and assumed that the sunshield would maintain clearance in the zero gravity space environment.</li>
+
+      <li>While formed beam (gain and axial ratio) tests were performed on the assembled MA array without the sunshield in flight configuration, and continuity tests were performed on each element after installation of the sunshield, there was no test designed to compare individual element gain and axial ratio performance between pre and post installation of the sunshield.</li>
+
+      <li>During the anomaly investigation, laboratory tests of elements with the sunshield "touching" the elements yielded no significant effect. This was a false conclusion based on a test configuration that pulled the sunshield away from the element due to gravity.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>The Systems Engineering activity should, as part of the Systems Requirements Review, conduct a thorough review of all derived requirements, including interfaces, to establish that all requirements are identified, documented, and have been included in the verification process.</li>
+
+      <li>During the proposal and initial design phases of the project, carefully and thoroughly evaluate the heritage and prior application of the technology. In this case, the sunshield had been used in prior applications, but not with microstrip patch antenna elements.</li>
+
+      <li>During the Integration and test phases of the project, test the entire system in the final flight configuration. In this case the concern was focused on the RF loss of the sunshield rather than the dielectric loading impact.</li>
+
+      <li>Examine in detail all analyses of the on-orbit environment impact on the system. Not all aspects of the environment are easily simulated or tested (e.g. solar input, high energy plasma, etc) and verification of performance rests with the completeness and thoroughness of the environmental analyses.</li>
+
+      <li>During anomaly investigations, check and recheck conclusions, analyses and tests. It is easy to go down the wrong path when results of tests yield answers that match pre-conceived ideas.</li>
+
+      <li>Design the system for on-orbit test. In this case there was an ability to examine the performance of individual elements. In many systems, this is not the case.</li>
+
+      <li>Assure adequate clearance of dielectric or conductive material from resonant structures such as the microstrip circuitry including radiating RF antenna elements and transmission lines.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<ol>
+      <li>The design was altered to include standoffs over each forward and return antenna element. The standoffs assure a minimum separation of the element and the sunshield to avoid the RF performance impact.</li>
+
+      <li>Specific tests of TDRS-I were incorporated to determine if an individual element were exhibiting performance similar to one with a sunshield in forcible contact.</li>
+
+      <li>The entire TDRS-I system is tested in the final flight configuration</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

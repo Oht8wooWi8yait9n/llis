@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0721: Design Considerations For Space Trusses</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0721: Design Considerations For Space Trusses</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0721 (Database ID: 721)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/721" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice Number PD-ED-1242; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>This practice can be used to determine an optimum truss configuration (e.g. minimum number of members) for a given loading condition and specified reliability. Probabilistic Structural Analysis Methods (PSAM) provides a formal and systematic way to evaluate structural performance reliability or risk at minimal time and low cost.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The purpose of this application is to probabilistically evaluate a three-dimensional, three-bay, space cantilever truss by using the computer code NESSUS (Numerical Evaluation of Stochastic Structures under Stress). Using PSAM will enable design engineers to identify and quantify the sensitivities associated with uncertainties in primitive variables (structural, material and load parameters) describing the truss. The primitive variables for a given space truss such as stiffness parameters, strength parameters, spatial truss geometry, and applied loads or moments will vary continuously due to changes in the space environment. Each of these primitive variables distribution is characterized in terms of one of several available probability distributions, such as the Weibull, exponential, normal, log-normal, etc. The cumulative distribution functions for the response functions considered and sensitivities associated with the primitive variables for given response are investigated.
+    These distributions have significant impact on the separation/range of the response variables such as nodal displacements, eigen-values, member forces, vibration frequencies, etc. These sensitivities help in determining the dominating primitive variables for a particular response.</p>
+
+    <p><b>Program Capability and Description</b></p>
+
+    <p>The NESSUS code consists of three major modules:</p>
+
+    <p>(1) NESSUS/PRE (pre-processor) module is used to obtain the characteristic of a partially correlated Gaussian field in terms of a set of uncorrelated random vectors.</p>
+
+    <p>(2) NESSUS/FEM (Finite Element Methods) module is a finite element analysis code that can generate perturbed solutions about a deterministic state. It contains an efficient perturbation technique such that the perturbation of each variable is done rapidly. Each perturbation corresponds to a prescribed deviation from the deterministic model.</p>
+
+    <p>(3) NESSUS/FPI (Fast Probability Integration) module contains several advanced reliability methods including Monte-Carlo simulation.</p>
+
+    <p>Since NESSUS/PFEM combined the NESSUS/FEM and NESSUS/FPI modules into a single computer program, the entire probabilistic finite element analysis including perturbations of the primitive variables can be performed in a single execution step.</p>
+
+    <p>The fast probability integration (FPI) techniques are one or several orders of magnitude more efficient than the Monte-Carlo simulation methods. FPI module extracts the database of perturbed solutions from NESSUS/FEM to calculate the probability distribution functions of the response variables. In general, the primitive variables are specified with their mean values (m), standard deviation (s), and the type of distribution. Note: Each module can be operated independently.</p>
+
+    <p><b>Probabilistic Finite Element Analysis</b></p>
+
+    <p>In general, the finite element equation for motion is written as:</p>
+
+    <table width="95%">
+      <tr>
+        <td align="center"><font size="+2" face="arial,helvetica">[M] {&uuml;} + [C] {m} + [K] {u} = F(t)</td>
+
+        <td align="right">Equation (1)</td>
+      </tr>
+    </table>
+
+    <p>Where:<br />
+    [M] denotes mass matrix.<br />
+    [C] denotes damping matrix.<br />
+    [K] denotes the stiffness matrix<br />
+    {&uuml;} denotes acceleration vector.<br />
+    {m} denotes velocity vector.<br />
+    {u} denotes displacement vector.</p>
+
+    <p>Note: These matrices are calculated probabilistically in the NESSUS code. The forcing function vector, {F(t)}, is time dependent at each node.</p>
+
+    <p>In this practice, the static case is considered by setting the mass and damping matrices to zero and considering the forcing function being independent of time in equation (1) such that</p>
+
+    <table width="95%">
+      <tr>
+        <td align="center"><font size="+2" face="arial,helvetica">[K] {u} = {F}</td>
+
+        <td align="right">Equation (2)</td>
+      </tr>
+    </table>
+
+    <p>Furthermore, by just setting the damping matrix to zero, eigenvalue analysis can be accomplished by using</p>
+
+    <table width="95%">
+      <tr>
+        <td align="center"><font size="+2" face="arial,helvetica">[[K] - w<sup><small>2</small></sup> [M]] {u} = 0</td>
+
+        <td align="right">Equation (3)</td>
+      </tr>
+    </table>
+
+    <p>where w denote eigenvalues and {u} are the corresponding eigenvectors.</p>
+
+    <p><b>Finite Element Model</b></p>
+
+    <p>A three-dimensional, three-bay cantilever truss is computationally simulated using a linear isoparametric beam element based on the Timoshenko beam formulation. The element is idealized as a two-noded line segment in three-dimensional space. The cantilever truss is assumed to be made from 44 hollow circular tube members (see Fig. 1). The tubes are made up of wrought Aluminum alloy with modulus of elasticity (E) equal to 10 Mpsi. The outer and inner radii (r<sub><small>o</small></sub> and r<sub><small>i</small></sub>) of the tube are 0.5 and 0.4375 in., respectively. All 6 degrees-of -freedom are restrained at the fixed end (left side) nodes. The truss is analyzed twice, once using beam elements and then using pseudo-truss elements. The beam element is converted into a pseudo-truss element by suppressing the effective shear areas in the principal planes (A<sub><small>xx</small></sub> and A<sub><small>yy</small></sub>), the two principal moments of inertias for the tube
+    cross-section, (I<sub><small>xx</small></sub> and I<sub><small>yy</small></sub>), and torsional constant, J. In the case of truss elements, 3 rotational degrees of freedom at each node and 3 translational degrees of freedom at support nodes are restrained.</p>
+
+    <p>Each bay of the truss is 5 ft wide, 8 ft long, and 6 ft high ( see Fig. 1 ). The overall length of the truss is 24 ft. Six vertical and two longitudinal loads are applied. Twisting moments are applied at the truss-end top nodes for truss elements. The directions of the forces and moments are shown in Figure 1 and the mean values are given in Table I.</p>
+
+    <p><b>Probabilistic Model</b></p>
+
+    <p>The following primitive variables are considered in perturbation analysis:</p>
+
+    <p>( 1 ) Nodal Coordinates ( X, Y, Z )<br />
+    ( 2 ) Modulus of elasticity ( E )<br />
+    ( 3 ) Outer radius of the tube (r<sub><small>o</small></sub>)<br />
+    ( 4 ) Inner radius of the tube (r<sub><small>i</small></sub>)<br />
+    ( 5 ) Vertical loads ( V )<br />
+    ( 6 ) Longitudinal loads ( H )<br />
+    ( 7 ) Truss-end moments ( M )<br />
+    ( 8 ) Truss-end coupling forces ( P )</p>
+
+    <p>It is possible that the above primitive design variables will vary continuously and simultaneously due to extreme changes in the environment when trusses are used in upper Earth orbit for space station type structures. The normal distribution is used to represent the uncertainties in E, r<sub><small>o</small></sub>, r<sub><small>i</small></sub>, and X, Y, Z coordinates.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009177main_0721-1.jpg"  HEIGHT="245"  BORDER="0" /><A HREF="/llis_lib/txt/1009656main_0721-1.txt"  >[D]</A>
+    </center>
+
+    <p>The applied loads, moments and coupling forces are selected to represent anticipated loading conditions for a typical space truss. These are represented by log-normal distributions. Initially, NESSUS/FEM module is used to take into consideration the mean value of these primitive variables. In the subsequent probabilistic analysis each primitive variable is perturbed equidistant from the mean value. However, each variable is perturbed independently and by a different amount. Usually, the perturbed value of the design variable is taken as a certain fraction of the standard deviation at either side of the mean value. Finally, the NESSUS/FPI module extracts response variable values (one deterministic and two times the number of primitive variables) to calculate a probability distribution function of the response variable considered. The mean, distribution type and percentage variation for different primitive variable are given in Table I.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009179main_0721-table1.jpg"  HEIGHT="393"  BORDER="0" /><A HREF="/llis_lib/txt/1009658main_0721-table1.txt"  >[D]</A>
+    </center>
+
+    <p><b>Data Analysis</b></p>
+
+    <p>The three-dimensional, three-bay cantilever truss is probabilistically analyzed and the cumulative probability distributions for the truss end displacements, member forces and vibration frequencies are plotted. The sensitivities of the primitive variables on the scatter in the truss structural responses (truss free end displacements, member axial forces and vibration frequencies) are quantified in Table II. Please refer to the reference articles of this practice for other information/figures such as the probabilistic displacement of the truss free end nodes (top and bottom) in X, Y, and Z directions using the truss element. The cumulative distribution functions of frequencies of modes 1 and 2 using truss elements are plotted (see sample Figure 2, others please refer to the reference articles). Please refer to the reference articles for other valuable information such as data plots for the truss modelled with beam elements. It is important to note from Table II that the
+    cross-sectional area (primitive variables r<sub><small>o</small></sub> and r<sub><small>i</small></sub>) has a significant impact on the probabilistic distribution of the vibration frequencies. For additional result formats please refer to reference 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009180main_0721-table2.jpg"  HEIGHT="295"  BORDER="0" /><A HREF="/llis_lib/txt/1009659main_0721-table2.txt"  >[D]</A>
+    </center>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009178main_0721-2.jpg"  HEIGHT="230"  BORDER="0" /><A HREF="/llis_lib/txt/1009657main_0721-2.txt"  >[D]</A>
+    </center>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Traditional deterministic methods applied to the analysis of space truss design only consider applied loads for given operating condition. To account for uncertainties in assumptions of loading and material strength, load factors and safety factors are applied to assure the final design will satisfy design specifications.</p>
+
+    <p>This traditional approach to stress analysis does not formally address the natural uncertainties of primitive variables (fundamental parameters describing the structural problem) such as the uncertainties of loading and material strength. Numerous uncertainties associated with truss structures in space environments require a quantitative and systematic method to ascertain that the structural response will be within the acceptable limits during the life of the structure. Probabilistic structural analysis provides a formal way to properly account for all these uncertainties.</p>
+
+    <p>Currently available software tools do not easily allow determination of any local instability in any of the internal members of the truss during probabilistic analysis. Therefore, NASA Lewis Research Center developed PSAM, which provides a formal and systematic way to reliably evaluate structural performance and durability. PSAM takes into account the uncertainty of primitive variables and will yield a stable and optimum configuration for given load conditions. This probabilistic approach also takes into account the uncertainties of primitive variables in the space environment.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Pai, S.S., "Probabilistic Structural Analysis of a Truss Typical for Space Station", NASA Technical Memorandum 103277, 1990.</li>
+
+      <li>Pai, S.S. and Chamis, C.C., "Probabilistic Progressive Buckling of Trusses", NASA Technical Memorandum 105162, 1991.</li>
+
+      <li>Research &amp; Technology - 1992, NASA LeRC TM 105924, 1992.</li>
+
+      <li>Pai, S.S. and Chamis, C.C., "Probabilistic Structural Analysis of Adaptive/Smart/Intelligent Space Structures", NASA Technical Memorandum 105408, 1991.</li>
+
+      <li>Pai, S.S. and Chamis, C.C., "Probabilistic Assessment of Space Trusses Subjected to Combined Mechanical and Thermal Loads", NASA Technical Memorandum 105429, 1992.</li>
+    </ol>
+
+    <p>NOTE: Please refer to the attached Software Release Request form for information on how to obtain the NESSUS software.</p>
+
+    <p><A HREF="/llis_lib/pdf/1010308main_0721-softwarereq.pdf"  >SOFTWARE RELEASE REQUEST</A></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Aerospace structures and spacecraft are complex assemblies of structural components that are subjected to a variety of hazardous conditions. Failure to adhere to proven space truss reliability analysis practices could cause shortened mission life, impact mission success, premature termination of component or experiment operation, and in extreme circumstance, loss of mission and human life. All phases of space truss design process, from development, design, fabrication and all the way to installation in the spacecraft, must adhere to proven reliable design and safe practices.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use the PSAM (Probabilistic Structural Analysis Methods) contained in the computer code NESSUS (Numerical Evaluation of Stochastic Structures Under Stress) to identify and quantify the reliability of space structures.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on SSME, Space Station.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

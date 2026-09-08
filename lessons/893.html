@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0893: Selection of Electric Motors for Aerospace Application</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0893: Selection of Electric Motors for Aerospace Application</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0893 (Database ID: 893)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/893" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-ED-1229 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Selection of the optimum electric motor for space flight operations results in a safe, reliable, effective, efficient, and economical electric motor power source for space flight. Brushless direct current motors provide the lightest weight alternative for most applications.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Four principal types of electric motors are suitable for in-space applications; AC Induction Motors, Brush Direct Current (BDC) Motors, Brushless Direct Current (BLDC) Motors, and Stepper Motors. Table 1 shows the most predominant applications for each type of motor.</p>
+
+    <center>
+      <IMG  WIDTH="480"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009402main_0893-table1.jpg"  HEIGHT="357"  BORDER="0" /><A HREF="/llis_lib/txt/1009875main_0893-table1.txt"  >[D]</A>
+    </center>
+
+    <p>Generally AC Induction Motors are used for constant speed applications where a fixed frequency power source such as 60 Hz or 400 Hz is available in the spacecraft. Typical applications are fans and pumps. Motor construction consists of windings on the stationary part of the motor and copper shorting bars on the iron laminations of the armature. The AC voltage applied to the windings induces a current in the armature of the rotor, creating a magnetic field. This field reacts with the field in the stationary part of the motor to create torque. These motors are rugged with no wear out mechanisms other than the bearings.</p>
+
+    <p>The BDC motors use commutators and carbon brushes to apply current through the windings as the motor rotates. The BDC motor uses wound elements in the rotor and permanent magnets attached to a stationary stator ring. In a BDC motor, electrically separated motor windings are connected to the commutator ring. Current is carried by spring loaded brushes, through the commutator into the windings of the rotor. The current in the windings creates magnetic fields, which react with the stator's permanent magnetic field. These magnetic repulsion causes the rotor to rotate. This rotation causes the brushes to make and break connections through the commutator with different windings pairs. The moving magnetic field provides the torque necessary to rotate the motor's armature.</p>
+
+    <p>The BLDC motor uses electronic commutation to control the current through the windings. The BLDC motors use permanent magnets on the rotor. The BLDC motors contains rotor position sensor electronics so that the power input wave form to the windings is in sequence with the proper rotor position. Motor efficiency is enhanced because there is no power loss in the brushes. In the BLDC motor, the stator is wound with electromagnetic coils that are connected in a multiphase configuration, which provides the rotating field, and the armature consists of a soft iron core with permanent magnet poles. Sensing devices define the rotor position. The commutation logic and switching electronics convert the rotor position information to the correct excitation for the stator phases. Sensing devices include hall-effect transducers, absolute encoders, optical encoders, and resolvers. The electronic controller can be separate or packaged with the motor.</p>
+
+    <p>BLDC motors are preferred over BDC motors for most space environments. If BDC motors are used, the qualification of brush motors for the space environment is both expensive and time consuming. The advantages and disadvantages of the two types of DC motors are listed in Tables 2 and 3.</p>
+
+    <center>
+      <IMG  WIDTH="478"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009403main_0893-table2.jpg"  HEIGHT="241"  BORDER="0" /><A HREF="/llis_lib/txt/1009876main_0893-table2.txt"  >[D]</A>
+    </center>
+
+    <center>
+      <IMG  WIDTH="478"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009404main_0893-table3.jpg"  HEIGHT="258"  BORDER="0" /><A HREF="/llis_lib/txt/1009877main_0893-table3.txt"  >[D]</A>
+    </center>
+
+    <p>Application gives the designer the intended use and could perhaps optimize an existing design. The no-load speed, stall torque, and the load point are used to establish the motor torque loadline. Knowing the no load speed and available voltage, the designer can establish an initial back EMF constant and the motor torque constant. The stall torque combined with the load point torque helps establish motor size. The duty cycle, temperature, and expected heat sinking are used with the motor size to determine the temperature rise of the motor. The design is optimized to meet the customer's requirements.</p>
+
+    <p>Since the BLDC and stepper motors are the most predominant motors used for aerospace applications, an expanded listing of applications and requirements is shown in Table 4.</p>
+
+    <center>
+      <IMG  WIDTH="480"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009405main_0893-table4.jpg"  HEIGHT="588"  BORDER="0" /><A HREF="/llis_lib/txt/1009878main_0893-table4.txt"  >[D]</A>
+    </center>
+
+    <p>Stepper motors are a special case of BLDC Motors. Construction is identical except that they contain no position sensors. Excitation is sequentially applied to the windings, creating the rotating field to produce torque. The advantages are simplicity and compatibility with digital control schemes. Disadvantages are high continuous power dissipation and high ripple torque.</p>
+
+    <p>The system designer typically requires the motor information listed in Table 5.</p>
+
+    <center>
+      <IMG  WIDTH="421"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009406main_0893-table5.jpg"  HEIGHT="179"  BORDER="0" /><A HREF="/llis_lib/txt/1009879main_0893-table5.txt"  >[D]</A>
+    </center>
+    <u>Technical Rationale:</u>
+
+    <p>Selection of the appropriate motor for a given application permits more reliable operation, while minimizing weight, power consumption, and thermal dissipation requirements.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Sokira, Thomas J. and Wolfgang Jaffe: 'Brushless DC Motors Electronic Commutation and Controls,' Tab Books, Inc., Blue Ridge Summit, PA, 1990</li>
+
+      <li>Dang, Ngon T.: 'Overcoming Brushless DC Motor Limitations,' Electronic Products, Pgs. 63-67, July 1993</li>
+
+      <li>'Brushless DC Motor Handbook,' Inland Motor, Kollmorgen Corporation, Radford, VA 1989.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to proven electric motor selection practices could cause shortened mission life, premature cessation of component or experiment operation, mission failure, and in extreme cases, loss of mission or life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Careful attention is given to the specific application of electric motors for aerospace applications when selecting motor type. The following factors are considered in electric motor design: application, environment, thermal, efficiency, weight, volume, life, complexity, torque, speed, torque ripple, power source, envelope, duty cycle, and controllability. Brushless direct current motors have been proven to be the best all-around type of motors for aerospace applications because of their long life, high torque, high efficiency, and low heat dissipation.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Tethered Satellite System (TSS), Solar Max Mission (SMM), Infra-Red Telescope (IRT), Saturn 1B (S1B), Saturn V (SV), Skylab, High Energy Astronomy Observatory (HEAO), Lunar Roving Vehicle (LRV), Hubble Space Telescope (HST), Advanced X-Ray Astrophysics Facility (AXAF), and other MSFC projects.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

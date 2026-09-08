@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0797: Analysis of Radiated EMI From ESD Events Caused by Space Charging</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0797: Analysis of Radiated EMI From ESD Events Caused by Space Charging</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0797 (Database ID: 797)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/797" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1309, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The use of a combined SPICE circuit analysis code and a method of moments code for the study of possible conducted and radiated Electromagnetic Interference (EMI) resulting from an Electrostatic Discharge (ESD) event, allow the assessment of EMI noise coupling onto electronic circuit interfaces (Ref. 2).</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Background:</p> 
+<p>Surface charging can develop on satellite exterior surfaces as a result of the interactions between the surfaces and the space plasma environment. Considerable research has been done in assessing charging mechanisms that are present when the dielectric surfaces of a spacecraft are exposed to the space plasma environment (at GEO and POLAR orbit primarily). Furthermore, software tools have been developed and utilized for modeling the charging potentials that might be present at several spacecraft locations for a given charging plasma environment. These analysis tools have been useful in the design and configuration of thermal blankets, and other dielectric surfaces on spacecraft.</p> 
+<p>No conclusive theory has yet been developed, but some work has been done in the analysis of the discharge process itself, which occurs when the released charge goes from one surface to another. Nevertheless it is widely accepted that an ESD can occur under vacuum (pressure &lt;10<small><sup>5</sup></small> torr) when either: (a) dielectric surface voltage is greater than 500 V or (b) the electric field between a dielectric surface and a conductor is greater than 10<small><sup>5</sup></small> volts/cm.</p> 
+<p>Finally, when an electrostatic discharge occurs, the release of stored charge creates a discharge current that can generate conducted emissions and radiated emissions. Conducted emissions occur as a result of the replacement current that originates when charge is blown off the dielectric surface inducing a replacement current to flow from the satellite structure. Radiated emissions are generated by the ESD current pulse.</p> 
+<p>The rapid surface potential change induces noise in circuits through capacitive coupling. The discharge current can also induce an inductively coupled signal into the victim circuit. Furthermore, radiated emissions can cause diverse forms of field-to-circuit coupling. Capacitive, inductive and field-to-circuit coupling scenarios are manifestations of conducted and radiated EMI, and are characterized by electrical noise on a victim electronic component or circuit. This induced electrical noise, which is transient by nature, can interfere with nominal current and voltage levels of electronic components causing transient data or command interruptions or, even worse, permanent component damage.</p> 
+<p>Analysis Steps:</p> 
+<p>I. ESD-EMI Topology: This is the first step in EMI analysis from ESD events. A study is performed of spacecraft assemblies and sub-assemblies to identify: a) the most likely locations for spacecraft charging and ESD to occur, b) the most likely location and types of conductive path(s) which will be followed by the induced current after an ESD event, and c) the most likely susceptible circuits within a spacecraft that can be affected by an ESD event. This preliminary work is needed to characterize the topology under which ESD events occur.</p> 
+<p>Figure 1 illustrates a simple example of an ESD event on a shielded cable from the solar array.</p> 
+<img alt="refer to [D] description" border="0" height="244" src="https://llis.nasa.gov/llis_lib/images/1009266main_0797-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009741main_0797-1.txt">[D]</a> 
+<br> Figure 1. ESD Events Due To Spacecraft Charging 
+<p>II. EMI Coupling Phase: This is the second step in EMI analysis from ESD. Because of the complex physics involved in conducted and radiated EMI coupling, an approximation technique consists of the use of L,R,C (inductive, resistive, capacitive) network representations between surface charging and possible ESD paths. This technique provides acceptable results for low frequency, typically less than 50 mHz (l &gt;&gt; <i>l,l</i> being the size of the device affected by ESD and l being the wavelength) EMI analysis. The coupling phase task involves the development of an electronic network representation to model the coupling parameters between a charging surface and a susceptible device or conductive path. The network representation will be useful in the evaluation of several characteristic parameters of ESD events such as current and voltages at desired locations. Figure 2 describes a very simple EMI coupling scenario between a solar array (the charging surface) and a spacecraft shielded cable component. The ESD topology phase previously described is a prerequisite for the development of the coupling phase.</p> 
+<img alt="refer to [D] description" border="0" height="282" src="https://llis.nasa.gov/llis_lib/images/1009267main_0797-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009742main_0797-2.txt">[D]</a> 
+<br> Figure 2. Lumped Element Parameters For ESD Event Between Solar Array And Cable 
+<p>III. ESD Event Phase: This phase involves the use of Simulator Program with Integrated Circuit Emphasis (SPICE) or another circuit analysis code to calculate currents and voltages at discharge locations. Figure 3 describes a simplified LRC network representation of the ESD event for the example in Figure 2.</p> 
+<img alt="refer to [D] description" border="0" height="325" src="https://llis.nasa.gov/llis_lib/images/1009268main_0797-3.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009743main_0797-3.txt">[D]</a> 
+<br> Figure 3. Circuit Representation of Solar Array to Spacecraft ESD 
+<p>IV. Induced Current Propagation Phase: This final step involves the usage of method-of-moments in computational electromagnetics to model the conducted path(s) and the lumped-network representations of circuits and devices connected to such paths. The method-of-moments will calculate the noise current distribution at any location on the conducted path(s) or circuits. From an assumed current waveform the conducted noise emissions in the frequency domain can then be obtained. The calculated noise current spectrum is also used for evaluating the radiated EMI noise by using simple radiator models. Figure 5 describes method of moments modeling for evaluating the induced noise current on the shielded cable of Figure 4.</p> 
+<img alt="refer to [D] description" border="0" height="444" src="https://llis.nasa.gov/llis_lib/images/1009269main_0797-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009744main_0797-4.txt">[D]</a> 
+<br> Figure 4. Physical Representation of Shielded Cable Inside Spacecraft Structure 
+<img alt="refer to [D] description" border="0" height="253" src="https://llis.nasa.gov/llis_lib/images/1009270main_0797-5.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009745main_0797-5.txt">[D]</a> 
+<br> Figure 5. Method Of Moment Modeling of Shielded Cable 
+<p><u>Technical Rationale:</u></p> 
+<p>The emphasis on ESD through the years has been on minimizing the occurrence of such events through: (a) a better understanding of the charging processes that occur on different types of dielectric materials used in a spacecraft, (b) a better understanding of the space plasma environment, and (c) following several EMI rules concerning shielding, grounding and bonding. However, there is a need to analyze the EMI effects of actual electrostatic discharge processes because it is usually not possible to eliminate all sources of ESD.</p> 
+<p>References:</p> 
+<ol> 
+ <li>1. IEEE International Symposium On EMC, 1988; quotA Simple SPICE Model For Coupled Transmission Linesquot, Clayton R. Paul</li> 
+ <li>Perez, R., quotAnalysis of Electromagnetic Interference Effects in Spacecraft Generated by Electrostatic Discharges using the Method of Momentsquot, 6th Annual Review of Progress in Applied Computational Electromagnetics, Monterey, March 19-22, 1990</li> 
+ <li>Design and Analysis of Electronic Circuits for Worst Case Environments and Part Variations, Reliability Preferred Practice No. PD-ED-1212</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>EMI problems resulting from ESD events can degrade the performance of spacecraft in flight, when it is too late to implement design fixes.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Modeling is utilized for the analysis of conducted and radiated electromagnetic interference (EMI) caused by an electrostatic discharge (ESD) event. The modeling requires the combined use of a SPICE (Ref. 1), or other circuit analysis code and a wire antenna code based on the method of moments, and is primarily applicable to wires, cables, and connectors.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on TOPEX (Topographic Oceanographic Experiment).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

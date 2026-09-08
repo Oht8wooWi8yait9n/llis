@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0823: Modal Testing: Measuring Dynamic Structural Characteristics</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0823: Modal Testing: Measuring Dynamic Structural Characteristics</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0823 (Database ID: 823)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/823" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1440 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Specifically, when used in the analysis of Orbiter payloads, the dynamic structural characteristics of a payload created by modal testing can be correlated with finite element models (FEM's) to predict the payload&iacute;s responses to launch and landing environments as well as any other conditions the spacecraft may encounter. This correlation analysis can also be used to perform coupled loads analyses to ensure that the payload will not have any adverse dynamic effects on the Orbiter.</p>
+
+    <p>Similar benefits are also derived through modal testing of other space structures.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>I. Introduction</p>
+
+    <p>Modal testing is an experimental means of determining the dynamic characteristics of a structure through mechanical excitation, created either by vibrational or impact methods. This excitation is done to create the mode shapes of the test article which are measured by accelerometers. The data from these accelerometers is then analyzed to develop the dynamic structural characteristics of the test article.</p>
+
+    <p>The results from the modal testing can then be used to verify the FEM's of the structure being studied. Once the FEM's have been correlated to the modal tests, the results can be used to predict the responses of the structure to any future loads that may be encountered. For Orbiter payload analysis, this correlation can also be used to perform coupled loads analyses to ensure that a payload will not have any adverse dynamic effects on the Orbiter.</p>
+
+    <p>II. Types of Modal Testing</p>
+
+    <p>There are three types of Modal testing accomplished at JSC. These are (1) resonant frequency checks, (2) "mini" modal survey tests, and (3) full modal survey test.</p>
+
+    <p>Resonant Frequency Checks.</p>
+
+    <p>The resonant frequency check is the modal test lab's version of the General Vibration Laboratory's (GVL's) sine sweep test and is the simplest of the tests. As with the sine sweep, the only purpose of this test is to determine the frequencies at which resonances occur. Normally, not enough data is taken to develop either modal shapes or damping values. The benefit of this check over the sine sweep is that all axes can be excited at once, and the modal test lab data acquisition system is capable of taking many more channels of data than the data acquisition system in the GVL. This test requires little laboratory time (less than 1 week) to perform (including test article setup, instrumentation, and data reduction) and can also be used to screen a structure to determine if a full modal survey is needed. Excitation is usually done with a "smart" hammer.</p>
+
+    <p>"Mini" Modal Survey Test.</p>
+
+    <p>The "mini" modal survey test is called this because it is not as extensive as the full modal survey test. The data taken is usually "exploratory" in nature and leads to development of mode indicator functions which determine the frequencies at which mode shapes are generated. Less data is normally taken, curve fitting is not performed, and damping values are not developed as compared to the full modal survey testing. The data generated is useful in verifying existing FEM's, but not enough data is taken to perform FEM correlation. Excitation is generally by a "smart" hammer. This test requires little laboratory time (approximately 1 week) to perform (including test article setup, instrumentation, and data reduction).</p>
+
+    <p>Full Modal Survey Test.</p>
+
+    <p>The full modal survey test develops the most data and is the most accurate and detailed of the three types of tests. Frequencies, mode shapes, and damping values are developed. Curve fits are performed on the frequency response functions. Electro-dynamic shakers are generally used; however, "smart" hammers may be used in the preliminary phases of testing. The complete tests may take as long as 7 weeks to perform (including test article setup, instrumentation, data reduction, presentation of results, and final report preparation). The final data can be correlated to FEMs.</p>
+
+    <p>III.Methods of Excitation</p>
+
+    <p>Excitation of the test subject can be created either by an electro-dynamic shaker or a "smart" hammer. The electro-dynamic shaker can be controlled to transfer random vibration or sinusoidal vibration to the test subject. The electro-dynamic shaker is preferred over the "smart" hammer in the full modal survey tests because it can be more precisely controlled in regard to input force level and input frequency range.</p>
+
+    <p>Excitation is transferred from the electro-dynamic shaker to the test article by means of a stinger which is designed to be very stiff axially, but very flexible laterally. A force transducer is included in the stinger to measure the input force, and reference accelerometer is placed on the test article next to the stinger.</p>
+
+    <p>The "smart" hammer is an instrumented hammer used to provide impact excitation to a test article. A hammer requires less set-up time than a shaker and is good for minimum testing. It can also provide quick preliminary testing of many different locations on the test article in order to identify the location of the best shaker placement.</p>
+
+    <p>IV.Procedures in Modal Survey Testing</p>
+
+    <p>In full modal testing surveys at JSC, an excitation is applied to a structure and the input excitation and responses in the form of time histories are measured. These responses are then processed by a data acquisition computer to produce the functions from which modal functions are developed. The block diagram of a full modal survey system as shown in Figure 1 consists of (1) an excitation mechanism, (2) a transduction system to measure the various responses (i.e., accelerometers, force transducers), and analyzer. The input and response output from the test article go through the signal conditioning amplifiers to the analyzer which measures the various signals developed by the transducers which consist of force time histories from the input force transducer(s) and acceleration time histories from the output accelerometer(s). The first stage in analyzing the data, after the raw data has gone through the anti-biasing filters, is the conversion of the time histories from analog to
+    digital signals. The data acquisition computer performs a fast Fourier transform (FFT) on the time histories to convert them from a time to a frequency domain. The data acquisition computer also calculates the discrete Fourier transform (DFT) for a full set of spectral lines. The result of this transform is then used to produce modal survey testing output products such as frequencies, mode shapes, and damping values associated with the test article.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009322main_0823-1.jpg"  HEIGHT="262"  BORDER="0" /><A HREF="/llis_lib/txt/1009797main_0823-1.txt"  >[D]</A><br />
+      Figure 1. Block Diagram of a Full Modal Survey System --- Here
+    </center>
+
+    <p>V. Modal Survey Non-Linear Testing</p>
+
+    <p>Occasionally, test articles are found to be non-linear, i.e., their responses change with the level of excitation input. In order to test these structures, drive levels must be selected for excitation which encompass the non-linear response range of the test subject or if this range is too large, to encompass the range of anticipated flight environments of the test subject.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Modal testing is an experimental technique for determining dynamic characteristics of a structure. Testing is performed by providing an excitation to the structure and measuring the responses which are then used to develop the dynamic characteristics of the structure through testing and comparison to FEM's. Unlike environmental vibration testing which is an end unto itself, modal testing is a means to an end; i.e., modal testing is used to verify the FEMs of a structure which can be used as predictors of the structure's dynamic characteristics over a wide range of environmental conditions. The use of modal testing for verifying FEMs produces much greater confidence in the FEMs as ultimate predictors of structural characteristics.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Ewins, D. J., Modal Testing: Theory and Practice, John Wiley &amp; Sons, Inc., 1984.</li>
+
+      <li>Bendat, J. S., Piersol, A.G., Random Data Analysis and Measurement Procedures, 2nd Edition, John Wiley &amp; Sons, Inc., 1986.</li>
+
+      <li>Halpin, Dennis B., Modal Testing Special Topics, JSC 27161, July 1995.</li>
+
+      <li>Reliability Preferred Practice PT-TE-1406 Sinusoidal Vibration</li>
+
+      <li>Reliability Preferred Practice PT-TE-1407 Assembly Acoustic Tests</li>
+
+      <li>Reliability Preferred Practice PT-TE-1413 Random Vibration Testing</li>
+
+      <li>Reliability Preferred Practice PT-TE-1419 Vibroacoustic Qualification Testing of Payloads, Subsystems, and Components</li>
+
+      <li>Reliability Preferred Practice PT-TE-1420 Sine-Burst Load Test</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Modal testing is used to verify analytical models or FEMs of a structure or payload. Failure to perform this testing could cause much greater errors and uncertainty in these analytical models. This could lead to failure in a structure or payload.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Modal testing is a structural testing practice that provides low levels of mechanical excitation to a test structure and measures its response to that excitation. This response is then analyzed to experimentally determine the dynamic structural characteristics of the test subject. Modal testing may be performed on all suitable space structures including those associated with the Orbiter and the Space Station.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Orbiter, Orbiter payloads, Space Station and other space structures.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

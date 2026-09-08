@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #30901: Button Battery Power Supply to Real Time Clock for the ISS Urine Processing Assembly (UPA) Technology Upgrades Purge Pump Separator Assembly (PPSA)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #30901: Button Battery Power Supply to Real Time Clock for the ISS Urine Processing Assembly (UPA) Technology Upgrades Purge Pump Separator Assembly (PPSA)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #30901 (Database ID: 30901)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2021-11-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Integration and Testing,  Manufacturing and Assembly,  Computers,  EEE Parts,  Hardware,  Payloads,  Power,  DDT/E</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/30901" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">A serial Real-Time Clock (DS1306) is used within an electronics box to provide an accurate time reading. The clock utilizes a button battery (CR1025) to keep track of time when the external power supply is off. The clock will reset if there is an interruption of this secondary power source while the main power is off.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Per the Environmental Acceptance Test plan, thermal cycle testing of the electronics box was done from 20°F to 140°F (-7°C to 60°C). While at the hot plateau, a hot restart of the box was performed by turning off the external power supply then turning it back on. In a nominal condition, during recycle of external power the RTC will utilize the power from the button battery to keep track of time.&nbsp; </span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11.0pt"><span style="line-height:107%"><span style="font-family:&quot;Calibri&quot;,sans-serif">After completion of the thermal cycle test, it was noted that the clock had reset during the hot restart. Investigation of the design determined that the battery holder design and/or how the button battery was staked with epoxy into the holder was the most probable cause. As shown in Figure 1, a BH401 coin cell battery holder was used to hold the battery. &nbsp;This holder has an open design for a battery to slide in and uses<i> </i>a spring-loaded positive lead to press the battery into the negative lead. The battery was additionally staked into the holder to prevent it from slipping out during vibration testing.&nbsp;It was determined during the investigation that staking the battery into the holder effectively over constrains the battery and may prevent the spring-loaded positive lead from pressing the battery into the negative terminal from thermal expansion effects over a large temperature range.</span></span></span> <span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"> A similar setup was recreated on an engineering unit; however, the fault did not occur at the hot plateau. This indicates that there may be variability in the battery holder, installation process, and tolerances (e.g. the epoxy staking) causing some builds work well while others do not, which is unacceptable in a flight application. Additionally, testing of the flight battery holder/battery once it was removed confirmed that a slight movement of the battery negative lead caused loss of power.</span></span></span></p> 
+<p style="margin-bottom:11px"><img alt="" src="https://nen.nasa.gov/documents/portlet_file_entry/17793/Figure+1+-+Button+Battery+in+Original+Holder.png/dfdda261-1e5e-a2ad-2a53-9fd97558aba1?download=true"></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">A fix was implemented by installing and staking a surface mount battery directly to the board. This is shown in Figure 2. &nbsp;The surface mount battery comes with a positive and negative lead spot welded to the battery. The updated design successfully passed thermal cycle testing.</span></span></span></p> 
+<p style="margin-bottom:11px"><img alt="" src="https://nen.nasa.gov/documents/portlet_file_entry/17793/Figure+2+-+Surface+Mount+Battery.bmp/bcb15f94-db11-63f3-a048-de3673997375?download=true"></p> 
+<p style="margin-bottom:11px">&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ul> 
+ <li style="margin-left: 8px;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">A slip-in button cell battery holder was implemented in the design to easily replace the battery if needed. However, staking the battery down for the flight design effectively eliminates the ability to easily replace the battery and may result in loss of power over a large temperature range. Staking down a surface mount battery allows for a more robust permanent design. If replacement of the flight battery is needed for future applications, a glider battery holder where the battery snaps into place has been successfully used on other projects, see Figure 3.</span></span></span></li> 
+ <li style="margin-bottom:11px; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Due to difference in tolerances and processes between engineering and flight units, issues may occur in some units but not others. </span></span></span></li> 
+</ul> 
+<p style="margin-bottom:11px; margin-left:8px"><img alt="" src="https://nen.nasa.gov/documents/portlet_file_entry/17793/Figure+3+-+Example+Glider+Battery+Holder.png/24d2a02b-80ec-d0d3-5013-e48e642778ad?download=true"></p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ul> 
+ <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">If a COTS item is being modified to eliminate a design weakness, investigate if there are other COTS items that may not have that design weakness.</span></span></span></li> 
+ <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Monitor for over constraints in spring-loaded designs.</span></span></span></li> 
+ <li style="margin-bottom:11px; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Review all data obtained from test, and not just what is listed in a test procedure to check. This includes reviewing data obtained late in the life cycle, for example during environmental acceptance testing, because there may be differences between hardware builds.</span></span></span></li> 
+</ul>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<ul> 
+ <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Test data showing that the RTC experienced a reset during a thermal cycle hot restart that was performed as a part of environmental acceptance testing.</span></span></span></li> 
+ <li style="margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Investigation of the design showing potential design weaknesses and over constraints that may not allow electrical contact to be made due to thermal expansion effects occurring over large a temperature range.</span></span></span></li> 
+ <li style="margin-bottom:11px; margin-left:8px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Implementation of an alternate design (i.e. using a surface mount battery) then retesting showed that the issue had been corrected. </span></span></span></li> 
+</ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

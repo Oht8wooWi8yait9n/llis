@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0684: Designing for Dormant Reliability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0684: Designing for Dormant Reliability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0684 (Database ID: 684)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/684" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2207 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>The likelihood of successful system operation after long periods of dormancy can be increased by assessing the long term environmental effects on the characteristics of parts and materials, and mitigating the detrimental effects through appropriate parts selection and use of protective design options.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The approach involves detailed examination of the materials, parts, and manufacturing methods used in the design and construction of systems and appropriate consideration of the system's intended environmental factors. The steps involved include the following:</p>
+
+    <ol>
+      <li>Categorize the system or item into constituent components.</li>
+
+      <li>Define the system or item life environments and consider the effects of environmental factors on the constituent components.</li>
+
+      <li>Where possible, examine quantitative estimates of dormant failure rates for indications of potential problems.</li>
+
+      <li>Use published guidelines and checklists for dormant system design considerations.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><b>Categorize the System/Item Into Constituent Components</b></p>
+
+    <p>The item under consideration should be itemized by its constituent parts down to the "component," material, and electronic piece-part level, if possible. For the purposes of this guideline, a component is defined as a functional unit viewed as an entity for analysis, manufacturing, maintenance, or record keeping tasks. Materials, parts, and components used in the system may also be characterized into the following general types when in the nonoperating or dormant states:</p>
+
+    <ol>
+      <li>Components or parts with indefinite nonoperating lives which are subject to "random failure" mechanisms (Type A). Electronic parts and components are usually associated with this characteristic.</li>
+
+      <li>Materials and components which degrade at a slow but relatively predictable rate over time (Type B). Many electromechanical and mechanical components, pyrotechnics, and organic materials can be considered to exhibit this characteristic.</li>
+
+      <li>Materials and components which have known, relatively short, limited shelf lives (Type C). Items with this characteristic are generally well known: batteries, some solar panels, gas generators, etc.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><b>Type A Devices</b></p>
+
+    <p>The principal failure mechanisms for electronic equipment and parts occurring during non-operative phases of the part's life are caused by latent manufacturing defects or deficiencies in materials rather than specific aging mechanisms. As a result of these latent manufacturing defects, environmental conditions and stresses act upon these defects until sufficient conditions exist for degradation failure to occur. One of the most effective ways to reduce these types of failures is to subject the component or assembly to programs such as environmental stress screening (ESS). Programs such as these should be capable of detecting failure mechanisms including defects in bulk material, metallization, final seals, wire bonding, glassivation, die bonding, oxide, and diffusion as well as general contamination problems. However, an ESS program should be carefully designed to restrict the environmental excursions and stress cycles so as to not induce incipient failures.</p>
+
+    <p><b>Types B and C Devices and Materials</b></p>
+
+    <p>In general, nonorganic materials such as metals deteriorate by electrochemical processes, and organic materials deteriorate by chemical reactions. Most organic materials used in spacecraft are long-chain polymeric compounds which degrade through the breakdown of the compound into smaller, more volatile fragments, making polymers the most likely to be affected by the vacuum of a hostile space environment. Therefore, organic materials exposed to a vacuum may decompose into volatile products in warmer areas, and redeposit onto relatively cooler surfaces. If the cooler surfaces are thermodynamically or electrically conductive by design, a malfunction is likely to occur. Of particular concern are failure modes that occur because of plasticizers redepositing onto exposed relay contacts preventing proper closing of the circuit.</p>
+
+    <p>In the absence of oxygen, polymers are more stable at elevated temperatures. However, nylons, polysulfides, cellulosics, acrylics, polyesters, epoxies, and urethanes possess unstable properties in low-pressure or vacuum environments. The stability of the polymer in a vacuum is dependent upon formulation and curing procedures used during the manufacturing processes where plasticizers, mold lubricants, and polymerization catalysts are generally detrimental to long-term reliability. Therefore, the use of devices constructed with polymers that use these agents should be avoided. Nevertheless, exposure to vacuum conditions generally causes no loss of engineering properties in seals or gaskets unless an appreciable loss in mass occurs.</p>
+
+    <p><b>Define the System or Item Life Environments and Consider the Effects of Environmental Factors on the Constituent Components</b></p>
+
+    <p>The designer should identify and develop the environmental operating conditions and factors that will apply to each phase of the item's life cycle. For instance, if an item is to be stored in a warehouse for most of its life cycle, the environment it sees would be significantly different than a component on an orbiting satellite. The primary environmental factors encountered during storage or nonoperating phases of space systems are listed below.</p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td valign="top">
+            <ul>
+              <li>High Temperature Extremes</li>
+
+              <li>Low Temperature Extremes</li>
+
+              <li>Temperature Cycling</li>
+
+              <li>Moisture</li>
+
+              <li>Low Pressure (Vacuum)</li>
+
+              <li>Atmospheric Pollutants</li>
+
+              <li>Thermal Shock</li>
+            </ul>
+          </td>
+
+          <td valign="top">
+            <ul>
+              <li>Nuclear Radiation</li>
+
+              <li>Electromagnetic Fields</li>
+
+              <li>Corrosion</li>
+
+              <li>Solar Radiation/Atomic Oxygen</li>
+
+              <li>Mechanical Shock/Vibration</li>
+
+              <li>Mechanical Shock/Vibration</li>
+
+              <li>Bacteria, Fungi</li>
+
+              <li>Static Electrical Charges</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The relative stress levels experienced by individual components or assemblies during a dormant period are very greatly reduced from operating levels. Consequently, designs for dormant reliability must focus much more heavily on understanding the failure mechanisms which will be experienced in the dormant environments, the factors which cause each of the failure mechanisms to occur, and methods for controlling the occurrence of the failure mechanism.</p>
+
+    <p>The most important environmental stresses produced by the environmental factors encountered in dormancy are mechanical, chemical, and low thermal (Reference 8). The mechanical stresses are primarily due to inertial forces (during transportation and handling) and thermal-mechanical interactions which introduce differential expansion between materials within a device and between subassemblies and interconnections. Diurnal- and/or orbital-induced temperature cycles should therefore be as small as possible. Chemical stresses are primarily influenced by contaminants such as halogen ions, residual process chemicals, and water (moisture). In fact, moisture within a device or assembly package is the most important factor for both corrosion and mechanically induced failures (Reference 8). There is a substantial number of design techniques and methods to mitigate the effects of these environmental factors found in sources such as References 7 and 8.</p>
+
+    <p>Radiation particles, ultra-violet wavelength light exposure, and atomic oxygen are all detrimental to exposed polymeric materials. Solar flare emissions will probably affect exposed surfaces of the materials more sensitive to radiation damage. The results of the Long Duration Exposure Facility have recently been released and indications are that low Earth orbits cause significant wear and erosion to exposed materials. Kapton seems to be highly susceptible to atomic oxygen, and erosion of silverized Teflon is somewhat more than that predicted by ground-based tests.</p>
+
+    <p><b>Examine Quantitative Estimates of Nonoperating Failure Rates of Items Considering the Appropriate Environments</b></p>
+
+    <p>Examination of historical failure rates of similar items may provide indications of areas for concern. For electronic parts and other mechanical items classified as Type A items, several publications provide methods and historical data for estimating a failure rate in a dormant or nonoperating state. Reference 7 provides a compendium of models for estimating the failure rate for various types of components as a function of environment, part type and quality level, and ambient temperature similar to the methods used in MIL-HDBK-217. Values for base failure rates and modifying parameters were derived from numerous field data sources (which are primarily missile and aircraft system information), and are delineated in the document. Other documents (e.g., Reference 4) also provide estimates of the nonoperating or dormant rate of failure for components that have been derived from historical field and test data.</p>
+
+    <p>The general characteristics of the failure properties of Types B and C items can usually be described as a period of fairly low rate of failure followed by an increasing propensity to fail as the item begins to degrade or wear out. Therefore, constant failure rates are not applicable to these items, and the designer should consider sources or methods for estimating the life limits or life parameters.</p>
+
+    <p>Mathematical equations for calculating the individual component reliabilities over a prescribed mission time may also be used. In less complex systems, appropriate reliability block diagrams may be used to aggregate the component reliabilities and to derive the likelihood of the system being able to perform its function over a specified period of time. However, the inherent uncertainty involved in applying the observed nonoperating failure rates of older technology parts to more current components limits the ability to provide an accurate specification for system reliability over long time periods.</p>
+
+    <p><b>Use Published Guidelines and Checklists for Dormant System Design Considerations</b></p>
+
+    <p>The designer is urged to use published sources such as "Reliability/Maintainability/Testability Design for Dormancy," (Reference 8) that provide detailed design guidelines and checklists for reference when designing systems for storage or long periods of nonoperation. Table 1 lists some of the general points that should be considered from an overall system viewpoint.</p>
+
+    <center>
+      <b>Table 1. General Dormant Reliability Checklist</b><br />
+
+      <table cellpadding="2" border="1" width="90%">
+        <tr>
+          <th>&nbsp;</th>
+
+          <th>Yes</th>
+
+          <th>No</th>
+
+          <th>N/A</th>
+        </tr>
+
+        <tr>
+          <td>Has a packaging, transportation, handling, and storage environmental analysis been completed?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Has the dormant mean time between failure attained in service been used as a criterion for component selection?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Have the major dormant/storage failure modes and effects been analyzed?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Are adequate integrity checks identified for uncovering dormant/storage failures prior to flight?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Can dormant/storage failures be readily detected and isolated?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Will the equipment withstand any natural combination of the dormant/storage environments(e.g., shock vibration, acceleration, temperature cycles, humidity, and atomic oxygen.) in the intended application?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Have the restrictions in employing dissimilar metals in intimate contact been considered?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Have thermal stresses and differential thermal expansion been considered?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Is aging a factor considered?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Is the production process likely to degrade the dormant/storage reliability?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Are provisions made to prevent the entrapment of moisture or other fluids?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Do protective coatings meet requirements?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Are limited-life items identified?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Was corrosive degradation considered?</td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>When designing systems with aspects of dormancy in their life cycle profile, consideration must be given to degradation and failure while in the nonoperating state. Items can and will fail during periods of nonoperation. Dormant reliability is defined here as the probability (or likelihood) that an item or system will operate as intended after undergoing a long period of inactivity or nonoperation. Dormant systems may spend 90 percent or more of their life cycle profile in environments that may be detrimental to their survival. Environmental stresses, as well as aging effects, will precipitate failures just as do stresses during operating periods.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>AFWAL-TR-83-2079, "Weibull Analysis Handbook," Air Force Wright Aeronautical Laboratories, United States Air Force, Wright-Patterson AFB, November 1983</li>
+
+      <li>EERD-3, "Nonelectronic Parts Reliability Data," Rome Air Development Center, Reliability Analysis Center, 1986</li>
+
+      <li>MIL-STD-1540B (USAF), "Military Standard Test Requirements For Space Vehicles," October 10, 1982</li>
+
+      <li>NONOP-1, "Non Operating Reliability Databook," Rome Air Development Center, Reliability Analysis Center, 1987</li>
+
+      <li>NPRD-3, "Nonelectronic Parts Reliability Data," Rome Air Development Center, 1985</li>
+
+      <li>PRC-R-4416, "Analysis of In-Flight Spacecraft Performance and Anomaly Data," October 1984</li>
+
+      <li>RADC-TR-85-91, "Impact of Nonoperating Periods On Equipment Reliability," Rome Air Development Center, May 1985</li>
+
+      <li>RADC-TR-88-110 "Reliability/Maintainability/Testability Design For Dormancy," Rome Air Development Center, May 1988.</li>
+
+      <li>SD-TR-86-02, "Analysis of Orbital Satellite Stage," Air Force Systems Command, November 1985.</li>
+
+      <li>"Dormant Reliability Awareness Seminar," The BDM Corporation, May 1986</li>
+
+      <li>"RADC Reliability Engineer's Toolkit," Rome Air Development Center, July 1988</li>
+
+      <li>Fisher, Dr. William F., and Price, Charles R.: "Space Station Freedom External Maintenance Task Team Final Report," July 1990</li>
+
+      <li>"Reliability &amp; MIL-HDBK-217 Prediction," Reliability Review, Volume 10 pp. 7-9, September 1990</li>
+
+      <li>Reliability Preferred Practice No. PD-EC-1101: Environmental Factors</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When designing systems with aspects of dormancy in their life cycle profile, it is vitally important that consideration be given to mitigating the opportunity for failure while in the nonoperating state. Devices that wait in a dormant state as backup items to operating devices must operate properly when called upon, or the designed-for system redundancy will be negated. Some components of space systems may also spend several years after assembly in a storage environment before being launched. The costs involved in obtaining, repairing, or replacing those items that were in storage and that were thought to be operable will be very extensive, and launch schedules could easily be impacted.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use appropriate design considerations to enhance the reliability characteristics of a system or item when its intended use involves long periods of dormancy or nonoperation.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

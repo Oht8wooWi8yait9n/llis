@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0756: Sneak Circuit Analysis Guideline for Electro-Mechanical Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0756: Sneak Circuit Analysis Guideline for Electro-Mechanical Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0756 (Database ID: 756)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/756" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PD-AP-1314, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Identification of sneak circuits in the design phase of a project prior to manufacture can improve reliability; eliminate costly redesign and schedule delays; and eliminate problems in test, launch, on-orbit, and protracted space operations. Sneak circuit analysis can also be beneficial in identifying drawing errors and design concerns.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Some of the devices and equipment benefiting from hardware sneak circuit analysis are solid state electronic devices, relay logic systems and digital systems. The relay equipment includes associated items such as: resistors, capacitors, single load devices, diodes, switches, integrated circuits, and other semiconductors. Another type, analog equipment, includes amplifiers, inverters, converters, and feedback systems. Sneak circuit analysis is an effective tool for locating potential problems in software, and for identifying potential drawing errors and design concerns. Sneak circuit analysis is a labor intensive technique which requires specialized training and is often limited to those areas of a design where safety compliance is an issue. When considering sneak circuit analysis as an applicable tool to be applied to a program, the following considerations are recommended:</p>
+
+    <ol>
+      <li>
+        Reasons for conducting a sneak circuit analysis:<br />
+
+        <ol type="a">
+          <li>Improve reliability which results from the identification and resolution of system problems.</li>
+
+          <li>Conduct an independent analysis of the design.</li>
+
+          <li>Locate unresolved system problems that could not be found by other analyses or tests.</li>
+
+          <li>Identify high criticality items (crew and mission-critical).</li>
+
+          <li>Respond to a high change rate in baseline design.</li>
+        </ol>
+      </li>
+
+      <li>
+        Applicable systems:<br />
+
+        <ol type="a">
+          <li>Systems which perform active functions.</li>
+
+          <li>Electrical power distribution and controls.</li>
+
+          <li>Computer programs which control and sequence system functions.</li>
+        </ol>
+      </li>
+    </ol>
+
+    <p>Sneak circuit analysis can be implemented on a limited subsystem, a complete functional system or a complete vehicle or program. Analysis is based on documentation in the form of "as built" schematics, drawings, wire lists and "as coded" source computer programs. The preferred start time to begin sneak circuits analysis is during the engineering development phase prior to Critical Design Review (CDR), but sneak circuit analysis can be performed during any phase of the program. The analysis cannot be completed until the overall program/project drawings are baselined. Performing sneak circuit analysis during the last phases of the program tends to drive program costs up because of the potential redesign effort. The effects of making a change later in a program are illustrated in Figure 1.</p>
+
+    <center>
+      <IMG  WIDTH="450"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009205main_0756-1.jpg"  HEIGHT="330"  BORDER="0" /><A HREF="/llis_lib/txt/1009685main_0756-1.txt"  >[D]</A>
+    </center>
+
+    <p>The data used for sneak circuit analysis must represent the system circuitry as built, contingent upon quality control checks, tests, and inspections. The technique for sneak circuit analysis requires the analyst to accumulate detailed circuit diagrams and wire lists, arrange circuit elements into topological network trees, and to examine these network trees for suspected sneak circuits.</p>
+
+    <p>After the topological trees have been produced, the next step is to identify the basic topological patterns that appear in each tree. The five basic topological patterns are: (1) the single line (no-node), (2) the ground dome, (3) the power dome, (4) the combination dome, and (5) the "H" pattern. These topological patterns are illustrated in Figure 2. The "PWR" represents electrical power, "S"=switching element, "L"=electrical load, and "G"=ground. The "H" pattern usually has the highest incidence of problems due primarily to the higher number of power sources, returns, loads, and switches. The problems normally occur in the "H" crossbar, which includes L3, S3, and S4. This can result in power reversals, ground reversals and current reversals. As the analyst examines each node in the network tree, the analyst must identify which pattern or patterns that node is part of and apply the basic clues that have been found to typlify sneak circuits involving that particular
+    pattern.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009206main_0756-2.jpg"  HEIGHT="216"  BORDER="0" /><A HREF="/llis_lib/txt/1009686main_0756-2.txt"  >[D]</A>
+    </center>
+
+    <p>Associated with each pattern is a list of clues to help the analyst identify sneak circuit conditions. The clues are questions that the analyst must ask about the circuit in question. The clue list becomes longer and more complicated with each successive topograph. The clue list for the "H" patterns includes more than 60 clues. Almost half of the critical sneak circuits can be attributed to the "H" pattern so this pattern should be analyzed very carefully. (Depending upon contract provisions, the developed clues may be proprietary to the performing contractor.)</p>
+
+    <p>Sneak conditions are classified into four basic types:</p>
+
+    <ol>
+      <li>Sneak paths - which cause current to flow along an unexpected route.</li>
+
+      <li>Sneak timing - which may cause or prevent the activation or inhibition of function at an unexpected time.</li>
+
+      <li>Sneak indications - which may cause an ambiguous or false display of system operating conditions.</li>
+
+      <li>Sneak labels - which may cause operator error through inappropriate control activation.</li>
+    </ol>
+
+    <p>When a suspect sneak condition is identified, the analyst should verify that the circuit is valid. The circuit should be checked against the latest drawings, revisions, as-built documentation and equipment; and operational information should be reviewed concerning the system in question. Upon verification of the sneak condition, a sneak circuit report should be written which includes the drawings, an explanation of the condition, system level impact, and a recommendation for correcting the sneak circuit. Software sneak analysis should be used to discover program logic which causes one of the four sneak condition types.</p>
+
+    <p>During the sneak circuit analysis, unnecessary or undesired conditions may be discovered. These conditions could be newly identified failure points, unsuppressed inductive loads, unnecessary components, unnecessary software codes and inadequate redundancy provisions. These conditions should be documented in design concern reports. Any documentation discrepancies should be reported in document error reports. A final sneak analysis report should be written that details the scope, procedures, results and conclusions of the analysis. The final report should also include all sneak conditions, design concern reports, documentation error reports and report tracking status sheets.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Sneak analysis is a reliability-enhancement method used to identify designed-in conditions that could introduce undesired events and inhibit desired system functions which could adversely affect crew safety or mission success. The sneak circuit analysis technique differs from other system analysis techniques in that it is based on identification of designed-in inadvertent modes of operation and is not based on failed equipment or software.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Buratti, Davey L. and Sylvia G. Godey: "Sneak Analysis Application Guidelines", RADC-TR-82-179, Boeing Aerospace Company for Rome Air Development Center, Griffis AFB, NY 13 441, June, 1982.</li>
+
+      <li>Hill, E.J. and C. J. Bose: "Sneak Circuit Analysis of Military Systems", Boeing Aerospace Company, Seattle, WA, 2nd AIAA International Systems Safety Conference, San Diego, CA, July 21-25, 1975, Proceedings, A77-16726- 31, Newport Beach, CA, System Safety Society, 1976, pgs. 351-372.</li>
+
+      <li>Miller, Jeff: "Integration of Sneak Analysis with Design", RADC-TR-109, Vol. 1 of 2, Sohar Incorporated for Rome Air Development Center, Griffis AFB, NY 13441, June, 1990.</li>
+
+      <li>Walker, Frank Ellis: "Sneak Circuit Analysis Automation", Boeing Aerospace, Seattle, IEEE, 1989 Proceedings Annual Reliability and Maintainability Symposium.</li>
+
+      <li>Wilson, Joe L. and Robert C. Clardy: "Sneak Circuit Analysis Application to Control System Design", The Boeing Company, Houston, TX, AGARD-AG-224, In AGARD Integrity of Electronic Flight Control Systems for Aircraft Reliability, April, 1977.</li>
+
+      <li>Vogas, James L.: "Sneak Analysis of Application Specific Integrated Circuits", Boeing Aerospace Operation, Inc., Houston, TX, AIAA-92-0976, 1992 Aerospace Design Conference, Irvine, CA, February 1992.</li>
+
+      <li>MIL-STD-785B: "Reliability Program for Systems and Equipment Development and Production", Military Standard, September 15, 1980.</li>
+
+      <li>NSTS 22254B: "Methodology for Conduct of Space Shuttle Program Hazard Analysis", NASA, Johnson Space Center, Houston, TX 77058, December 30, 1993.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Sneak circuits that escape cursory design screening can result in schedule delays, damage to equipment during test, downtime during operation, increased cost, and possible loss of spacecraft or crew. Too-late implementation of a sneak analysis can result in high project costs due to redesign and redevelopment efforts.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Sneak circuit analysis should be used in safety critical systems to identify latent paths which cause the occurrence of unwanted functions or inhibit desired functions, assuming all components are functioning properly. It is based upon the analysis of engineering and manufacturing documentation. Because of the high cost of a sneak circuit analysis, it should be conducted only in areas where there is a high potential for a hazard.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Redstone, Apollo, Skylab, and Shuttle programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

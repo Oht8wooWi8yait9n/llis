@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #27901: Mars Landings May Not Accurately Account for Local Gravity (Export Version)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #27901: Mars Landings May Not Accurately Account for Local Gravity (Export Version)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #27901 (Database ID: 27901)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2019-11-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Flight Operations,  Hardware,  Payloads,  Spacecraft,  Lander Systems,  Spacecraft and Spacecraft Instruments,  Planetary entry and landing concepts,  Engineering design and project processes and standards,  Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/27901" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="text-align:justify">The gravitational force exerted on an object changes across the surface of a planet as well as above the surface, varying with latitude, altitude, and differences in the local topography. For example, the density of underlying rock or the presence of nearby mountains can produce a very small variation (on the order of 0.01% or less) in gravity. (Underlying rock would mostly affect the vertical velocity of a falling object, whereas a nearby mountain would mostly affect horizontal velocity.) In comparison, the gravitational variations attributable to latitude may be over 50 times as significant as local topography. The apparent reduction in gravity or weight with altitude can even affect the cruise performance of high performance terrestrial aircraft (Reference (1)).</p> 
+<p style="text-align:justify">The novel and successful “sky crane” descent of the MSL rover in August 2012 was designed to attain a soft landing on Mars. As with MSL, the similar Mars 2020 (M2020) rover being built by the NASA/Caltech Jet Propulsion Laboratory (JPL) will have many components that have limited margin&nbsp;for dynamic loading during touchdown. Consequently, inaccurate estimation of vertical or horizontal touchdown velocity could result in damage to the rover during the landing.</p> 
+<p style="text-align:justify">The onboard gravity estimate for the MSL Descent Stage (aka “Sky Crane”) terminal maneuver, a sequence which began with rover separation at 21 meters above the Mars surface and ended in rover touchdown, was based on a coarse geopotential (gravity) model without local gravity effects. However, post-landing analysis of the maneuver revealed both vertical and horizontal velocity errors that were substantially attributable to errors in gravity estimates (References (2) and (5)):</p> 
+<ul> 
+ <li style="text-align:justify"><b>Vertical.</b> The prediction for vertical touchdown velocity was 0.75 meters/second (± 0.1 m/s 3-sigma). The actual MSL vertical touchdown velocity was 0.63 m/s.</li> 
+ <li style="margin-top:6.0pt; text-align:justify"><b>Horizontal. </b>&nbsp;The prediction for horizontal touchdown velocity was 0 m/s (± 0.11 m/s 3-sigma). The actual MSL horizontal touchdown velocity was 0.18 m/s (Figure 1). The dust-related “sandy radar” effect (i.e., unknown variations in soil conditions that may cause significant data outliers among the radar measurements) was also a contributor to the horizontal velocity error, though to a lesser extent than local gravity contamination.</li> 
+</ul> 
+<div> 
+ <table style="border-collapse:collapse; border:solid windowtext 1.0pt"> 
+  <tbody> 
+   <tr> 
+    <td style="border:solid windowtext 1.0pt"> <p style="padding:0in 5.4pt 0in 5.4pt"><img src="/lessons/27901/2019-10_Gravity_Fig1.png"></p> </td> 
+   </tr> 
+   <tr> 
+    <td style="border:solid windowtext 1.0pt; border-top:none"> <p style="padding:0in 5.4pt 0in 5.4pt"><b>Figure 1. &nbsp;</b>MSL “Sky Crane” maneuver</p> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p>In retrospect, it’s understood that these estimates were made with an oversimplified model.</p> 
+<p><b>This is what took place as far as touchdown velocities during the MSL landing according to the EDL reconstruction and the MSL NavFilter design: </b></p> 
+<p>By design after rover separation at 21 m altitude, only two of the six Terminal Descent Sensor (TDS) antennas were used by the NavFilter to estimate the spacecraft 3-axis ground-relative velocity, forcing the NavFilter to propagate <u>vertical</u> velocity using only the Inertial Measurement Unit (IMU) accelerometer measurements and a model of gravity. This gives lower accuracy than an approach that includes TDS measurements in the vertical velocity estimate. Estimating the vertical velocity from TDS measurements would have required at least one more active TDS antenna. The switch from six to two TDS antennas at rover separation was dictated by the concern of RF multipath effects from the deployed rover that would have affected the four TDS antennas which were switched off. The <u>horizontal </u>velocity was estimated by the two SkyCrane TDS antennas and the NavFilter also estimated horizontal gravity model errors — making it insensitive to them. Not only do errors in the vertical gravity model in the on-board filter produce errors in the vertical velocity estimate but those errors also couple into the horizontal channel through the geometry of the TDS SkyCrane antennas. Since those antennas were close to 45 degrees from the vertical, this coupling was 1-to-1: thus, for example, a 0.1 m/sec of vertical velocity estimation error would translate to about 0.1 m/sec error in the estimate of horizontal velocity.</p> 
+<p>The MSL landing site was in Gale Crater: such large impact craters are consistent with dense underlying mass concentrations and gravitational anomalies (Figure 2) that locally deviate from the coarse gravity model.&nbsp; MSL’s actual gravitational acceleration differed from the on-board coarse gravity model-based estimate by ~ 4.5 mm/sec<sup>2</sup> (0.12% of Mars-G), resulting in an unintended vertical acceleration of ~4.5 mm/s<sup>2</sup>. This small difference when applied over the last ~18 seconds of the flight with two TDS antennas resulted in a touchdown vertical velocity error of&nbsp; -0.088 m/s, which is approximately equal to the 3-sigma uncertainty. As mentioned above, due to the coupling between the vertical and horizontal channels, about the same velocity estimation error existed in the horizontal channel due to the on-board vertical-axis gravity model error. &nbsp;</p> 
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt; margin-left:.75in">&nbsp;</p> 
+<div> 
+ <table style="border-collapse:collapse; border:solid windowtext 1.0pt"> 
+  <tbody> 
+   <tr> 
+    <td style="border:solid windowtext 1.0pt"> <p style="padding:0in 5.4pt 0in 5.4pt"><img src="/lessons/27901/2019-10_Gravity_Fig2.png"></p> </td> 
+   </tr> 
+   <tr> 
+    <td style="border:solid windowtext 1.0pt; border-top:none"> <p style="padding:0in 5.4pt 0in 5.4pt"><b>Figure 2. &nbsp;</b>Map of Gale Crater surface gravity anomalies. MSL landed near the outer boundary of the upper left reddish area.</p> </td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p>&nbsp;</p> 
+<p><b>Factors during the MSL EDL/GN&amp;C design that contributed to this flight anomaly and its importance:</b></p> 
+<ol> 
+ <li>A small trade study was conducted by JPL’s MSL Guidance, Navigation, and Control (GN&amp;C) team to figure out the correct order of the on-board gravity model. The team started with the gravity model used in the Mars Viking and Mars Phoenix projects, which was a J2 gravity model, and tested it against a simulation with a higher order truth gravity model (J3). This test showed that the errors of the simple J2 gravity model against the J3 truth model were negligible and decided to keep the same on-board gravity model as Viking and Phoenix. The mistake in this study was to assume that the gravity model error between the on-board J2 model and the J3 truth gravity model was larger than the largest of Mars gravity anomalies. This was far from being the case for the Gale Crater gravity anomaly. Not only was the crude J2 model not adequate for that landing site, but even the MRO110C Mars gravity model, which is of <u>110th order,</u> modeled only <u>half</u> of the gravity anomaly experienced by MSL on landing day. Only the MGM2011 gravity model, developed by Curtin University's Western Australian Centre for Geodesy, and that uses MOLA surface topography in its derivation, covers the full gravity anomaly experienced by MSL. It is also important to note that the Gale Crater gravity anomaly represents a ~3-sigma high anomaly when compared to all the other landing sites on Mars.</li> 
+ <br> 
+ <li>At an early phase of EDL development, the independent POST verification and validation (V&amp;V) team did run the EDL simulation with a much higher order gravity models (MRO 85x85) in the truth side against the J2 gravity model in the on-board NavFilter and did not uncover any statistically incorrect touchdown velocity errors that would have challenged the approximation in the on-board gravity model. It is not clear at this point whether the “negative” result was due to the fact that at that early stage we did not have the complete end-to-end EDL/GN&amp;C flight software for the gravity model error to manifest itself or because the runs were done with a landing site that had a negligible gravity anomaly. In any case, this “negative” result reinforced the incorrect belief that Mars gravity anomalies were negligible as far as the performance of MSL EDL/GN&amp;C. Later in the EDL development, because the Monte Carlo runs with the MRO 85x85 gravity model took much longer times, it was decided to switch back to the J3 gravity model to expedite the multiple Monte Carlo studies that were being carried out as part of the overall EDL V&amp;V campaign. Perhaps performing a Monte Carlo run with the MRO 85x85 truth gravity model and with the Gale Crater landing site would have caused the EDL/GN&amp;C team to rethink their incorrect perception on the relevance of the Mars gravity anomalies, despite that model only covering half of the effect of the actual gravity anomaly.</li> 
+ <br> 
+ <li>[This paragraph describes the JPL design approach to making the MSL Descent Stage performance, including the TDS and the NavFilter, robust to gravity model errors. It has been redacted for International Traffic in Arms Regulations (ITAR) compliance. “U.S. Persons” may obtain a copy of the complete document, including this redacted paragraph, by contacting either Michelle Drabik at <a href="mailto:michelle.drabik@jpl.nasa.gov">michelle.drabik@jpl.nasa.gov</a>, or the JPL Office of the Chief Engineer.]</li> 
+ <br> 
+ <li>The MSL rover was originally required to survive vertical touchdown velocities of up to 1m/sec without mechanical damage. This rover requirement was compared against a 3-sigma maximum GN&amp;C vertical velocity requirement of 0.85 m/sec. This would have provided a generous margin in the capability of the system (GN&amp;C provides &lt; 0.85 m/sec touchdown velocity and the rover handles up to 1 m/sec touchdown velocity). However, by the day of launch, the rover maximum touchdown vertical velocity was downgraded to 0.85 m/sec, eroding all the margin held at the system level, and making the effects of the gravity anomaly experienced by MSL potentially more serious, had the sign been in the opposite direction. Given that MSL required a one order of magnitude reduction in the touchdown velocity dispersions relative to the Mars Viking, Mars Phoenix, and Mars InSight projects, some system margins should have been kept all the way to landing day.&nbsp;</li> 
+</ol> 
+<p>Summarizing:</p> 
+<ol> 
+ <li>The EDL/GN&amp;C team did not appreciate during the design and the V&amp;V phases of MSL that there existed gravity anomalies on Mars large enough to have a significant effect on the rover touchdown velocity if not represented properly in both the on-board and simulation gravity models. This shortcoming can be classified perhaps as an <b>unknown-known</b>: the community of Mars gravity experts actually had a <b>non-statistical </b>model of gravity that fulfilled the needs of MSL, but the MSL EDL/GNC team did not know of its importance for achieving the very low touchdown velocity required by a SkyCrane rover landing. Therefore, the team did not seek the engagement of that community.&nbsp; (Notice that this is not the case of a day-of-landing-unknown, like wind velocities, which require a statistical model to represent them in a Monte Carlo simulation; here the gravity model was known by a community of gravity experts with high certainty).</li> 
+ <br> 
+ <li>The original design principle of measuring directly 3-axis ground-relative velocity with the TDS all the way until touchdown, which would have made the NavFilter much less sensitive to gravity model errors, was abandoned-- perhaps without the proper risk analysis.</li> 
+ <br> 
+ <li>The original system margin between the maximum touchdown velocity delivered by the EDL/GN&amp;C design and the capability of the rover to survive it undamaged was allowed to degrade through the design cycle. This was particularly troublesome given that MSL was attempting a one-order-of-magnitude reduction in touchdown velocity dispersions as compared to previous soft-landers.</li> 
+</ol> 
+<p><b>References:</b>&nbsp;</p> 
+<ol> 
+ <li style="margin-top:3.0pt">W. J. G. Pinsker, “The Effect of Variations in Local Gravity and of Aircraft Speed on the Effective Weight of Aircraft in High Performance Cruise,” U.K. Ministry of Defence, 1972.</li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:3.0pt">Steve Sell, Ravi Prakash, Fred Serricchio, Allen Chen, et al., “Touchdown Velocity Issue,” JPL-internal document, April 29, 2013.</li> 
+ <li style="margin-top:3.0pt"><a href="https://nen.nasa.gov">Adam D. Steltzner, A. Miguel San Martin, Tommaso P. Rivellini, Allen Chen, and Devin Kipp, “Mars Science Laboratory Entry, Descent, and Landing System Development Challenges,” Journal of Spacecraft and Rockets, Vol. 51, No. 4, July–August 2014.</a></li> 
+ <li style="margin-top:3.0pt; margin-right:0in; margin-bottom:3.0pt"><a href="https://nen.nasa.gov">Adam Steltzner &amp; Allen Chen, “Mars Science Laboratory Entry, Descent and Landing Case Study,” JPL-internal document, October 20, 2015.</a></li> 
+ <li><a href="https://nen.nasa.gov">“MSL Touchdown Velocity Error,” JPL Incident Surprise Anomaly (ISA) #54993, September 5, 2013.</a></li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin-top:12.0pt">When using only (IMU-based) inertial measurement during flight operations in close proximity to a planetary body, be aware that very small errors in the on-board model of local gravity (as well as attitude knowledge errors) can cause GN&C to induce unintended accelerations and produce large velocity errors. Such errors in vertical or horizontal velocity estimation related to gravitational variations (see Figure 2) can cause damage to a planetary lander during the terminal maneuver.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li><b>Account for the effects of gravitational variations</b></li> 
+</ol> 
+<p style="margin-left:.25in">Account for the effects of gravitational variations caused by latitude, altitude, and local topography in the design of the EDL system for terminal descent and touchdown. In particular, follow the recommendations of Reference (4), including:</p> 
+<ol style="list-style-type:upper-alpha"> 
+ <li>Engage the scientific community’s gravity modeling experts in order to get the highest fidelity gravity models available, that include surface effects.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt">Based on the models from subparagraph A, improve the onboard gravity model by adding a site-specific gravity bias parameter to the flight software based on terrain-implied landing site gravity, for use when the vehicle nears the surface.</li> 
+ <li style="margin-top:6.0pt">Incorporate the effects of the high-fidelity gravity model from subparagraph A on the truth gravity model for V&V of end-to-end system performance using the final landing site.</li> 
+</ol> 
+<ol start="2"> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Design for robustness to gravity knowledge errors </b></li> 
+</ol> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:.25in">Strive to design systems that measure <u>directly</u> the variables that are critical for the performance of that system. If, as is the case for a SkyCrane lander, there is a very challenging 3-axis ground-relative touchdown velocity requirement, the team should attempt to design a system that measures directly 3-axis ground-relative velocity measurements all the way until touchdown. The factors that might make that principle difficult to achieve, such as sensor minimum range, RF-interference, sensor Fields-of-View (FOVs), rocket engine plumes and the dust generated when they interact with the surface, should be addressed early in the project when the sensor is being specified and accommodated in the lander.</p> 
+<ol start="3"> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Seek and use the highest fidelity gravity model available for your application</b></li> 
+</ol> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:.25in">Seek and use the highest fidelity gravity model for your application, in particular for those applications where having a very accurate gravity model all the way to the surface of the body is critical for achieving the required system performance. Use those models during the design phase of the mission to develop the proper reduced-order on-board gravity model and during the V&V phase in the truth model to certify the end-to-end system performance for the candidate and final landing sites.</p> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:.25in">Be aware that in order to capture gravity effects near the surface with the required fidelity, gravity models based on spherical harmonic expansions might have to be of a very high order at best, or might be totally inadequate at worst. This might be the case, for example, for gravity models for applications that need to include the effects of mass concentrations (mascons) on the Moon, or the effects of large topographical features such as Gale Crater on Mars, or for gravity models for small bodies with complex shapes like comets and asteroids.</p> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:.25in">In seeking the highest fidelity models for your application, be aware that you might have to go outside the EDL/De-orbit, Descent, and Landing (DDL)/GN&C community to find them. (For MSL, after all, the only model with the proper fidelity to capture fully the Gale Crater gravity anomaly was the one developed by Curtin University's Western Australian Centre for Geodesy).</p> 
+<ol start="4"> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Maintain adequate margins between subsystems </b></li> 
+</ol> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:.25in">Strive to maintain system margin between subsystems all the way until landing day, in particular when the project is attempting a new function or a significant jump in performance relative to previous missions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.3.1 (“Engineering Practices: Mission Operations”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 12,” JPL DocID 58032, December 14, 2017. In addition, JPL has referenced it supporting Paragraph 4.1.4.1 (“Flight System Design: Design Margins During Development - Design margin sizing”) and Paragraph 7.5 (“Entry, Descent & Landing (EDL) Scenario Design”) in the JPL standard “JPL Design Principles, Rev. 7,” JPL DocID 43913, March 27, 2018.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

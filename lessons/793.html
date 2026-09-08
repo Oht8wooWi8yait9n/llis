@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0793: Characterization of RF Subsystem Susceptibility to Spurious Signals</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0793: Characterization of RF Subsystem Susceptibility to Spurious Signals</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0793 (Database ID: 793)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/793" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1261; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>This practice validates the compatibility of spacecraft receivers and transmitters. If electromagnetic compatibility problems are identified early in radio design, solutions can be developed, implemented, and verified prior to the integration of the hardware on the spacecraft.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The test configuration should simulate the interconnection of the receivers and transmitters in the system, including simulation of the estimated isolation vs. frequency. The tests are also designed to exercise the full tuning range and the full input signal dynamic range specified for the receiver.</p>
+
+    <p>Performance criteria which are verified include:</p>
+
+    <ol>
+      <li>Absence of "self-lock," where the receiver does not lock to the output signal from its interconnected transmitter.</li>
+
+      <li>Absence of "false-lock," where the receiver does not lock to a signal other than its receive frequency applied to the receiver input.</li>
+
+      <li>Absence of frequency "pushing," where the signal input to the receiver changes the frequency of the receiver's voltage-controlled local oscillators.</li>
+
+      <li>Absence of dynamic range degradation, both at minimum signal (i.e., receiver threshold) and at maximum signal (i.e., receiver saturation), over the entire receive frequency band.</li>
+    </ol>
+
+    <p>The following RF design components are defined prior to testing:</p>
+
+    <ol>
+      <li>Receiver architecture.</li>
+
+      <li>Transmitter architecture.</li>
+
+      <li>Subsystem configuration.</li>
+
+      <li>System configuration.</li>
+
+      <li>Receiver/transmitter isolation vs. frequency estimates.</li>
+    </ol>
+
+    <p>Characterization and verification of spurious responses and spurious emissions is performed as a set of phased activities:</p>
+
+    <p>Step 1: Characterize the spurious responses at the input port to the subsystem. The result of this effort will be a plot of response levels in dBmWatts vs. frequency. Note: dBmWatt is defined as: 10 log<small><sub>10</sub></small> (P<small><sub>IN</sub></small>/1 mW)</p>
+
+    <p>Step 2: Characterize the spurious emissions at the output port of the subsystem. The result of this effort will be a plot of the emission levels in dB vs. frequency.</p>
+
+    <p>Step 3: Compare the subsystem spurious response levels with the subsystem spurious emission levels. The emission levels must be substantially lower (a minimum of 9 dB) than the response levels at all frequencies to demonstrate self-compatibility of the RF subsystem. This comparison will produce a plot of the emission vs. response margin in units of dB vs. frequency.</p>
+
+    <p>Step 4: Translate the emissions of other RF subsystems on the spacecraft as received by the input port of the subsystem being evaluated using the available information on the antenna port-to-port isolation vs. frequency. These translated emissions are then to be compared to the subsystem spurious response characteristics. Again, these translated emission levels must be substantially lower (a minimum of 9 dB) than the subsystem response levels at all frequencies to demonstrate system compatibility. The result of this step will be another plot of the margin in units of dB vs. frequency.</p>
+
+    <p>Step 5: Translate the susceptibilities of other RF subsystems on the spacecraft to the output port of the subsystem being evaluated using the available information on the antenna port-to-port isolation vs. frequency. These translated susceptibilities are then compared to the subsystem spurious emissions characteristics. These translated response levels must be substantially higher (a minimum of 9dB) than the subsystem emission levels at all frequencies to demonstrate system compatibility. The result of this effort will be yet another plot of the margin in dB vs. frequency.</p>
+
+    <p>Step 6: The final step is to solve identified problems by filtering the spurious emissions output of each RF subsystem as necessary to restore dB of positive margin below the spurious susceptibility levels.</p>
+    <u>Technical Rationale:</u>
+
+    <p>Design and development of receivers and transmitters, particularly those located in different subsystems, are often pursued independently. Early identification and resolution of radio compatibility problems requires that the developer:</p>
+
+    <ol>
+      <li>Examine the frequency scheme of each receiver and transmitter on the spacecraft, and identify the known spurious responses and emissions for each.</li>
+
+      <li>Based on the planned interconnection of each subsystem via the antenna(s), and on the isolation provided between each of the interconnected subsystems, quantify the margin for each subsystem at the input and output ports as a function of frequency.</li>
+    </ol>
+
+    <p>The scheduling of these two activities should be planned to provide time to implement corrective action, such as the addition of RF filters, prior to spacecraft integration. After this time, such solutions become very expensive and pose risks to the spacecraft launch schedule.</p>
+
+    <p>Related Practices:</p>
+
+    <ol>
+      <li>Spurious Radiated Interference Awareness, Reliability Preferred Practice No. PD-AP-1310</li>
+
+      <li>Radiated Susceptibility System Verification, Reliability Preferred Practice No. PD-TE-1416</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If these reliability analysis and test activities are not performed:</p>
+
+    <ol>
+      <li>Transmitters may generate spurious signals at the levels and in the frequency bands which adversely affect receiver performance.</li>
+
+      <li>Receivers may generate signals at the levels and in the frequency bands which adversely affect transmitter performance.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Reliable design of spacecraft radios requires the analysis and test of hardware responses to spurious emissions which may degrade communications performance. Prior to hardware integration on the spacecraft, receivers and transmitters are tested to verify their compatibility with respect to emissions of conducted radio frequency (RF) signals and susceptibility to these signals. This reliability practice is applied to receivers and transmitters located in the same subsystem and to those installed in different subsystems on the same spacecraft. This early test to identify and resolve radio compatibility problems reduces the risk of uplink/downlink degradation which might threaten mission objectives.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Galileo, Cassini.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

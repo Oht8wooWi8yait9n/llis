@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6256: Procedure Devolvement over Time in a Seriesed Spacecraft Program</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6256: Procedure Devolvement over Time in a Seriesed Spacecraft Program</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6256 (Database ID: 6256)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-11-28</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Crew Operations, Ground processing and manifesting, Ground support systems</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6256" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The NOAA-N Prime Search and Rescue Antenna (SRA) inadvertently deployed during a spacecraft rotation on April 14, 2007. This rotation was part of a normal operation to configure the spacecraft for additional antenna and the solar array boom deployments. A Turn Over Cart (TOC) is used to re-orient the spacecraft from vertical to horizontal, and allows for the axial rotation of the spacecraft when in the horizontal position. This axial rotation is sometimes referred to as a “rotisserie” motion. An Operational Hazards Assessment (OHA) and Functional Failure Modes and Effects Analysis (FFMEA) were performed for this TOC, but that analysis is primarily focused on the design and load carrying capability of the fixture, without a broad assessment of various possible spacecraft configurations. The historical Integration and Test (I&T) sequence of events, going back to Television Infrared Operational Satellite (TIROS) N, was for the SRA to be deployed with the spacecraft vertical and removed prior to rotating the spacecraft to a horizontal orientation for other deployments. To accomplish this flow for the SRA, a procedure was run by which the antenna was temporarily “soft” stowed with lacing cord, before being more securely “hard” temporarily stowed with a non-flight bolt and T-nut. The “hard” stow operation required safe placement of multiple personnel so that the antenna could be held in a partially deployed position while pyrotechnic and other hardware was removed. This operation was accomplished with the use of a “Big Joe” lift, which allowed three people to work side by side on the antenna. Subsequent operations to remove the SRA from the spacecraft also required the use of this same lift device. It is important to note that when the procedure was generated, the intended use of the “soft” stow operation was too temporarily safe the SRA until a more secure “hard” stow could be effected, ultimately leading to the SRA being removed before the spacecraft was re-oriented to horizontal. 
+<p>
+Sometime in 2002, before similar I&T operations were run for NOAA N-Prime, Lockheed Martin lost the use of the “Big Joe” lift device. SRA stow and removal operations were now limited by the use of the “Marklift” device, which could only accommodate one person on its work platform. This change directly affected practical workflow as it pertained to deployment testing. In December of 2002, following successful deployment of the SRA, the antenna was “soft” stowed using lacing cord. This operation was done in accordance with the existing SRA procedure and prior experience. The “hard” stow operation was “N/A’ed” in the procedure. This is permitted by the project, as the Certified Test Conductor (CTC) is authorized to make modifications to the procedures (procedural note: “per CTC direction, sections of this procedure may be performed out of order as required"). The spacecraft was then rotated to a horizontal position using the turnover cart, a position which allowed the personnel access required to remove the SRA. The SRA, however, was not removed. The plan was to continue with deployment testing of the VRA, and the UDA, which required a rotisserie rotation of the spacecraft while in the horizontal position. Doing the deployments in this sequence offered schedule efficiencies. After all deployment testing was complete, the VRA, UDA and SRA were removed. The lacing cord held, and this new sequence became the new baseline. This new operational sequence was not originally intended when the lacing cord tie procedure was written, although changes in flow were permitted at the discretion of the CTC. In any case, we now know that the lacing cord tie only worked because the technician performing the operation doubled up the cord. He apparently did this at his own discretion, and the procedure was not specific enough to ensure this would be done in the future. The measured strength of the chord was found to be insufficient to retain the SRA unless it was doubled up.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The proximate cause for this mishap was the use of the lacing system used to temporarily stow the SRA which could not support the loads it was subjected to during the rotisserie/horizontal operation. There were several contributing factors; no analysis of the cord strength when the new procedure was implemented; the tie procedure is non-specific and will not result in a consistent tie performance; no specific requirement of which lacing cord to use (3 sizes were available for use); instructions of how to tie the lacing cord are vague and technician access is limited; and, a Functional Failure Modes and Effects Analysis (FFMEA) was not performed for the satellite in this configuration (using a lacing cord tie restraint system for the SRA) and subjected to this operation (horizontal rotisserie). 
+<p>
+<em> The lesson learned for this mishap is directly derived from its root cause as stated by the Mishap Investigation Board: Root Cause - Lack of due diligence, inadequate Engineering/Management practices which led to a vague procedure. Over time the baseline procedure was modified to accommodate the changing operational environment and devolved into one that was no longer adequate yet was accepted simply because it worked. There was no overarching surveillance in place which may have precluded the flawed procedure from being used or at least evaluated to assess its current validity. </em>
+</section>
+<section><h2>Recommendation(s)</h2>
+Whenever serial or continuous procedures are repeatedly used they should include a provision to periodically review them against their baseline versions. Where possible, the assumptions of the baseline procedure that conceivably could lead to future risk should be included with the procedure. The intent is to avoid a practice that ‘worked’ from becoming the new standard without any particular analysis of the new configuration of use. When the operational environments or process applications change a review of procedural assumptions should be conducted to look for application specific assumptions that may not be valid in the new use configuration.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6996: System Integration Review (SIR) Timing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6996: System Integration Review (SIR) Timing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6996 (Database ID: 6996)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-10-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Hardware, Independent Verification and Validation, Logistics, Payloads, Policy and Planning, Program and Project Management, Launch Systems, Orbiting Vehicles, Robotics, Spacecraft and Spacecraft Instruments, Ground processing and manifesting, Lunar Operations, Review boards, Affect of Cultural factors on long-term human and robotic missions, Center distribution of programs and management activities, Communications between different offices and contractor personnel, Configuration and data management, Cross Agency coordination, Program level review processes, Early requirements and standards definition, Review systems and boards, Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6996" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+NASA Systems Engineering Processes and Requirements, NPR7123.1 defines the System Integration Review (SIR) as: “An SIR ensures that the system is ready to be integrated. Segments, components and subsystems are available and ready to be integrated into the system. Integration facilities, support personnel, and integration plans and procedures are ready for integration”. Logical options for SIR timing in a project’s integration and test flow range from 
+<ol> <li>  as early as just prior to spacecraft subsystem integration (subsystems coming together to form the spacecraft) to 
+</li> <li>  as late as the beginning of observatory integration (instrument integration onto the fully integrated spacecraft). </li> </ol>
+
+The LADEE SIR was placed early in the window, prior to the first spacecraft integration. The objective of this timing was to accomplish a thorough assessment of the project’s readiness for in-house assembly including procedures, processes, training and facilities. This timing was appropriate and necessary for the LADEE ARC team that was inexperienced at in-house spacecraft assembly and test. However, this placement created a very large scope for a single milestone review. The LADEE project did not pass the SIR in November 2012 due to a lack of demonstrated readiness for near term spacecraft integration activities as well as a lack of clear and executable plans for later observatory integration and testing.
+
+<p> Following the unsuccessful November SIR, plans were emplaced to elevate key near term project integration readiness reviews, which would have otherwise been led by the project, to be chaired by the ARC Chief Engineer with participation from a subset of the Standing Review Board and other key stakeholders. These incremental detailed reviews enabled the project to proceed into spacecraft integration, preserving critical project schedule, but only after demonstrating that SIR identified deficiencies had been acceptably addressed. A fully successful delta-SIR was subsequently held in August 2012 prior to observatory integration. This approach, in effect, functioned as a staged SIR review process by breaking the scope of the review into smaller scope focused reviews that could be more easily prepared for by the LADEE project team.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> <li>  A broad range of practices exists for SIR timing as defined by NPR7123.1, NASA Systems Engineering Processes and Requirements. Implications of SIR placement within the project development flow must be fully assessed and understood by all stakeholders. 
+</li> <li>  The SIR timing and approach should be tailored for specific project risks considering, for example, spacecraft and observatory complexity and relative project experience. If necessary, consideration should be given to staging separate spacecraft (major components and systems coming together) and observatory (spacecraft and payloads coming together) integration readiness reviews. </li> <li>  All tailoring must be well communicated across stakeholders and major review participants (e.g. Project, Standing Review Board, Program, Center Leadership). </li> </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> <li>  Project and executing institution (NASA Center, Prime Contractor, etc.) experience, strengths, and weaknesses should be considered and factored into SIR timing in the project integration and test flow. If necessary, consider splitting the SIR scope into separate reviews to allow the necessary level of preparation and focus for a successful review. This may be especially appropriate in cases where the project and/or executing organization is believed to have weaknesses due to little recent relevant experience with the necessary level or type of integration and test required. </li> <li>  Clearly communicate and document any review process tailoring. </li> </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+N/A
+</section>
+<section><h2>Related Policies & Standards</h2>
+http://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&amp;amp;c=7123&amp;amp;s=1A
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

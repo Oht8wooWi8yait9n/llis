@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #27003: Latching Safety Critical Signals in Pyro Circuits</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #27003: Latching Safety Critical Signals in Pyro Circuits</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #27003 (Database ID: 27003)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2019-12-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> nesc</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Energetic Materials - Explosive / Propellant / Pyrotechnic,  Launch Vehicle,  Spacecraft,  Lander Systems,  Launch Systems,  Spacecraft and Spacecraft Instruments</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/27003" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Recent designs of pyro control circuits utilized D Flip-Flops (F/Fs) to latch critical signals that must persist after loss of main power. These F/Fs and subsequent logic, control the MOSFETs used to fire the pyro initiator. These designs used discrete D-type F/Fs in the configuration shown in Fig. 1 to latch the incoming signal that was applied to the clock line (CP) input.</p> 
+<p style="text-align: center;"><img alt="image of a sensitive latching circuit" src="/lessons/27003/fig 1 - sensitive latching circuit.png" style="width: 350px; height: 277px;"><br> <strong>Figure 1</strong>: Sensitive Latching Circuit</p> 
+<p>One circuit inadvertently fired a pyro during a pyro shock test and the sensitivity of this configuration was deemed to be a contributor to root cause.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The circuit used to capture the state of fire control signals in Fig. 1 sets the F/F on the positive edge of the clock line. Clock inputs on F/Fs are edge-triggered and can respond to very fast pulses. The problem with this design approach is that noise on the clock line can set the F/F. The design has three undesirable features (1) the D input is preloaded by connecting it directly to Vcc, (2) there is susceptibility to high frequency noise as the CP input can respond to nanosecond pulses, and (3) there is no mechanism to limit or qualify the clock input to reduce the window of when noise could affect the circuit. Alternate design approaches can reduce the sensitivity of this circuit.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>A number of simple enhancements can be made to improve this design. The preferred method would be to qualify the data signal. This is possible if the source of the signal is coming from a circuit that can also produce a qualifying data strobe indicating that the data is valid. For example, if the signals come from a microcontroller (as was the case with the system that misfired) two output ports could be used in the  configuration as shown in Fig. 2.</p> 
+<p style="text-align: center;"><img alt="Image of an improved latching circuit" src="/lessons/27003/fig 2 - improved latching circuit.png" style="width: 350px; height: 261px;" title="Figure 2: Improved Latching Circuit" /><br /> <strong>Figure 2</strong>: Improved Latching Circuit</p> 
+<p>This circuit has the advantage that the F/F will only be set when DATA is coincident with the positive edge of the STROBE; at other times the F/F will be immune to noise. In pyro control systems that use a 2-phase ARM and FIRE control approach, the ARM control can potentially be used on the DATA input and the FIRE control can be used to latch the DATA on the strobe input.</p> 
+<p>When a DATA/STROBE configuration is not possible other techniques can be used to improve noise immunity.</p> 
+<p>A simple RC low pass filter shown in Fig. 3 can be added to the clock line in Fig. 1. This will attenuate noise above the cutoff frequency (fc) where fc=1/ (2πRC). A word of caution with this approach, some F/Fs will not operate properly if the clock edge transitions too slowly. One should use a F/F (i.e. 74LVC1G74) with a Schmitt trigger on the clock input that can tolerate a slow clock rise time, or the design should include an external Schmitt trigger.</p> 
+<p style="text-align: center;"><img alt="Image of a low-pass filter" src="/lessons/27003/fig 3 - low pass filter.png" style="width: 250px; height: 140px;" /><br /> <strong>Figure 3</strong>: Low-Pass Filter</p> 
+<p>Alternately, a Debouncer (i.e. LCT6994) shown in Fig. 4 can be used as a low-pass filter. A delay value can be set with an external resistor network as shown.</p> 
+<p style="text-align: center;"><img alt="Image of a debouncer" src="/lessons/27003/fig 4 - debouncer.png" style="width: 500px; height: 159px;" /><br /> <strong>Figure 4</strong>: Debouncer</p> 
+<p>In this configuration, the input signal must be stable for 100ms before the output changes; short pulses are ignored (filtered). For this to be effective the debouncer and F/F of Fig.1 should be located near each other to minimize the signal path.</p> 
+<p>It is also possible to apply a combination of techniques to ensure correct data latching. Lastly, confirming the design noise margin, either by test or via analysis when test is impractical, to inadvertent firing is important in a system where an inadvertent fire is catastrophic. This margin should be on critical control inputs in thresholding logic ahead of the fire control inhibit semiconductor switches. Per specifications that date back to MIL-STD-1576, the noise floor during tests should not reach ½ the threshold voltage (6 dB) required to activate the devices.</p> 
+<p>References:</p> 
+<p>LTC6994 Datasheet, Linear Technologies</p> 
+<p>74LVC1G74-Q100 Datasheet, Nexperia</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+N/A
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1201: Flight Hardware Damage Due to Inadequate Test Planning and Insufficient QA Involvement (2001)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1201: Flight Hardware Damage Due to Inadequate Test Planning and Insufficient QA Involvement (2001)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1201 (Database ID: 1201)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-01-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1201" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During dynamometer testing of Mars Exploration Rover (MER) motors, position indication circuitry (within the encoder portion of the motor) was damaged. A test cable connector used to supply power to the motor brush leads was damaged prior to the first motor test.  Its use resulted in inadvertent and improper powering of the encoders.  Ultimately, damage occurred to at least one encoder channel on each of the first 44 motor assemblies that were tested.  These commercial motors are used on MER for such purposes as Airbag Retraction Actuators, and they are long lead-time acquisition items.<br />
+    <br />
+    Several errors contributed to the test failure:<br />
+    </p>
+
+    <ul>
+      <li>A special GSE power supply/monitor had been subjected to failure modes and effects analysis (FMEA) and approved for use on the motors.  However, it was intentionally not used during dynamometer testing in order to avoid powering the encoder.  Instead, an auxiliary power supply was directly connected with a two-wire cable.</li>
+
+      <li>The two-wire power cable had one connector with an improperly crimped shell.  The cable was not properly inspected and tested prior to use on this critical hardware.</li>
+
+      <li>There was no test plan or test procedure written for the dynamometer test operations.  Results of the Operational Safety Survey (OSS) required an approved test procedure and Assembly Instruction Data Sheets (AIDS) prior to test commencement. Although step-by-step AIDS were prepared and approved by QA, they contained no safe-to-mate provisions for attachment of the power connector.</li>
+
+      <li>Although QA witnessed some of the dynamometer tests, they did not witness the test of the first motor.</li>
+
+      <li>Encoder function was not verified following dynamometer testing since there was no intention to power the encoders during these tests.  Hence, the damage was not detected after test of the first motor, and 43 more motors were damaged in the same manner.</li>
+    </ul>
+    References: 
+
+    <ol>
+      <li>Jim Newell, &ldquo;Maxon Motor Encoder Damage - Mistakes, Recovery Plan and Lessons Learned,&rdquo; Internal JPL Memorandum 510-01-076, December 6, 2001.</li>
+
+      <li>JPL Problem/Failure Report No. Z72981, December 3, 2001.</li>
+
+      <li>&rdquo;High Energy Spectroscopic Imager Test Mishap&rdquo;, LLIS #0903.</li>
+    </ol>
+    Additional Key Words: connector mating, electrical test, functional test, ground support equipment, quality assurance oversight, safe-to-test, test error, test incident, test induced damage, test oversight, test safety <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Flight hardware test shortcuts and workarounds that bypass Systems Safety, QA, Reliability, and other oversight monitoring functions may seem expeditious, but can backfire with disastrous results.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Prepare, review, and approve (including QA) written test plans (when appropriate) and test procedures for all tests involving critical hardware prior to test.</li>
+
+      <li>Strictly observe connector safe-to-mate practices, including continuity and shorting checks, before cables (flight or GSE) are initially connected to critical hardware.</li>
+    
+      <li>Prior to testing, review the OSS, and without exception complete all OSS action items.</li>
+
+      <li>QA should witness the setup for testing and witness first item testing of all critical hardware.</li>
+
+      <li>Perform comprehensive functional checks after completion of testing the first item, and after all subsequent testing of identical critical hardware (especially as a final gate prior to delivery of this hardware).</li>
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.8 ("Safety and Mission Assurance Practices: Systems Safety"), Paragraph 6.12.5.3 ("Engineering Practices: Protection and Security of Flight Hardware"), Paragraph 6.12.6 ("Engineering Practices: Protection and Security of Flight Hardware"), Paragraph 6.13.8 ("Engineering Practices: Design and Verification for Environmental Compatibility - Test Certification"), Paragraph 6.14.2 ("Engineering Practices: Project and System Level Functional Verification and Validation - Verification and Validation"), Paragraph 6.3.5.1 ("Engineering Practices: Mission Operations - Critical Events and First Time Events"), Paragraph 7.3.3 ("Safety and Mission Assurance Practices: Quality Assurance"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br>
+
+In addition, JPL has referenced the lesson as supporting Paragraph 8.3.2.1 ("System Assembly, Integration and Test: System Integration  - Safe-to-Mate Verification"), in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

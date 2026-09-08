@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1619: Mate/Demate, Verify, and Document Connectors One-at-a-Time (2003)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1619: Mate/Demate, Verify, and Document Connectors One-at-a-Time (2003)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1619 (Database ID: 1619)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-08-07</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1619" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>When the navigation camera (Navcam) power was switched on during integration and test (I&amp;T) of the Mars Exploration Rover (MER) spacecraft, voltage measurements showed no power or data signals within the Navcam circuits. The Navcam had worked properly when tested prior to an earlier removal and re-installation of the Rover Power Distribution Unit (RPDU). An investigation revealed an un-mated connector on the Nonvolatile Memory and Camera Interface Board (NVMCAM) within the Rover Electronics Module (REM) (Figure 1).</p> 
+<p>The assembly procedure called for the mating of this connector, and the mate/demate log indicated that the connector had been mated. The root cause of the workmanship error was attributed to the failure of a technician/ engineer to pause after each mate/demate operation to enter it in the log, and to obtain Quality Assurance (QA) verification. A high connector density and an obstructed view within the REM make it difficult to verify the status of a single connector once multiple connectors have been mated. MER also has other high-density connection areas such as the Rover bulkheads (Figure 2).<br> <img align="Bottom" alt="Fig 1. The unmated connector was located beneath the flex cable shown in this photo of the REM, and the mating operation is conducted with the flex cable in place. Fig 2. Example of high density cabling and connections along the MER bulkheads." border="0" src="https://llis.nasa.gov/llis_lib/images/1010950main_LLFigure-1619.jpg" title="Fig 1. The unmated connector was located beneath the flex cable shown in this photo of the REM, and the mating operation is conducted with the flex cable in place. Fig 2. Example of high density cabling and connections along the MER bulkheads."></p> 
+<p>Although the impact of this error was minor, de-integration and rework to re-mate a connector in a highly integrated system like MER can pose a major risk to flight hardware. After this incident, the Assembly, Test, and Launch Operations (ATLO) manager mandated a “one at a time” practice of QA verification after every MER connector mate/demate, and it did not permit mate/demate of multiple connectors prior to obtaining QA support.</p> 
+<p><u>References:</u></p> 
+<ol> 
+ <li>JPL Problem/Failure Report No. Z79107, January 20, 2003.</li> 
+ <li><q>Crimping, Interconnecting Cables, Harnesses, and Wiring,</q> NASA-STD-8739.4, February 9, 1998.</li> 
+ <li><q>Magellan Battery Fire,</q> LLIS No. 0386, NASA Lesson Learned Information System (LLIS), February 23, 1995.</li> 
+ <li><q>Mismate of Identical Connectors, ASTROS Project, 1988,</q> LLIS No.0431, NASA Lesson Learned Information System (LLIS), September 14, 1995.</li> 
+ <li><q>Electrical Connectors,</q> LLIS No.0444, NASA Lesson Learned Information System (LLIS), July 30, 1993.</li> 
+ <li><q>Electrical Connectors - Scout Program,</q> LLIS No.0470, NASA Lesson Learned Information System (LLIS), July 22, 1994.</li> 
+</ol> 
+<p>Additional Key Words: connector mating, connector demating, QA procedure, blind mate</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Because the correct mating and demating of flight connectors is critical in producing a safe and fully functional component, it is imperative that detailed procedures be followed and that verification and documentation occurs at the appropriate points in time. Multiple connectors located in crowded or constrained areas (as well as those in more visible areas) should be mated one at a time and under the surveillance of Quality Assurance. Each mate or demate should be verified and appropriately documented so that the correct status of the hardware is maintained at all times.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Revise mate/demate requirements to ensure that flight connectors located in crowded or constrained areas (as well as those in more visible areas) are mated or demated one at a time and under the supervision of QA. Each mate or demate in these types of areas should be verified by QA and documented, one at a time, to ensure that the status of the component is maintained at all times. In extreme visibility problem areas, the technician mating/demating activities and QA oversight shall be simultaneous.<br />  </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 6.12.6 (Protection and Security of Flight Hardware) in the Jet Propulsion Laboratory standard 
+<q>Flight Project Practices, Rev. 6,</q> JPL DocID 58032, March 6, 2006, and supporting Paragraph 8.3.2.1 (System Integration) in the JPL standard 
+<q>Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),</q> JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0870: Fault Isolation Using Terminal Blocks</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0870: Fault Isolation Using Terminal Blocks</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0870 (Database ID: 870)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/870" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-12 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>This practice reduces the amount of time spent during troubleshooting and maintenance of ground support and facility equipment by:</p>
+
+    <ul>
+      <li>Centralizing test point locations for electrical circuits.</li>
+
+      <li>Clearly labeling wire/terminals for ease of locating a particular circuit.</li>
+
+      <li>Making spare wires available for wire replacement or system modifications.</li>
+    </ul>
+
+    <p>Fault Isolation is simplified by utilizing terminal blocks in the circuitry of ground support and facility equipment. The terminal blocks are used to modularize the equipments circuits at locations that are convenient to personnel access. Examples of convenient locations are control panels and junction boxes.</p>
+
+    <p>Each wire at the terminal blocks is labeled clearly. The label is the wire number listed on the electrical schematic. Clear, meaningful labels and a centralized location will reduce the time required for maintenance personnel to locate and identify circuits necessary to troubleshoot. The centralized location makes component isolation easier. Only a screwdriver is usually required to disconnect wires during troubleshooting.</p>
+
+    <p>Consideration must be given to the design of the terminal block. The screw terminals should be recessed into the block or separated by non-conductive dividers so that tools and probes cannot create a short across adjacent terminals during troubleshooting or accidental contact. Consideration must also be given to wiring layout. Signal wiring should be separated from power and control wiring to reduce the chance of electrical interference. Any high voltage wiring should be separated and a cover placed over the terminal block to reduce the danger to personnel. If required, covers should be placed over all terminal blocks if there is a concern regarding debris and foreign objects causing electrical short circuits.</p>
+
+    <p>Other benefits are realized from this practice. Control panels and junction boxes are located in areas that are safe for personnel access, reducing the need to expose personnel to dangerous conditions. Spare wires between control cabinets and junction boxes are included in the original design. The spare wires can be used to replace existing wires if they are damaged or to add new components during system modifications. A systematic approach to wiring is necessary to implement this practice which reduces wiring errors at startup.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Maintenance effort and system downtime will be reduced by the implementation of this practice.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Utilize terminal blocks (strips) in control cabinets and junction boxes to provide common test points for fault isolation.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the following KSC systems: Space Transportation System (STS), Facilities and Ground Support Equipment, Examples: Vehicle Assembly Building (VAB) 325 Ton Bridge Cranes, Orbiter Processing Facility Three (OPF-3) 30 Ton Bridge Cranes.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

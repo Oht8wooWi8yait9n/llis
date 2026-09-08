@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0903: High Energy Spectroscopic Imager Test Mishap</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0903: High Energy Spectroscopic Imager Test Mishap</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0903 (Database ID: 903)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-05-10</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/903" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The High Energy Spectroscopic Imager (HESSI) spacecraft primary mission objective is to explore the basic physics of particle acceleration and explosive energy release in solar flares. The HESSI spacecraft was scheduled for a July, 2000, launch on a Pegasus vehicle as part of the Small Explorer Program (SMEX). On March 21, 2000, the HESSI spacecraft was being subjected to a series of vibration tests at JPL as a part of its flight certification program. The structural qualification test, a sine-burst test on a shaker table, subjected the spacecraft to a major overtest condition that resulted in significant structural damage to the spacecraft. The incident has been designated as a Class A mishap since the damage exceeded $1 million.</p>
+
+    <p>A sine-burst test is a quasi-static load simulation technique. The shaker table in this incident was well over 40 years of age. The fatigue life characteristics of such shaker tables are unknown.</p>
+
+    <p>The root cause of the overtest condition was the mechanical binding ("stiction" or static friction) between the slip table and the granite mass. It resulted from physical contact between a portion of the slip table and the granite mass caused by a mechanical failure in the shaker's support structure. The stiction caused the shaker system to present highly non-linear gain characteristics to the control system making it impossible for the controller to calculate an appropriate forcing function.</p>
+
+    <p>This particular sine-burst was leading to a higher level qualification test. The resulting overtest level was about 10x that planned for this test, but only about 2.5X the final qualification level.</p>
+
+    <p>Contributing Factors Identified by the Review Board:</p>
+
+    <ol>
+      <li>At some facilities, older test equipment may have time-related failure modes unknown to the users.</li>
+
+      <li>Misalignment caused the slip table to exhibit non-linear behavior in that it would bind at low levels of force input.</li>
+
+      <li>The test personnel did not have existing knowledge that data were available to assess the quality of the transfer function calculated from the self-check prior to initiating the sine-burst test. Post-test review of the transfer function used to generate the shaker drive signal for the test and examination of the drive voltage indicated that the test setup was not operating as expected and that an overtest could occur.</li>
+
+      <li>A significant contributing factor to the mishap was the lack of a facility validation test using the sine-burst on the shaker table before the spacecraft was mounted. It is industry best practice to do a facility checkout with a simulated mass mock-up before mounting a piece of critical hardware. Such a validation test effectively calibrates the entire test setup.</li>
+
+      <li>A further contributing factor to the mishap was a mechanical anomaly that occurred in the exciter system. The shaker appears to have shifted in its support cradle after being coupled to the slip table in preparation for this test. The shift is thought to have been caused by the breakage of the outer race of a main trunion bearing. This resulted in a misalignment that brought one area of the slip plate into contact with the granite reaction mass creating a much larger frictional drag than normal.</li>
+
+      <li>An additional contributing factor to the mishap was the low amplitude of the pre-test self-check. If a higher amplitude self-check had been used, the control software would have more closely approximated the system transfer function and increased the probability of detecting that stiction existed.</li>
+    </ol>
+    <u>References</u>
+
+    <ol>
+      <li>Jet Propulsion Laboratory Problem Failure Report (PFR) No. Z68924, March 24, 2000.</li>
+
+      <li>Report on High Energy Solar Spectroscopic Imager (HESSI) Test Mishap, HESSI Test Mishap Investigation Board, May 18, 2000.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Lessons Learned/Recommendations:</p>
+
+    <ol>
+      <li>While environmental testing has demonstrated considerable value to spaceflight projects, such testing always carries inherent risks.</li>
+
+      <li>Test facilities must be maintained, and over time replaced as necessary, such that the test equipment is in good working order. Metrics must be developed and tracked that assess the mechanical health of the systems.</li>
+
+      <li>"Canned" tests should be developed and periodically utilized to provide a trended database for the test facility system response. Any deviations in the system response should be investigated.</li>
+
+      <li>Critical control system response data, such as the transfer function or inverse transfer functions and calculated drive voltage, must be evaluated real-time during vibration testing, but before application of the sine-burst to ensure that they are reasonable and do not indicate system maladies.</li>
+
+      <li>A vibration facility validation test should be done for each planned test series that is representative of the actual test conditions before flight or critical hardware is mounted. Use of a simulated mass consistent with that of the test article is always recommended for spacecraft system level testing. Other flight equipment validation testing should be considered based on mass and criticality.</li>
+
+      <li>Self-checks should be done that provide a representative response for the forcing range of the planned test. For higher force shock tests, shaker systems and test fixtures often do not respond in a linear fashion. It is also foolhardy to assume that test facilities are always in perfect working order.</li>
+
+      <li>All test requirements should be defined in the test plan for a particular test. The test operators must have adequate data and training to ensure complete verification testing before testing critical hardware.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>See Lessons Learned</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.5.3 ("Engineering Practices: Protection and Security of Flight Hardware"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

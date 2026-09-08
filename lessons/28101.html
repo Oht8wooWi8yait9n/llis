@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #28101: End-to-End Redundancy Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #28101: End-to-End Redundancy Analysis</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #28101 (Database ID: 28101)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2020-07-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Specified</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Systems Engineering and Analysis,  Risk Management / Assessment,  Safety & Mission Assurance,  Ground support systems</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/28101" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin-bottom:11px">The Launch Release Subsystem (LRS) is a critical electrical subsystem located on the Mobile Launcher (ML).&nbsp; LRS generates the signals used to release and retract the umbilicals from the Space Launch System (SLS) vehicle at T-0/launch.&nbsp; It is also used to command and monitor the Launch Abort System (LAS) and Booster Ignition Safe and Arm (S&amp;A) devices as well as Interim Cryogenic Propulsion Stage (ICPS) functions.&nbsp;</p>
+<p style="margin-bottom:11px">Due to the critical nature of most LRS functions, redundancy was heavily considered during the design and development phase; however, an issue with the redundancy architecture was identified after the subsystem already completed certification.&nbsp; The root cause of the problem was that the redundancy and failure analysis for LRS was incomplete.&nbsp; The analysis only reviewed how LRS interfaced with the end items (umbilical release mechanisms, S&amp;A devices, etc) and did not consider potential failure scenarios of other subsystems that interface with LRS.&nbsp;</p>
+<p style="margin-bottom:11px">During the design and development phase, a complete end-to-end evaluation/analysis of redundancy <b><i>and</i></b> potential failure scenarios should be performed.&nbsp; The analysis should not be limited to only the subsystem under review but should also account for all interfacing subsystems.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Early in the design and development phase, a complete end-to-end analysis should be developed for signal paths to help identify potential failure scenarios that could eliminate end item redundancy.&#xa0; The analysis should include all relevant interfacing subsystems (i.e. Ground Special Power, facility power, KGCS/comm, etc) and should not just be limited to the single subsystem and its associated signals under review.&#xa0;</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ul> 
+ <li style="margin-bottom: 11px;">A visual tool such as a matrix/chart or end-to-end line diagram (ref <b><i>Figure 1</i></b> and <b><i>Figure 2</i></b>) was found to be helpful in completing this assessment. &#xa0; An example matrix can be seen in <b><i>Table 1</i></b>, which shows the LRS PLC assignments (second row) for each end item signal (left column) as well as the KGCS comm rack/gateway assignment for the PLC’s (top row).&#xa0; It can easily be seen from such a layout that end items 1 through 3 have redundant LRS PLC’s, but both of the PLC’s would be lost if the 34612 comm rack or Gateway 1 were lost; therefore, visibility/control of end items 1 through 3 would also be lost.&#xa0;</li> 
+</ul> 
+<p style="margin-bottom: 11px;"><a href="https://nen.nasa.gov"><b>Table </b></a><b>1</b><b> – LRS End Item Signal Path Matrix for Baseline Architecture</b></p> 
+<p style="margin-bottom: 11px;"><img src="https://nen.nasa.gov/documents/17793/2b93eacb-c76f-16f2-c33b-cb508f5841b4" style="height: 195px; width: 600px;"></p> 
+<ul> 
+ <li style="margin-bottom: 11px;">Creation of line diagrams or matrices would enable identification of vulnerabilities in fault redundancy for each signal, and visualization of potential re-assignments of control/monitoring channels for corrections.</li> 
+</ul> 
+<p style="margin-bottom: 13px;"><a href="https://nen.nasa.gov"><b>Table </b></a><b>2</b><b> - LRS End Item Signal Path Matrix for Updated Architecture</b></p> 
+<p style="margin-bottom: 13px;"><img src="https://nen.nasa.gov/documents/17793/47664aba-94b9-82d7-17db-bd2ab318acae" style="height: 195px; width: 600px;"></p> 
+<p style="margin-bottom: 13px;">&#xa0;</p> 
+<p style="margin-bottom:11px"><b>Table 2</b> shows the updated matrix after the LRS PLC A3 and B1 fiber connections were swapped.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1319: International Space Station (ISS) Program/Microgravity Science Glovebox (MSG)/Solidification Using a Baffled Sample Ampoule (SUBSA) Investigation Eurotherm Controller Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1319: International Space Station (ISS) Program/Microgravity Science Glovebox (MSG)/Solidification Using a Baffled Sample Ampoule (SUBSA) Investigation Eurotherm Controller Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1319 (Database ID: 1319)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-01-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1319" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During a materials science investigation process run within the MSG on-board ISS on 7/23/02, the SUBSA Eurotherm Controller (Zone 1) on the Process Control Module (PCM) would not take a command to raise the Thermal chamber main heater setpoint above 825 degrees C.</p>
+
+    <p>Files were uplinked to query setpoint limits in the Eurotherm Controller; a local Mod Bus setpoint limit of 825C was found and confirmed why the anomaly occurred.</p>
+
+    <p>SUBSA's Investigation Control Software (ICS) was reconfigured to route Zone 1 setpoint temperature commands to Mod Bus 160 instead of Mod Bus 24 in the Eurotherm Controller. The Mod Bus 160 command address does not have a local setpoint limit. The desired setpoint of 845 degrees C was properly configured.</p>
+
+    <p>After these steps, no further problems were encountered prior to the completion of all on-board experiment processing.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>During ground testing, a SUBSA Ground Unit Thermal Chamber temperature of about 820 C with qualification Sample Ampoule assemblies (SUBSA-GD1, SUBSA-Q3, and SUBSA-Q4) was sufficient to melt all of the sample charge (approx. 37mm) + about 4mm of the sample's seed. This met the SUBSA Principal Investigator's desire to melt about 2mm into the seed. However, during SUBSA's on-orbit experiment, the flight heater unit temperature of 820 C did not melt into the seed.</p>
+
+    <p>To melt further into the seed, SUBSA tried to issue a setpoint change command to increase the Thermal Chamber's temperature. The Eurotherm 2408 Controller that controls the Thermal Chamber's temperature would not accept any setpoint change commands above 825 C. Therefore, the SUBSA Thermal Chamber hot zone temperature did not reach the commanded setpoint that is required to achieve the desired science result of melting 2mm into the sample material seed.</p>
+
+    <p>Overall, the problems experienced with the SUBSA flight hardware and flight software can be directly attributed to programmatic budget and schedule constraints which resulted in inadequate run-time using flight software with flight hardware end items as well as last minute software loads and/or changes to flight software after shipment to KSC for pre-launch processing.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>NASA must not allow programmatic constraints/limitations in cost schedule drive compromise into a thorough risk assessment and testing program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

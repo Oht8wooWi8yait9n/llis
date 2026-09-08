@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #10701: Deep Impact Deadly Embrace: Beware of Register Overflow Conditions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #10701: Deep Impact Deadly Embrace: Beware of Register Overflow Conditions</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #10701 (Database ID: 10701)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-08-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design, Integration and Testing, Systems Engineering and Analysis, Computers, Software, Spacecraft, Test and Verification, Software Engineering, Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/10701" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The six-month mission for DI to study the interior composition of the comet Tempel 1 (Figure (1)) was completed in 2005, and the spacecraft was re-tasked as the Extrasolar Planet Observation and Deep Impact Extended Investigation (EPOXI) mission to study <a href="http://en.wikipedia.org/wiki/Extrasolar_planet">extrasolar planets</a> and execute a flyby of the comet Hartley 2. Including this extended mission, JPL’s DI/EPOXI science mission lasted a total of eight years and the spacecraft traveled over 7 billion kilometers.</p> 
+<div> 
+ <table border="0" style="margin: auto;"> 
+  <tbody> 
+   <tr> 
+    <td> <img alt="Figure 1 is a grayscale photo of an object in space with a lumpy shape resembling a dimly-lit baked potato. At one edge of the object, there is a bright flare of intense light emitted from an impact area constituting approximately 15 percent of the surface area on the visible side of the object." src="https://llis.nasa.gov/llis_lib/images/2014-07_Deep_Impact.jpg" style="width: 350px; height: 350px;" /></td> 
+   </tr> 
+   <tr> 
+    <td> <strong>Figure 1.</strong> Collision of the DI impactor with the comet 9P/Tempel<br /> (Tempel 1)</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p> Mission controllers lost contact with the spacecraft in August 2013, when no carrier signal was received from it during a planned downlink pass (Reference (1)). Spacecraft communications had been nominal during the previous pass several days earlier. Controllers spent several weeks trying to uplink commands to reactivate the spacecraft’s onboard systems, but all attempts to regain contact with the spacecraft were unsuccessful.</p> 
+<p> Although the exact cause of the mission loss is not known with certainty, the spacecraft operations team at JPL and its major contractor uncovered a potential problem with computer time-tagging that could have led to loss of spacecraft attitude control. DI/EPOXI flight software includes a fault management function that reports and logs all onboard fault protection activities and events, such as declaring a symptom, declaring a fault, running a response, or the occurrence of a processor reset. The function computes an integer representation of spacecraft time in milliseconds by taking the spacecraft clock represented in seconds as a 64-bit floating point number, multiplying it by 10, and casting it back into a 32-bit unsigned (i.e., non-negative) integer. (“Floating point-to-integer conversion” is necessary in order to convert a decimal number issued by the clock into a binary value recognized by the computer.) The computation does not guard against an overflow condition where spacecraft time in milliseconds can no longer be fully represented within 32 bits. This occurred when the spacecraft clock reached 429,496,729.6 seconds, which corresponded to the date “DOY 223” (2013). At this point in time or beyond, the computation results in a floating point error that ultimately triggers a processor reset.</p> 
+<p> This floating point-to-integer conversion error is a common failure mode present in the file systems associated with both the Computer A and Computer B flight processor units in the DI/EPOXI flight system. Once the trigger time was passed, each processor would have reset upon the first event reported by the fault manager. This would likely have been a benign symptom notification such as loss of stars in the star tracker field-of-view.  Subsequently, neither of the two flight processors would boot successfully because fault protection responses to place the spacecraft in safe mode would retrigger another reset. The spacecraft would be left in an infinite reset cycle (aka, “deadly embrace” lockout) and unable to run flight software; as this includes attitude control software, the spacecraft would issue no commands to the thrusters. With this loss of attitude control, the spacecraft is unable to properly position either the spacecraft antennas for communication, or the solar arrays for generating power, until the spacecraft is no longer power positive. The battery would then discharge until the bus voltage drops below its minimum threshold, and equipment heaters would turn off, leaving the spacecraft completely inoperable.</p> 
+<p> Such data conversion errors are not uncommon and can have disastrous results. The Ariane 5 rocket self-destructed during its first test flight in 1996 because a 64-<a href="http://en.wikipedia.org/wiki/Bit">bit</a> floating point value in the control software was too large to be represented by a 16-bit signed integer (Reference (2)). A failed Patriot missile intercept of an Iraqi Scud that killed 28 U.S. soldiers in 1991 was traced to conversion of clock time into a value limited to 24 bits in length (Reference (3)). As the DI/EPOXI approach to computer time-tagging in flight software is ubiquitous, a similar problem could exist in the software baselines of other spaceflight projects. Reference (4) is a memo that notified another 29 JPL missions of their potential vulnerability stemming from this computation within the fault management function.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> “Missed communication pass,” JPL Incident Surprise Anomaly (ISA) No. 55044, September 14, 2013.</li> 
+ <li> <p> “Ariane 5 Flight 501 Failure, Report by the Inquiry Board,” July 19, 1996, Paragraph 2.1, <a href="http://www.di.unito.it/~damiani/ariane5rep.html">http://www.di.unito.it/~damiani/ariane5rep.html</a></p> </li> 
+ <li> <p> “Patriot Missile Defense: Software Problem Led to System Failure at Dhahran, Saudi Arabia,” U.S. General Accounting Office Report No. 92-26, February 1992, p. 5, <a href="http://www.gao.gov/assets/220/215614.pdf">http://www.gao.gov/assets/220/215614.pdf</a>.</p> </li> 
+ <li> “Deep Impact Flight Software Anomaly Notification,” memo from Michael Sierchio, September 30, 2013. </li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Under overflow conditions, floating point-to-integer data conversion errors may lead to an infinite cycle of spaceflight computer reboots and end-of-mission. As it is a common-mode failure, both strings in a dual-string flight system may be incapacitated. The importance of protecting against overflow conditions is exacerbated where there is a possibility of a mission extension or a spacecraft re-tasking.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Design the flight system fault management functions to guard against overflow conditions caused by the numeric value of data reaching the limit that can be accommodated by a register.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.9.1.2 (“Flight System Design: System Fault Protection Design  - Protection for credible single faults”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> IEEE Standard for Floating-Point Arithmetic (IEEE 754)</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

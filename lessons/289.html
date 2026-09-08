@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0289: Magellan In-Flight Solar Array Deployment Indication</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0289: Magellan In-Flight Solar Array Deployment Indication</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0289 (Database ID: 289)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1993-07-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/289" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During the launch sequence of the Magellan spacecraft, the two solar panels were observed by the space shuttle astronauts to have deployed, but the "panels-latched" telemetry indication was not transmitted. The deployment mechanism Failure Mode Effects and Criticality Analysis (FMECA) had identified the potential for latching indication problems, therefore in the planned launch sequence the panels were rotated such that the subsequent Inertial Upper Stage (IUS) burn would drive the panels toward the latched position.</p>
+
+    <p>Analysis has shown that the anomaly was due to the combination of marginal microswitch actuation stroke and zero-g effects on the solar array hinge mechanism. This combination caused one or both of the series-wired microswitches to fail to close. During the IUS burn, a small shift of the panels resulted in microswitch closure and provided the proper telemetry indication.</p>
+
+    <p>Except for the time spent addressing the initial concern, the anomaly did not impact the Magellan mission.</p>
+
+    <dl>
+      <dt>Reference(s):</dt>
+
+      <dd>PFR #52230</dd>
+
+      <dd>IOM 3524-90-503, From D. Sevilla to B. Wagoner, dated November 5, 1990</dd>
+    </dl>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Microswitches on Magellan were mounted such that they would detect the position of the solar panels (as opposed to the status of the latching mechanism). As a result, they were just a position indicator and not a "panels latched" indicator.</li>
+
+      <li>A marginal microswitch actuation stroke plus zero-g effects can result in failure of the microswitch to close.</li>
+
+      <li>Failure Mode Effects and Criticality Analysis (FMECA) is a worthwhile activity and can result in problem workarounds being built into flight sequences ahead of time.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Care should be taken in deciding where to mount telemetry transducers to assure that the desired function is actually being measured, and not just a related function.</li>
+
+      <li>All applications of microswitches should take into account the need for overtravel in the actuation stroke.</li>
+
+      <li>Perform a Failure Mode Effects and Criticality Analysis (FMECA) early in the spacecraft life cycle, and involve the cognizant design personnel.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced the lesson as supporting Paragraph 4.12.5.5 ("Flight Electronics Hardware System Design: Interfaces - Restricted Usage"), Paragraph 4.2.2.9 ("Mechanical Configuration/Systems Design: Configuration - Design Deployables for Test"), and Paragraph 8.3.3.2 ("System Assembly, Integration and Test: System Functional Verification - Deployments and Articulations") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

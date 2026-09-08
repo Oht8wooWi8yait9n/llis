@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0404: Traveling Wave Tube Amplifier on Martian Surface: Failure Due to Corona (1976)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0404: Traveling Wave Tube Amplifier on Martian Surface: Failure Due to Corona (1976)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0404 (Database ID: 404)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1996-04-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/404" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>(Relevant Historical Lessons Learned)</p>
+
+    <p>Traveling Wave Tube Amplifier (TWTA) No. 1 on Viking Lander 2 failed to produce an S-band RF downlink when commanded "ON" October 13, 1976. The most probable failure model is that the high-voltage power converter developed a corona breakdown. A subsequent attempt to operate this TWTA during the extended mission late in 1978 also failed to produce downlink.</p>
+
+    <p>From Martian day one (SOL 1) after Lander 2 touchdown, TWTA No. 2 had been used and it had performed very well. On SOL 33, the link was switched to TWTA No. 1 because it ran cooler than No. 2, and the increasing solar angle was beginning to raise the Lander ambient temperature. TWTA No. 1 produced normal carrier and telemetry sidebands; however, the ranging subcarrier was suppressed by noise by 6 to 8 dB. These symptoms continued from SOL 33 to SOL 38. On SOL 39, no signal was observed at the Deep Space Stations after the TWTA "ON" command. Subsequent telemetry via the UHF relay link (not involved) showed the TWTA bay temperature did not make its usual climb. The TWTA went through its 90-second cathode warm-up period, and the failure must have occurred shortly after the high-voltage was programmed to come on.</p>
+
+    <p>Other failure mechanisms examined and discarded include: sequence error, spurious signals on the uplink from the stations, "power-on" switch failures, exciter spurious signals, and command link failure. It was concluded the failure was within TWTA No. 1.</p>
+
+    <p>Reference(s):</p>
+
+    <ul>
+      <li>Viking Incident Surprise Anomaly Report No. 15643 (dated 13 Oct. 1976)</li>
+
+      <li>JPL IOM 3363-76-059, "Narrative on the Viking No. 2 Lander TWTA Failure," Lloyd Derr to Lee Randolph, 29 Oct. 1976</li>
+    </ul>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>High-voltage circuits designed to operate within the Martian atmosphere require that special design precautions be taken to avoid corona or other forms of high-voltage breakdown.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The TWTA has numerous high-voltage areas needing protection from ground potential, by means of either insulated wire or potting compound.</p>
+
+    <p>Note: The Martian atmosphere consists mainly of 95% carbon dioxide and about 3% argon. The ambient pressure at the Lander site is 7.2 millibars, corresponding to an Earth pressure of 5.2 torr. This constitutes a very critical pressure region in an atmosphere of "active" gasses. (Experimental experience with electrostatic discharge indicates that carbon dioxide produces corona at a voltage 19% lower than required for air, and argon at a voltage 60% lower than air.) Corona breakdown in Martian atmosphere could occur as low as 50 volts. The TWTA power converter has output voltages ranging up to 2 kV. The failure analysis concluded that somewhere in the TWTA system, a high-voltage point developed a gap between itself and circuit ground which then filled with Martian air. Lack of precise telemetry data from the Lander made it impossible to define the breakdown area any closer than the TWTA No. 1 as a whole. Power converter corona RF noise could have found its way into the ranging
+    system via the radio system or power line pickup.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced the lesson as supporting Paragraph 4.12.2.3 ("Flight Electronics Hardware System Design: Electronic Packaging - High Voltage Designs") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

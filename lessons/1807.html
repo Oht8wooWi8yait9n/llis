@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1807: Inheritance Review of the Mars Phoenix Flight System</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1807: Inheritance Review of the Mars Phoenix Flight System</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1807 (Database ID: 1807)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-12-10</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Formulation &amp;raquo; Phase B</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Integration and Testing,  Missions and Systems Requirements Definition,  Program Management,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Flight Equipment,  Hardware,  Packaging,  Handling,  Storage,  Payloads,  Risk Management / Assessment,  Software,  Spacecraft,  Lander Systems,  Robotics,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Configuration control and data management,  Planetary entry and landing concepts,  Review boards,  Acquisition / procurement strategy and planning,  Configuration and data management,  Contractor relationships,  Program level review processes,  Reliability,  Review systems and boards,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1807" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="text-align: center;">Reuse of NASA hardware, software, or designs that have been inherited from previous projects and proven in testing or spaceflight may help NASA to control programmatic and technical risk. However, a formal Inheritance Review (Reference (1)) is necessary to verify that the inherited product is acceptable, reliable, and compatible with current spacecraft requirements. Best scheduled at the earliest feasible time prior to the equivalent level Preliminary Design Review (PDR), the Inheritance Review (IR) assesses the potential risk associated with product use and the need for modification or additional testing.<br> <br> JPL hopes that Mars Phoenix, the first in NASA's Scout series of highly innovative and relatively low-cost missions, will be the first lander to physically examine water on Mars. Launched in August 2007, the spacecraft features extensive inheritance (blue-shaded components in Figure 1) from the JPL Mars Surveyor 2001 Lander (MSP01) project that was cancelled in May 2000, which itself was based upon the Mars 98 Polar Lander (MPL). As 70% of the MSP01 lander hardware had already been built, the hardware was moved by the system contractor to cleanroom storage. Available documentation was also stored, although the MSP01 design was largely drawn from the faster-better-cheaper era that limited the extent of engineering documentation.<br> <br> &nbsp; <img align="Bottom" alt="Figure 1 is a color diagram that depicts that extent of Phoenix flight system and payload heritage within the Phoenix subsystems¿ Telecom, Power, GN&amp;C, Mechanisms, Structures, Thermal, Propulsion, C&amp;DH and Payloads (instruments). Within Telecom, 5 major components were Mars ¿01 Heritage, 3 were Other Heritage, and 1 was New Development. Within the Power Subsystem, 8 major components were Mars ¿01 Heritage, 2 were Mars ¿01 Modified, and 1 was New Development. Within the GN&amp;C Subsystem, 2 major components were Mars ¿01 Heritage, 1 was Mars ¿01 Modified, and 1 was Other Heritage. Within the Mechanisms Subsystem, all 3 major components were Mars ¿01 Heritage. Within the Structures Subsystem, 2 major components were Mars ¿01 Heritage and 3 were Mars ¿01 Modified. Within the Thermal Subsystem, all 3 major components were Mars ¿01 Heritage. Within the Propulsion Subsystem, 9 major components were Mars ¿01 Heritage and 1 was Other Heritage." border="0" height="479" src="https://llis.nasa.gov/llis_lib/images/1016243main_2007-11_Phoenix_Fig_1.jpg" title="Figure 1 is a color diagram that depicts that extent of Phoenix flight system and payload heritage within the Phoenix subsystems¿ Telecom, Power, GN&amp;C, Mechanisms, Structures, Thermal, Propulsion, C&amp;DH and Payloads (instruments). Within Telecom, 5 major components were Mars ¿01 Heritage, 3 were Other Heritage, and 1 was New Development. Within the Power Subsystem, 8 major components were Mars ¿01 Heritage, 2 were Mars ¿01 Modified, and 1 was New Development. Within the GN&amp;C Subsystem, 2 major components were Mars ¿01 Heritage, 1 was Mars ¿01 Modified, and 1 was Other Heritage. Within the Mechanisms Subsystem, all 3 major components were Mars ¿01 Heritage. Within the Structures Subsystem, 2 major components were Mars ¿01 Heritage and 3 were Mars ¿01 Modified. Within the Thermal Subsystem, all 3 major components were Mars ¿01 Heritage. Within the Propulsion Subsystem, 9 major components were Mars ¿01 Heritage and 1 was Other Heritage." width="731"><br> <br> <b>Figure 1.</b> Phoenix Flight System/Payload Heritage</p> 
+<p>Because Phoenix was subject to different and additional requirements beyond those of MSP01, an ambitious IR program was conducted from October 4, 2004 to January 21, 2005 (Reference (2)). Phoenix IR was facilitated by the fact that the Phoenix spacecraft system contractor had also served in the same role for the ill fated Mars 98 Polar lander project and for the follow-on MSP01 lander project. The IR program focused on the complete range of Phoenix spacecraft subsystems-- Power; Telecomm; Propulsion; Structures; Mechanisms; Guidance, Navigation, and Control; Flight Software; Simulation Software; Command and Data Handling; Harness; Thermal; ATLO (Integration &amp; Test); Support Equipment; and Mission Operations. In planning the subsystem IRs, JPL sought to exceed the minimum level of design penetration needed to prepare for the March 2005 PDR by:</p> 
+<ol> 
+ <li>Soliciting the participation of the spacecraft system contractor in evaluating the system compatibility of the inherited or commercial off-the-shelf (COTS) product functionality with project Level 1 and Level 2 requirements.</li> 
+ <li>Conducting a mission assurance review and system engineering review in concert with the subsystem IRs.</li> 
+ <li>Utilizing a mission assurance checklist that provided acceptance criteria to validate the flight worthiness of each subsystem. The checklist was derived from the form (Hardware Review &amp; Certification Record) that JPL uses to assess the risk to flight hardware posed by mechanical or electrical integration with the system (Reference (3)).</li> 
+ <li>Providing the project with a recommended course of action (e.g., modification or additional testing) in cases where a subsystem did not meet the checklist's acceptance criteria.</li> 
+</ol> The Phoenix project found the IR format to be very useful in addressing mission assurance and system engineering needs. For example: 
+<ol> 
+ <li>Cognizant engineers were very forthright and candid about their hardware's pedigree, and the detailed checklist forced them to actively seek out and review MSP01 and MPL documentation.</li> 
+ <li>Break-away splinter sessions at the spacecraft system contractor facilities to review archived MSP01 documents such as drawings, build records, test data and material reviews (MRBs) were very useful in assessing the pedigree of the Phoenix hardware.</li> 
+</ol> Although the Phoenix IR plan was well conceived, preparation for the reviews presented difficulties. Collecting all of the MSP01 and Mars 98 documentation (i.e., parts lists, waivers, anomaly reports, MRBs, GIDEP, reliability analyses) and analyzing material storage life proved time-consuming. Planning for the IR schedule was inconsistent with the system contractors Phase B workforce ramp-up, and the contractor had to prepare for the reviews at a time when they were focused on expediting long lead-time procurements. Closing action items (e.g., assessment of waivers, anomaly reports, environmental qualification, etc.) in time for subsystem Critical Design Review imposed a substantial workload on the Phoenix system contractor cognizant engineers. Certain action items identified by IR, like design changes or additional testing, may necessitate expensive late modifications to the system contract. 
+<br> 
+<br> References: 
+<br> 
+<br> (1) quotSubsystem Inheritance Review,quot NASA Preferred Practice for Design &amp; Test No. PD-ED-1262, NEN # 0789, http://www.nasa.gov/offices/oce/llis/0789.html. 
+<br> (2) quotPhoenix Flight System Inheritance Review Lessons Learned,quot Glenn Tsuyuki, March 4, 2005. 
+<br> (3) quotDelivery Review-- Hardware Review Certification Record,quot Jet Propulsion Laboratory procedure, JPL Document DocID 67515, December 15, 2005.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>The format used for system and subsystem Inheritance Reviews (IRs) by the high-inheritance Phoenix project proved adequate to mitigate the risk within technical and programmatic constraints.</li> 
+ <li>Schedule and resource constraints may prevent the benefits of IRs from being fully realized unless the IR process is carefully planned.</li> 
+ <li>Had the Phoenix project not had under contract the same system contractor as was used for the prior legacy projects, JPLs ability to characterize the flight system pedigree years following contract closeout would have been severely curtailed. Even when the engineering analyses delivered by the contractor are accompanied by full supporting documentation, JPL retention and archiving of these schematics, parts lists, etc. after the flight project is disbanded is not a trivial expense and may not be given a high priority.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Consider using the Phoenix IR format as a model for future missions that feature substantial inheritance. Prepare and implement the IR plan in concert with mission assurance program activities.</li> 
+ <li>Plan carefully for the collection and analysis of records documenting the system and subsystem pedigree. Provide ample lead time for obtaining missing drawings, parts/materials lists, or test data, and for resolving issues relating to environmental qualification, commercial parts, materials storage life, and discrepant analyses. Assign JPL staff to monitor contractor progress in supplying the documentation.</li> 
+ <li>When specifying deliverable engineering documentation in system contracts, assume that drawings, build records, test data, MRBs, etc., will be needed later to assess the pedigree of inherited hardware, software, and system and subsystem designs. Assure that the flight project or the institution makes arrangements to archive project engineering (and supporting) data after the project is disbanded.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.6 (quotEngineering Practices: Inheritancequot), Paragraph 5.26 (quotManagement Practices: Project Close-Outquot), Paragraph 5.16.1 (quotManagement Practices: Reviewsquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

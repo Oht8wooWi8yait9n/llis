@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1764: Critical Facilities Maintenance Assessment</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1764: Critical Facilities Maintenance Assessment</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1764 (Database ID: 1764)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2006-07-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Program Management,  Facilities,  Flight Equipment,  Flight Operations,  Ground Equipment,  Ground Operations,  Hardware,  Payloads,  Risk Management / Assessment,  Safety & Mission Assurance,  Spacecraft,  Spacecraft and Spacecraft Instruments,  Logistics and maintenance,  Cross Agency coordination,  Risk management,  Advanced planning of safety systems,  Maintenance,  Product Assurance,  Reliability,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1764" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+This lesson learned documents a NASA Preferred Practice for Design and Test that was drafted shortly before the cancellation of the Preferred Practice task. Hence, the draft was not subjected to review by the NASA field centers and should not be viewed as a formally accepted NASA-wide practice. 
+<br> 
+<br> Practice 
+<br> 
+<br> Prepare and implement an institutional plan for the comprehensive assessment of NASA critical facilities and equipment that includes: 
+<ol> 
+ <li>An inventory of critical facilities and equipment.</li> 
+ <li>Comprehensive assessment of failure modes for critical equipment.</li> 
+ <li>Establishment of appropriate Reliability Centered Maintenance (RCM) methods.</li> 
+ <li>Acquisition of necessary Predictive Testing and Inspection (PT&amp;I) equipment.</li> 
+ <li>Implementation of RCM using a Computerized Maintenance Management System (CMMS) and appropriate performance metrics</li> 
+ <li>Center-wide training in RCM and Critical Facilities Maintenance Assessment procedures.</li> 
+</ol> 
+<p>Benefit<br> <br> Critical Facilities Maintenance Assessment (CFMA) was first implemented by NASA following the March 2000 High Energy Solar Spectroscopic Imager (HESSI) spacecraft overtest incident. Inadequate maintenance of the test equipment was one of the principal causes of the major structural damage sustained by HESSI during this JPL test. Subsequently, other incidents have occurred at NASA centers such as contamination in an assembly facility that housed a spacecraft due to rainwater from a leaky roof. CFMA identifies inadequacies in ground facility readiness that could affect the safety of the public, the NASA workforce, flight hardware, and other critical equipment and property.<br> <br> Implementation Method<br> <br> To simulate the extreme environments of space, test equipment may subject spaceflight hardware to stress levels that approach the test article's limits. Often with repeated test-analyze-and-fix cycles and few or no flight spares, it is essential that testing be conducted with high reliability and fidelity. The potential cost and schedule impact of a test failure or facility failure increases disproportionably with proximity to the system's launch date.<br> <br> The March 2000 HESSI spacecraft overtest incident alerted NASA to the substantial risks of utilizing aging industrial facilities for the development of high value, one-of-a-kind products. The assessment and management of these programmatic risks, as well as safety risks, require data on the facilities' condition, characteristic failure modes, and maintenance practices. Hence, NASA initiated a review of all critical ground facilities at each of the NASA centers shortly after the HESSI mishap. A comprehensive program was begun to define RCM gaps, complete a critical facility inventory, perform failure assessments, define and document maintenance procedures, and implement a CMMS. This process is depicted in Figure 1. NASA Policy Directive NPD 8831.1, Maintenance of Institutional and Program Facilities and Related Equipment (Reference (1)), was revised to require self-assessments of facilities' maintenance programs and utilization of accepted standards as a guideline to determining facilities' maintenance funding requirements.</p> 
+<p>&nbsp;</p> 
+<p><strong>Figure 1</strong>. NASA Vision for Asset Management</p> 
+<p><br> <a href="https://llis.nasa.gov/llis_lib/images/1013637main_CFMAFig1.jpg" title="Click to view enlarged image"><img align="Bottom" alt="Figure 1 is a color flow chart of the CFMA process. The first block is labeled ¿Business Model¿ within which an ¿Identify Critical Systems¿ box flows into a ¿Determine Key Performance Indicators¿ box. The first block flows into an ¿FMEA &amp; RCM¿ block, which contains a single ¿Generate RCM Based Maintenance Strategy¿ box. This second block flows into a ¿CMMS¿ block which contains a single ¿Implement Strategy¿ box. This third block flows into the last block¿ ¿Reliability Engineering¿ containing a single ¿Reliability Based Analysis¿ box. There is a feedback loop from the last block flowing back to the  ¿FMEA &amp; RCM¿ block, with the feedback loop labeled ¿Continuous Improvement.¿" border="0" src="https://llis.nasa.gov/llis_lib/images/1013687main_CFMAFig1_small.jpg" title="Figure 1 is a color flow chart of the CFMA process. The first block is labeled ¿Business Model¿ within which an ¿Identify Critical Systems¿ box flows into a ¿Determine Key Performance Indicators¿ box. The first block flows into an ¿FMEA &amp; RCM¿ block, which contains a single ¿Generate RCM Based Maintenance Strategy¿ box. This second block flows into a ¿CMMS¿ block which contains a single ¿Implement Strategy¿ box. This third block flows into the last block¿ ¿Reliability Engineering¿ containing a single ¿Reliability Based Analysis¿ box. There is a feedback loop from the last block flowing back to the  ¿FMEA &amp; RCM¿ block, with the feedback loop labeled ¿Continuous Improvement.¿"></a><br> <br> CFMA is conducted on NASA facilities only. However, given the opportunities for damage to NASA flight systems in facilities owned by system contractors, contractor proposals and operations should be reviewed for the maturity of their maintenance practices. For on-site contractors, opportunities for collaborative use of maintenance resources (e.g., sharing FMEA data) should be pursued.<br> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facility Inventory and Audit:<br> <br> CFMA should be conducted by a working group composed of maintenance specialists competent to review the health of the center's current maintenance programs and identify any needed improvements. The CFMA Working Group (CWG) should also include those individuals responsible for key facilities such as major integration and test laboratories, with support by reliability engineers and other specialists as needed. The first task for the CWG is to complete a comprehensive inventory of equipment and facilities that are critical to the mission of the center. Critical equipment may be defined as quotequipment, which if not operated or maintained correctly, could endanger the operating personnel or the product being processed.quot<br> <br> The inventoried items are then ranked in order of relative criticality. Technical equipment with primary functions related to flight system development and operation are identified and ranked separately from non-technical, general-purpose equipment such as HVAC facilities. The purpose is to separate civil engineering related items with well-understood failure modes and maintenance needs from specialized engineering facilities that are candidates for failure mode analysis and RCM. Technical equipment that processes flight hardware, defined as quotproduct items deliverable to a customer or deliverable to a significantly high-level of integration,quot is given a high ranking. High ranking items are given priority for further assessment within the CFMA process, and this prioritization may also impact capital equipment improvement plans and other institutional processes.<br> <br> Once the critical facilities are identified, they are audited for compliance with maintenance policies and procedures. The following information is elicited from facility operators through interview or survey (i.e., questionnaires) techniques:</p> 
+<ol> 
+ <li>NASA and center-specific policies and procedures are adequate to provide the necessary level of protection, and they are currently in use by the facility operator for the inspection, calibration, maintenance, repair, and control of technical equipment. Procedures for quotcontrolquot include those issued to ensure proper operation, industrial safety, system safety, emergency response, etc.</li> 
+ <li>Statutory and regulatory requirements that must be complied with-- including safety, environmental, physical security, and information technology security-- and NASA and center-specific compliance policies and procedures tailored to these requirements.</li> 
+ <li>Practices employed independently by operators to remain current on regulatory requirements.</li> 
+ <li>Schedule of third-party ISO audits, internal audits, self-assessments, and other continuing activities in use to monitor that policies and procedures are understood, adhered to, and effective.</li> 
+ <li>Formal training provided to center staff on policies, requirements, and procedures affecting facility maintenance and operation. Training provided to staff on maintenance techniques, including RCM.</li> 
+</ol> 
+<p>The audit also includes CWG visits to the facilities to observe activities, examine procedures and records, observe housekeeping conditions, and interview facility managers and personnel. The results of this audit are evaluated by the CWG to determine whether there is sufficient objective evidence, including maintenance and training records, to verify compliance with maintenance policies and procedures. Deficiencies and remedial plans are documented in an institutional closed-loop corrective action system such as JPLquots Corrective Action Notice (CAN)/Preventive Action Notice (PAN) system. The CWG issues a report that documents the facility inventory and audit, and summarizes the current maintenance programs used by the Field Center to assure that critical facilities and equipment are kept in a good state of repair.<br> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Failure Mode Assessment for Critical Equipment:<br> <br> Each Field Center conducts an informal assessment to determine and document the principal latent failure modes and the consequences of failure for the inventoried facilities. Identification of failure modes and failure causes resembles a high-level fault tree, annotated to indicate the potential impact of maintenance. The purpose is to identify the principal failure modes of concern, the likely cause of failure, the possible types of damage to flight hardware, and the extent to which the failure modes are preventable by maintenance. Hence, test facilities that are intended to apply calibrated levels of stress to flight hardware would be prime candidates for assessment. Table 1 illustrates this summary level of&nbsp;failure mode assessment for such a candidate.</p> 
+<p>&nbsp;</p> 
+<strong>Table 1.</strong> Failure Mode Assessment for a Large Space Simulator 
+<br> 
+<a href="https://llis.nasa.gov/llis_lib/images/1013691main_CFMA Table-1.jpg" title="Click to view enlarged image"><img align="Bottom" alt="The table labeled Table 1 contains the following text: Loss of Chamber Vacuum, Caused by pump or valve failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Caused by broken window or feed-through penetration, Not preventable by maintenance, Possible types of damage to flight hardware , Corona discharge, Contamination, Protection of flight hardware , Vacuum failure alarm system, Spacecraft power cut-off pressure sensor system, Emergency power generator, Loss of Chamber Solar Simulation, Caused by cooling water failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Caused by lamp explosion, Not preventable by maintenance, Possible types of damage to flight hardware, Exceed lower temperature limits, Protection of flight hardware , Over/under temperature alarm system, Spacecraft safing heaters, Emergency power generator, (Next failure mode), Loss of Chamber Shroud Temperature Control, Caused by controller failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Possible types of damage to flight hardware, Exceed upper temperature limits, Exceed lower temperature limits, Protection of flight hardware , Over/under temperature alarm system, Over-temperature heater power cut-off system, Spacecraft safing heaters, Emergency power generator" border="0" src="https://llis.nasa.gov/llis_lib/images/1013688main_CFMA%20Table-1_small.jpg" style="float: left;" title="The table labeled Table 1 contains the following text: Loss of Chamber Vacuum, Caused by pump or valve failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Caused by broken window or feed-through penetration, Not preventable by maintenance, Possible types of damage to flight hardware , Corona discharge, Contamination, Protection of flight hardware , Vacuum failure alarm system, Spacecraft power cut-off pressure sensor system, Emergency power generator, Loss of Chamber Solar Simulation, Caused by cooling water failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Caused by lamp explosion, Not preventable by maintenance, Possible types of damage to flight hardware, Exceed lower temperature limits, Protection of flight hardware , Over/under temperature alarm system, Spacecraft safing heaters, Emergency power generator, (Next failure mode), Loss of Chamber Shroud Temperature Control, Caused by controller failure, Preventable by maintenance, Caused by loss of electrical power, Only partially preventable by maintenance, Possible types of damage to flight hardware, Exceed upper temperature limits, Exceed lower temperature limits, Protection of flight hardware , Over/under temperature alarm system, Over-temperature heater power cut-off system, Spacecraft safing heaters, Emergency power generator"></a> &nbsp; 
+<p>&nbsp;</p> 
+<p><br> &nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p>Particularly for facilities and equipment that have implemented an RCM process, the recent reliability performance of candidate facilities should also be reviewed to identify the facilities and failure modes to be included in the informal assessment.<br> <br> This initial assessment is intended to identify major areas of concern and does not cover all GSE, review failure modes in great detail, penetrate to root causes of failure, or assess the statistical likelihood of failure. Such comprehensive failure analysis is the province of RCM, which seeks to optimize the distribution of maintenance resources by application of standard reliability analysis techniques to determine where the greatest benefits may accrue. Over the course of an RCM program, Failure Mode and Effects Analysis (FMEA) will be conducted to identify lower tier equipment failures that could cause catastrophic failure of critical equipment and facilities. In tandem, root cause analysis will explore all possible causes for a postulated machine failure. Because these techniques are labor-intensive and conducted over the life cycle of the facilities, the CWG may propose equipment candidates for FMEA and Root Cause Failure Analysis (RCFA) based on their criticality and failure history.<br> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Establishment of RCM Methods:<br> <br> NASA policy promotes the use of RCM techniques to assure that maintenance resources are applied cost-effectively and where they can best mitigate mission risk. CFMA evaluates the extent to which RCM and PT&amp;I practices are being incorporated into the development, improvement, operation, and maintenance of critical facilities and equipment to minimize life-cycle maintenance and repair costs, maintain facilities and equipment at the desired level of reliability and availability, and maximize safety. More information on RCM methodology is available in a related preferred practice (Reference (3)), 'Preventative Maintenance Strategies Using Reliability Centered Maintenance (RCM)'.<br> <br> The NASA RCM Guide (Reference (4)) serves as the basis for the NASA RCM assessment process. This NASA RCM guide suggests specific components (see Reference (4), Chapter 3) for benchmarking the maturity of an organization's RCM program within each of the following seven program elements:</p> 
+<ol> 
+ <li>Maintenance Philosophy</li> 
+ <li>Program Organization</li> 
+ <li>Performance Measurements and Indicators (Metrics)</li> 
+ <li>Proactive Maintenance</li> 
+ <li>Predictive Test and Inspection (PT&amp;I) Technologies</li> 
+ <li>Preventive Maintenance</li> 
+ <li>Training and Personnel Development</li> 
+</ol> 
+<p>The CWG, as part of the CFMA audit but with specialized assistance as required, assesses the current status of the RCM program within each maintenance organization that is responsible for critical facilities. Interview or survey questions based on the above seven program elements are prepared, facility documentation is reviewed, and the results are evaluated to identify organization-specific RCM and PT&amp;I capabilities and potential applications. A report is prepared that benchmarks each organization's progress (and the overall progress of the Field Center) in implementing each of the RCM program elements, as shown in Table 2. The report also contains a tabulated summary of the RCM improvement opportunities available to the critical facility maintenance programs, and it provides recommendations to the organizations for complying with the NASA baseline RCM program components.</p> 
+<strong>Table 2</strong>. Critical Facility RCM Status Summary &nbsp; 
+<p><a href="https://llis.nasa.gov/llis_lib/images/1013639main_CFMATable2.jpg" title="Click to view enlarged image"><img align="Bottom" alt="Table 2 is a color matrix that lists the following RCM program elements as column headings¿  Maintenance Philosophy, Program Organization, Performance Measures (Metrics), Proactive Maintenance, PT&amp;I Technologies,  Preventive Maintenance, and Training &amp; Personnel Development. The rows are labeled ¿Organization A¿, ¿Organization B¿, etc. In each matrix intersections is placed one of three different symbols¿ a green triangle representing ¿Fully Mature¿, a yellow triangle representing ¿Some Initiatives¿, or a red triangle representing ¿No Initiatives¿. The numbers of each color triangle was arbitrarily assigned because this table is provided as only an example of the organization progress report format." border="0" src="https://llis.nasa.gov/llis_lib/images/1013690main_CFMATable2_small.jpg" title="Table 2 is a color matrix that lists the following RCM program elements as column headings¿  Maintenance Philosophy, Program Organization, Performance Measures (Metrics), Proactive Maintenance, PT&amp;I Technologies,  Preventive Maintenance, and Training &amp; Personnel Development. The rows are labeled ¿Organization A¿, ¿Organization B¿, etc. In each matrix intersections is placed one of three different symbols¿ a green triangle representing ¿Fully Mature¿, a yellow triangle representing ¿Some Initiatives¿, or a red triangle representing ¿No Initiatives¿. The numbers of each color triangle was arbitrarily assigned because this table is provided as only an example of the organization progress report format."></a></p> 
+<p>Other RCM program developments to be assessed and reported by the CWG include:</p> 
+<ol> 
+ <li>An estimate of RCM implementation costs and the potential return-on-investment (ROI) for each critical facility maintenance organization. This may be based on the systems being maintained, equipment condition, maintenance histories and processes, and the extent to which RCM tools and techniques are currently being used.</li> 
+ <li>A plan of action and milestones for implementing an RCM program for each applicable maintenance organization, with goals for continuous improvement. This includes plans to incorporate applicable RCM requirements into service contracts.</li> 
+ <li>Significant lessons learned from implementing RCM programs. Also RCM best practices, with emphasis on the areas of test equipment maintenance and calibration, policies and procedures, and on-line tracking of personnel training and qualifications.</li> 
+</ol> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Establishment of PT&amp;I Technologies: 
+<br> 
+<br> Predictive Testing &amp; Inspection (PT&amp;I) can in some cases provide an alternative to scheduled periodic maintenance by using non-intrusive tests, visual inspection, and performance data to assess machinery condition and determine when maintenance is necessary. Using the following PT&amp;I technologies, a maintenance alert is issued when a deviation from acceptable values is detected: 
+<ul> 
+ <li>Vibration Monitoring &amp; Analysis</li> 
+ <li>Infrared Thermography</li> 
+ <li>Ultrasonic Noise Detection</li> 
+ <li>Lubricant and Wear Particle Analysis</li> 
+ <li>Electrical Condition Monitoring</li> 
+ <li>Non-Destructive Testing</li> 
+</ul> However, specialized equipment may be required such as vibration transducers, low mass accelerometers, sound discs, infrared thermographers and temperature probes, ultrasonic noise detectors and sources, leak detectors, integrated motor circuit analysis testers, data loggers, and multi-channel analyzers. A full set of, for example, electrical testing equipment for a facility can cost in excess of $100,000. Maintenance personnel also need to be trained in such esoteric PT&amp;I techniques as motor current signature analysis. 
+<br> 
+<br> The CWG conducts a review of PT&amp;I technologies currently in use across the Field Center, and identifies other opportunities for their application, as part of the CFMA audit. The review includes an inventory of PT&amp;I capabilities, including equipment and personnel in critical facilities that are dedicated, or could be dedicated, to PT&amp;I purposes. 
+<br> 
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implementation of RCM using a CMMS and Appropriate Performance Metrics: 
+<br> 
+<br> A Computerized Maintenance Management System (CMMS) is needed to monitor an effective and modern NASA maintenance program and link the equipment inventory with data on equipment condition, maintenance activity, and operational history. Having all critical equipment maintainers using a common CMMS that records all PM and PT&amp;I tasks assists the Field Center in coordinating maintenance, certifications and validations, PT&amp;I applications, and other RCM-based initiatives. A systematic and formalized process for updating and validating equipment inventories is necessary to ensure that the CMMS contains accurate equipment information. 
+<br> 
+<br> Development of a standard set of maintenance metrics should be among the first RCM efforts conducted by a critical facility maintenance organization. NASA and these Field Center organizations should derive a set of RCM performance measurements and indicators that reflect the health of their critical facility maintenance programs-- not merely the metrics indicating the level of service being provided by the contract. Standardization of maintenance tasks through maintenance procedure documentation and training will aid both the maintenance programs and the collection of metrics. The CFMA assesses the metrics in use to determine whether: 
+<ol> 
+ <li><b>Definition.</b> Valid metrics exist and are properly defined.</li> 
+ <li><b>Ownership.</b> Staff involved in collecting metrics are concerned about the accuracy, timeliness and consistency of the data reported.</li> 
+ <li><b>Utilization.</b> The metrics are used as performance indicators. They are used for trend analysis to identify improvement opportunities and to evaluate accomplishments.</li> 
+ <li><b>Communication.</b> The metrics are clearly communicated to customers and management.</li> 
+</ol> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Center-Wide Training in RCM and CFMA Procedures: 
+<br> 
+<br> Education and training of individuals who operate and maintain critical facility equipment is critical to evolving from ad hoc maintenance practices into efficient modern programs. The qualitative CFMA should include assessment of RCM and PT&amp;I training and training needs throughout the Field Center. Where applicable, develop a formal center-wide plan for skill evaluation and training that is based on the NASA RCM Guide and provides familiarization with RCM principles and FMEA analysis. Priority for RCM training should be given to quotRCM championsquot within each maintenance organization, reliability engineers, maintenance managers, and craft and administrative support personnel. Existing PT&amp;I programs should be enhanced by providing PT&amp;I training to technicians and analysts assigned to facilities that are not presently covered. In-house seminars on best maintenance practices, RCM, and PT&amp;I should be a regular feature of in-house maintenance programs. The training program should also support continuous CFMA through training individuals in the facility assessment process. 
+<br> 
+<br> Training records should be kept for both NASA and contractor personnel. Important training administrative tasks include maintaining the training requirements, schedules, records, formalized levels, certifications, expenditures, and budgets. Tracking of center personnel training and qualifications is best conducted on-line over a web-based system that provides center-wide oversight and management of training and certifications. If incorporated into center-wide human resource operations, it will facilitate individualized tracking of each employee and contractor's compliance with training requirements. Such a center-wide process eliminates unnecessary paperwork and supports consistent training management throughout the Field Center. 
+<br> 
+<br> 
+<b>Technical Rationale:</b> 
+<br> 
+<br> CFMA provides a systematic methodology for evaluating the upkeep of high value NASA assets. Its implementation and follow-up responds to lessons learned in which the use of conventional ground support equipment has caused significant damage to important NASA products. CFMA employs techniques such as RCM and PT&amp;I to assure that the maintenance of critical NASA facilities and critical ground equipment is consistently performed and modern methods for managing maintenance data are used. Information on the current status of CFMA, including a Major Facilities Inventory, RCM guidance, sample maintenance specifications, and web-based training courses is available from NASA (Reference (4)). 
+<br> 
+<br> 
+<b>References:</b> 
+<ol> 
+ <li>NASA Policy Directive (NPD) 8831.1C, Maintenance of Institutional and Program Facilities and Related Equipment, May 29, 2002. (NPD 8831.1, Rev. D, was issued on June 19, 2003.)</li> 
+ <li>Report of the NASA Critical Facilities Maintenance Assessment (CFMA) Panel, December 15, 2000.</li> 
+ <li>Maintainability Technique No. PM-4, quotPreventative Maintenance Strategies Using Reliability Centered Maintenance (RCM),quot NASA Lesson Learned No. 0891, NASA Engineering Network, December 1, 1994.</li> 
+ <li>NASA Reliability Centered Maintenance Guide for Facilities and Collateral Equipment, February 2000.</li> 
+ <li>NASA Facilities Engineering and Real Property Division website, http://www.hq.nasa.gov/office/codej/codejx/jxdocuments.html.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Without a comprehensive assessment of the condition of major NASA facilities, NASA faces an unknown level of risk to the safety of the public and the NASA workforce. Obsolete or inadequately maintained facilities or equipment can damage or destroy flight systems under development, test, or launch. Mission loss due to the neglect of NASA assets may have a major impact on NASA's reputation. An ad hoc approach to facility maintenance compromises the principle that ground support equipment should, quotFirst, do no harm to flight hardware.quot
+</section>
+<section><h2>Recommendation(s)</h2>
+NASA field centers should perform Critical Facilities Maintenance Assessment as part of a continuous process to identify inadequacies in ground facility readiness that could affect the safety of the public, the NASA workforce, flight hardware, and other critical equipment and property.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 6.12.3 (quotEngineering Practices: Protection and Security of Flight Hardwarequot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006. 
+<br />
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

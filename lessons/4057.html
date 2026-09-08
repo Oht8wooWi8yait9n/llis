@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #4057: Spacecraft Single Phase AC Electrical Power</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #4057: Spacecraft Single Phase AC Electrical Power</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #4057 (Database ID: 4057)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-09-16</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Energy, Flight Operations, Hardware, Independent Verification and Validation, Launch Vehicle, Spacecraft, Test and Verification, Crew Survival Systems, Lander Systems, Orbiting Vehicles, Power, Spacecraft and Spacecraft Instruments, Launch support systems, Vehicle concepts, Product Assurance, Quality, Reliability, Review systems and boards, Engineering design and project processes and standards, Level II/III requirements definition, Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/4057" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Each Orbiter fuel cell power plant (FCP) that provides electrical power to the Orbiter has two pumps as part of its balance-of-plant. These include a coolant pump that circulates coolant through the FCP to control the operating temperature and a water separator/hydrogen circulation pump (H2O/H2 pump) that helps remove water from the FCP and circulate humidified GH2 through the FCP. Each pump runs on 3-phase AC current provided by Orbiter inverters. The H2O/H2 pump has a pump motor condition (PMC) sensor integrated into the motor assembly to provide insight into the H2O/H2 pump loading as well as provide feedback when a motor stalls or there is a current phase loss. Sensor output is obtained by monitoring all three input phases as well as the common return (neutral leg) for changes in current flow. The differences are summed and then converted into a 0–5 VDC signal that can be monitored. Shuttle engineers have long known that Orbiter electrical equipment operating on a single-phase of a 3-phase supply (e.g., Orbiter lighting) can produce a phase imbalance that distorts readings on the PMC sensor. During several launch countdowns, the sensor picked up phase imbalances that were not caused by the FCP but made the motor suspect nonetheless. As a result, significant time and effort were spent investigating these anomalies only to determine that they were caused by normal operation of equipment external to the FCP.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Having a sensitive sensor that relies on obtaining 3-phase current phase imbalances to provide insight into the status of a given piece of equipment can give false indications when the 3-phase current affects other equipment being operated. 
+<br/><IMG  WIDTH="474"  SRC="/llis_lib/images/1034441main_spacecraftsinglephase.jpg"  HEIGHT="350"  BORDER="0" />
+<br/><span class="detailImageDesc">Shuttle Orbiter Fuel Cell Powerplant</span>
+</section>
+<section><h2>Recommendation(s)</h2>
+In the future, either develop a sensor that is not subject to distortions caused by other equipment or provide a dedicated source of electrical power to the equipment being monitored.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

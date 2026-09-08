@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0849: Predictive Maintenance Program</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0849: Predictive Maintenance Program</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0849 (Database ID: 849)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/849" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-13 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability. Predictive maintenance allows for scheduling of maintenance when it is required and when it will have the least effect on scheduled activities requiring support of the equipment in question. Unexpected equipment breakdowns and scheduled maintenance downtime for periodic disassembly and inspection to determine equipment condition are virtually eliminated. Additional discussion of the benefits of predictive maintenance is provided in the following pages.</p>
+
+    <p>Predictive maintenance is a technique which checks the "health" of an item while it is operating using one or more sophisticated tools. The capabilities for predictive maintenance exist because of the availability of desktop computers, and the increased sophistication of equipment monitoring instruments. Too much or too little maintenance is avoided because the equipment is monitored on a regular basis providing trend data that can be used to project probable machine alarm dates. According to the Electric Power Research Institute (EPRI), the annual maintenance cost of such a program is reduced by 50% or more to between $7 and $9 per horsepower.</p>
+
+    <p>Predictive maintenance has received a great deal of attention in the past five years or more. U. S. industry spent $200 billion in 1985 alone, to maintain plants and equipment. Studies by the EPRI show that the annual maintenance cost of repairing machinery when it breaks down (corrective maintenance) is $17 to $18 per horsepower. Contrasted to that is preventive maintenance, which uses statistics to determine the probable health of equipment. However, in the real world, machines do not follow averages. The result is usually "over maintenance" or "under maintenance." The EPRI Studies show that the annual maintenance cost per horsepower using preventive maintenance is between $11 and $13. As was stated earlier, the EPRI study shows that predictive maintenance reduces manual maintenance costs to between $7 and $9 per horsepower.</p>
+
+    <p>Benefits from implementing a Predictive Maintenance Program include:</p>
+
+    <ul>
+      <li>Condition of equipment under a predictive maintenance program is known, permitting repairs to be planned and carried out without interrupting scheduled support activities.</li>
+
+      <li>Reduced maintenance costs are realized through the use of predictive maintenance. Maintenance needs can be anticipated and planned. Maintenance activities are more efficiently planned from a standpoint of manpower, parts, and tools. Catastrophic failures, which impose secondary, expensive damage, are also avoided.</li>
+
+      <li>Improved equipment performance is achieved through the use of predictive maintenance. Predictive maintenance measures equipment condition so that corrections can be made before performance is compromised.</li>
+
+      <li>Predictive maintenance provides several potential areas for energy savings. Elimination of high energy vibration sources such as misalignment and imbalance will reduce machine power consumption. Motor phase imbalance, which increases power consumption can be corrected resulting in savings in power and increased motor life.</li>
+    </ul>
+
+    <p>Technical Description</p>
+
+    <p>Predictive (or condition-based) maintenance is an outgrowth of a preventive maintenance program. Today's state of the art technologies, readily available user friendly desk top computers, and increased sophistication of equipment monitoring instruments, now make it possible to have a reliable and cost effective predictive maintenance program.</p>
+
+    <p>The first step in developing an effective predictive maintenance program is to determine the cost of the maintenance program such as cost for maintenance personnel, repairs, spares and cost associated with losses incurred due to equipment being down. The next step is to identify the number of man-hours required to monitor the equipment. Simple machinery (motors, pumps, or fans) will require fewer points to accurately detect developing problems than more complex equipment, such as turbines or generators. By counting the pieces of equipment and the number of measurement points, you can estimate the level of manpower required.</p>
+
+    <p>More critical equipment may require more frequent monitoring, which will increase manpower requirements. The monitoring frequency is a function of the critical nature of the equipment; so the next step is to set up an equipment classification system. For example:</p>
+
+    <ul>
+      <li>Class 1 - essential equipment - includes equipment that must be on-line to continue all or a major part of a process. Loss of this equipment would have a major impact on safety, productivity and availability. Also included in this group would be equipment that has a high repair cost, or a long lead time for ordering repair parts.</li>
+
+      <li>Class 2 - critical equipment - includes equipment that would limit a major part of a process, and equipment with high initial replacement costs, or chronic maintenance problems.</li>
+
+      <li>Class 3- serious equipment - includes equipment that is not critical to process, but require monitoring to ensure acceptable process performance.</li>
+
+      <li>Class 4 - other equipment - includes high speed or high load machinery that is prone to premature failure because of its severe operating mode, but is not considered critical to the process.</li>
+    </ul>
+
+    <p>Once equipment has been properly grouped, the data acquisition schedules and routes can be established; and projected manpower levels determined. If sufficient staff is not available, the potential savings from the program must justify additional personnel.</p>
+
+    <p>Besides salaries, costs should include the cost of diagnostic and analytical equipment, office space, and any overhead costs that will be charged to the group. Costs should also include training and additional skill development. Training costs can range from a few hundred to a few thousand dollars in the first year; depending on the level of experience and the size of the staff.</p>
+
+    <p>A typical predictive maintenance system contains four main components: a microprocessor based data collector, a host computer, software and transducers. Each is an important element and it is important that they function well as a total system. Some important characteristics of the integrated system to consider are:</p>
+
+    <ul>
+      <li>User friendly software and hardware. The predictive maintenance program will often be staffed with technicians and engineers that understand the mechanics of machine operation but not necessarily computers. Hardware and software must be designed for simple, straightforward operation. Error correction should be simple, but it should not allow the free form modification of data.</li>
+
+      <li>Automated data acquisition management and trending. The object of using a microprocessor based data collector and a host computer is to remove the possibility of human error during data input, minimize manpower requirements, and automate as much of the data handling as possible.</li>
+
+      <li>Flexibility. The system should be capable of collecting, storing and presenting data such as vibration data in a variety of formats (displacement, frequency, velocity, acceleration, cpm) and providing accurate data analysis. The system should accurately accept any commercially available transducer input.</li>
+
+      <li>Reliability. The hardware and software should have proven field experience. Ask for a users' list and find out strengths or weaknesses from people who have experience with the system.</li>
+
+      <li>Accuracy. Data must be accurate and repeatable since decisions on equipment condition will be made based on the information that is collected and analyzed.</li>
+
+      <li>Technical support. Training and technical support is a very important consideration. A properly configured predictive maintenance system should provide valuable information with a minimum level of manpower, and only a limited knowledge of the theory behind the predictive maintenance techniques used. Each system will, however, require some training in the basics of data base development and diagnostics.</li>
+
+      <li>
+        Report generation. Maximum flexibility in format and content is important and the system should be able to generate reports at several levels of detail. Examples of the types of reports the system should be able to produce are:
+
+        <ul>
+          <li>Exception report. This report consists of listing equipment that have exceeded one or more alarm or alert limits, missing data points, notepad observations, or equipment with a predicted failure before the next scheduled measurement date.</li>
+
+          <li>Last measurement report. This report is a listing of components, notepad observations, project failure time, and missed measurement points. The report would include information shown on the exception report and a complete review of all equipment.</li>
+
+          <li>A machine history report recapping total equipment history including all components.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>If the system does not automatically generate these reports the manpower requirements can increase substantially.</p>
+
+    <p>If a limiting factor is staff levels or experience; or if the cost-benefit analysis is inconclusive, a pilot program may be the best solution. Equipment vendors will help establish a program and phase out their support as the in-house staff becomes proficient. This option allows the development of financial benefits, provides hands-on training for the in-house staff, and develops a data base. Another option is to contract with an outside company to run the program. With this option, the need for additional in-house staff is eliminated, as is the need for an investment in data acquisition and analysis equipment. One should avoid vendors who quote fixed price per measurement point regardless of the type of equipment. Because of the type of equipment being measured complexity of the measurements will vary and also their cost. A price based on equipment type (motors, pumps vs turbines, generators) should be requested.</p>
+
+    <p>There are numerous techniques available for implementing a Predictive Maintenance Program. Techniques that may be found in various predictive maintenance programs include:</p>
+
+    <ul>
+      <li>Vibration analysis which is performed on mechanical equipment to evaluate the online condition of its mechanical parts, and effect on related pieces of equipment. Effectiveness of vibration mounts, shafts, bearings, coupling alignment and impeller balance are measured and monitored to determine if equipment is functioning properly and within specifications.</li>
+
+      <li>Ferrography Analysis, a wear particle analysis being diagnostic and predictive techniques to evaluate the on-line condition of interacting lubricated or fluid powered parts. Lubricants or fluids are analyzed for condition, level and type of contamination. A wide array of problems with equipment, the lubricants/fluids and maintenance methods can be determined by use of ferrography. Utilization of oil analysis has and will continue to expand the existing life of critical equipment.</li>
+
+      <li>Thermography is used to analyze equipment that exhibits over-heating and heat links when not operating properly. This includes equipment as varied as circuit breaker panels, electronic circuit boards, cryogenic piping, GN<sub><small>2</small></sub> heaters and many others.</li>
+    </ul>
+
+    <ul>
+      <li>Laser Alignment is used to detect misalignment in mechanical equipment components that can lead to accelerated wear or possible catastrophic failure. It is used to verify proper installation and even fabrication of mechanical equipment before operation. It is also used for online monitoring to ensure proper alignment is maintained during equipment operation. Correct alignment will reduce power consumption.</li>
+
+      <li>Motor Analysis is used to determine the level of degradation in electrical motor circuits, such as individual phase resistance from power bus disconnect through the motor windings, phase to ground resistance, inductance of motor coils and capacitance of each phase to ground. Detecting and correcting phase imbalance saves in power consumption and prevents motor core reduction.</li>
+
+      <li>Ultrasonics is that technology used to detect hidden flaws in materials, especially metals. This technology has advanced into a completely digital and portable microprocessor-controlled ultrasonic flaw detector. It is safe and faster than using X-Ray technology to detect flaws.</li>
+
+      <li>Visual inspection where plant or maintenance engineers, on a regular basis, visually inspect each critical system.</li>
+    </ul>
+
+    <p>A comprehensive predictive maintenance program is composed of several techniques which, when combined, can predict most mechanical and electrical problems found in equipment.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Lockheed Space Operations Company Predictive Engineering Technology Program Implementation Plan, 10/94.</li>
+
+      <li>EG&amp;G Florida, KSC Predictive Maintenance Plan, EGG-4061130, 11/20/92.</li>
+
+      <li>P/PM Technology Publications (issues from 1986 or present).</li>
+
+      <li>Maintenance Technology Publications (issues from 1993 to present).</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Predictive maintenance is a technique which checks the "health" of an item while it is operating using one or more sophisticated tools. The capabilities for predictive maintenance exists because of the availability of desktop computers, and the increased sophistication of equipment monitoring instruments. Too much or too little maintenance is avoided because the equipment is monitored on a regular basis providing trend data that can be used to project probable machine alarm dates. According to the Electric Power Research Institute (EPRI), the annual maintenance cost of such a program is reduced by 50% or more to between $7 and $9 per horsepower.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Predictive maintenance is a technique that allows for a systematic method of monitoring and trending of equipment condition. This activity takes place while equipment is on-line and provides early warning of equipment operation approaching out of limit conditions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used by the Kennedy Space Center Shuttle Processing Contractor and Base Operations Contractor Predictive Maintenance Programs for Ground Support and Facilities Equipment, U. S. Industry (Utility, Manufacturing, Processing, etc.).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

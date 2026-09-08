@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1216: Use of "Pathfinder" Strategy to identify configuration process anomalies</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1216: Use of "Pathfinder" Strategy to identify configuration process anomalies</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1216 (Database ID: 1216)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-04-21</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1216" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The initial runs of an On-Orbit Constraint Test (OOCT) at KSC ran into a number of anomalies. These initial runs were the first attempts (or "pathfinder" event) in a series of OOCT from which lessons learned would result in smoother, more efficient OOCTs prior to future flights. The OOCT are a series of tests that emulate one side of an element to element interface using test aids. These Test Aids are set up in a test configuration with the flight element to be tested. The flight crew actually comes to KSC to conduct the test on the flight hardware. The OOCT is considered training for the crew as well as a checkout of the on-orbit procedure with the actual flight hardware.</p>
+
+    <p>Both Extra-vehicular Activities (EVA) and the Inter-vehicular Activities (IVA) are subject to the OOCT discipline. In an OOCT, connect cables, fluid ducts and umbilicals on the flight are run in a test configuration so that routing, mating/de-mating of the flight hardware, clocking, length of lines, stress/strain or twisting of cables and potential obstructions to be encountered can be evaluated.</p>
+
+    <p>This pathfinder OOCT occurred for Flight 3A where Node 1 was emulated (Node 1 is on-orbit) and with PMA3 (Flight 3A) which had been delivered (DD250) to NASA. The PMA3 configuration actually encountered during the test set-up was different than envisioned from review of the drawing package from which the test aid alignment data and test procedure had been generated. The test procedures are generated from the on-orbit operational sequences being built by mission planners (in this case, in JSC's Missions Operations Directorate, or MOD).</p>
+
+    <p>Because of the misunderstandings documented in the root causes below, the test alignments, setup of the test aids and the actual conduct of the tests exceeded the planned test timeline. While the test was completed successfully, a regression test will have to be conducted to repeat parts of the test because of insufficient / incorrect data available for the test procedure.</p>
+
+    <p>Root causes:<br />
+    </p>
+
+    <ol>
+      <li>Setup and Alignment Data for the Test Aid was insufficient, incorrect and misunderstood by the KSC support teams responsible for the test aid setup and alignment of the test configuration. There was no tabletop review of this data with KSC prior to these pre-test activities nor was the data formally released prior to pretest activities.</li>
+
+      <li>The On-Orbit Constraints Meeting was not utilized as a requirements gate review. Since this was the initial test, this meeting was process oriented and lacked specific implementation requirements to be agreed to and baselined.</li>
+
+      <li>Hardware fit interference - overhanging of PMA3 by EVA test aid - was not anticipated. It was a surprise to the test team. With appropriate configuration control processes, this would not have occurred. Scaffolding and protective padding was applied to the element.</li>
+
+      <li>Undocumented mating targets were applied to mating / sealing surfaces because target locations identified were not on same planar surface as expected. Because the test technicians had done similar exercises before, the targets were applied successfully prior to test.</li>
+
+      <li>N2 and O2 lines were incorrectly called out in the test procedure. Test Procedure was written to the PMA3 to Node3 ICD that is the correct data source. This was questioned prior to TRR and PMA3 Flight Element team provides a sketch of the lines which was also incorrect. The running of the test identified several errors including this one.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When faced with first-time performance of complex tests and operations, consider using "pathfinder" disciplines to perform process shakedowns to identify loopholes and escapes.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Test Aid Configuration Control</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+    a) Identify a KSC Test Conductor with knowledge of the flight hardware.<br />
+    b) Conduct tabletop reviews of all test aid requirements and test procedure documentation with KSC personnel prior to release.<br />
+    c) Structure test procedures so that all crew conducted steps are congregated in one section for efficient accomplishment. Identify specifically on the test timeline and at the crew test pre-brief.<br />
+    d) Release all test aid requirements documents and test procedures prior to TRR.<br />
+    e) Add test aid to flight element configuration drawing as an Appendix to the Test Aid Requirements Document.<br />
+    f) Schedule all reviews and document releases on the element schedules at KSC <br />
+
+    <ol start="2">
+      <li>Use of existing management forums</li>
+    </ol>
+    a) Create a checklist of success criteria for the On-Orbit Constraints Meeting. Add checklist to the agenda for all On-Orbit Constraints Meetings.<br />
+    b) Add obstruction dimension and mounting requirements for the OOCT to the Test Aid Requirements Document (TARD) for release.<br />
+    c) Add test aid setup and alignment requirements data to the TARD as an Appendix for release. <br />
+
+    <ol start="3">
+      <li>Integrated configuration control</li>
+    </ol>
+    a) Add general warning to the test procedures on protecting flight hardware when overhangs occur.<br />
+    b) Develop a footprint of the test configuration for all tests.<br />
+    c) Add performance of CAD model assessment of the test configurations to identify potential flight hardware safety concerns.<br />
+    d) Add a test configuration assessment of the On-Orbit Constraints meeting and a review of the assessment at the Test Readiness Review.<br />
+
+    <ol start="4">
+      <li>Congency planning for discrepancies to reduce downstream impacts</li>
+    </ol>
+    a) Add element and system hardware representatives to the mandatory review of test requirements and test procedure documents.<br />
+    b) Add all subsystem hardware providers to the Test Readiness Review.<br />
+    c) Call out specifically in the test procedure all locations for the application of targets and the procedure by which they are to be applied.<br />
+    d) Include the element managers from both the hardware provider and the program integrator are at the TRR. [Reschedule the TRR if necessary to insure proper attendance.<br />
+
+    <ol start="5">
+      <li>Resolving data conflicts</li>
+    </ol>
+    a) All data conflicts should be identified as Test Constraints and identified with resolution at the TRR. Only formal engineering paper should be considered sufficient documentation of resolution and closure not sketches.<br />
+    b) Add all Test Constraints to the TRR agenda as a specific topic. This will act as a second review gate of all issues prior to the start of test.<br />
+    <br />
+    <br />
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Action taken at Houston: This lesson is one that was entered by the Test &amp; Verification team. As a result of our earlier efforts in performing fit checks and on-orbit constraints test, we learned some valuable lessons. Everyone of the listed recommendations has been implemented and are currently in place. The ISS Boeing Physical Interface Verification Manager was brought in to add discipline and experience to this effort. As a result of his leadership, the process has turned the corner. The results of these lessons have been captured in a program instruction for this effort and this approach has been approved by the ISS Test &amp; Verification Control Panel.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

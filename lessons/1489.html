@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1489: Instrument Simulators/Engineering Models</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1489: Instrument Simulators/Engineering Models</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1489 (Database ID: 1489)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-07-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1489" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>With the advent of on-orbit reprogrammable remote sensing instruments, the need for high fidelity hardware capable of executing an identical copy of flight software or firmware for Field Programmable Gate Arrays (FPGA)- based designs to verify and validate flight software changes prior to implementation on orbit has become a necessity. An engineering model or spread system (engineering hardware spread-out on a table) created to support the development for the Halogen Occultation Experiment (HALOE) proved to be an extremely useful tool used to support flight software changes made early in the mission (Upper Atmospheric Research Satellite, 1991). Subsequent flight projects such as the Stratospheric Aerosol and Gas Experiment (SAGE III) project addressed this requirement directly by adding a statement of work requirement for a deliverable high-fidelity engineering model as part of the program specifically to support on-orbit flight software maintenance and ground-based anomaly
+    troubleshooting.<br />
+    <br />
+    The SAGE III high-fidelity engineering model was developed by Ball Aerospace and Technologies Corporation, the SAGE III instrument prime contractor. The prototype was constructed using flight-design electronics using commercial parts, engineering model mechanisms, and executed identical flight software to the flight instrument. The system was integrated using lower fidelity mechanical parts and left over flight hardware from the SAGE II program.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The high-fidelity SAGE III simulator proved itself to be an invaluable tool in expediting instrument development as well as meeting the requirement to verify and validate flight software changes prior to execution during on-orbit operations. Specific lessons learned follow:<br />
+    <br />
+    </p>
+
+    <ol>
+      <li>The SAGE III high-fidelity simulator was used to verify and validate designs prior to committing to a flight hardware build. This approach allowed designers to test their design in a less restrictive environment than required for flight hardware and correct design problems prior to building flight hardware. We believe that this approach saved time and flight hardware rework.</li>
+
+      <li>The SAGE III high-fidelity simulator facilitated flight software development. SAGE III flight software was developed in parallel with flight hardware using the high fidelity simulator. Significant schedule and costs were saved using this approach because the hardware and software development was a parallel rather than serial activity.</li>
+
+      <li>Development risk was reduced by testing flight software on engineering hardware rather than flight hardware. This approach avoided the potential situation where critical and high value flight hardware was operated using unproven flight software. The likelihood of damage to critical flight systems by errant software was avoided using this approach.</li>
+
+      <li>The high fidelity simulator proved to be invaluable during anomaly troubleshooting during integration and test. For instance, the simulator was used to isolate a hardware problem and to develop a software fix for an interface communications problem that occurred infrequently (two-three times) when the instrument was tested at cold temperatures during thermal vacuum testing. This ability allowed the environmental test program to continue in parallel with the anomaly investigation and work-around solution development.</li>
+
+      <li>The simulator was used to develop, verify, and validate flight software changes during on-orbit operations. The simulator was needed to work around problems with spacecraft provided data (navigation data and attitude data) and other problems with the flight code found during on-orbit operations but not identified during integration and testing.</li>
+
+      <li>The instrument operations team assumed responsibility for primary flight software sustaining engineering during spacecraft integration. Formal training and &ldquo;behind-the-wheel&rdquo; operation of the simulator was performed to ensure the operations team was capable and ready to perform these functions.</li>
+
+      <li>Configuration management of the simulator is required. Particular emphasis should be placed on verifying that the ground simulator configuration and software image match the flight configuration to the greatest extent possible.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>NASA Announcement of Opportunities for flight instrument development should require that proposals address plans for engineering model development and their approach for on-orbit flight software maintenance.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+
+      <li>Project managers should plan and budget engineering model hardware/ high fidelity simulators as part of the instrument development to expedite development and maintain flight software during on-orbit operations.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

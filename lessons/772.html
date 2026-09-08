@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0772: Fault Protection</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0772: Fault Protection</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0772 (Database ID: 772)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/772" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1243; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Fault protection design maximizes the probability of spacecraft mission success by avoiding possible single failure points through the use of autonomous, short-term compensation for failed hardware.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Except during critical event periods, the primary purpose of an autonomous fault protection system is to place the spacecraft in a safe, commandable state which can be maintained for a reasonable period (typically two weeks) following a fault. During critical periods, the primary purpose of the fault protection system is to ensure the completion of the critical event. A simplified block diagram representing the following three general types of fault protection is illustrated in Figure 1:</p>
+
+    <ul>
+      <li>Subsystems alone.</li>
+
+      <li>Subsystem to system, and</li>
+
+      <li>System to ground control.</li>
+    </ul>
+
+    <center>
+      <a href="https://llis.nasa.gov/llis_lib/images/1009230main_0772-1l.jpg"><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009229main_0772-1.jpg"  HEIGHT="375"  BORDER="0" /></a><A HREF="/llis_lib/txt/1009706main_0772-1.txt"  >[D]</A>
+    </center>
+
+    <p><b>Fault Protection Allocations.</b> All on-board, post lift-off, autonomous fault protection is designated as either "subsystem internal" or "system" fault protection. Fault protection engineering elements which have been allocated fault protection responsibility must provide the requirements and design for the associated detections, monitors, responses, and diagnostic data in compliance with project functional requirements. Where science instruments include fault protection in their design, designers must still ensure compliance with spacecraft project fault protection requirements if one of the following conditions apply:</p>
+
+    <ul>
+      <li>The fault protection internal to the instrument is dependent on non-standard services from another subsystem (or another instrument), or</li>
+
+      <li>Internal failures have an impact external to the instrument (viz, a change in power state, momentum, support to other instruments).</li>
+    </ul>
+
+    <p><b>Spacecraft Safing.</b> Spacecraft "safing" is a general purpose safe-state response which is initiated by both system and subsystem internal fault protection. The purpose of this response is to provide the following:</p>
+
+    <ul>
+      <li>A safe state for the hardware</li>
+
+      <li>An uplink, and</li>
+
+      <li>A downlink (with some exceptions for specific failure conditions).</li>
+    </ul>
+
+    <p>To achieve these goals, the normal stored sequence is terminated and non-essential spacecraft loads are powered off.</p>
+
+    <p><b>Undervoltage Response.</b> Most spacecraft designs include an undervoltage response, which is designed to protect the spacecraft in the event of a short or a bus overload. The hardware senses when the power drops below an established value for a specified time. If the criteria are met, the power system sheds all non-essential loads from the bus and indicates the undervoltage condition to the Command Subsystem, which will initiate the undervoltage recovery response. Critical spacecraft memories are maintained throughout the undervoltage.</p>
+
+    <p><b>Functional Implementation Requirements.</b> Fault protection is typically allocated to the on-board elements of the system in accordance with the following principles:</p>
+
+    <ul>
+      <li><i>Spacecraft versus ground control.</i> Autonomous fault protection is included on board the spacecraft only if a response by Mission Operations is not feasible nor practical, or if action is required within two weeks of detecting the failure. Otherwise, ground control is responsible for fault recovery. In both cases, ground control is responsible for failure diagnosis and, if necessary, the configuration of the spacecraft to nominal operations after the fault.</li>
+
+      <li><i>Protection against sabotage and operator errors.</i> To simplify the development of fault protection, autonomous fault protection is not required to protect against sabotage or operator errors, although such protection is not prohibited. There is limited spacecraft protection against these failures (viz, information system data integrity checks and some software checks).</li>
+
+      <li><i>Protection against spacecraft hardware and software design errors.</i> To simplify the development of fault protection, autonomous fault protection is usually not required to protect against spacecraft design errors, although it is not prohibited if practical. The practice of fault protection typically provides some limited spacecraft protection against design errors (e.g., thermal fault responses).</li>
+    </ul>
+
+    <p>The autonomous fault protection function is responsible for all on-board fault detections and corrections except those routinely required to ensure spacecraft data integrity (viz, EDAC, Reed Solomon encoder, checksums, etc.). Data error detections and corrections may be used, however, for fault protection purposes. The spacecraft information system typically has the primary responsibility for ensuring data integrity.</p>
+
+    <p><b>Fault Protection Design Requirements.</b> Management and coordination of fault detection, monitoring, and response, for both system and subsystem internal fault protection, is performed in accordance with the following general rules:</p>
+
+    <ul>
+      <li>
+        <i>Enables/disables for responses.</i> Where applicable, fault responses should have two enable/disable mechanisms (or the functional equivalent):
+
+        <ol>
+          <li>an enable/disable by stored sequence, and</li>
+
+          <li>an enable/disable by ground control or by fault protection algorithms.</li>
+        </ol>
+      </li>
+
+      <li><i>Enables/disables for monitor activation of any response.</i> If a response can be initiated by more than one monitor, those monitors should include an enable/disable mechanism or the functional equivalent.</li>
+
+      <li><i>Enable/disable state specification.</i> Each enable/disable is specified by a single parameter unique to each fault protection algorithm.</li>
+
+      <li><i>Enable/disable strategy - general.</i> As a goal, fault protection monitors and responses should be designed to be enabled for the entire mission. This reduces the risk of incorrect fault protection states.</li>
+
+      <li><i>Enable/disable strategy - critical events.</i> For critical events, enable/disable strategies may be used to minimize or prevent the effects of an erroneous fault indication.</li>
+
+      <li><i>Response initiation.</i> Fault responses are initiated if and only if spacecraft performance is unacceptable, or there is a significant risk to the mission or to subsystem safety.</li>
+
+      <li><i>Parameter modifications.</i> All fault protection parameters which may reasonably be expected to change as a function of mission mode, type of activity, fault history, or operational experience should be alterable by ground control without requiring flight software modification.</li>
+
+      <li><i>Software modifications.</i> To the extent possible, monitor and response algorithms should be stored in programmable RAM.</li>
+
+      <li><i>Configuration compatibility.</i> On-board fault protection should be designed to respond to a fault while in any possible spacecraft configuration (e.g., fault protection should be able to accommodate all possible combinations).</li>
+
+      <li><i>Independence from instruments.</i> Engineering fault protection should not depend on science instruments or their data.</li>
+
+      <li><i>Multiple faults.</i> At a minimum, fault protection should be designed with the assumption that only one fault occurs at a time, and that a subsequent fault will occur no earlier than the response completion time for the first fault. As a goal, fault protection should be capable of recovering from multiple successive or coincident faults provided that the faults and associated fault algorithms are independent.</li>
+
+      <li><i>Propagation of failures.</i> Autonomous fault protection assumes that spacecraft hardware design ensures that a single failure in a subsystem (including instruments) cannot propagate to its redundant unit or to another subsystem, or prevent switching to its redundant unit. This can be verified by performing a failure modes, effects, and criticality analysis (FMECA) or fault tree analysis (FTA).</li>
+    </ul>
+
+    <p><b>Typical Fault Detection Design Requirements.</b> Hardware and software detection sources have two criteria:</p>
+
+    <ul>
+      <li><i>Direct detection.</i> Detection mechanisms should be as direct as possible (i.e., a direct measurement is preferred over a calculated or derived measurement).</li>
+
+      <li><i>Detection coverage.</i> Detection mechanisms should only be required to detect a failure to the level at which that failure can be isolated or corrected.</li>
+    </ul>
+
+    <p><b>Design Requirements for Fault Monitors.</b> Software monitors used by system and subsystem internal fault protection have the following features:</p>
+
+    <ul>
+      <li><i>Monitor thresholds.</i> Where possible, thresholds should use reasonableness checks, detection filtering (to exclude certain faults from a previously established fault database), or redundant detections.</li>
+
+      <li><i>Threshold modifications.</i> Monitor threshold values should be alterable by ground or sequence command, or by fault protection responses as appropriate. As a goal, monitors are best designed to detect and disregard failed sensors.</li>
+
+      <li><i>Redundant detection.</i> For detections where an inadvertent trip would result in a severe response (viz, downlink loss, irreversible hardware swaps, large use of expendables, critical sequence cancellation), and where a sensor anomaly could cause an inadvertent trip, independent physically or functionally redundant detections are employed such that simultaneous detections are necessary for response initiation.</li>
+
+      <li><i>Fault response tolerance.</i> Monitors are designed to be tolerant of off-nominal conditions following a reconfiguration resulting from a fault protection response (e.g., thresholds might be relaxed as part of a response).</li>
+    </ul>
+
+    <p><b>Design Requirements for Fault Responses.</b> System and subsystem internal fault response concerns include:</p>
+
+    <ul>
+      <li><i>Fault response primary responsibility.</i> Following an anomaly, fault responses should ensure spacecraft commandability and the maintenance of a safe state for at least two weeks. This requirement is superseded only by a requirement to complete a critical event.</li>
+
+      <li>
+        <i>Fault protection priorities.</i> Fault responses are designed with the following priorities:
+
+        <ol>
+          <li>Protect critical spacecraft functionality,</li>
+
+          <li>Protect spacecraft performance and consumables,</li>
+
+          <li>Minimize disruptions to normal sequence operations, and</li>
+
+          <li>Simplify ground recovery response, including providing for downlink telemetry.</li>
+        </ol>
+      </li>
+
+      <li><i>Multiple levels of response.</i> Where possible, response design includes multiple levels of response, with the response actions executed in order of increasing severity.</li>
+
+      <li><i>Real-time ground responses.</i> Autonomous fault protection is designed so as to not require real-time ground responses for recovery from known faults.</li>
+
+      <li><i>False alarm tolerance.</i> Unintended entry into a fault protection response in the absence of a fault must not present a hazard to the spacecraft or mission. For critical event periods, however, this requirement is relaxed and is considered a goal.</li>
+
+      <li><i>Use of redundant (and spare) units.</i> Redundant or spare units may be used by autonomous fault protection responses if a satisfactory alternative design is not available.</li>
+
+      <li><i>Unpowered redundant units.</i> The transition of a unit from "off" to "prime" must not require ground commands in order to support spacecraft fault protection and mission critical functions.</li>
+
+      <li><i>Component warm-up times.</i> Fault responses should take into account component warm-up times and similar delay requirements.</li>
+    </ul>
+
+    <p><b>Data Handling Requirements.</b> The following data handling tasks are performed:</p>
+
+    <ul>
+      <li><i>Recording engineering data.</i> The combination of sequences and fault responses should ensure the recording of engineering data prior to, during, and after the execution of any fault response. Some exceptions are made for recorder and command subsystems failures.</li>
+
+      <li><i>Storage and preservation of diagnostic data.</i> Fault protection is designed to include the storage of diagnostic data (see Telemetry and Diagnostic Data on page 7), and ensure that data are not overwritten as the result of a response action. This requirement only applies if the writing of diagnostic data is not affected by the original fault.</li>
+
+      <li><i>Protection of critical science and engineering data.</i> Fault responses must not destroy "critical data" stored on-board the spacecraft. "Critical science and engineering data" must be defined by project policy.</li>
+    </ul>
+
+    <p><b>Requirements Interactions with Stored Sequences.</b> The following interactions with on-board sequences may be necessary:</p>
+
+    <ul>
+      <li><i>Response design for critical events.</i> Fault response is designed to ensure the completion of the critical event as and when required, with spacecraft safety having lower priority, until the critical events are completed. Orbit insertion is an example of a critical event.</li>
+
+      <li><i>Response design for non-critical events.</i> Unless required to execute a critical event, fault responses should stop any on-board sequence(s) only if the sequence(s) compromises the integrity of the fault response, or if the fault response compromises the integrity of the sequence.</li>
+
+      <li><i>Reactivation of stored sequences.</i> After completion of a response which terminates a non-critical stored sequence, fault responses should not autonomously resume the terminated sequence.</li>
+    </ul>
+
+    <p><b>Safing Requirements.</b> "Safing" is defined as a general purpose fault response which results in the cancellation of non-critical sequences, the possible suspension of critical sequences, and a general reconfiguration of spacecraft components. Safing responses typically include the following general features:</p>
+
+    <ul>
+      <li><i>Uplink communications.</i> The safing response provides for a spacecraft state and attitude that ensures uplink commandability in the long term.</li>
+
+      <li><i>Downlink communications.</i> The safing response provides for a spacecraft state and attitude that ensures continuous engineering telemetry with positive link margin.</li>
+
+      <li><i>Environmental constraints.</i> The safing response meets boresight and radiator environmental constraints.</li>
+
+      <li>
+        <i>Safing priorities.</i> When uplink, downlink, and hardware safing requirements are in conflict, the following priorities apply:
+
+        <ol>
+          <li>Provide a safe state for the hardware,</li>
+
+          <li>Provide an uplink, and</li>
+
+          <li>Provide a downlink.</li>
+        </ol>
+
+        <p>Ultimately, uplink must be provided for in the long term.</p>
+      </li>
+
+      <li><i>Benign spacecraft configuration.</i> As a goal, safing responses should place the spacecraft in an operationally benign state. This includes but is not limited to the following: (1) powering off of all non-essential equipment including instruments, and (2) stopping of all non-essential spacecraft processes.</li>
+    </ul>
+
+    <p><b>Telemetry and Diagnostic Data Requirements.</b> The spacecraft design should ensure that following an anomaly, spacecraft telemetry will be sufficient to perform the preliminary failure identification and analysis required for ground control to perform near-term corrective actions. At a minimum, the real-time telemetry stream includes the following:</p>
+
+    <ol>
+      <li>Measurements to unambiguously identify the current engineering subsystem configuration and operating status,</li>
+
+      <li>Enable/disable states of fault protection software, and enable/disable states of fault protection dedicated hardware,</li>
+
+      <li>Active/inactive states for fault protection software responses,</li>
+
+      <li>Identification that a fault response has been activated,</li>
+
+      <li>Monitor detection logic output (regardless of whether the monitor is enabled or disabled), and</li>
+
+      <li>As appropriate, cumulative counters of faults detected.</li>
+    </ol>
+
+    <p>Telemetry design should ensure reasonable and timely sampling frequencies for these items. As a goal, the real-time telemetry stream should include monitor high water marks. A "high water mark" is defined as a measurement which identifies how close a monitor is to indicating a failure.</p>
+
+    <p>Following an anomaly involving a fault protection activity, the spacecraft design should ensure that sufficient information is available to reconstruct the audit trail-- the sequence of fault protection events following the anomaly. Diagnostic data is also needed to analyze the anomaly and to identify the sequential effects of the anomaly on spacecraft performance. The data should be available in non-volatile telemetry or stored on-board for later retrieval by the ground system. At a minimum, diagnostic data should include unique identification and time-tagging of monitors and responses which have been active. It is also desirable that diagnostic data include the value of the measurement which initiated a response.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>JPL has incurred numerous instances of presumably redundant systems which failed to successfully transfer to the back-up path when the primary path did not function. A rigorous, systematic search, crosstrap FMECA, or sneak paths analysis could have foretold the failure, and redesign could have averted the problem. Prevention of propagating failures has its greatest value when supplemented by an on-board fault protection system.</p>
+
+    <p>The practice of failure propagation prevention is of most value in a repairable system. Non-propagation minimizes the number of units requiring repair. In a non-fault protected spacecraft, this capability is limited to the preflight phases of either subsystem or system testing. In a fault protected spacecraft, it can be extended to the flight phase as well. The key to this investigation is a complete diagram of the involved interface circuits which penetrates each unit to a circuit depth sufficient to prove that no possible failures in one unit can propagate to become irreversible hardware failures in a second unit. Another input is a complete list of part or assembly failure modes for hypothesis.</p>
+
+    <p>Successful transfer (or equivalently independence of the primary and back-up functions) is a necessity for either repairable or non-repairable systems and requires the same complete interface diagram and complete list of failure modes. Such a list must include items such as:</p>
+
+    <ul>
+      <li>Part failure modes (opens, shorts, stiction, etc.),</li>
+
+      <li>Single event effects (latch-up, transfer, etc.), and</li>
+
+      <li>EMI (latch-up, transfer, overvoltage).</li>
+    </ul>
+
+    <p>These last two items are critical since they can affect both sides of a redundant pair.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>JPL D625-505; Vol. 8, Fault Protection System Design and Operations.</li>
+
+      <li>699-CAS-3-330; Fault Protection Requirements, Cassini Project.</li>
+
+      <li>699-CAS-3-331; System Fault Protection Algorithms, Cassini Project.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>A decision to forego fault protection will increase the risk of unrecoverable single point failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Fault protection is the use of cooperative design of flight and ground elements (including hardware, software, procedures, etc.) to detect and respond to perceived spacecraft faults. Its purpose is to eliminate single point failures or their effects and to ensure spacecraft system integrity under anomalous conditions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Galileo, Magellan, Cassini.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

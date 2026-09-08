@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0658: Electrical Grounding Practices for Aerospace Hardware</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0658: Electrical Grounding Practices for Aerospace Hardware</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0658 (Database ID: 658)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/658" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1214; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefits:</u></p> 
+<p>Grounding procedures used in the design and assembly of electrical and electronic systems will protect personnel and circuits from hazardous currents and damaging fault conditions. Benefits are prevention of potential damage to delicate space flight systems, subsystems and components, and protection of development, operations, and maintenance personnel.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>System Grounding Requirements and Design Approaches:</p> 
+<p>The design of electrical and electronic systems should comply with the following as a minimum: (1) a ground reference plane should be established that will hold the grounds for all systems, subsystems, equipment metallic components, surfaces, and electrical and electronic parts at the potential of the base structure; (2) within equipment, power should have dedicated returns; (3) except for a single-point reference, all electrical signal and power grounds should be electrically isolated from each other, and each separately derived electrical system should be electrically connected to structure at only one point; and (4) a dedicated power return should be used except where necessary to support system requirements.</p> 
+<p>The grounding within electrical or electronic enclosures is at the discretion of the circuit designer. The following design approaches should be considered for the design of these systems: (1) within equipment, conditioned electrical power should be DC-isolated from chassis and structure except at a single point; (2) within equipment, the single-point reference should be routed external to the equipment for termination to ground, or routed directly to the chassis for termination; (3) the control power bus return should be independent of the primary electrical power return and should be referenced to the return system at a single point; (4) secondary and tertiary electrical power should be single-point grounded and should be returned to that single reference ground point; (5) when all single-point grounds are not terminated to chassis or structure, secondary and tertiary electrical power should be dc isolated by a minimum of 1 megohm; (6) power conversion performed to supply conditioned power to several devices or functions should reestablish a single-point ground reference for the serviced equipment or functions; (7) equipment should not depend on other equipment for reference or grounding, either signal or power, unless it is also dependent upon the other equipment for its power; (8) signal circuits with frequencies below 2 MHz, with interfaces external to equipment, should be balanced and isolated from chassis; (9) all returns and references should be brought out of equipment on individual connector pins; (10) shield connections should be made to connector shells or to connector pins that are, or will be, grounded when mated; (11) single-ended circuits with the lowest frequency component equal to or above 2 MHz should be coupled by coaxial cable with the shield terminated 360 degrees at each end; and (12) external to an equipment, single-ended electrical signals should be prohibited for signal frequencies below 2 MHz except where electrical isolation is maintained.</p> 
+<p><img align="left" alt="refer to [D] description" border="0" height="495" src="https://llis.nasa.gov/llis_lib/images/1009010main_0658-1.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009498main_0658-1.txt">[D]</a></p> 
+<p>Schematic Examples:</p> 
+<p>An example of grounding implementation concepts is shown on Figure 1. This figure reflects the stated grounding requirements and design considerations and shows two feeder, cabling and load configurations. At frequencies below 2 MHz (Figures 1 and 2), the emphasis is on circuitry requiring internal grounding with interfaces to external equipment. For frequencies equal to and above 2 MHz, the emphasis is on external connections between equipment and the proper grounding of shielding to prevent electromagnetic coupling.</p> 
+<p>Single-Point/Multiple-Point Grounding:</p> 
+<p>Although the establishment of a ground reference plane requires a single-point ground, the actual practice of complying with this requirement in a system design is controversial. Modern electronic systems seldom have only one ground plane and, to reduce potential interference, as many ground planes as possible are sometimes used. From Figure 2, a grouping of ground planes connected by the shortest route back to a system ground point where they form an overall system potential reference, could be called a single-point ground system. However, problems with this scheme arise when interconnecting shielded cabling is used having significant lengths with respect to the wavelength of signal frequencies and parasitic capacitance exists between equipment housings or between subsystems and the grounds of other subsystems. It can be argued that a quotmultiple-pointquot ground system, which bonds each subsystem or equipment as directly as possible to a low impedance equipotential ground plane, can minimize these electromagnetic interference problems. An example of such a system is shown in Figure 3 where each subsystem is connected directly to a common ground plane, ideally a flat, equipotential plate.</p> 
+<p>In practice, the selection of a grounding scheme is dependent on the highest significant operating frequency of low-level circuits relative to the physical separation of the equipment. As shown in Figure 4, single-point grounding works best at low frequencies and small dimensions and multiple-point grounding works best at high frequencies and large dimensions. For transitional situations, one or the other may perform better as shown in Figure 4. For this crossover region, hybrid grounds perform best when portions of the low-frequency systems use single-point grounds and the high-frequency portions use multiple-point grounds.</p> 
+<p>Shock Prevention:</p> 
+<p>Proper grounding protects personnel from accidental contact with metallic elements that may have hazardous voltage potentials due to system faults or accidental contact between energized elements and equipment chassis, frame or cabinet structure. Case voltage rise is limited to reduce currents to levels that do not produce adverse reactions and possible secondary effects. Typically, case voltage rise is limited to prevent hazardous currents. Table 1 summarizes the alternating and direct currents and their shock effects.</p> 
+<b>Table 1. Summary Effects of Electrical Shock</b> 
+<table border="1" width="90%"> 
+ <tbody> 
+  <tr> 
+   <th>Alternating Current (60Hz)</th> 
+   <th>Direct Current (DC)</th> 
+   <th>Reaction</th> 
+  </tr> 
+  <tr> 
+   <td>(mA)<br> 0.5-1<br> 1-3<br> 3-21<br> 21-40<br> 40-100<br> &gt; 100</td> 
+   <td>(mA)<br> 0-4<br> 4-15<br> 15-80<br> 80-160<br> 160-300<br> &gt; 300</td> 
+   <td>&nbsp;<br> Perception<br> Surprise<br> Reflex action<br> Muscular inhibition<br> Respiratory block<br> Usually fatal</td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p>Bonding:</p> 
+<p>The integrity of interconnected conductive elements is ensured by electrical bonding, a process in which components or modules are electrically connected to provide a low-impedance conductor. Bonding practices should comply with MIL-STD-5087B or with SSP 30245. Bonding procedures require the use of specified clamps, standard parts, bolt and screw attachments, washers and materials to ensure consistent bonding of equipment under various temperatures and corrosion environments. The use of jumper cables is discouraged except across movable vibration or thermal isolation joints.</p> 
+<p>Surface preparation for bonded joints should begin by removing all anodic film, grease, paint, lacquer, or other high-resistance properties from the faying surfaces. A typical bonding hardware configuration is shown in Figure 5. The use of scrapers, abrasives or chemical cleaning methods to provide a clean, smooth bonding surface is dependent on the type of joint (i.e., metal-to-metal, metal-to-nonmetal or nonmetal-to-nonmetal). Example bonding impedances for selected bonding classes are shown in Table 2.</p> 
+<img alt="refer to [D] description" border="0" height="275" src="https://llis.nasa.gov/llis_lib/images/1009011main_0658-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009499main_0658-2.txt">[D]</a> 
+<br> 
+<br> 
+<img alt="refer to [D] description" border="0" height="184" src="https://llis.nasa.gov/llis_lib/images/1009012main_0658-3.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009500main_0658-3.txt">[D]</a> 
+<br> 
+<br> 
+<b>Table 2. Example Bonding Impedances and Bonding Class</b> 
+<table border="1" width="90%"> 
+ <tbody> 
+  <tr> 
+   <td>Bonding Class</td> 
+   <td>Impedance</td> 
+  </tr> 
+  <tr> 
+   <td>A (Antenna installation)<br> H (Shock hazard)<br> R (RF potentials)<br> <br> S (Static charge)</td> 
+   <td>DC resistance &lt; 2.5 milliohms<br> DC resistance &lt; 100 milliohms<br> DC resistance &lt; 2.5 milliohms<br> Impedance &lt; 100 milliohms up to 1 MHz<br> <u>&lt;</u>1 ohm (conductive structure)<br> &lt; 1000 ohms (composites)<br> <u>&lt;</u> 1000 ohms (conductive subassemblies)<br> 1 ohm (pipe and hose)</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> 
+<br> 
+<img alt="refer to [D] description" border="0" height="246" src="https://llis.nasa.gov/llis_lib/images/1009013main_0658-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009501main_0658-4.txt">[D]</a> 
+<br> &nbsp; 
+<p>Cabling/Connector Grounding:</p> 
+<p>Cabling extending outside grounded enclosures is vulnerable to radiated emissions if cable lengths are a significant portion of the wavelength of the systemís highest operating frequencies. Adequate shielding and grounding are required to ensure proper system operation. Figure 6 shows typical grounding practices for shielded cabling and connectors. Shield terminations at connectors are gripped by the connector back shell to provide a low impedance 360 degree connection. Soldered connections are not recommended due to the difficulty in repair and wiring changes, and the use of foil in some cable shielding. Where cabling enters enclosures, the box connector or partition penetration in Figure 6 may be used. For cabling where the overall shield ends in a terminal strip, the termination may look like the configuration shown in Figure 7.</p> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td><img alt="refer to [D] description" border="0" height="276" src="https://llis.nasa.gov/llis_lib/images/1009014main_0658-5.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009502main_0658-5.txt">[D]</a></td> 
+   <td rowspan="2" valign="top"><img alt="refer to [D] description" border="0" height="458" src="https://llis.nasa.gov/llis_lib/images/1009015main_0658-6.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009503main_0658-6.txt">[D]</a></td> 
+  </tr> 
+  <tr> 
+   <td><img alt="refer to [D] description" border="0" height="229" src="https://llis.nasa.gov/llis_lib/images/1009016main_0658-7.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009504main_0658-7.txt">[D]</a></td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p><u>Technical Rationale:</u></p> 
+<p>Through many years of designing and fabricating electrical circuits and electronic devices for launch vehicles, experiments and payloads, the Marshall Space Flight Center has developed procedures and techniques for designing reliable and safe aerospace electronic systems. Design criteria were built upon a solid foundation of industry and government practices. Military standards were used at the outset, and procedures unique to the space program were added as refinements. Practical experience reflected in the standard procedures and techniques resulted in reliable circuits that presented minimum hazard to personnel and equipment.</p> 
+<p><u>Related Practices:</u></p> 
+<ol> 
+ <li>Reliability Preferred Practice No. PD-ED-1202, quotHigh Voltage Power Supply Design and Manufacturing Practices,quot Lewis Research Center.</li> 
+ <li>Reliability Preferred Practice No. PD-ED-1210, quotAssessment and Control of Electrical Charges,quot Goddard Space Flight Center.</li> 
+ <li>Reliability Preferred Practice No. PD-ED-1206, quotPower Line Filters,quot Goddard Space Flight Center.</li> 
+</ol> &nbsp; 
+<p>References:</p> 
+<ol> 
+ <li>SSP 30240 Revision A, quotSpace Station Grounding Requirements,quot September 1991.</li> 
+ <li>MSFC-SPEC-521B, quotElectromagnetic Compatibility Requirements on Payload Equipment and Systems,quot August 15, 1990.</li> 
+ <li>MIL-STD-461C, quotElectromagnetic Emission and Susceptibility,quot August 1986.</li> 
+ <li>MIL-STD-462, quotElectromagnetic Interference Characteristics,quot July 1967.</li> 
+ <li>MIL-STD-463A, quotDefinitions and System of Units, Electromagnetic Compatibility Technology Interference,quot June 1966.</li> 
+ <li>MIL-STD-5087B, quotBonding, Electrical and Lightning Protection for Aerospace Systems,quot Amendment 3, December 24, 1984.</li> 
+ <li>Denny, Hugh W., quotGrounding for the Control of EMI,quot 1983.</li> 
+ <li>White, Donald R.J., quotElectromagnetic Interference and Compatibility,quot Vol.3, quotA Handbook on EMI Control Methods and Techniques,quot 1973.</li> 
+ <li>SSP 30242 quotSpace Station Cable/Wire Design and Control Requirements for Electromagnetic Compatibility, quotSeptember 1991.</li> 
+ <li>SSP 30245 quotSpace Station Electrical Bonding Requirements,quot September 1991.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Non-Practice:<br /> <br /> The impacts of failure to adhere to proven and acceptable grounding practices for the design and fabrication of electrical and electronic parts are: (1) potential damage to delicate space flight systems, subsystems, components and experiments; (2) creation of sparks or overheated components or connections, creating a fire hazard or a thermal imbalance that cannot be counteracted by environmental control systems; (3) danger to ground or flight crew personnel from electrical shock; or (4) damage to vehicle, payloads and ground systems due to atmospheric lightning. Ultimately, lack of proper grounding could cause death due to electrical shock or mission failure due to excessive heating, shorts, or fire.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br /> <br /> Electrical grounding procedures must adhere to a proven set of requirements and design approaches to produce safe and trouble-free electrical and electronic circuits. Proper grounding is fundamental for reliable electronic circuits.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br /> <br /> Saturn I, IB and V launch vehicles, Space Shuttle Solid Rocket Booster, International Space Station, MSFC-developed payloads and experiments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

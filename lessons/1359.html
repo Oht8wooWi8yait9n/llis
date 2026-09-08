@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1359: Chandra Silverized Teflon/Multilayer Insulation (MLI) Degradation Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1359: Chandra Silverized Teflon/Multilayer Insulation (MLI) Degradation Analysis</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1359 (Database ID: 1359)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-12-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1359" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Chandra silverized teflon MLI layers are degrading faster than pre-launch predictions, allowing the spacecraft to reach hotter temps earlier in the mission than predicted.<br />
+    <br />
+     In its first 3 years on orbit, the Chandra X-Ray Observatory (CXO) has witnessed higher than expected temperatures across the sun facing side of the vehicle. It is now believed that these elevated temperatures are due to the better insulating properties of its Multi Layer Insulation (MLI) and a higher than expected degradation of its Silverized Teflon thermal surfaces. It is believed that the Radiative Heat Transfer Efficiency (e*) has decreased by 0% to 20% of its predicted value and that the solar absorptance coefficient (a) has increased by 40% of predicted and could potentially reach a value of 0.6 (worst case) at 15 years. The original assumption was that the solar absorptance would not exceed 0.25. The most likely cause of the higher than expected degradation is due to the more severe CXO radiation environment.<br />
+    <br />
+     An extensive thermal analysis was performed to examine the thermal observations made by the Flight Operations Team. References 1, and 2, contain the results of the detailed study.<br />
+    <br />
+     History:<br />
+     In January of 2000, it was first noted by the Chandra Flight Operations Team that temperatures on the -Z side of the spacecraft were warming at a higher than expected rate.<br />
+    <br />
+     In the Fall of 2001, the Electron Proton Helium Instrument (EPHIN), Chandra's primary radiation sensor, housing temperature began a steep upward trend and, by December, was nearing the original survival limit of 86 deg F. Also, in the Fall of 2001, the -Z facing propulsion line temperatures began a steep upward trend nearing original qualification limits of 120 deg F. In addition, in January 2002, the Fine Sun Sensor bracket temperatures reached within a few degrees of original 5 year predictions. Both EPHIN and the Fine Sun Sensors are located on the top of the -Z spacecraft panel.<br />
+    <br />
+     In November 2001, TRW requested an analysis be performed to attempt to correlate the on-orbit data with the original models. There were three items that needed to be addressed:<br />
+    </p>
+
+    <ol type="1" start="1">
+      <li>Reason for discrepancy with original predictions</li>
+
+      <li>Understand mechanism of the temperature increase</li>
+
+      <li>Be able to predict future temperatures, from which operational changes could be recommended</li>
+    </ol>
+
+    <p>The Chandra X-ray Observatory effectively has four types of thermal surfaces that degrade at different rates:</p>
+
+    <ol>
+      <li>5-mil thick SST (MLI outer layers)</li>
+
+      <li>Second-surface quartz mirrors (SSMs, on radiators)</li>
+
+      <li>Mosaic of 2-mil thick SST and SSMs (Fine Sun Sensor Bracket)</li>
+
+      <li>Mosaic of SSMs and 2-mil thick Second-Surface Silvered-FEP Teflon (SST) (EIO)</li>
+    </ol>
+
+    <p>5-mil thick Second-Surface Silvered-FEP Teflon dominates the Chandra thermal design<br />
+    <br />
+     From 1974 through 1977 TRW performed extensive testing of metallized flexible materials in the space radiation environment. Testing simulated the Geosynchronous (GEO) environment in a vacuum chamber by bombarding samples with electrons, protons and ultra violet (UV) radiation simultaneously. Over time, absorptance degradation slows and was assumed to stabilize slightly after 4 years. Chandra was designed to the test data obtained from this study.<br />
+    <br />
+     Model Correlation:<br />
+     Thermal material solar absorptance is most accurately measured by optical methods. However, it can also be estimated by correlating thermal math models of an on-orbit system to flight data. To accomplish this, TRW Thermal engineers performed the following steps:<br />
+    <br />
+     Based on hand-calculations, a degraded absorptance value for each surface-type and for each data case (i.e. time-on-orbit) was selected. Environmental heating rates were then calculated for the Spacecraft and Telescope for each data case using TRASYS-format geometric math models. Next the predicted temperatures and heater duty-cycles were compared to the measured values to determine if the solar absorptance selected for each surface-type met the correlation goals:<br />
+    </p>
+
+    <ul>
+      <li>&gt;90% of Spacecraft and propulsion temperatures agree within ~5&deg;F</li>
+
+      <li>&gt;90% of Spacecraft heater duty-cycles agree within ~10% for each heater circuit</li>
+
+      <li>&gt;90% of Propulsion heater duty-cycles agree within ~20% for each heater circuit</li>
+
+      <li>Telescope temperatures agree within ~2&deg;F for Optical Bench Assembly (OBA) and Telescope Forward Thermal Enclosures (TFTE) heater zones</li>
+
+      <li>Telescope heater powers agree within ~3% for aggregate of OBA and aft TFTE</li>
+    </ul>
+
+    <p>Where applicable, the MLI e*, radiative heat transfer efficiency, was adjusted to correlate both temperature and heater duty-cycle to the observed data. Finally, the process was iterated until all cases converged. Each case required several iterations to converge on the absorptance and e*. Correlation of the spacecraft model was quite good with 100% correlation within +/- 11 deg F. A similar analysis was performed for the Telescope with results of 100% correlation within +/- 2 deg F.<br />
+    <br />
+     After preliminary correlation of any changes in MLI e*, the solar absorptance values for the various types of thermal surfaces in the Spacecraft -Thermal Math Model (TMM) and Telescope-TMM were adjusted to the flight temperatures and heater powers to the flight data. Each data set was correlated to provide a relationship of surface solar absorptivity versus months on-orbit for each type of thermal surface. Many iterations were required for each data set to obtain the best fit.<br />
+    <br />
+    Results:<br />
+    <br />
+     Radiative Heat Transfer Efficiency -<br />
+    <br />
+     Using the Effective Emittance (e*) values correlated from the Chandra systems-level thermal vacuum test data, did not allow for an accurate correlation of any of the Spacecraft or Telescope on-orbit data sets. Changes in the MLI e* were necessary to correlated both temperature and heater duty-cycle to the observed data. An on-orbit reduction in MLI e* could be attributed to the significantly lower vacuum on-orbit (&gt;10-12 Torr) which may allow for more complete venting of the MLI versus the partial venting achieved in the thermal-vacuum test pressure environment (&gt;10-6 Torr).</p>
+
+    <ul>
+      <li>Spacecraft equipment panel MLI e* decreased by 20%</li>
+
+      <li>Spacecraft structure MLI e* decreased by between 10% and 20%</li>
+
+      <li>Spacecraft-propulsion MLI e* did not appear to change</li>
+
+      <li>Telescope Optical Bench (OBA) MLI e* decreased by between 10% and 20%<br />
+      </li>
+    </ul>
+
+    <p>Solar Absorptance -<br />
+     Assessment of the correlated absorptance trends was that the degradation rates were faster than expected. The slope of the SST degradation trends are approximately parallel to the SST design-curve, their slopes appear to be decreasing (i.e. leveling off). Although the additional UV exposure will increase degradation, the additional +0.1 delta-absorptance is more than can be attributed due only to additional UV exposure. TRW- thermal engineering performed a simple exponential curve-fit to the data to extrapolate out to 5-years, then applied the tangential slope at the 5-year point out to 15-years. TRW Materials believes this extrapolation is conservative, and asserts that Teflon materials will not degrade to more than 0.60 absorptance. As a caveat, no reliable method exists to accurately extrapolate degradation trends out over a period of 6X the data domain.<br />
+    <br />
+     Conclusion:<br />
+     It is clear from this analysis that surface properties of Chandra MLI and Silverized Teflon are not as predicted at this point in the mission. The changes in surface properties are having a large impact on the thermal characteristics of the satellite, specifically in elevated temperatures across the vehicle. At this point, it is unclear as to the mechanism of the degradation although it almost certainly due to a combination of solar UV exposure and on-orbit radiation. It is assumed that the difference between the CXO orbital environment and that experienced at GEO is mainly responsible for the degradation seen to date. These values will continue to be trended and monitored for future predictions.<br />
+    <br />
+    <u>References</u>:<br />
+     For more specific data, the following two documents should be referenced.<br />
+    </p>
+
+    <ol>
+      <li>Chandra Life Extension Study, Thermal Control Subsystem, May 2002, P. Knollenberg</li>
+
+      <li>Kodak alpha_study_slides_17jun2002-rev2a, June 2002, K. Havey</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Silverized teflon/MLI do not degrade according to published specifications and do not match available NASA/DoD data or predictions from analysis.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Future programs relying on long-term insulative properties of silverized teflon/MLI may wish to plan on additional funds and schedule to more fully characterize the thermal behavior of these materials on orbit.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Not applicable. CHANDRA is still meeting mission objectives at this time. However, future programs may benefit from additional testing.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

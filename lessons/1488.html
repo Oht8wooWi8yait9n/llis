@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1488: Commercial Off The Shelf (COTS) Digital Signal Processor Experienced Destructive Events as a Result of Ionizing Radiation Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1488: Commercial Off The Shelf (COTS) Digital Signal Processor Experienced Destructive Events as a Result of Ionizing Radiation Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1488 (Database ID: 1488)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-08-04</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1488" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Initial testing produced destructive events on each of the two boards tested. Both boards had non-functional DSP chips, even though they had not been directly exposed to the beam. It is believed that stray protons in the test room caused the DSP chips to fail.<br />
+    <br />
+    Follow-up testing was performed on two additional boards. The first board had a DSP chip failure caused by stray protons (1/1,000 to 1/10,000 the rate of full beam exposure and energy on the order of 100 MeV) during beam tuning. The board was replaced by the spare board and one of the DSP chips exposed to the beam. The chip failed after 0.31% of the total intended fluence of 1 E 10 p+/cm2, with an over-current condition detected on the 3.3V supply line. This equates to a 5.5 day MTBF for one chip or 1.5 day MTBF for the whole board in the US Lab radiation environment<br />
+    <br />
+    The COTS board manufacturer was asked to modify the Digital Signal Processor (DSP) based Data Acquisition board to provide over-current protection. Four of the prototype Digital Signal Processor (DSP) based Data Acquisition boards were tested as before. Preliminary results of these tests indicate that typically one to three recoverable current trips occur before the DSP chip fails. In 7X7 convolution mode, which has the highest current draw, the MTBF for destructive events was calculated to be 35.6 days per chip or 8.9 days per board.<br />
+    <br />
+     FCF designer's research has not found a DSP based technology chip that will meet the needed performance criteria that is not ionizing radiation susceptible.<br />
+    <br />
+    The FCF project is looking into other alternatives to the Digital Signal Processor (DSP) based Data Acquisition boards, such as FPGA based technology.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>All COTS hardware must be tested/analyzed for susceptibility to ionizing radiation induced events, either recoverable or destructive, prior to being fully designed into space applications. The testing should be done early in the design cycle to minimize the schedule impact of any resulting redesign effort.<br />
+    <br />
+    The testing of the Digital Signal Processor (DSP) based Data Acquisition boards and the determination of their high level of susceptibility has resulted in the need for major re-designs late in the design effort driving schedule and cost issues for integrating the re-design.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The ISS office should institute an environmental requirement that drives the testing and/or analysis of all potentially susceptible COTS hardware being designed into space applications.<br />
+    <br />
+     Further education of NASA personnel and their partners on the above recommended environmental requirements.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

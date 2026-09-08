@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0806: Rocket Engine Technology Test Bed Practice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0806: Rocket Engine Technology Test Bed Practice</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0806 (Database ID: 806)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/806" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1427 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Highly instrumented engine system tests of varying configurations under varying conditions provides engine system level validation of advanced propulsion technology concepts prior to incorporation of these concepts into development or production units; provides an opportunity for greater understanding and fine-tuning of analytical tools that characterize engine performance; results in the development and improvement of diagnostic methods; and increases the depth of available knowledge about the inner workings, sensitivities, and detailed performance characteristics of liquid rocket engine systems. The overall benefit are the validation of technology, improved system performance, high system reliability, and mission safety.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Experience in the planning and conduct of propulsion technology tests using the Space Shuttle Main Engine (SSME) has resulted in a systematic and methodical procedure for planning, testing, data analysis, and reporting the results of test bed activities. As seen in Table 1, the testing has ranged from evaluation of new engine components and features, to advanced diagnostic and sensor techniques, to the development of systems for anomaly and failure detection. A key to the continued success of this program has been a technology integration process that places emphasis on integration requirements and costs at an early point in the process. Figure 1 is a flow diagram that depicts the technology integration process. Once an engine technology item has proceeded through the concept evaluation process to a point where a decision is made to pursue test bed evaluation, it is presented by the principal investigator to the Test Bed project manager for prescreening review and then a
+    technology item screening review.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009282main_0806-1.jpg"  HEIGHT="296"  BORDER="0" /><A HREF="/llis_lib/txt/1009757main_0806-1.txt"  >[D]</A><br />
+      Table 1. Typical Types of Technology Test Bed Testing
+
+      <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009283main_0806-2.jpg"  HEIGHT="308"  BORDER="0" /><A HREF="/llis_lib/txt/1009758main_0806-2.txt"  >[D]</A><br />
+      Fig. 1. Technology Test Bed Technology Integration Process</p>
+    </center>
+
+    <p>In the screening review, an engine technology candidate is judged by its technical merit and potential benefit, the risk of testing the item on the Technology Test Bed engine, and the cost of integrating the item into the engine or facility. Key milestones in the process are Technology Item Screening, the Technology Item Final Design Review, the Integration Design Review, and Hot Fire Testing.</p>
+
+    <p>Technology Item Final Design Review:</p>
+
+    <p>Once the technology item is accepted as an output of Technology Item Screening, technology item development proceeds with the conduct of analytical studies, component testing, and the incorporation of design revisions, if required. Then a Technology Item Final Design Review is conducted in which four subject areas are presented and discussed: (1) Technology Item Design Description; (2) Technology Item Design Verification; (3) System Issues; and (4) Safety/Quality Issues. The Technology Item Design Description includes the design configuration and characteristics; the design intent or function; the design requirements; materials and processes, drawings and an integrated design configuration. The Technology Item Design Verification consists of the qualification approach, test and verification plans and results, supporting analysis and assurance that the design and performance meets the intent of the requirements. System Issues include system requirements, system compatibility
+    issues, integration plans and issues, constraints, and Technology Test Bed test operational requirements. Safety/Quality Issues include quality assurance provisions such as fabrication processes and controls, traceability, vendor qualification, and nondestructive evaluation techniques; technology item life; risk assessment; hazards analysis; failure modes and effects analysis; risk mitigation; materials certification; and supporting analyses. When the technology item final design review is successfully completed, fabrication can proceed and readiness certified upon acceptance.</p>
+
+    <p>Technology Item Integration Design Review:</p>
+
+    <p>The integration review is conducted to verify that the technology item can be accommodated safely and effectively into the TTB. It consists of: (1) an Integration Design Description; (2) Integrated Design Verification; (3) System Issues, and (4) Safety/Quality Issues. The subject areas covered in the Technology Item Integration Design Review are similar to those for the Technology Item Final Design Review except that all factors are viewed from the standpoint of interaction of the technology item with the Test Bed and its related subsystems, facilities, instrumentation, software and data.</p>
+
+    <p>Hot Fire Testing and Results:</p>
+
+    <p>A test plan is prepared for each test series, and it is reviewed at a pretest readiness review before each test. Instrumentation is configured in accordance with an Instrumentation Program and Command List (IP&amp;CL). A test results review is held after each test and a test report is prepared. When two or more tests are combined into a test series, a test series report is prepared. Examples of these documents are included in the list of References for this practice.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>In the conduct and analysis of over fifty tests conducted in the Technology Test Bed program by MSFC since September 1988, the SSME TTB program has proven to be an indispensable tool in the validation of propulsion technology advances for large liquid oxygen/liquid hydrogen rocket engines. The program has also yielded numerous advances in measurement and diagnostic methods that are continuing to be used in the TTB program and are applicable to other similar test and evaluation scenarios. The TTB's highly instrumented engine employs over five times the number of measurements used for an acceptance test of a flight engine. This in-depth instrumentation using flow meters, steady state pressure transducers, high frequency pressure measurements, thermocouples, strain gauges, accelerometers, and sophisticated laser and optics techniques has provided an unprecedented amount of detailed knowledge of the performance subtleties of large
+    O<small><sub>2</sub></small>/H<small><sub>2</sub></small> engines under widely varying conditions. The program has yielded results that have permitted the incorporation of state-of-the-art technology advances without compromising engine reliability.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"SSME Improved Characterization Using Highly Instrumented Engine Test Data," B. Piekarski and J. Leahy, Martin Marietta, AIAA/SAE/ASME/ASEE 28th Joint Propulsion Conference, July 6-8, 1992, Nashville, TN, AIAA # 92-3451.</li>
+
+      <li>"Space Shuttle Main Engine Technology Test Bed overview," H.V. McConnaughey, Advanced Earth-to-Orbit Propulsion Technology Conference, 1992, Huntsville, AL.</li>
+
+      <li>"Technology Test Bed Program: Engine 3001 with Instrumented Turbopumps," NASA/MSFC Test Series Report No. TTB-DEV-EP93-001, January 15, 1993, Huntsville, AL.</li>
+
+      <li>"Technology Test Bed Test Report: Engine #3001," NASA/MSFC Report # EP52(92TR-033), August 1992, Huntsville, AL.</li>
+
+      <li>"Technology Test Bed Program: Instrumentation Program and Command List," NASA/MSFC Document 1618, November 1989, Huntsville, AL.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to conduct technology testing could result in the absence of reliability enhancing improvements in the engine configuration and could cause subtle failure modes or performance limits to be unnoticed until critical points in the engine development or flight schedule.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Conduct highly instrumented tests of O<small><sub>2</sub></small>/H<small><sub>2</sub></small>rocket engine systems to: (1) evaluate and verify new propulsion technologies; (2) validate or modify analytical models; (3) more fully understand the operation of rocket engine systems under varying performance conditions, and (4) ensure engine reliability and operability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle Main Engine (SSME), and Technology Test Bed (TTB) Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

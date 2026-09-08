@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1370: Lessons Learned From Flights of ¿Off the Shelf¿ Aviation Navigation Units on the Space Shuttle, GPS</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1370: Lessons Learned From Flights of ¿Off the Shelf¿ Aviation Navigation Units on the Space Shuttle, GPS</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1370 (Database ID: 1370)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-06-11</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1370" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The Space Shuttle program began flying atmospheric flight navigation units in 1993, in support of Shuttle avionics upgrades. In the early 1990s, it was anticipated that proven in-production navigation units would greatly reduce integration, certification and maintenance costs. However, technical issues arising from ground and flight tests resulted in a slip in the Shuttle GPS certification date.<br />
+    <br />
+    A number of recommendations were developed concerning the adaptation of atmospheric flight navigation units for use in low-Earth orbit. They are applicable to any use of a navigation unit in an application significantly different from the one for which it was originally designed. Flight experience has shown that atmospheric flight navigation units are not adequate to support anticipated space applications of GPS, such as autonomous operation, rendezvous, formation flying and replacement of ground tracking systems.<br />
+    <br />
+    <u>Space Shuttle Tactical Area Navigation (TACAN) Replacement with GPS</u><br />
+    <br />
+    In 1990, the Shuttle Program began to investigate the use of GPS, based on the anticipated phase-out of TACAN starting in the year 2000. The Shuttle Program desired a receiver that was in mass production and had an existing logistics base. Anti-jam and anti-spoofing capabilities were also desired. A trade study conducted in 1993 chose the five channel Miniaturized Airborne GPS Receiver (MAGR), which entered production in 1994. The MAGR/Shuttle, or MAGR/S, was procured as a TACAN replacement and for use as a source of state vectors while on-orbit. There were no requirements for the MAGR/S to be used for applications involving high accuracy orbit determination, such as ground radar and Tracking &amp; Data Relay Satellite (TDRS) tracking replacement or spacecraft rendezvous. The MAGR/S will be certified to serve as a TACAN replacement in both keyed and unkeyed configurations. No requirements were levied on the vendor to change the MAGR/S Kalman filter, which was designed for use on a
+    variety of aviation platforms without modification. An orbital state vector propagation algorithm was added to support satellite acquisition after a GPS outage.<br />
+    <br />
+    A pre-production MAGR, called the 3M, was flown seven times on the Shuttle Endeavor from December 1993 to May 1996. The first flight of a production MAGR missionized for the Shuttle application (MAGR/S) occurred in September of 1996. By the fall of 1997, five test flights of the MAGR/S on the Space Shuttle had occurred. At that time, the Shuttle Program decided to replace the three TACAN units on Atlantis<br />
+    with three MAGR/S units. The first "no TACAN, all GPS" flight was scheduled for January 1999 (STS-92).<br />
+    <br />
+    By June of 1998, the first flight of Atlantis with three string GPS had changed to STS-96 (May 1999), due to changes in the International Space Station (ISS) assembly schedule. While on-orbit during STS-91 (Discovery, June 1998), the final Shuttle-Mir mission, a MAGR/S firmware problem and several flaws in the Space Shuttle computer software that communicate with the MAGR/S were discovered.<br />
+    <br />
+    Certification of the MAGR/S was postponed. MAGR/S firmware and Shuttle software issues were resolved, and additional MAGR/S firmware versions, ground and flight-testing were planned. Certification of the MAGR/S for operational use occured in 2002. However, it is not known when the Shuttle Program will decide to replace the TACAN units with the MAGR/S receivers. With the start of TACAN phase-out delayed until 2010, it is expected that the Shuttle Orbiters will fly with three TACAN units and one MAGR/S receiver for some time.<br />
+    <br />
+    Three Shuttle flights (STS-81, -84 and -86) carried Embedded GPS/INS (Global Positioning System/Inertial Navigation System), or EGIs, from two different vendors to collect data for the X-33 program.<br />
+    <br />
+    In 1996, NASA began a project to eventually replace the MAGR/S receivers and the High Accuracy Inertial Navigation System (HAINS) Inertial Measurement Units (IMUs) with a space-missionized EGI, known as a Space Integrated GPS/INS (SIGI). SIGI was envisioned as a "common NASA navigator" that could be used on a variety of manned and unmanned vehicles. The Shuttle SIGI flew on seven missions between September of 1997 and December of 1999 for data collection. Since the HAINS IMUs are projected to be operational through 2010, replacement of the HAINS IMUs and MAGR/S units by SIGIs has been deferred.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The Shuttle Program selected off-the-shelf GPS and EGI units that met the requirements of the original customers. It was assumed that off-the-shelf units with proven design and performance would reduce acquisition costs and require minimal adaptation and minimal testing. However, the time, budget and resources needed to test and resolve firmware issues exceeded initial projections.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li><u>A Realistic Schedule and Budget Is Needed.</u> Particular attention should be paid to how realistic the schedule is considering the complexity and technical risk involved. A recent study of NASA projects that used a faster-better-cheaper approach indicated that mission failures resulted from highly complex projects on short development timelines.</li>
+
+      <li style="list-style: none"><br />
+       Fixed price contracts should be avoided if development work is required. Such contracts can result in inflated vendor estimates for initial cost and can remove the incentive to aggressively resolve technical issues. Resolution of these issues may not be covered in the budget defined at project start.<br />
+      <br />
+       Technical issues must be addressed early in a project, even in the presence of cost and schedule concerns. These issues can easily become showstoppers later in the integration. Not addressing issues until late in a project will drive up cost and shift schedules to the right. Problems arising from cost and schedule slips and failure to address issues can create adversarial relationships between project participants and the vendor.<br />
+      <br />
+       Fixed price contracts are appropriate when the planned use of the unit is the same as the original application for which the unit was designed. In this case, little or no development work is required. Modifying an aviation navigation unit for use on an unmanned or manned spacecraft should be budgeted and scheduled as a development project.<br />
+      <br />
+      </li>
+
+      <li><u>Resources and Schedule Must Be Allocated To Analyze Test Data.</u> When planning a navigation unit missionization and integration, adequate time and personnel must be set aside to analyze flight and ground test data. If data is not thoroughly analyzed in a timely manner, firmware issues will go unnoticed. Lack of resources can even lead to failure to analyze test data. Performance issues arising late in the development and certification cycle can negatively impact cost and schedule.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li><u>Maintain an Integrated Team Approach.</u> The &ldquo;success oriented&rdquo; nature of project budgets and schedules sometimes result in limited communication at the technical level. Multiple layers of contractors cut down on communication and should be avoided. The vendor should be involved in all design reviews.<br />
+      <br />
+       Early MAGR/S project reviews focused on hardware modifications, with little attention paid to firmware. Most technical personnel were &ldquo;fire walled&rdquo; from the firmware missionization process and the vendor. No formal, program wide reviews of the GPS receiver firmware modifications were made. The GPS vendor and the Shuttle navigation (both operational and engineering, contractor and civil servant) personnel had minimal involvement in the missionization decisions made by the integrator.<br />
+      <br />
+      The GPS vendor was more fully integrated into the GPS project to enhance communication due to anomalies that surfaced during STS-91. Weekly teleconferences were established that included the vendor and all NASA and contractor organizations. Face to face meetings of all project participants were held at the Johnson Space Center three to four times a year. Special teams that crossed civil servant and contractor boundaries were formed to address specific technical problems.<br />
+      <br />
+       The GPS receiver is a critical part of an EGI. Unfortunately, the user and integrator often have little or no opportunity to interact with the GPS manufacturer on an EGI contract. Contracts concerning EGI units should be written so that the GPS vendor will be involved and able to give advice and information to the EGI manufacturer, the integrator and the user.<br />
+      <br />
+      </li>
+
+      <li><u>Produce, Test and Fly Interim Firmware Versions.</u> Firmware issues tend to be discovered sequentially. Units containing complex firmware may not manifest anomalies in the initial round of ground and flight tests. This can lead to a false sense of security about the maturity of a firmware version. Enough rigorous ground and flight testing must be planned to thoroughly exercise the firmware. Schedule and budget should include interim firmware versions to allow issues to be discovered and resolved before a production firmware load is scheduled for certification.<br />
+      <br />
+      </li>
+
+      <li><u>Keep Accurate Records.</u> Detailed and accurate records of meetings, issues and issue disposition and design rationale should be maintained. This enables project participants to be better informed on issues facing the project and provides a record for the future. An official issue list should be maintained, along with a list of questions for the vendor and vendor responses.<br />
+      <br />
+      </li>
+
+      <li><u>A Close Relationship Between The Vendor And Customer Is Needed.</u> Both the MAGR/S and SIGI projects demonstrated the need for a close working relationship between the integrator, users and vendor. The navigation vendor needs to be involved in early decisions on architecture and integration. Frequent and open communication between technical personnel should be encouraged. This lesson is best summed up as &ldquo;communicate early, communicate often.&rdquo; The &ldquo;throw a unit and an ICD over the fence&rdquo; approach can lead to cost and schedule problems.<br />
+      <br />
+       Due to communication constraints imposed by &ldquo;success oriented&rdquo; budgets and schedules, vendors are frequently not involved in the design of software that is to interface with a GPS or EGI unit. In hindsight, some aspects of the Shuttle GPS integration might have been done differently had the vendor been involved. The Shuttle software that interfaced with the MAGR was designed with an inadequate understanding of the firmware behind the interface definition. This lack of receiver insight was one of the causes of the problems encountered on STS-91. Shuttle software that interfaced with the GPS receiver had to be bullet proofed against known and postulated receiver anomalies.<br />
+      <br />
+      Regular face-to-face contact between the vendor and Shuttle engineers built positive, personal relationships and established a &ldquo;team&rdquo; rather than an &ldquo;adversarial&rdquo; environment. Communication between other project participants also improved. Both the vendor and Shuttle Program engineers became familiar with each other&raquo;s &ldquo;work cultures,&rdquo; which enabled them to work better together and provide appropriate support to each other. The vendor also provided much needed education to Shuttle engineers concerning the challenges of GPS receiver design and operation.<br />
+      <br />
+      Use of complex, &ldquo;off the shelf&rdquo; aviation navigation units in unmanned and manned space applications requires vendor involvement over and above that provided in terrestrial aviation projects.<br />
+      <br />
+      </li>
+
+      <li><u>Educate The Vendor About Your Application.</u> The GPS vendor observed Space Shuttle ascents and entries from Mission Control. Vendor GPS engineers also flew landings in a Space Shuttle simulator and were present in the cockpit of the Shuttle Avionics Integration Laboratory when MAGR/S testing was performed, and participated in lab tests of the MAGR/S at Shuttle Program facilities. These activities permitted the vendor to ascertain how the Space Shuttle application differed from aviation users of GPS receivers. These experiences were found to be very helpful in understanding customer concerns and identifying improvements to be made to the receiver. This enabled the vendor to propose solutions to technical issues that were agreeable to the various parties within the project.<br />
+      <br />
+       The vendor became familiar with the strengths and weaknesses of Shuttle Program GPS simulation facilities. This enabled them to provide input to Shuttle integration engineers concerning how best to perform receiver testing and verify MAGR/S functionality.<br />
+      <br />
+      </li>
+
+      <li><u>Talk To Those That Have Used The Product Before.</u> Outside consultants, who do not have a stake in the choice of a particular unit, should be used. Such consultants have &ldquo;hands on experience&rdquo; with box integrations and can be an important information source concerning their design, integration and use. Consultants who have participated in previous integrations will have knowledge of problems that other users have encountered. Consultants and other users can also provide valuable insight into the rationale and requirements that governed the original design of the unit. This information is invaluable to the integrator for identifying technical, cost and schedule risks associated with a particular navigation unit integration.<br />
+      <br />
+      </li>
+
+      <li><u>&ldquo;Plug And Play&rdquo; Versus Development.</u> The fact that a unit is in mass production and is a proven product does not mean that its integration into a different vehicle will be a simple, problem free &ldquo;plug and play&rdquo; project. A difference in application (such as aviation versus space flight) will result in the manifestation of firmware issues that may not have appeared in the original application. Unique data interfaces used by manned and some unmanned spacecraft avionics may require modification of the unit. Power supply changes and radiation hardening may also have to be performed.<br />
+      <br />
+      </li>
+
+      <li><u>Test As Much As You Can.</u> A lack of comprehensive, end-to-end testing has resulted in a number of spacecraft failures. Deep integration of systems makes them more vulnerable to software issues. As navigation systems become more complex and more deeply integrated, software quality and verification become more important. Firmware development schedules driven by &ldquo;time to market&rdquo; pressures and a desire to lower overhead costs (a small group of programmers, short development and test cycles) result in a higher probability of code with bugs.<br />
+      <br />
+       Navigation projects for the Shuttle, ISS and CRV programs reaffirmed the need for rigorous and thorough flight and ground testing. Lab testing using signal generators will not exercise all possible logic paths within a GPS receiver or EGI. Signal generators will not completely duplicate the radio-frequency environment encountered during flight. Receiver anomalies will appear in flight tests that may not manifest during lab testing. Conversely, some anomalies found during lab testing did not occur in flight.<br />
+      <br />
+      Many firmware issues could have been found earlier in the Shuttle GPS project had a thorough ground test program been conducted. A limited number of lab and flight tests to ensure that the box &ldquo;meets spec&rdquo; will not exercise enough of the firmware to find issues. This is particularly important for safety of flight applications involving humans. Vendors tend to perform the minimum amount of lab testing needed to ensure that the unit meets contract specifications. Vendors may not consider flight-testing to be valid if they do not trust the source of &ldquo;truth&rdquo; vectors.<br />
+      <br />
+       Testing should also involve any hardware and software that interfaces with the unit. Thorough off line testing of the unit and proposed algorithms that will interface with it should be performed before committing to specific integration architecture. Once the integration has been performed, thorough testing of navigation unit interaction with the rest of the avionics system is needed.<br />
+      <br />
+       Some firmware issues resulted from the use of aviation GPS receiver algorithms at orbital altitude. However, many of the firmware issues that surfaced during the MAGR/S and SIGI flight tests were due to basic computer science issues. Firmware issues that do not manifest in aviation applications due to a flight time of minutes or hours can manifest during a much longer space flight. Shuttle program ground and flight-testing of GPS receivers and EGIs has uncovered many firmware issues that may aid the maintenance efforts of other users of similar units.<br />
+      <br />
+       End-to-end testing, over the complete flight profile, is required. For space applications, lab tests lasting days or weeks should be conducted. Use good engineering judgment when dispositioning issues, backed up with ground test and flight data.<br />
+      <br />
+      </li>
+
+      <li><u>Instrumentation Port Data Is Needed During Flight and Ground Tests.</u> Instrumentation port data provides invaluable insight into firmware behavior during periods of questionable performance. Vendor input should be solicited concerning what data to collect and how it should be interpreted. Instrumentation port data simplifies and speeds up the identification of firmware problems. Software on data collection platforms (such as laptop computers) must be fully tested, documented and certified. Clear and accurate procedures for laptop operation and troubleshooting are needed. Otherwise, it may be difficult to distinguish GPS receiver problems from problems with the data collection computer.<br />
+      <br />
+      </li>
+
+      <li><u>Independent Verification And Validation Is Invaluable.</u> The NASA IV&amp;V contractor played a significant role in the MAGR/S project. Initial IV&amp;V involvement focused on the integration architecture, ground test, and flight test results. After MAGR/S certification was postponed (in 1998) and MAGR/S firmware was made available to the Shuttle Program, IV&amp;V performed an audit of the firmware starting in 1999. The audit was invaluable in the certification process, but should have been conducted much earlier in the MAGR/S project. To date, over 250 issues (of varying degrees of seriousness) have been identified and dispositioned through the IV&amp;V analysis of the MAGR/S requirements and firmware.<br />
+      <br />
+       The trend to use NDI avionics containing proprietary software may prevent independent validation and verification of firmware. This is an issue for applications that involve human safety and unmanned applications requiring a high degree of autonomy. The ground and flight test environments will not be able to produce conditions needed to reveal all firmware issues or verify all firmware modifications and fixes. Code audits are needed, both by the vendor and an IV&amp;V organization. Guidelines should be created concerning audit scope and the definition of credible failure scenarios. Lack of an IV&amp;V level firmware audit will result in lingering suspicion about a unit.<br />
+      <br />
+      </li>
+
+      <li><u>Conduct Enough Test Flights Before Making Critical Decisions.</u> Initial flights of the 3M receiver (pre-production MAGR) were very successful. Later flights of the MAGR/S, along with ground testing and firmware audits, uncovered many issues that had to be resolved before the MAGR/S could be certified for TACAN replacement. It is important not to be lulled into thinking problems are not out there based on a small number of initial, successful test flights. Numerous firmware issues were discovered during the STS-91 flight in June of 1998, resulting in the postponement of MAGR/S certification for operational use. However, the three TACAN units had already been removed from the orbiter Atlantis and three MAGR/S had been installed. The Shuttle Program had to remove three string MAGR/S and reinstall three string TACAN in Atlantis.<br />
+      <br />
+      </li>
+
+      <li><u>Design Insight Is Necessary.</u> Inadequate and outdated documentation and a lack of understanding of output parameters make operation, performance analysis and problem resolution difficult. Lack of design insight also complicates risk assessment of firmware issues. A lack of formal procedures for operating the unit in the test (flight and ground) environment results in user errors, which cause schedule slips.<br />
+      <br />
+       Integrators and users have little access to vendor engineers and design documentation. Vendor engineers are often not prepared to answer complex, &ldquo;spur of the moment&rdquo; questions at design reviews. Design insight questions require time to research. Trying to obtain design information in the presence of firewalls wastes time and money. Knowledge of product design and operation should not be isolated to a select few. Open and accurate communication is needed. An official questions list should be maintained to record open questions, question status and closure.<br />
+      <br />
+       A lack of configuration-controlled documents can lead to incorrect knowledge about box design, operation and performance. Inadequate understanding of navigation unit design and operation can also lead to misinterpretation of test results. This makes problem resolution more expensive. A lack of accurate, detailed product documentation forces integrators to spend significant amounts of lab time trying to get the unit to work properly. Frequent consultations with the vendor drives up project costs.<br />
+      <br />
+       During a mission, operators of both unmanned and manned spacecraft live by their data. Wrong information can lead to making the wrong decisions when faced with a spacecraft anomaly. This can lead to loss of data, some vehicle capabilities or even the spacecraft itself, as in the 1997 Lewis satellite incident.<br />
+      <br />
+       For a flight critical application (i.e., the box is required to safely conclude the mission), a box will undergo more modification than in other applications. The user will also require more detailed knowledge of navigation unit design and operation than users of non-flight critical units. The Shuttle program considers a box to be failed more quickly than an aviation user. Engineering and Mission Control personnel must have a thorough understanding of receiver operation and data. For manned space flight, lack of design insight is a safety issue. Due to the anomalies that occurred on STS-91, MAGR/S firmware requirements, the integration guide and source code (originally developed at government expense) were made available to the Shuttle program.<br />
+      <br />
+       Answers to navigation unit insight questions were limited to &ldquo;how&rdquo; and often did not include &ldquo;why.&rdquo; The &ldquo;why&rdquo; often touched on assumptions made in designing a receiver for terrestrial aviation applications.<br />
+      <br />
+       Assumptions made during the original design can manifest as firmware and receiver performance issues if the assumptions are not valid in the new application of a unit.<br />
+      <br />
+       During the relative GPS experiments conducted on STS-69 and STS-80, lack of insight into the 3M, TurboStar, Tensor and Quadrex receivers made integration, data processing and data analysis more difficult. In addition, lack of insight into algorithms (particularly those associated with clock steering) made development of the laptop based relative GPS navigation filter more challenging.<br />
+      <br />
+       Integration engineers must have access to testing facilities and data so they can become familiar with box performance. As more insight is gained about a unit, the ICD and software requirements for the unit and other units that it interfaces with should be examined for errors and inconsistencies.<br />
+      <br />
+      </li>
+
+      <li><u>Pay Attention To &ldquo;Technical Risk&rdquo;.</u> Project management may focus mainly on risk to cost and schedule, with little attention paid to technical risk. GPS project management kept Shuttle Program management well aware of the nature of a &ldquo;success oriented&rdquo; approach and that cost and schedule could be impacted. Analysis at the start of a project should be conducted to determine risk to cost and schedule based on the technology level, the maturity of the technology and the difference between the planned application and the application for which the box was designed originally. Software complexity should also be examined. Failure to account for technical risk can lead to cost and schedule problems.<br />
+      <br />
+       An additional risk in using &ldquo;off the shelf&rdquo; units concerns the availability of the vendor. Can a user continue to use and maintain a product if the vendor goes out of business or stops producing and supporting the product?<br />
+      <br />
+      </li>
+
+      <li><u>Coding Practices Used In The Past Still Haunt Users.</u> Many current navigation units use firmware that is descended from systems built over 20 years ago. In the past (and even in the present), good software coding standards were not always used, and were often insufficient. New products tend to be developed quickly, with little effort expended on rigorous requirements definition and documentation. Many navigation system vendors maintain a common library of software modules. Different products share many modules. Cost and schedule considerations may lead integrators, users and vendors to ignore firmware issues, rather than fix them. A firmware problem that is no impact to the user that discovered it may be a &ldquo;show stopper&rdquo; in a different application. This leads to error propagation through a product line.<br />
+      <br />
+       A good example from another program: the Ariane 5 flight 501 launch failure in June of 1996 resulted from the use of code from another launch vehicle. Ariane 4 navigation software was used in the Ariane 5 navigation software. No analysis was performed to determine if the ported code was appropriate for the Ariane 5 application. Several lines of navigation code capable of producing math errors had no protection against such errors. The rationale for not providing error protection was not documented. Furthermore, the launch vehicle computer was not designed to meet any requirements concerning handling and recovery from software errors. Only random hardware errors were taken into consideration.<br />
+      <br />
+      </li>
+
+      <li><u>Identify And Resolve Legal Issues Concerning Proprietary Documentation.</u> If a COTS device contains proprietary firmware, legal arrangements must be made to permit inspection of proprietary documentation. Lack of access to proprietary documents can result in undetected issues. One such example, on a civilian spacecraft, was the telemetry bandwidth problem on the European Space Agency Cassini/Huygens Titan probe. This issue was not discovered until the probe was en route to Saturn. Factors that contributed to the late discovery of the problem were lack of access to proprietary documentation, no &ldquo;end to end&rdquo; system testing and a lack of comprehensive project requirements.<br />
+      <br />
+      </li>
+
+      <li><u>Maintain Configuration Control Over Test Equipment And Procedures.</u> Perceived anomalous navigation unit performance in the lab is more likely to be caused by improper test equipment configuration and improper procedures, rather than firmware or hardware problems in the box or GPS satellite problems. A lack of accurate, documented test procedures can make it difficult to duplicate questionable performance in later tests. This lengthens the amount of time it takes to determine the cause of suspect behavior. When trying to diagnose questionable performance, an accurate record of what procedures were performed and the test equipment hardware and software configuration is invaluable.<br />
+      <br />
+      </li>
+
+      <li><u>Provide The Vendor With As Much Data As Possible.</u> Vendors often complain that users provide minimal data when a problem with a navigation unit occurs. GPS receivers are complex computers whose performance depends on a variety of factors. A plot illustrating questionable position and velocity performance is not enough to permit a vendor to diagnose the true cause of an alleged anomaly. The vendor should be provided with as much digital data as possible, particularly channel and tracking parameters. Information on antenna location, hardware configuration and the procedures that were executed is also helpful. Navigation unit vendors are busy and receive large numbers of &ldquo;calls for help&rdquo; from the user community. Users who suspect that a unit is malfunctioning should make a thorough investigation to determine if the alleged performance is a user error before involving the vendor.<br />
+      <br />
+      </li>
+
+      <li><u>COTS Box Outputs May Not Be Designed With Redundancy Management In Mind.</u> Most aircraft and missiles use only one GPS receiver, stand-alone INS or EGI. Some vehicles (Space Shuttle, ISS, X-33, X-38) were designed to use multiple navigation units for redundancy. Redundancy Management schemes perform checks on box outputs, such as dynamic parameters (position, velocity, attitude, rotational rate and accumulated sensed velocity) and health status parameters (BIT/BITE). Most BIT/BITE indicators and self-tests were designed to help ground personnel determine if a suspect unit should be returned to the depot for maintenance.<br />
+      <br />
+       Use of BIT/BITE indicators in RM algorithms requires that the integrator understand what the health status indicators mean and how indications of a problem can affect navigation unit performance. Care must be taken when determining which parameters to monitor for assessing unit health. A &ldquo;title&rdquo; of what the indicator is in an interface control document does not tell the integrator the potential impact the annunciated condition has on box performance. This makes it difficult for the integrator to determine which BIT/BITE indications should be used in the RM algorithm. The RM scheme should be robust enough to identify and deselect a questionable unit but not deselect a good unit. BIT/BITE indicators in navigation units evolve over long periods and have a heritage going back decades to previous products. Particular indicators are often added to help address certain problems encountered.<br />
+      <br />
+       Over the years, corporate knowledge loss results in a manufacturer no longer knowing why a particular indicator is present in the output or what its significance is. Of particular importance are what values performance indicators (such as Figure of Merit) are initialized to after a unit power cycle or re-initialization.<br />
+      <br />
+       Unlike aircraft, the Space Shuttle performs BIT on navigation units during flight. Mission Control must understand how to interpret negative results. Does a certain failure indication from BIT always mean that the unit should not be used? Could the unit continue to be used for navigation with no degradation in performance? Nuisance indicators need to be identified and ignored. A BITE masking capability is particularly useful.<br />
+      <br />
+       While redundancy management is important, it is not a substitute for well-documented and fully verified software.<br />
+      <br />
+      </li>
+
+      <li><u>Do Not Totally Rely On The Vendor For Navigation Expertise.</u> Vendors can provide valuable information on the design, integration and use of their products. However, they may not always fully understand the applications where their products are used. Users and integrators must maintain navigation expertise to conduct testing, resolve issues, avoid &ldquo;false pulls&rdquo; of healthy units that are assumed to be malfunctioning, determine how best to integrate a unit, and provide management with advice on what navigation products are suitable for an upgrade.<br />
+      <br />
+       Navigation vendors, who are doing business in a highly competitive market, do not want skilled technical personnel tied to one project for periods of years. The use of a COTS navigation product should not lead one to believe that technical expertise can be &ldquo;bought&rdquo; as a COTS product.<br />
+      <br />
+      </li>
+
+      <li><u>The Interface Control Document Is VERY Important.</u> If the integrator and user do not have access to firmware and firmware requirements, the ICD may be the only written source of information on unit parameters. Developers of software that will interface with the unit must examine the ICD closely. The ICD and the interfacing software must be compared to each other throughout a project. The ICD should also be compared to ground and test results to ensure that it accurately reflects unit input, output and operation. An inaccurate ICD will lead to software and procedural issues that will have to be addressed before a system can be certified as operational. An accurate ICD is also needed for instrumentation port data that is critical during the test and verification phase of a project.<br />
+      <br />
+       Understand operation of the box as much as possible before defining requirements for code that will interface with the box. &ldquo;Bullet proof&rdquo; the interface since it may not be possible to account for all forms of anomalous unit behavior.<br />
+      <br />
+       Some issues encountered on both the MAGR/S, SIGI and relative GPS projects concerned time homogeneous data. Integrators should confirm with the manufacturer which data messages are or are not time homogeneous. This information should be included in the ICD. Non-time homogeneous data makes data analysis and problem resolution more difficult.<br />
+      <br />
+       Short development schedules may result in changes to the ICD while host vehicle software requirements are being defined and software is in development and test. A disciplined process of checks must be in place to ensure that the ICD and software requirements for units that interface with the GPS receiver or EGI are consistent. Individuals who have knowledge of both receiver or EGI requirements and requirements for other interfacing units must be able to communicate and be involved in any changes made to the ICD.<br />
+      <br />
+      </li>
+
+      <li><u>Knowledge Capture.</u> Aviation navigation units often lack detailed, accurate documentation that can be accessed by the integrators and users. If such documentation exists, it is often not included in a contract. The manufacturer may consider some information that would be contained in such documentation proprietary. Much information about unit design and operation possessed by integrators and users is &ldquo;oral tradition&rdquo; or &ldquo;techno-folklore.&rdquo; Different individuals on a project may have conflicting ideas about how a unit works. This can lead to mistakes during integration and difficulties in resolving anomalies from flight and lab tests. Integrators and users should record information about unit operation and design in a &ldquo;living document&rdquo; as information is learned from testing and interaction with the vendor. Once design and procedural details are on paper, they can be more easily verified and passed on to other personnel later. Such a
+      process facilitates the dissemination of accurate information about the unit. Introduction of proprietary data into the document should be avoided.<br />
+      <br />
+      </li>
+
+      <li><u>Document The Theory Behind Navigation Algorithm Requirements.</u> Software requirements documents contain equations to be used, but rarely provide insight into how the equations were derived, or how values of constants were determined. This information exists on paper at some point, in the form of informal memos and company internal letters. However, over time, this information is lost due to employee attrition, clean-out of offices, retirements and corporate takeovers. Many mathematical results used in navigation algorithms do not exist in the open literature. Corporate knowledge loss makes it difficult for engineers to understand, evaluate and modify software years or decades after it was written and certified. Trying to re-derive results can take a considerable amount of time.<br />
+      <br />
+       Theoretical development of algorithms should be contained in a configuration controlled, companion document to the software requirements. The document should be as &ldquo;self contained&rdquo; as possible, and avoid references to internal letters, informal memos and presentations that easily become lost over time. Derivations should include all steps and details of simplifying assumptions. The document should be written for a future engineer in his or her twenties, who possesses a Bachelor&raquo;s degree and who does not have the help of a mentor who understands the material.<br />
+      <br />
+      </li>
+
+      <li><u>GPS Receivers Are Complex, Firmware Quality Is Important.</u> GPS receivers are computers with tens or hundreds of thousands of lines of code. Like other computers, code errors exist that may not always manifest in a predictable or easily observable fashion. Software bugs can also lie dormant for years until the right set of conditions causes them to manifest.<br />
+      <br />
+       Most GPS receivers are equipped with an &ldquo;autonomous reset&rdquo; feature to recover from software anomalies. However, receiver resets and software bugs will result in a &ldquo;loss of service&rdquo; and make needed data unavailable. Reliability is not just a concern with GPS hardware, it is a concern with GPS receiver firmware as well. GPS receivers originally designed for space applications have suffered from significant, though eventually solvable, firmware problems. Even inexpensive handheld GPS units are not immune to technical problems. One popular, low cost (~$100) unit introduced in 1999 had 10 firmware versions in its first year of production.<br />
+      <br />
+       Time critical activities such as atmospheric entry and landing (Space Shuttle, Crew Return Vehicle), orbital adjustment maneuvers, windows of ground tracking station access, rendezvous, proximity operations and docking require accurate states in a timely manner. Loss of service is also a concern for aviation GPS receivers during final approach. Some NASA spacecraft that use GPS to obtain high position accuracy mandate a rate of software resets to recover from software anomalies of less than one per day. A firmware issue that has &ldquo;no impact&rdquo; in an aviation application may require a code fix in an unmanned or manned spacecraft application with high reliability and autonomy requirements.<br />
+      <br />
+       An interesting study was recently published concerning the performance of stand-alone aviation GPS receivers that meet Technical Standard Order (TSO) C-129 requirements. The study found that the probability of a receiver outage (loss of service) due to a firmware problem was higher than a signal in space problem that RAIM is designed to detect and deal with. Although a great deal of effort has been spent on improving GPS accuracy through differential methods, and protecting against signal-in space problems using systems like the Wide Area Augmentation System (WAAS) and the European Geostationary Navigation Overlay System (EGNOS), little attention has been paid to ensuring GPS receiver availability by having quality receiver firmware. The study also concluded that more attention should be paid to characterizing GPS receiver failure probability and failure modes. The Shuttle Program&raquo;s experience with GPS and EGI units confirms these findings.<br />
+      <br />
+      </li>
+
+      <li>
+        <u>Lessons Learned From Other Programs.</u> A number of reports have been published recently highlighting the challenges of COTS products used in spacecraft and DoD systems and analyzing failures of unmanned spacecraft, some of which used COTS and a &ldquo;faster-better-cheaper&rdquo; approach.<br />
+        <br />
+         Shuttle personnel reviewed these reports for any lessons learned that could have applied to the MAGR/S and SIGI projects. For completeness, some issues identified by those reports are summarized below. Not all of the issues are relevant to the Shuttle navigation upgrade effort.<br />
+        <br />
+
+        <ul>
+          <li>Software development process not well defined, documented or understood.</li>
+
+          <li>Contract consolidation led to corporate knowledge loss concerning critical systems.</li>
+
+          <li>Lack of independent verification and validation.</li>
+
+          <li>Inadequate communication between project participants.</li>
+
+          <li>Lack of management involvement and oversight.</li>
+
+          <li>Inadequate spacecraft monitoring and procedural errors by operators.</li>
+
+          <li>Navigation equipment not well understood.</li>
+
+          <li>Spacecraft operators not familiar with system design, operation and failure modes.</li>
+
+          <li>Lack of a formal, disciplined process for documenting, advertising and resolving issues.</li>
+
+          <li>Inadequate staffing and training.</li>
+
+          <li>Legitimate issues ignored and attributed to resistance to a &ldquo;new way&rdquo; of doing business.</li>
+
+          <li>Frequent turnover of management and technical personnel.</li>
+
+          <li>Issues ignored due to cost and schedule pressure.</li>
+
+          <li>Roles and responsibilities not defined.</li>
+
+          <li>Technical risks not identified and managed.<br />
+          <br />
+          </li>
+        </ul>
+      </li>
+
+      <li><u>Provide Guidelines For COTS And &ldquo;Faster-Better-Cheaper&rdquo; Implementation.</u> A key lesson from unmanned spacecraft failures and DoD software programs is that one must understand how to properly use COTS products and apply &ldquo;faster-better-cheaper&rdquo; principles.<br />
+      <br />
+       Some projects have failed since management was not given guidance concerning how to implement a faster-better-cheaper approach. &ldquo;Faster&rdquo; and &ldquo;cheaper&rdquo; are easily understood, but &ldquo;better&rdquo; is difficult to define. This has also led to inconsistent application of faster-better-cheaper principles from one project to another.<br />
+      <br />
+       A COTS policy is needed to help prevent cost, schedule and technical difficulties from imperiling projects that use COTS. Criteria for determining whether a COTS approach can be taken must be determined. Of prime importance is defining the level of insight needed into vendor software, software maintenance and certification processes.<br />
+      <br />
+       Problems in COTS projects can arise when requirements are levied on the product that the vendor did not originally intend for the unit to meet. Using COTS may mean either compromising requirements on the COTS unit or on the integrated system. Whether or not new requirements have to be applied to the unit is a critical decision. Unfortunately, new requirements may not be recognized until the COTS product experiences difficulties in the testing and integration phases of the project.<br />
+      <br />
+       The Shuttle Program created COTS/MOTS software guidelines for varying levels of application criticality. This recommended policy defines what considerations should be made before deciding to procure a COTS/MOTS product. The following should be examined based on the criticality (impact of failure on safety of flight or mission success) of the application and product in question.<br />
+      <br />
+       Certification Plan &ndash; How much of the vendors in-house certification can be relied upon? For critical applications, additional testing will be needed if access to test results, source code and requirements documents is not allowed. Can the unit be certified to a level commensurate with the criticality of the application?<br />
+      <br />
+       Vendor Support &ndash; This should cover the certification process and the system life cycle. The level of support should be defined based on the criticality of the system.<br />
+      <br />
+       Product Reliability &ndash; Vendor development and certification processes for both hardware and software should be examined.<br />
+      <br />
+       Trade Studies &ndash; Define &ldquo;must meet,&rdquo; &ldquo;highly desirable&rdquo; and &ldquo;nice to have&rdquo; requirements. Ability of the unit to meet those requirements, and at what cost, will be a major deciding factor in the COTS decision. Identify loss of operational and upgrade flexibility as well technical risks and cost associated with the product. Examine the impact of the product on the integrated system, including hardware and software interface changes. Compare the proposed COTS products to a custom developed product. Assess life expectancy of the product and it&raquo;s track record in the market place.<br />
+      <br />
+       Risk Mitigation &ndash; Identify areas that increase risk, such as lack of support if the vendor goes out of business or the product is no longer produced. Ensuring vendor support over the product life cycle can mitigate risk, along with gaining access to source code, design requirements, verification plans and test results. Off-line simulations of the product should also be considered. Can access be obtained to vendor information on product issues discovered by other users?<br />
+      <br />
+       Trade studies and risk identification must be performed before committing to the use of a particular unit and integration architecture.<br />
+      <br />
+      </li>
+
+      <li><u>Successful Application Of A COTS EGI.</u> Prototype X-38 vehicles were dropped from a NASA B-52B at Edwards AFB to test the landing guidance, navigation, control and parafoil systems. These vehicles used a COTS EGI unit. The integration and operation of the EGI in the X-38 atmospheric flight tests was smoother than the Space Shuttle, ISS, and CRV projects to use a space missionized EGI (SIGI) in Earth orbit. The key to the X-38 drop test success with a COTS EGI was that the EGI was being used in an atmospheric application similar to the application for which it was originally designed. However, as with the Shuttle MAGR/S and Shuttle, ISS and CRV SIGI projects, lack of design insight was an issue.<br />
+      <br />
+      </li>
+
+      <li><u>Impact Of COTS Disappointments.</u> In the last 10 years inexpensive, accurate navigation devices based on GPS have become available to the public, business and military. News media reports frequently highlight the &ldquo;revolution&rdquo; and &ldquo;glowing success&rdquo; stories resulting from GPS technology. Some who do not have a background in navigation take the existence of $100 dollar handheld GPS units to mean that applying GPS technology to an air or spacecraft is just as easy as buying a handheld unit at a sporting goods store.<br />
+      <br />
+       Applying GPS to new applications, such as spacecraft, is not always straightforward. Naivet&eacute; about GPS complexity and how applications differ lead to unrealistic schedule, budget and technical success expectations. The assumption that the success of terrestrial GPS receivers translates into &ldquo;cheap and easy&rdquo; GPS for space applications has actually retarded the maturing of GPS products for space use.<br />
+      <br />
+       COTS projects that encounter significant technical problems, budget overruns and schedule slips are &ldquo;COTS disappointments.&rdquo; These experiences cause both engineers and managers to become suspicious of the technology represented by the COTS product. The problem is not with the technology (such as &ldquo;GPS&rdquo; or &ldquo;strapdown navigation&rdquo;) but with the unrealistic expectations that are attached to COTS projects. These expectations are based on a lack of understanding about the original design and application of the COTS product in question. COTS products are &ldquo;proven&rdquo; devices only when used in the applications for which they were originally designed. The vendors met the contractual obligations of the original customer. The issue is not the technology, or the use of a COTS product, but rather how that technology was applied to meet the needs of the original customer.<br />
+      <br />
+       The political and budgetary climate may demand a COTS solution, but initial problems using a certain technology can lead to reluctance to work with that technology in the future, particularly in a &ldquo;COTS&rdquo; project. The result is that engineers and management may be reluctant to upgrade to newer technology.<br />
+      <br />
+      </li>
+
+      <li><u>Orbit Determination Accuracy.</u> While accuracy of COTS navigation units may be sufficient in some cases to support low accuracy space flight requirements, Shuttle flights of these units indicate that they are not appropriate for future applications with more demanding orbit determination needs.<br />
+      <br />
+       These applications include replacement of ground tracking, satellite formation flying, rendezvous, proximity operations and docking. Some scientific applications, such as determination of atmospheric profiles using GPS signal occultation, have stringent orbital accuracy requirements (1 meter position, 0.1 millimeters/second velocity).<br />
+      <br />
+       Formation flying, elimination of ground tracking and orbital replenishment (rendezvous, proximity operations and docking) will place stringent demands on orbit determination and relative navigation accuracy. Firmware quality, hardware reliability and orbit determination accuracy requirements to support these applications will be more demanding than the capabilities of current GPS units. Autonomous, on-board, real time navigation, relative navigation and burn targeting requires investment in spacecraft navigation systems that will differ from atmospheric flight navigation systems.<br />
+      <br />
+      </li>
+
+      <li><u>Velocity Accuracy Is Important.</u> Targeting algorithms that compute precise orbital adjustments to support activities such as (but not limited to) formation flying, rendezvous, proximity operations and docking/grapple need accurate velocity as well as position. Such algorithms have to predict vehicle state vectors into the future over a period of time that may range from minutes to weeks. Even small velocity errors can result in large position and velocity errors after a prediction using high fidelity integrators and environment models. How well a navigation unit state vector &ldquo;predicts&rdquo; into the future is a key question that potential users of a unit must ask and address during flight and lab test evaluation.<br />
+      <br />
+      </li>
+
+      <li>
+        <u>Orbital Semi-Major Axis.</u> A metric used to evaluate how well a state vector will &ldquo;predict&rdquo; is the semi-major axis accuracy. Orbital semi-major axis is a function of position, velocity and energy (1). It is also related to the period of the orbit (2).<br />
+        <br />
+
+        <p align="center"><IMG  WIDTH="337"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009441main_1370-1.gif"  HEIGHT="179"  BORDER="0" /><A HREF="/llis_lib/txt/1009912main_1370-1.txt"  >[D]</A></p>
+        <br />
+         Relative semi-major axis accuracy is a good parameter for judging the accuracy of a relative GPS algorithm for formation flying and rendezvous applications.<br />
+        <br />
+         A recent paper addresses the importance of semi-major axis accuracy and the need for realistic correlation between position and velocity. This paper was written in response to the poor navigation performance observed on Shuttle flights of &ldquo;off the shelf&rdquo; GPS receivers and EGIs.<br />
+        <br />
+      </li>
+
+      <li>
+        <u>Most Space Navigation Conference Papers Do Not Address High Accuracy Orbit Determination.</u> Some papers appearing in the literature advocate geometrical, kinematic type position-determination techniques using GPS data. The advent of all-in-view receivers supports this trend. Such algorithms take advantage of continuous, high rate GPS measurements and the improved measurement geometry compared to ground based radar tracking. From a software perspective, these algorithms are more straightforward since complex environment models (such as gravity and drag) are not used. While the position and time data resulting from kinematic positioning algorithms are very accurate and meet the requirements of some missions, this solves only half the problem for other users.<br />
+        <br />
+         Many papers discuss a range of space applications of GPS and the high-position accuracy it offers, but pay little or no attention to the need for accurate velocity and semi-major axis estimation. Numerical results of algorithms designed to improve spacecraft navigation accuracy are exclusively focused on position accuracy, with no mention of velocity and semi-major axis errors. Challenges in space-borne applications of GPS are often detailed, such as:<br />
+        <br />
+
+        <ul>
+          <li>Widening the Doppler shift window.</li>
+
+          <li>Installing an orbit propagator to facilitate reacquisition after a GPS outage.</li>
+
+          <li>Multipath</li>
+
+          <li>GPS satellite visibility as a function of spacecraft attitude.</li>
+
+          <li>GPS satellite visibility to antennas on spinning spacecraft.</li>
+
+          <li>Increased number of satellites visible on-orbit.</li>
+
+          <li>Satellite visibility and signal strength for geostationary satellite applications.</li>
+
+          <li>Modifying legacy navigation algorithms to accommodate higher orbital altitudes and velocities.<br />
+          <br />
+          </li>
+        </ul>
+        However, the need to improve navigation and filtering algorithms to enhance velocity and semi-major axis accuracy is rarely mentioned. Lack of orbital and relative semi-major axis accuracy data, along with position and velocity correlation data, make it difficult to evaluate the usefulness of relative GPS navigation studies and algorithms published in the literature. Such data is required to assess navigation accuracy impacts on targeting and guidance algorithms and perform propellant budgeting.<br />
+        <br />
+      </li>
+
+      <li><u>Receiver Specifications.</u> Receivers have specifications for expected position and velocity accuracy under the best tracking conditions. Even receivers designed for space lack a semi-major axis specification. This, coupled with the proprietary nature of receiver firmware, makes it difficult for potential users to determine how suitable a receiver may be for a space application.<br />
+      <br />
+       Navigation units that are needed to support advanced concepts (formation flying, rendezvous, autonomous operation, limited ground support and infrastructure) require navigation algorithms that reflect orbital mechanics. While it is true that position, velocity and orbital parameter accuracy requirements vary from program to program, this should not be used to justify a lack of appropriate navigation algorithm missionization.</li>
+    </ol>
+
+    <h4><b>For Further Information:</b></h4>
+
+    <ul>
+      <li>Goodman, John L., "Lessons Learned From Flights of "Off the Shelf" Aviation Navigation Units on the Space Shuttle," Joint Navigation Conference, Orlando, Florida, May 6-9, 2002.</li>
+
+      <li>Goodman, John L., "GPS In Earth Orbit - Experiences From The Space Shuttle, International Space Station And Crew Return Vehicle Programs," Proceedings of the 2002 Core Technologies for Space Systems Conference, Colorado Springs, CO, November 19-21, 2002. See http://www.spacecoretech.org/, Technology Maturation, Transfer, and Utilization Session.</li>
+
+      <li>Goodman, John L., "The Space Shuttle and GPS - A Safety-Critical Navigation Upgrade," Springer-Verlag Lecture Notes in Computer Science Volume 2580: Proceedings of the 2nd International Conference on COTS-Based Software Systems, Ottawa, Canada, February 10-12, 2003.</li>
+
+      <li>Goodman, John L., "A Software Perspective On GNSS Receiver Integration and Operation," Proceedings of the International Space University Conference on Satellite Navigation Systems: Policy, Commercial and Technical Interaction, International Space University, Strasbourg, France, May 26-28, 2003, published by Kluwer Academic Publishers, Dordrecht, The Netherlands, 2003.</li>
+    </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1398: SWIFT Power Control Board Harness Wire Reversal</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1398: SWIFT Power Control Board Harness Wire Reversal</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1398 (Database ID: 1398)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-01-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1398" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During instrument integration, a GSE power harness seriously damaged SWIFT heater control electronics. This mishap occurred on the Burst Alert Telescope (BAT) Power Control Board (PCB). The failure investigation identified the root cause as a manufacturing error (miswire) in the GSE power interface harness. The PCB GSE harness was built and tested with a 28-volt reversed polarity in the power interface.<br />
+    <br />
+     The SWIFT Project desired to expedite the hardware I&amp;T schedule. As a result, the PCB GSE power harness was accepted &ldquo;as is&rdquo; from the harness fabrication and test facility, without the proper documentation and QA review. At the time, it was rationalized that the Safe-To-Mate procedure would verify compliance to the Interface Control Document (ICD) and the safe flight hardware integration activities.<br />
+    <br />
+     As another time saving approach, review and sign-off requirements for SWIFT integration work orders were reduced to accelerate schedule. This approach eliminated the need for system and discipline engineering signatures. Changing work order signature authority is inconsistent with GSFC policy for the control and authorization of flight hardware work orders. Following the PCB power-on fault, the GSFC policy was reinstated with signatures from quality assurance, systems engineer and flight hardware leads.<br />
+    <br />
+    During the GSE electrical integration to the SWIFT PCB, the Safe-To-Mate procedure was performed, but not completed due to problems with a separate flight component, the Image Processor. To accelerate the integration schedule, the SWIFT Image Processor was being integrated in parallel with the PCB. Confusion ensued between the two integration procedures, and the PCB, GSE electrical Safe-To-Mate was not entirely finished. As a result of the application of reverse power, the SWIFT flight PCB sustained significant damage, which required a component rework cycle and a 4-month project schedule delay.<br />
+    <br />
+    There were several important situations and conditions, which resulted the SWIFT PCB power-on fault. These circumstances are the basis of the lessons learned. Each of these situations contributed to the PCB flight hardware damage, and individually, each could have prevented the failure condition. Overall, a disciplined and careful system engineering and quality assurance approach can preclude damage to flight hardware electronic during power interface harness testing.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>During flight hardware integration, priority and precedence must be given to completion of the electrical power interface Safe-To-Mate procedures. Priority and precedence for testing flight hardware implies that Safe-To-Mate is the first test procedure during integration. No other electrical integration procedures should commence until Safe-To-Mate procedure is completed. Incorrect power interfaces have cause more flight hardware damage than any other electronic hardware failure mode.</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+    The initial application of power is a continuous process. This process proceeds from component acceptance through flight instrument hardware and systems level integration and test. It cannot be understated the risk associated with the initial application of power to flight hardware. Particularly, when the test configuration is changed from component to subsystem or systems level testing, which involves a change in the power cable and harness interface. <br />
+
+    <ol start="2">
+      <li>There is an inherent, and potentially grave, risk with changing existing and established NASA policies and procedures. This is especially true during flight hardware integration, when the intent is to expedite an accelerated schedule. Project management must exercise extreme care and diligence during integration, since there is a significant risk is associated with damaging hardware and/or physical injury.</li>
+
+      <li>Project systems engineering and quality assurance must be responsible for ensuring the correctness of power interface harness prior to the application of flight hardware power. A system of checks and balances, which verifies flight hardware integration readiness, should be supported by both reviews and audits of power interface harnesses.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>It is recommended that serious attention and care must be taken by project and systems engineering management to ensure that all Safe-To-Mate procedures are given significant priority during the component electrical integration. The key elements to successful application flight hardware power are continual diligence and a detailed understanding of the risks involved with an initial power-on integration operation. This attentive diligence is particularly necessary during early flight hardware integration efforts, because the hardware test configuration is continually changing.<br />
+    <br />
+    In addition, it is recommended that changes to NASA operating procedures, which would affect the safety of personnel or flight hardware, must be approved at the Program management level or above. As applied to this lessons learned, the recommendation would involve signatory authority on a flight hardware integration work orders<br />
+    <br />
+    Finally, authority for managing successful integration effort should be given to systems engineering and quality assurance. It is recommended that systems engineering verify the power harness with both design wire lists and Failure Mode Effects Analysis (FMEA). Furthermore, quality assurance should ensure that the power harness acceptance test is complete and that all paperwork is finished and signed off by the proper review personnel.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0624: Design, Test, and Inspection of Semi-Rigid RF Cables (1997)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0624: Design, Test, and Inspection of Semi-Rigid RF Cables (1997)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0624 (Database ID: 624)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-06-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/624" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The Scatterometer Electronics Subsystem (SES) for the Sea Winds spacecraft featured six semi-rigid coaxial radio frequency (RF) cables spanning two independent structures within the SES. After two cables failed during the initial SES vibration test, four additional cycles of redesign and test were required before the cables were judged acceptable. Two of the five tests were performed on SES protoflight models (PFM) and three on structural mass models (STM). Each of the six cables required varying degrees of redesign, including changes to cable material, strain relief, mounting configuration, and bonding, that impacted the Sea Winds schedule.</p> 
+<img alt="refer to [D] description" border="0" height="175" src="https://llis.nasa.gov/llis_lib/images/1008991main_0624.jpg" title="refer to [D] description" width="303"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009486main_0624.txt">[D]</a> 
+<p>The process of cable redesign and retest is complicated by lack of repeatability. Minor uncontrolled variations in cable manufacture, routing, and mounting; JPL quotimprovementsquot in the cable configuration; and differences between the PFM and STM units, alter the dynamic characteristics of the test article. Furthermore, cracks in semi-rigid cables are very difficult to detect while they are installed. Cable failures may not be visually detected until the cables are removed from a test model, but they cannot easily be removed for inspection without damaging the cables and invalidating the vibration test results. If a cable failure was not detected and the SES was launched with a cracked cable, thermal transients could widen that crack, and the resulting signal attenuation could cause loss of science data.</p> 
+<p>Additional Keyword(s): developmental model, coaxial cable, coax cable, waveguide</p> 
+<p>Reference(s):</p> 
+<ol> 
+ <li>JPL Problem/Failure Report No. SWD075</li> 
+ <li>J. Forgrave and C. Farguson, quotConcerns Regarding Q-SCAT/Sea Winds SES Semi-Rigid Cable Qualification Status,quot JPL IOM 5052-98-045 of 3/1/98.</li> 
+ <li>C. Kuo, quotFatigue Analysis if SES's Coax Cables,quot JPL IOM 352G: 98:025/CPK of 5/11/98.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>The Sea Winds test program demonstrated that semi-rigid coaxial RF cable failures are difficult to avoid.</li> 
+ <li>Consider using flexible cable. If the design decision is to use semi-rigid cabling, provide ample strain relief loops, structurally join the two cable mounting points so that the load path does not go through the cable, and ensure that the natural frequency of the cable does not match the resonant frequency of the support structure. Stress and fatigue analysis should be performed on the cables to establish margin.</li> 
+ <li>Semi-rigid RF cable failures often cannot be detected by visual examination. During inspections following vibration test of the Sea Winds SES, hairline cracks were missed several times.</li> 
+ <li>When inspecting semi-rigid cables after vibration testing, use a magnifying glass with very good lighting, and look very carefully for cracks.</li> 
+ <li>During thermal vacuum testing of semi-rigid cables, carefully monitor RF output signals for signs of signal drift that may indicate a cracked cable. Consider conducting several thermal cycles to increase the likelihood of crack detection.</li> 
+ <li>Testing of PFMs may permit only in-situ visual examination of components, while STM tests typically allow cables to be removed from the unit for close examination.</li> 
+ <li>Where funding and schedule permits, structures joined by semi-rigid cables should be tested in a developmental model, such as an STM, that facilitates cable removal and inspection.</li> 
+ <li>After a cable assembly passes environmental test, a second quotidenticalquot cable may fail due to minor differences in manufacture and installation.</li> 
+ <li>To the extent feasible, cable receiving inspection, assembly, and installation should be standardized so that test results on one cable are valid on subsequent articles.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>See lesson(s) learned.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.14.2.8 (quotEngineering Practices: Project and System Level Functional Verification and Validation - Verification and Validationquot), in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008. 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 8.3.7.1. (quotFlight System Verification and Validation Design: System Assembly, Integration and Test: System Environmental Verification - Environmental Exposure Fault Isolationquot), and Paragraph 9.3.2 (quotFlight System Flight Operations Design: Flight Hardware Maintenance - Thermal Cyclingquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

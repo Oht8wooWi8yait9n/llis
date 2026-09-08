@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0779: Environmental Test Sequencing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0779: Environmental Test Sequencing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0779 (Database ID: 779)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/779" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1412 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Experience has shown that until the thermal-vacuum tests are performed, many failures induced during dynamics tests are not detected because of the short duration of the dynamics tests. In addition, the thermal-vacuum test on flight hardware at both the assembly level and the system level provides a good screen for intermittent as well as incipient hardware failures.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Perform flight hardware testing in the following sequence:</p>
+
+    <ol>
+      <li>Sinusoidal or transient vibration, random vibration, pyroshock, and acoustics, as required. The order among these dynamics tests may be interchanged.</li>
+
+      <li>Thermal-vacuum testing.</li>
+    </ol>
+
+    <p>To assure that this sequence is followed, specify in the test specifications or test plans, as appropriate, that all dynamic tests will be performed prior to thermal-vacuum tests on both the assembly and system levels.</p>
+
+    <p>During the normal flight sequence, the launch environment is followed by vacuum and potential temperature extremes. In this flight sequence, the flight hardware is therefore exposed to acoustics and vibration followed by vacuum and temperature variations. Consequently, by performing dynamics tests prior to thermal-vacuum tests, the actual flight sequence is simulated. Also, if the flight sequence produces synergistic effects, the synergism will be simulated.</p>
+
+    <p>In addition, preserving the sequence of the service environments in the environmental test program is a widely accepted practice. As a result, the effect of reversing the test sequence on spacecraft failure rates has not been quantified. However, evidence exists that many acoustic induced failures have not been detected until the spacecraft is exposed to the thermal-vacuum environment. These failures may not be detected during acoustics tests because of the short one-minute duration or a non-operating power condition. Typically, the identified failures that could be related to or caused by the dynamic acoustic environment were bad solder joints, intermittents, bad bearings, broken wires, poor welds, leaks, foreign materials, etc.</p>
+
+    <p>An example of a failure that might be induced by dynamic tests but not revealed until thermal vacuum would be a broken wire or solder joint. This defect might be induced by acoustics but not be detected during the acoustic test due to the short duration or to an unpowered or unmonitored state of the affected equipment. During post-acoustic functional testing, the wire or solder joint broken ends may be making adequate contact to show electrical continuity. In the subsequent thermal-vacuum test, the thermal distortions could cause loss of contact, allowing the failure to be detected. Reversing the test sequence could result in the defect not being induced until after thermal vacuum test and not detected until exposure to the flight thermal environment.</p>
+
+    <p>Even if all defects precipitated by the dynamics tests are revealed during the test, or during post-test functional testing, performing the dynamic tests first will still have the advantage of increasing the probability that defects will be detected earlier, when they will have less impact on the system test program cost and schedule.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If the thermal-vacuum tests do not follow the dynamics tests, more intermittent or incipient discontinuity type failures may go undetected. If the defects are not detected during assembly level tests and are subsequently detected during the system level tests, redesign or rework at this late stage of the process could cause delays, increase costs, or make it necessary to accept additional risk that might have been avoided. If the defects are not detected at the system level, the defects may then cause hardware anomalies during the mission, and in the extreme could cause a mission failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform dynamic tests prior to performing thermal-vacuum tests on flight hardware.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Mariner Series, Voyager, Viking, Galileo</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

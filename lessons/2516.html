@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2516: Phoenix EDL Reconstruction</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2516: Phoenix EDL Reconstruction</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2516 (Database ID: 2516)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-03-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Environment,  Flight Operations,  Spacecraft,  Entry Systems,  Lander Systems,  Orbiting Vehicles,  Spacecraft and Spacecraft Instruments,  Planetary entry and landing concepts,  Program planning / development and management,  Engineering design and project processes and standards,  Mission and systems trade studies,  Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2516" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Following the successful 2008 landing of Mars Phoenix, the NASA Office of the Chief Engineer and the NASA Aeronautics Research Mission Directorate commissioned a reconstruction of the Entry, Descent, and Landing (EDL) data telemetry. By improving NASA's understanding of Phoenix flight performance (i.e., comparing the actual flight performance against the pre-entry predictions of flight dynamics, aerodynamics, and aerothermodynamics), the sponsors sought to improve the accuracy of the prediction tools and environmental models and address some questions that arose following Phoenix EDL. The downlinked data available to the analysts included channelized engineering telemetry; non-channelized gyro, accelerometer, and radar data; navigation data on the spacecraft entry state; the landing location coordinates; and radiometric data on EDL communications. 
+<br> 
+<br> Although EDL is typically the highest risk phase of Mars surface missions managed by the NASA/Caltech Jet Propulsion Laboratory (JPL), Phoenix EDL was very successful. Based on the data reconstruction (References (1) and (2)), the vehicle performance during the EDL sub-phases may be characterized as follows: 
+<br> 
+<br> 
+<b>Cruise Stage Separation.</b> The spacecraft state was nominal up to cruise stage separation, and the vehicle performed well upon atmospheric entry. There was no indication of lander recontact after separation from the cruise stage. 
+<br> 
+<br> 
+<b>Hypersonic Entry.</b> During hypersonic entry, it was observed that Phoenix trimmed at a higher total angle of attack than simulation had predicted. Consequently, the vehicle flew a slightly lifting trajectory. Second, since the vehicle was aerodynamically stable, a decision had been made to widen the Reaction Control System (RCS) deadbands throughout the hypersonic regime to mitigate the predicted risk of control reversal. As no thruster activity was recorded during the period from HYPER2 transition through parachute deployment, there was no chance of Phoenix thrust reversal. Third, the vehicle experienced large aerodynamic torques during the deceleration pulse that exceeded the available Z-axis thruster torque, further vindicating the decision to widen the RCS deadbands. 
+<br> 
+<br> 
+<b>Parachute Deployment &amp; Descent.</b> Parachute deployment and inflation met the design requirements. Deployment of the parachute 6.4 seconds later than predicted is consistent with the indications of a lifting trajectory, the times for line stretch and first-peak-load-from-mortar-fire were slightly shorter than predicted, and the estimated parachute peak load was well below the flight load requirement. 
+<br> 
+<br> 
+<b>Heatshield Separation.</b> Quite unexpectedly, the Phoenix heatshield separation event was seen in an image captured from the HiRISE camera aboard the orbiting Mars Reconnaissance Orbiter spacecraft. The heatshield can actually be observed falling away, 47 seconds after parachute deployment and about 9.2 km above the Martian surface. Based on the HiRISE pixel and image angle, the heatshield was estimated to be about 340 meters below the lander. This may be compared to a pre-entry heatshield separation analysis that predicted a mean separation distance of 395 meters with a 1-s dispersion of 66 meters. Hence, the model-based mean prediction may have been quite accurate as it was less than 1-s from the image-based estimate. There was no indication of a major heatshield recontact incident during separation. 
+<br> 
+<br> 
+<b>Terminal Descent.</b> Overall, the actual descent trajectory matched the prediction quite closely. No anomalies were encountered during terminal descent, with the radar performance nominal and all touchdown requirements met: 
+<ul> 
+ <li>The lander separation from the backshell was nominal, as was the "tip up" rotation used to clear the backshell and align to the gravity turn attitude.</li> 
+ <br> 
+ <li>The Backshell Avoidance Maneuver planned to prevent the backshell and parachute from landing on the Phoenix lander was not needed and was not implemented.</li> 
+ <br> 
+ <li>The gravity turn and constant velocity were nominal.</li> 
+ <br> 
+ <li>The touchdown deceleration was within 50 percent of the maximum allowable, the final landing pose tilt/azimuth errors were well within requirements, and the touchdown dynamics met expectations.</li> 
+ <br> 
+ <li>All three touchdown sensors tripped after the lander legs deployed, and the full leg compression needed to register touchdown lasted almost 3 times longer than required.</li> 
+ <br> 
+ <li>The back pressure caused by ground effect (that causes a slight slowing of the lander just before touchdown) was observed to begin slightly closer to ground than shown in simulations, but because the onset was slightly faster, the total deceleration was effectively the same.</li> 
+</ul> Several questions arose following the Phoenix landing (Reference (1)): 
+<br> 
+<br> 
+<b>Why did Phoenix land long?</b> Due to cancellation of the sixth trajectory correction maneuver (TCM-6) during the Cruise phase, the predicted landing location was updated and re-centered 17 km uptrack of the original target landing location (Figure 1). However, the vehicle landed 21 km downtrack and 5 km crosstrack from the newly predicted site, or a straight-line distance of 21.6 km. The primary cause was the higher than predicted angle of attack during hypersonic entry. When this error is combined with the reconstructed atmospheric density and high-altitude winds, and with the very small navigation entry state error (i.e., error in knowledge of position, velocity, or entry time) the propagated landing site is within 2 km of the newly predicted landing site (and well below 1σ). 
+<br> 
+<br> 
+<b>Why did Phoenix have an unexpectedly high angle of attack during Hypersonic?</b> A difference in the angle of attack prediction will result in different aerodynamic forces and torques than predicted. The effects of this difference are particularly significant during the hypersonic entry, when there is still a long time to landing. A number of candidate causes of the high angle of attack have been identified (Reference (2)). However, the likely cause is a combination of a larger-than-expected radial offset in the capsule center-of-gravity location than pre-entry measurements, and a slight overestimate of the capsule hypersonic aerodynamic stability. But there is insufficient data for the EDL reconstruction to conclusively identify the cause. 
+<br> &nbsp; 
+<img border="0" height="300" src="https://llis.nasa.gov/llis_lib/images/1027301main_2009-12_EDL_Fig_1.jpg" width="387"> 
+<br> 
+<br> 
+<b>Figure 1.</b> Phoenix landing ellipse showing actual landing site (green dot) 21.6 km downtrack of the updated predict (white dot) 
+<br> 
+<br> 
+<b>Why did Phoenix roll during Hypersonic?</b> Phoenix experienced a roll torque of 0.5 Nm at peak deceleration. This induced a 0.7 deg/second roll rate that continued through parachute deployment. Roll rate reconstruction showed that bounded aerodynamic instability and a center of mass radial offset could produce the observed roll rate. But the EDL data reconstruction did not conclusively determine the cause of the roll. 
+<br> 
+<br> 
+<b>Were there any indications of the thruster efficacy issue?</b> Thruster jet interactions with the structure (Figure 2) during EDL can alter the pressure on the backshell, resulting in different control moments than intended. RCS pitch authority may be degraded and yaw authority may be low to non-existent, posing a risk of control reversal. Furthermore, this may cause a large attitude error at parachute deployment that leads to excessive wrist mode dynamics that impact radar performance. However, since Phoenix did not fire thrusters during the descent, relying instead on the inherent capsule stability to traverse the flight regimes, thruster efficacy was not an issue. 
+<br> &nbsp; 
+<img align="Bottom" border="0" height="322" src="https://llis.nasa.gov/llis_lib/images/1027307main_2009-12_EDL_Fig_2.jpg" width="300"> 
+<br> 
+<br> 
+<b>Figure 2.</b> EDL thruster efficacy issue 
+<br> 
+<br> 
+<b>How did the radar perform?</b> The Phoenix radar design was inherited from the Mars Polar Lander and Mars '03 projects. Modifications for the Phoenix mission included a lower minimum altitude, high resolution Doppler mode, new antenna design and configuration, new antenna switch design, lower pulse repetition frequency (PRF) for range ambiguity protection, and numerous firmware updates. The Phoenix radar worked well in the environment for which it was tuned (flat terrain, near vertical descent), and the overall altitude and velocity performance was consistent with simulations and with field testing at NASA Dryden Flight Research Center. One unexplained (but not unexpected) anomaly was seen in the altitude data just prior to touchdown, but well after the system ceased using radar data to control the landing. (Some of the radar performance data discussed in Reference (1) has been omitted here to ensure conformance with International Traffic in Arms Regulations (ITAR) restrictions.) 
+<br> 
+<br> 
+<b>Was there a plasma blackout?</b> Communications may be attenuated or interrupted when a spacecraft enters an atmosphere due to the ionized sheath of plasma and high electron density caused by the compression and heating of surrounding air. Phoenix was equipped with a transmitter capable of both recorded and real-time downlink via both Mars orbiter relays and direct-to-Earth. EDL downlink was maintained from 2 minutes prior to Entry until 1 minute after touchdown. Phoenix telemetry suggests that there may have been a short communications brownout or blackout during the period of peak heating during planetary entry. 
+<br> 
+<br> 
+<b>Was there any fault protection activity or anomalies during EDL?</b> All high-level and component-level fault protection counts during EDL were either expected or understood. These included 315 X-axis attitude control error counts during parachute descent (expected), 531 radar reliable counts (expected), 1 Fast Fourier Transform (FFT) Frozen count (understood) and 1 FFT Done count (understood). There were no other EDL anomalies. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li>Erik Bailey, et. al., Presentation on "Phoenix EDL Reconstruction," October 7, 2008.</li> 
+ <li>Desai, P. N., Prince, J. L., Queen, E. M., and Grover, M. R., "Entry, Descent, and Landing Performance of the Mars Phoenix Lander," Journal of Spacecraft and Rockets, to be published.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Following a successful planetary landing, the balance of mission resources is devoted principally to assuring successful surface operations. However, unless an analysis of system performance during the critical EDL mission phase is undertaken, it may be difficult later to reconstruct EDL performance data that may be critical to the success of future missions.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Utilize the findings of the Phoenix EDL reconstruction for the improvement of future Mars EDL models and prediction tools, and for optimizing future system and mission designs that feature an EDL mission phase.</li> 
+ <br /> 
+ <li>Consider allocating resources in flight project budgets for an EDL reconstruction to be scheduled as soon after planetary landing as feasible.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.5 (&quot;Flight Scenario Design: Entry, Descent & Landing (EDL) Scenario Design&quot;) in the JPL standard &quot;Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),&quot; JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

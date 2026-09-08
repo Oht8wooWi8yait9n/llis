@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2419: Aquarius Reflector Over-Test Incident</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2419: Aquarius Reflector Over-Test Incident</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2419 (Database ID: 2419)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-11-02</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Integration and Testing,  Program Management,  Safety and Mission Assurance,  Facilities,  Flight Equipment,  Ground Equipment,  Hardware,  Mishap Reporting,  Payloads,  Spacecraft,  Test Article,  Test Facility,  Spacecraft and Spacecraft Instruments,  Communications between different offices and contractor personnel,  Contractor relationships,  Quality</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2419" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Aquarius is a satellite project managed by the NASA/Caltech Jet Propulsion Laboratory designed to measure variations in global sea surface salinity for Earth climate studies. The primary instrument components, the Radiometer and the Scatterometer, share a single antenna subsystem that includes a 2.5-meter diameter reflector (Figure 1). The Aquarius reflector was damaged during acoustic testing in the JPL acoustic test chamber (Figure 2) on May 23, 2007 (References (1) and (2)). The specific acoustic test that resulted in the over-test incident was Test Run #4, which had planned test level settings of -12dB, -9dB, and -6dB (from the quotfullquot or 0 decibel sound pressure level). The run was aborted by the system during the first (-12dB) run when the sound pressure exceeded limits. 
+<br> &nbsp; 
+<table border="0"> 
+ <tbody> 
+  <tr> 
+   <td><img align="0" border="0" height="248" src="https://llis.nasa.gov/llis_lib/images/1026455main_2009-09_Aquarius_Fig1_small.jpg" width="242"></td> 
+   <td><img align="0" border="0" height="263" src="https://llis.nasa.gov/llis_lib/images/1026456main_2009-09_Aquarius_Fig2_small.jpg" width="394"></td> 
+  </tr> 
+  <tr> 
+   <td><b>Figure 1.</b> Drawing of Aquarius instrument.................<br> (Reflector depicted at top of image.)</td> 
+   <td><b>Figure 2.</b> Test article suspended in the acoustic chamber<br> prior to test.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> For the acoustic tests, JPL served as the facility operator, and the reflector contractor performed the role of test conductor (as part of their qualification program). Nominal results were obtained from a pre-test of the empty acoustic chamber at the 0 dB level, and also from Test Run #1. Test Run #2 produced an anomaly with the control microphones, but the test conductor decided to proceed to Test Run #3 with further changes to critical control parameters from those recommended by the vendor of the acoustic control software (controller). The anomaly troubleshooting and control parameter change was improperly performed because the flight hardware remained in the test chamber. During Test Run #3, the -9 dB run was aborted by the controller software after 7 seconds. A decision was made to increase the compression rate so acoustic levels would come up slower and better enable the controller. However, the final test-- Test Run #4 at -12 dB-- was manually aborted after a 2-second over-test. 
+<br> 
+<br> Visual inspection of the reflector assembly indicated 9 areas of damage around the periphery of the reflector (Figure 3). The damage apparently resulted during Test Run #4 when the acoustic chamber turned on at itsquotfullquot level (&gt;155dB), which was significantly higher than the 0 decibel level intended for this reflector. This sound pressure level massively over-tested the reflector, and a replacement reflector had to be procured at a cost of approximately $2M. 
+<br> &nbsp; 
+<img align="0" border="0" height="324" src="https://llis.nasa.gov/llis_lib/images/1026457main_2009-09_Aquarius_Fig3_small.jpg" width="537"> 
+<br> 
+<br> 
+<b>Figure 3.</b> Extent of damage to Aquarius reflector. 
+<br> The cause of the over-test incident was attributed to anomalous behavior of the acoustic test facility due to a deviation from the normal JPL acoustic test procedure (Reference (3)). The test operator accidentally pressed the quotrunquot button on the controller prematurely while adjusting control system displays. The initiation of the data recorder and gas turn-on alerted the operator that the system had entered quotrunquot mode, so he pressed thequotstandbyquot button. The operator then executed the missed steps in the test procedure and then purposely pressed thequotrunquot button again. The test personnel recognized the incipient over-test condition by the sound level, and the operator pressed the quotabort.quot Subsequent investigation showed that the controller did not perform the expected safing checks and responses to protect the test article after the operator failed to follow the correct procedure (Reference (4)). In addition, the controller software used in the JPL test facility had not been upgraded to the most recent version (Reference (5)), and subsequent mishap simulations with updated software successfully triggered the Test Run #4 abort. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li>quotAquarius Reflector Damage - Acoustic Environment,quot JPL Problem/Failure Report No. 6277, May 24, 2007.</li> 
+ <li>quotAquarius Reflector Acoustic Testing,quot JPL Problem/Failure Report No. 6412, June 28, 2007.</li> 
+ <li>quotAQUARIUS Radar Reflector Incident, Special Review Board (SRB) Briefing, Rev. 2," July 12, 2007.</li> 
+ <li>quotMishap Safety Alert 1 - Abort Feature of the Acoustic Chamber Control System Software,quot Aquarius Reflector Mishap Investigation Board, December 6, 2007.</li> 
+ <li>quotMishap Safety Alert 2 - Outdated Version of the [vendor/product name redacted] Acoustic Control Software,quot Aquarius Reflector Mishap Investigation Board, December 6, 2007.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+See quotRecommendationsquot
+</section>
+<section><h2>Recommendation(s)</h2>
+Reference (3) provides the following observations and recommendations for test control systems, training, and test procedures that should be considered in planning and managing future environmental test programs: 
+<br /> 
+<br /> 
+<u>Test Control System Lessons Learned</u> 
+<ol> 
+ <li>When software updates that containquotpatchesquot to improve system operation and repair problems are not installed upon receipt from the vendor, the test equipment may not operate as expected. In this case, the vendor of the controller used in the acoustic chamber had provided software updates to JPL in 2004, 2005, and 2006 and recommended their installation, but JPL had not installed them and was using an earlier software release.</li> 
+ <br /> 
+ <li>When user-definable parameters in the controller (e.g., the time constant, the control speed, and the maximum drive change) are not set to the values recommended by the vendor, the discrepancies can disrupt testing and contribute to a mishap.</li> 
+ <br /> 
+ <li>The control system set-up and monitoring for acoustic testing of flight hardware always needs to be checked and verified by a second test engineer. It is also imperative that a second party verifies all settings.</li> 
+ <br /> 
+ <li>A record must be made of all critical parameters in the controller software configuration file that are changed or modified, with documentation of who made the changes or why the changes were made.</li> 
+ <br /> 
+ <li>Prior to use of the acoustic test controller, it must be verified that it adequately protects the hardware even when the operator fails to follow the correct procedure. Under these Aquarius test conditions, the installed version of the software should have reduced the drive by 50 percent and aborted the test, but it did neither.</li> 
+</ol> 
+<u>Test Control System Recommendations</u> 
+<ol> 
+ <li>Test chamber controller software updates should be installed each time they are received, vendor-defined parameters should be implemented, and the system should be completely checked out prior to testing flight hardware.</li> 
+ <br /> 
+ <li>Verify acoustic test controller parameters/limits by the appropriate dynamics and quality assurance personnel prior to initiation of tests. A second party should also check the setting of instrumentation parameters, such as sensitivity and full scale, which can affect the accuracy of the test data during flight hardware testing.</li> 
+ <br /> 
+ <li>The test conductor should fully understand the necessary test safeguards, confirm (with the chamber empty) that the safeguards are in place and that the safeguard parameters are sufficient, and make any controller software changes necessary to protect the hardware when it is tested.</li> 
+</ol> 
+<u>Knowledge/Training Lessons Learned</u> 
+<ol> 
+ <li>The JPL Quality Assurance (QA) representative present during the test operations should have the detailed knowledge of the test operations needed to verify the status of the acoustic testing and of the test control system. Also, QA should implement a formal process to obtain the proper approvals to perform the troubleshooting steps and to record those steps.</li> 
+ <br /> 
+ <li>If data is missing from the quotas runquot copy of a test procedure because it was not fully updated, it may be very difficult to replicate the test or verify that the test was performed correctly.</li> 
+ <br /> 
+ <li>To avoid human error, test operators need to follow the step-by-step instructions in the written test procedure instead of relying on memory. Human error has often been the primary or a contributing factor in test anomalies.</li> 
+ <br /> 
+ <li>Test operators need to have a thorough understanding of the test controller quotinner workingsquot critical for the protection of the test equipment and flight hardware under test. They must understand the error messages from the control system and the implications of the commands they give to the control system.</li> 
+</ol> 
+<u>Knowledge/Training Recommendations</u> 
+<ol> 
+ <li>QA personnel assigned to witness a test should be trained in the basic theory of operation of the equipment and the test facility. QA personnel should have the authority to require approval of any troubleshooting that involves critical equipment, and they should properly record the troubleshooting steps taken.</li> 
+ <br /> 
+ <li>QA and the cognizant design engineer should ensure that all applicable instructions are included prior to approving the test procedure. Test operators should pay special attention to updating the quotas runquot test procedure, entering all the required data and information.</li> 
+ <br /> 
+ <li>Train personnel in the proper use of test procedures. In all cases, rigorously enforce use of step-by-step instructions to assure that each instruction is precisely followed.</li> 
+ <br /> 
+ <li>Provide comprehensive training for acoustic control system operators in the system operation principles and practice, as well as all features of the control system, including software safeguards and error messages.</li> 
+</ol> 
+<u>Test Procedures Lessons Learned</u> 
+<ol> 
+ <li>The Aquarius Reflector acoustic test procedure lacked complete instructions for configuring the controller software prior to the test.</li> 
+ <br /> 
+ <li>Although JPL was the test facility operator, no QA discrepancy reports were generated and troubleshooting was conducted in accordance with the reflector contractor's test procedure.</li> 
+ <br /> 
+ <li>The JPL Dynamic Environments engineer assigned to witness the acoustic testing and provide technical assistance was never contacted by the test conductor or by JPL test personnel and informed that an acoustic test was going to be performed as part of the troubleshooting process.</li> 
+ <br /> 
+ <li>The roles and responsibilities of the various personnel involved in the Aquarius acoustic test operations were not clearly documented. This could lead to confusion during test operations. Although the test personnel knew that the test conductor was the person responsible for the test, the JPL test procedure did not mention a test conductor or director.</li> 
+ <br /> 
+ <li>The reflector was left in the chamber while performing critical equipment troubleshooting tests to resolve irregularities in the acoustic data.</li> 
+ <br /> 
+ <li>There was no formal agreement between the Aquarius Project and the reflector contractor who performed the test in a JPL facility regarding their respective responsibilities and obligations in the conduct of the acoustic test.</li> 
+</ol> Test Procedures Recommendations 
+<ol> 
+ <li>For every test of flight hardware, provide a detailed procedure with instructions on pre-test, test, and post-test operations, including such steps to configure the controller as setting the test parameters. In no case should reliance be placed on the operators' memory.</li> 
+ <br /> 
+ <li>If a test failure or problem occurs during test of flight hardware in a JPL test facility, the response should conform to JPL policies and procedures governing the documentation and approval of recovery measures and corrective actions.</li> 
+ <br /> 
+ <li>Test lab operations personnel and the test conductor are responsible for assuring that the JPL dynamic environments engineer is present and intimately involved in all dynamic test operations.</li> 
+ <br /> 
+ <li>In addition to defining the roles and responsibilities of test personnel, the test procedure should identify the individuals by name to eliminate any source of confusion. Prior to testing, develop a list of the names of key personnel that clearly states (1) who absolutely needs to be present and (2) other personnel whose presence is not so essential that testing should be delayed if they are unavailable.</li> 
+ <br /> 
+ <li>Flight articles should be removed from the test facility when there are uncertainties in the environments to which they may be subjected during troubleshooting.</li> 
+ <br /> 
+ <li>Require a written agreement between the flight project and its contractor(s) that stipulates their responsibilities and obligations in the conduct of JPL facility-supported tests. Provide a checklist or template that lists the important elements as an aid for flight projects that need to write such formal agreements.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.7 (quotEngineering Practices: Protection and Security of Flight Hardwarequot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-7008, "Spacecraft Structural Dynamics Testing" [under development]
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

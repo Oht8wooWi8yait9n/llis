@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #26703: Gravity Effects on Bubbles in Slow Moving Liquid</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #26703: Gravity Effects on Bubbles in Slow Moving Liquid</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #26703 (Database ID: 26703)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2019-03-29</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Test & Verification,  Orbiting Vehicles</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/26703" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The loss of Advanced Baseline Imager (ABI) cooling capability seen on the GOES-17 weather satellite soon after its launch in March 2018 resulted in a thorough investigation of the loop heat pipe (LHP) thermal control system. One of the possible proximate causes investigated was that NCG-supported vapor bubbles might have blocked the flow regulators that are present at the end of each of the five parallel LHP condenser legs.&nbsp; Since anomalous performance was seen in ground tests of the GOES-17 LHPs, the physics of bubbles in the slow moving liquid (on the order of 1.5 m/s or 5 ft/min) was investigated.</p> 
+<p>It was determined that when the radiator was tested on edge and some flow paths were vertical:</p> 
+<ul> 
+ <li>Counterflow would exist in the vertical condenser passages, meaning that bubbles would not be transported through the serpentine condenser flow passage to the flow regulators.</li> 
+</ul> 
+<p>It was determined that when the radiator was tested horizontally and all flow paths were horizontal:</p> 
+<ul> 
+ <li>Even large vapor bubbles would not fill the tube completely – leaving a liquid flow path underneath.&nbsp; This plus the fact that the flow regulator was located below the condenser tube eliminated the possibility of bubble transport to the flow regulator.</li> 
+</ul> 
+<p>In 0-g, large bubbles would fill the condenser tube and would be transported to the flow regulator with the liquid flow.</p> 
+<p>The difference in behavior means that the effect of large NCG-supported vapor bubbles would be very different in 0-g and in 1-g.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Knowledge of the 1-g physics of large bubbles in the condenser legs would have allowed the limits of ground testing to be better understood.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+In two-phase systems, the flows must be characterized to understand the differences between 1-g test and 0-g performance.  Differences in behavior as they affect critical components and functionality must be understood so that the limits of 1-g testing can be known.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+See attached.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

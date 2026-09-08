@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0794: Thermal Analysis of Electronic Assemblies to the Piece Part Level</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0794: Thermal Analysis of Electronic Assemblies to the Piece Part Level</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0794 (Database ID: 794)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/794" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1306, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Allows the thermally overstressed parts to be identified and assessed for risk (instead of just the electrically overstressed parts). Allows the design life requirements of the thermal fatigue sensitive elements (solder joints, bondlines, wirebonds, etc.) to be quantified.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>On Class A and B programs, piece part thermal analysis (PPTA) is performed on all electronic assembly designs, including all engineering change requests in support of the part stress analysis (PSA). A policy is established mandating that the required design life of all thermal fatigue sensitive elements be quantified via a PPTA and a life cycle analysis. Moreover, it should be the policy of the contracting agency that this analysis be a deliverable and be independently reviewed by the contracting agency.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Reliability engineering is the discipline of identifying, risk rating, and eliminating the "tall poles" or "weak links" in a design. Two of the most significant reliability concerns for spaceflight hardware are reductions in the mission life of the electronic designs due to excessive junction temperatures or thermal fatigue. A proper PPTA can be used to verify that the temperature derating requirements specified in the PSA have been satisfied. The PPTA is also one of the key tools for quantifying the required design life of fatigue sensitive elements.</p>
+
+    <p>Several reliability practices case studies were performed on the Magellan (MGN) synthetic aperture radar (SAR). The results and conclusions of these studies are summarized below:</p>
+
+    <p>Case Study Background:</p>
+
+    <p>The MGN SAR consists of 9 prime and 9 redundant units totaling 40 slices. In all, there are more than 15,000 piece parts in this payload. The MGN SAR was chosen for a series of reliability practice case studies because its design was typical of industry for an electronic payload. More specifically, the electrical design, mechanical packaging, and "black box" thermal design techniques were very typical of those employed by industry.</p>
+
+    <p>Role of PPTA In Part Stress Analysis:</p>
+
+    <p>All of the waivers issued as a result of the MGN SAR PSA effort were reviewed to quantify the number of electrical overstresses versus thermal overstresses. Note that the PSAs and PPTAs did identify many overstresses for which design changes were made.</p>
+
+    <p>There were 38 waivers issued for part stress reasons covering 211 piece parts. It was found that more than 75 percent of the 211 parts required waiving due to thermal overstresses. The remaining overstresses were for either voltage, current, or power. Thus, if the PPTA had not been performed, only 25 percent (or less) of the waived overstresses would have been identified and understood.</p>
+
+    <p>Analyzing All Piece Parts Versus Significant Power Dissipators:</p>
+
+    <p>This case study evaluated the feasibility of only analyzing the key or "significant" power dissipators.</p>
+
+    <p>The MGN radar contractor used the MIL-STD-1540 philosophy of box level design temperature margins/levels (not JPL's higher levels). The contractor also used parts derating guidelines very similar to MIL-STD-975G, except that they derated junction temperatures to 105 degrees C instead of the 110 degrees C called out in 975G. One PPTA was performed on each slice. The PPTA's analyzed all piece parts in a slice, even the nondissipating ones.</p>
+
+    <p>The thermally overstressed piece parts identified in the PPTAs were tabulated according to three different definitions of key or "significant" power dissipation. They were to analyze only parts with over 100 milliwatts dissipation, over 50 milliwatts dissipation, and no power dissipation. All parts that would have been identified by these three definitions are shown in Table 1.</p>
+
+    <center>
+      <font>Table 1. <b>Tabulation of thermally overstressed piece parts</b><br />
+      <IMG  WIDTH="484"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009263main_0794-1.jpg"  HEIGHT="175"  BORDER="0" /><A HREF="/llis_lib/txt/1009738main_0794-1.txt"  >[D]</A>
+    </center>
+
+    <p>In fact, the study showed that 10 percent of the thermally overstressed parts dissipated no power. It is quite obvious that the temperature of a piece part is a function of many more variables than just the part's power dissipation. Therefore, all pieceparts should be analyzed when performing a PPTA. Also note that realistic circuit worst-case power dissipation is a key assumption, not just maximum part power capability.</p>
+
+    <p>Thermal Fatigue Versus Design Life:</p>
+
+    <p>A study was performed (Reference 1) to define the thermal fatigue design life requirements for various lead attachment arrangements. The PPTA was found to be a key analytical tool in quantifying the design life requirements of the solder joints.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>JPL Publication 89-35, "Magellan/Galileo Solder Joint Failure Analysis and Recommendations," September 15, 1989.</li>
+
+      <li>"Part Electrical Stress Analysis," Reliability Preferred Practice No. PD-AP-1303</li>
+
+      <li>"Environmental Factors," Reliability Preferred Practice No. PD-EC-1101.</li>
+
+      <li>"Thermal Vacuum versus Thermal Atmospheric Testing of Electronic Assemblies," Reliability Preferred Practice No. PT-TE-1409.</li>
+
+      <li>"Thermographic Mapping," Reliability Preferred Practice No. PT-TE-1403.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If a PPTA is not performed, more than 75 percent of the overstressed piece parts could go undetected. If a PPTA is performed, but only on significant power dissipators, then approximately 70 percent of the thermally overstressed piece parts could go undetected. Quantification of the thermal fatigue design life requirements and performance evaluation of thermal fatigue sensitive elements (solder joints, bondlines, etc.) can only be accomplished by incorporating results of a PPTA.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform a piece part thermal analysis that includes all piece parts in support of the part stress analysis. Also include fatigue sensitive elements of the assembly such as interconnects (solder joints, bondlines, wirebonds, etc.).</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Magellan program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

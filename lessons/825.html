@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0825: System Reliabilty Assessment Using Block Diagraming Methods</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0825: System Reliabilty Assessment Using Block Diagraming Methods</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0825 (Database ID: 825)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/825" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1313, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Reliability block diagram (RBD) analyses enable design and product assurance engineers to (1) quantify the reliability of a system or function, (2) assess the level of failure tolerance achieved, (3) identify intersystem disconnects as well as areas of incomplete design definition, and (4) perform trade-off studies to optimize reliability and cost within a program. Commercially available software tools can be used to automate the RBD assessment process, especially for reliability sensitivity analyses, thus allowing analyses to be performed more effectively and timely. These assessment methods can also pinpoint areas of concern within a system that might not be obvious otherwise and can aid the design activity in improving overall system performance.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Analysis methods described below make use of RBD analyses and commercially available software tools to analyze NASA space system designs. They are equally useful for analyzing mechanical and electrical systems and identifying potential deficiencies in system redundancy and/or reliability performance based on RBD assessments derived from drawings, schematics, and system specifications and documentation.</p>
+
+    <p>A detailed understanding of system architecture and functionality is necessary to assess system reliability using these types of quantitative analyses. The output of this analysis is valuable to the design and engineering functions on a program. It is more useful if a concurrent relationship exists between the product assurance team activity performing the analysis and the engineering design team, since design alterations and improvements can be made in near real time. These methods combine research, drawing review, reliability analyses, and the use of software automation.</p>
+
+    <p>When this approach is taken, it is recommended that a team of individuals be involved to bring the necessary skills to the analysis, to share the workload, and to ensure that all technical areas of the analysis are covered.</p>
+
+    <p>The RBD Technique:</p>
+
+    <p>The RBD process involves developing block diagrams of a system or of a system&iacute;s function (tasks for which hardware/software systems were designed). JSC analysis personnel have developed both system and system function models. Experience shows that more benefits are realized from the system function models. When a function is represented as a block diagram, the models should include all operational components of the systems that are involved in the function and reflect component redundancy and subsystem-to-subsystem connectivity. The models are developed with a commercially available software tool and, with the proper inputs, are assessed for overall system reliability and design reliability concerns.</p>
+
+    <p>Software analysis tools are an essential part of the JSC RBD analysis process. For these analyses, JSC personnel use commercially developed software for a personal computer. As with any analysis, it is critical that all involved parties understand (1) what items were used for input and what assumptions were made, (2) what calculations were performed, and (3) what interpretations can be made from the outputs.</p>
+
+    <ol>
+      <li>
+        Inputs. To create an RBD, it is necessary to collect three types of information about the system being studied: functional systems architecture data, component reliability data, and mission times. Architecture defines the redundancy interrelationships between items within a system or function. These relationships are used by the RBD process in determining serial, parallel, and m of n relationships (out of n components, m are required for success).
+
+        <p>The architecture of the RBD is attained from a study of the schematics and other diagrams of the hardware, as well as the ground rules and survival assumptions that dictate which subset of that hardware is to be used. This information is entered into the block diagram editor of the software and is linked to the failure rate data base (into which data must also be hand entered).</p>
+
+        <p>The second type of essential information includes failure rates of the equipment of interest to the lowest modeled level of detail (i.e., piece part, etc.). The third type of essential data is the mission time of each modeled component. The last two pieces of data are used to calculate the reliability for each item in the RBD over the mission time specified and is part of the overall function probability of success.</p>
+      </li>
+
+      <li>
+        Numeric Operations. The core of the RBD analysis is the calculation of the model reliability, usually done with a software tool. The functional relationships, failure data, and mission times are input to the tool and, using user-defined methods, the reliability of the model is calculated. Any number of probability distributions can be used for calculation, with the most common method being the constant failure rate assumption using the exponential distribution.
+
+        <p>Other distributions can be used, and currently JSC is working to understand early failure phenomena and how an early failure model can be used in the reliability calculations. The software calculates reliability (or unreliability) using the block relationships of the block diagram (interdependencies), the failure rates provided by the user, the mission time, and the user-defined calculation method. Probabilities are output in tabular form by a block, higher level function or nested block for the entire model, allowing the analyst to visualize where the reliability is being affected. There are other outputs as well, and they are described below.</p>
+      </li>
+
+      <li>
+        Outputs. Using the software tools for evaluating the RBD model, a point estimate or numerical calculation for the unreliability of the system or function being studied for the mission time specified will be provided in the form of the tables described above. The RBD analysis tools will also provide a cutset "min-cut upper bound" approximation, which is a list of the failure events ordered in descending probability of occurrence. A failure event is the minimum combination of failures that would result in loss of the modeled function.
+
+        <p>The most useful features of the cutsets are their ability to conspicuously display the most unreliable characteristics of the design (weak links), areas of incomplete design, and interfaces between two systems within the design which might exhibit low reliability. These concerns are easily identified within a cutset at the top of the listing. The cutset listings are helpful in assessing the failure tolerance of a system and can be used as an indicator of where further study is warranted.</p>
+
+        <p>Typically, those components, which appear in the top cutsets, are investigated further by changing the failure rates of these components and observing the effects on the overall reliability number. This is known as a sensitivity analysis. If failure rate changes in one component have a significant effect on the overall result, then it is worthwhile to study the possibility of changing this component so that its actual failure rate becomes lower. Other sensitivity analyses are often performed as well, including changes in mission times and actual architectural variations.</p>
+      </li>
+    </ol>
+
+    <p>Utilization of Output:</p>
+
+    <p>Interpretation and use of the output data are probably the most important parts of the analysis process. The data have been used for verifying quantitative reliability requirements when maintenance of a certain reliability level over a certain mission time is contractually required and this type of prediction is necessary for the verification. The results of RBD analyses can lead to further studies of functional availability, maintenance actions, maintenance times, fault tolerance, spares necessity, etc. The cutsets can be formatted for use by other software tools as input data to a much larger realm of functional simulation.</p>
+
+    <p>Another type of analysis known as a trade-off study can easily be done with RBD analyses. Trade-off studies are performed by "trading" different system architectures for the architecture of the baseline design of the system and noting the results. This method allows the results of adding redundancy or removing hardware from the system to be quickly identified.</p>
+
+    <p>To facilitate the analysis process, JSC Safety, Reliability, and Quality Assurance (SR&amp;QA) developed several programs that interface with the software tools and enhance their performance. These programs provide the capability to do sensitivity studies through global modification of key parameters in the data base (e.g., mission duration), an area in which the commercial tool was somewhat lacking.</p>
+
+    <p>Other such capabilities are needed when several runs of the model are being conducted in a batch fashion. A sensitivity study, for example, would require an incremental modification of the failure rate for the given component on every iteration of the model. To do this, one of the programs mentioned above will provide for access to the data base and modification of the component failure rates before every run in the batch file. As a sidenote, the commercial tool JSC uses provides a user interface that is somewhat difficult to use and, until improvements are made, some difficulties will exist in developing and manipulating RBD models and their corresponding data bases.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The assessment techniques described above, which have been applied on several JSC programs, have provided valuable data on proposed designs. RBD models have been built and studied for the early design of the Space Station attitude control function (ACF), on both the Space Station baseline and all the proposed redesign options. The ACF is one of the most critical Space Station functions, because loss of attitude control in orbit could quickly result in the loss of the Space Station. RBD analysis was used to point out weak links in the baseline subsystem design and to assist in improving the design by pinpointing where reliability could be improved. Models were also built for the redesign options, comparing the reliability of the ACF of each and providing data that helped in the decision to choose the MSFC Option A.</p>
+
+    <p>RBD models have also been developed for the latest Space Station configurations to assist the program in verifying quantitative reliability requirements set forth in SSP 41000, "System Specification for the International Space Station (ISS)." SSP 41000 states that the Space Station shall provide for 50 percent of the internal payload locations to perform at least 180 days of microgravity science per year in continuous time intervals of no less than 30 days at a reliability of 0.8 or better.</p>
+
+    <p>To verify that the current Space Station design will meet that requirement, JSC personnel have developed an RBD model that includes all Space Station functionality required to provide for a microgravity environment. This model has been instrumental in showing that several design changes were necessary to provide for that reliability. Models have been built in the past and will be built in the near future to be used as inputs to functional simulations of Space Station operations.</p>
+
+    <p>These simulations will provide input to designers in areas where more fault tolerance is necessary; e.g., critical spares list development, maintenance times and mean number of actions, and expected systems availability on a stage-by-stage basis. This type of analysis has been and will continue to be very useful to program management in defining and managing program risk factors.</p>
+
+    <p>RBD analyses have also been performed on the Orbiter Project. The Orbiter autoland function was assessed to discern the reliability of the associated hardware/software configuration over a long-duration Orbiter (LDO) mission. The autoland function was to be a requirement for LDO because of ill effects on the Orbiter crew during extended stays in zerogravity. The analysis showed a high reliability during the 90-minute mission time window in which the autoland equipment was used. Over a 30-day LDO mission, however, reliability decreased substantially, possibly requiring future on-orbit maintenance of Orbiter systems. Other Orbiter Project analyses have proved the reliability assessments to be a valuable design and management decision-making tool.</p>
+
+    <p>JSC's RBD analysis process has repeatedly identified weak design points that were not identified during qualitative reviews of the Space Station design. Results of computer-aided RBD analyses performed by JSC SR&amp;QA were used by the Station Redesign Team (SRT) to make recommendations to the President about the merit of different redesign options. The SRT requested that JSC SR&amp;QA investigate the reliability of the Lockheed Bus-1 attitude control system using computer-aided RBD analyses. The results of that effort weighed heavily in the early decision to use the Bus-1 on the "Alpha" Option in place of the "Freedom" baseline propulsion modules (Bus-1 is no longer in the design, since the Russian segment is providing that functionality). Such quantitative approaches as RBD analyses lend a heightened completeness, efficiency, and accuracy to any reliability design analysis.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>RBD Analysis User's Manual (Los Altos California: Science Applications International Corporation, 1992), p. 3-11.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>In cases where computer-aided RBD analyses are not performed, personnel may evaluate the reliability merits of the design using a more qualitative approach or pursuing a hand calculation method. The qualitative or manual methods may require more time than is available to influence the program's design decision processes. Rigorous hand calculations also leave room for error or incompleteness. In either of these cases, reliability and maintainability disciplines could prove to be relatively ineffective.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use reliability predictions derived from block diagram analyses during the design phase of the hardware development life cycle to analyze design reliability; perform sensitivity analyses; investigate design trade-offs; verify compliance with system-level requirements; and make design and operations decisions based on reliability analysis outputs, ground rules, and assumptions.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Orbiter Project and Space Station Program</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

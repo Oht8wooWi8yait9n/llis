@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0882: Computer-Aided Laser Shaft Alignment of Rotating Machinery</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0882: Computer-Aided Laser Shaft Alignment of Rotating Machinery</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0882 (Database ID: 882)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/882" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-14 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>Reduction in the failure rate of rotational equipment due to induced failures resulting from improper or inadequate installation, providing more efficient operation as well as reduced operating and maintenance costs.</p>
+
+    <p>This practice identifies the use of a laser alignment system for installation of machinery with rotating shafts (i.e., pumps, motors) to obtain optimum alignment coupling, resulting in less wear and increased reliability. The laser system is a low power, pulsed semiconductor laser. The detector is a biaxial, analog photoelectric semiconductor position detector with a resolution of 1 micron. The linearization characteristics of each laser detector are unique and are stored in the systems computer, thus only the detector and computer specifically matched to each other may be used together.</p>
+
+    <p>The laser transmitter is attached to the shaft of the stationary machine and the reflector is attached to the shaft of the machine to be moved. The prism reflects the beam in a plane parallel to that in which it receives the beam. As the prism shifts along the radial axis during rotation, the spacing between the beams is altered, and from this difference the offset of the shafts are determined. In the perpendicular plane, the prism acts as an ordinary mirror. As the prism is rotated about its vertical axis, the angle between the entering and reflected beams changes, permitting angular misalignment to be computed.</p>
+
+    <p>The computer receives its input data directly from the detector through a connecting cable and calculates the alignment correction values for the feet of the machine to be moved. The computer can also detect the presence of "softfoot" on the shaft alignment. Softfoot results from the mounting base not providing a level and even surface for securing the equipment, resulting in an unstable installation and misalignment leading to premature failure.</p>
+
+    <p>The system can be used for gauging the amount and effect of softfoot, but cannot determine the cause or corrective action.</p>
+
+    <p>The objective of alignment is to ensure that the rotating shaft centerlines of different machines are aligned. It is important to understand that alignment refers to the positions of 2 centerlines of rotation. Shaft alignment means "Positioning two or more machines so that their rotational centerlines are collinear at the coupling point under operating conditions." Collinear means 2 lines that are positioned as one line or 2 lines in exactly the same place. As used in alignment it means "Two or more lines with no offset or angularity between them." The phrase "coupling point" acknowledges that vibration due to misalignment originates at the point of power transmission, the coupling. It does not mean that the couplings are being aligned. The shafts are being aligned, the coupling center is just the measuring point. "Under operating conditions" is taking into account that the machines often move after startup due to wear, thermal growth, dynamic loads or support structure shifts.
+    The term "shaft alignment" implies that the bearings and shafts are free from preloads. In properly installed equipment, there are no outside forces or strains on the bearings or shafts.</p>
+
+    <p>A laser alignment system eliminates the effects of irregular shaft or coupling surfaces, eccentricity, bent shafts, etc. Unlike conventional methods using dials and gages where a spanner bar is used, there is no sag in the laser beam. The effects of vibration on the alignment process is insignificant, as the laser beam travels at the speed of light. The laser system is a 25 to 1 improvement over the dial measurement system, with a 0.00004" resolution.</p>
+
+    <p>Simplified Version of How the Optics Work</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009390main_0882-1.jpg"  HEIGHT="289"  BORDER="0" /><A HREF="/llis_lib/txt/1009865main_0882-1.txt"  >[D]</A>
+    </center>
+
+    <p>A side view of laser and prism.</p>
+
+    <p>When the prism is moved up or down, the return beam moves up or down twice the distance the prism moved. Thus measurement offsets between two points can be determined. The offset measured is the offset of the prism relative to the laser.</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009391main_0882-2.jpg"  HEIGHT="556"  BORDER="0" /><A HREF="/llis_lib/txt/1009866main_0882-2.txt"  >[D]</A>
+    </center>
+
+    <p>Offset measurement</p>
+
+    <p>The detector can not only sense up and down motion of the return beam, but side to side as well, However, if we slide the prism side to side, the beam does not move. The beam will move side to side only if we rotate the prism in the horizontal plane. Prism moved side to side; beam does not move.</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009392main_0882-3.jpg"  HEIGHT="290"  BORDER="0" /><A HREF="/llis_lib/txt/1009867main_0882-3.txt"  >[D]</A>
+    </center>
+
+    <p>Horizontal rotation moves beam.</p>
+
+    <center>
+      <IMG  WIDTH="400"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009393main_0882-4.jpg"  HEIGHT="292"  BORDER="0" /><A HREF="/llis_lib/txt/1009868main_0882-4.txt"  >[D]</A>
+    </center>
+
+    <p>Note that the angle the return beam moves is twice the angle the prism moves. If the beam is zeroed at the 12:00 position and then read at the 6:00 position, the X reading (or horizontal beam movement) is one leg of a 90 deg. triangle. The distance from laser to prism is the other leg. The angle defined by these two legs is two times the actual angular misalignment between the shafts.</p>
+
+    <p>The position detector is an analog biaxial photoelectric cell with a repeatable resolution of 1 micron (or approx. 0.00004"). Because beam movement is twice prism movement, system repeatability is 0.5 micron or (approx.) 0.00002". Devices such as position detectors are highly nonlinear and subject to many manufacturing variables. To compensate for nonlinearity, the electronics contain sophisticated linearizing algorithms that linearize the output of a given position detector with 2% of beam displacement. Thus, overall measuring error is less than 2% of displayed value, rounded off to 0.5 mil.</p>
+
+    <p>Reference:</p>
+
+    <ol>
+      <li>The OPTALIGN Training Book (catalog No. 01-705-01)</li>
+
+      <li>Ludeca, Inc. 1527 N. W. 89th Court Miami, FL 33172 FAX (305) 591-8935</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Rotating equipment (i.e., pumps, motors, compressors) are sensitive to the alignment to each other and to the smallest of changes due to operating conditions. Proper alignment is the largest factor in determining the life of bearings, seals and couplings. Even "flexible" couplings fail to completely absorb the additional stresses caused by misalignment. Misalignment causes these crucial components to become overloaded and break down prematurely, especially when operating at high speed. More conventional methods, such as using feeler gages and dial indicators are too inaccurate and require a complicated, time consuming alignment process.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The use of laser methodology for the critical shaft alignment of rotating machinery.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Hypergol Maintenance Facility (HMF) at the Kennedy Space which uses a stainless steel pump for pumping hypergolic fuels. This pump needed replacement approximately every 3 months at a cost of about $30,000. The need for replacement was due to seal and bearing failure caused by misalignment. New equipment was installed using the laser alignment system and based upon vibration measurements of the operating machinery, noticeable improvement in operation was achieved.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

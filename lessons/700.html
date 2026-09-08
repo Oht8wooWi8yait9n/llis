@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0700: Fracture Mechanics Reliability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0700: Fracture Mechanics Reliability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0700 (Database ID: 700)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/700" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-AP-2304 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Consideration of fracture mechanics reliability during the design process can assist in the prevention of failures of structural and mechanical components subject to fluctuating loads in service. Explicit consideration of the reliability of structural and mechanical components provides the means to evaluate alternate designs and to ensure that specified risk levels are met. Probabilistic fracture mechanics analyses may also be applied to life extension of existing structures, and for problem assessment of in-service fatigue failures.</p>
+
+    <p>Potential applications of this method to the Space Shuttle or Space Station include: landing gear, control surfaces, main engine components, auxiliary power unit components, external tank and solid rocket booster welds, pressure vessels, propulsion modules, and logistics modules. The method is also applicable to reusable, Shuttle launched payloads or spacecraft such as Spacelab, Spacehab, EURECA, SPAS and Spartan.</p>
+
+    <p>Stochastic fracture mechanics analysis provides the basis for analysis consistency between reliability analysis of mechanical systems, such as reliability block diagram analysis, and traditional deterministic fracture mechanics safe life estimation.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The method outlined below is a stochastic elastic fracture mechanics approach (for metallic or ceramic materials) which neglects any crack retardation or acceleration effects. Composites and other materials with insufficient crack growth data or intractable flaw growth characteristics are not considered. The detailed development of this approach is essentially the same as that given in references 1 through 6. The purpose of the simplified approach described herein is to illustrate some of the advantages and typical results of a stochastic fracture mechanics analysis. Discussion of technical implementation details, such as the use of crack growth laws other than the Paris equation (for example, the modified Forman equation [reference 15]), follows in the technical rationale section.</p>
+
+    <p>For illustration, a Paris crack growth law is assumed, which may be written in the form of a differential equation. For random applied stress processes, a solution can be written in the form of a limit state function, M, as:</p>
+
+    <center>
+      <table width="95%">
+        <tr>
+          <td align="center"><IMG  WIDTH="412"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009093main_0700eq1.jpg"  HEIGHT="100"  BORDER="0" /><A HREF="/llis_lib/txt/1009575main_0700eq1.txt"  >[D]</A></td>
+
+          <td align="right"><b>(1)</b></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>in which:</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009094main_0700eq1key.jpg"  HEIGHT="195"  BORDER="0" /><A HREF="/llis_lib/txt/1009576main_0700eq1key.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+    Failure is defined to occur when the critical crack length, a<small><sub>c</sub></small>, is exceeded, so that at failure M<u>&lt;</u>0. The probability of failure is then the probability that the limit state function is equal to or less than zero:<br />
+
+    <center>
+      <table width="95%">
+        <tr>
+          <td align="center"><IMG  WIDTH="119"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009095main_0700eq2.jpg"  HEIGHT="30"  BORDER="0" /><A HREF="/llis_lib/txt/1009577main_0700eq2.txt"  >[D]</A></td>
+
+          <td align="right"><b>(2)</b></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The first term of Equation 1, the integral, essentially defines the fatigue resistance of the structure against a crack growing from an initial size, a<small><sub>o</sub></small>, to critical size a<small><sub>c</sub></small>. This integral must be evaluated numerically in all but the simplest of cases.</p>
+
+    <p>Particular forms of the geometry function, Y(a), are available for simple configurations in the literature or from general purpose fracture mechanics software packages. For unique structural details, other approaches are available to determine Y(a), such as detailed finite element modeling of the cracked structure. The second term of Equation 1 defines the accumulated "damage" caused by the applied stress process. A random stress process is characterized by its power spectral density and may be described as being narrowband (slowly varying random) or as wideband. In either case closed form approximations for the second term of Equation 1 are available. If the stress process is deterministic or if time histories of the stress process are available time domain methods, such as rainflow cycle identification [reference 10], approximations are available for determining the factors in the second term of Equation 1. It should be noted that all of the terms in Equation 1 may be
+    treated as random or uncertain. This enables the modeling of all the sources of uncertainty pertinent to the problem, such as crack size and location, scatter in crack growth data, etc. Subsequent sensitivity analyses can be used to determine which variables contribute the most to the fatigue life uncertainty and require treatment as random, and which variables may be considered as fixed (deterministic). Sensitivity analysis can also indicate the parameters for which further data collection could reduce the overall uncertainty in the fatigue life.</p>
+
+    <p>Modern reliability methods, the so-called First-Order Reliability Method (FORM) or Second-Order Reliability Method (SORM), are available in commercial computer programs to solve Equation 2. Monte Carlo or more sophisticated simulation techniques are also available [references 1, 7, 8, and 9]. In particular, PROBAN [1] has been available commercially from Det Norske Veritas (Oslo, Norway) since 1986 and has been used extensively in the offshore oil industry. PROBAN is available for UNIX and VAX/VMS based workstations. STRUREL is a PC/Windows based application available from RCP, GmBH, of Munich, Germany. RELACS is a similar package available from REA, Inc., of Golden, Colorado. A NASA-funded application called NESSUS, which runs on UNIX workstations and mainframes, is available from the Lewis Research Center. The commercial codes are recommended because of better user-interfaces and better user support. Monte Carlo approaches generally require direct programming for the
+    solution for the specific problem under study.</p>
+
+    <p>For a structure or mechanism in service, the results of inspections may be incorporated into the analysis and the estimated failure probabilities updated to show the change in reliability based on the additional information on existing crack size. For each inspection, two outcomes are possible: either no crack is detected, or a crack is detected and its size or length is measured. Figure 1 is an example analysis result (from reference 1) showing reliability as a function of time for which inspections were assumed at 10 and 20 years, with no crack detected at 10 years, but a 4.0 mm crack detected at 20 years. Note that with the new information gained from inspection at t=10 years, the reliability is shown to increase as no crack was found. After inspection at t=20 years, reliability is also shown to increase even though a small crack was detected, but only for a short time. The increase at t=20 years can be attributed to the discovery that the crack length was less than the
+    critical crack length for the structure, but it should also be noted that the reliability decreases much faster with the uncertainty tied to the presence of a flaw. Inspection of structures and the new information that is gained can essentially reset the reliability, and even though a crack may be discovered, this new information can lead to increased inspections, which can lengthen the life of the item. However, a crack detection generally decreases the reliability, as in this case after about t=22 years.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009092main_0700-1.jpg"  HEIGHT="457"  BORDER="0" /><A HREF="/llis_lib/txt/1009574main_0700-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p><u><u>Technical Rationale:</u></u></p>
+
+    <p>A stochastic fracture mechanics approach to fatigue gives an estimate of the reliability of structural and mechanical components as a function of time in service and allows the reliability estimate to be updated if the results of in-service inspections and/or in-service load data are available [references 1 and 2]. The procedure may also be used to optimally schedule inspections, and to compare the adequacy of different inspection types or quality levels [references 1 and 2]. Type and quality of repair techniques may also be compared and selected to maintain a desired reliability level. Updating of these analyses as actual inspections or repairs occur is also possible [references 2 and 3]. The application of in-service reliability estimates is dependent on the availability of some form of flight load data and accessibility to the structure or mechanism for inspection. Without such data no updating of the initial design reliability analysis is possible.</p>
+
+    <p>The primary intent of this guideline is to make available to the NASA reliability engineering discipline the engineering mechanics-based methods for estimating the reliability of structural and mechanical components. Use of such methods would allow for consistency of models and data between the reliability and structural/mechanical engineering disciplines within NASA. A stochastic fracture mechanics approach provides a "physics-of-failure" basis for estimating the reliability of components subject to fatigue and fracture. This enables fault tree or reliability block diagram analyses, or probabilistic risk assessments, for structural and mechanical components in spacecraft systems to be performed using the same data and engineering mechanics models as the NASA accepted, deterministic fracture analysis procedures [reference 14]. For example, the mean time to failure for a pressure vessel girth weld (as may be needed for a propulsion system reliability block diagram analysis)
+    estimated using probabilistic fracture mechanics would be rationally consistent with the safe-life analysis performed to meet current NASA fracture control and safe-life analysis requirements.</p>
+
+    <p>The approach outlined herein is a simplified formulation that neglects load interaction effects, such as retardation, by using the Paris crack growth law. If a Paris equation is properly fit to the basic crack growth data, the resulting deterministic safe life estimate will be more conservative (shorter) than the estimated life resulting from a fracture analysis which incorporates retardation. The current NASA accepted practice in fracture mechanics analysis uses the computer program NASA/FLAGRO, which includes interaction effects. Load interaction effects may be included in a stochastic fracture mechanics analysis by using crack growth laws such as the modified Forman equation found in NASA/FLAGRO. For example, a FORM/SORM formulation which included the modified Forman equation has been used to study aircraft durability and damage tolerance [reference 14]. A direct Monte Carlo solution implementing the modified Forman equation may also be found in references 7, 8, and 9.
+    Issues related to the implementation, applicability, and accuracy of FORM/SORM and Monte Carlo methods are beyond the scope of this guideline. In general, if a fracture mechanics reliability analysis is to be performed and it has been determined from a preliminary deterministic fracture analysis thatthe Paris formulation is inadequate, the modified Forman equation (as in NASA/FLAGRO) should be used following either the approach described in reference 14 or in references 7, 8, and 9.</p>
+
+    <p>Two critical parameters in any fracture analysis, deterministic or stochastic, are the size, location and distribution of initial flaws or cracks, and the ability of nondestructive evaluation (NDE) techniques to detect a flaw or crack smaller than a certain size. NASA has established standard NDE flaw sizes for Space Transportation System (STS) payloads [reference 14]. Two recent NASA research projects, one directed at establishing NDE probability of detection (POD) data, and one directed at gathering initial flaw distribution data, also may provide additional data for modeling initial flaws and NDE quality.</p>
+
+    <p>Deterministic fracture analysis practice uses relatively large safety or "scatter" factors to account for the many inherent sources of uncertainty or error, such as analytic model inadequacies, inaccuracy of stress intensity predictions, and the scatter of experimental crack growth data. Stochastic analysis methods extend the accepted deterministic methods by allowing (or forcing) the analyst to explicitly account for these uncertainties by treating them as random variables (or process or fields), requiring the analyst to consider the likely range and distribution of the parameters. Both the deterministic and the stochastic analysis will suffer from the same shortcomings of model inadequacy, etc. The stochastic model has the advantage of addressing the uncertainties specifically using probability and statistical theory, while the deterministic approach addresses uncertainty in a general manner through the use of the safety or scatter factor. Use of a stochastic approach and a
+    reliability based design criteria can be beneficial in avoiding over- or under-conservatism that may result from the use of a deterministic safety factor approach.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>PROBAN-2: Example Manual, Report No. 89-2025, A.S Veritas Research, Hovik, Norway, August, 1989</li>
+
+      <li>Madsen, H.O., Skjong, R.K., and Kirkkemo, F., "Probabilistic Fatigue Analysis of Offshore Structures - Reliability Updating Through Inspection Results", A.S Veritas Research, Hovik, Norway</li>
+
+      <li>Madsen, H.O., Skjong, R.K., Tallin, A.G., and Kirkemo, F., "Probabilistic Fatigue Crack Growth Analysis of Offshore Structures, with Reliability Updating Through Inspection", Society of Naval Architects and Marine Engineers, Proceedings, Marine Structural Reliability Symposium, Arlington, VA, October 5-6, 1987</li>
+
+      <li>Wirsching, P.H., Torng, T.Y., and Martin, W.S., "Advanced Fatigue Reliability Analysis", International Journal of Fatigue, Vol. 13, No. 5, 1991, pp. 389-394</li>
+
+      <li>Wu, Y.-T., Burnside, O.H., and Dominguez, J., "Efficient Probabilistic Fracture Mechanics Analysis", Numerical Methods in Fracture Mechanics: Proceedings of the Fourth International Conference, Luxmoore, A.R., Owen, D.R.J., Rajapakse, Y.P.S., and Kanninen, M.F., Eds., Pineridge Press, Swansea, U.K., 1987</li>
+
+      <li>Veers, P.S., Winterstein, S.R., Nelson, D.V., and Cornell, C.A., "Variable-Amplitude Load Models for Fatigue Damage and Crack Growth", Development of Fatigue Loading Spectra, STP 1006, American Society for Testing and Materials, 1989</li>
+
+      <li>Sutharshana, S., et al., "A Probabilistic Fracture Mechanics Approach for Structural Reliability Assessment of Space Flight Systems", Advances in Fatigue Lifetime Predictive Techniques, STP 1122, American Society for Testing and Materials, 1991</li>
+
+      <li>Sutharshana, S., et al., "Computational Methods for Probabilistic Flaw Propagation Analyses", Proceedings of the ASCE Structures Congress '91, April, 1991</li>
+
+      <li>Moore, N. R., et al., "An Improved Approach for Flight Readiness Certification - Probabilistic Models for Flaw Propagation and Turbine Blade Failure", JPL Publication 92-32, December, 1992.</li>
+
+      <li>Matsuishi, M., and Endo, T., "Fatigue of Metals Subjected to Varying Stress", Presented to the Japan Society of Mechanical Engineers, Fukuoka, Japan, March, 1968.</li>
+
+      <li>Fracture Control Requirements for Payloads Using the National Space Transportation System, NHB 8071.1A</li>
+
+      <li>Fracture Control Requirements for Space Station, SSP 30558</li>
+
+      <li>Sigurdsson, G., et al., "Probabilistic Methods for Durability and Damage Tolerance Analysis", presented at the 1992 USAF Aircraft Structural Integrity Program Conference (ASIP), San Antonio, Texas, December 1-3, 1992.</li>
+
+      <li>"Fatigue Crack Growth Computer Program NASA/FLAGRO Version 2.0", JSC-22267A (Draft), January, 1993.</li>
+
+      <li>Reliability Preferred Practices Guideline GD-AP-2303: Spectral Fatigue Reliability</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Nonpractice of deterministic fracture mechanics analysis (or test) in a spacecraft or launch vehicle program would result in the failure to meet NASA design requirements for fracture control [references 11 and 12]. Failure to adequately consider fatigue in the design of structural and mechanical components subject to fluctuating loads may, at best, result in recurring costs for repair or replacement of components before their intended design life. At worst, a catastrophic failure, in terms of economic loss and loss of life, may result.</p>
+
+    <p>It is standard JSC engineering practice to specify fracture control requirements on structural and mechanical components that are classified as fracture critical. As a part of these requirements, it is required that a component be shown by analysis or test to be able to survive a deterministic minimum number of service lifetimes (usually 4) without the largest possible undetectable flaw growing to failure [references 11 and 12]. While this process has proven to be adequate to ensure against failure, design practices which do not take advantage of stochastic methods for fracture analysis may produce over-conservative and uneconomical structures and mechanisms.</p>
+
+    <p>In mechanical or structural system reliability analyses, failure to use a stochastic fatigue or fracture mechanics approach to the estimation of reliability will result in life estimates that are incompatible and inconsistent with the results of the standard NASA deterministic safe-life analyses required by the Space Shuttle and Space Station Programs [references 11 and 12].</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use a fracture mechanics formulation to estimate the design fatigue life and reliability of metallic or ceramic structural and mechanical components subject to fluctuating stress. For reusable spacecraft, update the reliability analysis based on in-service inspection and repair data.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

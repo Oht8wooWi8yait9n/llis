@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0761: Guideline for Developing Reliable Instrumentation for Aerospace Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0761: Guideline for Developing Reliable Instrumentation for Aerospace Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0761 (Database ID: 761)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/761" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline number GD-ED-2215 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Very early consideration of instrumentation (Note: for purposes of this lesson, the term instrumentation refers only to sensor and signal conditioning subsystems and will not include the data management subsystem) requirements compatible with vehicle or payload system monitoring and control requirements will result in: (1) Choice of sensor technology and sensor hardware/software that is cost-effectively matched to specific vehicle environment, design, performance, and configuration requirements; (2) Up-front consideration of the effects of instrumentation system and sensor maintainability, calibration, and reliability during the operational phase over the specified lifetime; (3) Optimum sensor location, avoidance of failures due to vibration, shock, thermal and stress effects, efficient cable design and routing; and (4) Lower costs of instrumentation system integration due to well thought-out and preplanned designs that are less subject to change during the development
+    process.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p>It has been the general practice in past programs and projects to conceive and design instrumentation systems and related sensors, hardware, and software well after requirements for the system have been established. Instrumentation considerations have frequently waited until well after the design of the parent hardware has been approved, and many times the instrumentation design has not been initiated until the initial test hardware is well into fabrication. In general, this practice has not been seriously detrimental to past programs because of the luxury of ample resources and schedule time to iterate the instrumentation configuration many times prior to flight. Furthermore, the technologies available were not as advanced as those becoming available in the present age of computer-aided analysis, engineering, design, testing, and manufacturing. New concurrent engineering methods and tools that are now available, and the use of integrated product engineering development teams
+    allow instrumentation considerations, designs, and technologies to be introduced at the earlier phases of the project life cycle. Earlier consideration of instrumentation issues will result in greater efficiencies and more effective total instrumentation support of the space system development and flight operations.</p>
+
+    <p><b>Background:</b></p>
+
+    <p>There are three main purposes of instrumentation systems, (1) to perform measurements, (2) to provide for system control, and (3) to relay information. Measurements are needed to obtain information on system operation and the operational environment. Based upon this information, feedback and adjustments can be made to control loops to maintain system control. Finally, the information generated by the measurements must be processed and relayed from the operational system to data collection and analysis centers. Data processing and relay are outside the scope of this guideline and will not be discussed further.</p>
+
+    <p>There are three types of measurements: (1) measurements for design, test, and evaluation; (2) measurements for calibration; and (3) measurements for control (Ref. 1). Each of these types of measurements impose unique requirements on the vehicle or payload instrumentation system.</p>
+
+    <p>Science, design, test, and evaluation measurements seek to answer questions about a physical process or environment about which little or nothing is known. A key consideration in these types of measurements is the effect of the instrumentation system itself on the phenomenon being measured.</p>
+
+    <p>Control measurements are made to ensure the process or system is working properly. This usually involves making adjustments in control loops so as to maintain an operating point within some acceptable range.</p>
+
+    <p>Calibration measurements are made to characterize part of the instrumentation system, such as a sensor, in a known environment with specific boundary conditions.</p>
+
+    <p>I. <u>Key Instrumentation Considerations:</u></p>
+
+    <p>There are a number of instrumentation issues that need to be addressed as early as possible in the system life cycle. The earlier these issues are addressed the more reliable the measurements, and thus the overall system, will be. Close communication and interaction among instrumentation engineers, system users, and system designers are essential if these issues are to be adequately addressed. These key issues are briefly discussed in the following paragraphs.</p>
+
+    <p>A. What is the "real" measurement requirement?</p>
+
+    <p>Experience has shown that often the user does not state the real measurement requirement but rather an implementation. This must be avoided early-on as it results in limiting potential measurement solutions and affects reliability. A good question to ask to get at the core requirements is, "If you could only have one measurement, what would it be?" In addition to the answer to this question, the type and purpose of each proposed measurement must be understood.</p>
+
+    <p>B. Operating environment</p>
+
+    <p>The environment in which a measurement must be made significantly impacts the selection of sensors and ultimately the reliability and accuracy of the resultant information. Examples of important environmental factors include vibro-acoustics, atmosphere, temperature, and pressure.</p>
+
+    <p>C. Required accuracy and frequency response</p>
+
+    <p>This is an area where significant tradeoffs and compromises must be worked out between the user and the instrumentation engineer. Since accuracy and frequency response of sensors are directly related to cost, it is incumbent on the instrumentation engineer to make program participants aware of the cost to the project of satisfying stated accuracy and frequency response requirements. Often, it will turn out that less stringent requirements in these areas can satisfy the "real" requirements at significant cost avoidance to the project.</p>
+
+    <p>D. Constraints</p>
+
+    <p>There are a number of constraints with which the instrumentation system must comply. Some are limited resource allocations for things like size, power, weight, volume, and cost. Other constraints will arise with regard to possible locations for sensors and signal conditioners, and feasible routing for cables and connectors. All of these constraints must be dealt with in designing reliable instrumentation systems to meet user requirements.</p>
+
+    <p>E. Maintainability/Reusability</p>
+
+    <p>Instrumentation system components such as sensors, signal conditioners, and even cables and connectors are subject to failure. Requirements for access to these components to affect repairs will also impact the instrumentation system design for long-life missions. Related to maintainability are requirements for sensor checkout, calibration, and diagnostics which must also be factored into the instrumentation system design. Similarly, requirements for cleaning and refurbishment associated with reusable flight systems impact on the design.</p>
+
+    <p>F. Electrical and mechanical interfaces</p>
+
+    <p>Often early decisions are made on the avionics architecture and on the data management system which will impact the instrumentation system design. Such items as choice of flight computers and data bus standard will be driving requirements in selection of instrumentation system components. Likewise, specific requirements for mounting and other mechanical interfaces will affect instrumentation system design.</p>
+
+    <p>II. <u>Integrating Instrumentation System Design into the Project Life Cycle</u></p>
+
+    <p>Instrumentation engineering is one of the engineering specialties which needs to be integrated into the overall system engineering process required to develop and operate reliable aerospace systems. The tendency has been to wait until the design phase of the life cycle before seriously addressing instrumentation requirements and issues. Often it is even later, even after the design is complete, before instrumentation is considered. When this occurs, it can result in less than optimum instrumentation solutions to engineering and science requirements. One consequence can be less reliable systems due to the inability to gather information on the true condition of the flight system in operation. An example of this problem can be seen in the Space Shuttle Main Engine (SSME) program at MSFC. Only after the High Pressure Fuel and Oxygen Turbopumps were designed did it come to light that the single most important measurement that the engineers wanted was turbine inlet temperature.
+    However, because instrumentation considerations had not been addressed early enough, no provision had been made in the design to accommodate a sensor for this purpose, and it was deemed too costly to redesign the turbopump at that point in the program.</p>
+
+    <p>A typical NASA flight system passes through several distinct phases in its life cycle as it proceeds from concept exploration to system disposal. NASA Management Instruction (NMI) 7120.4 (Ref. 2) and NASA Handbook (NHB) 7120.5 (Ref. 3) describe these phases and the associated activities and milestones associated with each. Figure 1 (Ref. 4) summarizes these phases and the major activities and outputs of each phase.</p>
+
+    <center>
+      <a href="https://llis.nasa.gov/llis_lib/images/1009213main_0761-1l.jpg"><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009212main_0761-1.jpg"  HEIGHT="342"  BORDER="0" /></a><A HREF="/llis_lib/txt/1009692main_0761-1.txt"  >[D]</A>
+    </center>
+
+    <p>The appropriate instrumentation engineering activities for each phase are discussed in the following paragraphs.</p>
+
+    <p>A. <u>Phase A (Analysis Phase)</u></p>
+
+    <p>This is a study phase in which mission needs are determined and preliminary concepts are explored. Project objectives, new technology requirements, and potential system concepts are developed and analyzed to determine the project feasibility and cost-effectiveness. Performance tradeoff analyses are conducted to refine the system concepts and to identify risk areas. A key activity in this phase is the definition of preliminary system requirements and the development of a Preliminary Program Plan. Early point designs and even configuration layouts are a product of this phase.</p>
+
+    <p>Even in this earliest of project phases, instrumentation issues should be addressed. First, the instrumentation engineers should be involved in developing the preliminary system requirements to ensure the key considerations discussed in Section I above are addressed. Obviously, point designs and configuration layouts can have significant impacts on instrumentation concepts and solutions and need to be reviewed carefully. Armed with knowledge and understanding of the system requirements and objectives, the instrumentation engineers can begin to define both the purposes and types of measurements that will be needed and to develop preliminary instrumentation concepts. The instrumentation concepts, preliminary measurement definitions, sensor technology development needs (if any), instrumentation risk assessments, schedule and resource requirements should all be documented in a Preliminary Instrumentation Plan which should be an output of this project phase. Phase A ends upon
+    approval of the Mission Need Statement.</p>
+
+    <p><u>Instrumentation Guidelines for the Analysis Phase:</u></p>
+
+    <ol>
+      <li>Ensure user needs and mission requirements are understood by the instrumentation engineers.</li>
+
+      <li>Ensure preliminary system requirements include appropriate instrumentation considerations.</li>
+
+      <li>Prepare a Preliminary Instrumentation Plan that addresses instrumentation concepts, measurement definitions, sensor technology needs, risk areas, and resource requirements.</li>
+
+      <li>Ensure the Preliminary Instrumentation Plan is reviewed by all program participants in conjunction with a Preliminary Requirements Review or other formal review.</li>
+    </ol>
+
+    <p>B. <u>Definition and Preliminary Design Phase (Phase B)</u></p>
+
+    <p>This phase accomplishes the refinement and baselining of system requirements, cost estimates, schedules, and risk assessments prior to final design and development. Alternative system concepts defined in Phase A are refined and a final selection is made. System analyses and simulations are conducted and further tradeoff analyses are made to refine system and support requirements. Preliminary manufacturing and test requirements are also defined and assessed in this phase. Key outputs of this phase include a baselined System Specification and a Preliminary Design Review (PDR) baseline.</p>
+
+    <p>Instrumentation engineering involvement should increase in this phase with activities focused on influencing the system specifications and preliminary designs to facilitate reliable vehicle instrumentation and measurements. The Instrumentation Plan should be updated and baselined in this phase. Preliminary instrumentation system design and preparation of a preliminary Instrumentation Program &amp; Command List (IP&amp;CL) should be completed. The IP&amp;CL is defined in MSFC-STD-1924 (Ref. 5).</p>
+
+    <p><u>Instrumentation Guidelines for the Definition and Preliminary Design Phase:</u></p>
+
+    <ol>
+      <li>Ensure the System Specification, lower-level specifications, and the preliminary system design include all appropriate instrumentation considerations and requirements and satisfy user needs.</li>
+
+      <li>Update and baseline the Instrumentation Plan which defines the instrumentation concept and design, measurement definitions, sensor technology needs, risk areas, and resource requirements.</li>
+
+      <li>Ensure the Preliminary IP&amp;CL accurately reflects the instrumentation system design and component selection.</li>
+    </ol>
+
+    <p>C. <u>Design Phase (Phase C)</u></p>
+
+    <p>In Phase C the detailed system design is completed and plans are refined for development, fabrication, verification and validation (V&amp;V), and operations. Detailed subsystem design and performance specifications are baselined in this phase, as well as Interface Control Documents (ICDs). In addition, verification and validation requirements and specifications are finalized. This phase ends with the successful completion of the Critical Design Review (CDR).</p>
+
+    <p>Instrumentation engineers should be intimately involved in this phase to ensure detailed designs are compatible with user needs and instrumentation requirements of the program. Detailed instrumentation system design and analyses will be completed and final selection made for all system components.</p>
+
+    <p><u>Instrumentation Guidelines for the Detailed Design Phase:</u></p>
+
+    <ol>
+      <li>Ensure the detailed system and subsystem designs include all appropriate instrumentation considerations and requirements and satisfy user needs.</li>
+
+      <li>Ensure the IP&amp;CL accurately reflects the final instrumentation system design and component selection and is baselined after CDR.</li>
+    </ol>
+
+    <p>D. <u>Development Phase (Phase D)/Operations Phase (Phase E)</u></p>
+
+    <p>In Phase D the flight hardware and software are developed, manufactured/coded, verified, and qualified for flight operations. During this phase, prototype/protoflight hardware is developed and tested. This is followed by manufacture, integration, and verification and validation of the flight hardware and software. Finally, the flight system is checked out and launch and initial flight operations commence. Instrumentation engineers will be involved in the V&amp;V effort, as well as vehicle checkout and flight operations.</p>
+
+    <p>During Flight Operations (Phase E), the instrumentation engineers will be involved in evaluating and resolving on-orbit anomalies.</p>
+
+    <p><u>Instrumentation Guidelines for the Development/Operations Phase:</u></p>
+
+    <ol>
+      <li>Document and evaluate on-orbit verification results and anomalies.</li>
+
+      <li>Document lessons learned.</li>
+    </ol>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Without reliable flight instrumentation systems, information needed to accomplish successful missions and document results will not be obtained. Increased emphasis in the early project phases on incorporating instrumentation considerations and requirements will help ensure NASA aerospace systems satisfy mission and science requirements. This guideline and its references provide project managers, chief engineers, and users with a set of instrumentation principles tailored to each phase of the system life cycle. Application of these principles should result in development of more reliable flight instrumentation, in less time, and at lower cost.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Stein, Peter K., "The Unified Approach to the Engineering of Measurement Systems for Test &amp; Evaluation," 1992.</li>
+
+      <li>NMI 7120.4, "Management of Major System Programs and Projects."</li>
+
+      <li>NHB 7120.5, "Management of Major System Programs and Projects - Detailed Policies and Procedures."</li>
+
+      <li>MSFC-HDBK-1912A, "System Engineering Handbook," December 6, 1994.</li>
+
+      <li>MSFC-STD-1924, "Standard for Instrumentation Program and Command Lists (IP&amp;CL)," June 21, 1993.</li>
+
+      <li>Reliability Preferred Practice PD-ED-1251, "Instrumentation System Design and Installation for Launch Vehicles."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Without applying a structured and disciplined approach to instrumentation system requirements and design throughout the system life cycle, there is increased risk of excessive costs and lower probability of meeting mission and science measurement needs.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The development of in-flight instrumentation, vehicle health management systems, and sensor systems for control and monitoring should be thoroughly integrated into the requirements generation, preliminary design, and early planning for payloads and space flight systems. Multi-disciplinary Product Development Teams (PDTs) must include instrumentation considerations at the very front end of the development process. This will allow maximum advantage to be gained from current and emerging technologies to provide both real time and postflight diagnostics that will reliably and consistently reflect the system's condition. The result will be improved vehicle and payload system reliability through accurate and well-planned access to performance information. Emphasis must be placed on early definition of instrumentation and measurement requirements to reduce the time and cost to develop reliable instrumentation systems and ensure mission success.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

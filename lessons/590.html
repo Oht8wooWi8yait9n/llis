@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0590: Mars Pathfinder Flight Software Development Process (1997)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0590: Mars Pathfinder Flight Software Development Process (1997)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0590 (Database ID: 590)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1998-06-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/590" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Beyond meeting mission requirements, the Mars Pathfinder (MPF) flight software development effort focused on producing software that would contribute to lower operations cost and minimize the overall cost to the project. This cost consciousness necessitated the establishment of low cost software development processes compatible with short duration missions. These new processes did not require strict adherence to then existing institutional software standards.</p> 
+<p>Additional Keyword(s): System Architecture, Software Life Cycle, Rapid Prototyping, Concurrent Engineering</p> 
+<p>Reference(s): Glenn Reeves, quotMars Pathfinder Flight Software Lessons Learned,quot April 28, 1997.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Establish a software implementation plan early that outlines the basic strategy, including reviews, standards, processes, schedule, and deliverables.</li> 
+ <li>Get software and hardware together early in the development cycle, with hardware-software integration performed by the flight software team. Using the flight software team to identify integration problems is efficient, since it is the party responsible for fixing them.</li> 
+ <li>Make early, conscious, engineering decisions on the applicability of computer-aided software engineering (CASE) tools. Beyond basic software development planning, their use can consume resources and prove counterproductive.</li> 
+ <li>Develop a quotFlight-Like Test Setquot (FLTS) for early unit and integration testing. The MPF FLTS test set (shown below) was comprised of commercial hardware and simulation software assembled by the flight team members. Both the spacecraft and FLTS used a standard VME bus and software architecture, thus avoiding any duplication of effort. <img alt="refer to [D] description" border="0" height="353" src="https://llis.nasa.gov/llis_lib/images/1008985main_0590.gif" title="refer to [D] description" width="500" /><a href="https://llis.nasa.gov/llis_lib/txt/1009480main_0590.txt">[D]</a><br /> <i>MPF Flight-Like Test Set (FLTS)</i> <p> </p> </li> 
+ <li>Provide the flight software team with a dedicated flight software testbed equipped with engineering model hardware. Such a testbed permits development and checkout of flight software in parallel with development of electronics and sensors.</li> 
+ <li>The MPF project avoided the overhead associated with strict adherence to documentation and coding standards since no inheritance by future projects was planned. However, project(s) inheriting this software have since encountered problems due to limited documentation.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>See Lessons Learned</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.7.3.1 and 5.7.4 (quotManagement Practices: Spares, Testbeds, and Modelsquot), and Paragraph 6.11.3 (quotEngineering Practices: Software Development - Development, Maintenance and Acquisition Practicesquot), in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008. 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 4.11.1.4 (quotFlight Software System Design: Compatibility with COTS Toolsquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

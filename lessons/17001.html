@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #17001: OCO-2 Polarization Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #17001: OCO-2 Polarization Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #17001 (Database ID: 17001)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-06-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations,  Science,  Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Flight Equipment,  Hardware,  Payloads,  Spacecraft,  Test & Verification,  Spacecraft and Spacecraft Instruments,  Level 0/1 Requirements,  Configuration Change Control,  Review systems and boards,  Engineering design and project processes and standards,  Level II/III requirements definition,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/17001" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The Orbiting Carbon Observatory (OCO), an Earth-orbiting satellite mission managed by the NASA/Caltech Jet Propulsion Laboratory (JPL), was designed to make precise, time-dependent, global measurements of atmospheric carbon dioxide (CO2)—a greenhouse gas related to climate change. OCO was a cost-constrained project, and when the OCO spacecraft was lost due to a launch vehicle separation failure, the follow-on OCO-2 project was intended to feature a design identical to OCO with as few changes as possible.</p> 
+<p> The OCO/OCO-2 instrument does not measure CO2 directly, but rather the intensity of the sunlight reflected from the presence of CO2 in a column of air. Three spectrometers each use a diffraction grating (Figure 1) to separate the incoming sunlight into a spectrum of multiple component colors. The need to detect very small variations in intensity over a range of 3048 different colors requires high instrument resolution and precision. As the spacecraft follows a near-polar ground track, Earth observations made by the instrument switch periodically between the Nadir, Glint, and Target modes, with the Glint mode suited to observing solar radiance reflected from the ocean surface.</p> 
+<p> <img alt="Figure 1 is a photo of a clean room technician’s hand propping-up a black device that has a mounted mirrored oval shaped gold colored grating." src="/lessons/17001/2016-02_OCO-2_Fig1-grating.jpg" style="width: 335px; height: 249px;"></p> 
+<p> <strong>Figure 1.</strong> The OCO-2 weak band diffraction grating (above)<br> functions similar to the surface of a compact disk or DVD</p> 
+<p> During the initial on-orbit checkout of OCO-2 following the July 2014 launch, it was discovered that the data produced by Glint mode observations did not match the model (Reference (1)). Further investigation (References (2) and (3)) revealed that the instrument design failed to transmit light polarized parallel to the long axis of the aperture slit, as needed for Glint mode. This results in the anomalous (decreased) radiance levels shown in Figure 2. (This anomaly has a much smaller impact on other observation modes, and it only affects Glint mode observations over the ocean—most strongly at solar zenith angles near 52 degrees (i.e., the Brewster angle for seawater).)&nbsp;</p> 
+<p> <img alt="Figure 2 is a color graph that plots radiance magnitude levels against solar zenith angles from data acquired from the OCO-2 spacecraft in flight on 10 September 2014 (ten orbits).  A blue-colored band of values for “actual polarization” shows a decline from a starting point of 20 SZA degrees to a low point of 55 SZA degrees where an incline continues to return to the high point at 80 SZA degrees.  A yellow-banded region indicates the desired radiance level, which is higher than the blue band where the blue band dips." src="/lessons/17001/2016-12_OCO_Fig2.jpg"></p> 
+<p> <strong>Figure 2.</strong> This plot of actual Glint mode radiance levels received on-orbit<br> shows that they fail to track to the desired polarization. <a href="/lessons/17001/2016-12_OCO_Fig2-lrg.png">View larger image</a></p> 
+<p> This design error was discovered neither in the design process, in the review process, nor by the ground test program. The error originated from a decision, made shortly before the OCO Preliminary Design Review (PDR), when a design change was implemented. Specifically, the original requirement to make the design insensitive to polarization could not be met, so the instrument was redesigned for a single polarization. The implications of this modification were not recognized by the JPL or contractor system engineers. The OCO-2 project repeated the OCO build and test activities without performing a critical review or validation of the OCO requirements and design. Factors contributing to the flight anomaly included:</p> 
+<ul> 
+ <li> When responsibility for OCO Optics Subsystem assembly and test was transferred to JPL from the contractor in November 2006, the Level 4 (Subsystem) and Level 5 (Assembly) requirements were not transferred. JPL selected some Level 3 (Instrument) requirements to use for Level 4 requirements, but the polarization orientation requirement (L3G.279) was not selected. The comment associated with this decision was, “If we trust vendor data, impossible to miss.” There was a conscious decision that Level 3 test would be sufficient to verify the remaining requirements. (The polarization orientation was also not covered by the Hardware Review &amp; Certification Record (HRCR) process. See Reference (4).)</li> 
+ <br> 
+ <li> Among the items listed on the Summary of Instrument Changes prepared by the OCO project in March 2003, “polarization” did not appear. Subsequently, the summary of the June 2004 OCO PDR makes no reference to polarization. (Members of the OCO team felt that they were rushed to PDR and had to select only critical design elements for emphasis—that excluded polarization).</li> 
+ <br> 
+ <li> The OCO-2 project employed a highly tailored formulation period ending with Critical Design Review (CDR). No System Requirements Review (SRR) or PDR was held, implying a high degree of trust in the work done by the OCO project.</li> 
+ <br> 
+ <li> Near the beginning of integration and test (I&amp;T) for the OCO mission, the project decided to bring the instrument in-house from the contractor. This resulted in a transfer of I&amp;T and verification and validation (V&amp;V) roles to JPL without adequate continuity of involvement by the instrument designers in test design.</li> 
+ <br> 
+ <li> The system test of the instrument did not include verification of the absolute polarization angle. There was no opportunity to test the instrument at the Observatory System level prior to launch.</li> 
+</ul> 
+<p> Despite the polarization anomaly, OCO-2 is able to achieve the volume and quality of science data specified in Level 1 requirements due to the implementation of an operational workaround. Using attitude control to rotate the entire spacecraft closer to the instrument’s polarization response for the Glint mode operations was sufficient to significantly increase the radiance levels. The potential impact of this workaround on solar array orientation/battery charging was mitigated by the spacecraft having healthy instrument technical margins (e.g., battery charge rate).</p> 
+<p> The design of the OCO-3 follow-on instrument to be installed aboard the International Space Station has been modified to address the polarization issue. Also, a test to verify the system’s correct polarization will be conducted prior to the first system-level thermal-vacuum test (Reference (5)).</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> “Glint data are not consistent with the prelaunch understanding of instrument polarization response,” JPL Incident Surprise Anomaly (ISA) No. 57003, September 11, 2014.</li> 
+ <li> “OCO-2 Glint Mode Polarization: Low Signals from Ocean Surfaces at Mid-Range Solar Zenith Angles,“ NASA/Caltech Jet Propulsion Laboratory (JPL), September 15, 2014.</li> 
+ <li> Final Report, Independent OCO-2 Polarization Anomaly Assessment Team, NASA/Caltech Jet Propulsion Laboratory (JPL), January 14, 2015.</li> 
+ <li> “Hardware Review/Certification Requirement,” NEN #656, Lesson Learned Information System (LLIS), February 1, 1999.</li> 
+ <li> “OCO-2 Lessons are Being Applied,” OCO-3 Critical Design Review (CDR), June 15-16, 2016.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> The implications of an instrument design modification were not recognized by the JPL or contractor system engineers, and the follow-on (OCO-2) project repeated the predecessor project’s build and test activities without performing a critical review or validation of the requirements and design. Intensive penetration of a design by experts and reviewers is no substitute for, where possible, performing an independent check against a known standard and for verifying the design against the requirements at the system level.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Reference (3) recommends:</p> 
+<ol> 
+ <li> Question whenever you or your group are very sure of something (“known knowns”) for PDR. 
+  <blockquote> 
+   <ul> 
+    <li> Make sure you perform all the steps of requirements tracing and verification, even when it is easy.</li> 
+   </ul> 
+  </blockquote> </li> 
+ <li> Identify “key” requirements for special treatment. 
+  <blockquote> 
+   <ul> 
+    <li> “Key” is determined by the customer: determine consistent definitions and how you use them.</li> 
+    <br /> 
+    <li> Conduct a deep vertical review (Level 1 to Level 5) of the design against “key” requirements; this should include a “roll up” of verification from Level 4 to Level 1 for PDR.</li> 
+    <br /> 
+    <li> Ensure that “key” requirements flow down to at least Level 4 and are verified at Level 4.</li> 
+    <br /> 
+    <li> Revisit “key” requirements at all gate reviews: do not drop a key requirement easily.</li> 
+   </ul> 
+  </blockquote> </li> 
+ <li> Identify the polarization on drawings or by means of any other methods of design capture used. 
+  <blockquote> 
+   <ul> 
+    <li> This should be treated similar to attitude control phasing.</li> 
+   </ul> 
+  </blockquote> </li> 
+ <li> Include predictions of test results that verify requirements in procedures. 
+  <blockquote> 
+   <ul> 
+    <li> Does not include calibration (Note: This requires both a comprehensive understanding of the end-to-end flight instrument requirements, and the details of the integration and test approach and instrumentation.)</li> 
+   </ul> 
+  </blockquote> </li> 
+ <li> Repeat peer review when there is a moderate/significant design change, including a thorough review of the change documentation.</li> 
+ <br /> 
+ <li> The review board membership should have the ability to penetrate the technical design and the fundamental measurement being taken.</li> 
+ <br /> 
+ <li> The project team (and not just the Principal Investigator and the contractor system engineer for the instrument) should have the responsibility and resources to penetrate the instrument technical design.</li> 
+ <br /> 
+ <li> The Engineering Change Request process should be strengthened to be technically rigorous with regards to the validation of all levels of requirements that were affected by the change.</li> 
+ <br /> 
+ <li> Reinforce the requirement for PDR and CDR to explicitly show that ”the design meets its requirements with margin” by means of objective evidence. 
+  <blockquote> 
+   <ul> 
+    <li> This needs to be done for not just Level 4, but also for Levels 3, 2, and 1 (i.e., roll up performance to demonstrate that the requirements are met).</li> 
+   </ul> 
+  </blockquote> </li> 
+ <li> Provide build-to-print projects, or those with significant inheritance, direction on what body of work needs to be revisited or reviewed.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.18 (“Management Practices: Reviews”) and Paragraph 6.6.4 (“Engineering Practices: Inheritance”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. In addition, JPL has referenced it supporting Paragraph 8.2.1 (“Flight System Verification and Validation Design: Pre-delivery Verification - Subsystem and Assembly Level”) and Paragraph 8.3.3.5 (“Flight System Verification and Validation Design: System Assembly, Integration and Test - System Functional Verification - Phasing test”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012. p></p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6196: Shaker Self-Check Unexpectedly Exceeded the Dynamic Test Limit</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6196: Shaker Self-Check Unexpectedly Exceeded the Dynamic Test Limit</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6196 (Database ID: 6196)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-07-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment, Ground Equipment, Hardware, Payloads, Spacecraft, Test and Verification, Test Article, Test Facility, Spacecraft and Spacecraft Instruments, Advanced planning of safety systems</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6196" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Electrodynamic shaker systems are used in spacecraft test facilities to simulate the vibration, shock, and other dynamic loads that spaceflight hardware will encounter during launch and mission operations. Because large shaker tables are capable of producing dynamic impulses at levels that can damage or destroy the flight hardware, the test equipment is set and checked carefully prior to the test. Actions taken to confirm that the shaker is calibrated and operating properly include: 
+<br/>
+<ul><li>The scheduled test is first performed on a simulated test article that has a total mass approximating that of the actual test article. This allows the test conductor to confirm that there are no equipment defects, such as table stiction (Reference (1)) due to inadequate lubrication, and that the intended energy level is actually delivered to the mass simulator.</li><br/><li>
+
+Whenever the shaker is operated, the shaker controller software automatically initiates a self-check as a standard procedure. The self-check is intended to provide a strong enough signal to produce a reliable system check, but the self-check signal level is normally considered to be of insignificant strength compared to test levels.</li></ul>
+
+In July 2010, an open-loop sine burst test was conducted at the NASA/Caltech Jet Propulsion Laboratory (JPL) to exercise the three flight interface points on the High Gain Antenna (HGA) for the Juno spacecraft (Reference (2)). Prior to running any tests on the flight hardware, the shaker (Figure 1) was checked out by running a sine sweep test and a sine burst test using a simple mass simulator for the antenna. The sine burst profiles from this simulation indicated that the shaker would generate a proper test. However, the self check step of the simulation was not discussed and its input levels to the flight hardware were not examined because the self check level is not considered to be a test parameter. 
+<br/><br/>
+
+<CENTER><TABLE BORDER=0>
+<TR><TD><IMG  WIDTH="280"  ALT="Figure 1 is a color photo taken in a high bay test facility. Test equipment--a shaker-- appears as two roughly cylindrical metal assemblies mated vertically and supported on either side by metal frames. A conical spacecraft and heatshield is in turn mated to the top of the shaker. The diameter of the test article appears to be approximately twice that of the shaker it is mounted upon."  TITLE="Figure 1 is a color photo taken in a high bay test facility. Test equipment--a shaker-- appears as two roughly cylindrical metal assemblies mated vertically and supported on either side by metal frames. A conical spacecraft and heatshield is in turn mated to the top of the shaker. The diameter of the test article appears to be approximately twice that of the shaker it is mounted upon."  SRC="/llis_lib/images/1045020main_2011-08_Juno_HGA_Fig1_small.jpg"  HEIGHT="375"  ALIGN="Bottom"  BORDER="0" /></CENTER> </TD>
+<TR> <TD><span class="detailImageDesc"><b>Figure 1.</b> A typical test configuration for the JPL large <br/>shaker, this photo depicts Mars Exploration Rover under test)</span></TD></TR>
+</TABLE> </CENTER>
+
+<br/>
+The flight hardware HGA was installed on the shaker. Prior to conducting the sine burst test at various levels, the engineering team ran a low level sine sweep survey test that confirmed that the antenna responses matched the predictions and provided a measure of confidence in the health of the antenna and test configuration. When the first sine burst test was run, however, it was found that the self check that had immediately preceded the test had excited HGA responses beyond levels expected from the sine-burst test itself. Whereas the highest response expected on the HGA during the sine bust test was 33g, the self check generated ~67g. Subsequently, a detailed inspection of bond joints found a repairable 3-inch crack in the HGA (Figure 2) that may have been caused by the aberrant self check. 
+<br/><br/>
+<CENTER><IMG  WIDTH="540"  ALT="Figure 2 is a color photo of the top of a complex dome-shaped structure. This top portion that is visible is composed of a complex pattern of intersecting trusses apparently meant to support the structure and maintain rigidity. Recesses are visible between panels that descend downward from the trusses. A rectangular red patch is visible about two-thirds of the way from the bottom lip of the dome to the top of the dome. A red arrow points to the patch."  TITLE="Figure 2 is a color photo of the top of a complex dome-shaped structure. This top portion that is visible is composed of a complex pattern of intersecting trusses apparently meant to support the structure and maintain rigidity. Recesses are visible between panels that descend downward from the trusses. A rectangular red patch is visible about two-thirds of the way from the bottom lip of the dome to the top of the dome. A red arrow points to the patch."  SRC="/llis_lib/images/1044996main_upload_00003472.jpg"  HEIGHT="403"  BORDER="0" />
+<br/><span class="detailImageDesc"><b>Figure 2.</b> Red arrow on the HGA points to the damage site</span></CENTER> 
+<br/>
+JPL typically sets shaker self check levels to be relatively high for sine burst testing (as compared to sine sweep or random vibration testing) because of the need in open-loop testing to generate a strong signal that will provide a reliable self check. Sine burst testing involves subjecting each orthogonal axis of the test item to five-to-ten cycles of a sine wave whose peak is equivalent to the qualification load level. Since the test is intended to impart a quasi-static load to the test item, the test frequency must be below the fundamental resonant frequency of the test item. Such a “strong” self check signal is not ordinarily considered hazardous because it is still rather low in amplitude compared to a typical test. However, sine burst is intended as a non-resonant test (all input well below the test article first resonance), whereas the self check is a ~5 second random burst from ~10 to 400 Hz and excites all the significant modes for most test articles. Following the Juno HGA incident, JPL changed its test procedures to require the test operator to verify that the input loads due to the self check levels are set lower than the lowest level associated with the hardware test. 
+<br/><br/>
+<U>References</U>: 
+<ol><li>“High Energy Spectroscopic Imager Test Mishap,” NASA Lesson Learned No. 0903, NASA Engineering Network, May 10, 2000.</li><li>  
+“Juno High Gain Antenna Sine Burst Test - System Self Check High Levels,” JPL Problem/Failure Report No. 28952, JPL Problem Reporting System, July 14, 2010.</li></ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The control software for electrodynamic shaker test equipment generates a self check signal immediately prior to a test; the strength of this signal may exceed that generated by the actual test, posing a risk to the test article.
+</section>
+<section><h2>Recommendation(s)</h2>
+In planning for dynamic testing—particularly for sine burst testing—ensure that the self check signal will be set lower than any test level by analyzing the input level to the test article.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.5.2 (“Engineering Practices: Protection and Security of Flight Hardware”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 7,” JPL DocID 58032, September 30, 2008.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-HDBK-7004C Force Limit Vibration Testing NASA-HDBK-7008 Spacecraft Structural Dynamics Testing
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

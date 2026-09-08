@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0677: High Voltage Power Supply Design and Manufacturing Practices</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0677: High Voltage Power Supply Design and Manufacturing Practices</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0677 (Database ID: 677)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/677" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1202; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Process controls on design, manufacturing, and testing operations reduce component failure rates and improve reliability. The goal is production of power supplies that will operate in space for the mission duration.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>There are special requirements in packaging HV power supplies for space use. The power processor should be voltage-partitioned and the low voltage circuits should be separated from the high voltage circuits. This is usually done with a metal wall. There still will be signals transmitted between the sections. All grounds should be isolated to provide a means to predict the currents when transients or arcs occur. When capacitors discharge, there can be current flows of several hundred amperes. The low voltage section should be protected from these current and voltage surges.</p>
+
+    <p>Table 1 shows recommended design practices used for an 11 kV CTS TWT power supply. All volumes must be vented. The pressure in any unvented volume will decrease gradually and result in corona or arcing. Allow for screens, RF traps, etc.; and count only the holes in the screens. Interior volumes, down to the capped nut plates, must also be vented.</p>
+
+    <center>
+      <b>Table 1. High Voltage Power Supply Design Guidelines</b><br />
+
+      <table border="1">
+        <tr>
+          <th>PHYSICAL LAYOUT</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td width="25%">Voltage Partitioning</td>
+
+                <td>(Separate high and low voltage components)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td width="25%">Isolated Grounds</td>
+
+                <td>(Provide known current path for transients)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td width="25%">Voltage Suppression</td>
+
+                <td>(Suppress signal from high voltage to low voltage circuits)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <th>ELECTRIC FIELDS</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td>Solid Dielectric:</td>
+
+                <td>DC Stress</td>
+
+                <td>50 Volts/MIL</td>
+              </tr>
+
+              <tr>
+                <td>&nbsp;</td>
+
+                <td>AC Stress</td>
+
+                <td>10 Volts/MIL</td>
+              </tr>
+
+              <tr>
+                <td>Surface Creepage</td>
+
+                <td>&nbsp;</td>
+
+                <td>8 Volts/MIL</td>
+              </tr>
+
+              <tr>
+                <td>Air or Vacuum Gap</td>
+
+                <td>&nbsp;</td>
+
+                <td>20 Volts/MIL</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <th>VENTING</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td>
+                  &gt;2 cm<small><sup>2</sup></small> per 1000cc of enclosed volume (screens and RF traps reduce vent size), including:
+
+                  <dl>
+                    <dd>Capped nut plates</dd>
+
+                    <dd>Dielectric spacers</dd>
+
+                    <dd>Polyolefin shrinkable tubing</dd>
+
+                    <dd>High voltage connectors</dd>
+                  </dl>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>Figure 1 shows the fabrication methods used to build this supply. Round off all edges on metal as well as dielectric materials. Use anti-corona spheres. Void-free encapsulation is important. Remove excess RTV from bolts to keep vent paths open. Use shrink tubing in strips for hold downs, to avoid trapped air. Dielectric separators must be sized correctly for surface creepage. Anti-corona spheres should have a vent hole to eliminate voids in the solder. Dielectric inserts should be slotted to vent the interior volume.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009049main_0677-1.jpg"  HEIGHT="225"  BORDER="0" /><A HREF="/llis_lib/txt/1009535main_0677-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Figure 2 illustrates the special construction methods used in the HV compartment for the equipment to operate in the thermal and vacuum environment of space. Table 2 shows the testing methods that should be used to check out the HV power supply. The glass epoxy boards should be scanned ultrasonically to check for density differences. The transformers and components mounted on the boards should be corona-tested. Corona discharges of less than 5 picocoulombs are allowed. Induced voltage in the dielectric testing should be done in vacuum at temperature per MIL-T-27. The corona tests should be repeated to detect internal degradation from the high voltage stress. Be careful to bake out the components at 65 degrees C for 72 hours in the vacuum chamber and cool the components down before the power supply is turned on.</p>
+
+    <center>
+      <IMG  WIDTH="350"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009050main_0677-2.jpg"  HEIGHT="563"  BORDER="0" /><A HREF="/llis_lib/txt/1009536main_0677-2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <b>Table 2. Testing</b><br />
+
+      <table border="1">
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td valign="top" width="30%">Corona testing:</td>
+
+                <td>Transformers<br />
+                Component Configuration on Boards<br />
+                &lt;5 Picocoulombs</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td valign="top" width="30%">Electric Testing:</td>
+
+                <td>Induced voltage (twice-rated voltage)<br />
+                Dielectric withstanding (2.5 times rated AC and DC)<br />
+                Important to perform in vacuum at temperature</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td valign="top" width="30%">Thermal Testing:</td>
+
+                <td>Minimum of 10 temperature cycles at component level<br />
+                Minimum of 3 temperature cycles at box level</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td>Initial thermal-vacuum test preceded by bakeout of 65&deg;C for 72 hours</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="99%">
+              <tr>
+                <td>Ultrasonic Scanning of Glass Epoxy Boards (NASA TM X-73432)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>These design criteria were developed experimentally. The various component configurations, board layouts, and component assemblies were tested to 125% of expected working voltage in air, vacuum, and full operating temperature with a requirement that the corona inception measured less than 5 picocoulombs.</p>
+
+    <p>An example of an early flight failure caused by corona was a short that developed between two pins of a high voltage connector. Gas trapped inside connector voids gradually decreased in pressure until corona discharge began to decompose the insulating material. When the insulating material thickness was reduced to the point that leakage started increasing, a carbon tree formed and a short occurred, disabling the experiment. This can be easily avoided by running corona tests on all high voltage parts to ensure that no gases are trapped in high voltage circuits.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>MIL-T-27, "Transformers and Inductors (Audio, Power and High-Power Pulse), General Specification for," August 8, 1987.</li>
+
+      <li>NASA CP 2159, "Spacecraft Transmitter Reliability," September 1979.</li>
+
+      <li>NASA TMX-3287, Lalli, Vincent R., Nueller, Larry A., and Koutnik, Ernest A., "System Reliability Analysis Through Corona Testing," September 1975. Presented at Power Electronics Specialist Conference (sponsored by IEEE), Culver City, CA (June 9-11, 1975).</li>
+
+      <li>NASA TMX-73432, Klima, S. J. and P. J. Riley, "Ultrasonic Evaluation of High Voltage Circuit Boards," June 1976.</li>
+
+      <li>NAS3-17782, Cronin, D. L., "Modeling and Analysis of Power Circuits," TRW Systems Group, June 1975.</li>
+
+      <li>NAVMAT P4855-1, "Navy Power Supply Reliability Design and Manufacturing Guidelines," December 1982.</li>
+
+      <li>Foster, W.M., "Thermal Test Report for the Space Acceleration Measurement System Circuit Boards", NASA Lewis Code 6730 Internal Report, November 1987.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    Allowing High Voltage power supplies that have not been thoroughly tested for corona to operate in space has resulted in corona-caused shorts that disabled the power supply.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Thoroughly test high voltage power supply packaging on flight configured engineering models, in a simulated space flight environment, to evaluate corona effects.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Electronic Rocket (SERT) Tests I and II, Communication Technology Satellite (CTS), 30 cm Thruster Bi-module.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1512: Quench Module Insert (QMI) Furnace Type C Thermocouple (TC) Assembly and Testing Lessons Learned</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1512: Quench Module Insert (QMI) Furnace Type C Thermocouple (TC) Assembly and Testing Lessons Learned</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1512 (Database ID: 1512)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-01-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1512" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The QMI furnace required custom-designed Type C Thermocouples (TC) to meet the scientific requirements for the hardware. In implementing the custom requirement set and associated verification testing for these TCs notable anomalies/problems were encountered in two areas. The primary problem was the discovery of contamination (mostly Carbon deposits) on the inner surfaces of the TC that led to acceptance test failures. This problem occurred during the calibration phase of the TC acceptance testing and specifically when the TC was brought up to operating temperature (900degC for this application) and temperature held for stabilization and data gathering. The start of the deposits most probably began at a lower temperature (~400degC) and began to build up so that isolation resistance failed test specifications. Investigation led to the conclusion that the Alcohol-based cleaners used on each of the piece parts (sheath, insulator, wire) making up the TC was to blame. The
+    Alcohol-based cleaners left deposits on some materials and were absorbed into the insulators. When the assembled TC was brought up to temperature during calibration testing the Alcohol-based substance was baked out and a Carbon residual remained which was conductive.</p>
+
+    <p>A secondary problem was caused by attempting to maximize the TC wire size yet limiting the overall TC sheath diameter leading to assembly problems of each TC. The assembly of each of the TC units took an unusually long time due to the limited clearances of the parts to be assembled including: thickness of wire, diameter of insulator, length of TC, required thickness of insulator and over all diameter of TC sheath.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Mechanical means of cleaning/scrubbing inside surfaces removes most particulate contamination. Vacuum baking of the individual piece parts has limited effectiveness in removing contaminants. Use of the Alcohol-based solvents for cleaning leads to deposits on the surfaces of the piece parts and also can be absorbed into the surfaces (esp. HaO insulator). The potential of contaminant deposit on the inside of the TC during acceptance testing, including operating temperature calibration, requires careful selection of cleaning agents as well as the cleaning of all parts prior to assembly and keeping all parts clean throughout the assembly and testing process. Use of alcohol-based cleaners should be avoided as they have a tendency to be absorbed into the materials and then during high temperature operations will be deposited as Carbon on all inside surfaces of the TC thus causing TC failure during ATP. Use of mild soap and water (deionized) is the preferable final cleaning agent.
+    Carefully evaluate the tolerances, clearances and characteristics of the parts required for assembly and procure extra hardware piece parts to facilitate assemble.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Avoid/minimize the use of Alcohol-based solvents, use mechanical means (i.e., brushes) to clean out all inside surfaces. Evaluate tolerances/clearances for parts to be assembled and procure additional piece parts for build up of the TC assemblies.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Controlling the use of Alcohol-based cleaners has lead to more expected ATP pass rate. Additional material has been procured to complete the assembly of all TC units.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

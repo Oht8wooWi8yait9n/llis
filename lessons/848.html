@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0848: Maintenance &amp; Test Criteria for Circuit Breakers</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0848: Maintenance &amp; Test Criteria for Circuit Breakers</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0848 (Database ID: 848)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/848" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-7 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Proper maintenance and testing of electrical circuit breakers will enhance system/equipment performance, reliability, and overall availability. Cost savings are realized through testing of circuit breakers prior to or during installation by eliminating damage to other equipment/components caused by defective circuit breakers. Testing will also alert maintenance and logistics to examine existing inventories for other defective circuit breakers. Proper maintenance of circuit breakers will enhance circuit breaker life expectancy as well as the system/equipment it supports. Downtime for unscheduled maintenance is also minimized through proper maintenance and testing of circuit breakers.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>In developing a maintenance practice for circuit breakers one should first identify what type of circuit breakers are used (examples; molded-case, draw-out, high-voltage, etc.). Once the circuit breaker types are identified, one can start to identify the criterion for circuit breaker inspection, test, and maintenance. There are many sources of information available to assist one in defining this criterion (example: Federal &amp; Military Specifications/Standards, Air Force Manuals/Regulations, American National Standards Institute (ANSI), National Electrical Manufacturers' Association (NEMA), etc.).</p>
+
+    <p>The practice should address safety. Safety should be a prime consideration to all concerned in the planning, scheduling, and accomplishment of the work. Supervisors should brief all personnel, prior to the start of each operation, concerning the hazards that may be encountered and the appropriate safety practices to be observed. Supervisors should ensure that only properly trained and qualified personnel participate and that all personnel are equipped with the tools and equipment necessary to do the job safety.</p>
+
+    <p>Specific safety hazards that may be encountered while working with circuit breakers should be identified. For example; electric shock and secondary injuries caused by contact with energized circuits or devices that are electrostatically charged after removal of test potential. Also physical damage resulting from short circuits, insulation failures, or faulty equipment.</p>
+
+    <p>Identification of safety equipment that is required when working on circuit breakers should be provided. This equipment may consist of nonmetallic hardhats with chin straps, safety goggles, rubber gloves, sleeves, blankets/mats as required, area barricades and signs.</p>
+
+    <p>Safety precautions that personnel should be aware of should be identified. For example; turn off power, look out, and disconnect sources of electrical energy before working on equipment. Use of insulated hand tools designed for specific work. Use of protective equipment such as safety approved rubber-insulated gloves with protectors, insulating blankets/mats, and non-metallic hardhats. Wear safety eye protection glasses if there is a possibility of arcing or sparking. Ensure that non-current carrying metallic parts of equipment are grounded. Inspect visually or conduct tests to determine the adequacy of grounds.</p>
+
+    <p>The following is extracted from KSC GP-1002 and illustrates how that practice addressed one of the types of circuit breakers found at KSC.</p>
+
+    <p>Molded-Case Circuit Breakers</p>
+
+    <ol>
+      <li>Application. Molded-case circuit breakers are used to interrupt fault currents, to provide overload protection, and to switch the electrical circuit.</li>
+
+      <li>Construction. Molded-case circuit breakers contain two elements: a switch consisting of a set of contacts with suitable mechanical linkage to operate the contacts; and a trip unit which is an overload and fault sensing device.</li>
+
+      <li>
+        Operation. When the thermal or magnetic trip senses an overload condition in the electrical circuits, a spring-loaded latch is tripped. The released spring mechanism rapidly opens the breaker contacts and de-energizes the faulted circuit.
+
+        <p>Most molded-case circuit breakers are equipped with a thermal element composed of a bimetallic strip to provide a time delay and establish the tripping characteristics.</p>
+
+        <p>The instantaneous-trip device is magnetic. High current flow through the breaker picks up the armature of the magnetic trip device. Movement of the armature releases the latch and opens the breaker contacts. Some breakers are available with an adjustable instantaneous trip. The pickup of this trip may be changed in the field from approximately 5 to 10 times the continuous rating of the breaker.</p>
+
+        <p>Breakers labeled "non-automatic' have no trip unit and are used as load interrupting switches only.</p>
+      </li>
+
+      <li>
+        Maintenance.
+
+        <p>(1) Preventive Maintenance. Circuit breakers shall be exercised at intervals recommended in Table 1. If the circuit breaker is equipped with a trip indicator, exercise it to verify that it also operates properly. During routine maintenance, check molded-case circuit breakers for improper terminal connection at the time of installation, distorted plug-in tabs or sockets, poorly cleaned or corroded conductors, improper conductors for the lugs in use, and loose terminations. All of the above are fault conditions which may cause heating and deterioration of the circuit breaker and its response characteristics.</p>
+
+        <center>
+          <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009366main_0848-1.jpg"  HEIGHT="492"  BORDER="0" /><A HREF="/llis_lib/txt/1009841main_0848-1.txt"  >[D]</A><br />
+          Table 1. Recommended Maintenance/Test Intervals for Molded-Case Circuit Breakers
+        </center>
+
+        <p>Note: The above are minimum recommended maintenance/test intervals. Additional tests may be made when the operating agency has experience to indicate need for concern.</p>
+
+        <p>If overheating of connections is evident through discoloration or arcing, the breaker should be removed from service and all conducting surfaces cleaned. The breaker should then pass operations tests and the installation megger test before reinstallation.</p>
+
+        <p>Those breakers with adjustable instantaneous magnetic trip devices should be set at the highest setting unless otherwise directed.</p>
+
+        <p>(2) Corrective Maintenance. Perform corrective maintenance on molded-case circuit breakers after fault conditions occur. Follow the procedures given in paragraph 4.(1) and perform the tests required in Table 1 (see paragraph 5). If a molded-case circuit breaker interrupts a fault current whose magnitude is equal to its interrupting rating, the breaker may not be operable.</p>
+      </li>
+
+      <li>
+        Tests.
+
+        <p>(1) Insulation Megger Tests. Perform insulation megger tests at the intervals indicated in Table 1 and the following instructions.</p>
+
+        <p>De-energize and, if necessary, remove the breaker from the panel for test. Do not place the megger on large masses of iron nor near strong magnetic fields. Set the megger scale range selector switch in a position that gives a reading in midscale or above. Observe megger readings after a minimum of one minute or when the pointer has reached an apparent stabilized value; record the readings. After completion of the test, apply temporary grounds to all test materials and disconnect all leads.</p>
+
+        <p>This procedure tests one phase to ground with all other phases grounded and is equivalent to a phase-to-phase test besides the phase-to-ground test. Each phase must be tested individually. Table 2 provides voltage values for insulation megger tests. If a megger reading of 1 megohm minimum is not obtained for each voltage value replace the circuit breaker.</p>
+
+        <center>
+          <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009368main_0848-2.jpg"  HEIGHT="101"  BORDER="0" /><A HREF="/llis_lib/txt/1009843main_0848-2.txt"  >[D]</A><br />
+          Table 2. Voltage Values for Insulation Megger Tests-Molded-Case Circuit Breakers
+        </center>
+
+        <p>(2) Operations Tests. Perform operations tests at the intervals suggested in Table 1 and with the following instructions. These tests include overcurrent testing for both time-delay and instantaneous trip.</p>
+
+        <p>Molded-case circuit breakers use two basic methods, sometimes combined, to achieve overload protection: thermallic strip and electromagnetic. Check the circuit breaker manufacturer's instruction book to determine the type of overload device, the method of adjustment, and the proper breaker connections. Use a low-voltage high-current source such as Multi-Amp Model MSA for small breakers of ratings up to 100A and Multi-AMP Model CB-225 for larger breakers. Consult the Multi-Amp Tester instruction book to set up tester controls. De-energize and remove the breaker from the panel for test. Record all data obtained by these tests.</p>
+
+        <p>Individually test each pole that is equipped with an overload device. Operate (open and close) the breaker two or three times before applying the overcurrent. Connect the Multi-Amp tester across one pole of the breaker with the breaker closed.</p>
+
+        <p>If the overload protective device of the breaker under test is the thermal bimetallic strip type, allow sufficient time for the heater element to cool to near ambient temperature before starting a second test. No waiting period between tests is necessary for the electromagnetic type of overload protective device.</p>
+
+        <p>(3) Time Current Trip Test. If the breaker is electrically operated, connect temporary power to the breaker control circuits. Check for proper voltage and if alternating or direct current. The tests currents provided in Table 3 should be used. If the breaker being tested is not listed in Table 3, the test currents should be approximately 3 times the normal trip rating of the breaker. Perform the time current trip test in accordance with Multi-Amp instructions. Observe and record the time shown on the timer as the operating time of the breaker at that percent of rated overload. Compare this test time with times given in Table 3. If the operating time of the breaker does not agree with the curve or Table 3, replace the breaker. If the breaker is not listed in Table 3, check the manufacturer's time current curves for the appropriate trip time.</p>
+
+        <center>
+          <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009369main_0848-3.jpg"  HEIGHT="441"  BORDER="0" /><A HREF="/llis_lib/txt/1009844main_0848-3.txt"  >[D]</A>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009370main_0848-4.jpg"  HEIGHT="480"  BORDER="0" /><A HREF="/llis_lib/txt/1009845main_0848-4.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009371main_0848-5.jpg"  HEIGHT="484"  BORDER="0" /><A HREF="/llis_lib/txt/1009846main_0848-5.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009372main_0848-6.jpg"  HEIGHT="441"  BORDER="0" /><A HREF="/llis_lib/txt/1009847main_0848-6.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009373main_0848-7.jpg"  HEIGHT="485"  BORDER="0" /><A HREF="/llis_lib/txt/1009848main_0848-7.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009374main_0848-8.jpg"  HEIGHT="425"  BORDER="0" /><A HREF="/llis_lib/txt/1009849main_0848-8.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009375main_0848-9.jpg"  HEIGHT="506"  BORDER="0" /><A HREF="/llis_lib/txt/1009850main_0848-9.txt"  >[D]</A></p>
+
+          <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009367main_0848-10.jpg"  HEIGHT="480"  BORDER="0" /><A HREF="/llis_lib/txt/1009842main_0848-10.txt"  >[D]</A><br />
+          <br />
+          Table 3. Trip Characteristics for Molded-Case Circuit Breaker</p>
+        </center>
+
+        <p>(4) Instantaneous Trip Test. Connect the breakers to the Multi-Amp tester and select the proper ammeter range (about 10 times the normal trip current rating of the test breaker). Do not rotate the main control while large currents are flowing. Alternately increase the output current and jog the tester until the breaker trips or until the maximum test current is reached. If the breaker does not trip at the desired current value, replace the breaker.</p>
+
+        <p>The above is only an example of one type of circuit breaker. The criteria should address all circuit breakers that an organization supports.</p>
+      </li>
+
+      <li style="list-style: none">
+        <p>References:</p>
+
+        <ol>
+          <li>Kennedy Space Center (KSC) General Practice (GP) 1002, "Maintenance and Test Criteria for Circuit Breakers."</li>
+        </ol>
+        <br />
+        <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>While this practice may seem to be one that would routinely be found in a maintenance program, in reality that's not so. All too often it is assumed that a new part is not only serviceable, but that it also meets the specification requirements as advertised. However, due to process variables, inspection techniques, and even fraud, this is not always the case. Example: in February 1992 KSC was alerted by NASA HQ/Code QR that the Nuclear Regulatory Commission working with the Inspector General was issuing a GIDEP/Alert on suspect circuit breakers. The situation described that a particular vendor took used circuit breakers from various manufacturers, refurbished the exterior only, falsified circuit breaker data and sold them as new components. These breakers had experienced premature trip, failure to trip (some breakers were not of proper amperage, i.e., mislabeled), and some had exploded. Had KSC not had practice GP-1002, "Maintenance and Test Criteria for Circuit Breakers,"
+        in place, suspect circuit breakers could have easily been introduced into KSC's GSE and Facility equipment supporting the Space Shuttle Program. A maintenance program that provides for testing of circuit breakers prior to or upon installation will eliminate these types of failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Enhance the Ground Support Equipment (GSE) and Facility Equipment Maintenance Program by adoption of a maintenance practice that provides maintenance and test criteria for electrical circuit breakers.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used by the Kennedy Space Center Shuttle Processing contractor.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0689: Fiber-Reinforced Polymer Composite Material Selection</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0689: Fiber-Reinforced Polymer Composite Material Selection</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0689 (Database ID: 689)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/689" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2210 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Proper selection of the fiber, fiber-reinforcement form, and polymer matrix will produce a material system that 1) satisfies design property requirements thermal/physical/mechanical), 2) facilitates fabrication processes (lay-up and cure) and 3) minimizes program risks (cost, schedule, and technical).</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><i><b>Overview</b></i></p>
+
+    <p>Unlike a monolithic, homogenous material or an alloy, a composite is composed of two or more materials that retain their identity on the macroscopic level. Materials composing a composite can be classified as a reinforcement or strengthening phase and a matrix or binder phase. Reinforcement materials can be ceramics, polymers, or wires. Reinforcement forms can be continuous fibers, discontinuous or chopped fibers, whiskers, particles, platelets, etc. Matrix materials can be polymers, metals, or ceramics.</p>
+
+    <p>The primary consideration of this guideline is fiber reinforcements and thermoset polymer matrices in the most common product form, a prepreg (pre-impregnated and partially cured) sheet or ply. This is done out of practical considerations, since these composites possess the highest structural efficiency (specific properties) and are the most highly developed in terms of processing methods and material characterization (data base). Much of the information in the guideline is, however, relevant to other manufacturing forms and methods, such as Resin Transfer Molding, Filament Winding, Fiber Placement, Pultrusions, and Injection Molding.</p>
+
+    <p>The content by volume of fibers in the composite is a critical parameter from which the composite derives thermo/physical/mechanical properties. A body of science called micromechanics [references 1-4] exists to predict the properties of composites as a function of fiber volume given the material properties of the reinforcement and matrix. Micromechanics will not be discussed in this article.</p>
+
+    <p>Fiber reinforcement in a ply can be unidirectional or multidirectional. The latter applies to woven and non-woven fabrics. Choice of reinforcement form is a degree of freedom that can result in better processing and labor savings in part fabrication.</p>
+
+    <p>Plies with either or both reinforcement scheme are stacked and cured to make a laminate. The ply fiber angles in the laminate are oriented to satisfy application design requirements (stiffness, strength, thermal expansion, etc.). Laminate design/analysis methods will not be covered in this article. Information on this subject can be found in many publications [references 5-8].</p>
+
+    <p>The matrix phase is typically the material that most affects the processing, and most directly the curing of the composite. Choices for polymer matrices include a variety of epoxies, polyimides, and others. The choice of polymer matrix determines to a great degree the operational temperature limits for the composite. The matrix phase also affects other physical properties, such as outgassing and moisture diffusion.</p>
+
+    <p>Lastly, there are additional considerations that include economic, experience (flight history), and safety considerations that factor into the selection of a composite material. Table 1 summarizes relevant selection considerations for a fiber-reinforced composite with a polymer matrix. A more detailed discussion of the selection considerations follows.</p>
+
+    <center>
+      <b>Table 1. Composite Selection Considerations</b><br />
+
+      <table width="90%">
+        <tr>
+          <td>
+            <ol>
+              <li>
+                Fiber Considerations
+
+                <ol type="a">
+                  <li>Thermo/physical/mechanical properties and relevance to end application</li>
+
+                  <li>Ply thickness and tow size availability</li>
+
+                  <li>Ply flexibility and part curvature</li>
+
+                  <li>Sizing and surface treatments for matrix bonding and wetting</li>
+
+                  <li>Cost, availability, lead time, and stable supply source</li>
+                </ol>
+              </li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>
+                Reinforcement Considerations
+
+                <ol type="a">
+                  <li>Part curvature</li>
+
+                  <li>Ply thickness</li>
+
+                  <li>Laminate ply orientations</li>
+
+                  <li>Machining</li>
+
+                  <li>Weaving styles (drape) and weaving vendors</li>
+
+                  <li>Cost, availability, lead time, and stable supply source</li>
+                </ol>
+              </li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>
+                Resin Considerations
+
+                <ol type="a">
+                  <li>Fiber sizing compatibility and wetting</li>
+
+                  <li>Cure temperature and related items: laminate residual stresses, tooling expansion, upper use temperature, composite glass transition temperature (T<small><sub>g</sub></small>), and microcracking</li>
+
+                  <li>Prepeg handling characteristics: tack, drape, outlife</li>
+
+                  <li>Flow characteristics and processing method</li>
+
+                  <li>Mechanical properties: shear and tensile strength, modulus and strain compatibility with the reinforcing phase</li>
+
+                  <li>Physical properties: outgassing, moisture absorption/diffusivity/swelling, others</li>
+
+                  <li>Toxicity and health concerns</li>
+
+                  <li>Cost, availability, lead time, and stable supply source</li>
+                </ol>
+              </li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>
+                Other Considerations (Composite Level)
+
+                <ol type="a">
+                  <li>Material characterization data base</li>
+
+                  <li>Flight history</li>
+
+                  <li>Cost, availability, lead time, and stable source</li>
+                </ol>
+              </li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><i><b>Fiber Selection</b></i></p>
+
+    <p>The designer or material specialist has a wide range of fibers from which to make a selection. Often a fiber is selected because of physical properties. For example, graphite or carbon fibers are electrically and thermally conductive, while aramid (Kevlar<small><sup>&reg;</sup></small>) and glass fibers are non-conductive. In certain applications, such as an antenna reflector, electrical conduction is required. Hence, graphite (carbon) fibers are generally chosen for reflector-type applications. In other applications, for example a radome, radar transmissibility is desired. Here, Kevlar<small><sup>&reg;</sup></small> and glass fibers are the materials of choice.</p>
+
+    <p>Fiber selection should also consider mechanical and thermal properties. The salient mechanical properties are modulus and strength. Those for thermal properties include coefficient of thermal expansion (CTE) and thermal conductivity. Table 2 presents typical properties of some commercially available fibers presently utilized for space and spacecraft structures.</p>
+
+    <center>
+      <b>Table 2. Typical Fiber Properties (Axial Direction)</b><br />
+
+      <table width="90%" cellpadding="4">
+        <tr>
+          <th>Trade<br />
+          Name/<br />
+          Type</th>
+
+          <th>Young's<br />
+          Modulus<br />
+          (Msi)</th>
+
+          <th>Tensile<br />
+          Strength<br />
+          (Ksi)</th>
+
+          <th>CTE<br />
+          <br />
+          (PPM/&deg;F)</th>
+
+          <th>Thermal<br />
+          Conduct.<br />
+          (BTU/hr-<br />
+          ft-&deg;F)</th>
+
+          <th>Density<br />
+          <br />
+          (Lb/in<small><sup>3</sup></small>)</th>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              T300
+            </center>
+          </td>
+
+          <td>
+            <center>
+              33.5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              530
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.3
+            </center>
+          </td>
+
+          <td>
+            <center>
+              5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.064
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              AS4
+            </center>
+          </td>
+
+          <td>
+            <center>
+              33.5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              530
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.065
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              IM7
+            </center>
+          </td>
+
+          <td>
+            <center>
+              41.1
+            </center>
+          </td>
+
+          <td>
+            <center>
+              710
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              9
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.065
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              T50
+            </center>
+          </td>
+
+          <td>
+            <center>
+              56.4
+            </center>
+          </td>
+
+          <td>
+            <center>
+              350
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.55
+            </center>
+          </td>
+
+          <td>
+            <center>
+              40
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0654
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              UHMS
+            </center>
+          </td>
+
+          <td>
+            <center>
+              64
+            </center>
+          </td>
+
+          <td>
+            <center>
+              550
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.067
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              P75S
+            </center>
+          </td>
+
+          <td>
+            <center>
+              75
+            </center>
+          </td>
+
+          <td>
+            <center>
+              300
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.72
+            </center>
+          </td>
+
+          <td>
+            <center>
+              107
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.072
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              P100S
+            </center>
+          </td>
+
+          <td>
+            <center>
+              105
+            </center>
+          </td>
+
+          <td>
+            <center>
+              325
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.8
+            </center>
+          </td>
+
+          <td>
+            <center>
+              300
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.078
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              Kevlar<small><sup>&reg;</sup></small><br />
+              49
+            </center>
+          </td>
+
+          <td>
+            <center>
+              18
+            </center>
+          </td>
+
+          <td>
+            <center>
+              525
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -2.2
+            </center>
+          </td>
+
+          <td>
+            <center>
+              5.3
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.052
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              E-glass
+            </center>
+          </td>
+
+          <td>
+            <center>
+              10.5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              500
+            </center>
+          </td>
+
+          <td>
+            <center>
+              2.8
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.56
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.094
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              S2-glass
+            </center>
+          </td>
+
+          <td>
+            <center>
+              12.6
+            </center>
+          </td>
+
+          <td>
+            <center>
+              665
+            </center>
+          </td>
+
+          <td>
+            <center>
+              3.1
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.090
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              Quartz
+            </center>
+          </td>
+
+          <td>
+            <center>
+              10
+            </center>
+          </td>
+
+          <td>
+            <center>
+              500
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.3
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0795
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              K1100
+            </center>
+          </td>
+
+          <td>
+            <center>
+              130-145
+            </center>
+          </td>
+
+          <td>
+            <center>
+              350-550
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.9
+            </center>
+          </td>
+
+          <td>
+            <center>
+              550-676
+            </center>
+          </td>
+
+          <td>
+            <center>
+              .0777-.0813
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              M46J
+            </center>
+          </td>
+
+          <td>
+            <center>
+              63.3
+            </center>
+          </td>
+
+          <td>
+            <center>
+              611
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.5
+            </center>
+          </td>
+
+          <td>
+            <center>
+              &nbsp;
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0665
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              M50J
+            </center>
+          </td>
+
+          <td>
+            <center>
+              69
+            </center>
+          </td>
+
+          <td>
+            <center>
+              569
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.55
+            </center>
+          </td>
+
+          <td>
+            <center>
+              57
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0672
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              M55J
+            </center>
+          </td>
+
+          <td>
+            <center>
+              78.2
+            </center>
+          </td>
+
+          <td>
+            <center>
+              583
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.61
+            </center>
+          </td>
+
+          <td>
+            <center>
+              90
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.690
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              M60J
+            </center>
+          </td>
+
+          <td>
+            <center>
+              85.3
+            </center>
+          </td>
+
+          <td>
+            <center>
+              569
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.61
+            </center>
+          </td>
+
+          <td>
+            <center>
+              88
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0694
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              XN-50
+            </center>
+          </td>
+
+          <td>
+            <center>
+              75
+            </center>
+          </td>
+
+          <td>
+            <center>
+              530
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.8
+            </center>
+          </td>
+
+          <td>
+            <center>
+              100
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0773
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              XN-70
+            </center>
+          </td>
+
+          <td>
+            <center>
+              105
+            </center>
+          </td>
+
+          <td>
+            <center>
+              530
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.9
+            </center>
+          </td>
+
+          <td>
+            <center>
+              180
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0780
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              XN-80
+            </center>
+          </td>
+
+          <td>
+            <center>
+              114
+            </center>
+          </td>
+
+          <td>
+            <center>
+              530
+            </center>
+          </td>
+
+          <td>
+            <center>
+              -0.9
+            </center>
+          </td>
+
+          <td>
+            <center>
+              235
+            </center>
+          </td>
+
+          <td>
+            <center>
+              0.0780
+            </center>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>Often figures of merit (FOMs) are used in fiber selection. FOMs are ratios of composite material properties [references 5,6], for which the fibers may be unidirectional or cross plied depending on the application. Some typical FOMs are E/r, F/r, E/r/a, and Ek/r, where E, F, r, a, and k denote Young's modulus, strength, density, coefficient of thermal expansion, and thermal conductivity, respectively.</p>
+
+    <p>Broadly speaking, most structural applications fall into two categories: strength critical and stiffness critical. The choice of fiber must be attuned to the driving design requirement of the application. For example, in primary structure, strength is usually the dominant factor influencing fiber selection. Therefore, F/r is the appropriate FOM for fiber selection. Whereas in secondary structure having vibration frequency and/or deflection requirements, stiffness may be the dominant selection factor. In this case E/r is the pertinent FOM. For dimensionally stable applications, E/r/a is the meaningful FOM. For thermal applications, Ek/r is a relevant FOM.</p>
+
+    <p>Tensile strength and modulus are controlled principally by the fibers in the composite. Compressive and shear properties, however are derived from both the fiber and matrix and the interface (bond) between them.</p>
+
+    <p>The thickness of a ply or layer is also determined by the fibers, more specifically the fiber diameter and the number of fibers in bundle or tow. Thin plies (2.5 mils or less) require low tow counts (500 to 1000 filaments), which are not available for some fibers.</p>
+
+    <p>Ply flexibility, which is a function of fiber modulus and ply thickness, should be considered with respect to part curvature. For example, the brittleness and thickness of a ply with ultra-high modulus carbon fiber may preclude its use in fabricating a deeply curved part.</p>
+
+    <p>The choice of fiber also can impact the type of reinforcement form possible. For example, ultra-high modulus graphite fibers may present weaving difficulties, which can preclude the availability of certain fabric styles with tight weaves. The availability of fabric woven with high-modulus fibers has improved greatly in the recent past.</p>
+
+    <p>Lastly, fiber selection must consider wetting, bonding, and material compatibility of the matrix resin. A coating or sizing on the fibers is applied for these purposes. In material selection, one should be aware of the importance of a proper coupling agent between the fibers and resin. This is particularly important for carbon fibers. Coupling agents for carbon fibers are usually proprietary formulations of the fiber producer or the prepreg vendor.</p>
+
+    <p><i><b>Reinforcement Form</b></i></p>
+
+    <p>Choices of fiber reinforcement forms include unidirectional and multidirectional. Selection aspects of each form are discussed below.</p>
+
+    <p>The most commonly used product containing unidirectional fiber reinforcement is prepreg tape. Unidirectional tape has collimated bundles of fibers called tows, which run in the length or long direction of the tape. Unidirectional tape gives the ability to tailor the fiber orientations from layer to layer in a laminate. This results in design flexibility. Also, the widest choice of fibers are available in unidirectional tape.</p>
+
+    <p>Unidirectional tape is available in a range of widths. The choice of tape width can facilitate lay-up and can promote efficient material usage. An example of the latter is less wasted material from cutting ply pattern details. When laying up unidirectional tape, the continuity of the fibers should be maintained. End-to-end butt splices that result in fiber discontinuity should be avoided. On the other hand, butting the sides of adjacent layers with parallel fibers is permissible.</p>
+
+    <p>Use of unidirectional tape to produce parts with deep, double curvature can prove difficult. Lay up may be facilitated by cutting the tape into narrow strips. However, labor increases in doing so.</p>
+
+    <p>The most common multidirectional reinforcement form is woven fabric. Fabric weave styles can have drastically different draping characteristics, which is an important characteristic in making doubly-curved parts and those with integral flanges and bends. Harness-satin weaves are more drapable than plain weaves. Other desirable characteristics of fabrics include bidirectional properties at a minimum gage, resistance to microcracking (matrix splitting between fibers), and good machining characteristics.</p>
+
+    <p>In a woven fabric, the fibers will be curved to some degree or another depending on the weave style. Fiber curvature results in decreased composite moduli and strengths, especially in compression. Weaving also reduces the volume available for fibers in the composite. As a result, laminates made from woven fabric composites are less structurally efficient than those made from unidirectional tapes.</p>
+
+    <p>Recent manufacturing advancements have made possible ultra-thin unidirectional and fabric reinforced composites. These materials have been manufactured in a thickness of one mil or less for unidirectional prepreg and about two mils for fabric prepreg. Such ultra-thin composites are especially attractive for lightly-loaded, minimum gage structures. Here, the weight of the structure and, importantly, the weight savings potential of the composite are directly proportional to layer thinness. Other benefits of ultra-thin composites include less micro cracking under thermal cycling and the potential for more homogeneous laminate stacking sequences for a given laminate thickness. The latter usually results in improved strength due to a more thorough interspection of ply-angle orientations in the laminate stacking. The disadvantages of ultra-thin composites are increased handling difficulty, cost, and lead time.</p>
+
+    <p>Fabric prepregs may offer labor efficiency in lay ups. For example, a [0/90] (Fiber angles are 0 degrees and 90 degrees) laminate needs 50% fewer plies to be laid up using an orthogonally woven fabric, since fibers in two directions are obtained with every ply applied. Some fabric prepregs are available with hybrid fibers, such as carbon warp-yarns and Kevlar<small><sup>&reg;</sup></small> fill-yarns, which may provide more potential design solutions.</p>
+
+    <p>Theoretically, the possibilities of fiber type and weave style are unlimited. Practically, off-the-shelf choices are limited. Certain non-standard fabrics made from high- and ultra high-modulus fibers can be obtained from specialty weavers. The design use of such fabrics should be tempered by cost and lead-time considerations.</p>
+
+    <p><i><b>Matrix Selection</b></i></p>
+
+    <p>The choice of prepreg matrix resin is of critical importance in fabrication. The composite part quality is extremely dependent on the resin matrix and its handling and cure processing characteristics. The matrix vendor is usually the vendor that makes the prepreg, i.e., incorporates the fibers in the matrix.</p>
+
+    <p>Handling characteristics are most important during ply lay up. Here the tack and drape of the prepreg are critical properties. If the prepreg is too stiff and boardy, then difficulty will be encountered in making curved parts, such as hollow tubes. Maintenance of ply-to-ply fiber orientations can be affected as well. If the prepreg is too sticky, then positioning and, in particular, repositioning of layer during layup is difficult.</p>
+
+    <p>The handling characteristics are affected by the cumulative exposure of the resin in the prepreg to room temperature. The time limit at room temperature is called the out-life of the prepreg. For large parts especially, outlife should be considered in resin selection. Some resins have out-lives as long as 30 days; others, only several days.</p>
+
+    <p>The resin in the prepreg determines the cure temperature of a composite part. Most epoxies and polycyanates cure around either 250&deg;F or 350&deg;F. Polyimides cure at higher temperatures. The cure temperature usually determines the glass transition temperature (T<small><sub>g</sub></small>), which is associated with the useful upper-temperature limit of a composite. (Prudent design practice is to limit the use of a composite to below its T<small><sub>g</sub></small>. The safe number of degrees below T<small><sub>g</sub></small> depends upon the magnitude and direction(s) of the applied load with respect to the laminate fiber directions. It is advisable to experimentally confirm the maximum usage temperature of a composite for a particular application.) A higher cure temperature or, alternatively, a post cure generally raises the T<small><sub>g</sub></small>. However, a high cure temperature results in greater cool down or residual stresses, which arise from CTE mismatches:
+    ply to ply and fiber to matrix. Also for elevated cure temperatures, the thermal expansion effects of cure tooling become more critical, which adds to the difficulty in making parts and achieving desired dimensions.</p>
+
+    <p>Besides the cure temperature, the prepreg resin determines other important cure characteristics, such as rheology and viscosity. These characteristics affect consolidation of the layers, most notably in the amount of voids or porosity produced during cure. The choice of resin should be compatible with the consolidation process. For example, low-flow systems are usually unsuitable for vacuum-bag/oven processing. High-flow, low-viscosity systems can present difficulties in net-resin (no bleed) processing, since resin leakage may be difficult to prevent.</p>
+
+    <p>The resin material also affects the contamination concerns of the composite: outgassing and moisture diffusivity. For space use, a polymeric composite must pass mass-loss and condensibles requirements, such as those defined in SP-R-0022A, MSFC-SPEC-1443 and JSC 0022-A. In addition, moisture absorbed on the ground will be desorbed in orbit. This may result in undesirable shrinkage for parts with strict dimensional stability requirements.</p>
+
+    <p>The resin must have suitable shear and extensional modulus, strength, and strain for the composite to function correctly. Matrix shear is the mechanism through which stresses are introduced and spread to the fibers. Matrix shear and tensile strength largely factor into the resistance of an unidirectional layer in a laminate to microcracking from thermo-mechanical loads. Also, the resin must have compatible extensional strain with the fibers in the composite.</p>
+
+    <p>Lastly, the resin material determines the toxicity of the prepreg. Resin systems with carcinogenic compounds and other unsafe ingredients should be avoided.</p>
+
+    <p><i><b>Other Considerations</b></i></p>
+
+    <p>These considerations deal with the economics and experience with a composite. Economic considerations include cost and availability (lead time). Experience considerations include extent of data bases and previous successful flight applications. Some space applications are given in publications [9] and [10]. The importance of the stability of the material supplier or vendor should also be taken into account, as a long term source of supply is highly desirable and sometimes essential.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Z. Hashin and B.W. Rosen, "The Elastic Moduli of Fiber-Reinforced Materials", ASME Journal of Applied Mechanics, Vol. 31, 1964, pp. 223-232.</li>
+
+      <li>Z. Hashin, "Theory of Composite Materials", NASA CR-1974, 1972.</li>
+
+      <li>R.M. Christensen, Mechanics of Composite Materials, John Wiley and Sons, New York, 1979.</li>
+
+      <li>Z. Hashin,"Analysis of Composite Materials - A Survey", ASME Journal of Applied Mechanics, Vol. 50, 1983, pp. 481-505.</li>
+
+      <li>DOD/NASA Advanced Composites Design Guide, Air Force Wright Aeronautical Laboratories, Dayton, OH, prepared by Rockwell International Corporation, 1983 (distribution limited).</li>
+
+      <li>Military Handbook,"Polymer Matrix Composites", MIL-HDBK-17-3C, 4 November 1992.</li>
+
+      <li>R.M. Jones, Mechanics of Composite Materials, Hemisphere Publishing Corporation, New York, Washington, Philadelphia, and London, 1975.</li>
+
+      <li>S.W. Tsai, Composites Design, Fourth Edition, Think Composites, Dayton, Paris, and Tokyo, 1988.</li>
+
+      <li>M.M.Schwarz, Editor In Chief, Composite Materials Handbook, McGraw-Hill, Inc., 2nd ed., 1992.</li>
+
+      <li>Engineered Materials Handbook, Vol.1 - Composites, ASM International, The ASM Composite Materials Collection, Metals Park, OH.</li>
+
+      <li>Structural Laminate Composites for Space Applications, Reliability Preferred Practice PD-ED-1217.</li>
+
+      <li>Selection of Spacecraft Materials and Supporting Vacuum Outgassing Data, Reliability Preferred Practice PT-TE-1410.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Avoidance of the material selection considerations can result in a fiber composite part or component that 1) does not satisfy design properties, 2) is unnecessarily difficult to fabricate, and 3) adds substantial program. Item 1 may lead to an expensive redesign. Item 2 can impact cost and program schedule. Item 3 can jeopardize the entire project.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Material selection is an important aspect of design. Often the success of the design is critically dependent on a material or materials performing as desired. This is especially true in the case of advanced composite materials with polymer matrices reinforced with carbon or aramid (Kevlar<small><sup>&reg;</sup></small>) fibers. The important considerations necessary for a proper selection of a fiber-reinforced polymer composite material in NASA spacecraft and satellite structures include fiber material, fiber reinforcement form, fiber volume, matrix material, ply lamination, processing, cost, database, health and safety factors and end-item properties.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

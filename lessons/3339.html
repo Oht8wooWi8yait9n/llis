@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #3339: Space Shuttle Fuel Cell System Missing Critical Instrumentation Forces Turnaround Testing Complexities</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #3339: Space Shuttle Fuel Cell System Missing Critical Instrumentation Forces Turnaround Testing Complexities</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #3339 (Database ID: 3339)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-07-25</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Risk Management / Assessment, Launch Systems, Orbiting Vehicles, Ground processing and manifesting, Ground support systems, Launch support systems, Logistics and maintenance, Crew operations and support concepts, DDT/E, Vehicle concepts, Engineering design and project processes and standards, Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/3339" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Space Shuttle Orbiter Fuel Cell Systems as originally designed and developed lacked critical downlinked instrumentation that provided the health and status of each individual cell (96 cells per fuel cell, 3 fuel cells per ship set). An improvement modification was made early in the program to add a Cell Performance Monitor (CPM) to each fuel cell. The CPM provides a comparison voltage between 16-cell half-stacks for each 32-cell substack (three 32-cell substacks per fuel cell). <br/>
+<br/>
+During the STS-83 mission, one of the fuel cells exhibited a degraded substack 3 (CPM channel 3) voltage measurement, having a steady slope toward the CPM limit of 150 millivolts. Due to limited instrumentation (i.e., the ability to monitor the 96 individual cell-voltages), the abnormal readings were interpreted as a worst-case scenario, the failure of a single cell. The fuel cell was to shut down and "safed" approximately 48 hours into the flight, requiring the mission to be terminated early. After the early termination of STS-83, the Program designed and tested a fuel-cell monitoring system (FCMS). This system finally provided individual cell-health monitoring capability. If the FCMS had been available for STS-83, it may have precluded the shutdown of the fuel cell and may have allowed the mission to complete its planned duration.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Based on the STS-83 experience, adequate health status information for critical systems must be provided for worst-case scenario resolutions. In the case of the Orbiter fuel cells, it was determined that individual cell health status is mandatory to preclude premature mission termination. <br/>
+<br/>
+It should be noted that attempts had been made prior to FCMS to develop, qualify, and certify single-cell health monitoring. Previous attempts were considered too costly. In light of the failure and the added cost to re-fly the STS-83 mission, the prudent choice should have been to implement a design enhancement sooner.
+</section>
+<section><h2>Recommendation(s)</h2>
+For new spacecraft systems design and development, it is critical that a worst-case scenario evaluation be performed on critical flight systems so that health status is available at the level required to determine the system’s health. This health and status must be provided via downlink to ground systems support personnel.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+Several instances of CPM erratic behavior on various fuel cells during various missions have resulted in the implementation of flight rules requiring in-flight FCMS data acquisition and analysis to ensure fuel-cell health and continued operation.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

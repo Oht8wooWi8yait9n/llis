@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0694: Super Ni-Cd Spacecraft Battery Handling and Storage Practice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0694: Super Ni-Cd Spacecraft Battery Handling and Storage Practice</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0694 (Database ID: 694)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/694" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1108; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Super Ni-Cd batteries are perishable and their reliability is directly related to prudent handling and storage procedures. The development and implementation of appropriate project-unique procedures based on a set of proven guidelines assure that the optimum performance of Super Ni-Cd batteries is not degraded due to inappropriate handling and storage.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The Super Ni-Cd cell is an advanced Ni-Cd cell design developed by Hughes Aircraft company. It is constructed of electrodeposited positive (nickel electrodes), and negative plates (cadmium electrodes). The separator material is an inert polymer impregnated zirconium cloth interleaved with the plates and serves to insulate the positive plates from the negative plates and retain the electrolyte. The interelectrode spacing was increased in the Super Ni-Cd design to permit greater than 4 ml/Ah of electrolyte. This is about 31 percent more electrolyte than in the conventional Ni-Cd cell. The plates are connected to the respective cell terminals which are attached to a cell cover and inserted in a steel case and welded shut. The electrolyte is normally 31 percent concentration of potassium hydroxide with Hughes Aircraft proprietary additives. It is added though the "fill tube" which is fitted with a pressure gauge. After the cell satisfactorily completes its manufacturing and
+    acceptance testing, the fill tube is pinched off and welded closed.</p>
+
+    <p>The manufacture of a hermetically sealed Super Ni-Cd cell is predicated on a delicate balance between the active material, the relative state-of-charge of the active material between the positive and negative plates at the time the cell is sealed, the amount of electrolyte placed in the cell at closure, the properties of the separator material, and the free volume allowed by the case design. The Super Ni-Cd cell, which has no free or excess electrolyte, is referred to as an "electrolyte starved" design. The primary prerequisite for a sealed-electrolyte starved cell to operate safely is that the positive plates be limiting on charge so that only oxygen is generated during overcharge. During charge some of the current is utilized in the generation of oxygen gas and when in overcharge, all the current is used in generating oxygen. This causes the cell pressure to increase to a level that is dependent on the recombination rate of oxygen at the negative electrode, the rate of
+    diffusion of the oxygen through the separator, the amount of electrolyte in the cell, and the cell free volume. The cell pressure at 20 degrees C can typically be in the range of 50 to 65 PSIG.</p>
+
+    <p>The negative plates of a cell contain approximately 50 percent more capacity than the positive electrode. Of this "excess" negative capacity, approximately 60 percent remains uncharged when the positive plates are fully charged. This uncharged material is referred to as "overcharge protection" and is required to prevent the plates from becoming fully charged and generating hydrogen gas. The remainder of the excess negative is in the charged state when the cell is fully discharged and provides over-discharge protection. It is referred to as precharge. On discharge, when the cell voltage drops below 1 volt, the positive plates are limiting, thereby leaving charged cadmium material to react with any residual oxygen when the cell is completely discharged. Typical pressure of fully discharged cells is 3 to 5 PSIG. A second reason for the positive plates to be limiting on discharge is to prevent the effects of negative capacity fading, which occurs during normal use, from causing
+    losses in cell capacity. It is thought that capacity fading is related to the sizes of the cadmium crystals. It is most important that the overcharge protection is available for the entire life of the cell. Should the negative plates become fully charged, hydrogen gas is generated during overcharge and there is no effective mechanism within the cell for the recombination of H<sub><small>2</small></sub> gas. If a cell is over discharged (potential reversed) H<sub><small>2</small></sub> gas is generated at the positive electrode at a rate dependent upon the discharge rate. Because of the limited free space in a sealed cell, a cell that is reversed can quickly build up pressure and rupture the cell case or battery package.</p>
+
+    <p>The Super Ni-Cd cell is a highly complex, interactive electro-chemical device where the present and future performance is totally dependent on its past history. This history includes the attributes and characteristics of the raw materials, the processing of these materials into components, the assembly of these components into a sealed cell, and all testing, handling, and storage. Consequently, a cell or battery is classified as perishable and treated accordingly.</p>
+
+    <p>Since Super Ni-Cd batteries can be irreversibly degraded by improper use and handling, the following guidelines were developed for the use of battery engineers in developing project-unique Battery Handling and Storage Procedure and Requirement Documents.</p>
+
+    <p><b>Guideline No. 1</b> - Flight batteries should be maintained charged in cold storage at a temperature of 0 degrees C (± 3 degrees C) and on trickle charge at a rate of C/100 until required for installation into the spacecraft for battery/spacecraft integration testing and for launch preparations.</p>
+
+    <p>When a battery is placed in cold storage, it should be fully charged and wrapped with an anti-static bag and closed. This bag should be placed in another anti-static bag along with packets of desiccant. A battery stored by this method, up to three years after cell activation, is expected to provide several years of nominal performance in orbit.</p>
+
+    <p><b>Guideline No. 2</b> - Flight batteries should not be subjected to extended spacecraft integration and test activities.</p>
+
+    <p>The open circuit and intermittent use of Ni-Cd batteries during extended spacecraft integration and testing activities are known to significantly accelerate the degradation of batteries. Results from controlled tests have shown permanent and irreversible changes unlike anything observed after several years of spacecraft flight operations. Degradation is observed initially as an increase in cell overcharge voltage at low temperatures which is indicative of loss in overcharge protection. Also, NASA integration and testing use promotes significant cadmium migration. Both of these are recognized as the dominate wear-out mechanisms which determine battery life.</p>
+
+    <p><b>Guideline No. 3</b> - Batteries that have been on open circuit for periods greater than 4 hours following a charge at a level of C/100, should be discharged for 5 minutes at a 1.0 amp rate and then subjected to a top-off charge before operations are resumed.</p>
+
+    <p>The use of charged batteries after an open stand should be initiated with a 5 minute discharge at a 1.0 amp rate prior to initiating battery charge as defined above. Typically, the discharge is done with spacecraft load and in concert with the spacecraft ground power console. During normal cycling use, the battery is discharged followed by a recharge and some overcharge. In this mode, there is always a partial pressure of oxygen from the overcharge with oxygen recombination occurring at the negative electrode. In a relatively short time on open circuit, the oxygen recombines and the internal cell pressure returns to a vacuum. Charging cells that are fully charged in the absence of oxygen creates an "unnature" condition, since there is no oxygen available to react with the negative electrodes. Past experience shows that this technique reduces the effects of open circuit stand on performance.</p>
+
+    <p><b>Guideline No. 4</b> - For short-term storage of up to 60 days, the flight battery may be stored charged and open-circuited with the temperature controlled at 18 degrees C (± 5 degrees C). A top-off charge is applied to the battery biweekly (every 3-4 days). Trickle charge at low rates is preferred to open circuit stand for a battery.</p>
+
+    <p>There are degradation mechanisms associated with this storage method, but data from controlled tests indicate that this is much less detrimental than prolonged open circuit stand.</p>
+
+    <p><b>Guideline No. 5</b> - The preferred operational temperature for Super Ni-Cd batteries is 18 degrees C (± 5 degrees C). The periods when the batteries are exposed to temperatures above 23 degrees C should be minimized. Under no circumstances should the battery temperature exceed 30 degrees C with the exception of non-operational periods during Thermal Vacuum Testing (e.g. Hot Balance) where the allowed temperature should not exceed 33 degrees C.</p>
+
+    <p>When testing is performed off of the spacecraft, the batteries should be mounted on a thermal cooling cart to maintain the battery in the required temperature range. When installed in the spacecraft prior to launch, the battery temperature should be maintained by the use of dedicated cooling air directed onto the battery or its baseplate when possible. Battery temperatures should be monitored via sensors installed in the battery assembly.</p>
+
+    <p><b>Guideline No. 6</b> - A battery stored at cold temperatures and on trickle charge for a period greater than 30 days should be "reconditioned" prior to placing it in use. The reconditioning cycle at 18 degrees C is defined as follows:</p>
+
+    <ol type="a">
+      <li>Warm battery at room temperature for minimum of 16-24 hours</li>
+
+      <li>Discharge the battery at C/2 constant rate until the first cell reaches 1.0 V</li>
+
+      <li>Drain each cell with a 1 ohm resistor until each cell's voltage is less than .03 V or for 16 hours (+0/-1 hour) whichever occurs first.</li>
+
+      <li>Recharge at C/20 rate for 40 hours (± 4 hours)</li>
+
+      <li>Repeat steps (b) and (c)</li>
+
+      <li>Recharge at C/10 rate for 20 (± 1 hour)</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Note!<br />
+    * Never short a Super Ni-Cd cell or battery<br />
+    * Monitor and maintain battery temperature at 18 degrees C (±5 degrees C) during the reconditioning cycle.</p>
+
+    <p><b>Guideline No. 7</b>- Batteries once removed from cold storage must be reconditioned every 30 days as described in Guideline No. 6.</p>
+
+    <p><b>Guideline No. 8</b> - Flight batteries must be discharged and left on open-circuit stand during shipment. Batteries are packaged to control the temperature to 5 degrees C (± 5 degrees C). The shipping container is equipped with temperature recorders to provide assurances that flight batteries have not been exposed to temperatures exceeding 25 degrees C. Upon arrival at its destination, the battery is recharged and put on trickle charge.</p>
+
+    <p>A Super Ni-Cd battery can deliver very high currents if shorted. High currents would create a safety hazard as well as destroy the battery due to the excessive heat that would be generated.</p>
+
+    <p><b>Guideline No. 9</b> - The final reconditioning of flight batteries, using battery conditioning steps (b) thru (f) of Guideline No. 6, should be performed at least 14 days prior to spacecraft launch. Upon completion of the reconditioning, flight batteries are maintained on a C/100 trickle charge rate until launch.</p>
+
+    <p>The reconditioning cycle restores the battery discharge voltage to "like new" condition by enhancing the formation of small cadmium crystals and electrolyte redistribution. A complete discharge establishes capacity balance for all cells within a battery. The low rate trickle ensures that the battery is maintained at full state of charge for launch.</p>
+
+    <p><b>Guideline No. 10</b> - The design of flight batteries should include the following provisions for ground console interfacing with the batteries while integrated in the spacecraft.</p>
+
+    <ul>
+      <li>Signal lines for monitoring total battery voltage, charge and discharge currents, battery temperatures, and individual cell voltages</li>
+
+      <li>Capability to charge and discharge the battery from the ground test console</li>
+
+      <li>Capability to place a resistor across each individual cell</li>
+    </ul>
+    <br />
+    <br />
+
+    <p>Capability is provided to monitor the state of health of batteries and to discharge, charge, trickle charge and recondition batteries without powering up the spacecraft in order to meet guidelines to minimize degradation of the batteries.</p>
+
+    <p><b>Guideline No. 11</b> - A log book should be maintained on each flight battery including the complete test histories of each cell, of the assembled battery, and of all integration and test and launch site activities.</p>
+
+    <p>Each log book identifies the project and battery and individual cell serial numbers. Chronological (date and time) entries for all test sequences, summary of observations, identification of related computer stored records, malfunctions, names of responsible test personnel, and references to test procedures controlling all tests are recorded.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Super Ni-Cd batteries can be damaged and irreversibly degraded through improper use and handling prior to launch. The guidelines provided above were developed over years of experience in the use, handling, and testing of Ni-Cd batteries. Following these guidelines ensures reliable operation of flight batteries by precluding irreversible degradation from handling and storage, and promoting the proper reconditioning and preparations for launch.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>GSFC-FAST AURORAL Snapshot Explorer (FAST) Super Ni-Cd Battery Handling Plan (FAST-PROC-004) of February 1994</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The impact of not following this practice would very likely be that flight batteries would be irreversibly degraded due to improper handling and preparation for launch. This could result in the failure of batteries to meet flight performance requirements and also possibly early catastrophic failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Flight projects assure reliable operation of Super Ni-Cd flight batteries through the implementation of appropriate handling and storage procedures. Such procedures minimize deterioration and irreversible effects.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on:</p>
+
+    <ul>
+      <li>Solar Anomalous Magnetospheric Particle Explorer (SAMPEX)</li>
+
+      <li>Fast Auroral Snapshot Explorer (FAST)</li>
+
+      <li>Submillimeter Wave Astronomy Satellite (SWAS)</li>
+
+      <li>Total Ozone Mapping Spectrometer (TOMS)</li>
+
+      <li>X-Ray Timing Experiment (XTE)</li>
+
+      <li>Tropical Rainfall Measuring Mission (TRMM)</li>
+    </ul>
+    <br />
+    <br />
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2049: Improving Fault Management for Spaceflight Missions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2049: Improving Fault Management for Spaceflight Missions</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2049 (Database ID: 2049)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-04-20</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Flight Operations,  Independent Verification and Validation,  Information Technology / Systems,  Payloads,  Software,  Standard,  Test & Verification,  Robotics,  Simulators and Training Systems,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Mission control Planning,  Mission operations systems,  Training and simulation systems,  Mission concepts and life-cycle planning,  Review boards,  Early requirements and standards definition,  Reliability,  Review systems and boards,  Engineering design and project processes and standards,  Level II/III requirements definition,  Long term sustainability and maintenance planning,  Mission and systems trade studies,  Mission definition and planning,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2049" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Fault management is the capability of a spacecraft system to detect, isolate, and recover from in-flight events that may hinder nominal mission operations. Autonomous fault management (aka quotfault protection,quot quotFault Detection/Isolation/Recovery,quot quotsafing,quot etc.) is especially critical for deep space and planetary missions where the lightspeed communications delay may prevent timely intervention by ground control. However, increasingly challenging science objectives imposed upon deep space missions are taxing the ability of onboard spacecraft resources and control logic to manage in-flight fault events. Technical reviews of spaceflight missions by NASA and its contractors encounter pervasive fault management architecture, design, and verification/validation (V&amp;V) problems, including:</p> 
+<ul> 
+ <li>Fault management design changes required late in the life-cycle (that often necessitate secondary changes elsewhere in the system),<br> &nbsp;</li> 
+ <li>Insufficient project insight into the required system-level fault management testing, and unexpected test results that require resolution,<br> &nbsp;</li> 
+ <li>Spacecraft operational limitations because restrictions are placed on the use of untested functions (in compliance with the quotfly-as-you-testquot principle).</li> 
+</ul> 
+<p>In addition, complex fault management subsystems are subject to in-flight anomalies like those described in References (1) through (6).<br> <br> Fault management requirements definition, design, and test practices used by NASA, the Department of Defense, and government contractors are not consistent or well defined. The terminology, engineering processes, tools, and training for fault management are not standardized. An industry-wide Spacecraft Fault Management Workshop was held in April 2008 to characterize fault management practices, identify trends, and provide a roadmap for improvements. For example, the workshop affirmed the benefits of ingraining fault management into the system architecture instead of the more common practice of attaching the completed fault management code to the flight software. Reference (7) summarizes the findings and recommendations from the workshop.<br> <br> <u>References</u>:</p> 
+<ol> 
+ <li>quotAutonomous Transfer to Reaction Wheel Control May Lead to Safing Instability,quot NASA Lesson Learned No. 2048, NASA Engineering Network, April 14, 2009. (This lesson was archived and is no longer available)<br> &nbsp;</li> 
+ <li>quotMRO Articulation Keep-Out Zone Anomaly,quot NASA Lesson Learned No. 2044, NASA Engineering Network, April 7, 2009. <a href="https://llis.nasa.gov/lesson/2044">https://llis.nasa.gov/lesson/2044</a><br> &nbsp;</li> 
+ <li>quotMRO Spaceflight Computer Side Swap Anomalies [Export Version],quot NASA Lesson Learned No. 2041, NASA Engineering Network, December 16, 2008. <a href="https://llis.nasa.gov/lesson/2041">https://llis.nasa.gov/lesson/2041</a><br> &nbsp;</li> 
+ <li>quotMars Global Surveyor (MGS) Spacecraft Loss of Contact,quot NASA Lesson Learned No. 1805, NASA Engineering Network, September 4, 2007. <a href="https://llis.nasa.gov/lesson/1805">https://llis.nasa.gov/lesson/1805</a><br> &nbsp;</li> 
+ <li>quotErroneous Onboard Status Reporting Disabled IMAGE's Radio,quot NASA Lesson Learned No. 1799, NASA Engineering Network, July 10, 2007. <a href="https://llis.nasa.gov/lesson/1799">https://llis.nasa.gov/lesson/1799</a><br> &nbsp;</li> 
+ <li>quotAnomalous Flight Conditions May Trigger Common-Mode Failures in Highly Redundant Systems,quot NASA Lesson Learned No. 1778, NASA Engineering Network, March 6, 2007. <a href="https://llis.nasa.gov/lesson/1778">https://llis.nasa.gov/lesson/1778</a><br> &nbsp;</li> 
+ <li>Lorraine M. Fesq, quotWhite Paper Report: Spacecraft Fault Management Workshop Results for the Science Mission Directorate,quot Planetary Sciences Division, NASA/Caltech Jet Propulsion Laboratory, March 2009.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>See quotRecommendation(s)quot</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p><img align="Bottom" alt="The complete 'alt text' for this table exceeds system limits. Please contact David Oberhettinger at davido@nasa.gov for the full alt text." border="0" height="1500" src="https://llis.nasa.gov/llis_lib/images/1022381main_2009-04_FM_Table1_small.jpg" title="The complete 'alt text' for this table exceeds system limits. Please contact David Oberhettinger at davido@nasa.gov for the full alt text." width="941" /><br /> <br /> <b>Table 1.</b> Top-level fault management (FM) lessons learned and recommendations from the Spacecraft Fault Management Workshop (Reference (7))</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.14.2.7 (quotEngineering Practices: Project and System Level Functional Verification and Validation - Verification and Validationquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008.<br /> <br /> In addition, JPL has referenced it supporting Paragraph 4.9 (quotFlight System Design: System Fault Protection Designquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

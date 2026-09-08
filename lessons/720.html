@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0720: Star Image Metrology Part II: Irradiance Measurements</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0720: Star Image Metrology Part II: Irradiance Measurements</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0720 (Database ID: 720)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/720" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GT-TE-2406 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Star image measurements provide the primary means of appraising end-to-end health of an optical imaging system. These tests represent good engineering practice, and are reliable indicators of system performance. Star image tests are thus the final arbiter of quality control. A system passing the star tests discussed here ensures that the optical instrument is performing in a reliable way.</p> 
+<p>Measurements of irradiance distributions provide important quantitative information concerning the fidelity of the star image to theoretical expectations. Such measurements either validate performance, or provide important clues as to the nature of a problem. For example, the problem might be a decentered component or an inappropriate conic constant.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>1. Description of Star Image Test Apparatus</p> 
+<p>The basic equipment needed to perform laboratory star image visual measurements is indicated in Figure 1. The optical system on the left half of the drawing is a Star Simulator. This is a Collimator with a back-illuminated pinhole located in the focal plane. The Collimator can be either reflective or refractive, and its pupil should be larger than the imaging system being tested. The pinhole represents the star, and its diameter should be smaller than the Collimator Airy Disc, (i.e., unresolved). Depending on the application, the pinhole back-illumination can be either from a coherent or incoherent source. An example of the former is a laser; the latter, a point arc lamp.</p> 
+<p>Between the source and the pinhole there is usually some coupling optics to maximize the power through the pinhole, and to fill the aperture of the Collimator with light.</p> 
+<img alt="refer to [D] description" border="0" height="198" src="https://llis.nasa.gov/llis_lib/images/1009161main_0720-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009640main_0720-1.txt">[D]</a> 
+<br> Figure 1: Basic Layout of a Star Image Test Setup 
+<p>Caution: The pinhole acts like a quotpinhole camera.quot If a coiled filament lamp is used, an image of the coil will be formed on the collimator pupil and the output irradiance will be quite nonuniform.</p> 
+<p>A support structure is needed to hold the optical system under test. This mounting fixture should provide modest azimuth and elevation tilt control to allow alignment of the quottest systemquot to the Collimator optical axis. The test support fixture should also allow the quottest systemquot to be accurately rotated through its operational field of view. For refractive quottest systems,quot the rotation axis should ideally pass through the system's rear nodal point. A mechanical support fixture that accomplishes this is called a T-Bar Nodal Slide. (Reference 1.) However, for catadioptric and reflective systems, rotation through the rear nodal point is impractical because this point is usually far removed from the physical embodiment of the quottest system.quot In this Guideline, the rotation axis will be at, or near, the entrance aperture of the quottest system.quot</p> 
+<p>For irradiance measurements the quottest systemquot star image can be probed directly by some methods. Other methods need a magnified star image. In the latter case, this can be accomplished using a high quality microscope objective which should be well-corrected for both axial color and spherical aberration. Its numerical aperture must be sufficient to collect all the light emerging from the star image.</p> 
+<p>In the Reliability Preferred Practices Guideline No. GT-TE-2405, ìStar Image Measurements, Part I: Visual Measurementsî, we relied on making dimensional measurements by eye on key features of the star image both laterally and axially. In this Guideline, irradiance is the key measurement parameter. The dimensional features discussed in Part I are not lost but contained within this broader measurement context.</p> 
+<p>2. Ideal Star Image</p> 
+<p>Please refer to Reliability Preferred Practices Guideline No. GT-TE-2405 (Lesson Learned 0718).</p> 
+<p>3.1 Axial Intensity Method</p> 
+<p>A new technique (Reference 2) has been developed in recent years that makes use of axial intensity scans on star images to extract quantitative information about aberration content. Laboratory embodiments can have a number of forms. One embodiment is illustrated in Figure 2 which makes use of a commercially available quotscanning micrometer eyepiece.quot The star image is magnified with a microscope objective. The magnified image is centered on the entrance face of a fiber optic. The exit face of the fiber is coupled to a detector such as a photomultiplier tube (PMT). The output signal of the detector is connected to the y-axis of an xy-recorder. The x-axis is driven by a signal from a linear transducer attached to the Z-axis motion of the microscope. The experiment generates an intensity plot as a function of axial microscope position.</p> 
+<img alt="refer to [D] description" border="0" height="207" src="https://llis.nasa.gov/llis_lib/images/1009164main_0720-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009643main_0720-2.txt">[D]</a> 
+<br> Figure 2: Experimental Configuration for Measuring Spherical Aberration via Axial Intensity Scans 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p>We will use spherical aberration as an example to illustrate the utility of the axial scan profile. It is well known that the axial intensity of a lens free of spherical aberration has a symmetric axial intensity profile about paraxial (Reference 3) focus as is shown in Figure 3. However, it is not well known that the axial intensity pattern remains symmetric in the presence of spherical aberration.(Reference 3). The pattern is not the same shape as that for the zero aberration case, and the center of symmetry is no longer in the paraxial focal plane. However, the axial separation, d, between the plane of symmetry and the paraxial focal plane is directly relatable to the exit pupil spherical aberration coefficient W<small><sub>040</sub></small> (in micrometers) present through the equation:</p> <img alt="refer to [D] description" border="0" height="45" src="https://llis.nasa.gov/llis_lib/images/1009172main_0720-form3.jpg" title="refer to [D] description" width="220"><a href="https://llis.nasa.gov/llis_lib/txt/1009651main_0720-form3.txt">[D]</a>(3) </td> 
+   <td> <img alt="refer to [D] description" border="0" height="344" src="https://llis.nasa.gov/llis_lib/images/1009165main_0720-3.jpg" title="refer to [D] description" width="347"><a href="https://llis.nasa.gov/llis_lib/txt/1009644main_0720-3.txt">[D]</a><br> Figure 3: Axial Intensity of Diffraction Limited System </td> 
+  </tr> 
+ </tbody> 
+</table> &nbsp; 
+<p>Figure 4 (a) shows an experimental axial intensity plot for a system with significant spherical aberration. The F-number of the system is F/10.3. The operating wavelength is 0.6328 micrometers. The separation between the plane of symmetry and the paraxial focal plane is 3.07 mm. (Note, paraxial focus is established by a separate axial intensity scan with a small aperture in the entrance pupil). Using Eq.4, we find that the amount of spherical aberration is 5.7 waves! Figure 4 (b) shows a theoretical plot with the same amount of spherical aberration. The two plots are virtually identical. A recent paper (Reference 4) also shows how axial intensity scans of star images with mixed Seidel aberrations can be used to identify and quantify those aberrations.</p> 
+<img alt="refer to [D] description" border="0" height="245" src="https://llis.nasa.gov/llis_lib/images/1009166main_0720-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009645main_0720-4.txt">[D]</a> 
+<br> Figure 4: Axial Intensity where W 
+<small><sub>040</sub></small> = 5.7 Waves (a) Experimental; (b) Theoretical. Courtesy Dr. Qian Gong 
+<p>3.2 Lateral Irradiance Methods</p> 
+<p>3.2.1 CCD Arrays</p> 
+<p>The magnified star image formed by the microscope can be focused on the detector chip of a CCD camera. A video frame-grabber tied into a PC can be used to acquire a frame of data for analysis. Hardcopy can be acquired via a video printer. Software packages are commercially available that will allow analysis of the data frame.</p> 
+<p>Among the useful features are: a) power profiles across the star image; b) power centroid location; c) calculation of encircled energy; d) 2-D contour and 3-D power maps. The profiles can be compared to theoretical predictions like the one shown later in Figure 8(b). Not only is the size of the Airy Disc obtained, but also the relative power between the central peak and the rings. (Note: Small aberrations rob power from the core and shunt most of it into the first bright ring). In addition, an encircled energy calculation should show 84% of the energy within the core (for a circular unobscured entrance pupil).</p> 
+<p>Potential problems with some CCD arrays are: dynamic range, linearity, and pixel uniformity. For example, the ratio of the peak power in the Airy Disc to the peak power in the first bright ring is about 68. Some CCDs do not have enough dynamic range. To see the first few rings means the central core is saturated. An unsaturated core means that the second bright ring, and sometimes the first, are buried in noise. Nonlinearity and pixel nonuniformity imply that profile shapes would be wrong.</p> 
+<p>3.2.2 Fiber Optic Probe</p> 
+<p>The fiber probe scanner used in Sec.3.1 to obtain axial profiles can also be used to obtain lateral profiles. The fiber optic probe assembly is mounted on a motion controlled boom. This boom can be translated horizontally either manually or under computer control. In this way the probe can be scanned through the magnified star image. A transducer provides a voltage signal proportional to the linear position of the boom.</p> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td valign="top"> <p>The entire scanning micrometer eyepiece can be rotated and the axis of rotation is the optical axis of the microscope. This allows the observer, who views both the star image and the probe location through an eyepiece attached to the device, to select the orientation of the scan relative to the star image. The boom signal can be used to drive the x-axis of an xy-recorder while the signal from the PMT/radiometer can drive the y-axis. PMTs have significantly more dynamic range than CCDs, and excellent linearity. This will allow more accurate profiles through the star image. (A commercially available eyepiece of this type can be obtained from EG&amp;G/Gamma Scientific. The unit is shown in Figure 5.)</p> </td> 
+   <td valign="top"> <img alt="refer to [D] description" border="0" height="290" src="https://llis.nasa.gov/llis_lib/images/1009167main_0720-5.jpg" title="refer to [D] description" width="378"><a href="https://llis.nasa.gov/llis_lib/txt/1009646main_0720-5.txt">[D]</a><br> Figure 5: Commercial Scanning Probe Eyepiece </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>Figure 6 shows a combination of axial and radial scans for 5 waves of spherical aberration (Reference 5). The radial scans are made at various image planes of interest as defined by either geometric (e.g., minimum blur) or diffractive (e.g., Strehl) criteria.</p> 
+<img alt="refer to [D] description" border="0" height="163" src="https://llis.nasa.gov/llis_lib/images/1009168main_0720-6.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009647main_0720-6.txt">[D]</a> 
+<br> Figure 6: Axial and Radial Irradiance Plots Using Scanning Fiber Optic Probe Eyepiece 
+<p>4. Modulation Transfer Function Measurements</p> 
+<p>4.1 Connection Between MTF and Star Image</p> 
+<p>In imaging theory, an object is considered to be made up of an array of sinusoidal patterns differing in spatial frequency, amplitude, and lateral positioning. It is akin to a Fourier series decomposition of a periodic waveform of arbitrary shape, e.g., a square wave. If an imaging system is presented with a pure linear sinusoidal amplitude object having unit modulation, then the image of this pattern (assume unit magnification for now) will also be sinusoidal of the same spatial frequency but with reduced modulation, and a possible decentering or shifting of the pattern as illustrated in Figure 7.</p> 
+<img alt="refer to [D] description" border="0" height="192" src="https://llis.nasa.gov/llis_lib/images/1009169main_0720-7.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009648main_0720-7.txt">[D]</a> 
+<br> Figure 7: Physical Basis for MTF 
+<p>In Fourier transform theory (Reference 6 and 7), it can be shown that a point object contains all sinusoidal spatial frequencies at unit modulation at all spatial orientations and that the star image, the point spread function (PSF), is related to the MTF by a Fourier Transform, FT{ }:</p> 
+<img alt="refer to [D] description" border="0" height="45" src="https://llis.nasa.gov/llis_lib/images/1009173main_0720-form4.jpg" title="refer to [D] description" width="290"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009652main_0720-form4.txt">[D]</a>(4) 
+<table> 
+ <tbody> 
+  <tr> 
+   <td> <p>If we scan the point spread function with a slit (as illustrated in Figure 8) we generate a line spread function (LSF).</p> </td> 
+   <td> <img alt="refer to [D] description" border="0" height="163" src="https://llis.nasa.gov/llis_lib/images/1009170main_0720-8.jpg" title="refer to [D] description" width="350"><a href="https://llis.nasa.gov/llis_lib/txt/1009649main_0720-8.txt">[D]</a><br> Figure 8: Scanning the PSF with a Slit Sampling Aperature </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>Mathematically this means we have integrated out the y dependency:</p> 
+<img alt="refer to [D] description" border="0" height="55" src="https://llis.nasa.gov/llis_lib/images/1009174main_0720-form5.jpg" title="refer to [D] description" width="244"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009653main_0720-form5.txt">[D]</a>(5) 
+<p>It can be shown that the Fourier transform of the line spread function yields an MTF profile through the origin:</p> 
+<img alt="refer to [D] description" border="0" height="45" src="https://llis.nasa.gov/llis_lib/images/1009175main_0720-form6.jpg" title="refer to [D] description" width="265"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009654main_0720-form6.txt">[D]</a>(6) 
+<p>4.2 Scanning Slit</p> 
+<p>One method of obtaining the star image line spread function is now described. The standard microscope eyepiece is replaced with a scanning micrometer eyepiece similar to that described in Sec. 3.1 and 3.2.2. However, in the plane of the magnified star image, the scanning probe is a slit. Note that the slit's width should be significantly smaller than the PSF diameter, and its length should be significantly longer. Light passing through the slit is coupled into an optical fiber and then into a fiber optic cable. The fiber optic cable is brought out through the side of the scanning micrometer eyepiece and coupled to the PMT/radiometer. The latter drives the y-axis of an xy-recorder while the x-axis position is controlled by the lateral position of the slit.</p> 
+<p>For a rotationally symmetric PSF, slit scans along any diameter will generate identical MTFs, i.e., the MTF is also rotationally symmetric. On the other hand, MTFs for asymmetric PSFs will be direction dependent. PSF slit scans will have to be made along several different directions to build up a valid picture of the MTF.</p> 
+<p>4.3 Knife Edge Scan</p> 
+<p>Instead of scanning the star image with a slit sampling aperture, suppose we scan across it with an opaque straight edge (knife edge). We collect the power (not blocked by the knife edge) and measure it with a radiometer. The signal output of the radiometer can be used to drive the y-axis of an xy-recorder. A linear transducer connected to the knife edge translation drives the x-axis. The resulting plot is called a knife edge distribution (KED). The steepness of the slope is a direct indication of image compactness. The LSF is the derivative of the KED in the scan direction.</p> 
+<img alt="refer to [D] description" border="0" height="45" src="https://llis.nasa.gov/llis_lib/images/1009176main_0720-form7.jpg" title="refer to [D] description" width="240"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009655main_0720-form7.txt">[D]</a>(7) 
+<p>This is illustrated in Figure 9. This also implies that the knife edge distribution and modulation transfer function are related via the line spread function as per Sec. 4.1.</p> 
+<img alt="refer to [D] description" border="0" height="126" src="https://llis.nasa.gov/llis_lib/images/1009171main_0720-9.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009650main_0720-9.txt">[D]</a> 
+<br> Figure 9: The Line Spread Function is the Derivative of the Knife Edge Distribution 
+<p>5. Measuring Wavefronts at the Star Image</p> 
+<p>5.1 Scanning Knife Edge</p> 
+<p>The scanning knife edge technique is a clever enhancement of the classical Foucault knife edge test (References 8 and 9). The optical set-up is illustrated in Figure 10. A pair of orthogonally oriented knife edges is scanned across the image point (so that slope data can be acquired along two orthogonal directions). A lens behind the knife edge pair is used to image the pupil onto a CCD.</p> 
+<img alt="refer to [D] description" border="0" height="247" src="https://llis.nasa.gov/llis_lib/images/1009162main_0720-10.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009641main_0720-10.txt">[D]</a> 
+<br> Figure 10: Wavefront Sensing via Double Knife Edge Scan 
+<p>The intensity is monitored at each pixel of the CCD. When a knife edge interacts with a quotrayquot from the conjugate pupil position, the intensity in the pixel changes. Data is accepted from that location when the intensity reaches 50% of its original value. This is also tied into the position of the knife edge at that moment (to yield the transverse ray aberration measurement). After both knife edges have passed through the image point, the data ensemble is passed to a computer program for analysis. Local slope data is fitted with a global Zernike polynomial (References 1 and 10) which can be related (via a large matrix inversion) to a Zernike description of the pupil optical path difference (OPD).</p> 
+<p>5.2 Point Diffraction Interferometer</p> 
+<p>The point diffraction interferometer (PDI) (Reference 1) is a simple self-referencing interferometer. (It is a commercially available instrument built by Ealing Corp.) A physical description of the PDI is shown in Figure 11(a). It is a monolithic device consisting of two concentric circles (thin-film coated onto a thin transparent substrate). The fat annular region is semitransparent and acts like a neutral density filter. The small inner circle (pinhole) is a diffraction aperture and plays a spatial filtering role. PDI operation is illustrated in Figure 11(b). The aberrated wavefront is focused onto the PDI disc. Most of the beam passes through unhindered except for a reduction in intensity. The tiny part of the beam interacting with the pinhole is diffracted into a clean spherical wavefront, i.e., it has become the reference wavefront. Immediately on the far side of the PDI, interference takes place between the aberrated main beam and the reference beam. The operational F-number range of the commercial PDI is between F/2-F/11. However, at the extremum fringe contrast is down considerably.</p> 
+<img alt="refer to [D] description" border="0" height="195" src="https://llis.nasa.gov/llis_lib/images/1009163main_0720-11.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009642main_0720-11.txt">[D]</a> 
+<br> Figure 11: (a) Construction of PDI; (b) Operational Principle 
+<p><u>Technical Rationale:</u></p> 
+<p>All optical imaging systems used on spaceborne or space-related instruments should undergo an end-to-end systems check to validate performance. Star image testing is the primary means of conducting this validation process. It provides data pertinent to the pass/fail criteria associated with the optical imaging system.</p> 
+<p>References:</p> 
+<ol> 
+ <li>1. J. Geary, Introduction to Optical Testing, Tutorial Text TT-15, SPIE Press,(1993).</li> 
+ <li>J. Geary and P. Peterson, quotSpherical Aberration: a Possible New Measurement Approach,quot Opt.Eng. 25, 2, (1986).</li> 
+ <li>V. Mahajan, Aberration Theory Made Simple, Tutorial Text TT-6, SPIE Press, (1991).</li> 
+ <li>Q. Gong and S. Hsu, quotAberration measurement using axial intensity,quot Opt.Eng. 33, 4, pp 1176-1186, (1994).</li> 
+ <li>P. Peterson and J. Geary, quotIntermediate spherical aberration,quot Opt.Eng. 25, 11, pp 1232-1240, (1986).</li> 
+ <li>J. Gaskill, Linear Systems, Fourier Transforms and Optics, John Wiley, (1978).</li> 
+ <li>J.Goodman, Introduction to Fourier Optics McGraw-Hill (1968).</li> 
+ <li>J. Geary, M. Yoo, P. Davila, A. Wirth, A. Jankevics, M. Ruda, R. Zielinski, and L. Petrilli, quotComparison of Wavefront Sensors,quot SPIE Proc. Vol. 1776, pp 58-72, (1992).</li> 
+ <li>D. Vanderberg, W. Humbei, and A. Wertheimer,quotQuantitative Evaluation of Optical Surfaces by Means of an Improved Foucault Test Approach,quot Opt.Eng. 32, 8, pp 1951-1954, (1993).</li> 
+ <li>J. Wyant and K. Creath, Applied Optics and Optical Engineering, Vol. 11, Chap. 1, ed. R. Shannon and J. Wyant, Academic Press (1992).</li> 
+ <li>Reliability Preferred Practices, Guideline No. GT-TE-2405, Star Image Metrology Part I: Visual Measurements</li> 
+ <li>Reliability Preferred Practices, Guideline No. GT-TE-2404, Optical Testing Guideline: Fizeau Interferometry.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If end-to-end systems measurements are not made on spaceborne or space-related optical imaging systems, then the consequences could be the ultimate failure of the mission in-whole or in-part. The Hubble Telescope should be a constant reminder of this.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The fundamental behavior of a spaceborne (or space-related) optical imaging system is contained in its response to an impulse, i.e., a point source. The point source image is referred to by a variety of names: star image, point spread function, far field pattern, impulse response, Fraunhofer diffraction pattern. Here we will use quotstar image.quot This guideline provides information on instruments and procedures used in measuring star image irradiance distributions.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

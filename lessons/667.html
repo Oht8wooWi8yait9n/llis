@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0667: Common Review Methods for Engineering Products</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0667: Common Review Methods for Engineering Products</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0667 (Database ID: 667)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/667" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1215.4; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Standards established for common review methods are presently supporting reliability assurance by emphasizing early detection and correction of deficiencies through the increased use of working level, peer reviews (detailed technical reviews) in preparation for major design reviews. The standards also assure that reviews are scaled in accordance with criticality, complexity, and risk, and that the review process is optimized to produce results of value to the mission.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The definition of common review methods essential to successful reviews reflects a need for effective planning and management of all technical reviews. Figure 1 provides an overview of the review process for a project responsible for an engineering product. The oval-shaped processes in Figure 1 are expanded in Figures 2 and 3.</p>
+
+    <p><b>Review Planning:</b></p>
+
+    <p>Review planning helps to ensure that the sponsoring organization is well prepared and that the anticipated results justify the significant resources to be expended in the review. The project (or task) manager prepares a <i>review plan</i> identifying the reviews to be held at the project, system and subsystem levels; their relationships to each other; when the reviews are to be held; and their major objectives. A carefully prepared, detailed statement of the objectives of the review and the success criteria for the product being reviewed provides the essential focus for the review process. Although each review is a milestone visible to high-level management, a review should be rescheduled if the work is not sufficiently mature or the prerequisites are not met.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009036main_0667-1.jpg"  HEIGHT="279"  BORDER="0" /><A HREF="/llis_lib/txt/1009522main_0667-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>The project manager scales the structure and formality of the review to the significance, complexity, and risk of the product. For smaller projects, reviews may be combined or eliminated to achieve the benefits of review at minimum expense. Factors considered in the review plan include:</p>
+
+    <ul>
+      <li><i>Total project duration.</i> The number and timing of reviews should conform to the project schedule, but can be modified to match changes in project duration. Reviews should be considered whenever the project enters a new phase (viz, preliminary design, detail design, system test) or following a major change in requirements or resources.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li><i>Level of inheritance.</i> Projects that use inherited designs, hardware, or software should subject the items to inheritance reviews. This review may sometimes be substituted for, or included within, a preliminary design review (PDR) or critical design review (CDR).</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li><i>Sponsor-imposed reviews.</i> Specific reviews required by the sponsor should be incorporated into the internal review plan and not duplicated. External reviews, such as independent readiness reviews (IRRs) and independent annual reviews (IARs), should be identified in the review plan and consolidated with equivalent internal reviews.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li><i>Technical Complexity.</i> Complex tasks involving critical technology may require multiple subsystem reviews as well as system-level reviews, and high risk components may require a focus on risk assessment and mitigation.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li><i>Management Complexity.</i> Activities with complex interfaces external to the project or task, such as contractor oversight or inter-organizational agreements, may require additional (or more rigorous and structured) reviews. Fully contracted tasks should defer to the contractor's in-house review practices to the maximum extent possible.</li>
+    </ul>
+
+    <p>Experience has demonstrated that perfunctory preparation is a precursor to poor performance.</p>
+
+    <p>The selection and commitment of the <i>review board</i> is crucial to the success of the review. The board membership and review scope are defined in a <i>review board charter</i>. Board members are selected for their ability to objectively evaluate the products and processes to be reviewed. The scope should include all relevant technical concerns and related cost considerations, but exclude management issues such as implementation plans, schedules, and work breakdown structures.</p>
+
+    <p>The essential focus for the review process is provided by a carefully prepared, detailed statement of the review objectives and success criteria for the product under review. Review objectives are stated in terms of specific product features-- for example, "does the design satisfy the requirement for the 20-Gbit/s imaging data stream to have a 1.5-ns response time?" Success criteria define measures of product readiness required to proceed to the next development step; if these criteria are not met, the review must be repeated. Essential prerequisites to the review-- timely distribution of review material to participants and completion of analyses and tests-- are also defined in advance. Figure 2 illustrates the review preparation process.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009037main_0667-2.jpg"  HEIGHT="248"  BORDER="0" /><A HREF="/llis_lib/txt/1009523main_0667-2.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>As an aid to review planning, Table 1 provides a standard review checklist, with items listed in the order they are performed.</p>
+
+    <center>
+      <table border="1" width="90%">
+        <tr>
+          <th bgcolor="#bbbbbb">REVIEW ACTIVITY</th>
+
+          <th bgcolor="#bbbbbb">LEAD PERSON</th>
+        </tr>
+
+        <tr>
+          <td>Generate project review plan.</td>
+
+          <td>Project Manager</td>
+        </tr>
+
+        <tr>
+          <td>Establish and document charter.</td>
+
+          <td>Convening authority</td>
+        </tr>
+
+        <tr>
+          <td>Establish and document scope, objectives, success criteria, and prerequisites.</td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Select review board.</td>
+
+          <td>Convening authority,<br />
+          responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Announce schedule and agenda.</td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>
+            Prepare for review:
+
+            <ul>
+              <li>Schedule conference room</li>
+
+              <li>Arrange for audiovisual equipment and support, refreshments</li>
+
+              <li>Identify presentation team</li>
+
+              <li>Develop presentation guidelines</li>
+
+              <li>Hold presenters' meeting</li>
+
+              <li>Assemble material to be reviewed, and distribute material to bard</li>
+
+              <li>Generate presentation and backup material</li>
+
+              <li>Dry run or story board presentation</li>
+
+              <li>Update, produce, and print presentation material, and distribute it to the board</li>
+
+              <li>Prepare slides and transparencies, and distribute them to the presenters.</li>
+            </ul>
+          </td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Study material prior to review.</td>
+
+          <td>Board members</td>
+        </tr>
+
+        <tr>
+          <td>Conduct review.</td>
+
+          <td>Board chair</td>
+        </tr>
+
+        <tr>
+          <td>
+            Conduct post-review meeting:
+
+            <ul>
+              <li>Identify key findings and recommendations</li>
+
+              <li>Develop board consensus</li>
+
+              <li>Draft board report.</li>
+            </ul>
+          </td>
+
+          <td>Board chair</td>
+        </tr>
+
+        <tr>
+          <td>Consolidate and filter recommendations for action (RFAs)</td>
+
+          <td>Board chair,<br />
+          responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>
+            Accept RFAs as action items, advisories, or rejected items
+
+            <ul>
+              <li>Identify critical action items.</li>
+            </ul>
+          </td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Complete and issue final board report.</td>
+
+          <td>Board chair</td>
+        </tr>
+
+        <tr>
+          <td>Submit metrics to the Office of Engineering and Mission Assurance.</td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Prepare and issue RFA disposition plan.</td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Approve disposition plan.</td>
+
+          <td>Convening authority</td>
+        </tr>
+
+        <tr>
+          <td>Approve action item closures.</td>
+
+          <td>Responsible individual</td>
+        </tr>
+
+        <tr>
+          <td>Review action item closures; provide feedback to responsible individual and convening authority.</td>
+
+          <td>Board chair, selected<br />
+          board members</td>
+        </tr>
+      </table>
+      <br />
+      <b>Table 1. Standard Review Checklist</b>
+    </center>
+
+    <p><b>Review Procedures:</b></p>
+
+    <p>Reviews begin with the <i>board chair's</i> discussion of review objectives and instructions on desired audience participation, including who may generate a <i>recommendation for action</i> (RFA), and guidelines for keeping the review on schedule. The chair remains responsible for keeping the review within the scope, on the agenda, and on schedule. The goal of each presentation is to identify issues in the review to be solved outside of the review. Questions directed by the board members to the presenter should be phrased in an objective, neutral, and non-inquisitory manner addressing the product under review rather than the merits of the presenter. Once an issue has been sufficiently clarified, the chair summarizes the issue and assigns someone responsibility for writing an RFA. Presentations conclude with a summary of current work status, open issues and concerns, and future challenges.</p>
+
+    <p>Effective resolution of technical issues by the review board requires prior analysis of design performance, including reliability, safety, security, and other product requirements. As a precursor to the design review, <i>detailed technical reviews</i> (DTRs) are recommended for important products to facilitate early detection and correction of design deficiencies. DTRs are informal, working-level, peer reviews intended to assess interface compatibility and to prevent propagation of deficiencies to later products. Like the formal design review to follow, organization of a DTR follows the steps of planning, scoping, team selection, materials distribution, conducting the meeting, and documentation of results. The primary differences are the greater technical depth provided by the DTR, the corresponding higher specialization of the small (commonly 2 to 3-person) review team, and the greater simplicity of the supporting documentation and reports.</p>
+
+    <p><b>Review Follow-Up:</b></p>
+
+    <p>A post-review board meeting is held to achieve consensus on key issues, findings, and recommendations. The board chair then consolidates all RFAs into a set of action items, which are filtered and prioritized to form the basis of the board's recommendations. A <i>review board report</i> is prepared listing the key findings and recommendations, any dissenting views, summary recommendations for action, and any advisories, actions items, and critical actions identified by the assigned responsible individual. The recommendations of the review board are advisory only, even though some projects may use the review results as the basis of their decision to proceed to the next step in product development. Figure 3 portrays the flow of review follow-up activities.</p>
+
+    <p>Responsibility for tracking, resolution, and close out of action items rests with the responsible individual. After categorization of the board's recommendations into accepted action items, advisories, or rejected items, and an assessment of their criticality, this person submits a <i>board recommendation disposition plan</i> to the board chair for comment and to the convening authority for approval. Following each review, the responsible individual and the board chair provide metrics to the JPL Office of Engineering and Mission Assurance. These data on the cost, results, and identified benefits of the review are used to evaluate the annual trends of the JPL-wide review process as one aid to continuous improvement.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009038main_0667-3.jpg"  HEIGHT="338"  BORDER="0" /><A HREF="/llis_lib/txt/1009524main_0667-3.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>The review process concludes with the action item assignees completing their assigned actions and documenting the recommendations for action item closure. The responsible individual approves the written closures and distributes them to the convening authority and the review board members.</p>
+
+    <p><u>Rationale:</u></p>
+
+    <p>Experience has shown that the process of preparing for a review is highly valuable to a project-- even if the review is never held. Reviews provide the flight project manager with a knowledgeable and independent evaluation of products or processes, permitting a timely assessment of status and implementation of corrective action. However, reviews require planning, preparation, and follow-up. Definition of clear standards which apply to all reviews aids in training and guiding participants in the activities necessary to assure reliable engineering design.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Preliminary Design Review, Reliability Preferred Practice No. PD-ED-1215.1</li>
+
+      <li>Hardware Review/Certification Requirement, Reliability Preferred Practice No. PD-ED-1215.2</li>
+
+      <li>Critical Design Review for Unmanned Missions, Reliability Preferred Practice No. PD-ED-1215.3</li>
+
+      <li>Subsystem Inheritance Review, Reliability Preferred Practice No. PD-ED-1262</li>
+    </ol>
+
+    <p>References:</p>
+
+    <ol>
+      <li>JPL Standard for Reviews, Jet Propulsion Laboratory document D-10401 (Initial Issue), May 5, 1995.</li>
+
+      <li>Reviews, Laboratory Policy 4-16.</li>
+
+      <li>Reviews, JPL Standard Practice Instruction SPI 4-16-1.</li>
+
+      <li>Special Reviews, Laboratory Policy 4-18.</li>
+
+      <li>Accident, Incident and Mission Failure Reviews, JPL Standard Practice Instruction SPI 4-18-1.</li>
+
+      <li>Management of Major System Programs and Projects, NASA Management Instruction NMI 7120.4A,B (and NHB 7120.5).</li>
+
+      <li>Classification of NASA Payloads, NASA Management Instruction NMI 8010.1A, Appendix C.</li>
+
+      <li>Technical Reviews, Department of Defense, Military Standard MIL-STD-1521B.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Non-Practice:<br />
+    <br />
+    Lacking clear standards for project and task review, and failing to conduct detailed technical reviews (DTRs) beforehand, design reviews have a tendency to emphasize formality and "packaging" at the expense of substantive assessment of content and depth of analysis.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Conduct technical reviews to validate engineering designs using a common, consistent approach which has been proven to lead to reliable and quality products. A technical review is an evaluation of the engineering status of products and processes by an independent group of knowledgeable people. Although major technical reviews for a project differ in their content and timing, there are practices common to most reviews which may be defined to assure review success. These practices provide a common framework for planning, conducting, documenting, and evaluating the review process.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Galileo, Magellan, and other flight projects. The comprehensive practice is being applied to Cassini, New Millennium, Mars Global Surveyor, Seawinds, and Mars 98.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

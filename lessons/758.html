@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0758: Computational Fluid Dynamics (CFD) In Launch Vehicle Applications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0758: Computational Fluid Dynamics (CFD) In Launch Vehicle Applications</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0758 (Database ID: 758)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/758" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PD-AP-1311, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p>The use of computer-based computational fluid dynamics methods will accelerate the design process, reduce preliminary development testing, and help create reliable, high-performance designs of space launch vehicles and their components. In addition to design verification and optimization, CFD can be used to simulate anomalies that occur in actual space vehicle tests or flights to more fully understand the anomalies and how to correct them. The result is a more reliable and trouble-free space vehicle and propulsion system.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Accurate definition of flow-induced pressure and temperature loads can be achieved long before actual hardware testing through the use of high-speed, computer-based computational fluid dynamics analytical techniques. Designs can be constructed in electronic three-dimensional computer-aided design format, and the flows of fluids and gases can be accurately simulated using CFD techniques. Computer-based simulations of this type can be accomplished so rapidly that designs can be changed in real time even before hardware is fabricated. CFD techniques are being successfully used as diagnostic tools to provide insight into problems with existing rocket engine components and to develop optimum designs of liquid rocket engine pump components such as impellers, diffuser vanes, and shrouds; turbine components such as turbine blades, turbine staging, volutes, and turbine wheels; launch vehicle base thermal protection configurations; transpiration and conductive cooling methods for rocket
+    nozzles; flow paths within solid rocket motors at various stages of combustion; and launch and reentry pressure and thermal loads on vehicle configurations.</p>
+
+    <p><b>The Team Approach to CFD Code and Data Base Development</b></p>
+
+    <p>MSFC has found that a very effective way of developing and selecting CFD codes (the computer-based equations that control a CFD analysis) and CFD Data Bases (the empirically derived factors that fit the CFD codes to various specific applications) is to form multi-organizational teams in specialized areas related to propulsion and to other space flight applications. These teams, which are part of a CFD Consortium for Applications in Propulsion Technology (CAPT) are comprised of individuals from within MSFC, other NASA centers, prime and subcontractors, and the academic community, communicate frequently and meet periodically to exchange and disseminate information about the rapidly growing field of computational fluid dynamics as related to rocket propulsion and other related space flight applications. The teams take into account the best available theory on CFD, the most advanced computer computational and graphic capabilities, and the latest test techniques and results of
+    component, subsystem, subscale and full scale rocket engine tests. This information is used to continuously develop and improve the computer-based representation of the temperatures, pressures, and flow patterns (velocities, accelerations, and directions) in space vehicles and their propulsion systems.</p>
+
+    <p><b>Implementation of CFD Into the Design of Rocket Engine Pumps</b></p>
+
+    <p>The implementation of CFD into the design process for rocket engine pumps has been aided by the activities of a Pump Stage Technology Team (PSTT) which is a part of the NASA/MSFC CFD Consortium for Applications in Propulsion Technology. The team's goals have included the assessment of the accuracy and efficiency of several CFD methodologies and application of the appropriate methodologies to understand and improve the flow inside fuel and oxidizer pumps for liquid propellant rocket engines. As an example of the type of CFD work that has been done under the cognizance of this team, subtle changes in the axial impeller length, blade count, and blade configurations of pump impellers resulted in efficiencies of up to 98 percent. This resulted in head coefficients (which are measures of pump power) increasing from 0.53 to 0.66 in experimental impeller designs.</p>
+
+    <p><b>CFD Analysis of Base Flowfields in Clustered Nozzle Configurations</b></p>
+
+    <p>As a launch vehicle proceeds up through the atmosphere into space from its near sea-level launch position, the rocket exhaust plumes expand to a point where a plume reverse flow is encountered. Where multiple nozzles are used, the closed impingement of the exhaust plumes can cause a reverse jet. The reverse jet impinges on interior base surface areas, components, and base shields causing heating, contamination, and/or possible combustion in the launch vehicle base areas. Computational fluid dynamics has proven to be a useful tool in predicting the recirculating exhaust base flow patterns encountered in various launch vehicle configurations, and these patterns can be used as an input to the design and development of reliable vehicle configurations and thermal or pressure protection schemes. Figure 1 is a typical output from a CFD analysis which shows velocity vectors indicating the flow patterns that are generated at high altitude (approximately 92,000 feet above sea level) when
+    a launch vehicle has four exhaust nozzles. With the knowledge of the pressure, temperature, and flow profiles in the base region provided by a CFD analysis, components and insulation systems can be designed to withstand environments in the base region or insulated to protect them against the potentially hostile environment that occurs due to exhaust recirculation at high altitude.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009208main_0758-1.jpg"  HEIGHT="279"  BORDER="0" /><A HREF="/llis_lib/txt/1009688main_0758-1.txt"  >[D]</A>
+    </center>
+
+    <p><b>Turbine Improvements Using CFD</b></p>
+
+    <p>Computational fluid dynamics techniques are being used in the advancement of turbine aerodynamic design techniques as well as the development of a understanding and characterization of the unsteady aerodynamic environments in existing rocket engine turbines. The CAPT Turbine Technology Team is addressing several areas of CFD application to existing and future liquid rocket engines. The techniques reduce developmental risk, decrease the amount of intermediate testing, improve performance and durability, and reduce cost. In one turbine improvement effort, gas turning angle in the turbine blades was increased from the traditional design limit of approximately 140 degrees to 160 degrees. The CFD analysis showed that this change, coupled with other minor improvements, would increase turbine efficiency by almost 10 percent and reduce the required number of turbine blades by approximately one half. Maximum blade mach number was decreased dramatically from the 1.32 of the original
+    design to 0.87 for the new design. The new configuration employed a single stage turbine rather than an originally planned two stage configuration.</p>
+
+    <p>CFD has also proven to be a useful tool in the evaluation of secondary losses and turbine blade tip loss control mechanisms such as endwall fences, blade fences, tip grooves, tip cavities, and mini-shrouds. This technique is also useful in the simulation and design of inlet and outlet turbine volutes. Cold flow testing of reduced scale and full scale turbines has verified many of the CFD simulations.</p>
+
+    <p><b>Flow Fields, Flow Separation, Film Coolants, and Heat Transfer in Rocket Engine Combustors</b></p>
+
+    <p>Computational fluid dynamics analyses have been successfully applied in areas related to the prediction and simulation of combustion flow behavior and heat transfer to the internal walls of rocket engine injectors, combustion chambers, and nozzles. These analyses have been used to optimize nozzle entrance geometries, evaluate new step nozzle exit configurations that adapt to altitude changes, determine pressure and temperature profiles in rocket engine chambers and nozzles, and to study the effects of coolant flows in liquid rocket engine chambers on internal wall temperatures. These analytical procedures have helped to evaluate anomalies discovered in actual engine firings and to design reliable combustion chamber, nozzle, and coolant arrangements that result in high thrust coefficients under various atmospheric and space conditions. The CAPT Combustion Devices Technology Team has been instrumental in many of these investigations. Computational fluid dynamics simulations have
+    also been useful in determining pressure, heating, and insulation requirements for launch vehicles during liftoff, ascent, and reentry into the atmosphere.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>NASA/MSFC has sponsored the CFD Consortium for Applications in Propulsion Technology since the early 1980s. Symposia have been held for the past twelve years in which participants from MSFC, other centers, prime contractors, laboratories, other agencies, and the academic community have exchanged information in the development and application of CFD analytical techniques related to rocket engine propulsion systems. MSFC has also been involved in the other aerodynamic and fluid dynamics applications of CFD. Computational fluid dynamics is a discipline that has come of age in the concurrent engineering process that results in the design, development, and flight of highly reliable and cost effective launch vehicle systems.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>"Proceedings of Workshop for Computational Fluid Dynamic (CFD) Applications in Rocket Propulsion," April 19-21, 1994, Marshall Space Flight Center, NASA.</li>
+
+      <li>"Overview of the NASA/MSFC CFD Consortium for Applications in Propulsion Technology," McConnaughey, P.K. and L.A. Schutzenhofer, AIAA, 92-3219, AIAA/SAE/ASME/ASEE 28th Joint Propulsion Conference, July 6-8, 1992, Nashville, TN.</li>
+
+      <li>"Computational Fluid Dynamics Analysis for the Reduction of Impeller Discharge Flow Distortion," R. Garcia, et al, 32nd AIAA Aerospace Sciences Meeting, January 10-13, 1994, Reno, NV.</li>
+
+      <li>"Numerical Analysis of Base Flowfield at High Altitude for a Four-Engine Clustered Nozzle Configuration," T.S. Wang, 29th AIAA Joint Propulsion Conference, June 28-30, 1993, Monterey, CA.</li>
+
+      <li>"Analytical Investigation of the Unsteady Aerodynamic Environments in Space Shuttle Main Engine (SSME) Turbines," Lisa W. Griffin, et al, May 24-27, 1993, ASME, New York, NY.</li>
+
+      <li>"Advancement of Turbine Aerodynamic Design Techniques," Lisa W. Griffin, et al, May 24-27, 1993, ASME, New York, NY.</li>
+
+      <li>"Advanced Technology Low Cost Engine (ATLCE) 50K Testbed Combustion Chamber Film Coolant Parametrics," Joe Ruf, November 5, 1993, MSFC, AL.</li>
+
+      <li>"Unified Navier-Stokes Flowfield and Performance Analysis of Liquid Rocket Engines," T.S. Wang, et al, Journal of Propulsion and Power, September 1993, AIAA, New York, NY.</li>
+
+      <li>"Numerical Analysis of the Hot-Gas-Side and Coolant-Side Heat Transfer for Liquid Rocket Engine Combustors," T.S. Wang, et al, 28th AIAA Joint Propulsion Conference, July 6-8, 1992, Nashville, TN.</li>
+
+      <li>"Numerical Study of the Transient Nozzle Flow Separation of Liquid Rocket Engines," T.S. Wang, CFD Journal, October 1992, MSFC, AL.</li>
+
+      <li>Reliability Preferred Practice PT-TE-1427, "Rocket Engine Technology Test Bed Practice."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to thoroughly analyze the pressures, temperatures, and flow rates of gases and fluids in propulsion systems using Computational Fluid Dynamics (CFD) techniques prior to design and manufacture could result in inadequate strength, thermal protection, and operational control of liquid rocket propulsion systems and related launch vehicles and components. The ultimate result of inadequate designs could be excessive redesign and testing, increased costs, and the potential for launch vehicle, engine, system, or component failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use high-speed, computer-based computational fluid dynamics analytical techniques, verified by test programs to establish propulsion and launch vehicle hardware designs for optimum performance and high reliability. These procedures will validate designs and provide an early assurance of operational viability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle, Space Shuttle Solid Rocket Motor (SRM); Space Shuttle Main Engine (SSME) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

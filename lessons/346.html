@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0346: Use of Heritage Designs on the Mars Observer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0346: Use of Heritage Designs on the Mars Observer</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0346 (Database ID: 346)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-10-21</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/346" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>As originally envisioned, inherited designs were to be used for many of the Mars Observer spacecraft's engineering subsystems. During its eight-plus year development period, however, the Mars Observer mission underwent a number of significant changes. Many of the spacecraft subsystems were so extensively modified for Mars Observer that their heritage was lost.</p>
+
+    <p>Other subsystems, whose heritage remained intact but which were designed for an earth-orbital environment, were not requalified to verify that they would function properly on an interplanetary mission of three years duration. Examples include:</p>
+
+    <ol>
+      <li>The failure to fully qualify the Traveling Wave Tubes (TWT) in the transmitter power amplifiers for operation during pyro-shock events.</li>
+
+      <li>The lack of robustness in the design of the bipropellant pressurization system for long duration missions.</li>
+
+      <li>The use of fault-management software, containing processing algorithms derived from the Defense Meteorological Satellite Program (DMSP), that was not fully understood.</li>
+    </ol>
+
+    <p>Reference(s):</p>
+
+    <ol>
+      <li>Mars Observer Loss of Signal: Special Review Board Final Report: JPL Pub. 93-28</li>
+
+      <li>JPL Lesson Learned, No. 3-108, Subject: Mars Observer Pressure Modulator Infrared Radiometer (PMIRR) Cooler Failure During Vibration Testing</li>
+
+      <li>JPL Lesson Learned, No. 10-102, Subject: Mars Observer Inertial Reference Loss</li>
+
+      <li>IOM 525-89-344, dated 12/14/89, by L. E. Baughman and R. F. Draper, Subject: MMII Inheritance Reviews</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Reliance on heritage hardware/software in spacecraft design, without a thorough analysis of compatibility with mission requirements and required changes, can result in the use of design and components which are inappropriate for the mission.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Perform inheritance reviews to span the differences between the previous use of existing spacecraft designs, hardware and software, and planned new usage.</li>
+
+      <li>
+        Inheritance reviews should include the following assessments:
+
+        <ol type="a">
+          <li>Verification that the inherited hardware/software designs are compatible with the spacecraft design, mission environment, qualification requirements and product assurance requirements.</li>
+
+          <li>Verification of the necessity and mission compatibility of design changes and implementation plans.</li>
+
+          <li>Determination of whether additional protoflight testing will be required for the inherited hardware/software.</li>
+
+          <li>Identification of potential risks associated with documented problems of inherited hardware and software.</li>
+        </ol>
+      </li>
+
+      <li>Delta inheritance reviews should be performed when major mission changes occur.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.6.2 ("Engineering Practices: Inheritance") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1397: Space Network (SN) Ka-band Infrastructure - Design, Integration, and Test Issues</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1397: Space Network (SN) Ka-band Infrastructure - Design, Integration, and Test Issues</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1397 (Database ID: 1397)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-09-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1397" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The KaTP was instituted at the White Sand Complex by December 2002 and consisted of two major functions: Modify the existing 225 MHz Ku-band downconverters to support the Ka-band Space Network Interoperability Plan (SNIP) frequencies and install a Ka-band wideband architecture consisting of waveguide equalizers, downconverters and IF Switch. Associated software and firmware changes were also required. A demonstration test was conducted to validate the overall performance of the KaTP infrastructure using high data rate technologies that could support future NASA near-earth missions.<br />
+    </p>
+
+    <ol>
+      <li>System Requirements Document (SRD) Development</li>
+    </ol>
+
+    <p>The SRD encompassed too many requirements, some of which were not directly applicable to the immediate KaTP.<br />
+    </p>
+
+    <ol start="2">
+      <li>Analysis</li>
+    </ol>
+    The WSC KaTP team spent unscheduled resources performing analysis on the &ldquo;RF solution&rdquo; Waveguide Equalizer. The vendor produced simulation results based on group delay, while the KaTP SRD had results in deviation from best-fit phase (phase nonlinearity). The KaTP team also spent considerable unscheduled time performing analysis on the effects of phase non-linearity on system performance. <br />
+
+    <ol start="3">
+      <li>Vendor Delivery</li>
+    </ol>
+    The KaTP was adversely affected by the late delivery of vendor-developed equipment. The downconverter vendor has originally proposed a 6-month delivery schedule that extended to 19 months. The vendor had difficulty meeting several downconverter specifications and had spent several months redesigning modules. The IF Switch delivery was also extended from 6 months to 10 months based on vendor inexperience with developing the product.<br />
+
+    <ol start="4">
+      <li>Equipment Procurement</li>
+    </ol>
+    The KaTP contractor team underestimated the time and effort to initiate procurements through the GSFC Consolidated Logistics Facility (CLF). The KaTP contractor accounted for the time required to perform RFP technical reviews, however processes required for large-ticket items (i.e. downconverters) require additional vendor paperwork that was not accounted for by the team. While the KaTP contractor team set up communications with the buyer at the CLF to speed the procurement process, the schedule estimates were far too optimistic (usually assuming 1 week) to get vendors under contract.<br />
+
+    <ol start="5">
+      <li>Project Budget</li>
+    </ol>
+    The KaTP team exceeded the initial budget estimate allocated for the project. The KaTP provided many unique design challenges that were magnified by the limited funds available for the task. The KaTP team was required to modify a total of 28 downconverters (225 MHz), and install a Ka-band architecture consisting of 650 MHz downconverters, waveguide equalizers in multiple equipment chains interfaced to a common IF Switch. Some of the budgetary problems encountered can be attributed to the growth of the project and additional testing required by the customer. <br />
+
+    <ol start="6">
+      <li>Waveguide Equalizer Equipment Definition</li>
+    </ol>
+    The KaTP team initially focused on the Waveguide Equalizer operating at the IF frequency similar to the legacy design The KaTP Waveguide Equalizer procurement was delayed while a vendor performed a feasibility study. There were considerable additional amounts of time (approximately 9 months) and money ($47,000) before the IF solution was scrapped in favor of an RF solution.<br />
+
+    <ol start="7">
+      <li>225 MHz Downconverter Modifications</li>
+    </ol>
+    The KaTP project called for the modification of an existing set of unique downconverter chassis'. These units were not consistent in their implementation when initially manufactured a decade earlier. There were unanticipated differences in the original implementation between each chassis such as cable routing and parts supplied by different vendors. This caused some additional &ldquo;lost time&rdquo; in having to deal with these subtle differences, and realignments.<br />
+
+    <ol start="8">
+      <li>Interference with TDRS Telemetry Signal</li>
+    </ol>
+    During KaTP Demonstration tests interference of the TDRS telemetry signal was noted while a CW signal was present on the Ka- wideband channel. The KaTP attempted to support the SNIP wideband frequency plan where the downlink signal of 13.720 GHz was shifted to 13.725 GHz. It was the view of the KaTP team that sufficient isolation existed between the Ka-band downlink signal on one polarization and the TDRS telemetry signal at 13.725 GHz on the opposite polarization. The KaTP team did not account for the potential for a user spacecraft going to CW mode.<br />
+
+    <ol start="9">
+      <li>SN Demonstration</li>
+    </ol>
+    During the KaTP 600 Mbps demonstration, a high end-to-end implmentation loss was measured. This high implementation loss occurred as a result of using non-optimum test equipment to test the channel. The test transmitter, receiver, upconverter, downconverter and high-powered amplifier (HPA) all contributed to the channel distortions that degraded performance. The KaTP demonstration tram spent unscheduled resourced performing analyses and simulations in order to determine the reason for the high end-to-end implementation loss. <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>System Requirements Document (SRD) Development</li>
+
+      <li style="list-style: none"><br />
+      </li>
+    </ol>
+    The SRD development task unnecessarily grew in scope and began to encompass future follow-on work. In addition to Ka-band IF requirements, several versions of the SRD included performance issues related to CCSDS data routing. Considerable time and effort was expended on reviewing documentation that was not pertinent to the task at hand. The SRD should have focused on the function and performance requirements of the Ka-band IF implementation task <br />
+
+    <ol start="2">
+      <li>Analysis</li>
+    </ol>
+    The WSC KaTP team did not originally allocate any labor costs or schedule impacts associated with performing analysis to the waveguide and phase nonlinearity issues. Delays to the KaTP project were incurred while a contractor team was called on to perform additional &ldquo;impact to system performance&rdquo; analysis. An example of this was experienced during the decision on total amounts of phase nonlinearity allowable for the KaTP infrastructure during the Waveguide Equalizer procurement. On a project with the scope, complexity and challenges of the KaTP, the team must consider budgeting additional hours for these unforeseen problems.<br />
+
+    <ol start="3">
+      <li>Vendor Delivery</li>
+    </ol>
+    While the KaTP implementation schedule was aggressive, one could not account for the large delays encountered from the vendors. The contractor team spent considerable time and energy working with the vendor and pushing for delivery. In future large procurements, the contractor team should account for some vendor delays when forecasting schedule and there should be some way of enforcing vendors to deliver hardware on time (either through incentives or penalties incorporated into the contract). The procurement office should have been involved earlier and they may have worked the delivery issues since they control the payments and have more clout with the vendor. Additional time in schedule should be allocated to do more work on vendor surveys and &ldquo;requests for information&rdquo; from prospective vendors. This may have given the KaTP team a better feel for aggressive specifications and alternative architectures. In some cases the team received one vendor quote, which implies
+    the specifications may have been too restrictive.<br />
+
+    <ol start="4">
+      <li>Equipment Procurement</li>
+    </ol>
+    The KaTP contractor team has learned to project more time into a schedule to account for RFP technical evaluations, initiating procurements through the CLF, and getting vendors under contract. For large acquisitions, this process can take four to eight weeks.<br />
+
+    <ol start="5">
+      <li>Project Budget</li>
+    </ol>
+    The size and complexity of the KaTP presented several unique challenges. From the onset, NASA project management stated the project had limited funds, however, they wanted to accomplish all of the goals of the project. The KaTP team attempted to achieve a system that met all the requirements with a minimal amount of risk to the project budget and schedule. This approach drove the team to implement an architecture similar to the legacy design and in the future the team should evaluate the critical parameters that impact system performance and choose an architecture that would minimize this risk. <br />
+
+    <ol start="6">
+      <li>Waveguide Equalizer Equipment Definition</li>
+    </ol>
+    The KaTP team focused on an IF frequency Waveguide Equalizer too quickly without weighing other options. This decision was based somewhat on the legacy equipment design using an IF-based equalizer. The team should have explored other possibilities concurrently but the time and effort was not allocated into the schedule. <br />
+
+    <ol start="7">
+      <li>225 MHz Downconverter Modifications</li>
+    </ol>
+    The legacy 225 MHz downconverters were built as custom units and the implementation varied from chassis to chassis. This problem could not have been foreseen, a realistic schedule should allot additional time to handle unforeseen problems.<br />
+
+    <ol start="8">
+      <li>Interference with TDRSS Telemetry Signal</li>
+    </ol>
+    The KaTP team should have contacted the NASA spacecraft engineering group charged with the development of the TDRS- HIJ series spacecraft to determine the rationale for their frequency plan. The spacecraft manufacturer chose to design a specific frequency plan for the TDRS-HIJ series satellites that was not compatible with the SNIP frequency plan. The KaTP team should have researched this issue more thoroughly during the design and implementation of the ground infrastructure.<br />
+
+    <ol start="9">
+      <li>SN Demonstration</li>
+    </ol>
+    The KaTP was hindered during the SN Demonstration tests by test equipment that exhibited higher than expected implementation losses. A considerable amount of time was spent verifying the test equipment, understanding and characterizing the losses inherent in the various test configurations. It is recommended that test receivers should be optimized for the data rate under test. Future testing should incorporate test equipment that meets or exceeds the fidelity one is trying to demonstrate. Suspect test equipment reduces the confidence in the test results and impacts the schedule and budget.<br />
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Recommendations are provided above as part of the lesson learned for each topic.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

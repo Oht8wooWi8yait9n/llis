@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0771: Voltage &amp; Temperature Margin Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0771: Voltage &amp; Temperature Margin Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0771 (Database ID: 771)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/771" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1431 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>On spacecraft hardware where risk vs. cost trades permit higher risk (Class C), Voltage and Temperature Margin Testing (VTMT) is an economical alternative to classical worst case analysis (WCA). The major benefits in using VTMT instead of WCA are:</p>
+
+    <ol>
+      <li>Assurance of a systematic method for investigation of potential risks where the parameters are not adequately modeled by worst case analysis. An example is RF circuits which have distributed circuit parameters.</li>
+
+      <li>Labor savings for units too complex to simulate and which generally require Monte Carlo or root-sum squares analyses.</li>
+
+      <li>Real-time operation and review of complex circuits, allowing the weighing of alternative design actions.</li>
+
+      <li>Cost savings from expedited risk assessment. Comparative studies have demonstrated that testing may be completed in less than one-third the time required for analyses.</li>
+    </ol>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The VTMT must be designed to achieve adequate variation of circuit parameters through a judicious choice of voltage, temperature, and frequency margin combinations to achieve an optimal, yet realistic check of the design margin. Sufficient margin must be demonstrated at beginning-of-life (BOL) to permit confident performance extrapolation for those conditions that are not achievable at component infancy. These conditions include radiation effects, initial tolerance variations, aging, and unit-to-unit variations defining end-of-life (EOL) conditions.</p>
+
+    <p>VTMT applies power downstream of voltage regulating devices to permit an adequate range of voltage variations. Optimum limits for voltage and temperature must extend beyond the extremes of the derated part specifications, but must remain within manufacturer device limitations. The test plan pays careful attention to limits; it describes in detail the execution of the tests, including exercising the functional characteristics of the design and assessing the associated circuit parameters against the established pass/fail criteria. Potential failure modes must be identified prior to VTMT to ensure that no damage occurs to the unit under test.</p>
+
+    <p>Typically the operational extremes are extended to demonstrate positive flight margins using temperature as the universal test parameter to simulate other parameters such as environmental and end-of-life changes. Thus the item under test is exposed to risk of damage by stress due to high temperature. Hence, the support equipment used to control the temperature and the test parameters must be extremely accurate, especially at maximum temperatures.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>VTMT has long been an important tool for verification of circuit operational limits that are dependent upon part parameter variations. The following techniques form the VTMT repertoire: (1) temperature variation, (2) applied voltage variation, and (3) clock frequency variations for digital circuits. The use of VTMT to simulate worst case functional performance is justified because the effects of voltage, temperature, and frequency upon device performance parameters is similar to the effects of radiation and end-of-life changes. This concept is very well demonstrated quantitatively at the part level, but less quantitatively at the assembly level. The rationale for use of these three test procedures is discussed below.</p>
+
+    <p><b>1. Temperature Variations:</b></p>
+
+    <p>As temperature changes, so does the absolute values of the parameters of the individual parts. Temperature is the first order term in almost every variation of part parameters except for initial tolerance variation. Similarly for cables and transmission lines, distributed parameters exist that also vary with temperature.</p>
+
+    <p><b>2. Applied Voltage Variations:</b></p>
+
+    <p>Changing the supply voltage to the circuit under test is equivalent to changing the voltage potentials across groups of parts. Thus the potential across each part within a circuit loop changes accordingly whenever the total applied voltage is changed.</p>
+
+    <p>Varying the applied voltage can check the ability of an analog circuit to operate within specifications and generally can be added linearly to the temperature induced performance changes.</p>
+
+    <p><b>3. Variation of Clock Frequency for Digital Circuits:</b></p>
+
+    <p>Varying the frequency of an input clock or pulse train can simulate changes of digital circuit delay parameters which may occur during flight. The limits of design degradation (and limits of absolute failure) with frequency can be determined. This knowledge can be used to determine if sufficient timing margins exist. Often voltage is reduced during the frequency margin testing to achieve even more margin. Clock frequency changes of ±25% are typical in performing the VTMT.</p>
+
+    <p>In forming combinations of two or more of these test tools, considerable attention is given to simulating the effects of operating life, radiation, and initial tolerance. Preventive measures are ascertained from relevant experience, related reliability analyses, or test and manufacturing data that have been obtained on similar units and interfaces.</p>
+
+    <p>VTMT duration should be sufficient for the devices to reach thermal equilibrium and exhibit steady-state operating conditions. The test requires approximately 3 hours at each temperature level over a 24-hour duration. Measurements before and after the tests are recorded and compared with a predetermined deviation, e.g., less than 15 percent.</p>
+
+    <p>The test planner consults the failure prevention plan for the flight project to ensure the safety of the hardware. A test matrix may be used to form a safety prevention checklist of critical conditions, and the matrix may provide a catalogue identifying diagnostics and possible failure chain contributors. The VTMT technique is a closed-loop process; it comprises a checklist that is planned, monitored, and evaluated concurrently by quality assurance, reliability, and engineering personnel.</p>
+
+    <p>Since the voltage, temperature, and frequency variations applied in VTMT can exceed those expected during flight, the additional circuit design margins successfully demonstrated by the test are assumed to encompass the parameter margins expected from radiation and operating life. Calculations can be performed to estimate the final margin. Note that although initial tolerances of parameters disappear when the to-be-flown hardware is the item under test, the initial tolerance variation must be considered in VTMT application to all other units of the same design. Figure 1 is a flow diagram of the VTMT process.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009228main_0771-1.jpg"  HEIGHT="685"  BORDER="0" /><A HREF="/llis_lib/txt/1009705main_0771-1.txt"  >[D]</A>
+    </center>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Reliability Analyses Handbook (1990), Jet Propulsion Laboratory, D5703.</li>
+
+      <li>Reliability Assurance Guidelines for Low Cost/Short Duration Missions (1995), Jet Propulsion Laboratory, NASA Technical Memorandum 4629.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Using neither WCA nor VTMT to simulate circuit functional performance, a unit is subject to functional peril from changes in uncontrolled circuit parameters due to part variations. Inadequate margins can result in sudden failure to operate, or the condition can lead to functional degradation of the circuit with a high probability of catastrophic failure due to drift outside the operational limits of the unit. Lacking insight from test or analysis, the project is likely to lack provisions for detection of these problematic areas in the failure intervention plan. Without the VTMT or WCA parameter change matrix as a readily available diagnostic tool, failure causes and remedies must be determined under post-failure constraints, where time and hardware limitations may inhibit adequate corrective action.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Voltage and Temperature Margin Testing (VTMT) is the practice of exceeding the expected flight limits of voltage, temperature, and frequency to simulate the worst case functional performance, including effects of radiation and operating life parameter variations on component parts. For programs subject to severe cost or schedule constraints, VTMT has proven an acceptable alternative to conventional techniques such as worst case analysis (WCA). <b>WCA is the preferred approach to design reliability, but VTMT is a viable alternative for flight projects where trade-offs of risk versus development time and cost are appropriate.</b></p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Magellan, NASA scatterometer, Microwave Limb Sounder, Galileo, Cassini</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

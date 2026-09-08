@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1035: Mars 2001 Risk Reduction Testing, Pyrovalve</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1035: Mars 2001 Risk Reduction Testing, Pyrovalve</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1035 (Database ID: 1035)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-08-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> White Sands Test Facility</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1035" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>A new low blow-by pyrovalve was used in place of a high blow-by pyrovalve primarily to avoid the possibility of a pyrotechnic-induced propellant explosion in a newly designed propulsion system. During blow-by testing of the new valves, one valve did not cycle when commanded. Failure analysis indicated that both initiators and the booster had fired, yet the valve did not cycle. Further investigation indicated that the booster charge was expelled from the Primer Chamber Assembly down into the ram bore. This prevented the booster can surface from opening properly (petaling) and some of the booster energy was diverted to expanding the booster can rather than fully transmitting the energy to the ram. As a result, the diminished energy transferred to the ram was inadequate to shear the tube section that opened the valve. The valve manufacturer improved booster retention by increasing an aluminum retention ring diameter to be slightly larger than the ram bore and improved the potting
+    between the booster and housing. This improved valve configuration was then procured by the program and evaluated by typical lot acceptance testing.</p>
+
+    <p>Subsequent testing and analysis indicated that the potting bond was not consistent, and that the booster retention ring could possibly deform, allowing displacement of the booster into the ram bore. The risk of a flight valve failing was low but still unacceptable to the project because the vehicle did not have redundant pyrovalves.</p>
+
+    <p>The retention washer material was changed to a high strength stainless steel and the outside diameter was further increased. The potting process was also improved to form a better gas seal. Testing indicated the reliability risk had been successfully mitigated.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When focusing on fixing one hardware problem, be careful to identify and eliminate other hardware problems which may be created by the change. Additionally, be careful to fully test every hardware change to qualify the system and ensure something has not been missed. In this scenario, new hardware was used to eliminate a known hazard but it introduced other unanticipated risks. Changing from the previous high blow-by valve to a new low blow-by valve did mitigate the risk of a pyrotechnically induced propellant explosion upon ignition. However, an increased operational reliability risk was introduced because the new valve did not have an extensive operational history. The risks were initially missed, but were ultimately identified through thorough testing and necessary modifications were made.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>When focusing on fixing one hardware problem, be careful to identify and eliminate other hardware problems which may be created by the change.</li>
+
+      <li>Fully test every hardware change to qualify the system and ensure something has not been missed.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

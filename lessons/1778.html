@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1778: Anomalous Flight Conditions May Trigger Common-Mode Failures in Highly Redundant Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1778: Anomalous Flight Conditions May Trigger Common-Mode Failures in Highly Redundant Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1778 (Database ID: 1778)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-03-05</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Mission Operations and Ground Support Systems,  Environment,  Entry Systems,  Orbiting Vehicles,  Robotics,  Spacecraft and Spacecraft Instruments,  Product Assurance,  Reliability,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1778" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Jet Propulsion Laboratory (JPL) employs several different design approaches for assuring that spacecraft computational assets are fault tolerant. The Mars Exploration Rover and Mars Pathfinder flight system designs feature a single flight computer capable of rebooting in tens of seconds. Because Mars Science Laboratory is especially sensitive to loss of control during landing, it (like the Cassini and Galileo spacecraft) employs two active processors, with a capability for the primary computer to relinquish control (i.e., hot swap) to the secondary in less than 2 seconds. Mars Reconnaissance Orbiter (MRO), along with Phoenix, Stardust, Genesis, and Mars Odyssey, has dual processors that share updated state and sensor data — one processor active, and a second cold backup that can boot in tens of seconds. 
+<br> 
+<br> Despite the functional redundancy provided by this third design arrangement, following launch the MRO project detected a potential common C&amp;DH failure mode. The MRO Command and Data Handling (C&amp;DH) subsystem maintains a File System (FS), a 2 Mbit image of the flight software, for use in the reboot sequence should the spacecraft go into safing mode and autonomously determine that a computer reboot is required. Active redundancy is used to protect the critical flight data in the FS needed for a reboot, as shown in Figure 1. That is, there is one C&amp;DH Module Interface Card (CMIC) in each of the two redundant C&amp;DH strings, each CMIC has one static random access memory (SRAM) multi-chip module (MCM), and each MCM has two FS images stored on different SRAM dies, for a total of four redundant FS images. Cross-strapping (via a high speed link, a synchronous serial interface (SSI) cable) and cyclic redundancy checks (CRCs) ensures that both flight computers maintain identical and error-free FSs recording their operational state. If any radiation-induced single event upsets (SEUs) are detected before the FS is used in a reboot sequence, the MCM's second FS image is checked; if that image is also found to be corrupted, the spacecraft switches to the redundant string CMIC in search of a pristine FS image. 
+<br> &nbsp; 
+<table cellpadding="0" width="100%"> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <table border="0" cellpadding="0" width="100%"> 
+     <tbody> 
+      <tr> 
+       <td><a href="https://llis.nasa.gov/llis_lib/images/1014828main_NEN1778-Fig1.gif" title="Click here to view larger picture"><img alt="Figure 1 is a color diagram that illustrates the architecture described in the Figure 1 caption by means of a block diagram. It shows 2 major blocks positioned side by side and connected by a line labeled " src="https://llis.nasa.gov/llis_lib/images/1014828main_NEN1778-Fig1.gif"></a></td> 
+      </tr> 
+      <tr> 
+       <td><b>Figure 1. </b>Each MRO C&amp;DH string has a single CMIC, which in turn has a single 2 MB SRAM piece part that is logically partitioned into 8 segments. The redundant File Systems are stored in SRAM Segments 2 and 4 on each CMIC. Realtime checkpoint and fault protection data are stored in Segments 3 and 6. The RAD750 flight computer accesses its CMIC via a cPCI bus and accesses the other computer's CMIC via a synchronous serial interface (SSI) cable.</td> 
+      </tr> 
+     </tbody> 
+    </table> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> 
+<br> After MRO launch, spacecraft telemetry revealed some correctable CMIC memory errors (Reference (1)) that prompted analysis of MRO radiation exposure. This post-launch analysis identified a significant risk that solar energetic particle (SEP) events associated with a solar flare later in the mission could corrupt all four FS images (Reference (2)). That is, given the high likelihood under nominal conditions of particle strikes causing SEUs in a certain block of memory, there is a high likelihood during large solar flares of many more strikes damaging multiple blocks of memory. Since the radiation flux would also increase the likelihood of a computer reboot, FS corruption during the Mars aerobraking maneuver could have posed an unacceptable risk to the mission. 
+<br> 
+<br> Radiation analysis (Reference (3)) also revealed a 7 percent probability that a large flare will occur and that the resulting SEUs will impact all four FS data images during the 2-year MRO primary mission. In addition, the analysis showed a 14 percent probability of data corruption (due to entry into a period of increased solar activity) during an extended mission. This analysis showed that for large solar flares, the probability of SEUs is so high that even an increase in redundancy to 16 FSs would not bring a significant risk reduction during the primary mission. This is because the probability of all images being corrupted is driven mainly by the probability of encountering a large flare. 
+<br> 
+<br> Shielding is somewhat effective against solar protons, and the proton flux decreases with distance from the sun, but shielding does little to block high energy particles, and they pose an SEU risk throughout a planetary mission. The MRO mission risk has been mitigated by uplinked changes to flight software, and by ground procedures such as daily monitoring of solar activity forecasts. Also, the mission risk was limited by the minimal number of solar sunspots (solar min) that occurred during MRO aerobraking maneuvers. 
+<br> 
+<br> 
+<b>Reference(s):</b> 
+<br> &nbsp; 
+<table border="0" width="100%"> 
+ <tbody> 
+  <tr> 
+   <td valign="top">(1)</td> 
+   <td>quotCMIC Memory CRC Error,quot Problem/Failure Report No. Z87764, Jet Propulsion Laboratory, November 8, 2005.</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(2)</td> 
+   <td>M. Ratliff, quotProbability of Corrupting Four MRO CMIC File System Images in One Day,quot Jet Propulsion Laboratory IOM No. 5132-06-013, February 17, 2006.</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(3)</td> 
+   <td valign="center">M. Ratliff, quotProbability of SEUs in MRO CMIC SRAM File System,quot Jet Propulsion Laboratory IOM No. 5132-06-100, December 7, 2006.</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(4)</td> 
+   <td valign="center">quotFlight System Fault Tolerance, Redundancy, and Cross Strapping (Draft),quot Jet Propulsion Laboratory Guideline No. DocID 60492, February 7, 2007.</td> 
+  </tr> 
+ </tbody> 
+</table>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Highly redundant spacecraft designs that feature foolproof fault recovery schemes are still vulnerable to common mode failures unless the range of anomalous conditions during all operational phases is fully understood.<br />  </li> 
+ <li>Had the radiation analysis been performed during MRO C&DH subsystem development, detection of CMIC sensitivity to radiation and subsequent implementation of Error Detection and Correction (EDAC) would have eliminated the risk of a mission critical common-mode failure.</li> 
+ <br /> 
+ <br />   
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>When fault tolerance is attained by means of multiple, redundant, physical copies, evaluate the full range of anomalous conditions that could trigger common-mode failures during a critical mission phase. Use Reference (4) as a guide to addressing design concerns through redundancy, including mitigation of risks from mission environments that have not previously been experienced.</li> 
+ <br /> 
+ <li>Perform analyses of device sensitivity to space environmental extremes sufficiently early to permit implementation of design countermeasures.</li> 
+ <br /> 
+ <br />   
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 4.4.3.4 (quotInformation System Design: On-Board Storage -- Protection from Single Event Upsetsquot) in the JPL standard Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles), JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+<section><h2>Related Policies & Standards</h2>
+Flight System Fault Tolerance, Redundancy, and Cross Strapping (Draft), Jet Propulsion Laboratory Guideline No. DocID 60492, February 7, 2007.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

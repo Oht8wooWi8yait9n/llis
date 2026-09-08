@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0773: Design Practice to Control Interference from Electrostatic Discharge (ESD)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0773: Design Practice to Control Interference from Electrostatic Discharge (ESD)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0773 (Database ID: 773)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/773" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1244; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Minimize the adverse effects of electrostatic discharge (ESD) on spacecraft by implementing the following three design practices:</p>
+
+    <ol>
+      <li>Make all external surfaces of the spacecraft electrically conductive and grounded to the main structure.</li>
+
+      <li>Provide all internal metallic elements and other conductive elements with an "ESD conductive" path to the main structure.</li>
+
+      <li>Enclose all sensitive circuitry in an electrically conductive enclosure-- a "Faraday cage".</li>
+    </ol>
+
+    <p>The first two practices should dissipate most electric charges before a difference in potential can become high enough to cause an ESD. If a discharge occurs, the third practice lowers the coupling to sensitive circuits, reducing the probability or severity of the interference.</p>
+
+    <p>All external dielectric surfaces such as windows, radomes and solar panels are coated to make them slightly conductive without destroying their transparency to optical/IR/RF radiation. Cost and performance trade-offs must be made in order to select suitable materials for each application. The conductive layer should be less than 10<sup><small>9</small></sup> ohms per square and connected to structural ground.</p>
+
+    <p>All internal metallic elements, greater than 3 cm<sup><small>2</small></sup> in area or 25 cm in length, including unused wires in cables, connectors, circuit board traces, spot shields, and other conductive elements, have a conductive path to ground with a resistance less than 100 MW. Small metallic objects (&lt; 3 cm<sup><small>2</small></sup>) may be ungrounded if grounding is not practical.</p>
+
+    <p>Each metallic layer of thermal blankets is grounded to the main structure.</p>
+
+    <p>All external metallic components are electrically connected to the common ground of the main structure.</p>
+
+    <p>All electronics are enclosed in a Faraday cage shielded enclosure. External cabling outside of the Faraday cage are shielded by means of overshields with 360 degree backshells at the Faraday cage entry. Sensitive circuits should use independent, balanced wiring with each lead and its return twisted together.</p>
+
+    <p>Filter all circuits coming into the Faraday cage; low-pass filters and transient suppressors are typical, but digital logic discriminators have also been used. Avoid the possibility of high differential voltages between components by connecting all conductive materials to a common ground.</p>
+
+    <p>In the case of large structures, such as Space Station, surface charging can be controlled by use of an external ionizing plasma source.</p>
+
+    <p>Since it is impractical to duplicate the space plasma environment, testing for ESD resorts to resistance measurement on one hand and circuit immunity to artificial discharges on the other hand. The requirements for each of these conditions depend on the spacecraft charging conditions anticipated for the particular orbit that the spacecraft will occupy.</p>
+
+    <p>All spacecraft designers must consider space charging in the spacecraft design. Space charging arises when materials are immersed in an energetic space plasma. Different materials with different surface resistivities produce voltage gradients which can build up until the voltage breakdown limit is exceeded. When this occurs, a discharge is produced which causes transients in electrical circuitry and degradation or redeposition of material.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Purvis, C., Garrett, H., Whittlesey, A., Stevens, N. (1984), "Design Guidelines for Assessing and Controlling Spacecraft Charging Effects," NASA Technical Paper 2361. (This paper has an extensive bibliography.)</li>
+
+      <li>Surface Charging/ESD Analysis, Reliability Preferred Practice No. PD-AP-1301</li>
+
+      <li>Thick Dielectric Charging/Internal Electrostatic Discharge (Draft), Reliability Preferred Guideline No. PD-AP-1316</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>ESD events can cause transient voltage spikes on sensitive circuits which can corrupt data, produce false commands, or cause system failure. Degradation of surface material can result from arcing or redeposition of material on other surfaces if precautions are not observed.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Minimize the adverse effects of electrostatic discharge (ESD) on spacecraft by implementing the following three design practices:</p>
+
+    <ol>
+      <li>Make all external surfaces of the spacecraft electrically conductive and grounded to the main structure.</li>
+
+      <li>Provide all internal metallic elements and other conductive elements with an "ESD conductive" path to the main structure.</li>
+
+      <li>Enclose all sensitive circuitry in an electrically conductive enclosure-- a "Faraday cage".</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Magellan, Galileo, and Ocean Topographic Experiment (TOPEX).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

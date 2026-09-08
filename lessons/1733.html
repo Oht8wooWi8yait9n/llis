@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1733: Genesis Sample Return Mishap (2004)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1733: Genesis Sample Return Mishap (2004)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1733 (Database ID: 1733)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-02-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Mission Operations and Ground Support Systems,  Program Management,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Accident Investigation,  Aerospace Safety Advisory Panel,  Flight Equipment,  Flight Operations,  Ground Operations,  Hardware,  Mishap Reporting,  Payloads,  Spacecraft,  Spacecraft and Spacecraft Instruments,  Mission control Planning,  Contractor relationships,  Product Assurance,  Review systems and boards,  Engineering design and project processes and standards,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1733" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The mission of the Genesis spacecraft was to collect solar wind samples and return those samples to Earth for analysis. In September 2004, the spacecraft approached Earth and fired pyros that jettisoned the Sample Return Capsule (SRC). After entering Earth's atmosphere, the SRC was expected to open a drogue parachute, followed by release of the main parachute and the mid-air capture of the SRC by a helicopter. Instead, the pyro event to release the drogue chute did not occur, and the SRC struck the Earth at high speed. This resulted in a loss of some of the science return, but the integrity of the sample collectors was maintained sufficiently to achieve mission success.<br> <br> Failure analysis determined that four gravity switches (g-switches)-- two switches mounted on each of the two relay modules (Figure 1), each within an SRC Avionics Unit (AU)-- were phased incorrectly. That is, they were assembled according to the drawings, but the design placed the switches on both relay boards in the wrong orientation relative to the deceleration force during atmospheric entry (Reference (1)). This orientation prevented the switch mechanism (Figure 2) from closing during the deceleration of the SRC. G-switch closure was required to trigger the critical events needed for the SRC's safe return.<br> <br> The switch design error resulted from modifications to the heritage Stardust Avionics Unit that changed both the orientation of the circuit boards and the orientation of the switches as they were mounted on each circuit board. These apparently minor design changes constituted a departure from design heritage that necessitated testing. Indeed, the centrifuge test that was performed for Stardust would have detected the Genesis design error, but the test was not performed because of (1) an erroneous view of the Genesis AU design as Stardust heritage and (2) a 4-month schedule slip in the delivery of the AU for test and verification.<br> <br> The multiple Genesis g-switches within the duplicate Avionics Units provided hardware redundancy, but not functional redundancy. Hardware redundancy was provided in that both switches needed to close in only one of the AUs. However, an independent pressure switch to sense altitude, or a countdown timer that started when the SRC was released from the spacecraft, would have added a backup function for triggering drogue chute deployment during the entry, descent, and landing (EDL) phase.</p> 
+<p>&nbsp;</p> 
+<table border="1"> 
+ <tbody> 
+  <tr> 
+   <td><img align="Bottom" alt="Figure 1 is a black and white photo of a portion of an approximated one foot square circuit board. The board is populated with a number of modular and discrete components. Arrows have been added to the image to point to the location and orientation of two identical, cylindrical, G-switches attached to the board. The two piece parts are coplanar to the board, and are 2-inches apart and in-line with each other along their long axis" border="0" height="488" src="https://nen.nasa.gov/llis_lib/images/1013326main_NEN1733-G-Switch%20Module.jpg" title="Figure 1 is a black and white photo of a portion of an approximated one foot square circuit board. The board is populated with a number of modular and discrete components. Arrows have been added to the image to point to the location and orientation of two identical, cylindrical, G-switches attached to the board. The two piece parts are coplanar to the board, and are 2-inches apart and in-line with each other along their long axis" width="457"> Figure 1. G-switch function requires an appropriate orientation (polarity) on the SRC Relay Module. The g-switches are mounted (per print) with the flared end containing the fixed contact (see Figure 2) positioned toward the top of the photo. &nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td><img align="Bottom" alt="Figure 2 is two black and white images. One is a g-switch¿ a cylindrical piece part encapsulated in a shiny metal can with a metal lead extending from each end. The piece part is laid next to a pencil, indicating that the G-switch is about one-half inch long and perhaps 3/16 inch in diameter. The cylinder flares slightly at one end. The second image is an X-ray of an identical G-switch in which the internal workings of the G-switch are visible in shadow. The mechanism includes a dark mass positioned against a spring such that a deceleration in the proper direction along the long axis of the part would cause the mass to press against the restraining spring. The outside diameter of both the mass and the spring appear to match the inside diameter of the enclosing cylinder such that the mass could freely slide within the cylinder, subject to the constraining spring" border="0" src="https://nen.nasa.gov/llis_lib/images/1013327main_NEN1733-G%20Switch%20Device%20w-label.jpg" title="Figure 2 is two black and white images. One is a g-switch¿ a cylindrical piece part encapsulated in a shiny metal can with a metal lead extending from each end. The piece part is laid next to a pencil, indicating that the G-switch is about one-half inch long and perhaps 3/16 inch in diameter. The cylinder flares slightly at one end. The second image is an X-ray of an identical G-switch in which the internal workings of the G-switch are visible in shadow. The mechanism includes a dark mass positioned against a spring such that a deceleration in the proper direction along the long axis of the part would cause the mass to press against the restraining spring. The outside diameter of both the mass and the spring appear to match the inside diameter of the enclosing cylinder such that the mass could freely slide within the cylinder, subject to the constraining spring"> Figure 2. G-switch views. The X-ray shows a moving contact and spring for sensing deceleration in one direction only. &nbsp;</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> 
+<br> References: 
+<ul style="list-style-type:none"> 
+ <li>(1) Genesis Failure Investigation Report (JPL Failure Review Board, Avionics Sub-team), JPL Publication 2005-2, July 2004.</li> 
+ <li>(2) Genesis Mishap Investigation Board Report, National Aeronautics and Space Administration, November 30, 2005.</li> 
+</ul>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Hardware redundancy only adds to design robustness in the absence of common cause failure modes.</li> 
+ <li>An over-reliance on design heritage in identifying essential tests may lead to violations of the quottest-as-you-fly, fly-as-you-testquot rule.</li> 
+ <li>Technical penetration into the design for a mission critical Genesis EDL sequence was inadequate, as was the test program.</li> 
+ <li>The peer review of the Genesis modifications to the Stardust Avionics Unit (AU) design was not adequately supported by independent avionics and EDL experts.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Do not rely solely on hardware redundancy to ensure performance of a mission-critical function, but consider additional design features that will provide a functional backup.</li> 
+ <li>Along with redundancy verification analysis, the test and verification program must fully encompass the potential effects of modifications to heritage designs. The testing methods must be adequate and valid for verifying the proper function and performance of all system elements necessary to accomplish all mission events in addition to verifying the satisfaction of formal development requirements.</li> 
+ <li>Assure that cognizant engineers and subsystem managers fully characterize the design functionality of their unit within the system, as well as assuring that the requirements placed on the unit itself are met.</li> 
+ <li>Ensure the fidelity of the peer review process, with functional experts giving special attention to each mission-critical function.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.6.2 (quotEngineering Practices: Inheritancequot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006. 
+<br /> 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 4.1.3.1 (quotFlight System Design: Design Robustness -- Single Failure Tolerancequot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0561: Voyager Plated - Through Hole Failures (1976)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0561: Voyager Plated - Through Hole Failures (1976)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0561 (Database ID: 561)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1997-07-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/561" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>In January 1976, a problem became evident during initial testing of the earliest Command &amp; Control Subsystem (CCS) subassemblies for Voyager. Detailed testing revealed multiple, often intermittent, functional failures. The failures were traced to the multi-layer boards (MLB's), specifically the plated-through holes (PTH's).</p> 
+<table> 
+ <tbody> 
+  <tr> 
+   <td><img alt="refer to [D] description" border="0" height="98" src="https://llis.nasa.gov/llis_lib/images/1008971main_0561.gif" title="refer to [D] description" width="147"><a href="https://llis.nasa.gov/llis_lib/txt/1009471main_0561.txt">[D]</a></td> 
+   <td>The extent of the problem was determined by subjecting selected subassemblies to a detailed sequence of resistive measurements and temperature cycling. The sequence was designed to stress the PTH's without over-stressing the components installed on the MLB's. MLB fabrication documentation, test history, and theoretical analyses were reviewed. Failure analysis of hard failures, PTH's that exhibited early signs of failures, and PTH's which had appeared acceptable, revealed PTH copper plating that was marginal -- too thin and of insufficient ductility.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<p>This incident involved Viking board designs inherited by Voyager. The Voyager boards were fabricated 3-4 months later in a follow-on contract in which the same contractor presumably used the same specification and process. However, micro-photographs of the Voyager boards showed insufficient plating, and metallurgical tests showed insufficient ductility. A metallurgical test was subsequently performed on one of the earlier Viking boards: it showed the copper to be more ductile.</p> 
+<p>Reference(s):</p> 
+<ul> 
+ <li>quotMJS MLB Failure Investigation Report,quot June 1976.</li> 
+ <li>Voyager Problem/Failure Report No. 36970, Jet Propulsion Laboratory, opened 04/13/76, closed 01/18/77.</li> 
+ <li>Gibbel, M., quotSummary of JPL Printed Circuit Board Failures,quot Jet Propulsion Laboratory Document TETA-029, October 1995.</li> 
+</ul>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>If circuit board fabrication specifications or processes fail to provide for copper plating of the proper thickness and ductility, internal interconnect failures (such as cracks in the barrels of plated-through holes) may occur after only a few thermal cycles.</li> 
+ <li>Since this incident, research has indicated that the frequency of barrel cracking increases with increasing aspect ratio of the PTH (depth/diameter) as well as with decreasing barrel wall thickness.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Manufacturing, fabrication, and assembly processes employing complex technology require constant monitoring, auditing, and review of the appropriate process parameters despite repeated past successes. Even minor changes in processes or materials can result in the product falling below acceptable standards. Efforts must be made to increase the consistency and margin of all processes to preclude defects due to production variations.</li> 
+ <li>Thermal cycling screening tests should be performed on unpopulated printed wiring boards regardless of process maturity.</li> 
+ <li>Circuit board manufacturing processes should continue to use test coupons to determine individual board acceptability.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.3.3 (quotSafety and Mission Asssurance Practices: Quality Assurancequot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

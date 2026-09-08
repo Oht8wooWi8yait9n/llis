@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0717: Guideline for Use of Fizeau Interferometer in Optical Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0717: Guideline for Use of Fizeau Interferometer in Optical Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0717 (Database ID: 717)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/717" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GT-TE-2404 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The Fizeau interferometer is used to measure the quality of optical components and systems. It provides a guide for the manufacturing of components, an aid for alignment, and a validation of system performance.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><i>Description of Fizeau Interferometer</i></p>
+
+    <p>The basic layout of a Fizeau interferometer is shown in Figure 1 (Reference 1.). A laser source is spatially filtered via a microscope objective and a pinhole. This pinhole is located at the focal point of a collimating lens. Between the pinhole and lens is a beam-splitter. The collimated beam encounters a slightly wedged glass plate. This is the heart of the interferometer. The surface adjacent to the collimating lens is of good optical quality. However, the next surface is of exceptional optical quality, l/20 peak to valley (PV) or better. This is the reference surface and part of the collimated beam is reflected by this surface. Part of the collimated beam continues on to interrogate the optic being tested. The return beam contains information on aberration introduced by the test optic. The two wavefronts recombine inside the interferometer. The beam-splitter diverts the combined beams toward a recording medium, either film or a TV (CCD or
+    vidicon). An intermediate lens together with the collimating lens forms an image of the test surface onto the recording plane. An observer will see a sharp image of the test surface with an interference (or fringe) pattern running through it.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009135main_0717-1.jpg"  HEIGHT="236"  BORDER="0" /><A HREF="/llis_lib/txt/1009614main_0717-1.txt"  >[D]</A>
+    </center>
+
+    <p><i>Application of Fizeau Interferometer</i></p>
+
+    <p>1. <u>Testing a Flat</u></p>
+
+    <p>Suppose the test object is a plane glass surface whose quality (flatness) we wish to inspect. We must first align the test surface to the interferometer. Most commercial Fizeau interferometers have an "align mode." This requires the user to center a bright dot (the reflected return) on a crosshair on some viewing screen.</p>
+
+    <p>Suppose the test surface has a depression in it as illustrated in Figure 2. The flat wavefront from the interferometer is incident on the test surface and reflected back into the interferometer. Note that the reflected portion shown in Figure 2 has picked up twice the surface error inherent in the test surface. This aberrated wavefront returns through the reference plate to combine with the reflected reference.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009136main_0717-2.jpg"  HEIGHT="305"  BORDER="0" /><A HREF="/llis_lib/txt/1009615main_0717-2.txt"  >[D]</A>
+    </center>
+
+    <p>Wherever two coherent wavefronts overlap they interfere with each other. The equation describing interference (Reference 2) is as follows:</p>
+
+    <center>
+      <IMG  WIDTH="313"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009143main_0717eq1.jpg"  HEIGHT="40"  BORDER="0" /><A HREF="/llis_lib/txt/1009622main_0717eq1.txt"  >[D]</A>
+    </center>
+
+    <p>To obtain good high contrast fringes requires that the reflection off the reference and off the test piece must be equivalent in intensity. Maximum fringe contrast occurs when I<sub><small>1</small></sub> = I<sub><small>2</small></sub> . For example, a bare glass test surface reflects 4%. To maximize fringe contrast the reference surface must also reflect 4%.</p>
+
+    <p>If a 4% reference surface is used to test a mirror (with 90% plus reflectivity), then a very thin beam-splitter (e.g., a pellicle) can be used to reduce the intensity from the test optic. Alternatively, a reference surface having a much higher reflectivity can be used to improve fringe contrast. In the latter case, one will notice that the dark fringes become much thinner, like sharp pencil lines.</p>
+
+    <p>A sample interferogram of a supposed "flat" mirror is shown in Figure 3. If the mirror were flat, equally spaced straight line fringes should be observed (depending on the relative tilt between the reference surface and the test surface). Obviously, the mirror is not very flat at all. Each fringe is a height contour as in a topographical map. (The metric or unit of measure in most Fizeau interferometers is the wavelength of the source. For example, the helium near laser wavelength is 0.6328 microns.) The height difference between each contour or fringe is 1 wave. If knowledge of the surface error or its departure from flatness is desired, <u>we must interpret these fringes as representing half-wave contours!</u></p>
+
+    <center>
+      <IMG  WIDTH="300"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009137main_0717-3.jpg"  HEIGHT="346"  BORDER="0" /><A HREF="/llis_lib/txt/1009616main_0717-3.txt"  >[D]</A>
+    </center>
+
+    <p>In addition we must know whether the pattern seen in Figure 3 is a hill or a valley on the mirror surface. This can be determined by placing your finger on the front of the reference surface metal support ring (Figure 1) and pressing lightly toward the interferometer housing. If the fringe patterns collapse or contract, the pattern represents a hill or bump. If they expand, the pattern represents a valley.</p>
+
+    <p>2. <u>Testing a Lens</u></p>
+
+    <p>The setup for testing a lens is illustrated in Figure 4. The lens is carefully aligned to the Fizeau beam. The beam is focused by the lens to an image point. To return the beam back to the interferometer another auxiliary reference surface is needed. In this example a small concave spherical mirror is used. This sphere should be mounted so that X,Y, and Z translation degrees of freedom are available. The center of curvature of the sphere is then made coincident with the focal point of the lens. (Be careful&#150;make sure that the focussed beam is not on the surface of the small retro sphere). The beam is reflected by the reference sphere and returned through the system.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009138main_0717-4.jpg"  HEIGHT="300"  BORDER="0" /><A HREF="/llis_lib/txt/1009617main_0717-4.txt"  >[D]</A>
+    </center>
+
+    <p>The interferogram that is initially seen is likely to be an off-center bull's eye pattern. This means that the reference sphere's center of curvature is not axially coincident with the lens focal point. Use the tip and tilt adjustments on the Fizeau reference surface to center the bull's eye as shown in Figure 5(a), then use the axial translation on the concave sphere to move the interferogram into a best null condition (i.e., minimizing the number of fringes seen over the interferogram), Figure 5(b). Now use the adjustments on the reference flat to introduce tilt fringes as shown in Figure 5(c). It should be noted that the test system has significant spherical aberration.</p>
+
+    <center>
+      <IMG  WIDTH="300"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009139main_0717-5.jpg"  HEIGHT="353"  BORDER="0" /><A HREF="/llis_lib/txt/1009618main_0717-5.txt"  >[D]</A>
+    </center>
+
+    <p>An alternate setup for testing a lens is shown in Figure 6. Here the Fizeau reference surface is a sphere. It is a specially designed positive power lens where rays emerging from the last surface of the lens are normal to that surface. The test lens is aligned to the test beam and oriented so its rear focal point is coincident with the transmission spheres focal point. The beam emerges from the lens as collimated light. A flat auxiliary referencesurface is needed to retro-reflect the test beam back to the interferometer.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009140main_0717-6.jpg"  HEIGHT="300"  BORDER="0" /><A HREF="/llis_lib/txt/1009619main_0717-6.txt"  >[D]</A>
+    </center>
+
+    <p>We note that transmission spheres come in a variety of F-numbers. Since your test lens has a certain F-number, pick a transmission sphere whose F-number provides a beam that either fills or overfills the test lens. Never pick a transmission sphere that underfills because then you are not testing the lens over its full aperture. Aberration content will appear lower than it actually is.</p>
+
+    <p>Configurations for testing a wide variety of other systems are illustrated in Figure 7.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009141main_0717-7.jpg"  HEIGHT="1153"  BORDER="0" /><A HREF="/llis_lib/txt/1009620main_0717-7.txt"  >[D]</A>
+    </center>
+
+    <p>3. <u>Retrace Error</u></p>
+
+    <p>The purpose of the reference sphere in Figure 4 is to return the incoming ray back upon itself so that it follows the same path on the second pass as it did on the first pass. This occurs exactly only when the incoming beam happens to be perfect, i.e. exhibits a spherical wavefront. As aberration accumulates on the first pass through the test system, the match to the reference sphere becomes less perfect. Path deviations appear on the return ray, which is now no longer coincident with the first pass ray. The optical path difference picked up by the second pass ray is not the same as the first pass ray. This is retrace error (also called ray-mapping error) (References 1, 3 and 4). As a consequence, it is no longer true that we can simply divide the results by two to obtain the single pass wavefront aberration from double pass fringe data.</p>
+
+    <p>There are some visual clues to indicate if retrace error is significant. First, with the room darkened, check to see that the beam diameter of the light returning through the test optic on the second-pass is the same as that for the first pass after setting the null-fringe. Second, examine the irradiance distribution of this second-pass beam at the test optic. If the second-pass beam overfills or underfills the test optic aperture, and/or the intensity distribution is nonuniform, then retrace error is significant in the test setup.</p>
+
+    <p>To minimize the effect of retrace error, a different retro optic is usually needed. If retrace error were significant in the case illustrated in Figure 4, then a longer radius of curvature retro sphere is needed and it should be convex instead of concave. This is shown in Figure 8. The longer radius convex surface reduces the angular disparity between the incident and reflected rays. It also reduces the lateral offset between the first and second pass rays at surfaces in the test optic.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009142main_0717-8.jpg"  HEIGHT="186"  BORDER="0" /><A HREF="/llis_lib/txt/1009621main_0717-8.txt"  >[D]</A>
+    </center>
+
+    <p>4. <u>Collecting and Handling Data</u></p>
+
+    <p>It is not the purpose of this guideline to describe methods used to analyze interferograms. That deserves a guideline of its own. However, we will describe the various data collection schemes and how they interface with the analysis software. There are basically three options available to the user: 1) digitizing tablet, 2) automatic fringe following; 3) uniform grid phase measuring.</p>
+
+    <p>The simplest and least expensive means of selecting and inputting data to an analysis code is via a digitizing tablet. A hard copy of the interferogram is placed on the tablet. The user interfaces with the tablet (and the fringe analysis code) with a digitizing pen or mouse. The code first asks the user to define the pupil. Next, data points for each fringe are entered in proper sequence from low to high contour. Once this data file is entered into the computer, the fringe code can proceed with its analysis and determine aberration content. To avoid the toil of hand digitizing, software packages are commercially available that incorporate a fringe following routine. The interferogram is imaged onto a CCD. A frame-grabber captures the fringe pattern and formats it for the computer. This intensity digitized image is then operated on by the fringe following software. It automatically generates data centered along a fringe. However, the user still must define the fringe order.</p>
+
+    <p>An alternative approach to fringe following is a phase measuring interferometer (PMI). This is a highly automated data acquisition system. The reference plate of the Fizeau is mounted in a fixture which is piezoelectrically driven, i.e. minute cyclic axial shifts are introduced. (This is equivalent to introducing a piston into the fringe pattern.) The pupil image (with fringes across it) is recorded on a CCD. The CCD is a uniform array of sensors. Each pixel monitors the variation in local irradiance as the reference plate is moved by the actuators. Data is acquired at every pixel for four or five discrete positions of the reference plate during its sweep. This enormous amount of data is fed into a computer where the analysis software calculates the local phase at each pixel. Fringe ordering is done automatically. Plus, the huge amount of data collected on a uniform grid offers a dramatic improvement in accuracy and repeatability. Also note that this method allows the user to
+    analyze the "null" interference pattern, something the first two techniques cannot do.</p>
+
+    <p>For a particular test setup it is usually a good idea to take four separate interferograms with fringes tilt-biased top, bottom, right, and left respectively. Fringe codes usually have an option whereby several interferograms can be averaged. An interferogram from each fringe bias is entered into the code, and the ensemble average obtained. This average is a better estimate of aberration content than any single interferogram.</p>
+
+    <p>When testing imaging systems it is a good practice to repeat the test setup at least three times. This is because misalignments in the setup can introduce unwanted aberrations (usually coma). For each setup obtain the four fringe biased data sets mentioned above and calculate the subaverage. Then average these subaverages.</p>
+
+    <p>5. <u>Environmental Constraints</u></p>
+
+    <p>Vibration, whether induced through the floor into the air-isolated optical table supporting the interferometer or coupled via acoustics, is a major weakness of interferometers. This mechanical noise makes the fringe pattern unstable; it dances around at high frequency. It is hard to do meaningful interferometry under such shaky circumstances. Hence it is very important when establishing a metrology lab to locate it in a quiet area. For example, you would not want to place it between a machine shop and an optical fabrication shop. At times it may even be necessary to come in at night, when everyone else is gone and all other machines are turned off, just to get stable fringes.</p>
+
+    <p>Another source of trouble is air currents or turbulence from air vents, or thermals (from electronic equipment for example). The fringes don't dance as with mechanical vibration but actually change shape. They meander! When an interferogram is obtained under these circumstances you are not sure how much is the test piece and how much due to changes in the refractive index in the intervening air. Shrouding the work area can be a considerable help. For example, commercial foam board from office supply houses is a useful shrouding material. Also, with a PMI, frame averaging can sometimes reduce the problem considerably.</p>
+
+    <p>6. <u>Mounting</u></p>
+
+    <p>Sometimes an aberration attributed to a test optic is actually induced by the manner in which the optic is held in a mount. People are sometimes afraid that an optic might fall out, so they clamp it in (or down) good and tight. As a result, the interferogram may show significant aberration (usually astigmatism) even though the optic itself is of excellent quality. So be careful, you want to constrain the test optic with a minimum of force&#150;snug enough so that it doesn't rattle around&#150;but loose enough to avoid stress-induced deformation.</p>
+
+    <p>Large optics (meter class) have an additional mounting difficulty. They are usually quite heavy and can deform under their own weight (Reference 5). The fringe pattern will show significant astigmatism. Astronomical primary mirrors are particularly susceptible to this. Elaborate fixturing is sometimes required to alleviate the problem.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>All optics to be used on spaceborne or space-related instruments should be tested to validate their performance as required by specification. The Fizeau interferometer is the primary tool in this optical validation process. It provides the standard against which other optics are compared. Therefore proper use of a Fizeau interferometer ensures that the resulting data can be employed as a pass/fail criteria on the component or system.</p>
+
+    <p><u>References</u></p>
+
+    <ul>
+      <li>J. Geary, Introduction to Optical Testing, Vol. TT 15, SPIE Optical Engineering Press (1993).</li>
+
+      <li>P. Hariharan, Basics of Interferometry, Academic Press (1992).</li>
+
+      <li>D. Malacara, Optical Shop Testing, 2nd edition, John Wiley (1991).</li>
+
+      <li>L. Selberg, "Interferometer accuracy and precision," in SPIE Proceedings, Vol. 749, pp. 8-18 (1987) and in Vol. 1400, pp. 813-820.</li>
+
+      <li>P. Yoder, Opto-Mechanical System Design," Marcel Dekker, Inc., 2nd edition (1993).</li>
+
+      <li>J. Geary and L. Parker, "New test for cylindrical optics," Opt. Eng. 26, 8, pp. 813-820.</li>
+    </ul>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If optics destined for spaceborne or space-related instruments are not tested, or are improperly tested, then the consequences could be the ultimate failure of the mission in-whole or in-part. The Hubble Space Telescope primary mirror is a case in point.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The Fizeau interferometer is the most commonly used interferometer for testing optical components and systems used aboard spaceborne or space-related instrumentation. This guideline provides information on the proper use of this instrument.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

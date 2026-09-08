@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0891: Preventive Maintenance Strategies Using Reliability Centered Maintenance (RCM)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0891: Preventive Maintenance Strategies Using Reliability Centered Maintenance (RCM)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0891 (Database ID: 891)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/891" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number PM-4 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>In the past, preventive maintenance was performed without any guidance or regard for safety or cost concerns, as long as systems performed their functions. The primary reason for the development of RCM was to implement a preventive maintenance strategy that could adequately address system availability and safety at the lowest possible cost. The RCM process answers and directs preventive maintenance decisions as to the what, where, and when types of questions.</p>
+
+    <p><u>Introduction</u></p>
+
+    <p>In the past, product development and manufacturing engineering dominated the technical disciplines in the U.S. industrial community with operations and maintenance (O&amp;M) taking a lower priority to corporate success strategies. This priority has dramatically shifted to the point that O&amp;M is now on a par with the development and manufacturing disciplines. Concerns about maintenance and logistics costs caused this shift in priority. A valid question is how to get maximum use of resources committed to the preventive maintenance program.</p>
+
+    <p>This technique discusses preventive maintenance and defines RCM as part of an effective preventive maintenance program. Some cost-benefit considerations realized through the use of RCM are also illustrated.</p>
+
+    <p><u>Introduction to Preventive Maintenance</u></p>
+
+    <p>The majority of systems have long been operating in the corrective maintenance mode. Corrective maintenance is the performance of and almost total commitment of resources to unplanned or unexpected maintenance tasks. Preventive maintenance, however, is the pre-planning of inspection and/or servicing tasks.</p>
+
+    <p>Corrective approaches restore the functional capabilities of failed or malfunctioning equipment or systems. However, corrective maintenance is more costly than preventive maintenance because of the unplanned interruptions of operations, idle time waiting for spare parts, and haphazard troubleshooting for failure causes.</p>
+
+    <p><u>Preventive Maintenance Program</u></p>
+
+    <p>In general, when creating a new or upgrading an existing preventive maintenance program, two items of essential information are required: (1) identification of what preventive maintenance tasks are to be performed and (2) when each task should be performed (see Figure 1).</p>
+
+    <center>
+      <IMG  WIDTH="413"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009398main_0891-1.jpg"  HEIGHT="402"  BORDER="0" /><A HREF="/llis_lib/txt/1009871main_0891-1.txt"  >[D]</A>
+    </center>
+
+    <p>Whatever method is used to determine what or if a task is to be performed results in a time-directed, condition-directed, or failure-finding task selection or a run-to-failure decision (as defined above). The next step is to incorporate the preventive maintenance program into the existing operations infrastructure and to ensure that it is implemented in everyday operations. Moreover, a series of questions must be answered before any program can be implemented. Typically, such questions might include the following:</p>
+
+    <ol type="a">
+      <li>Are new procedures or modifications to existing procedures required?</li>
+
+      <li>Are all the standard materials (tools, filters, etc.) available?</li>
+
+      <li>Is any special tooling or instrumentation required?</li>
+
+      <li>Are an appropriate number of people available to conduct the program?</li>
+
+      <li>Are any capital investments required?</li>
+
+      <li>Will the new/upgraded program affect the quantity of on-hand spares required?</li>
+
+      <li>How long will it take to incorporate the new/upgraded program into the maintenance management information system (MMIS)? Is the existing MMIS capable of accepting the entire new/upgraded program (e.g., tracking time sequenced data in condition-directed tasks)?</li>
+
+      <li>If full shutdown must be periodically planned, do the tasks and task intervals lend themselves to such a schedule?</li>
+
+      <li>Do new tasks require a cycle that is a common denominator with other existing task intervals?</li>
+    </ol>
+    <u>Preventive Maintenance Program Elements</u>
+
+    <p>Figure 1 is a simplified illustration of a preventive maintenance program development. Many supporting management and technical disciplines are involved in the development of the ideal preventive maintenance program and task packaging, and they are important in supporting the RCM concept that is discussed later in this technique.</p>
+
+    <p>The important supporting technologies used in the development process are described below.</p>
+
+    <p>A product malfunction or failure can present a significant learning opportunity in that much technical knowledge can be gained from comprehensive failure reporting, root cause analysis, and corrective action feedback programs. Without such programs, it is virtually impossible to establish proper corrective action or to intelligently decide if any preventive maintenance action is possible. A good failure reporting system is vital to the "retain or increase mean-time between failures" portion of an availability improvement program.</p>
+
+    <p>To prudently employ condition-directed tasks requires an entire diagnostic technology that is still evolving with new techniques and applications. The technology is dedicated to following, understanding, and contributing to the area generally referred to as "predictive maintenance technology." Some of the tools that comprise predictive maintenance technology are as follows:</p>
+
+    <ol type="a">
+      <li>Vibration, pulse, and spike energy measurement.</li>
+
+      <li>Acoustic leak detection.</li>
+
+      <li>Thermal imaging.</li>
+
+      <li>Fiber optic inspection.</li>
+
+      <li>Trace element sensing.</li>
+
+      <li>Debris analysis.</li>
+
+      <li>Lubricant analysis.</li>
+
+      <li>Stress/strain/torque measurement.</li>
+
+      <li>Nonintrusive flow measurement.</li>
+
+      <li>Microprocessors with expert system software.</li>
+    </ol>
+
+    <p><u>Preventive Maintenance Task Packaging</u></p>
+
+    <p>This task consists of three major elements:</p>
+
+    <p><i>Task Specification.</i> The task specification provides complete technical definition and direction of specific requirements to the implementing maintenance organization. This document, which is the key transition from the ideal to the real world, either (1) details the data measurement and evaluation requirements for a condition-directed task along with the limiting acceptance criteria or (2) specifies critical requirements that must be met in a time-directed overhaul task.</p>
+
+    <p><i>Procedure.</i> The procedure is a basic document that guides the execution of a preventive maintenance task. The document may be a one page instruction for a simple task or complex details on precisely how the preventive maintenance task is to be achieved.</p>
+
+    <p><i>Logistics.</i> The logistics entail a variety of administrative and production support activities. Typical logistic considerations include tooling, spare parts, vendor support, training, documents and drawings, make/buy decisions, test equipment, scheduling, etc. Clearly, these considerations closely interplay with both the task specification and procedure and constitute a major portion of maintenance planning.</p>
+
+    <p>In summary, a preventive maintenance program can be created or upgraded by implementing the ideas given above. With the support of key technologies, it will produce the "what task" and "when done" information.</p>
+
+    <p><u>Reliability Centered Maintenance (RCM)</u></p>
+
+    <p>As conveyed above, the objective of most of the current preventive maintenance practices is to preserve equipment operation. Until recently, this has resulted in little, if any, consideration as to why certain preventive maintenance actions and are taken and what priority should be assigned to the expenditure of preventive maintenance resources. Almost without fail, maintenance planning starts with the equipment and seeks to specify as quickly as possible those components necessary to keep it running.</p>
+
+    <p>RCM is not just another approach to this repetitive process. The basic RCM concept is really quite simple and might be characterized as organized engineering common sense. The features that define and characterize RCM and set it apart from any other preventive maintenance planning processes in use today are described below.</p>
+
+    <p><u>Preserves System Function.</u> Unlike the ingrained notion that preventive maintenance is performed to preserve equipment operation, the primary objective of RCM is to preserve system function. Although equipment preservation leads ultimately to system preservation, it is not the initial step in the RCM process. In RCM, the expected output is known, and preserving that output or function is the primary task.</p>
+
+    <p>This feature enables systematic decisions in later stages of the process as to just what equipment relates to that function and does not assume a priori that "every item of equipment is equally important," a tendency that seems to pervade the current preventive maintenance approach.</p>
+
+    <p><u>Identifies Failure Modes That Can Produce Unwanted Functional Failures.</u> After preserving system function, avoiding loss of function or functional failure is the next item of RCM consideration. Functional failures take many forms and may occur in various stages, all of which must be considered.</p>
+
+    <p>The loss of fluid boundary integrity is a functional failure that illustrates this point. A system loss of fluid can be caused by (1) a minor leak that may be qualitatively defined as a drip; (2) a leak defined as a design basis leak (any loss beyond a certain gallon per minute value will produce a negative effect on system function); or (3) a total loss of boundary integrity, which can be defined as a catastrophic loss of fluid and loss of function. In this example, a single function could lead to three distinct functional failures.</p>
+
+    <p>The key to the failure identification feature is to identify the specific failure modes in specific components that can potentially produce those unwanted functional failures.</p>
+
+    <p><u>Enables Prioritization of Failure Modes.</u> In preserving system function, RCM provides a systematic approach to deciding what priority must be assigned to budget and resource allocations. Since functional failures and their related failure modes are as diverse as the functions and components they affect, the prioritization of failure modes is essential.</p>
+
+    <p><u>Allows Preventive Maintenance Tasks To Be Judged As To Applicability and Effectiveness.</u> The features described above help in developing a very specific roadmap to the where and why, of the maintenance task and the priority that should be assigned to it. Each potential task must then be judged as to (1) its applicability (i.e., will it prevent or mitigate a failure, detect the onset of a failure, or discover a hidden failure) and (2) its effectiveness (i.e., does it justify the spending of resources to do it).</p>
+
+    <p>Generally, if more than one candidate task is judged to be applicable and effective, the least expensive task will be selected. If a task fails either the applicability or effectiveness test, a run-to failure decision must be made.</p>
+
+    <p><u>Cost-Benefit Considerations.</u> The primary force behind the invention of RCM was the need to develop a preventive maintenance strategy that could adequately address system availability and safety without creating a totally impractical cost requirement. Figure 2 illustrates the success of keeping commercial aircraft maintenance cost per flight hour constant from the late 1960's to the early 1980's.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009399main_0891-2.jpg"  HEIGHT="391"  BORDER="0" /><A HREF="/llis_lib/txt/1009872main_0891-2.txt"  >[D]</A>
+    </center>
+
+    <p>Table 1 presents another way to view the impact of RCM on the commercial aircraft world.</p>
+
+    <center>
+      <IMG  WIDTH="448"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009400main_0891-table1.jpg"  HEIGHT="684"  BORDER="0" /><A HREF="/llis_lib/txt/1009873main_0891-table1.txt"  >[D]</A>
+    </center>
+
+    <p>Two significant points can be observed from these data: (1) the dramatic shift in the reduction of costly component overhauls during the pre-1964 and post-1960/1987 periods; and (2) the constancy of the condition-directed task structure. The reduction in expensive component overhauls, brought about by run-to-failure decisions, was made possible by a design philosophy that included double and triple structural design redundancy in the flight-critical functions. RCM was used to take advantage of these structural design features when preventive maintenance was critical and the run-to-failure decision was appropriate.</p>
+
+    <p>The constancy of the condition-directed task structure is attributed to the fact that the commercial aircraft industry was one of the early users of performance and diagnostic monitoring as a preventive maintenance tool. It has continued to successfully apply this practice throughout the generation of the newer jet aircraft.</p>
+
+    <p>The results indicated in figure 2 and table 1 have led to a growing interest in other such areas as nuclear power generation and electric utility plants. The obvious reasons for this growing interest are (1) control and reduction of O&amp;M costs and (2) increase in plant availability. All of this indicates that the cost-reduction benefits of RCM that dramatically impacted commercial aviation offer similar potential dramatic payoffs in other areas in which complex plants and systems are routinely operated.</p>
+
+    <p><u>Conclusion</u></p>
+
+    <p>RCM is a logical approach to preventive maintenance which does not rely on any heuristic processes. RCM helps in making direct and deliberate preventive maintenance decisions that were not previously possible. It can also be used as the methodology for defining preventive maintenance for a such new systems as the Space Station. Virtually every organization that has conducted an RCM program has recognized the value of the system analysis process as a training ground for system engineers. In addition, the failure scenarios developed in RCM analyses may be used beneficially as simulator inputs to plant transient or upset conditions in order to anticipate such occurrences in the future.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Annual Reliability and Maintainability Symposium, 1991 Proceedings.</li>
+
+      <li>Matteson, Thomas D., "The Origin of Reliability-Centered Maintenance," Proceedings of the Sixth International Maintenance Conference, Institute of Industrial Engineers, October 1989.</li>
+
+      <li>"Reliability-Centered Maintenance for Aircraft Engines and Equipment," MIL-STD-1843, February 8, 1985.</li>
+
+      <li>"RCM Cost-Benefits Evaluation," Electric Power Research Institute, Interim EPRI Report, January 1992.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>RCM is the best approach to developing the preventive maintenance program for a new system. It provides a step-by-step approach, prioritizes preventive maintenance tasks, and optimizes the repair cost.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Institute a Preventive Maintenance Program based upon current reliability-centered maintenance (RCM) techniques.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle Orbiter.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

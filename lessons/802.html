@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0802: Battery Verification Through Long-Term Simulation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0802: Battery Verification Through Long-Term Simulation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0802 (Database ID: 802)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/802" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1434 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Since the operational readiness and future performance of space flight batteries at any point in a mission are strongly dependent upon past power cycles and environments, thoroughly instrumented and analyzed ground testing of space flight batteries identical to flight configurations will ensure predictable performance and high reliability of flight batteries.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Real-time, long term mission, power cycle simulations of space flight batteries in ground facility test beds provide an excellent indication of expected performance in flight. Complete verification of a full real-time mission is not possible with long-term missions due to the test lead time. Instead of accelerating the test, the test engineers should "lead" the actual mission by a year or two (as long a lead-time as possible while still being able to use flight designs and configurations). This verification is in addition to qualification steps for the designs. Accelerated testing is not common for low earth orbit (LEO) missions but is used for non-LEO missions.</p>
+
+    <p>The cells are interconnected in the anticipated flight condition and are housed in a thermally controlled chamber which is purged with an inert gas. Preprogramed, computer controlled power supplies and load banks cycle the batteries through the same dormant, power drain, and charging cycles that they would encounter in the space operation. Shading of solar arrays during eclipse periods is simulated by absence of charging current, and charge cycles are simulated during exposure to the sun. Table 1 lists the principal purposes and features of long-term battery simulations.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009274main_0802-1.jpg"  HEIGHT="274"  BORDER="0" /><A HREF="/llis_lib/txt/1009749main_0802-1.txt"  >[D]</A><br />
+      Table 1. Principal Purposes and Features of Long-Term Battery Simulation
+    </center>
+
+    <p>All cells are instrumented at various locations for current, voltage, temperature, and pressure. Ambient temperature in the chamber is constantly monitored. Voltage and current values are available in real time through digital readouts. Voltage, current, pressure, and temperature are recorded constantly on strip charts. Data are sampled by computer programs which compute and analyze ongoing performance. Table 2 shows the parameters usually recorded and/or computed for each battery cell from sampled data. Ground testing of batteries and their associated power systems has proven to be a valuable asset for the resolution of in-flight anomalies. Limits testing can be safely simulated on the ground to verify or explore variations in flight performance.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009275main_0802-2.jpg"  HEIGHT="300"  BORDER="0" /><A HREF="/llis_lib/txt/1009750main_0802-2.txt"  >[D]</A><br />
+      Table 2. Recorded and Computed Data Parameters for Each Cell
+    </center>
+
+    <p>Safety precautions are important in testing of all battery systems because leakage of electrolytes or effluents can be hazardous. Typical precautions and safeguards for nickel-hydrogen (Ni-H<small><sub>2</sub></small>) batteries are shown in Table 3.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009276main_0802-3.jpg"  HEIGHT="191"  BORDER="0" /><A HREF="/llis_lib/txt/1009751main_0802-3.txt"  >[D]</A><br />
+      Table 3. Typical Precautions/Safeguards for Ni-H<small><sub>2</sub></small>Battery Testing
+    </center>
+
+    <p>An important action that will help to ensure a successful test effort is the preparation of a comprehensive test plan before the test begins. The test plan should describe the overall scope and approach to the test operation, and provide a detailed test sequence including the test set up parameters, data handling requirements, and test procedures. The test setup description should include the cell specifications and method of packaging into the battery configuration, the data acquisition and control procedures, and the thermal control system requirements. Test procedures should include cell characterization testing procedures (assuming that the cells have already passed through acceptance testing prior to receipt at the test site), launch scenario simulation procedures, mission simulation procedures, and mission capacity test and reconditioning procedures if required.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>MSFC has conducted multi-year testing of silver-zinc, nickel-cadmium, and nickel-hydrogen batteries since 1986. Some tests that were started in 1986 are still underway at this writing. Test durations are over eight years and counting. MSFC is conducting 8 to 10 tests simultaneously, with up to 400 channels of instrumentation on some tests. To support the Hubble Space Telescope, diode bypass relays on two batteries were opened to simulate an in-flight anomaly. The HST ground tests indicated that strong performance should continue from the HST flight batteries despite the in-flight anomaly.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Whitt, Thomas and Lorna Jackson: "Battery and Cell Testing at Marshall Space Flight Center," (a presentation), NASA/MSFC, EB12, Huntsville, AL, 1988.</li>
+
+      <li>Brewer, Jeffrey, John Pajak, and Lorna Jackson: "Test Plan for AXAF-I Ni-H<small><sub>2</sub></small> Battery Mission Simulation Testing," NASA/MSFC, EB71, Huntsville, AL, March 30, 1994.</li>
+
+      <li>Brewer, Jeffrey, and Thomas Whitt: "HST Ni-H<small><sub>2</sub></small> Flight Spare Battery Test," NASA/MSFC, EB12, Huntsville, AL, Huntsville, AL, October 6, 1989.</li>
+
+      <li>Whitt, Thomas, and Charles Hall: "HST Ni-H<small><sub>2</sub></small> Six Battery Mission Simulation Test," NASA/MSFC, EB12, Huntsville, AL, November 2, 1989.</li>
+
+      <li>Whitt, Thomas, and Jeffrey Brewer: "Fifth Semi-Annual Report on HST Ni-H<small><sub>2</sub></small> Six Battery and Flight Spare Battery Test," NASA/MSFC, Huntsville, AL, August 8, 1993.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to perform long term mission simulations will result in inadequate knowledge of long duration performance characteristics and could result in the retention of undesirable battery characteristics or failure modes that would result in mission failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Conduct highly instrumented real-time long term tests and accelerated testing of space flight batteries using automated systems that simulate prelaunch, launch, mission, and post mission environments to verify suitability for the mission, to confirm the acceptability of design configurations, to resolve mission anomalies, and to improve reliability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Hubble Space Telescope (HST), Advanced x-ray Astrophysics Facility (AXAF), External Tank (ET), Solid Rocket Booster (SRB), Inertial Upper Stage (IUS), and Combined Release and Radiation Effects Satellite (CRRES).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

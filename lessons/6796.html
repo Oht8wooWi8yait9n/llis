@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6796: TRaiNED Deployment Failure Was Traced to Design Flaws and Process Escapes [Export Version]</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6796: TRaiNED Deployment Failure Was Traced to Design Flaws and Process Escapes [Export Version]</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6796 (Database ID: 6796)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2012-08-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Manufacturing and Assembly,  Flight Equipment,  Hardware,  Industrial Operations,  Launch Vehicle,  Parts,  Materials,  & Processes,  Spacecraft,  Spacecraft and Spacecraft Instruments,  Quality</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6796" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Terrain-Relative Navigation and Employee Development (TRaiNED) project was a Class D (i.e., low cost, high risk) mission employing a sounding rocket to capture exoatmospheric and low-altitude imagery. Using the imagery to refine navigation algorithms, the payload developed by the NASA/Caltech Jet Propulsion Laboratory (JPL) for the 41.087 mission (Dr. Martin Heyne, Principal Investigator) was intended to advance the technology for autonomous terrain-relative navigation and hazard detection, providing aerial and surface access to key sites in the solar system. 
+<br> 
+<br> The launch of the 41.087/Heyne Terrier-Improved Orion sounding rocket (Figure 1) from White Sands Missile Range (WSMR) on December 6, 2010 was nominal, but no data was received from the JPL-furnished cameras located in the exoatmospheric section. The camera field of view was blocked by a blow-off door, which did not release early in the flight as planned. The sounding rocket for the quotHeynequot mission employed a legacy design in which the door (Figure 2) is held in place by tabs and by a single brass screw that is severed in flight by a pyrotechnic guillotine cutter. Rotational acceleration forces then act on the released door, which rotates away from the payload. 
+<br> &nbsp; 
+<table border="0"> 
+ <tbody> 
+  <tr> 
+   <td><img align="Bottom" alt="Figure 1 is a color photo of a torpedo-shaped, unpainted, sheet metal tube (i.e., the sounding rocket) suspended from a rail at an indoor location. The dimensions of the rocket are not clear, as there is nothing in the image that provides dimensional reference. A rectangular “cover” (identified as the camera door) over an apparent opening in the rocket appears approximately in the mid-section of the rocket length. The door assembly protrudes only slightly from the body of the rocket, leaving the rocket fairly streamlined. Two lengths of what appears to be wiring are visible on the exterior of the rocket near the door: one is an orange wire taped to the rocket exterior near the door and extending further along the length of the rocket, and the other is a grey wire or thin grey tubing that appears to penetrate the surface of the rocket." border="0" height="316" src="https://llis.nasa.gov/llis_lib/images/1048777main_2012-05_TRaiNED_Fig1_small.jpg" title="Figure 1 is a color photo of a torpedo-shaped, unpainted, sheet metal tube (i.e., the sounding rocket) suspended from a rail at an indoor location. The dimensions of the rocket are not clear, as there is nothing in the image that provides dimensional reference. A rectangular “cover” (identified as the camera door) over an apparent opening in the rocket appears approximately in the mid-section of the rocket length. The door assembly protrudes only slightly from the body of the rocket, leaving the rocket fairly streamlined. Two lengths of what appears to be wiring are visible on the exterior of the rocket near the door: one is an orange wire taped to the rocket exterior near the door and extending further along the length of the rocket, and the other is a grey wire or thin grey tubing that appears to penetrate the surface of the rocket." width="475">.........................</td> 
+   <td><img align="Bottom" alt="Figure 2 is a color photo that is a blow-up of Figure 1, providing a close up of the camera door. Less of the rocket length is visible in this image, but the door is visible in greater detail. It is clear in the close-up that the camera door is flush with the surface of the rocket such that it might be airtight. The camera door appears to be approximately 5 inches high and 4 inches wide. A seam where two section of the rocket are jointed is visible here near the camera door." border="0" height="316" src="https://llis.nasa.gov/llis_lib/images/1048778main_2012-05_TRaiNED_Fig2_small.jpg" title="Figure 2 is a color photo that is a blow-up of Figure 1, providing a close up of the camera door. Less of the rocket length is visible in this image, but the door is visible in greater detail. It is clear in the close-up that the camera door is flush with the surface of the rocket such that it might be airtight. The camera door appears to be approximately 5 inches high and 4 inches wide. A seam where two section of the rocket are jointed is visible here near the camera door." width="475"></td> 
+  </tr> 
+  <tr> 
+   <td><b>Figure 1.</b> Heyne mission sounding rocket just prior to flight at<br> WSMR</td> 
+   <td><b>Figure 2.</b> Close-up of the sounding rocket, with an Exoatmospheric Camera Door clearly visible<br> on the left</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> Review of telemetry records, inspection of the remaining door hardware, and material analysis, established that the blow-off door release (Figure 3) was actuated at the proper time in flight, but the deployment screw was only partially severed by the cutter (Reference (1)). A more common industry practice is to use high strength fasteners with an extremely high pre-load, so that the cutter only need weaken the screw to the point that the tensile load induces failure in the remainder of the material. 
+<br> &nbsp; 
+<table border="0"> 
+ <tbody> 
+  <tr> 
+   <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td><b>Figure 3.</b> A detailed diagram of the blow-off door mechanism has been<br> redacted for International Traffic in Arms Regulations (ITAR) compliance.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> Although the Heyne mission failed to capture camera imagery at 120 km altitude from its exoatmospheric experiment section, the JPL payload did succeed in capturing the requisite descent imagery. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li>quot41.087/Heyne Terrier-Orion Anomaly Investigation Board Final Report,quot NASA Sounding Rocket Program Office, May 10, 2011.</li> 
+ <li>Donald R. Sevilla, e-mail with subject quotRe: TRaiNED AIB Final Report - Bolt Cutter Failure,” July 7, 2011.</li> 
+ <li>“Mate/Demate, Verify, and Document Connectors One-at-a-Time,quot NASA Lesson Learned No. 1619, NASA Engineering Network, August 8, 2005.</li> 
+</ol> Portions of the following text have been redacted, as indicated, for ITAR compliance. quotU.S. Personsquot may obtain a copy of the complete lesson learned by contacting the JPL Office of the Chief Engineer (David Oberhettinger at davido@nasa.gov).
+</section>
+<section><h2>Lesson(s) Learned</h2>
+In-flight failures are not unexpected on low cost, high risk, projects like the Phaeton projects that provide a learning experience for junior engineers. Nevertheless, the following TRaiNED lessons learned are applicable to any class of flight project: 
+<ol> 
+ <li><b>The anomaly report for the Heyne mission (Reference (1)) identified several design flaws.</b> This paragraph, which describes inherent weaknesses with the design of the door assembly for the Heyne mission, has been redacted for ITAR compliance.</li> 
+ <br /> 
+ <li><b>The material traceability and control processes for the fabrication and assembly of critical flight hardware were deficient.</b> This paragraph, which explains the flight hardware material traceability and control process deficiencies, has been redacted for ITAR compliance.</li> 
+ <br /> 
+ <li><b>The wiring harnesses for the two pyrotechnics were indistinguishable and could have been inadvertently swapped.</b> This paragraph, which reports a hardware feature that could result in mis-wiring of pyros, has been redacted for ITAR compliance.</li> 
+ <br /> 
+ <li><b>Long delays in missions that interrupt the typical mission timelines can be a complicating factor in both pre-launch mission assurance and post-flight collection of information.</b> This paragraph, which discusses the effect of changes in payload team staffing upon proper disassembly of the blow-off door, has been redacted for ITAR compliance.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>The Heyne design flaws can be addressed by such measures as reverting to the heritage blow-off door design and assessing the suitability of the selected pyrotechnic cutter. However, more rigorous mechanical design practices may prevent such design flaws (Reference (2)):<br />   
+  <ul> 
+   <li><b>Avoid identical electrical connectors in close proximity.</b> This paragraph, which recommends a practice to prevent mis-mating, has been redacted for ITAR compliance.</li> 
+   <br /> 
+   <li><b>Select reliable electro-mechanical devices.</b> This paragraph, which advocates use of a particular type of part, has been redacted for ITAR compliance.</li> 
+   <br /> 
+   <li><b>Adjust microswitches.</b> This paragraph, which proposes a switch adjustment measure, has been redacted for ITAR compliance.</li> 
+   <br /> 
+   <li><b>Verify pyrotechnic device functional margin.</b> This paragraph, which suggests performing a mechanism test, has been redacted for ITAR compliance.</li> 
+   <br /> 
+   <li><b>Select screw material, target diameter, and preload.</b> This paragraph, which recommends criteria for developmental testing, has been redacted for ITAR compliance.</li> 
+  </ul> </li> 
+ <br /> 
+ <li>Implement a process to verify that parts being manufactured for critical payload systems, such as mission success-critical deployment mechanisms, utilize the materials specified on the drawings. Review the adequacy of processes for the control of critical flight hardware during fabrication and assembly.</li> 
+ <br /> 
+ <li>Establish assembly processes that assure that critical flight wiring harnesses are not mis-mated (see Reference (3)), especially on flight projects where there may be frequent changes in the payload team.</li> 
+ <br /> 
+ <li>Flag anticipated changes in payload team personnel during the mission as an additional risk. Implement a process to assure retention of critical payload team knowledge. Plan for launch delays/scrubs by implementing and witnessing appropriate disassembly procedures.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.3.9 (“Managed Margins: Flight System Technical Resource Margins - S/C Mechanisms Functional Margins”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

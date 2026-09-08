@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0722: Spacecraft Electrical Harness Design Practice</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0722: Spacecraft Electrical Harness Design Practice</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0722 (Database ID: 722)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/722" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1238; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Designing and testing flight harnesses in accordance with the requirements of the GSFC Design and Manufacturing Standard (Ref. 1) for Electrical Harnesses enhances the probability of mission success (Reliability) by ensuring that harnesses meet high standards of quality as well as the electrical and environmental requirements of space flight missions. The occurrence of early failures is minimized.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p>Flight electrical harnesses are designed in accordance with the requirements and specifications of the GSFC Design and Manufacturing Standard for Electrical Harnesses (reference 1) which establishes the minimum requirements for the design and fabrication of space flight harnesses. Parts and materials are used as specified in the harness standard that can perform satisfactorily in the environments to be encountered. Fabrication methods and techniques are used as defined to ensure high quality electrical harnesses. The GSFC Design and Manufacturing Standard for Electrical Harnesses incorporates and references applicable requirements from a wide range of Federal, Military, and NASA specifications, standards, and publications.</p>
+
+    <p>Maximum current-carrying capacity is defined for wire sizes ranging from size AWG 12 to AWG 24 to ensure that the total temperature of wire does not exceed the operating temperature ratings of the wire. The total temperature of the wire includes the ambient space temperatures and the temperature rises due to current flows. The maximum voltage drop between power supplies and loads due to the impedance of wire and ground return paths are specified for various power supply voltage levels. The minimum size of individual wires used in harnesses is AWG 24 except for power harnesses where the minimum size of wires is limited to AWG 22.</p>
+
+    <p>A number of EMI design and construction techniques are used to minimize electromagnetic coupling between wires within harness assemblies. These techniques include isolation of different signal types such as high level and pulse signals from low level and continuous wave signals by using separate harnesses and connectors where possible. When these signal types must be included within the sane harness, the best possible isolation is obtained by grouping wires of similar signal types within the harness and on connectors. Other methods include shielding of individual wires or groupings of wires within the harness and using separate connectors where possible. Twisted pair leads, shielded when necessary, are used for power and balanced signal circuits. RG type RF cables terminated at both ends with coaxial connectors are used for RF signals.</p>
+
+    <p>A number of physical parameters and limitations are used as defined in the Design and Manufacturing Standard for Electrical Harnesses. The diameter of the harness is kept to a minimum and limited to one inch in diameter consistent with requirements for routing, installation, and handling. The Design and Manufacturing Standard for Harnesses contains information and a method for estimating the diameter of a harness. The lengths of harnesses are made to provide enough additional wire length for reworking connections at least one time. Minimum bend radiuses, location and support of wire breakouts, shielding and termination of shields are followed as defined in the harness standard. Harnesses are secured with lacing tape or tie wraps and movement is controlled by means of cable clamps or tie wraps.</p>
+
+    <p>Electrical connector types including protective covers, sealing grommets, wire splices, and potting compounds are selected and fabricated as required by the harness standard. Probing or testing flight harnesses or connectors is always accomplished via connector savors or breakout boxes. Mate/demate logs are maintained and connector inspections are instituted once the connector mate/demate count reaches 15 and inspected every 10 mates/demates thereafter. Connector hardware is staked with an approved epoxy after torquing. The staking is an indication that the hardware has been torqued and that it has not been disturbed.</p>
+
+    <p>A number of quality assurance provisions are followed as defined in the Design and Manufacturing Standard for Electrical Harnesses. Visual inspection includes harness documentation, materials used, design and fabrication methods, identification of components, and workmanship. Harness assemblies are tested for point to point electrical continuity in accordance with applicable wiring diagrams or wire lists. Values, within a connector bundle of the same conductor size and wire length, must be consistent within 10%. Insulation resistance is measured between each conductor and every other conductor and each conductor and shield. The insulation resistance must be greater than 100 megohm at an applied voltage voltage of 500v dc for a maximum of one minute.</p>
+
+    <p>Essentially all harnesses have strict contamination control and certification requirements. To meet these requirements shielding braids are ultrasonically cleaned with an approved solvent and wires and cable are wiped with clean lint free cloths and an approved solvent before fabrication into the harness. After harness fabrication is complete and certified, the complete harness is cleaned with an approved solvent, inspected with both black and white light.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The proper design, fabrication, testing, and certification of electrical harnesses significantly reduces the probability of spacecraft failures due to harness material deterioration in space, wire and connector failures due to current overloading, excessive stresses, and crosstalk and arcing between wires and harnesses. The use of appropriate materials and cleaning technique's during and following fabrication of harnesses controls contamination that can cause deterioration and failure of spacecraft hardware particularly many types of scientific instruments.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Design and Manufacturing Standard for Electrical Harnesses, Document No. GSFC-733-HARN-01</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>If this practice is not implemented, electrical harnesses used on spacecraft and instruments may not conform to their electrical and space environmental requirements. Harnesses may not be properly tested, cleaned, and certified prior to installation into spacecraft and instruments. This could result in early mission failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Design and fabricate space flight electrical harnesses to meet the minimum requirements of the GSFC Design and Manufacturing Standard for Electrical Harnesses.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

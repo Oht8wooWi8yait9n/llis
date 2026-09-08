@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0737: Design Reliable Ceramic Components With Cares Code</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0737: Design Reliable Ceramic Components With Cares Code</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0737 (Database ID: 737)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/737" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1254; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The increasing importance of ceramics as structural materials places high demand on assuring component integrity while simultaneously optimizing performance and cost. Components using ceramics can be designed for high reliability in service if the contributing factors that cause material failure are accounted for. This design methodology must combine the statistical nature of strength controlling flaws with fracture mechanics to allow for multiaxial stress states and concurrent flaw populations. The Ceramics Analysis and Reliability Evaluation of Structures (CARES) uses results from MSC/NASTRAN or ANSYS finite-element analysis programs to evaluate how inherent surface and/or volume type flaws affect component reliability.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Introduction</p> 
+<p>The unique properties that advanced ceramics have to offer for future commercial industries, propulsion and space related programs are phenomenal, such as high temperature strength, environmental resistance, and low density materials. NASA is dedicating a major effort to propulsion systems that reduce pollution, noise, and fuel consumption while improving reliability and service life. Consequently, research has been focused on improving ceramic material processing and properties as well as on establishing a sound design methodology.</p> 
+<p>Because of the variable severity of inherent flaws, the nature of ceramic failure is probabilistic and optimization of design requires the ability to accurately determine a load component's reliability. Methods of quantifying this reliability and the corresponding failure probability have been investigated and refined at NASAís Lewis Research Center. The result of this effort is a public domain computer program with the acronym CARES.</p> 
+<p>The design methodology used by CARES combines three major elements: (1) linear elastic fracture mechanics (LEFM) theory which relates the strength of ceramics to the size, shape, and orientation of critical flaws, (2) extreme value statistics to obtain the characteristic flaw size distribution function, which is a material property, and (3) material microstructure. Inherent in this design procedure is that component integrity is a function of the entire field solution of the stresses and is not based only on the most highly stressed point. In addition, the size of the stressed material surface area and volume affect the component strength.</p> 
+<p>Program Capability and Description</p> 
+<p>CARES is an integrated computer program written in FORTRAN 77 WAT V compiler which uses Weibull and Batdorf fracture statistics to predict the fast fracture reliability of isotropic ceramic components. CARES has three primary functions: (1) to analyze statistically the data obtained from the fracture of simple uniaxial tensile or flexural specimens, (2) to estimate the Weibull and batdorf material parameters using these data, (3) to perform a fast fracture reliability evaluation of a ceramic component experiencing thermomechanical loading. Component reliability is predicted by using elastostatic finite element analysis output from the MSC\NASTRAN or ANSYS computer programs.</p> 
+<p>The CARES code includes a number of fracture theories to predict material response due to multiaxial stresses. These methods are summarized in Table 1.</p> 
+<table border="2" cellpadding="5"> 
+ <tbody> 
+  <tr valign="top"> 
+   <td valign="top"><b>Weakest Link<br> Fracture Model</b></td> 
+   <td valign="top"><b>Size<br> Effect</b></td> 
+   <td valign="top"><b>Stress State<br> Effects</b></td> 
+   <td valign="top"><b>Compensational<br> Simplicity</b></td> 
+   <td valign="top"><b>Theoretical<br> Basis</b></td> 
+  </tr> 
+  <tr valign="top"> 
+   <td valign="top">Weibull (1939)</td> 
+   <td valign="top">Yes</td> 
+   <td valign="top">Unaxial</td> 
+   <td valign="top">Simple</td> 
+   <td valign="top">Phenomenological</td> 
+  </tr> 
+  <tr valign="top"> 
+   <td valign="top">Normal stress</td> 
+   <td valign="top">Yes</td> 
+   <td valign="top">Multiaxial</td> 
+   <td valign="top">Complex</td> 
+   <td valign="top">Phenomenological</td> 
+  </tr> 
+  <tr valign="top"> 
+   <td valign="top">Principle of independent<br> action (1967)</td> 
+   <td valign="top">Yes</td> 
+   <td valign="top">Multiaxial</td> 
+   <td valign="top">Complex</td> 
+   <td valign="top">Maximum principal<br> stress theory</td> 
+  </tr> 
+  <tr valign="top"> 
+   <td valign="top">Batdorf: 
+    <ul> 
+     <li>Shear-insensitive (1974)</li> 
+     <li>Shear-sensitive (1978)</li> 
+    </ul> </td> 
+   <td valign="top">Yes</td> 
+   <td valign="top">Multiaxial</td> 
+   <td valign="top">Complex</td> 
+   <td valign="top">Linear elastic<br> fracture mechanics</td> 
+  </tr> 
+ </tbody> 
+</table> Table 1. Statistical Fast-Fracture Models Available with CARES 
+<p>The Batdorf method is recommended because it couples LEFM with the Weibull weakest link theory (WLT). The Weibull normal stress averaging method and the principle of independent action (PIA) theories are included for comparison purposes and because of their previous popularity. All the fracture models available of strength distribution.</p> 
+<p>Figure 1 shows the fracture criteria and crack geometries available to the user for both surface and volume distributed flaws. The PIA and Weibull normal stress averaging fracture theories do not require a crack geometry. Batdorf's fracture theory can be used with several different mixed-mode fracture criteria and crack geometries. For coplanar crack extension, CARES uses the total strain energy release rate theory. Out-of-plane crack extension criteria are approximated by a simple semiempirical equation. This equation involves a parameter which can be used to approximate various mixed-mode theories or experimental result. For comparison, Griffith's maximum tensile stress analysis for volume flaws is also included. The highlighted boxes in Figure 1 show the recommended fracture criteria and flaw shapes.</p> 
+<img alt="refer to [D] description" border="0" height="656" src="https://llis.nasa.gov/llis_lib/images/1009193main_0737-1.jpg" title="refer to [D] description" width="482"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009672main_0737-1.txt">[D]</a> 
+<br> Figure 1. Available Failure Criteria and Crack Shapes. (Recommended failure criteria and crack shapes are highlighted) 
+<p>Two version of the code, designed as CARES1 and CARES2, are available. The CARES1 version assumes that stress and temperature gradients within each element are negligible, and, therefore, only element centroidal principle stress is used in the reliability calculations. The CARES2 version takes into account element stress gradients by dividing each brick element into 27 subelements and each quadrilateral shell element into 9 subelements. Subelement centroidal principle stress is then computed and used in the subsequent reliability calculations. CARES2 enables the finite-element model to consist of fewer elements for the same level of convergence to the true solution as CARES1.</p> 
+<p>Input Requirements</p> 
+<p>To control the execution of the CARES program, an input file must be prepared. On the tape or disks provided with the program is a file called TEMPLET INP that can be used to construct an input file for a particular problem. Input to CARES is keyword driven. Data are input by the user under each keyword. An explanation of the input required or a list of input choices is provided next to the keyword.</p> 
+<p>The CARES program requires three categories of input: (1) Master Control Input, (2) Material Control Input, which includes temperature-dependent material data, and, optionally, (3) MSC\NASTRAN or ANSYS output data files from finite-element analysis. The Master Control Input is a set of control indices that directs the overall program execution. The Material Control Input consists of control indices and either the data required to estimate the statistical material parameters or direct input of the statistical parameter values themselves for various temperatures. This input category includes the choices of fracture criteria and flaw shapes shown Figure 1. The Master Control Input and the Material Control Input are contained in the TEMPLET INP file. The third input category, MSC/NASTRAN or ANSYS output data files, includes finite-element analysis data files containing the element stresses, volumes/areas, and temperatures.</p> 
+<img alt="refer to [D] description" border="0" height="676" src="https://llis.nasa.gov/llis_lib/images/1009194main_0737-2.jpg" title="refer to [D] description" width="432"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009673main_0737-2.txt">[D]</a> 
+<br> Figure 2. Block Diagram for Analysis and Reliability Evaluation of Ceramic Components 
+<p>Output Information</p> 
+<p>The first part of the CARES output is an echo of the choices selected (or default values) from the Master Control Input. If a finite-element model reliability analysis is not performed, then CARES proceeds to echo the Material Control Input. If postprocessing of a finite-element model is done, then, for each element, the centroidal or subelement principle stresses with appropriate element area or volume and temperature are listed. The printing of element stress tables in CARES is optional. In addition, two element cross-reference tables are printed. The first table lists the shell element number and gives the corresponding solid element to which it is attached. The second table lists the solid element identification number and lists up to six associated shell element (a brick element could have all of its six faces as external surface).</p> 
+<p>CARES echoes the user inputs for each section of the Material Control Input. If statistical material parameters are directly input, then output pertaining to calculated values of the normalized Batdorf crack density coefficient <u>k</u><small><sub>b</sub></small> will follow. If statistical material parameters are determined from experimental fracture data, then the output will identify the method of solution, the number of specimens in each batch, and the temperature of each test. In addition, the output echoes the sorted input values of all specimen fracture stresses with proper failure mode identification.</p> 
+<p>Results from the statistical analysis of the fracture data are then printed. The fracture strength and corresponding significance level are listed for detected outliers followed by the estimated statistical material parameters from least-squares or maximum likelihood analyses. The biased and the unbiased values of the Weibull shape parameter, the specimen Weibull characteristic strength, the upper and lower bound values at 90-percent confidence level for both parameters, the specimen Weibull mean value, and corresponding standard deviation are printed for each specified temperature. For censored statistics these values are generated first for volume flaw analysis and subsequently for the surface flaw analysis.</p> 
+<p>The K-S goodness-of-fit test is done for each specimen fracture stress and the corresponding K-S statistics D+, D-, and significance level are listed. Similarly, the K-S statistic for the overall sample set is printed along with the significance level. This overall statistic is the absolute maximum of individual data D+ and D- factors. For the A-D goodness-of-fit test, the A-D statistic A<small><sup>2</sup></small> is determined for overall population and its associated significance level is printed.</p> 
+<p>The next table of the output contains data to construct K-S 90-percent confidence bands about the Weibull distribution. The table includes fracture stress data, the corresponding Weibull probability of failure values, the 90-percent upper and lower confidence band values about the Weibull line, and the median rank value for each data point.</p> 
+<p>The last table from the statistical analysis section of CARES summarizes the material parameters used in component reliability calculations. These parameters, which are listed as a function of temperature, include the biased Weibull modules, the normalized Batdorf crack density coefficient, and the Weibull scale parameter or the unit volume or unit area characteristic strength, whichever is appropriate. The values printed correspond to the experimental temperatures input and five additional interpolated sets of values between each input temperature. The interpolated parameters are output for checking purposes. Information on the selected fracture criterion and the crack shape is printed as required.</p> 
+<p>If a component reliability analysis with finite-element data is being performed, then tables will be generated to summarize the reliability evaluation of each finite element. One table is provided for volume flaw analysis (solid elements) and one table is given for surface flaw analysis (shell elements) as requested by the user. The tables list the element identification (ID) numbers and the corresponding element material ID, survival probability, failure probability, risk-of-rupture intensity (risk-of-rupture divided by element volume or area), and temperature-interpolated statistical material parameters. Following each table is a list of the 15 most critical risk-of-rupture intensity values and corresponding element numbers. Also included is the probability of failure and survival for the component surface or volume, whichever is appropriate. Finally, the overall component probability of failure and the component probability of survival are printed.</p> 
+<p>Theory and Example</p> 
+<p>For additional information on theory and example of different applications such as statistical material parameter estimation, rotating annular disk and Si<small><sub>3</sub></small>N<small><sub>4</sub></small> mixed flow rotor, please refer to NASA TM 102369 and other referenced articles on the reference section of the practice.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>The CARES computer program was developed by NASA LeRC's Structural Integrity branch. The branch combines the three disciplines of analytical modeling, mechanical testing, and nondestructive testing to understand and predict the behavior of advanced high-temperature materials, particularly brittle ceramic and inter-metallic matrix composites. CARES is an enabling technology primary created to foster the introduction of ceramic materials in demanding engine environments to achieve breakthrough gains in energy efficiency and emissions reduction. The specific purpose of the project is to transfer and upgrade technology for understanding and predicting the behavior of brittle ceramic materials. To accomplish this, CARES incorporates the capability to design for any component shape and services environment. The resulting software is a comprehensive general-purpose design tool for government, industry, and academia that predicts the probability of a ceramic component failing as a function of its time in service.</p> 
+<p>For the past three years over 100 companies worldwide have obtained the CARES software. As the only general-purpose public domain integrated design program for predicting the reliability of brittle materials in the United States, CARES has tremendous impact on helping U. S. industrial competitiveness. The CARES probabilistic design methodology is necessary for accurate failure prediction and efficient structural utilization of brittle materials subjected to arbitrary stress states.</p> 
+<p>This technology applies to materials such as glass, graphite, and advanced ceramics including silicon nitride and silicon carbide. Many commercial products, such as turbocharger rotors, rocker arm and cam followers, poppet valves, radiant heater tubes, heat exchanges, and prototype ceramic turbines, are widely designed by using the CARES series of software. In addition, these programs are used to design large infrared transmission windows, glass panels for skyscrapers, ceramic packaging for microprocessors, cathode ray tubes, and even ceramic tooth crowns and knee caps.</p> 
+<p>Although similar codes now exist, CARES has two unique features. The code is public domain software and thus readily available. Furthermore, it can be integrated with popular finite element analysis computer programs such as ANSYS, NASTRAN, and ABACUS.</p> 
+<br> 
+<a href="https://llis.nasa.gov/llis_lib/pdf/1009457main_0737-form.pdf">Software Release Request Form (.pdf)</a> 
+<br> &nbsp; 
+<p>References:</p> 
+<ol> 
+ <li>Nemeth, N. N. and Manderscheid, J. M. and Gyekenyesi, J. P., <q>Design of Ceramic Components With the NASA/CARES Computer Program</q>, NASA Technical Memorandum 102369, 1990.</li> 
+ <li>Nemeth, N. N. and Powers, L. M. and Janosik, L. A. and Gyekenyesi, J. P., <q>Designing Ceramic Components for Durability</q>, American Ceramic Society Bulletin, Volume 72, No. 12, December 1993.</li> 
+ <li>Research &amp; Technology - 1993, NASA LeRC TM 106376, 1993.</li> 
+ <li>Nemeth, N. N. and Power, L. M. and Janosik, L. A. and Gyekenyesi, J. P., <q>Durability Evaluation of Ceramic components using CARES/LIFE</q>, NASA Technical Memorandum 106475, 1994.</li> 
+ <li>Ratajczak, A. F., <q> NASA Software of the Year Award</q>, NASA Tech Briefs, Volume 18, No. 12, December 1994.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The CARES computer program is used worldwide for fracture and life prediction of structural ceramic components for automotive, aerospace, electronic, and nuclear applications. Spacecraft are composed of many complex assemblies that contain ceramic materials. CARES is proven software especially useful for ensuring that ceramic components are designed to survive different temperature extremes and stresses in the space environment.</p> 
+<p>Failure to adhere to proven design methods and/or reliability analysis practices could cause shortened mission life, degraded levels of mission success, premature termination of component or experiment operation, and in extreme circumstance, loss of mission and human life. All phases of the spacecraft design process, from design, development, fabrication to installation in the spacecraft, must adhere to proven reliable design and safe practices.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use the Ceramics Analysis and Reliability Evaluation of Structures (CARES) computer program to calculate the fast-fracture reliability or failure probability of macroscopically isotropic ceramic components.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on SSME.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

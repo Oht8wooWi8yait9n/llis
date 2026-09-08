@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #16501: SMAP Reflector Deployment Test Anomaly (Design and Test of Large, Complex Deployables)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #16501: SMAP Reflector Deployment Test Anomaly (Design and Test of Large, Complex Deployables)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #16501 (Database ID: 16501)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-01-19</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Specified</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research,  Human Exploration and Operations,  Science,  Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Flight Equipment,  Ground Equipment,  Hardware,  Payloads,  Spacecraft,  Test & Verification,  Test Article,  On-Orbit Assembly,  Spacecraft and Spacecraft Instruments</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/16501" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> Launched in January 2015, the SMAP spacecraft (Figure 1) provides high spatial resolution radiometric and radar measurements of soil moisture and gravity freeze-thaw state. The SMAP radar and radiometer share a lightweight, deployable, reflector antenna system that rotates around the nadir axis and makes conical scans gravity of the Earth’s surface.&nbsp;</p> 
+<p> <a href="/lessons/16501/2015-06_SMAP_Fig1.jpg"><img alt="Figure 1 is a computer graphic of the spacecraft bus and attached solar array. The spun instrument assembly is shown above the spacecraft bus. An armature extends high above the spun instrument assembly with a 6 meter deployable antenna on the end.  An antenna feed horn on the spun instrument assembly points up to the center of the curved deployable antenna." src="/lessons/16501/2015-06_SMAP_Fig1.jpg" style="width: 450px; height: 325px;"></a></p> 
+<blockquote> 
+ <em><strong>Figure 1. </strong>The 6-meter diameter, 65.5 kg antenna is made of gold-coated mesh.<br> The feedhorn transmits and receives radar signals (active) and collects microwave<br> emissions (passive).</em> 
+</blockquote> 
+<p> When stowed for launch, the flexible mesh reflector antenna/boom assembly (RBA) is folded against the spacecraft into a compact volume of 30 by 120 cm (1 by 4 ft.) to fit within the launch vehicle fairing. The mesh is edged with a perimeter truss, a ring of lightweight graphite supports that opens like a camp chair when deployed. Once deployed in a complex sequence (Figure 2), the surface shape of the mesh must be accurate within about 3 millimeters.&nbsp;</p> 
+<p> <br> <a href="https://nen.nasa.gov/documents/17793/1986260/2015-06+SMAP+Movie/929aad09-6f39-475b-b7e5-cd88505d9194"><img alt="Figure 2 is an animated computer drawing of the 6 meter deployable antenna slowly unfolding in space above the Earth." src="/lessons/16501/2015-06_SMAP_Fig2.jpg" style="width: 360px; height: 260px;"></a></p> 
+<blockquote> 
+ <em><strong>Figure 2.</strong> Movie - The boom takes about 20 minutes to deploy. First,<br> a pyro cable cutter releases the boom cradle, the preloaded tension<br> in the boom moves it away from the satellite bus, and a motor winds<br> a cable that pulls the boom to its full extension, with a jerky motion<br> when the root and elbow hinges latch.) Then, it takes about 33<br> minutes for a pyro to release the furled reflector antenna, for stored<br> energy to spring it partially open, and for a second motor to wind a<br> cable to pull the reflector to its fully opened circular configuration.</em> 
+</blockquote> 
+<p> The SMAP project was challenged in designing and testing a large deployed-size, low-mass structure in a microgravity environment. The ability to test such a structure (mounted atop a 5-meter length boom, with the stiffness to rotate at about 15 rpm) on the ground in a flight-like manner was limited because it was not designed to deploy in Earth gravity. Hence, the complete deployment sequence could not be tested: instead, the sequence had to be tested piecemeal. Furthermore, testing required compensating for the effects of gravity experienced during ground test by using specialized equipment (Figure 3) that had certain unavoidable limitations. For this reason, ground testing was supplemented with sophisticated modeling analysis.</p> 
+<br> 
+<p> <a href="/lessons/16501/2015-06_SMAP_Fig3.jpg"><img alt="Figure 3 is a photograph of the deployable antenna fully deployed inside an assembly room at the Jet Propulsion Laboratory.  The antenna is supported by light cables to counteract the Earth’s</br>gravity. Technicians dressed in clean room suites watch the unfolding antenna from a distance." src="/lessons/16501/2015-06_SMAP_Fig3.jpg" style="width: 450px; height: 325px;"></a></p> 
+<blockquote> 
+ <em><strong>Figure 3.</strong> SMAP's antenna is fully unfurled during a ground test.&nbsp;The&nbsp;structure under<br> the golden, semi-transparent antenna surface holds the&nbsp;surface in its correct shape.&nbsp;<br> The structure above the surface (not visible&nbsp;in photo) supports the antenna in Earth's<br> gravity. Designed for use in the microgravity of &nbsp;space, the antenna does not have<br> the mechanical strength necessary to support its own weight on the Earth's surface.<br> Source: <a href="http://smap.jpl.nasa.gov/resources/84/">publically available </a> </em> 
+</blockquote> 
+<p> The July 2013 SMAP RBA deployment test (Reference (1)) displayed unexpected asymmetric deployment, large lateral deflections of a batten truss element (Figure 4), and loads that possibly exceeded the batten flight limit loads. An asynchronous deployment is when one or more bay diagonals fail to reach ratchets prior to the first bay diagonal going over the final detent. An inspection of the reflector found a design defect and a manufacturing defect that increased friction within the system. Specifically, with one deploying bay of the perimeter truss deploying farther than an adjacent bay, high moment loading was applied to the batten strut between the two bays. Although the test did not damage the flight Reflector, the need to add garter springs and make other design changes imposed significant stress on the project’s personnel, budget, and schedule, and it jeopardized the planned mission launch date.</p> 
+<p> <em><a href="https://nen.nasa.gov/documents/17793/54ad0f56-cc95-4521-a1ff-3d75f508df7c"><img alt="Figure 4 is a photograph of a clean room technician holding a vertical strut of the antenna.  A red graphic overlay indicates the amount of deflection of one of the vertical struts." src="https://nen.nasa.gov/documents/17793/54ad0f56-cc95-4521-a1ff-3d75f508df7c" style="width: 525px; height: 379px;"></a></em></p> 
+<p> <strong>Figure 4. </strong>In the reflector deployment load anomaly, the batten (see marking) exhibited<br> significant deflection during deployment testing&nbsp;&nbsp;&nbsp; [Photo provided by contractor per<br> contract with JPL.] Large mesh antennas previously used by military and communications<br> satellites are expected to see greater use in civil space missions (e.g., NISAR and<br> BIOMASS).</p> 
+<br> 
+<p> <em><strong>References:</strong></em></p> 
+<ol> 
+ <li> <em>“Unexpected Asynchronous Behavior and High Tension Required for RBA Powered Reflector Deploy,” JPL Problem/Failure Report No. 55161, October 3, 2013.</em></li> 
+ <li> <em>Chris White, “SMAP Deployable Reflector Lessons Learned Summary,” IOM ESFPO-2014-288, May 23, 2014.</em></li> 
+ <li> <em>E. McCoy, “Large Deployable Reflector Workshop Report,” IOM 3550-15-002, June 3, 2015.</em></li> 
+ <li> <em>Don Sevilla, “SMAP Reflector Development Lessons Learned for NISAR,” May 20, 2015.</em></li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Reference (2) summarizes the lessons learned from development and test of the SMAP RBA:</p> 
+<ol> 
+ <li style="margin-left: 0.5in;"> <strong>The Deployable Reflector is a critical element in an Integrated Flight System.</strong> A deployable reflector is a major consideration for practically all aspects of spacecraft configuration. It needs to fit the launch vehicle in the stowed configuration, deploy without obstruction, and allow unobstructed illumination of solar panels and unobstructed fields of view of instruments and telecom antennas, etc. The large flexible nature of the deployed antenna produces vibration modes (of order 1 Hz or lower) and could potentially couple with fuel slosh modes, solar array modes, or deployable boom modes. Sudden thermal transients that appear when crossing the terminator can produce dynamic disturbances. A large deployable reflector imposes constraints and special conditions on mission operational scenarios such as deployment (typically conducted with the Attitude Control System (ACS) idled, and constrained by power availability as the spacecraft tumbles off-sun during deployment), slews for calibration, tumble recovery maneuvers, etc.</li> 
+ <br /> 
+ <li style="margin-left: 0.5in;"> <strong>Verification and validation by analysis is required. Verification by testing only will not suffice. </strong>V&V of the integrated system under environmental conditions cannot be accomplished by testing alone, a characteristic of large deployable structures that is shared by systems such as planetary Entry, Descent and Landing (EDL). The structures are simply too large for most facilities, too strongly influenced by Earth’s gravity, or too costly to make testing a viable option. Important exceptions (where test is viable) include system-level environmental testing with the deployable in the stowed configuration, and first-motion and possibly full deployment tests of the structure alone at room temperature and possibly under vacuum, assisted by gravity-offload test fixtures. Validation of many project requirements requires extensive use of models, and the models themselves need to be validated. Waivers to established test practices should be developed early in a project’s lifecycle. The waivers should explain anticipated exceptions and planned mitigations, and provide a documented risk assessment and institutional approvals. The waivers should be updated throughout development.</li> 
+ <br /> 
+ <li style="margin-left: 0.5in;"> <strong>Be critical of heritage claims, as each deployable reflector will be a custom implementation. </strong>Although the deployable structure will exhibit heritage elements, and previous performance will be important in selecting a vendor partner, such factors as the choice of launch vehicle are likely to cause design changes-- even for reflectors of the same diameter. Scaling in structure size can generate emergent behaviors which are not understood until testing, at which time they could seriously threaten the technical performance and schedule. Even minor modifications to heritage components or to functional performance can significantly change system behavior. Vendor heritage can also be threatened by changes in vendor personnel and technical capabilities. Critical examination of the heritage of models, test fixtures, ground support equipment, and manufacturing capabilities is also needed</li> 
+ <br /> 
+ <li style="margin-left: 0.5in;"> <strong>The depth of the vendor/partner capabilities is important.</strong> During the source selection process, consideration should be given to the engineering and production capacity of the candidate suppliers for the scope of work being considered, including engineering capacity, manufacturing capacity, quality assurance, acquisition, management, contracts, personnel, facilities and key equipment. Projects should forecast the suppliers’ management, engineering, and production and test resource capacity to accommodate possible scope or complexity growth as the job evolves over time. Determine how much of vendor capacity the project consumes, whether the company is gaining critical talent or losing it, if the vendor has multiple customers, and how the customer mission ranks in priority against other customers’ deliveries.  There were previous projects that involved a known, once competent vendor, but where the vendor’s current capabilities proved questionable-- such as the Dawn ion engines and the Mars Science Laboratory (MSL) actuators.</li> 
+ <br /> 
+ <li style="margin-left: 0.5in;"> <strong>Vendor partner management practices contributed to the difficulties. </strong>The vendor organization structure can aid or hinder system development. Also, the RBA contractor’s test processes did not provide as strong attention to early ground test and deployment modeling as was warranted.</li> 
+ <br /> 
+ <li style="margin-left: 0.5in;"> <strong>Carefully planned contract details can ease off-nominal situations.</strong> Vague or permissive language in contract SOWs and CDRLs can lead to delays in discovering vendor performance problems. Even when contract requirements are clearly written, however, additional JPL engagement may aid in attaining full vendor employee awareness of what JPL expects from them—and the rationale.</li> 
+ <br /> 
+</ol> 
+<p> Reference (3) provides another perspective on what worked well and what didn&#39;t work well in SMAP RBA development.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> Reference (2) summarizes the findings from development and test of the SMAP RBA:</p> 
+<p style="margin-left: 0.5in;"> 1. <strong>As a critical element in an integrated flight system, the Deployable Reflector requires exceptional scrutiny in design and test:</strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> The project should expect that a large deployable reflector will create the need for design, analysis, and possibly testing iterations among the deployable structure, the mission, the instrument, the flight system, and the launch vehicle elements.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> The project should subject complex, single-use, deployables design and test to a similar depth of engineering penetration as used for EDL (Entry, Descent and Landing) on planetary missions.</li> 
+</ul> 
+<p style="margin-left: 0.5in;"> 2. <strong>Verification and validation by analysis is required for complex deployables, and partner capabilities should be verified and certified:</strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> The JPL team should review the subcontractor’s models and simulations, and JPL may elect to conduct independent modeling and simulation.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> All significant models should be identified, and a careful distinction should be made as to which models are mission critical. Models are considered critical when they are the primary means of design or the primary means for requirement verification.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Mission critical models should be tracked at the Project System Engineer (PSE) level. A clear process for model development should be documented, and validation tests developed, reviewed, planned and executed.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Engage mechanical systems engineers as leaders and owners of the deployable models; routine finite element modeling practices and approaches will not likely be sufficient. Retain modeling experts to serve as trusted reviewers.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Use informal peer reviews rather than multi-day project milestone reviews as a means to determine the sufficiency of models and simulation results.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Work Category A waivers and test-as-you-fly exceptions early in the project lifecycle and be sure all stakeholders are aware of the implications and accept the plan. Revisit these waivers and exceptions periodically as the hardware design and test plans mature.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> For systems dependent on models for final verification, a model verification plan should be developed that includes all tests and component characterizations required to validate or update the model. Projects should understand the system’s (e.g., RBA’s) sensitivity to component variability.</li> 
+</ul> 
+<p style="margin-left: 0.5in;"> 3.     <strong>Be critical of heritage claims, as each deployable reflector will be a custom implementation:</strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> Before vendor selection, ensure that study contracts thoroughly examine and document the true heritage state. However, be aware that study contracts are cursory in nature and do not ensure that the future design process will continue to retain design heritage elements. Assumptions made at the beginning of a design should be reviewed and challenged throughout the design process. Fabrication of an engineering development unit (EDU) may assist in identifying design and implementation flaws and risks (Reference (4)).</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Ensure that development and testing plans reflect the true state of heritage.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Where possible, discuss with prior customers their experience with product development.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Engage technical experts to advise the project on the risks being faced.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Cost reserves should be higher for systems that are especially difficult to scale, design, and test. Cost estimates for future projects should take into account the vendor’s past cost growth from the proposed cost to the actual cost of the previously delivered product. Also, consider past actual workforce levels for engineering oversight, modeling, quality assurance, and other support, and add increased cost reserves. For procurement of newly developed mechanical systems that include mechanisms, cost growth can have high uncertainty.</li> 
+</ul> 
+<p style="margin-left: 0.5in;"> <strong>4.     </strong><strong>The “bench depth” of the vendor partner will be important:</strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> Requests for Proposals should ask for data on supplier resources and on the percentage of total capacity that the proposed effort would consume over each development phase. Information on current and/or forecast business loading that could compete for resources is also valuable, accompanied by an assessment of how competing work and priorities would be resolved. A “key personnel clause” may be advisable for key contractor personnel (program manager, lead system engineer, etc.)</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Early engagement of the JPL line organization in vendor oversight, though it may incur additional cost, has value and is critical in ensuring that technical issues can be expeditiously addressed.</li> 
+</ul> 
+<p style="margin-left: 0.5in;"> <strong>5.     </strong><strong> Vendor partner management practices contributed to the difficulties:   </strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> Evaluate prospective vendors for their recent experience managing contracts of the type, scope, and value similar to the proposed development. Evaluation should include the existence and experience with their proposed management tools and practices to support the proposed effort. This includes financial, schedule, and earned value reporting.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Assure that key individuals are assigned clear, overall responsibility for their elements (engineering, manufacturing, and test). Recognize that vendor organizational structures may be compartmentalized into vertical silos with ambiguous lines of communication and responsibility between engineering, manufacturing and test. Address these issues early with the vendor.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> JPL should include strong provisions in the contract for an in-plant technical, quality, and management presence by JPL including, where needed, unescorted access to all areas where JPL work is performed, and provision of office accommodations and internet/phones. Such provisions should be staffed early in the contract lifecycle to establish an early precedent for JPL engagement in contractor work.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> JPL should include strong provisions in the contract for the delivery at milestone reviews of a complete design package that provides, if it later proves necessary, sufficient information to bring the work in house.  This should include options for obtaining support by key vendor personnel (e.g., supplying copies of design packages) so the work can be completed..</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> The source selection process should feature detailed reviews of vendor engineering, quality, production practices, and technical tools (CAD systems, analytical models, etc.). Where they differ from the JPL Design Principles and JPL quality requirements, the departures should be assessed for risk.</li> 
+</ul> 
+<p style="margin-left: 0.5in;"> <strong>6.     </strong><strong>Carefully planned contract details can ease off-nominal situations:</strong></p> 
+<ul> 
+ <li style="margin-left: 0.75in;"> Projects should plan for staffing by a full-time Contract Technical Manager, full-time Cognizant Engineer, and significant support engineering staffing for the technical disciplines (e.g., thermal, materials & processes, structural, dynamics, and electrical engineering).</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Consider an award fee contract approach to incentivize vendors to address future situations and performance issues that might arise over the contract’s lifespan.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> Consider using contract language to allow JPL access as in-plant/resident engineer-- to facilitate system engineer interactions and to bridge the JPL and vendor teams.</li> 
+ <br /> 
+ <li style="margin-left: 0.75in;"> The contract provisions should also cover the issues discussed in Recommendation #5.</li> 
+</ul> 
+<p style="margin-left: 0.5in;">  </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.6 (“Engineering Practices: Inheritance”), 6.14 (“Engineering Practices: Design and Verification for Environmental Compatibility.”), and 6.13 (“Engineering Practices: Project and System Level Functional Verification and Validation) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. In addition, JPL has referenced it supporting Paragraph 4.2.2.9 (“Flight System Design: Configuration - Design deployables for test”), 4.2.3.1 (“Flight System Design: Mechanisms - Deployment systems design margin”), 4.2.3.5 (“Flight System Design: Mechanisms - Use of helper springs for positive latching”), and 8.3.3.2 (“Flight System Verification and Validation Design: System Assembly, Integration and Test - Deployments and articulations”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012..</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0640: Inadequate Venting Analysis for the WIRE Spacecraft (1999)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0640: Inadequate Venting Analysis for the WIRE Spacecraft (1999)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0640 (Database ID: 640)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-10-20</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/640" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> Shortly after separation of the Wide-Field Infrared Explorer (WIRE) spacecraft from the launch vehicle, venting of the secondary cryogen tank was commanded, as planned, to dissipate the heat absorbed by the cryogen since termination of ground cooling. Venting this small amount of hydrogen gas was expected to induce some tumbling of the spacecraft. This tumbling was also expected to be quickly dampened by the attitude control system as the solid hydrogen reached equilibrium with the low space-ambient temperature. Instead, the spacecraft was observed to be tumbling too fast to be countered by the reaction wheels and magnetic torquers--an out-of-control condition.</p> 
+<p> A NASA review board determined (reference 1) that an error in the design of the pyro electronics caused premature release of the telescope cover when the secondary cryogen tank was vented. The cover release permitted a large heat load into the cryostat that caused greater and more prolonged cryogen venting then expected following the transient associated with secondary vent actuation.</p> 
+<p> A &quot;T&quot; fitting had been placed at the vent outlet to balance the thrust induced to the spacecraft by the gas flow expected from the planned venting sequence. However, design analysis did not consider the torque effects of worst case transient flows caused by one side of the &quot;T&quot; pointing directly at a connector (added as a late design modification during integration). The combined applied torque to the spacecraft from the initial secondary vent transient and the effects of early cover release was greater than the attitude control system capability.</p> 
+<p> An independent analysis performed by a member of the WIRE JPL Review Board (reference 1, appendix E, p. 91) indicated the possibility that the normal secondary vent actuation transient could have exceeded attitude control capability. This could significantly impact early science return since it would take many days to reestablish a stable spacecraft attitude. Venting analyses performed during the design phase considered only the steady state cryogen flows expected during primary mission science pointing.</p> 
+<p> However, the premature release of the instrument cover, and resultant boil-off of the cryogen required for telescope operation, was determined by the review board to be the direct cause of the WIRE mission loss (references 1 and 2). It was also determined that the design characteristics of the cryogen tank vent outlet prevented timely control of spacecraft attitude following the cover release anomaly, and the venting-induced torque deterred any productive efforts to save the mission.</p> 
+<p> Additional Keyword(s): WIRE failure, thrust vector, thrust neutralizer, telemetry, angular velocity, roll rate, magnetic torquer, spacecraft spin, torque rod, impingement, subsystem and instrument development</p> 
+<p> Reference(s):</p> 
+<ol> 
+ <li> WIRE Mishap Investigation Board Report, NASA, June 8, 1999.</li> 
+ <li> Transient Performance of the WIRE Pyro Electronics, Lesson Learned No. <a href="/lesson/634">0634</a>, August 12, 1999.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> Past analyses of electronic, mechanical, and optical hardware performance have sometimes focused on steady state characteristics to the exclusion of known transients. As indicated in the WIRE scenario, spacecraft venting configurations designed for steady state flow rates may experience large unexpected blow-down impulses, or even nominal cryogen flows sufficient to cause mission loss or degradation.</li> 
+ <li style="list-style: none;"> <br /> Â </li> 
+ <li> The inability of the WIRE spacecraft to counteract accelerated venting rates suggests a marginal attitude control system authority.</li> 
+ <li style="list-style: none;"> <br /> Â </li> 
+ <li> The unavailability of definitive cryostat temperature data during the anomalous venting period hampered early, real-time identification of the root problem (premature cover deployment).</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Consider all venting mission sequences, plus the possibility of unplanned worst-case venting scenarios, in the spacecraft system design.</li> 
+ <li> The thrust neutralizing capability of the attitude control system should be designed to encompass transient venting-induced torque.</li> 
+ <li> Ensure that the electronics monitoring spacecraft health supply data during critical operational sequences.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br /> 
+<p> JPL has referenced the lesson as supporting Paragraph 4.9.4.2 (&quot;System Fault Protection Design: Fault Detection - Deviation from Expected Behavior&quot;), in the JPL standard &quot;Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),&quot; JPL Document D-17868, Rev. 3, December 11, 2006.</p><p><A href="https://llis.nasa.gov/llis_lib/pdf/1009462main1_0637-mr.pdf" >1009462main1_0637-mr.pdf</A></p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

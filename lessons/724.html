@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0724: Maintenance Concept For Space Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0724: Maintenance Concept For Space Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0724 (Database ID: 724)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/724" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique Number PM-3 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>Effective development of a maintenance concept can enhance the effectiveness of maintenance support planning and aid both logistics planning and design of a maintainable system. The maintenance concept can also provide assessments of cost savings for maintenance activities and resources allowable at each maintenance level.</p>
+
+    <p>The maintenance concept provides the basis for overall maintainability design requirements for the program, and contains detailed planning of maintenance policy for the operational system. It establishes the scope of maintenance responsibility for each level (echelon) of maintenance and the personnel resources (maintenance manning and skill levels) required to maintain a space system. Early development and application of the maintenance concept in structuring the maintainability plan can eliminate or reduce occurrence of problems that may interrupt system operation.</p>
+
+    <p>The maintenance concept for a new system must be systematically formulated during the early conceptual design phase of a program to minimize maintenance problems during the operational phase. This proactive approach is being used on Space Station-based experiment development programs at LeRC to incorporate current Space Station Program support principles, prescribed Space Acceleration Measurement System (SAMS) and Combustion Module One (CM-1) operational and repair policy, and identified sparing requirements.</p>
+
+    <p><u>Elements</u></p>
+
+    <p>This maintenance concept will aid in logistics planning and will guide design by providing the basis for establishment of maintenance support requirements in terms of tasks to be performed, frequency of maintenance, preventive and corrective maintenance downtime, personnel numbers and skill levels, test and support equipment, tools, repair items, and information. Inputs to the maintenance concept should include: a mission profile, system reliability and availability requirements, overall size and weight constraints, and crew considerations. The concept should support the following design elements as they apply to a manned orbital space program where on-orbit and ground maintenance is planned.</p>
+
+    <p><u>Repair Policy</u></p>
+
+    <p>The repair policy should consider the support to be provided at the maintenance echelons (levels) summarized in Table 1.</p>
+
+    <center>
+      <table border="0" width="90%">
+        <tr valign="top">
+          <td align="center"><font face="arial,hevetica">Table 1. Echelons of Maintenance</td>
+        </tr>
+
+        <tr valign="top">
+          <td>
+            <table border="1" width="100%">
+              <tr valign="top">
+                <td><font face="arial,hevetica">&nbsp;</td>
+
+                <td><font face="arial,hevetica">Organizational Maintenance</td>
+
+                <td><font face="arial,hevetica">Depot Maintenance</td>
+              </tr>
+
+              <tr valign="top">
+                <td><font face="arial,hevetica">Where Performed</td>
+
+                <td><font face="arial,hevetica">On-orbit</td>
+
+                <td><font face="arial,hevetica">NASA Center or Contractor</td>
+              </tr>
+
+              <tr valign="top">
+                <td><font face="arial,hevetica">System Maintainer</td>
+
+                <td><font face="arial,hevetica">Flight Crew</td>
+
+                <td><font face="arial,hevetica">Center Engineers and Technicians</td>
+              </tr>
+
+              <tr valign="top">
+                <td><font face="arial,hevetica">Basis</td>
+
+                <td><font face="arial,hevetica">Repair and retain equipment</td>
+
+                <td><font face="arial,hevetica">Repair and return equipment to stock inventory</td>
+              </tr>
+
+              <tr valign="top">
+                <td rowspan="3">Type of work accomplished</td>
+
+                <td><font face="arial,hevetica">Inspect equipment</td>
+
+                <td><font face="arial,hevetica">Repair at module, ORU, and component level</td>
+              </tr>
+
+              <tr valign="top">
+                <td><font face="arial,hevetica">Remove and replace modules and ORU's</td>
+
+                <td><font face="arial,hevetica">Repair and maintain ground support equipment</td>
+              </tr>
+
+              <tr valign="top">
+                <td><font face="arial,hevetica">Adjust equipment</td>
+
+                <td><font face="arial,hevetica">Calibrate equipment</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p><u>Organizational Maintenance</u></p>
+
+    <p>Organizational maintenance is maintenance performed by the using organization (e.g., flight crew) on its own equipment. This maintenance consists of functions and repairs within the capabilities of authorized personnel, skills, tools, and test equipment. Organizational level personnel are generally occupied with the operation and use of the equipment, and have minimum time available for detailed maintenance or diagnostic checkout; consequently, the maintenance at this level is restricted to periodic checks of equipment performance. Cleaning of equipment, front panel adjustments, and the removal and replacement of certain plug-in modules and Orbital Replaceable Units (ORUs), referred to as black boxes, are removed and forwarded to the Depot Level.</p>
+
+    <p><u>Depot Maintenance</u></p>
+
+    <p>Depot maintenance is maintenance performed at NASA Centers or contractor facilities for completely overhauling and rebuilding the equipment as well as to perform highly complex maintenance actions. The support includes tasks to repair faulty equipment to the part level, if deemed necessary. This level of maintenance provides the necessary standards for equipment calibration purposes, and also serves as the major supply for spares.</p>
+
+    <p><u>System Availability</u></p>
+
+    <p>Operational Availability (Ao ) is defined as the probability that at an arbitrary point in time, the system is operable, i.e., is "up." It is a function of the frequency of maintenance, active maintenance time, waiting time, logistics time, administrative time, and the ready time of the system, and is expressed as:</p>
+
+    <center>
+      <table width="95%">
+        <tr>
+          <td align="CENTER"><IMG  WIDTH="200"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009182main_0724-eq1.jpg"  HEIGHT="64"  BORDER="0" /><A HREF="/llis_lib/txt/1009661main_0724-eq1.txt"  >[D]</A></td>
+
+          <td align="right"><font face="arial,helvetica" size="+2">(1)</td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Where:</p>
+
+    <p>UPTIME = the total time a system is in an operable state, and<br />
+    TOTAL TIME = the combination of uptime and downtime, in which downtime is the time in which a system spends in an inoperable state.</p>
+
+    <p><u>Repair vs. Replacement Policy</u></p>
+
+    <p>Normally, on-orbit repair should not be performed on any plug-in modules or ORUs. If any on-orbit repair actions are planned, they should be clearly identified in the concept. At the organizational level, failed items should be either discarded or sent to the NASA Center or contractor for exchange and repair in accordance with repair/discard policies identified in the system requirements. Corrective maintenance, limited to replacement of faulty ORUs and plug-in modules, should be specified to be performed during the mission period. Prime equipment should be designed to have ready access for maintenance. Quick-opening fasteners should also be specified.</p>
+
+    <p><u>Level of Replacement</u></p>
+
+    <p>The design for proper level of ORU definition should consider compatible failure rates for hardware parts within the same ORU. Relative ranking of ORU's through reliability and maintainability considerations and mission criticality analysis can also contribute toward the proper level of replacement definitions. The required level of replacement should be specified at the plug-in module and ORU levels. Maintenance and support of a system should involve two-tier maintenance echelons. The first level provides for repair of the end- item on-orbit by replacing select faulty or defective plug-in modules and ORUs identified through use of specified diagnostic procedures. Faulty ORUs should then be evacuated to the second level of the maintenance echelon (depot level), which will be at a NASA Center for repair if deemed necessary. The particular NASA center/ facility should act as the depot for repair of faulty items.</p>
+
+    <p><u>Skill Level Requirements</u></p>
+
+    <p>Hardware should be designed to aid on-orbit and ground maintenance, inspection, and repair. Special skills should not be required to maintain a system. The following design features should be incorporated:</p>
+
+    <ul>
+      <li>Plug-in module and ORU design to minimize installation/removal time and requirements for hand tools, special tools, and maintenance skills.</li>
+
+      <li>Plug-in modules and ORUs should be designed for corrective maintenance by removal and replacement.</li>
+
+      <li>Plug-in module and ORU designs requiring preventive maintenance should be optimized with respect to the access, maintenance hours, and maintenance complexity.</li>
+
+      <li>Software and its associated hardware should be designed so that software revisions/corrections can be easily installed on-orbit with minimum skill level requirements.</li>
+
+      <li>Flight crew training for payload flight operation should identify hands-on crewmember training, at the NASA center where the system is built, to familiarize crewmembers with the removal/replacement of hardware.</li>
+    </ul>
+
+    <p><u>Spares Philosophy</u></p>
+
+    <p>Two basic types of spares should be required to support a maintainable system: development spares and operational spares. Development spares are those that must be identified and acquired to support planned system test activities, integration, assembly, check-out and production. Operational spares are those spares that must be acquired to support on-going operations on-orbit.</p>
+
+    <p>The quantity of development spares required for each system, and the total quantities to sustain the required availability during the planned test activities, integration, assembly, and check-out test should be determined according to the following:</p>
+
+    <ul>
+      <li>Custom-made components/parts</li>
+
+      <li>Long-lead time items</li>
+    </ul>
+
+    <p>The quantity of spares required for each system and the total quantities to sustain the required operational availability on-orbit should be determined according to the following:</p>
+
+    <ul>
+      <li>Items that are critical to system operation</li>
+
+      <li>Items that have high failure rate</li>
+
+      <li>Items that have limited life</li>
+    </ul>
+
+    <p>In the initial spares provisioning period and to the maximum extent practical, spares should be purchased directly from the actual manufacturer; i.e., lowest-tier subcontractor, to eliminate the layers of support costs at each tier. The initial provisioning period should cover early test and evaluation, plus a short period of operation, to gain sufficient operational experience with the system. This will provide a basis for fully competitive acquisition of spares.</p>
+
+    <p>Spares with limited shelf life should be identified and should be acquired periodically to ensure that adequate quantities of spares are available when needed. Spares with expired shelf lives should be removed and replaced.</p>
+
+    <p>Procurement of spares should be initiated in sufficient advance of need to account for procurement lead time (administrative and production lead time).</p>
+
+    <p>The location of the spares inventory (on- orbit and on-ground) should be a function of the on-orbit stowage allocation capabilities and requirements. A volume/weight analysis should be conducted to determine the quantity and types of spare items necessary to sustain satisfactory operational availability. The volume/weight analysis shall assure available or planned payload volume and weight limits, and planned or available on-board stowage area.</p>
+
+    <p>Breakout should be addressed during initial provisioning and throughout the replenishment process in accordance with NMI 5900.1, Reference 1. Breakout is the spares procurement directly from the original equipment manufacturer, prime contractor, or other source, whichever proves most cost-effective. A spare item requirement list should be maintained by procurement and technical personnel.</p>
+
+    <p><u>Diagnostic/Testing Principles and Concepts</u></p>
+
+    <p>The system should meet the following failure detection requirements as a minimum:</p>
+
+    <ul>
+      <li>The system should have the capability to detect, isolate and support the display of failures to the plug-in module level. Crew observations may be used as a method of failure detection of the following: visual displays, keyboards/buttons, general lighting, speakers.</li>
+
+      <li>System design should provide the capability for monitoring, checkout, fault detection, and isolation to the on-orbit repairable level without requiring removal of items.</li>
+
+      <li>Manual override and/or inhibit capability for all automatic control functions should be provided for crew safety and to simplify checkout and troubleshooting.</li>
+
+      <li>All failures of the system should be automatically detected and enunciated either to the flight crew or the ground crew.</li>
+
+      <li>Accesses and covers should be devoid of sharp corners/edges and be equipped with grasp areas for safe maintenance activities.</li>
+
+      <li>Systems/subsystems/items should be designed to be functionally, mechanically, electrically, and electronically as independent as practical to facilitate maintenance.</li>
+    </ul>
+
+    <p>The concept should also describe operating/testing techniques to identify problems and consider the complexity of the various types of items in the space system and associated maintenance personnel skills (for all software, firmware, or hardware). The techniques will identify maintenance problems. In all cases of fault simulation, the safety of personnel and potential damage to system/equipment should be evaluated in the concept. The concept should request that a safety fault tree analysis be the basis for determining simulation. Also, a Failure Modes, Effects, and Criticality Analysis should be used to evaluate and determine fault simulation. Some of the fundamental maintenance actions to be evaluated, monitored, and recorded are as follows:</p>
+
+    <ul>
+      <li>Preparation and visual</li>
+
+      <li>inspection time</li>
+
+      <li>Functional check-out time</li>
+
+      <li>Diagnostic time: fault locate and fault isolate</li>
+
+      <li>Repair time: gain access, remove and replace, adjust, align, calibrate, and close access</li>
+
+      <li>Clean, lubricate, service time</li>
+
+      <li>Functional check-out of the repair action</li>
+    </ul>
+
+    <p><u>Responsibilities for Contractor Maintenance</u></p>
+
+    <p>The prime contractor's maintainability program should provide controls for assuring adequate maintenance of purchased hardware. Such assurance is achieved through the following:</p>
+
+    <ul>
+      <li>Selection of subcontractors from the standpoint of demonstrated capability to produce a maintainable product.</li>
+
+      <li>Development of adequate design specifications and test requirements for the subcontractor-produced product.</li>
+
+      <li>Development of proper maintainability requirements to impose on each subcontractor.</li>
+
+      <li>Close technical liaison with the subcontractor (both in design and maintainability areas) to minimize communication problems and to facilitate early identification and correction of interface or interrelation design problems.</li>
+
+      <li>Continuous review and assessment to assure that each subcontractor is implementing his maintainability program effectively.</li>
+    </ul>
+
+    <p><u>Responsibilities for Payload Maintenance</u></p>
+
+    <p>Director of field installations responsible for launch preparation, maintenance, or repair activities should be responsible for maintenance planning and for providing the resources necessary to support the efficient identification of maintenance related problems in accordance with system requirements. These responsibilities include:</p>
+
+    <ul>
+      <li>Implementing a system that will identify, track, and status problems related to routine maintenance activities attributable to the design characteristics of flight hardware and software.</li>
+
+      <li>Providing information for use in a data collection system to improve the accuracy of quantitative maintainability and availability estimates. This information can be used to identify failure trends influencing reliability growth characteristics during design and to communicate "lessons learned" from ground maintenance experience.</li>
+
+      <li>Recommending to the Program Manager, responsible for design and development of flight hardware/software, areas for design improvement to increase the efficiency in ground processing or maintenance operations. The rationale for supporting these recommendations should include factors such as reduction in ground turnaround time and operational support costs.</li>
+    </ul>
+
+    <p><u>Allocation of Crew Time for Maintenance Actions</u></p>
+
+    <p>Crew time for maintenance should be identified in accordance with system complexity, reliability, and criticality of the items to the system and mission requirements. Analytical methods exist which can be used to prioritize and allocate crew time for maintenance actions.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>NASA Management Instruction, Spare Parts Acquisition Policy, NMI 5900.1A, NASA Responsible Office: HM/Procurement Systems Division, Washington, DC, November 6, 1992.</li>
+
+      <li>NASA Management Instruction, Maintainability and Maintenance Planning Policy, NMI 5350.1A, NASA Responsible Office: Q/Office of Safety and Mission Quality, Washington, DC, September 26, 1991.</li>
+
+      <li>NASA Handbook, Maintainability Program Requirements for Space Systems, NHB 5300.4(1E), Reliability, Maintainability, and Quality Assurance Publication, Washington, DC, March 10, 1987.</li>
+
+      <li>Space Acceleration Measurement System (SAMS) Experiment, SAMS-SS Product Assurance Plan, SAMS-SS-005 (Preliminary), NASA Lewis Research Center, Ohio.</li>
+
+      <li>Space Acceleration Measurement System (SAMS) Experiment, Express Payload Integration Agreement, SAMS-SS PIA, NASA Lewis Research Center, Ohio.</li>
+
+      <li>Space Station Program, Space Station Program Definition and Requirements, Sections 3 and 4, SSP 30000, NASA Lewis Research Center, Ohio.</li>
+
+      <li>Combustion Module One (CM-1) Experiment, Product Assurance Plan, NASA Lewis Research Center, Ohio.</li>
+
+      <li>Blanchard, Benjamin S., Jr. and Lowery, E. Edward of General Dynamics, Electronics Division, Maintainability Principles and Practices, McGraw-Hill Inc., N.Y., 1969.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The need to identify quantity, cost, types of spares, and related servicing techniques required to sustain a space system mission capability is a prime driver in developing maintainability requirements for a space system at the onset of its design. A system maintenance concept should be developed to define the basis for establishing maintainability requirements and to support design in the system conceptual phase. The maintenance concept provides the practical basis for design, layout, and packaging of the system and its equipment. The number of problems associated with product support and maintenance of space systems can be reduced, if not eliminated, by applying the principles prescribed in the system's maintenance concept.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Develop a maintenance concept early in the program life cycle to provide a basis for full maintainability support. It should be used to influence systems design to ensure that attributes for ease of maintenance, minimization of repair and down time, and logistics support will be present in the final design.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Acceleration Measurement System (SAMS), Combustion Module-1 (CM-1), Shuttle/Station Experiment.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

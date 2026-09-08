@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1715: The Pitfalls of "Engineering-by-Presentation" (2005)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1715: The Pitfalls of "Engineering-by-Presentation" (2005)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1715 (Database ID: 1715)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2005-12-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories, Engineering Design, Missions and Systems Requirements Definition, Program Management, Safety and Mission Assurance, Configuration Management, Flight Equipment, Hardware, Payloads, Spacecraft, Spacecraft and Spacecraft Instruments, Configuration control and data management, Configuration and data management, Review systems and boards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1715" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Independently reviewing their own performance in system development (Reference (1)), the Mars Reconnaissance Orbiter (MRO) project identified a need to improve the engineering decision trail that documented the basis and justification for design changes and other engineering decisions.  MRO technical meetings or engineering change boards sometimes made flight system design decisions based on studies described in viewgraphs, but the basis for each decision was not always documented for future reference.  Although meeting minutes, waivers, or engineering change request (ECR) forms would capture "Was/Now" information, they would not necessarily record the detailed technical rationale for each change, or the alternatives that were considered.  It was not an established practice to either update the presentation slides to capture this history, or to document it in an engineering form, technical report, or memorandum.
+<br/>
+<br/>As a consequence, the MRO flight project technical staff found themselves repeatedly revisiting the same technical issues: "Now, why did we decide at the last meeting to set fault protection to 'ON' for launch?"  Later in development, or during the spaceflight phase of a mission, poor recordkeeping may make it difficult to evaluate the system impacts of proposed design or operations changes.  Future projects that wish to use inherited hardware or software are forced to perform reverse engineering to fully understand the evolution of the design.  Approximately 80 percent of the results of engineering decision making at JPL, as archived in flight project libraries, are captured in viewgraph format (Reference (2)).
+<br/>
+<br/>The Prometheus project was also aware of this process flaw, and project management viewed inadequate engineering documentation as a widespread NASA practice that affects projects' ability to substantiate and verify designs (Reference (3)).  In response, Prometheus instituted a requirement for project personnel to document all technical decisions in an official memo or report. This was done to assure that decisions and supporting justifications were documented, made available to project personnel and stakeholders, and used for future activities.
+<br/>
+<br/>More recently, the NASA Office of the Chief Engineer issued a memo (Reference (4)) reporting that NASA advisory boards had "noted the increased use of [presentation software] and/or e-mail as a substitute for technical reports and other formal documentation."  It concluded that "this trend must be arrested and the practice stopped."
+<br/> 
+<br/>References: 
+<br/>(1)  MRO Lessons Learned Review Session oral presentation to Howard Eisen, September 14, 2005.
+<br/>(2)  "Methods of Capturing Engineering Decision-Making Audit," JPL Office of the Management System, March 3, 2005, p. 1.
+<br/>(3)  S. Kayali, Prometheus Project Lessons Learned, Section 2.3.1, September 30, 2005, p. 5.
+<br/>(4)  G. Robinson, NASA Office of the Chief Engineer, Memo No. 6208 ("Documentation"), September 16, 2005.
+<br/>(5)  J. Beckman & M. Landano, "Technical Documentation and Retention," JPL IOM No. 3000-jcb-032406-0830, April 18, 2006.  
+<br/>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Formal documentation of requirements, resolutions, and decisions -- including maintaining records of the basis and justification for each engineering decision -- was once a standard NASA practice.  The increased use of informal records such as presentation slides and e-mail may be inhibiting the ability of NASA programs and projects to reference technical decisions and to validate or verify engineering designs.
+</section>
+<section><h2>Recommendation(s)</h2>
+Produce a record of technical decisions, and of other engineering products and data designated as important by line and project management, as a standard practice across the institution.  Implement a defined process for review, approval, and management of these records. Utilize presentations only as supporting material.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraph 5.10.6 ("Management Practices: Information Management and Information Technology") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 6," JPL DocID 58032, March 6, 2006. <br/><br/>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

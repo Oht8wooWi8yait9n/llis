@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #11201: MSL Sol-200 Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #11201: MSL Sol-200 Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #11201 (Database ID: 11201)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-04-29</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Systems Engineering and Analysis, Computers, Flight Equipment, Flight Operations, Hardware, Information Technology / Systems, Payloads, Software, Spacecraft, Software Engineering, Spacecraft and Spacecraft Instruments, Engineering design and project processes and standards, Level II/III requirements definition, Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/11201" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> MSL has two lithium ion batteries that are recharged several times per day. These batteries enable the Curiosity rover’s power subsystem to meet the peak power demands of Rover activities when the demand temporarily exceeds the onboard multi-mission radioisotope thermoelectric generator (MMRTG) steady output level of ~100 watts. The flight computers (labeled “RCEs” in Figure 1) are always shut down prior to these recharge cycles.</p> 
+<p> <img alt=" Figure 1 is a color photo of a subsystem that features a circuit board with densely packed electronic components and wiring. Labels have been added to identify the various components of the subsystem. The “RCEs” are shown as packed between the CheMin experiment, the Rover Inertial Measurement Units, the Electra radio, and the Sample Analysis at Mars instrument." src="https://llis.nasa.gov/llis_lib/images/2014-03_Sol200_fig1a.jpg" /></p> 
+<p style="text-align: center;"> <strong>Figure 1.</strong> MSL avionics subsystem</p> 
+<p> Six months after landing on Mars (i.e., Mars sol-200), telemetry reported uncorrectable errors in the NAND flash memory (Reference (1)). Analysis revealed that several flight software (FSW) tasks had hung up, leading to an inability of the prime computer (Rover Compute Element (RCE) ‘A’) to turn off for its normal recharge session. Normally, fault protection would intervene: a watchdog timer would count down to zero and trigger a computer reboot. Instead, the watchdog timers were being reset. This could inexorably lead to a power brown-out of the Rover in three to six days: such loss of commandability that leaves the Rover discharging is a potentially mission-catastrophic event.</p> 
+<p> Within 16 hours of the initial error message, mission controllers at the NASA/Caltech Jet Propulsion Laboratory (JPL) bypassed the FSW and commanded a swap from RCE-A to the backup computer (RCE-B). Tones (i.e., “signals”) were subsequently received from the Rover confirming that the “backup” string had become “prime” and had entered safe mode. Information that the new prime computer gathered from the failed computer indicated that errors in the FSW had exacerbated a hardware fault in the flash memory. The MSL Flight Team faced a situation where the Rover was effectively left with “single string” avionics only 35 days prior to the Mars solar conjunction (when the spacecraft would not be commandable for 25 sols). Also, since the same FSW and flash memory were present in the new prime computer (RCE-B), the remaining string was of questionable reliability.</p> 
+<p> Failure investigation indicated that a single chip in the flash memory array was generating errors during erase cycles, likely due to a connectivity problem on the circuit board, or due to infant mortality of the commercial part. (Pre-flight testing had only erased the NAND ~12 times, as compared to an additional 38 erases (Reference (2)) after launch. The NAND part should have a life of 100,000 cycles.) Spacecraft functionality was recovered by segregating the bad flash memory; a direct hardware reset then rebooted RCE-A to operate with a half-size flash file system. (Because the data storage volume was sized with substantial margin, the loss of half the memory does not impact the mission.) Also, an additional (maximum up-time) watchdog timer was added to the flight software to strengthen fault protection. However, JPL would have been unable to diagnose the problem were it not for an avionics architecture that allowed the non-prime computer to be powered and providing telemetry on its “health” even when the (RAM-based) FSW was not running on it.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> <p> “Double Bit Error was observed on NVMCAM NAND on Sol-200,” JPL Incident Surprise Anomaly (ISA) No. 54013, February 27, 2013.</p> </li> 
+ <li> <p> James A. Donaldson, “The MSL Sol-200 Anomaly: ‘The Perfect Storm’ or ‘How the MSL Avionics Architecture Enabled the Recovery of the Curiosity Rover’,” September 24, 2013.</p> </li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> According to Reference (2), recovery from the “MSL Sol-200 Anomaly” was only possible because:</p> 
+<ol> 
+ <li> <p> The flight computer design included a capability to provide the telemetry data needed to assess spacecraft status under faulted operations.</p> </li> 
+ <li> <p> The fault history associated with the computer’s operation was stored in a location that could easily be read without the involvement of the ‘isolated’ computer’s FSW.</p> </li> 
+ <li> <p> Hardware commands existed that could swap prime strings independent of FSW.</p> </li> 
+ <li> <p> Communications across redundant strings and hardware-assisted ‘autopsy’ capabilities enabled diagnosis of the problem and recovery of the RCE-A string to a ‘science-worthy’ state.</p> </li> 
+ <li> <p> The NAND flash data store was architected with plenty of margin, with data that spanned multiple physical devices.</p> </li> 
+ <li> <p> Designers were available during the Operations phase to evaluate diagnostic evidence and develop recovery solutions.</p> </li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> <p> When operating nominally, ‘non-prime’ computers must provide telemetry regarding their health to the prime computer or to the support equipment upon request.</p> </li> 
+ <li> <p> Perform more complete screening of commercial parts, including burn-in of flight parts to eliminate infant mortality flaws.</p> </li> 
+ <li> <p> Add additional thermal cycles and erase cycles to the environmental box test program.</p> </li> 
+ <li> <p> Due to it’s known low reliability, avoid using NAND flash memory to store critical parameters.</p> </li> 
+ <li> <p> Re-architect the function that provides FSW health monitoring to cover more FSW issues, including improving the watchdog timing architecture.</p> </li> 
+ <li> <p> Even if NAND memory cannot reliably store data, the spacecraft must be capable of generating (a) real-time telemetry without a file system operational and (b) Data Products from files stored in the RAM File System.</p> </li> 
+ <li> <p> Maintain a capability to debug FSW while in “crippled mode” (e.g., operation in a low power state, without the File System, etc.)</p> </li> 
+ <li> <p> Implement a minimum level of hardware commands capable of recovering from flight system faults without recourse to FSW.</p> </li> 
+ <li> <p> Provide software support for reformatting flash memory to any desired size starting at any address, based on a value received prior to booting.</p> </li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.4.6.1 (“Information System Design: Telemetry Visibility - Visibility of s/c status”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> <a href="http://specs4.ihserc.com/Document/Document/ViewDoc?docid=UWAQDAAAAAAAAAAA" style="line-height: 1.4;">MIL-STD-1788A</a>, Avionics Interface Design Standard</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

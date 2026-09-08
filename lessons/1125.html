@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1125: Computer Hardware-Software/Space Shuttle/I-Loads</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1125: Computer Hardware-Software/Space Shuttle/I-Loads</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1125 (Database ID: 1125)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1125" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Lack of Dependency Matrix for I-Load Recalculation</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>There is no formal requirement that dependent Space Shuttle I-loads be recalculated or checked when an I-load patch is to be uplinked.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>NASA should create a dependency matrix of all I-loads. Furthermore, it should assess its Space Shuttle and ISS procedures and ensure that they are all fully documented.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>NASA believes that we already meet the intent of the recommendation. Flight Operations processes and documentation ensures proper I-load change implementation for all flight design I-loads, including uplinkable I-loads. These procedures include positive verification that the selected or uplinked values do not violate sub-system, element, or integrated vehicle certification and that the update meets mission requirements. I-load dependencies are verified as part of the certification assessment. Procedures for verifying I-loads to be uplinked vary. In some instances uplinked I-loads change vehicle response in a way that impacts several of the remaining I-loads; i.e., Day-of-Launch I-load Update (DOLILU). Those verification assessments include an analysis, which uses a high fidelity computer model to simulate integrated vehicle response to the new I-loads. These simulations include models of the onboard flight software of sufficient detail to verify that all applicable I-load
+    interactions are assessed. In other cases, specific I-load dependencies are evaluated. A number of flight design uplinks involve an uplink of values that are generated and verified days or sometimes months before launch. These I-loads include vehicle navigation, targeting, and abort parameters. Verification procedures for these I-loads are identical to that used during the normal flight design template.</p>
+
+    <p>For all cases, procedures clearly specifying verification requirements including specific I-load dependency evaluations, as applicable, are in place and under configuration control.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0358: Magellan Solar Array Drive Jitter</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0358: Magellan Solar Array Drive Jitter</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0358 (Database ID: 358)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/358" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During Venus mapping operations at high (over 64 degrees) incidence angles of the sun to the solar panels, a jitter occurred in the solar array drive control loop. This jitter excited a structural resonance in the solar panels, causing severe vibration. The problem was caused by a deficiency, at oblique sun angles, in the algorithm that is used in Flight Software (FSW) to determine whether a solar panel position correction is required. The deficiency was caused by not accounting for high sun incidence angles (geometrical effects) in setting the minimum step size software parameter. As a result, the algorithm continually determined that a correction was required -- first in one direction, then in the reverse, then in the first direction, etc.</p>
+
+    <p>The jitter was actually present in simulations performed by the flight team before the incident occurred on the spacecraft, but was not recognized because of the plotting scale used.</p>
+
+    <p>Once recognized, the problem was solved by switching the solar array control to an open-loop mode, i.e., not using the sun sensors, while the celestial geometry was unfavorable.</p>
+
+    <p>A complete description of the problem can be found in the references.</p>
+
+    <p>Additional Keyword(s): AACS, Mathematical Models</p>
+
+    <p>Reference(s): PFR #52242, ISA 8775, ISA 9049, ISA 8536</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Stability analyses for all geometries are an important part of attitude control hardware and software development and testing.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Because of the difficulties involved in ground testing spacecraft attitude and articulation control systems in a one G field, it is extremely important to conduct thorough reviews to verify math models of hardware and to understand the implications of simplification of math models on performance in flight. These reviews should involve hardware, analysis, software and systems engineers.</li>
+
+      <li>Finer resolution display scales should be used around worst-case conditions to identify subtle instabilities.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.4.11 ("Engineering Practices: System Engineering") in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

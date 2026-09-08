@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1835: Capture of Apollo Lunar Module Reliability Lessons Learned: Reliability Engineering</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1835: Capture of Apollo Lunar Module Reliability Lessons Learned: Reliability Engineering</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1835 (Database ID: 1835)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-10-22</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Mission Operations and Ground Support Systems,  Missions and Systems Requirements Definition,  Program Management,  Safety and Mission Assurance,  Crew Survival Systems,  Environmental Control and Life Support Systems,  Human Health/Flight Medicine,  Lander Systems,  Power,  Spacecraft and Spacecraft Instruments,  Ground support systems,  Lunar Operations,  Mission control Planning,  Level 0/1 Requirements,  Mission concepts and life-cycle planning,  Vehicle concepts,  Contractor relationships,  Cross Agency coordination,  Early requirements and standards definition,  Reliability</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1835" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>As part of the Constellation Program's review of human spaceflight lessons learned, NASA hosted a July 20, 2007 panel discussion with a group of engineers who were members of the Apollo Lunar Module Reliability and Maintainability (R&amp;M) Team. The team members are retired employees of Grumman Corporation, the prime contractor for the Lunar Module (LM). One set of lessons learned that was discussed focused on the Apollo approach to reliability engineering (Reference (1)):<br> <br> The Apollo approach of shared NASA/contractor responsibility for achieving LM reliability (Reference (2)) strengthened efforts to incorporate reliability features into the design. As indicated by Figure 1, reliability was infused into the design relatively early in the project life cycle, with part of the achieved reliability captured by design requirements by the release date of the NASA Request for Proposal (RFP). Because NASA issued a brief RFP that stated only functional requirements, and the Grumman program plan (Reference (3)) accepted by NASA committed only to these high-level requirements, Grumman retained substantial freedom to make LM design tradeoffs. Had NASA allowed discipline experts to impose detailed design requirements in the RFP without a full understanding of system-level impacts, some requirements might have detracted from mission success and crew safety.</p> 
+<p><br> &nbsp; <img align="Bottom" border="0" height="245" src="https://llis.nasa.gov/llis_lib/images/1016461main_NEN1835-Apollo-Rel%20(450%20x%20245).jpg" width="450"> &nbsp;</p> 
+<p><b>Figure 1.</b> Apollo LM reliability growth (approximation performed in 2007 for use in Reference (1))</p> 
+<p><br> The Systems Reliability Group at Grumman placed heavy emphasis on assuring their early involvement in evaluating design alternatives, such as allocating mass to fuel vs. to payload and allocating functions to hardware vs. software. The LM system had only 10,000 lines of code, and the panel discussion suggested that functional requirements implemented in software instead of hardware might decrease weight at the cost of reliability. Decisions on the system configuration were heavily influenced by early weight vs. reliability trade studies that made effective use of flight simulation, and used math models to compare configurations. In retrospect, if NASA and their contractors had made these trades at the integrated system level (Reference (4)), they could have obtained the best reliability increase per pound added to the Apollo booster/Command Module/LM system. For example, if a few extra pounds for an additional battery had been added to the Apollo LM, it might have provided the power needed to make the LM a more comfortable lifeboat during the Apollo 13 return trip.<br> <br> Redundancy was employed extensively in the effort to minimize the number of potential single point failures. Apollo LM designers in cross-functional, reliability-oriented teams sought to provide extensive redundancy by dissimilar means. For example, the secondary abort system employed hardware and software that was different than that used in the primary guidance system. Component redundancy (e.g., use of dual valve regulators) was employed where feasible. Parallel technology development, such as the simultaneous development of both fuel cells and batteries as alternative power sources, was also used to mitigate the system reliability risk.<br> <br> Because the test program design was based on a lunar environment that was unknown and a mission profile that was then uncertain, it evolved over time. Developmental flight hardware was stressed to failure, well beyond the environmental uncertainty factor of 1.5 used to set the qualification test levels. This provided an additional environmental margin that accommodated design changes later in the LM project. In contrast, International Space Station (ISS) developmental hardware was not tested beyond qualification levels, and during ISS operations certain necessary flight orientations exceeded these design limits (Reference (5)). The actual Apollo LM flight hardware was tested to flight environmental levels with continuous operation to screen design and workmanship failures. All failures were subjected to very rigorous root cause analysis, and corrective action plans were approved at the NASA level.<br> <br> Although reliability prediction per MIL-HDBK-217 was then in common use by aerospace engineers, the methodology provided very limited benefits to the LM project. The designers were driven by the need to eliminate single-point failures (SPFs) that could impede mission success or harm the crew. Hence, changes were required for designs that contained SPFs even if a calculation predicted a low probability of failure. Failure Mode and Effects Analysis (FMEA) performed at the system and functional levels was very effective in identifying failure modes (including failures of other contractors' interfacing hardware) and evaluating design modifications. In hindsight, though, performance of FMEAs at an even lower tier (i.e., the subcontractor level) would have revealed problems (like solder balls floating in switches) earlier. But careful analysis would not have sufficed without tenacity by the Grumman Systems Reliability Group in forging the necessary design modifications to ensure mission success and crew safety.<br> <br> The Apollo 13 near-disaster revealed the importance of obtaining operations data in real time to support safety-related decision making. For example, the triggering of a CO2 alarm at the warning system engineer's console in Houston alerted the mission to the need to take extraordinary measures to save the crew. Mission success requires mission operations staff to expect the unexpected. This requires the generous allocation of flight instrumentation and telemetry resources to the system for timely identification of problems during mission operations. In addition, real time simulations conducted on the ground to evaluate proposed corrective actions proved their worth.<br> <br> <b>References:</b></p> 
+<ol> 
+ <li>Gerry Sandler (Ret.), Presentation on Apollo/Lunar Module Reliability, Apollo Lunar Module Reliability and Maintainability Team, Apollo Lunar Lander Team Lessons Learned Workshop, July 20, 2007.</li> 
+ <li>quotCapture of Apollo Lunar Module Reliability Lessons Learned: Program/Engineering Management,quot Lessons Learned No 1806, NASA Engineering Network, September 25, 2007.</li> 
+ <li>quotLEM Program Plan,quot Grumman Aircraft Engineering Corporation, Report No. LPL 13-1A, July 1, 1964.</li> 
+ <li>David Oberhettinger telephone conversations with Gerry Sandler, Apollo Lunar Module Reliability and Maintainability Team, October 4-5, 2007.</li> 
+ <li>Dr. Bette Siegel, quotLessons Learned from the Apollo Lunar Module Reliability Team Meeting,quot NASA Exploration Systems Mission Directorate, July 20, 2007.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The Constellation lunar lander program faces challenges similar to those faced by the Apollo program 45 years ago in terms of achieving reliability and mitigating crew safety-critical and mission-critical risks.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Lock system reliability into the early design such that the test program is relied upon for screening and verification. Emphasize identification and elimination of safety-critical and mission-critical single point failures, independent of numerical estimates of the failure probability. Assure that a strong quotsystems reliability groupquot is involved in evaluating alternative designs very early in the project life cycle. This early involvement should extend down to the subcontractor level, with subcontractors providing inputs to functional and system level reliability analyses. Assure that system requirements are assessed for their reliability impact prior to release of the system-level RFP.</li> 
+ <br /> 
+ <li>Evaluate design alternatives and conduct trade studies at the system level to obtain an optimal overall design. For example, it may be necessary to overcome organizational barriers between projects within the Constellation program to assess whether extra mass should be allocated to the Crew Exploration Vehicle (CEV) launch vehicle, the CEV, or the lunar lander.</li> 
+ <br /> 
+ <li>Provide a primary and a redundant backup where feasible, preferably by dissimilar means, for safety-critical and mission-critical systems. Trade functionality between the lander, the capsule, and the service module to get the optimal integrated solution. For subsystems with a low technology readiness level (TRL) early in project development, mitigate the risk to reliability by funding the parallel development of alternatives.</li> 
+ <br /> 
+ <li>To accommodate future Constellation lunar lander system design changes and unanticipated flight configurations, test critical hardware beyond its qualification test levels until it fails. This allows a more accurate picture of true margin-- important for a new, complex system with many interfaces. This characterization can be used to address unknown problems and future tradeoffs. Consider incurring the additional cost of testing the actual flight hardware to environmental acceptance test levels. Establish success criteria for every test and every flight. Consider testing the Constellation lunar lander systems for the range of environments consistent with different lunar landing locations. Assure that contractors employ rigor in root cause analysis of failures, and provide NASA oversight over the evaluation and implementation of corrective actions.</li> 
+ <br /> 
+ <li>Actively manage performance margins so that the design margin can be allocated optimally. For example, provide a wealth of flight instrumentation and telemetry resources to assist ground controllers in timely identification of problems during mission operations and to support Constellation onboard maintenance.</li> 
+ <br /> 
+ <li>To achieve lunar lander reliability under the Constellation program, provide a strong Lander advocate during the design of the CEV.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.4.5 (quotManagement Practices: Project Organization, Roles and Responsibilities, Internal Communications, and Decision-Makingquot), Paragraph 6.4.3 (quotEngineering Practices: System Engineeringquot), Paragraph 6.8.3 (quotEngineering Practices: Flight System Fault Tolerance/Redundancyquot), Paragraph 6.13.1.2 (quotEngineering Practices: Design and Verification for Environmental Compatibilityquot), Paragraph 6.13.9.1 (quotEngineering Practices: Design and Verification for Environmental Compatibility-- Environmental Qualification and Flight Acceptance Testingquot), Paragraph 7.2 (quotSafety and Mission Assurance Practices: Reliability Engineeringquot), and Paragraph 7.6.8 (quotSafety and Mission Assurance Practices: Problem Reportingquot) in the Jet Propulsion Laboratory standard Flight Project Practices, Rev. 6, JPL DocID 58032, March 6, 2006. 
+<br /> 
+<br /> In addition, JPL has referenced it supporting Paragraph 4.1.3.1 (quotFlight System Design: Design Robustness-- Single Failure Tolerancequot), Paragraph 4.1.4.1 (quotFlight System Design: Design Margins During Development-- Design Margin Sizingquot), Paragraph 4.3.3.7 (quotFlight System Design: Power/Pyrotechnics Design: Power Generation-- Primary (Non-Rechargeable) Batteries), Paragraph 4.9.3.6 (Flight System Design: System Fault Protection Design: Flight-Ground Interface-- Fault Reconstruction Dataquot), Paragraph 4.12.1.1 (quotFlight System Design: Flight Electronics Hardware System Design -- Design Partitionquot), Paragraph 8.3.7.1 (quotFlight System Verification and Validation Design: System Assembly, Integration and Test: System Environmental Verification-- Environmental Exposure Fault Isolationquot), Paragraph 9.5.1 (quotFlight System Flight Operations Design: Operating Margins-- Adequate Operating Marginsquot), Paragraph 6.3.1.2 (quotManaged Margins: Flight System Technical Resource Margins -- Technical Resource Margins for Flight Operations Phasequot) in the JPL standard Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles), JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

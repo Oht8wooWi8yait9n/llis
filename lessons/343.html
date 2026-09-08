@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0343: Mars Observer Inappropriate Fault Protection Response Following Contingency Mode Entry due to a Postulated Propulsion Subsystem Breach</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0343: Mars Observer Inappropriate Fault Protection Response Following Contingency Mode Entry due to a Postulated Propulsion Subsystem Breach</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0343 (Database ID: 343)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-09-29</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/343" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Verification Test Laboratory (VTL) simulations of the Mars Observer spacecraft spin-up were performed to simulate a postulated propellant subsystem breach. The results indicated that even moderately low angular accelerations caused by the postulated propulsion subsystem breach could have triggered a contingency mode entry that would have interfered with the Radio Power Amplifier (RPA) turn-on cycle. Under these circumstances, contingency mode entry would have inhibited downlink until a ground command was sent. In contingency mode, fault protection was not capable of properly configuring the telecommunication subsystem to re-establish downlink autonomously. Contingency mode was a stable state and flight software could have stayed in this mode indefinitely.</p>
+
+    <p>This angular acceleration level would have caused multi-axis gyro saturation. If multi-axis gyro saturation was entered, flight software would have inhibited all momentum unloading thus preventing the stabilization of the spacecraft. Assuming sun on the array 33% of the time, battery depletion could be expected within 4.5 +/- 0.5 hours (sooner for even less favorable sun angle). The ground commands to re-activate RPA were not issued until about 4.5 hours after propellant pressurization since spacecraft autonomy was assumed capable to solve the issue. By the time these ground commands were issued, the batteries most likely would have been depleted.</p>
+
+    <p>The above postulated sequence of mishaps could have been the cause of Mars Observer loss of signal.</p>
+
+    <p>Additional Keyword(s): Sequence Interaction, Attitude Control</p>
+
+    <p>Reference(s):</p>
+
+    <ol>
+      <li>Mars Observer Loss of Signal: Special Review Board Final Report: JPL Pub. 93-28</li>
+
+      <li>Mars Observer Fault Protection Response in High Spacecraft Spin Rates, IOM MOS 94-159, 06/17/94, G. T. Chen to D. E. Bernard.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Inappropriate fault protection actions can be as hazardous as the failure the system was designed to protect against.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>It is imperative that spacecraft designers consider the consequences of anomalies at all mission phases and ensure that fault protection takes proper action regardless of spacecraft state.</li>
+
+      <li>Fault responses should not be allowed to interrupt critical activities unless they have the ability to assure completion of these activities. Final, stable fault protection modes (such as contingency mode) should autonomously assure communications.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced the lesson as supporting Paragraph 4.9.2.1 ("System Fault Protection Design: Fault Protection Response") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

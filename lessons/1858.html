@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1858: Maintain a Materials Properties Database that Covers Environmental Extremes</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1858: Maintain a Materials Properties Database that Covers Environmental Extremes</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1858 (Database ID: 1858)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-05-06</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Formulation &amp;raquo; Phase B</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment, Ground Equipment, Hardware, Parts Materials and Processes, Payloads, Safety and Mission Assurance, Spacecraft, Spacecraft and Spacecraft Instruments, Ground support systems, Launch support systems, Configuration and data management, Reliability, Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1858" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+A continuing challenge facing spacecraft designers is that vendor-supplied materials data sheets often cannot be relied upon and do not cover materials properties throughout the ranges of extreme environmental conditions found in spaceflight. Even when the acceptable environmental range is clearly defined in the supplied document, poor information on the boundary conditions and margins around the qualified limits may result in material failure. When the susceptibility of selected materials to temperature, radiation, vacuum, etc. is subsequently detected during testing, the required redesign and retest can significantly impact project cost and schedule.
+<br/>
+<br/>This issue has arisen on recent NASA/Caltech Jet Propulsion Laboratory (JPL) spaceflight projects. For example:
+<br/>
+<br/>
+<ul>
+<li>The major design problem that befell the CloudSat project over its development history was the mission-critical failure of its high voltage power supply during thermal-vacuum test (Reference (1)). A value for the thermal conductivity of a potting compound (in watts/meter-Kelvin), obtained verbally from a vendor, was found to be inaccurate by an order of magnitude.
+<li>The thermal conductivity of two silver-filled conductive epoxies used in the Mars Science Laboratory (MSL) landing radar was specified in the material data sheet as 7-10 watts/meter-Kelvin (W/m-K) range whereas when tested in the MSL application the epoxies were found to have a conductivity of only approximately 1 W/m-K. 
+</ul>
+Over many years, JPL has retained extensive amounts of materials data obtained during characterization, testing, and flight, but it has resided mainly in the personal files of individuals and has not been available for institution-wide use. When a search for data on a material measured at JPL has not been fruitful, time and money has been spent performing duplicate measurements.
+<br/>
+<br/>To improve the availability of historical materials data and mitigate the risk of using incorrect data, JPL has developed an online Spacecraft Materials Database (Reference (2)). The database presently holds 168 datasets on 88 materials in the following formats:
+<br/>
+<ul>
+<li>Both raw and plotted materials data measured at JPL, including data from Differential Scanning Calorimetry (DSC), Thermal Mechanical Analysis (TMA), Dynamic Mechanical Analysis (DMA), Thermogravimetric Analysis (TGA), etc.
+<li>Data measured by manufacturers or vendors
+<li>Material safety data sheets (MSDSs) 
+<li>Technical papers in journals, etc.
+<li>Vendor datasheets (including data that may not be applicable for spaceflight use)
+</ul>
+
+Of 17 polymeric materials listed in Reference (3), for example, the online database has glass transition temperature (Tg) and coefficient of thermal expansion (CTE) data on 8 of these measured by JPL using DSC and TMA, and JPL plans to characterize the remainder. 
+<br/>
+<br/>Users are invited to archive their materials property data so it can be shared across the institution. Along with new data that is automatically forwarded by the JPL analytic chemistry laboratory, this uploaded data is then organized by a materials database librarian. A governing board is being formed to establish official JPL materials property parameter values. A planned upgrade to the system will permit engineers to automatically generate Materials Identification and Usage Lists (MIULs) from the materials database.
+<br/>
+<br/>References:  
+<br/>
+<br/>(1) Thermal Vacuum Run #, HPA 102-Diode Thermal Runaway,â¿¿ Problem/Failure Report No. Z82336, Jet Propulsion Laboratory, November 3, 2003.
+<br/>(2) JPL Spacecraft Materials Database, http://matdb.jpl.nasa.gov.
+<br/>(3) JPL Standard for Spacecraft Electronic Packaging/Cabling Design and Fabrication, Rev. Kâ¿¿ JPL Document No. DocID 35120, December 27, 2007.
+<br/>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The limited information on a typical, vendor-supplied, material data sheet may mislead an engineer into concluding that the properties of a material are suited to the spaceflight environment. The more application-specific data accumulated by the institution over many decades has not been readily available to spacecraft designers.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+<li>Maintain and contribute to a Spacecraft Materials Database that defines the properties of spacecraft materials that have been observed during characterization and test under spaceflight-like conditions. </li>
+<li>Design engineers should check the Spacecraft Materials Database for new or updated materials properties data prior to material selection. </li>
+<li>Material testing is recommended for critical spaceflight applications that are not clearly covered by the Spacecraft Materials Database, and the test results should be included in the database. </li>
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.10 (&quot;Engineering Practices: Materials, Processes, and Contamination Control&quot;) in the Jet Propulsion Laboratory standard &quot;Flight Project Practices, Rev. 6,? JPL DocID 58032, March 6, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #6496: Integrate Earned Value Management Tools With the Project Management System</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #6496: Integrate Earned Value Management Tools With the Project Management System</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #6496 (Database ID: 6496)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2011-12-13</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Program and Project Management, Software, Business processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/6496" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Although NASA projects with funding of over $20 million are required to use Earned Value Management (EVM) techniques to measure and assess project performance (Reference (1)), EVM systems and processes are not well established throughout NASA. The NASA EVM Capability Project was established by the NASA Office of Chief Engineer (OCE) to develop and pilot an agency-wide, in-house, EVM capability that will meet NASA's project management requirements and ensure compliance with the federal Office of Management and Budget (OMB) mandates. The NASA Program Management Council (PMC) approved the NASA EVM Capability Project on December 16, 2009. There are three primary objectives of the EVM project: 
+<ol><li> 
+Establish a NASA EVM process, along with the supporting documentation, that can be used as a model for all NASA projects that must implement EVM.</li><br><li> 
+
+Demonstrate the NASA-wide EVM capability process on two projects— (1) the Extravehicular Activity (EVA) Systems Project and (2) the Ice, Clouds, and Land Elevation Satellite II (ICESat-2) Project. The purpose of these two EVM pilot exercises is to test and modify the process as needed to ensure the most effective implementation of a NASA-wide EVM capability. Sponsored by the Exploration Systems Mission Directorate (ESMD) and managed by NASA Johnson Space Center, the EVA Systems Project seeks to protect humans while operating outside the pressurized spacecraft environment and while exploring other planetary bodies. Sponsored by the Science Mission Directorate (SMD) and managed by NASA Goddard Space Flight Center, ICESat-2 is the second generation of the orbiting laser altimeter ICESat scheduled for launch in early 2016.</li><br><li> 
+
+Enhance NASA management insight into project performance by employing an effective EVM capability.</li></ol>
+
+For EVM to detect variances between the work planned and the work performed, data inputs from the target project are required. Primary EVM data elements include, for example, the Budgeted Cost for Work Scheduled (i.e., the projected cost or labor hours for the scheduled work to be performed) and the Budgeted Cost for Work Performed (i.e., the actual cost or labor hours for the actual work performed). Such primary data elements are then used to calculate derived data elements, such as Budget At Completion (i.e., the total cost of the project). However, the value assigned to each data element is associated with a particular date, and the value will change as the project progresses. Due to this continual change, it is essential to establish and maintain an interface between the automated EVM analysis tool<sup>1</sup> and the project’s management system(s). Without this linkage, and appropriate configuration control, there is no assurance that EVM products will provide accurate and reliable information.<br><br>
+
+The conduct of the pilot exercises was constrained by the inability to adequately “feed” the automated EVM analysis tool with the data needed to generate EVM products (Reference (2)). It was not feasible to establish and maintain interfaces with the projects’ management systems that generate budget, schedule, and cost data because these systems were either not fully established by the project, or they lacked configuration control. <br><br>
+
+<U>References</U>: <br><ol><li>
+"NASA Program and Project Management Processes and Requirements," NPR 7120.5D, March 6, 2007, Paragraph 3.1(c).</li><li> 
+Jerald Kerby, NASA Earned Value Management (EVM) Capability Project, EVM Steering Committee Presentation, August 15, 2011.</li></ol>
+
+<blockquote><small><sup>1</sup>Several earned value management/analysis tools compliant with EVM standards are available as commercial software.</small></blockquote>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+For EVM to identify problems in time to apply effective corrective action to minimize cost overruns and ensure data integrity, it must be fully integrated with the project management systems that supply up-to-date budget, schedule, and cost data. Prior to implementing EVM on a target project, the proposed project management system should be evaluated to ensure that (1) acceptable interfaces can be established between the EVM tool and the various project planning/reporting tools and (2) that the data elements required by the EVM process are defined and under configuration control.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol><li>NASA should establish a comprehensive, NASA-wide, EVM system, including a system architecture, system configuration, interface specifications, configuration control requirements, and maintenance approach.</li><br><li> 
+
+Before commencing an EVM implementation that employs NASA Center-unique or project-unique systems or tools, the EVM implementation team should consider evaluating the Center or project system to determine whether the:<br><br><ul><li>
+
+Center/project management systems and tools provide the required data elements to support the automated EVM analysis tool.</li><br><li>
+Global fields in the Center/project scheduling tools have been established and defined.</li><br><li>
+Schedule fields will provide the data elements required to support cost/schedule integration and calculate schedule performance.</li><br><li>
+System interfaces with the automated EVM analysis tool are documented and under configuration control.</li></ul></li></ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+The JPL-led pilot study was performed on a set of NASA Center-managed projects. The NASA Centers will be documenting and refining their EVM processes to preclude EVM process defects like those revealed by the pilot study.
+</section>
+<section><h2>Related Policies & Standards</h2>
+NPR 7120.5, NASA Program and Project Management Processes and Requirements; NDIA PMSC ANSI/EIA-748-B, Standard for Earned Value Management Systems Intent Guide; OMB Circular No. A-11, Preparing, Submitting, and Executing the Budget; NASA Integrated Baseline Review Handbook, NASA/SP-2010-3406 (Draft); NASA Schedule Management Handbook, NASA/SP-2010-3403, March 2011; NASA Work Breakdown Structure (WBS) Handbook, NASA/SP-2010-3404, January 2010.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

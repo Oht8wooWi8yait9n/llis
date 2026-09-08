@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0695: Guidelines for Thermal Analysis of Spacecraft Hardware</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0695: Guidelines for Thermal Analysis of Spacecraft Hardware</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0695 (Database ID: 695)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/695" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-AP-2302 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Thermal analysis when used throughout the development cycle will (1) provide an optimum thermal design within the constraints of the overall system design, (2) provide temperature distributions and temperature histories to the level of detail required, (3) provide early identification of design problems, and (4) provide the basis for predicting and evaluating thermal performance in test and flight.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Detailed thermal analysis and design should be performed to ensure that the temperatures of all spaceflight components remain within their specified limits during the mission lifetime. To meet this objective, thermal modeling is required beginning at the project conceptual design stage and continuing through preliminary and detailed design stages and environmental testing. Test verified models are used to predict temperatures for the launch phase, and for mission operations.</p>
+
+    <p><i>Design Phases</i></p>
+
+    <p>During the conceptual design phase the temperature control system can be a major driver in defining the configuration, orientation and power requirements. Simplified calculations, rules of thumb, and experience with similar requirements are useful at this stage, but a computer model of the overall configuration and the location of major components provides the ability to compute component temperatures over the range of anticipated orbital environments and to be able to evaluate and respond quickly to proposed system trade-offs. In the preliminary and detailed design stages the computer models are expanded as more details of the overall system are firmed up. The models are used to support trade studies as needed and to develop and optimize the thermal control system design.</p>
+
+    <p><i>Test Phase</i></p>
+
+    <p>In preparation for thermal vacuum and thermal balance testing the computer models are modified to predict temperatures in the test environment and to provide the thermal analysis required to develop the test plan and to specify the test hardware. For thermal vacuum tests the models can be used to demonstrate that the test hardware can drive each component to the specified hot and cold temperature levels and to predict the transition times between hot and cold soak periods. The thermal balance tests are designed to verify the accuracy of the computer models and to demonstrate that the thermal control system functions as specified. Since it is often impractical to simulate the orbital environment, the models are used to develop equivalent environments that result in nearly the same temperatures in the test environment as are predicted for flight. If the test temperatures differ significantly from predictions for the test environment, the models are adjusted to try to match the
+    test temperatures. These adjustme nts must have a plausible physical basis if the models are to be considered to be verified by test.</p>
+
+    <p><i>Launch Phase</i></p>
+
+    <p>For an Expendable Launch Vehicle (ELV) launch, the models are used to predict the payload temperatures from lift-off to orbit insertion. This may include transient heating from the nose fairing until fairing ejection and direct aerodynamic heating immediately followed ejection, solar and earth inputs, spin rate changes, deployment of booms and solar paddles, attitude changes for thruster firings, extended periods in the earth's shadow, etc. For an Space Transportation System (STS) launch, the payload models are placed in a model of the shuttle bay and run for a variety of cases, including (1) launch, (2) on orbit with the bay doors closed, (3) the open door configuration at selected attitudes, such as bay-to-earth, bay-to-sun, and bay-to-space, (4) payload on the remote manipulator system, (5) reentry, and (6) post landing with and without purge air. There are also safety related cases to be analyzed, such as a bay floodlight failed on and the vent door failed to open during
+    reentry. Payload temperature grad ients at touchdown are needed for the analysis of landing loads.</p>
+
+    <p><i>Flight Predictions</i></p>
+
+    <p>The test verified computer models are used to predict temperatures in flight for use by ground stations for monitoring performance, for planning operations, for verification of the computer models using flight data, and for monitoring degradation of the thermal coatings.</p>
+
+    <p><i>Special Purpose Models</i></p>
+
+    <p>Reduced thermal models of instruments and other spaceflight hardware are often required by spacecraft thermal designers in order to limit the size of their all-up observatory computer model. The reduced models may be constrained to a small number of surfaces, nodes and couplings. Emphasis should be placed on the accuracy of the temperatures of critical components and the heat flow across the interface with the spacecraft.</p>
+
+    <p>Thermal analysis of electronic boxes is performed to compute the temperatures and heat flows throughout the box from the mounting interface to the junction temperatures of semiconductors and other components as required. Special purpose computer programs have been developed to facilitate the modeling of circuit boards.</p>
+
+    <p>STS thermal models, such as Orbiter Payload Thermal Integration Model (OPTIMOD), provide details for subdividing the shuttle bay into surfaces and nodes, adding external surfaces, such as the wings, tail, bay doors, and active thermal control radiators, adding internal structure as needed, and modeling the ascent, entry, and post-landing phases.</p>
+
+    <p>Special purpose models are developed for providing added detail for a particular component or region of a larger model, such as computing temperature gradients and transient temperatures in thin films and windows. Others are developed for modeling the performance of thermal control louvers, heater pipes, capillary pumped systems, cryogenic instruments, passive radiative coolers, solid and liquid cryogen dewars, etc.</p>
+
+    <p><i>Modeling Techniques</i></p>
+
+    <p>The computer models are sets of finite difference equations which describe the heat transfer among small, isothermal elements or nodes which together represent the physical hardware. The number and location of these nodes are chosen based on accuracy requirements, convenience in working with complex shapes, and efficient use of engineering and computer time. For a spacecraft in earth orbit the equations are of the form:</p>
+
+    <p>Heat Stored = Heat In - Heat Out</p>
+
+    <p>The heat flow at each node is given by:</p>
+
+    <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009077main_0695fixed-small.jpg"  HEIGHT="331"  BORDER="0" /><A HREF="/llis_lib/txt/1009559main_0695fixed-small.txt"  >[D]</A></p>
+
+    <p>The result is a set of finite difference equations, one for each unknown temperature, with terms for the thermal mass, the heat absorbed on external surface nodes from sunlight, earth reflected sunlight (albedo), and earth emitted infrared radiation, the heat dissipated in electrical components, the heater power for thermal control, and conduction and radiation interchange between node pairs. Solutions are obtained using a general-purpose heat transfer computer program, such as Systems Improved Numerical Differencing Analyzer (SINDA). The bulk of the input data, which is the absorbed energy from the sun and the earth, and the radiation interchange factors are generated by programs such as Thermal Radiation Analyzer System (TRASYS) and Simplified Space Payload Thermal Analyzer (SSPTA).</p>
+
+    <p>The steps involved in the development of a thermal model are shown in Figure 1. The initial step in the development of the geometric model. This is used in conjunction with the optical properties of the surfaces to generate radiative couplings between surface node pairs. Given the parameters defining the orbit and the orientation of the payload, the geometric model is also used to generate the absorbed solar, earth reflected solar and earth emitted infrared radiation on the external nodes. These data are then input into the heat transfer model for computing transient or steady-state temperatures . Any changes in the geometric model, the surface optical properties and the orbital parameters requires regeneration of the radiative couplings and the absorbed solar and earth radiation.</p>
+
+    <center>
+      <table border="0">
+        <tr>
+          <td><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009076main_0695fig1-small.jpg"  HEIGHT="513"  BORDER="0" /><A HREF="/llis_lib/txt/1009558main_0695fig1-small.txt"  >[D]</A></td>
+        </tr>
+
+        <tr>
+          <td>Figure 1. Thermal Model Development</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>To ensure the accuracy of the models requires considerable care and skill, good engineering judgment and applicable experience. Care is required in checking the input data for errors and the caution and warning messages provided by the computer codes. It is very important to keep good records which show the sources of the input data and a log of the computer runs. Skill comes into play in knowing how to use the computer programs, in understanding the theory behind the calculations, and in being well versed in the pitfalls commonly experienced with each program. The experience and judgment comes into play in setting up the model, in checking the output for accuracy, and in interpreting the results.</p>
+
+    <p>In using TRASYS or SSPTA, the geometric model should be plotted and checked for overlapping surfaces, for surface normals in the proper directions, for surfaces that are misplaced or mis-oriented, for unplanned gaps, for surfaces viewing the backsides of others, etc. The computation of radiative interchange factors, especially the radiative coupling to space should be checked for surfaces that have significant couplings to space but which do not view space. Where it is possible to do so, hand calculation or independent methods should be used to determine if the computed values are reasonably accurate. Similar checks should be made for calculations of absorbed sunlight.</p>
+
+    <p>Steady state solutions should be checked to verify that the energy balance on each node is within required tolerances and that the heat flow to coupled nodes have reasonable values. Transient temperatures should be plotted to visually check: (1) if the temperature-time characteristics are as expected; (2) if any sudden or unusual variation has a physical explanation; and (3) that thermostats respond as required and that heaters are sized properly.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The thermal design philosophy at Goddard Space Flight Center is that all temperature limits be met for worst case hot and cold combinations of possible orbital environments, spacecraft or instrument operating modes, and tolerances on all major thermal properties. These variations are stacked, that is each variable is combined in such a way that each contributes to the worst case condition to the extent that such combinations are possible within the mission requirements and constraints. For example, the worst case cold condition for a satellite in earth orbit would probably consist of the following: (1) the orbit oriented such that the percent time in sunlight is a minimum; (2) the spacecraft is oriented toward the sun in a direction that the absorbed sunlight is a minimum; (3) the internal power dissipation is at minimum predicted values; (4) minimum values are selected for the solar constant and the earth albedo factor and a value is selected for the equivalent black body
+    temperature of the earth which is consistent with the assumed values of the solar constant and the albedo factor (see Reliability Preferred Practice Guideline No.GD-AP-2301); (5) minimum solar absorptances and maximum thermal emittances of the thermal coatings are selected; and (6) a value is assumed for the effective emittance or thermal conductance of the multilayer insulation blankets which contributes to the coldest condition.</p>
+
+    <p>This philosophy is conservative to the extent that the worst case condition as defined above may be unlikely to occur. However, the experience with spacecraft and instruments that have been flown has been that many of the variables do occur in worst case combinations. Experience has also shown that temperatures in test and in flight often vary from predicted values, so that some conservatism is necessary to compensate for inaccuracies in the thermal models.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>"SINDA/FLUINT, Systems Improved Numerical Differencing Analyzer and Fluid Integrator, Version 2.5, User's Manual," Martin Marietta, MCR-91-1393, December 1992.</li>
+
+      <li>"Thermal Radiation Analyzer System (TRASYS)," NASA JSC-22964, April 1988.</li>
+
+      <li>"Orbiter/Payload Thermal Integration Model (OPTIMOD)," NASA JSC-22437, April 1987.</li>
+
+      <li>NASA SP-8105, "Spacecraft Thermal Control," May 1973.</li>
+
+      <li>"Program Manual for the Simplified Space Payload Thermal Analyzer (Version 3.0/VAX," Arthur D. Little, Inc., ADL Reference C-89216, October 1986.</li>
+
+      <li>Reliability Preferred Practice Number PD-ED-1204 Part Junction Temperature</li>
+
+      <li>Reliability Preferred Practice Number PD-TE-1402 Thermal Cycling</li>
+
+      <li>Reliability Preferred Practice Number PD-TE-1404 Thermal Test Levels</li>
+
+      <li>Reliability Preferred Practice Number GD-AP-2301 Earth Orbit Environmental Heating</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not performing a detailed thermal analysis of a spacecraft or instrument can result in a thermal design of questionable reliability, or it may be so conservative that it utilizes excessive power and weight. The lack of a comprehensive thermal analytical model limits the capability for evaluating the thermal performance in test or orbit.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This guideline describes the general criteria and methodology for the development of thermal models for predicting temperatures of spacecraft, instruments and other spaceflight hardware.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

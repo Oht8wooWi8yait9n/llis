@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0641: Mars Climate Orbiter Mishap Investigation Board - Phase I Report</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0641: Mars Climate Orbiter Mishap Investigation Board - Phase I Report</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0641 (Database ID: 641)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/641" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> <img align="right" alt="Graphic of the Mars Climate Orbiter Spacecraft in orbit around the Earth" border="0" height="265" src="https://llis.nasa.gov/llis_lib/images/1009000main1_0641.jpg" title="Graphic of the Mars Climate Orbiter Spacecraft in orbit around the Earth" width="250" />The Mars Climate Orbiter (MCO) Mission objective was to orbit Mars as the first interplanetary weather satellite and provide a communications relay for the Mars Polar Lander (MPL) which is due to reach Mars in December 1999. The MCO was launched on December 11, 1998, and was lost sometime following the spacecraft&#39;s entry into Mars occultation during the Mars Orbit Insertion (MOI) maneuver. The spacecraft&#39;s carrier signal was last seen at approximately 09:04:52 UTC on Thursday, September 23, 1999.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> The MCO Mishap Investigation board (MIB) has determined that the root cause for the loss of the MCO spacecraft was the failure to use metric units in the coding of a ground software file, &quot;Small Forces,&quot; used in trajectory models. Specifically, thruster performance data in English units instead of metric units was used in the software application code titled SM_FORCES (small forces). A file called Angular Momentum Desaturation (AMD) contained the output data from the SM_FORCES software. The data in the AMD file was required to be in metric units per existing software interface documentation, and the trajectory modelers assumed the data was provided in metric units per the requirements.</p> 
+<p> During the 9-month journey from Earth to Mars, propulsion maneuvers were periodically performed to remove angular momentum buildup in the on-board reaction wheels (flywheels). These Angular Momentum Desaturation (AMD) events occurred 10-14 times more often than was expected by the operations navigation team. This was because the MCO solar array was asymmetrical relative to the spacecraft body as compared to Mars Global Surveyor (MGS) which had symmetrical solar arrays. This asymmetric effect significantly increased the Sun-induced (solar pressure-induced) momentum buildup on the spacecraft. The increased AMD events coupled with the fact that the angular momentum (impulse) data was in English, rather than metric, units, resulted in small errors being introduced in the trajectory estimate over the course of the 9-month journey. At the time of Mars insertion, the spacecraft trajectory was approximately 170 kilometers lower than planned. As a result, MCO either was destroyed in the atmosphere or re-entered heliocentric space after leaving Mars&#39; atmosphere.</p> 
+<p> The Board recognizes that mistakes occur on spacecraft projects. However, sufficient processes are usually in place on projects to catch these mistakes before they become critical to mission success. Unfortunately for MCO, the root cause was not caught by the processes in-place in the MCO project.</p> 
+<p> A summary of the findings, contributing causes and MPL recommendations are listed below. These are described in more detail in the body of this report along with the MCO and MPL observations and recommendations.</p> 
+<p> Root Cause: Failure to use metric units in the coding of a ground software file, &quot;Small Forces,&quot; used in trajectory models</p> 
+<p> Contributing Causes:</p> 
+<ol> 
+ <li> Undetected mismodeling of spacecraft velocity changes</li> 
+ <li> Navigation Team unfamiliar with spacecraft</li> 
+ <li> Trajectory correction maneuver number 5 not performed</li> 
+ <li> System engineering process did not adequately address transition from development to operations</li> 
+ <li> Inadequate communications between project elements</li> 
+ <li> Inadequate operations Navigation Team staffing</li> 
+ <li> Inadequate training</li> 
+ <li> Verification and validation process did not adequately address ground software</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Verify the consistent use of units throughout the MPL spacecraft design and operations</li> 
+ <li> Conduct software audit for specification compliance on all data transferred between JPL and Lockheed Martin Astronautics</li> 
+ <li> Verify Small Forces models used for MPL</li> 
+ <li> Compare prime MPL navigation projections with projections by alternate navigation methods</li> 
+ <li> Train Navigation Team in spacecraft design and operations</li> 
+ <li> Prepare for possibility of executing trajectory correction maneuver number 5</li> 
+ <li> Establish MPL systems organization to concentrate on trajectory correction maneuver number 5 and entry, descent and landing operations</li> 
+ <li> Take steps to improve communications</li> 
+ <li> Augment Operations Team staff with experienced people to support entry, descent and landing</li> 
+ <li> Train entire MPL Team and encourage use of Incident, Surprise, Anomaly process</li> 
+ <li> Develop and execute systems verification matrix for all requirements</li> 
+ <li> Conduct independent reviews on all mission critical events</li> 
+ <li> Construct a fault tree analysis for remainder of MPL mission</li> 
+ <li> Assign overall Mission Manager</li> 
+ <li> Perform thermal analysis of thrusters feedline heaters and consider use of pre-conditioning pulses</li> 
+ <li> Reexamine propulsion subsystem operations during entry, descent, and landing</li> 
+</ol><p><A href="https://llis.nasa.gov/llis_lib/pdf/1009464main1_0641-mr.pdf" >1009464main1_0641-mr.pdf</A></p><p><A href="https://llis.nasa.gov/llis_lib/pdf/1009465main1_0664-mr.pdf" >1009465main1_0664-mr.pdf</A></p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

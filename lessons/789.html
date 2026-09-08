@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0789: Subsystem Inheritance Review (SIR)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0789: Subsystem Inheritance Review (SIR)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0789 (Database ID: 789)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/789" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1262; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Use of inherited flight hardware or software may reduce cost and allow a spacecraft designer to avoid the risk of launching unproven equipment. However, the designer often lacks full information on the many design decisions made during development, including some which may cause incompatibility with current spacecraft requirements. Subsystem inheritance review (SIR) probes inheritance issues to help assure that the proposed inherited item will result in an acceptable and reliable product with minimal mission risk.</p>
+
+    <p>The inheritance review evaluates the compatibility of the inherited or commercial-off-the-shelf (COTS) item with project requirements. It assesses potential risk associated with item use and the need for modification or additional testing. It is held at the earliest possible time prior to the equivalent level PDR. For complex and critical items or where the preponderance of the hardware or software is inherited, the SIR may replace a PDR or critical design review (CDR) for the inherited item. In other cases, discussion of inherited items can be included in another review-- typically, the preliminary requirements review or the PDR. For smaller projects or tasks, the inheritance review and the PDR may be combined into a single review to obtain the benefit at minimum expense. The higher the level of inherited item criticality, technical complexity, and technical risk, the more likely the inheritance review will be held at the subsystem level, or even the assembly level.</p>
+
+    <p><u>Responsibilities:</u></p>
+
+    <p>The responsible task manager identifies the need for a formal review and initiates the action by contacting the convening authority, usually the next higher management level. The convening authority, in consultation with the responsible task manager, appoints the review board and a chair, and defines the board charter and schedule.</p>
+
+    <p>The review board, under the direction of the chair, conducts the review and prepares a written report to the responsible manager stating the findings and recommendations. The board may elect to use the JPL Recommendation for Action (RFA) form to document recommendations. All such recommendations are advisory only. The responsible manager prepares a written response to the convening authority addressing the disposition of the review board findings and recommendations for action. The convening authority reviews and approves these dispositions.</p>
+
+    <p><u>Inheritance Review Agenda:</u></p>
+
+    <p>The SIR agenda items to be addressed match the subsystem PDR agenda items. The PDR agenda is described in the NASA Preferred Reliability Practice, Preliminary Design Review, Practice No. PD-ED-1215.1. If an existing hardware, software, or design element is being inherited, then the subsystem CDR agenda items also need to be considered. The CDR agenda is described in the NASA Preferred Reliability Practice, Critical Design Review, Practice No. PD-ED-1215.3.</p>
+
+    <p>In addition to these common review agenda items, the SIR may address the topics listed in Table 1. Selection of topics from this list should be tailored in accordance with product complexity and project needs.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009260main_0789-table1.jpg"  HEIGHT="407"  BORDER="0" /><A HREF="/llis_lib/txt/1009735main_0789-table1.txt"  >[D]</A>
+    </center>
+
+    <p><u>SIR Tools:</u></p>
+
+    <p>Typical tools which may be effective in support of a productive SIR include:</p>
+
+    <p><i>Compliance Matrix.</i> Typically, the specifications of an inherited design or configured item do not precisely match current requirements. A compliance matrix is a very useful SIR tool for matching the requirements of the inherited design against the requirements of the target subsystem. Each requirement line item in the current project is checked off against the corresponding inherited item requirement, permitting visual identification of requirement deltas. The product of this analysis is a proposed plan for achieving inherited item compliance with current requirements.</p>
+
+    <p><i>Detailed Technical Review.</i> Agenda items and issues which have a potentially significant impact on the cost, performance, and reliability of the inherited design or equipment merit special emphasis. A detailed technical review (DTR) of a single product may be held to make use of specialized expertise; it permits a more in-depth, detailed, technical review of the compatibility, simplicity, and testability of interfaces than is feasible at the SIR. The DTR is organized as an informal, but structured, mini-review held prior to the formal inheritance review to discuss significant issues such as:</p>
+
+    <ol>
+      <li>A comparison of the functional and design requirements for the inherited items with those for the current project, including single point failure policy (and any exceptions), design margins, operating life, and mission flight profile.</li>
+
+      <li>Environmental design requirements, including margin requirements and their justification, and the associated qualification (or protoflight) and acceptance test requirements for the target application.</li>
+
+      <li>Comparison of piece part standards for the current and prior projects. This issue must be addressed early in the inheritance review process in consideration of the long lead time for procurement of piece parts.</li>
+
+      <li>Design assessment or reliability analyses, such as failure modes, effects, and criticality analyses (FMECAs), worst case analyses, and part stress analyses, including the method of determining and combining variables. Also of importance are the requirements for dispositioning analysis discrepancies, and the history of such activity on the prior project.</li>
+
+      <li>Problem/failure history associated with the hardware or software during ground test and flight operations on the prior project, and the applicability of the problems/failures and their resolution to the requirements of the current project.</li>
+    </ol>
+
+    <p>SIR allows for an assessment of the proposed inherited design and, if applicable, the inherited hardware, software, or firmware by a group of knowledgeable persons not directly involved in the activity under review. A formal review can focus many years of experience on inheritance issues which may affect product reliability.</p>
+
+    <p>Inheritance review aids the responsible manager in early identification of potential inheritance problems and in developing optimal solutions.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>JPL Standard Practice Instruction (SPI) 4-16-1.</li>
+
+      <li>Guidelines for Planning and Conducting Formal Reviews, JPL D-10401 (Office of Engineering and Mission Assurance).</li>
+
+      <li>"TOPEX Modular Power Subsystem (MPS) Inheritance Review," Jet Propulsion Laboratory Memorandum 5131-87-636 (J. Quinn to E. Costogue), December 15, 1987.</li>
+
+      <li>Preliminary Design Review, Reliability Preferred Practice No. PD-ED-1215.1.</li>
+
+      <li>Critical Design Review, Reliability Preferred Practice No. PD-ED-1215.3.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>In the absence of inheritance review, one or more potential problems adversely impacting the system, subsystem, or project may not be identified in a timely manner. This oversight may later result in a condition having a significant adverse effect on quality, reliability, capability, schedule, or cost, accompanied by an increased risk of diminished performance or mission failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Conduct a formal design inheritance review at the system, subsystem, or assembly level prior to, or in conjunction with, the corresponding subsystem Preliminary Design Review (PDR). The purpose of the inheritance review is to identify those actions which will be required to establish the compatibility of the proposed inherited design, and any inherited hardware or software, with the subsystem functional and design requirements.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on many JPL-managed projects, including Galileo, Magellan, and Mars Observer. In addition, the Topex/Poseidon project made extensive use of inherited items, and SIR was performed on all Topex/Poseidon subsystems</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

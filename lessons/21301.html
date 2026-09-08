@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #21301: Open-Source and Commercial Web Software Vulnerabilities</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #21301: Open-Source and Commercial Web Software Vulnerabilities</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #21301 (Database ID: 21301)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-03-09</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Integration and Testing,  Computers,  Information Technology / Systems,  Risk Management / Assessment,  Software,  Software Engineering</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/21301" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>In March 2017, a Chinese vulnerability assessment company posted an exploit for the popular Apache Struts2 web framework. Within hours, an addition to a common penetration testing application called Metasploit had been added that would scan for this vulnerability. This caused the attack vector of the exploit to be rapidly distributed before the software vendor could post a patch update to fix the issue. This zero-day exploit was quickly picked up by several malicious groups and used to attack websites using the Struts2 framework. Among those attacked were several public-facing NASA sites, including NASA TechPort (https://techport.nasa.gov). Up to this point, the only mention of this vulnerability by the software vendor was a post on their wiki page describing a potential vulnerability of moderate concern - no Mitre Common Vulnerabilities and Exposures (CVE) had been created and no patch release had been announced. The issue was further exacerbated by the notoriously high level of effort required to update the Struts2 software package due to extensive dependencies and breaking changes between major release versions.</p> 
+<p>Because the NASA TechPort Team had incorporated log-monitoring and notification mechanisms, they were notified within a matter of minutes of suspicious behavior. The TechPort Team immediately invoked their Incident Response Plan and gathered the key members of the Response Team, which included the system administrator, security lead, and technical lead. After assessing the situation and determining that no patch was available from the vendor, the TechPort Team devised a custom solution to the issue which was rapidly tested and deployed. The success of this fix was primarily due to the TechPort Team’s DevOps working model and the rapid deployment capabilities of a team-operated cloud computing environment.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>Patch releases may not be available when exploits are identified. Teams should be prepared to handle these types of situations. Incident drills are a useful tool, but at the end of the day the most important asset is the ability of the team to respond to the issue at hand efficiently and effectively.  </li> 
+ <li>The development and operations teams must be well-coordinated. DevOps working models are highly recommended and ensure constant collaboration and involvement between the two teams. Both teams should have a strong understanding of the roles, responsibilities, and capabilities of members of each team, and should be familiar with working together to overcome issues.</li> 
+ <li>Active monitoring of common security bulletin networks, and even software-specific bulletins, may not be sufficient in order to identify zero-day vulnerabilities. Additional, specific information avenues should be explored for crucial software components.</li> 
+ <li>Commercial intrusion detection / prevention mechanisms and web application firewalls may not monitor certain attack vectors. Each application must be analyzed based on its individual components in order to determine which aspects need additional monitoring, and these monitoring devices should be tailored to the application.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Ensure all software packages are kept up-to-date with the latest official release. This will likely cause the project to incur additional operations cost (including development and regression testing) and should be included up-front in the project plan and estimate.</li> 
+ <li>Do not accept (or at least critically evaluate) software packages that are not well-maintained and do not have a healthy user community.</li> 
+ <li>Do not accept (or at least critically evaluate) software packages that do not have a security bulletin / notification process.</li> 
+ <li>Critically evaluate software packages that have many dependencies, as this can make it more difficult to maintain this software and upgrade on short notice, if need-be.</li> 
+ <li>Maintain an approved IT Security Plan that addresses software patch update processes and an Incident Response Plan. At a minimum, conduct Incident Response plan drills annually.</li> 
+ <li>Actively seek out security bulletins and information that may be posted on less conventional security news distribution networks. As an example, actively monitor Metasploit (and other penetration testing software) package additions.  Active monitoring of CVEs is likely not sufficient, especially when dealing with zero-day exploits.</li> 
+ <li>Incorporate custom log-monitoring and notification solutions tailored to your system and your team’s needs. Do not rely entirely on commercial intrusion detection/prevention packages – take proactive action to protect your application with multiple security layers.</li> 
+</ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

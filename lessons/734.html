@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0734: Instrumentation System Design and Installation for Launch Vehicles</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0734: Instrumentation System Design and Installation for Launch Vehicles</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0734 (Database ID: 734)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/734" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1251; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The benefits of implementing these reliability practices for instrumentation system and related sensors are: (1) consistent performance and measurement results, (2) minimum need for continuous or periodic calibration, (3) avoidance of and resistance to contamination, and (4) reduced necessity for repair or replacement in repeated usage.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Introduction:</p>
+
+    <p>Close attention to design details, precision craftsmanship, and an integrated approach to design, manufacturing, testing, installation, and operations are paramount to sustained accuracy and reliability of performance in launch vehicle and propulsion system instrumentation and related sensors for aerospace applications. Instrumentation systems and their related sensors have reached a high degree of maturity, and preferred practices have evolved in recent years which will ensure high reliability if meticulously followed throughout the life cycle of the instrumentation system.</p>
+
+    <p>Design Practices:</p>
+
+    <p>During the preliminary design, critical design review, and initial development phases, the integrated design and concurrent engineering processes have proven to be essential in producing instrumentation that will continue to perform reliably in repeated and long term usage. Instrumentation systems should be planned and designed in close connection with and parallel with the design and analysis of the principal systems and subsystems they are intended to monitor, measure, and control. Sensor vendors and suppliers must be an integral part of the design team for effective coordination and communication. Error budget analyses and metrology considerations are considered up front in the design process. Designing the instrumentation system and its components for contamination-free manufacturability and ease of inspectability is vital. Calibration considerations and compensation methods are developed early in the design process to permit analysis of sensor shift and drift, and to
+    provide a means of predicting and adjusting for both anticipated and unanticipated variances from nominal sensor performance. Sensors, connectors, and wiring are designed to avoid the potential of contamination creation or entrapment, damage during removal and refurbishment, misidentification, leakage, solder wire fatigue failure, electrical shorts, insulation breakdown, or vibration-induced deterioration.</p>
+
+    <p>Testing and Verification Practices:</p>
+
+    <p>Careful analysis of all instrumentation system design requirements and development of comprehensive test and verification plans help ensure that all instrumentation requirements are thoroughly verified in testing. For manned missions, continued testing and retesting of sensors and other components on a sampling basis from each production lot is required to ensure that delivered parts are continuously meeting standards. Experience has shown that careful attention must be given to any rework processes, and that reworking of lead wire channels should be avoided. Source control drawings are established to ensure that manufactured items conform exactly to those of the qualified parts. Leak checks are performed on all sensor welds.</p>
+
+    <p>Manufacturing and Assembly Practices:</p>
+
+    <p>Closely controlled manufacturing and routing procedures have proven to be essential in the manufacturing and assembly of sensors as well as the installation and testing of instrumentation systems. Inspection points are added during pre-assembly or partial assembly steps if inspection would be difficult at later steps in the process. Inspection steps are added prior to any cavity closeout, and prior to the use of coatings, sealants, or potting compounds that could mask contaminants. Potting compounds for connector terminals, printed wiring boards, or connector boards are formulated, installed, and inspected to eliminate voids and potential resulting failure in a dynamic vibration environment. Inspection for contamination is conducted following secondary machining operations and prior to the assembly of machined parts. Magnification is specified for all inspection operations during manufacturing and assembly. Handling containers, tooling, and support equipment that will come into
+    close contact with the flight hardware is meticulously cleaned and closely controlled during manufacturing and assembly.</p>
+
+    <p>Alternate rework procedures are evaluated and acceptance or rejection criteria for these rework procedures are developed. Heat sinks are provided in tooling for electron-beam weld joints. High temperature solder is used to improve strength under elevated temperature environments.</p>
+
+    <p>Changes to Instrumentation Systems and Sensors:</p>
+
+    <p>Changes to instrumentation systems and sensors are subjected to certification through analysis, by similarity, through laboratory verification, and by hot fire testing on the selected launch vehicle, propulsion system, or component. A stress analysis accompanies any change in configuration to ensure that the resultant component or system is at least as strong, if not stronger, than the original.</p>
+
+    <p>Resulting improvements in material properties, reduction in weight, and improvement in reliability are verified through analysis. A dynamic evaluation of modified configurations is conducted to identify changes in resonant frequency and load capability. Verification of changes by similarity is based on hot fire experience of sensors or other instrumentation system components with identical features. Laboratory testing to verify changes includes verification of diaphragm burst pressures (pressure sensors, for example), case structure burst pressures, and leak tests. Hot fire verification includes the testing of one sensor in each vibration zone (as in the SSME) and multiple long duration tests in each planned sensor location.</p>
+
+    <p>General Practices for Instrumentation Sensors (Transducers) in Long Lifetime, Refurbishable or Reusable Vehicles:</p>
+
+    <p>Selected pressure and temperature transducers are capable of lifetimes in excess of 10 years. Flow meters have less life capability, but meters without moving parts and operating in an environment of low contamination and corrosion are capable of long life. Humidity, oxygen, and carbon dioxide sensors are life limited, requiring periodic maintenance actions such as cleaning and replacement of cartridges.</p>
+
+    <p>A prime problem with transducers is the lack of long-term stability (freedom from drift). One solution to this problem lies in making the total transducer dimensionally stable over long periods of time. Accordingly, it is important to minimize the use of nonmetallic materials and to employ and control processes that yield parts in a stress free condition. Long term stability (and process control) must then be demonstrated through testing of the assembled transducer under appropriate environmental conditions such as temperature cycling. A second solution is to provide sensitive and pre-calibrated ground-based software that will detect unpredictable sensor drift and adjust the software to compensate for this drift where possible. However, this process can yield an increased uncertainty of the measurement because the instrument, has in effect, been recalibrated through a process that could have less accuracy than the original calibration standard. If the reference drifts, this
+    uncertainty grows with time. There is more to be gained from correction of unpredictable drift if a cross check can be performed with a statistically significant number of instruments. Cross checks are of great value for determining when an instrument has drifted outside the allowable tolerance band. When this occurs, the instrument can be replaced or calibrated as required by corrective maintenance.</p>
+
+    <p>A well-constructed test program provides the best assurance that a transducer will perform satisfactorily in a long-life application. Unfortunately, the lead time available from selection of a transducer to commitment of the transducer to service may be only a fraction of the time required for a comprehensive test program. Therefore, transducers should be chosen where such data has already been acquired.</p>
+
+    <p>Long-life transducer applications fall into two broad classifications: open-loop and closed-loop. Open-loop applications only provide information regarding the performance of a system. Closed-loop applications involve a control function to regulate a system based upon transducer output. Transducer failures in open-loop applications result in uncertainty about the condition of the system, while similar failures in closed-loop applications of transducers are more critical from the standpoint of failure effects. They require greater attention to the factors influencing reliability and life.</p>
+
+    <p>In general, redundancy techniques do not provide solutions to transducer problems. Active redundancy cannot provide a solution if a known life limiting mechanism exists in the transducer. Multiple potentiometer wipers, for example, exposed to the same wear, may fail within the same time span. Standby redundancy is generally not feasible.</p>
+
+    <p>In standby redundancy a non-active transducer is protected from the failure producing condition until the first transducer has failed. Applications involving standby redundancy are severely restricted by size, weight, and the complexity of devices required to switch from the active to the standby transducer.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Each Space Shuttle Solid Rocket Booster (SRB) has 65 measurements during flight to monitor parameters such as chamber pressure, actuator positions, temperature, and vibration. In addition to these measurements, there are 142 ìeventî measurements that are telemetered back to earth for each SRB. Therefore, for each Space Shuttle flight, the SRB contributes over 400 channels of telemetered data. Each Space Shuttle Main Engine (SSME) contributes 66 more channels of telemetered data, making a total of 466 channels of telemetered data for the reusable propulsion system components of the Space Shuttle.</p>
+
+    <p>In the Critical Design Review of the SSME pressure sensor, which is only one of the many sensors used in a Space Shuttle flight, fourteen design changes and a number of process changes were identified to reduce contamination and to improve the reliability of this sensor alone. These design and process changes implemented many of the practices described in this document, and a much higher reliability of the resulting modified sensor is expected. The changes involved sensor body, wiring, potting materials, manufacturing methods, a slightly revised configuration, increased strength, and improved inspectability.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Solid Rocket Booster Instrumentation Program and Components List, Report No. 16A00103, Marshall Space Flight Center, AL, March 15, 1983.</li>
+
+      <li>SSME Flight Measurement Location Document, Revision D, Rockwell International, Rocketdyne Division, Canoga Park, CA, May 1991.</li>
+
+      <li>Critical Design Review of Eaton SSME Pressure Transducer, Rockwell Aerospace, January 31, 1995.</li>
+
+      <li>Space Station Furnace Facility Metrology Plan, NASA/MSFC Astrionics Laboratory, November 1994.</li>
+
+      <li>"Long Life Assurance Study for Manned Spacecraft Long Life Hardware," Report # MCR-72-169, Martin Marietta Corporation, September 1972.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to the practices suggested herein could result in contamination entry into sensors, excessive uncompensated sensor drift, incompatibility of the instrumentation system with other subsystems, failure to meet telemetry requirements, and possible loss of the mission through inadequate diagnostics and inappropriate control or vehicle destruction. At the minimum, expensive delays, replacement and repair may be incurred to achieve successful flight objectives.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Instrumentation systems and related sensors (transducers), particularly those designed for use in reusable and refurbishable launch systems and subsystems, are analyzed, designed, fabricated and tested with meticulous care in order to ensure system and subsystem reliability.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle Main Engine (SSME), Space Shuttle Solid Rocket Booster (SRB), and selected space payloads and experiments.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

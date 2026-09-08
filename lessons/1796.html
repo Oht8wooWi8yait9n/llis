@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1796: MRO Waveguide Transfer Switch Anomaly</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1796: MRO Waveguide Transfer Switch Anomaly</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1796 (Database ID: 1796)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-05-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Categories,  Engineering Design,  Missions and Systems Requirements Definition,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Communication Systems,  Flight Equipment,  Flight Operations,  Hardware,  Risk Management / Assessment,  Spacecraft,  Orbiting Vehicles,  Spacecraft and Spacecraft Instruments,  Planetary entry and landing concepts,  Reliability,  Mission and systems trade studies,  Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1796" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Jet Propulsion Laboratory (JPL) mission design principles place a high value on maintaining communications with Earth at all times when the spacecraft is not occulted (Reference (1)). The Mars Reconnaissance Orbiter (MRO) flight system achieves this for both the uplink and downlink radio frequency (RF) signals by antenna swaps accomplished by actuation of RF switches. (In contrast, some JPL spacecraft meet this goal using redundant RF amplifiers and transponders.) For the downlink signal, MRO employs a Waveguide Transfer Switch (WTS), an electromechanical device that allows RF energy entering through one port to be routed during spaceflight to one of several output ports (Figure 1). This switching allows a 100 watt microwave downlink signal to be sent from one of the two available amplifiers out to one of two different radiating antennas. 
+<br> &nbsp; 
+<table width="100%"> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <table> 
+     <tbody> 
+      <tr> 
+       <td><img align="Top" alt="Figure 1 juxtaposes a color diagram of the TWTA panel with a color photo of the same item. The diagram depicts the layout of the approximately triangular panel. The panel appears to be a fairly thick board on which is mounted a number of components that are spaced apart. Somewhat tubular items attached to the panel include two TWTA and two multiplexers. Two X-band and two Ka-band high voltage power supplies (HVPSs) stick up orthogonal to the panel, as does the waveguide transfer switch located towards the center of the panel (and between the two TWTAs).  The photo does not show the entire panel, but is a close-up of the portion with the waveguide switch. The switch is quite large relative to the other components: it appears to mass larger than a TWTA and at least half the size of a HVPS. No dimensions are provided in the images." border="0" height="321" src="https://llis.nasa.gov/llis_lib/images/1015204main_2007-05_WTS_Fig1(526).jpg" title="Figure 1 juxtaposes a color diagram of the TWTA panel with a color photo of the same item. The diagram depicts the layout of the approximately triangular panel. The panel appears to be a fairly thick board on which is mounted a number of components that are spaced apart. Somewhat tubular items attached to the panel include two TWTA and two multiplexers. Two X-band and two Ka-band high voltage power supplies (HVPSs) stick up orthogonal to the panel, as does the waveguide transfer switch located towards the center of the panel (and between the two TWTAs).  The photo does not show the entire panel, but is a close-up of the portion with the waveguide switch. The switch is quite large relative to the other components: it appears to mass larger than a TWTA and at least half the size of a HVPS. No dimensions are provided in the images." width="526"></td> 
+      </tr> 
+      <tr> 
+       <td><b>Figure 1.</b> Traveling Wave Tube Amplifier (TWTA) Panel Layout</td> 
+      </tr> 
+     </tbody> 
+    </table> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> Five months after the insertion of MRO into Mars orbit, a WTS failed to actuate. The onboard software maintained the commanded downlink configuration by commanding a switch to the redundant X band amplifier. Telemetry indicates that the switch is stuck between its two nominal positions, causing the switch rotor (visible in the center of Figure 2) to partially block the RF energy passing through the switch. This has resulted in a downlink RF power loss (of about 1 dB), and a temperature increase (of about 15 deg C) caused by absorption and dissipation of the reflected energy (Reference (2)). 
+<br> 
+<br> The most likely root cause of the switch failure has been identified as conductive debris (perhaps from flaked plating) floating in the zero gravity environment. This debris may have eventually come into contact with one of the polyimide tape windows at Port 1 or 2 of the WTS during MRO aerobraking (Reference (3)). These windows are used as a contamination barrier on the WTS RF ports, but they may have contributed to the severity of the anomaly. Vent holes in the windows can admit contamination, adhesive on the inward-facing side of the tape can entrap it long enough to initiate RF breakdown, and the breakdown can cause the polyimide tape itself to pyrolyze (see Figure 3), injecting a large amount of polyimide debris into the switch and causing it to bind. 
+<br> 
+<br> Polyimide films or tapes are widely used in aerospace applications due to their light weight, durability, and performance in extreme temperature environments. The design of polyimide RF contamination barriers varies across JPL projects: they vary in thickness and type (i.e., tape vs. film), and MRO may have been unique in using vent holes. Also, the somewhat unusual MRO operational practices of (1) frequently switching antennas (720 times) to maintain communications during the orbit, and (2) using a switch to change antennas instead of powering alternating amplifiers, may have transformed a minor debris problem into a stuck switch. 
+<br> &nbsp; 
+<table width="100%"> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <table width="700"> 
+     <tbody> 
+      <tr> 
+       <td><img align="Top" alt="Figure 2 is a color photo of the body of the failed waveguide transfer switch.  At the center of the all-metal switch body is a rectangular opening. Inside the opening is visible the outer surface of the metal switch rotor. A torn slip of paper has been inserted into the opening, between the rotor and the inside of the switch housing, indicating that there is barely enough tolerance between the housing and the rotor to insert such a slip of paper. No dimensions are provided in the image." border="0" height="300" src="https://llis.nasa.gov/llis_lib/images/1015192main_2007-05_WTS_Fig2.jpg" title="Figure 2 is a color photo of the body of the failed waveguide transfer switch.  At the center of the all-metal switch body is a rectangular opening. Inside the opening is visible the outer surface of the metal switch rotor. A torn slip of paper has been inserted into the opening, between the rotor and the inside of the switch housing, indicating that there is barely enough tolerance between the housing and the rotor to insert such a slip of paper. No dimensions are provided in the image." width="198"></td> 
+       <td rowspan="2" width="10">&nbsp;</td> 
+       <td><img align="Top" alt="Figure 3 is two color photos depicting two views of the polyimide tape window, labeled ¿Front¿ and ¿Back.¿ The photos show a thin silvery frame. Attached to the edges of the frame is a yellowish film. The film clearly covered the entire interior window of the frame, except most of the film has melted away in both views. A black char lines the edges of the missing material." border="0" height="308" src="https://llis.nasa.gov/llis_lib/images/1015193main_2007-05_WTS_Fig3.jpg" title="Figure 3 is two color photos depicting two views of the polyimide tape window, labeled ¿Front¿ and ¿Back.¿ The photos show a thin silvery frame. Attached to the edges of the frame is a yellowish film. The film clearly covered the entire interior window of the frame, except most of the film has melted away in both views. A black char lines the edges of the missing material." width="300"></td> 
+      </tr> 
+      <tr> 
+       <td><br> <b>Figure 2.</b> Post-failure tests showed that materials like polyimide tape or paper (shown here) could block rotation of the switch rotor and jam the switch.</td> 
+       <td><br> <b>Figure 3.</b> Testing showed that, under RF power, foreign object debris (half-inch long aluminum sliver) on or near the polyimide tape window could induce RF breakdown, destroy the window, and produce additional debris.</td> 
+      </tr> 
+     </tbody> 
+    </table> </td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> The WTS had been exempted from JPL's policy prohibiting designs with single-point failures because a quotstuck between normal positionsquot switch failure mode was not considered credible. Although the failure has decreased the downlink margin (from an available margin of at least 3 dB), neither the RF power loss nor the temperature increase poses a threat to the mission, and the system is performing as it would had the WTS failed in a nominal position. However, movement of the root cause debris could cause additional RF breakdowns and damage to other components, and movement of the WTS to a fully blocked position could cause loss of mission — both low likelihood events. 
+<br> 
+<br> 
+<b>References:</b> 
+<br> &nbsp; 
+<table border="0" cellpadding="0"> 
+ <tbody> 
+  <tr> 
+   <td valign="top">(1)</td> 
+   <td width="10">&nbsp;</td> 
+   <td valign="top">quotDesign, Verification/Validation and Operations Principles for Flight Systems (JPL Design Principles Standard)quot, JPL Document No. D-17868, Rev. 3, Paragraph 3.1.2 (quotCommunications During Mission-Critical Eventsquot), December 11, 2006.<br> &nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(2)</td> 
+   <td width="10">&nbsp;</td> 
+   <td valign="top">quotS/C Swap to TWTA 2,quot Incident/Surprise Anomaly (ISA) Report No. Z89130, Jet Propulsion Laboratory, August 16, 2006.<br> &nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(3)</td> 
+   <td width="10">&nbsp;</td> 
+   <td valign="top">quotMars Reconnaissance Orbiter Waveguide Transfer Switch Final Report,quot Jet Propulsion Laboratory Document No. JPL D-31194, March 30, 2007.<br> &nbsp;</td> 
+  </tr> 
+  <tr> 
+   <td valign="top">(4)</td> 
+   <td width="10">&nbsp;</td> 
+   <td valign="top">quotFlight Project Practices, Rev. 6,quot JPL Document No. DocID 58032, March 6, 2006.<br> &nbsp;</td> 
+  </tr> 
+ </tbody> 
+</table>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+A telecommunications system design that places mechanical switches with polyimide tape windows in an active RF path may result in in-flight RF breakdown, followed by injection of pyrolyzed polyimide debris into the switch, jamming of the switch, and loss of a downlink or uplink string.
+</section>
+<section><h2>Recommendation(s)</h2>
+<u>Prevention</u> 
+<ol> 
+ <li>When designing high power RF systems, serious consideration should be given to the role of contamination in causing RF breakdown.</li> 
+ <br /> 
+ <li>Consider materials other than polyimide tape or film for use as contamination barriers. Alternate materials should not be damaged by RF breakdown, and should be thicker than the clearance between switch rotor and housing.</li> 
+ <br /> 
+ <li>Polyimide film may be an acceptable alternative to polyimide tape. Even though it is the pyrolysis of the polyimide material that produces debris, the adhesive on tape (1) adds significant entrapment mechanisms that encourage RF breakdown and (2) increases the likelihood that debris generated by window destruction will cause rotor stiction.</li> 
+ <br /> 
+ <li>The institution should review and standardize usage of polyimide materials as RF contamination barriers.</li> 
+ <br /> 
+ <li>Venting should be accomplished by some means other than holes in the RF windows. A polyimide tape window cannot function as both a contamination barrier and a vent path.</li> 
+ <br /> 
+ <li>To the extent practical, venting of the waveguide elements should be designed to direct gas flow away from contamination sensitive components such as waveguide switches.</li> 
+ <br /> 
+ <li>Although the data does not support atmospheric pressure being the cause of the MRO RF breakdown, it has not been completely ruled out as a contributing factor. The lack of absolute proof suggests that a prudent course for future aerobraking or aerocapture missions would be to design for critical pressure from the outset.</li> 
+ <br /> 
+ <li>Future projects should consider alternative ways of meeting the twin goals documented in the JPL Design Principles (Reference (1)) of continuous spacecraft-Earth communication and (2) minimizing component power cycles and/or RF switch cycles, by such means as passive coupling, polarization diversity, etc.</li> 
+ <br /> 
+ <li>When a telecommunications design features active switching like MRO, consider alternate switching methods. For some designs, use of redundant amplifiers and transponders may be less risky than RF switch actuation. The cycle life of electronics is probably easier to verify than the cycle life of electromechanical devices, particularly where there may be contamination.</li> 
+ <br /> 
+ <li>The flex waveguide is a potential (though not proven) source of the MRO debris. The MRO flex waveguide was manufactured by mechanical corrugation (quotcrunchingquot) of rectangular copper tubing, which may create debris in a hard-to-inspect part. Consider electroforming, a newer process for fabricating flexible waveguides that is less likely to produce manufacturing debris.</li> 
+ <br /> 
+ <li>The institution should assure that the spacecraft and mission design reflect the provisions relating to redundant hardware, electromechanical devices, and continuous spacecraft-Earth communication that are found in the JPL Design Principles (Reference (1)) and JPL Flight Project Practices (Reference (4)) requirements documents.</li> 
+</ol> 
+<u>Mitigation</u> 
+<ol start="12"> 
+ <li>Flight projects should reconsider requesting an exemption to the single-point failure policy that would permit an intermediate position for a waveguide switch similar to the waiver granted MRO (and other recent projects). Projects using waveguide transfer switches should ideally design their spacecraft to be robust in the face of a failure between positions, including such considerations as:<br /> - Protecting amplifiers from reflected RF power (e.g., use of isolators)<br /> - Verification of relevant component performance in the presence of reflected RF power<br /> - Telemetry points sufficient to unambiguously diagnose the condition<br /> - Onboard fault protection response (e.g., redundancy management, logic for retries)</li> 
+ <br /> 
+ <li>When evaluating electromechanical devices such as waveguide switches, add torque margins to mitigate against contamination.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL will reference this lesson learned as additional rationale and guidance supporting Paragraphs 3.1.2.2 (Redundant Data Paths), 4.2.2.11 (Contamination Avoidance), 4.2.3.3 (Actuator Design Margins), 4.5.1.2 (End-to-End System Design), 4.5.5 (Telecommunication System Margins), 4.12.1.6 (Fault Containment Regions), 4.12.1.7 (Contamination), and 4.12.2.3 (High Voltage Designs) in the Jet Propulsion Laboratory standard ¿Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),¿ JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

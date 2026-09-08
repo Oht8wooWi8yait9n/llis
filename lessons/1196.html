@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1196: Test as You Fly, Fly as You Test, and Demonstrate Margin (1998)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1196: Test as You Fly, Fly as You Test, and Demonstrate Margin (1998)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1196 (Database ID: 1196)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-01-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1196" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The principle of "test-as-you-fly" means that ground tests and simulations should accurately reflect the planned mission profile, plus margin and the appropriate off-design parameters. Although the system level test and verification process for Mars Polar Lander (MPL) was well planned and executed, there were deficiencies in the test program for the parachute, terminal descent, and touchdown phases. MPL test deficiencies included:</p>
+
+    <ul>
+      <li>The touchdown sensing software was not tested with the lander in the flight configuration, leading to the probable cause of the MPL mission loss. (See Lesson #0938)</li>
+
+      <li>Fault-injection testing of the flight software was not thorough enough to detect all logic errors in post-landing fault-response algorithms. (See Lesson #0939.)</li>
+
+      <li>The thermal design of the propulsion subsystem was incorrectly characterized in system thermal-vacuum test due to an error in the thermal model, causing major errors in the propulsion thermal design that went undetected until after launch.</li>
+    </ul>
+
+    <p>The test and verification process for the Deep Space 2 (DS2) probe, which was co-launched with MPL and did not survive Mars Encounter, also departed from the test-as-you-fly principle in end-to-end testing and analysis:</p>
+
+    <ul>
+      <li>A decision was made to not conduct a system-level impact test of the probe with aeroshell. The risk of structural failure from the dynamic interaction between the aeroshell and the probe was recognized and accepted.</li>
+
+      <li>Though DS2 was designed to strike the Martian surface at a velocity of 200 meters per second, there was no impact test of an electrically powered, complete system.</li>
+
+      <li>The flight battery lot was not subjected to impact tests. Testing performed on an 8-cell predecessor flight-like lot did not provide statistical confidence as it resulted in one structural failure.</li>
+    </ul>
+
+    <p>Adequate system margins were not demonstrated during the MPL terminal descent control system testing. These margins were subject to erosion from propulsion system dynamics (impulse variations due to water hammer or thermal effects), propellant center-of-mass migration, the lack of a high-fidelity fuel slosh model, and nonlinear pulse-width modulation effects. The true margins of the system were not fully characterized in the presence of these effects.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Report on the Mars Polar Lander and Deep Space 2 Missions, JPL Special Review Board (Casani Report), JPL Internal Document D-18709, 22 March 2000, Sections 3.4 and 5.2.</li>
+
+      <li>JPL Corrective Action Notice No. Z69164, Mars Program Investigation Results: "System Engineering/Risk Management/Error Detection," 1 May 2000.</li>
+
+      <li>JPL Corrective Action Notice No. Z69165, Mars Program Investigation Results: "Verification and Validation Process," 1 May 2000.</li>
+    </ol>
+
+    <p>Additional Key Words: Entry, Descent, and Landing (EDL), Environmental Test, Fault Protection, Integration and Test, Risk Assessment, Robust Design, Simulation Accuracy, Software Testing, Spacecraft Test, Technical Margins, Test and Evaluation, Test Errors, Test Fidelity, Test Planning</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The process of end-to-end system verification (either through testing, simulation, or analysis) may be compromised when it is not consistent with the mission profile (plus margin and the appropriate off-design parameters).</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Enforce the system-level test principle of "test as you fly, and fly as you test." Carefully assess any planned violations of this principle; if they are necessary, take alternate measures such as independent validation. Departures from this principle must be reflected in the project risk management plan, communicated to senior management for concurrence, and reported at reviews.</li>
+
+      <li>When using simulations for system-level verification, models must have been validated (e.g., supported by test); and sufficient parametric variations in the simulations must be performed to ensure that adequate margins exist.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.14 ("Engineering Practices: Project and System Level Functional Verification and Validation"), and Paragraph 6.17 ("Engineering Practices: Hardware Development"), in the Jet Propulsion Laboratory standard "Flight Project Practices, Rev. 7," JPL DocID 58032, September 30, 2008. <br>
+
+In addition, JPL has referenced the lesson as supporting Paragraph 8.3.3.1 ("System Assembly, Integration and Test: System Functional Verification - "Plugs Out" Test"), and Paragraph 8.3.4.1 ("System Assembly, Integration and Test: Flight Sequence Verification - Sequence Integrity"), in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006. <br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

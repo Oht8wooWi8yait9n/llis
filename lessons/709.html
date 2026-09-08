@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0709: Class S Parts in High Reliability Applications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0709: Class S Parts in High Reliability Applications</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0709 (Database ID: 709)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Specified</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/709" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Preferred Practice for Design &amp; Test. Low parts failure rates associated with Class S Parts in typical circuit applications result in a significant enhancement in system reliability. Use Class S and Grade 1 or equivalent parts in all applications requiring high reliability or long life (&gt;3 years) to yield the lowest possible failure rates.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Figure 1 shows an analysis of a typical radio and digital subsystem for a flight instrument with a 3- year mission, no redundancy (except TWTs), and partial redundancy in critical circuits for both Class S and B parts. The parts count method provided in MIL-HDBK-217E was applied. These calculations are not considered accurate for any usage in an absolute sense, due to other design and test factors the database cannot estimate. However, relative comparisons are very useful and accurate for tradeoff studies of effects of redundancy and parts classifications.</p>
+<p><span><span><img alt="refer to [D} description" border="0" height="321" title="refer to [D} description" width="500" src="https://llis.nasa.gov/llis_lib/images/1009119main_0709-1.jpg"></span></span> <a href="https://llis.nasa.gov/llis_lib/txt/1009600main_0709-1.txt">[D]</a> &#xa0;</p>
+<p>The data are presented in graphical format for ease of understanding. On each plot, the basic reliability for the assumed conditions is plotted on the left ordinate, years are plotted on the abscissa, and the ratio of the analyzed condition is plotted on the right ordinate.</p>
+<p>In a single-string (nonredundant) design like Figure 1, the decline in system reliability over time is much less for a system built entirely of Class S parts than if it were built of Class B parts. The ratio of the two reliabilities for a 5-year mission indicates the system built of Class S parts is 50 times more reliable than the system built of Class B parts.</p>
+<p>When critical system circuits are made redundant, the time dependent reliability with both Class S and B parts is improved, but the improvement for the system built with B parts is greater (Figure 2). However, the 5-year mission reliability for the system built with B parts is still 20 times less than for the system built with Class S parts.</p>
+<p><span><span><img alt="refer to [D} description" border="0" height="320" title="refer to [D} description" width="500" src="https://llis.nasa.gov/llis_lib/images/1009120main_0709-2.jpg"></span></span> <a href="https://llis.nasa.gov/llis_lib/txt/1009601main_0709-2.txt">[D]</a> &#xa0;</p>
+<p>A correlation is made between the single string (nonredundant) system built with Class S parts and the system with redundant critical circuits and Class B parts (Figure 3). In this correlation, it is clear that for a 5-year mission the single-string system with Class S parts was still 10 times more reliable than the system with redundancy made from Class B parts.</p>
+<p><span><span><img alt="refer to [D} description" border="0" height="391" title="refer to [D} description" width="500" src="https://llis.nasa.gov/llis_lib/images/1009121main_0709-3.jpg"></span></span> <a href="https://llis.nasa.gov/llis_lib/txt/1009602main_0709-3.txt">[D]</a> &#xa0;</p>
+<p>This example reflects that the payoff in reliability is significant for Class S parts compared to Class B parts (for a 5-year mission, Class S is 20 to 50 times more reliable depending on redundancy). Additionally, the return on reliability, addressing non-random failures, is higher for Class S parts than for redundancy used with Class B parts. The highest reliability is obtained with Class S parts with redundancy in the critical circuits.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use Class S and Grade 1 or equivalent parts in all applications requiring high reliability or long life to yield the lowest possible failure rates. (Long life is defined as a requirement to perform the defined function without sacrifice to the primary mission objectives for a period longer than 3 years. Criticality of a function may require high reliability for any period of time and is not necessarily coupled to long life. However, when high reliability is coupled with long life, increased attention to the best reliability design practices is appropriate.)</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Viking, Voyager, and Galileo.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

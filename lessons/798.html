@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0798: Spurious Radiated Interference Awareness</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0798: Spurious Radiated Interference Awareness</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0798 (Database ID: 798)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/798" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1310, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Spurious radiated interference can be identified and evaluated during the design phase of the project. Solutions can be proposed and implemented in the design phase with far less impact on cost and schedule than when changes are required later.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>To perform an intermodulation analysis requires two lists to be prepared. The first list includes the center frequencies and bandwidths of all strong radiators in the vicinity and the frequency of all internal oscillators. The second list includes the frequencies and bandwidths of all receivers and intermediate frequency amplifiers.</p>
+
+    <p>The number of possible interference frequencies can be a very large number when there are more than a few emitters. Interference results from the sums and differences of all the emitter frequencies and their harmonics taken two at a time. A computer program is utilized to identify potential interference frequencies.</p>
+
+    <p>Two computer programs are listed under References. The first referenced computer program solves the equation below for up to 200 emitter and receiver frequencies.</p>
+
+    <p><font size="+2">(F<small><sub>0</sub></small>-BW/2) &lt; [(n x F<small><sub>t</sub></small>)±(m x F<small><sub>t</sub></small>)] &lt; (F<small><sub>0</sub></small> + BW/2)</p>
+
+    <p>where:</p>
+
+    <ul>
+      <li>F<small><sub>0</sub></small> = receiver center frequency of each receiver</li>
+
+      <li>BW = bandwidth of the receiver</li>
+
+      <li>F<small><sub>t</sub></small> = list of all emitter frequencies</li>
+
+      <li>n = harmonic number of each emitter frequency, integers from 1 to h</li>
+
+      <li>m = harmonic number of 2nd emitter, integers from 0 to h.</li>
+
+      <li>h = highest harmonic to be selected</li>
+    </ul>
+
+    <p>When potential interference frequencies have been identified, the possibility of their occurrence is evaluated. After positive identification, alternate approaches to eliminating the problem are examined. Alternate approaches include eliminating the non-linearity which causes intermodulation or reducing the amplitude of either of the two emitted signals at the non-linear component.</p>
+
+    <p>The second referenced computer program is more comprehensive and includes amplitude analysis.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>In an environment of strong field intensities from nearby emitters and complex equipment, surface currents are known to intercept non-linearities in components or conductors. These may be mixer diodes closely coupled to antennas, or contaminated joints between dissimilar metals. These conditions result in rectification of the current which produces odd harmonics of single frequencies and intermodulation products where multiple frequencies occur simultaneously. These spurious signals couple to receiving antennas, producing interference.</p>
+
+    <p>With multiple frequencies, a large number of harmonics and sums and differences of all possible combinations of the frequencies will occur. Harmonics of local transmitters often cause interference up to their 5th harmonic when they are fairly well filtered, or much higher harmonics when they are not well filtered.</p>
+
+    <p>The number of intermodulation products to be tested for interference can be large, therefore a computer program is useful in finding the sources of potential interference for each receive frequency and for a number of different bandwidths.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Paul Rosales, "Intermod", Lockheed Advanced Development Co., Palmdale, California, January 1987 - Updated by T. Larter, JPL, May 1991</li>
+
+      <li>Jerry Stafford, "Electromagnetic Compatibility Frequency Analysis, EMCFA", IBM, Huntsville, Alabama, March 1969 - Updated for the Space Shuttle Program by Arthur Reubens and John Roth, April 1975</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Interference may be encountered during system test or count-down which could impact the schedule. If it is encountered after launch, the result could be unpredicted or uncontrollable performance.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Unexpected interference in receivers can be avoided in a complex system of transmitters and receivers by performing an intermodulation analysis to identify and solve potential problems. Various emitters may be encountered during system test, launch, boost, separation and flight. There are a large number of these harmonics and intermodulation products from which potential sources of spurious radiated interferences are identified by a computer aided analysis and corrective measures evaluated.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Earth Observing Satellite (EOS), Ocean Topography Experiment (TOPEX), Advanced Mechanically Scanned Radiometer (AMSR), and the NASA Scatterometer (NSCAT) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

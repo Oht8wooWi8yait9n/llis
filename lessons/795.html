@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0795: Failure Modes, Effects and Criticality Analysis (FMECA)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0795: Failure Modes, Effects and Criticality Analysis (FMECA)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0795 (Database ID: 795)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/795" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1307, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The FMECA process identifies mission critical failure modes and thereby precipitates formal acknowledgment of the risk to the project and provides an impetus for design alteration.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Through the use of formal spread sheets, each potential failure within an assembly is recorded together with its resultant assembly, subsystem, and system effect. The severity of the system failure effect is assigned from a pre-defined list ranging from "negligible effect" to "mission catastrophic." Design alterations can be made at the circuit level (thereby modifying the assembly level) to eliminate a failure mode or to reduce its severity. The remaining failures are evaluated as potential subsystem failures by accounting for possible redundancy or work-arounds. Again design alterations may be invoked. Those remaining up to the system level are reported as single points of failure (SPFs), and the project makes a conscious decision to either retain them or to initiate corrective action.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Every technical mission carries with it a degree of risk. A mechanism is needed to identify and quantify the risk to permit decisions to be made which will ultimately reduce the risk to the minimum permissible level within the project cost, schedule, and performance constraints. Because most spacecraft systems are extremely complex, a method of risk identification must be used which has total visibility into the system. The FMECA has been recognized as such an approach and, if implemented rigorously, will provide the necessary visibility.</p>
+
+    <p>The process requires the assumption of a failure of each part of each unit. The credible failure modes are identified for each part (e.g., capacitors can short or open). If a piece part level FMECA is required by project definition, a line item must be entered for each identified mode of each part, e.g., "C23 shorts". If a project employs a high degree of redundancy, the complexity of a part level FMECA is unnecessary because a presumably redundant element will perform the function. Thus a functional level FMECA is adequate, e.g., "the amplifier chain formed by Q14, Q15, and Q16 and their associated parts has very low gain". This failure may have many root part failure causes but if all possible failure modes of the block are identified, e.g., "low gain, oscillation, high gain, high harmonic distortion", there is no value in recording the individual part causes. The most essential analysis in a design which uses redundancy is that of the cross-strapping networks. For this
+    reason, a parts level FMECA is considered mandatory for all cross-strapped redundant elements, either inside an assembly or at an external interface.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Without a formal FMECA process, the system design integrity would be determined by the experience and rigor of a large number of individual design engineers. There would be no means of verifying that design risk has been minimized to a degree which yields a high confidence in achieving the mission goals.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Analyze all systems to identify potential failure modes by using a systematic study starting at the piece part or circuit functional block level and working up through assemblies and subsystems. Require formal project acceptance of any residual system risk identified by this process.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Viking, Voyager, Magellan and Galileo programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

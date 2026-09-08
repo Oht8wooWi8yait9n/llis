@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1843: Science Data Downlink Process Must Address Constraints Stemming from Fixed DSN Assets</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1843: Science Data Downlink Process Must Address Constraints Stemming from Fixed DSN Assets</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1843 (Database ID: 1843)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-02-18</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Missions and Systems Requirements Definition,  Safety and Mission Assurance,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Logistics and maintenance,  Mission control Planning,  Mission operations systems,  Configuration control and data management,  Level 0/1 Requirements,  Mission concepts and life-cycle planning,  Configuration and data management,  Cross Agency coordination,  Program planning / development and management,  Risk management,  Science integration,  Early requirements and standards definition,  Maintenance,  Long term sustainability and maintenance planning,  Mission and systems trade studies,  Mission definition and planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1843" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The plethora of NASA missions transmitting science data to Earth via the NASA Deep Space Network (DSN) is challenging the capability of the aging DSN facilities to help fulfill mission requirements. The DSN is a network of very large antennas placed 120 degrees apart around the globe to provide telecommunications linkage with deep-space (and some Earth-orbiting) spacecraft and observatories. One such DSN customer that has addressed this issue is the Spitzer Space Telescope project, an infrared telescope that orbits the Sun to return science data on stars, galaxies, and planetary discs. 
+<br> 
+<br> The Spitzer mission has a typical Level 1 requirement for downlink telemetry of 98 percent of observations (i.e., percentage of planned downlinks) and 99 percent of science data (i.e., percentage of data generated onboard the spacecraft). However, the globe-spanning DSN facilities are very complex; DSN anomalies and planned downtime that interrupt communications are not infrequent (Reference (1)). Furthermore, Spitzer cannot always utilize the available DSN uptime because: 
+<ul> 
+ <li>Some data is lost by the spacecraft Command and Data Handling (C&amp;DH) subsystem due to software faults, commanding errors, and procedural anomalies.</li> 
+ <li>DSN linkage is also used to uplink commands to the spacecraft, and a missed telemetry pass could place Spitzer in safe mode and interrupt downlink. Reference (2) characterizes 330 DSN anomalies during normal operations affecting Spitzer downlink over 3 years of Spitzer mission operations. Most of the outage times ranged from 1 to 1-1/4 hours. The faults are varied: the most common are attributed to Transmitter or Downlink Channel Control Processor failures (each accounting for 15 percent of the anomalies), but DSN operators are not always able to determine the root cause.<br> <br> DSN services are likely to remain fully subscribed for the foreseeable future because: &nbsp; 
+  <ol> 
+   <li>DSN resources are strained by the large number of missions competing for fixed DSN assets. Figure 1 depicts the 26 missions utilizing DSN downlink on the day this lesson learned was approved.</li> 
+   <li>Demand for DSN services is subject to significant peaks. For example, Spitzer has increased its daily DSN usage as the spacecraft has moved farther away from Earth, requiring either larger antennas or more antennas. The number of Mars missions has increased, and they consume more DSN resources than Spitzer because of the very low data rates from Mars. Other spacecraft will sometimes receive priority over Spitzer for DSN services, e.g., spacecraft in safe mode requiring Spitzer to give up a downlink pass or a portion of a pass. Demand peaks may also occur when spacecraft conduct Entry, Descent, and Landing (EDL), or when spacecraft perform intensive operations such as Phoenix's 3.5 months of Mars surface operations. In addition, all operating Mars missions are simultaneously in view of the same complex and may share a single antenna for downlinks, preventing use by other missions.</li> 
+   <li>NASA faces a major challenge in maintaining and upgrading the 45-year old DSN facilities. It is difficult to obtain replacements for DSN components such as the special high capacity transformers and circuit breakers.</li> 
+  </ol> </li> 
+</ul> &nbsp; 
+<img border="0" height="529" src="https://llis.nasa.gov/llis_lib/images/1016893main_2008-02_Spitzer-DSN_Fig1.jpg" width="529"> 
+<p>&nbsp;</p> 
+<b>Figure 1.</b> DSN/NAV Real Time Tracking Data Monitor (http://rmdc.jpl.nasa.gov/trkmon.html) 
+<p><br> Lacking significant leverage to solve such endemic DSN resource constraints, the Spitzer project sought post-launch to optimize the Spitzer mission design by: Many of these measures were accomplished post-launch via on onboard patch of a global variable, or by blind uplink commanding (i.e., when no downlink can be detected). Flight projects can also mitigate DSN availability and throughput limitations through spacecraft design measures, such as adding onboard data storage to accommodate periods when downlink is not available.<br> <br> <b>References: </b></p> 
+<ol> 
+ <li><b>Downlink-by-downlink tracking of predicted data volumes versus actual data volumes and downlink performance.</b> Data volume predictions are used to extrapolate from the most recent report of Spitzer onboard data storage and to determine (1) if the Mass Memory Card will be completely filled and (2) how long it will take to clear the onboard data backlog.</li> 
+ <li><b>Early analysis of data volumes.</b> This allows Spitzer to determine when large predicted volumes might compromise single-fault tolerance and how many passes it would take to clear the resulting backlog. Spitzer also adjusts the predicted data volumes to more closely match the observed data volumes, an issue discussed in detail in Reference (3).</li> 
+ <li><b>Early deletion of data.</b> Ground controllers typically command the deletion of science data from on-board storage on the pass following the downlink. The Spitzer project has the ground capability to command deletion of at least a portion of the data one pass earlier than normal-- during the same pass that the data were downlinked. Spitzer uses this capability to mitigate the effects of large predicted data volumes, and during recovery from downlink anomalies. It frees space early, helps to recover to a single-fault tolerant state sooner, and reduces the impact should a second fault occur.</li> 
+ <li><b>On-board free-space checking.</b> Before each science observation is run, the Spitzer spacecraft checks that there is enough free memory space to hold the predicted data volume. This reduces the risk of a skipped science observation due to insufficient memory space resulting from entry into standby mode. Spitzer practice is to reserve two days memory consumption to provide a margin so that engineering data will not overfill on-board storage.</li> 
+ <li><b>Using a second ground antenna for backup downlink.</b> If Spitzer misses a significant portion of a downlink pass, a second ground antenna provides redundant downlink capability and mitigates the risk of filling on-board memory storage. However, opportunities for this mitigation are now limited because the Spitzer downlink margins require use of a 70-meter antenna.</li> 
+ <li><b>Using a second ground antenna for backup uplink.</b> If Spitzer misses a significant portion of an uplink, a second ground antenna can also provide redundant uplink capability and mitigate the risk of filling on-board memory storage. Unlike the downlink example above, this mitigation is usually feasible since Spitzer operations can uplink with a 34-meter antenna. During each pass, Spitzer uplinks commands to delete data from on-board memory that were received during the previous pass.</li> 
+ <li><b>Reduction of the downlink bit rate by real-time commanding.</b> To mitigate the risk of failure of Spitzer's assigned antenna, DSN is sometimes able to provide a smaller antenna as backup. Should the primary antenna fail, then Spitzer can reduce the downlink data rate to receive a portion of the planned downlink rather than miss the entire pass.</li> 
+ <li><b>Scheduling antenna arrays.</b> When Spitzer can gain access to arrays of smaller antennas, the project achieves uplink redundancy and a more graceful degradation of downlink resources.</li> 
+ <li><b>Making numerous improvements to the Mission Control and Analysis tool used to build sequences to delete on-board data.</b> Fixing bugs and adding functionality to the ground-based tool have made it easier to operate and more robust.</li> 
+ <li>quotNASA's Deep Space Network: Current Management Structure is Not Conducive to Effectively Matching Resources with Future Requirements,quot Report No. GAO-06-445, U.S. General Accounting Office, May 22, 2006, http://www.gao.gov/htext/d06445.html.</li> 
+ <li>quotCharacterization of Spitzer DSN-related Discrepancy Reports (DRs) and Interrupt/Surprise Anomalies (ISAs),quot Spitzer Project, NASA/Caltech Jet Propulsion Laboratory, November 29, 2007.</li> 
+ <li>quotManaging Rover-Orbiter Relay Link Prediction Variability,quot NASA Lesson Learned No. 1765, NASA Engineering Network, October 6, 2006.</li> 
+ <li>quotGalileo Scan Platform Anomaly at Ida Encounter,quot NASA Lesson Learned No. 0560, NASA Engineering Network, May 6, 1997.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Typical Level 1 mission requirements for science data downlink are currently difficult to achieve due to spacecraft faults, operations errors, very high demand for fixed Deep Space Network (DSN) assets, and scheduled/unscheduled DSN downtime. The requirements are negotiated between scientists and engineers and, from an engineering perspective, may be based on overly optimistic assumptions about downlink resources. Because the near-term potential for DSN downlink availability and throughput shortfalls is not likely to abate, the spacecraft design and mission design must compensate for DSN resource limitations.
+</section>
+<section><h2>Recommendation(s)</h2>
+Recommendations for DSN improvement lie outside the scope of this lesson learned. Flight projects that plan to use DSN telecommunication services must consider factors that may limit downlink availability and data rates. To mitigate the risk that Level 1 requirements for science data downlink will not be achieved: 
+<ol> 
+ <li>In mission planning, consider the 9 post-launch mitigations listed above that were effectively employed by the Spitzer project.</li> 
+ <br /> 
+ <li>Provide ample and reliable onboard data storage to accommodate periods when downlink is not available.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.2 (quotEngineering Practices: Telecommunication Designquot) and Paragraph 6.3.4.3 (quotEngineering Practices: Mission Operations-- Spacecraft Health and Safety, and Performance Analysisquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 6,quot JPL DocID 58032, March 6, 2006. 
+<br /> 
+<br /> In addition, JPL has referenced it supporting Paragraph 4.1.4.3 (quotFlight System Design: Design Margins During Development-- Margins at Design Completion¿quot), Paragraph 4.4.4.4 (quotInformation System Design: Commanding and Sequencing-- Assured Commandingquot), Paragraph 6.3.1.2 (quotManaged Margins: Flight System Technical Resource Margins-- Technical Resource Margins for Flight Operations Phasequot), Paragraph 7.1.7 (quotFlight Scenario Design: Resource Margins for Stored Sequence Operationsquot), and Paragraph 9.5.1 (quotFlight System Flight Operations Design: Operating Margins-- Adequate Operating Marginsquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+<section><h2>Related Policies & Standards</h2>
+Consultative Committee for Space Data Systems (CCSDS) standards
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

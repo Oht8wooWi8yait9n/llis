@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #25503: Highly Configurable Software Architecture Allows For Operations Flexibility At Low Cost</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #25503: Highly Configurable Software Architecture Allows For Operations Flexibility At Low Cost</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #25503 (Database ID: 25503)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2013-05-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Ames Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Payloads,  Software,  Spacecraft,  Risk management</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/25503" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin-bottom:.0001pt">Failure of the second of four reaction wheels on the Kepler mission&nbsp;in 2013.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+After the second reaction wheel failure, only two good reaction wheels remained and were insufficient to continue with the Kepler mission. In order to not abandon the spacecraft a new attitude control approach needed to be created, but it was only possible through the use of very low-level configuration table commands that were never intended to be used in flight. Their use enabled the K2 mission, and eventually doubled the useful life of the spacecraft.
+</section>
+<section><h2>Recommendation(s)</h2>
+Make a reasonable effort to allow for flexibility in the on-orbit configurability of the spacecraft architecture. This means starting with the original Attitude Determination and Control Subsystem and flight software design, as well as allowing for flight commandability of test-only commands. Full ground testing and analysis of all architecture capabilities are not necessary, and can be eliminated to minimize costs. It is enough to “leave the door open” to their use later when the risk is overcome by necessity.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+Attached paper  
+<table border="0" cellpadding="0" width="416"> 
+ <colgroup> 
+  <col width="416" /> 
+ </colgroup> 
+ <tbody> 
+  <tr> 
+   <td width="416">Kepler Mission Operations Response to Wheel Anomalies <br /> K. Larson, K. McCalmont, C. Peterson, S. Ross,<br /> AIAA SpaceOps 2014, Pasadena, CA, Aug 2014</td> 
+  </tr> 
+ </tbody> 
+</table>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

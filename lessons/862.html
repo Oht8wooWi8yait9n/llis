@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0862: 3.5-Foot Hypersonic Wind Tunnel Ceramic Bed Matrix Heater Mishap</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0862: 3.5-Foot Hypersonic Wind Tunnel Ceramic Bed Matrix Heater Mishap</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0862 (Database ID: 862)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-05-22</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Ames Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/862" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Test personnel from the 3.5-foot Hypersonic Wind Tunnel facility, supported by personnel from the project phase 3 contractor, were conducting blowdown tests as a part of the Integrated Systems Testing (IST). The tests were being done to certify the operational status of the facility following a construction of facilities project for rehabilitation of the facility. The mishap occurred seconds after the start of the 5th run of the day, at approximately 10:00 a.m. Four previous blowdown tests had been completed on that day without incident.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>The ceramic bed heater is especially vulnerable to excess differential pressure across the bed. Location of the lower pressure port created a single point failure that allowed the differential pressure to develop uncontrolled. Steps which could have been taken to prevent this mishap from occurring could have been more rigorous reviews, identifying the pressure ports in the vessel as safety critical features, listing them as such on the fabrication drawings and in failure modes analyses, and assuring that inspection during construction was accomplished.</li>
+
+      <li>Formal configuration management should commence immediately following design completion. This configuration management may be tailored to the size and scope of the project. In cases of contracting for hardware or software systems, NASA should participate in or thoroughly audit the Contractors systems to assure adequate configuration controls.</li>
+
+      <li>The Systems Engineering process, functioning in a project to define and understand all system interfaces, is extremely important. It is even more important for rehabilitation type projects where interfaces between the old and the new systems can become critical.</li>
+
+      <li>The Trial Run approach of IST for establishing differential pressure settings for safety limits offered no provision for detecting system faults such as the incorrectly located pressure port. It could only have succeeded with a correctly functioning system. The test plan should have provided predicted (calculated) values of differential pressure across the orificed grate as a function of header pressure and valve position.</li>
+
+      <li>Lines of authority and responsibility must be defined and functioning for a safe and successful ISH process. Project responsibility should extend through the IST process and until the facility is recertified operational and returned to the operating organization.</li>
+
+      <li>With known high incidence of errors in developmental software, a methodology should be implemented for simulation modeling of systems for software testing prior to putting research facilities at risk. Commercial software systems are available for these purposes.</li>
+
+      <li>Real time recording and storage of run data for review and diagnostic use is very important whenever attempting the final validation of a control system and its associated software. It is extremely important when using actual system hardware to support the validation process. The more dynamic the system's response to input, the greater the consequences of control system failure.</li>
+
+      <li>Investigation of unexpected behavior of high energy or otherwise potentially dangerous systems should include support analyses or other positive causal verification which cannot result in detriment to the system, before proceeding with full system operation.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Inspect, repair and verify integrity of all internal heater vessel structures.</li>
+
+      <li>Correct and relocate lower pressure port in the heater vessel to assure its location is well below the grate and any influence on the flow by the flow diverters.</li>
+
+      <li>Perform another review of engineering and hazards analyses on all facility interfaces, with specific emphasis on interfaces between the old and the new. Identify the function of the pressure ports as having potential for a single point failure causing a critical mishap.</li>
+
+      <li>Correct and recertify the software, followed by institution of a higher level of configuration management requiring NASA review and approval of changes.</li>
+
+      <li>Inspect and correct malfunctions in the hardwire trip circuit system. Verify the reliability and independence of the hardwire trip system.</li>
+
+      <li>Develop predicted performance differential pressure characteristic values, based on planned test parameters. Use these expected values to set tolerance bands to be flagged as limits for IST. Establish procedures for review of test values falling outside the flagged limits, and for clearing the flags.</li>
+
+      <li>Provide a high speed data acquisition system for use during IST for recording of run data that might be required for diagnostic purposes.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0698: Ammonia-Charged Aluminum Heat Pipes with Extruded Wicks</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0698: Ammonia-Charged Aluminum Heat Pipes with Extruded Wicks</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0698 (Database ID: 698)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/698" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1209; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Heat pipes use the latent heat of vaporization of a working fluid to transfer heat efficiently at a nearly constant temperature. This characteristic can be used to control the temperature of spacecraft components and systems. The Goddard Space Flight Center (GSFC) has chosen ammonia-charged aluminum heat pipes for most near-room temperature (200&deg;K to 350&deg;K) applications. The axial groove aluminum pipe is the design of choice, because it is easy to design and relatively easy to fabricate. The aluminum container and axial grooves are extruded in one process. At the operating temperature of unmanned spacecraft, ammonia has the most favorable thermodynamic properties that make it an excellent heat pipe working fluid. Anhydrous ammonia is compatible with the aluminum heat pipe body and wick if proper care is taken in the manufacturing process.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>All heat pipes have three physical elements in common. These include an outer container, a small amount of working fluid, and a capillary wick structure. In addition to these basic components, heat pipes may also include gas reservoirs (variable conductance/diode heat pipes) and liquid or gas traps (diodes). Functionally, the heat pipe consists of three sections: evaporator, condenser section, and adiabatic regions. The evaporator section is mounted to the heat-producing components, while the condenser is thermally coupled to a heat sink or radiator. The adiabatic section allows heat to be transferred from the evaporator to the condenser with very small heat losses and temperature drops. Figure 1 depicts the basic heat pipe.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009083main_0698-1.jpg"  HEIGHT="315"  BORDER="0" /><A HREF="/llis_lib/txt/1009565main_0698-1.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Heat pipes can operate in the fixed conductance, variable conductance, or diode mode. The fixed conductance heat pipe can transfer heat in either direction and operates over broad temperature ranges, but has no inherent temperature control capability. Constant conduction heat pipes allow isothermalization of shelves, radiators and structures; spread heat from high heat dissipating components; and conduct heat away from heat producing devices embedded within instruments and satellites. In the variable conductance heat pipe (VCHP), a small quantity of non-condensable gas (NCG) is loaded into the heat pipe. The VCHP can be used to control the temperature of equipment within very narrow limits; control is possible to less than 1&deg;K by using careful design techniques. This is accomplished by controlling the location of the NCG/vapor interface within the condenser end of the heat pipe, thereby varying the active length of the condenser and causing a modulation in the condenser
+    heat rejection capability. Temperature control of the attached device is achieved by an active feedback system consisting of a temperature sensor at the heat source and a controller for a heater at the NCG reservoir. The heater causes the gas in the reservoir to expand, thus moving the gas/vapor interface. Diode heat pipes permit heat to flow in one direction and inhibit heat flow in the opposite direction.</p>
+
+    <p>Specific benefits of heat pipes are: 1) heat pipes have enormously more heat transfer capability than other methods on a weight and size basis, 2) heat pipes permit configuration flexibility in contact areas with heat sources and heat sinks, 3) heat can be transported over considerable distances with insignificant temperature drop, 4) capillary pumping in the wick is generated by the heat transfer process and requires no other power or moving parts to pump the condensate, and 5) heat pipes operate satisfactorily in a zero gravity environment.</p>
+
+    <p>The choice of working fluid is dictated by several considerations, including operating temperature, latent heat of vaporization, liquid viscosity, toxicity, chemical compatibility with container material, wicking system design, and performance requirements. Figures 2 and 3 and Table 1 depict some of the above characteristics for several fluids. The highest performance from a heat pipe is obtained by utilizing a working fluid that has a high surface tension (s), a high latent heat (l), and a low liquid viscosity (n<small><sub>1</sub></small>). These fluid properties are contained in the parameter N<small><sub>1</sub></small> the Liquid Transport Factor. Figure 4 is a plot of N<small><sub>1</sub></small> for five typical heat pipe working fluids. These data are used as selection criteria for heat pipe working fluids. Once an application is defined, the heat pipe designer
+    reviews the requirements and selects the best working fluid. Below the freezing point of water and above about 200&deg;K, ammonia is an excellent working fluid. Regardless of the fluid chosen, minimum purity must be at least 99.999 percent. A careful analysis of the purity of the ammonia should be obtained from an independent laboratory prior to use.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009084main_0698-2.jpg"  HEIGHT="331"  BORDER="0" /><A HREF="/llis_lib/txt/1009566main_0698-2.txt"  >[D]</A><br />
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009085main_0698-3.jpg"  HEIGHT="329"  BORDER="0" /><A HREF="/llis_lib/txt/1009567main_0698-3.txt"  >[D]</A><br />
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009086main_0698-4.jpg"  HEIGHT="345"  BORDER="0" /><A HREF="/llis_lib/txt/1009568main_0698-4.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <table width="95%">
+        <tr>
+          <td>
+            <b>Table 1:</b> Comparison of Latent Heat to Specific Heat for Typical Heat Pipe Fluids<br />
+            
+            <hr width="100%" />
+            <br />
+            
+
+            <table width="90%">
+              <tr>
+                <th colspan="5"><font face="arial,helvetica" size="+1">FLUID PROPERTIES</th>
+              </tr>
+
+              <tr>
+                <th>FLUID</th>
+
+                <th>BOILING POINT<br />
+                &amp;$176;K</th>
+
+                <th>LATENT HEAT<br />
+                kJ/kg<br />
+                h<small><sub>fg</sub></small></th>
+
+                <th>SPECIFIC HEAT<br />
+                kJ/kg-&deg;K<br />
+                c<small><sub>p</sub></small></th>
+
+                <th>RATIO<br />
+                K<br />
+                h<small><sub>fg</sub></small>/c<small><sub>p</sub></small></th>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Helium
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    23
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4.60
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    5
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Hydrogen
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    20
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    446
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    9.79
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    46
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Neon
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    27
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    87
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.84
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    47
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Oxygen
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    90
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    213
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.90
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    112
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Nitrogen
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    77
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    198
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2.04
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    97
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Argon
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    87
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    162
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.14
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    142
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Propane
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    231
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    425
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2.20
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    193
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Ethane
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    184
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    488
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2.51
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    194
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Methane
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    111
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    509
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    3.45
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    147
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Toluene
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    384
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    363
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.72
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    211
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Acetone
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    329
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    518
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2.15
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    241
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Heptane
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    372
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    318
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2.24
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    142
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Ammonia
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    240
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1180
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4.80
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    246
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Mercury
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    630
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    295
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    0.14
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2107
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Water
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    373
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2260
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4.18
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    541
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Benzene
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    353
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    390
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.73
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    225
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Cesium
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    943
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    49
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    0.24
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    204
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Potassium
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1032
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1920
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    0.81
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2370
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Sodium
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1152
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    3600
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1.38
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2608
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Lithium
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    1615
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    19330
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4.27
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    4526
+                  </center>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <center>
+                    Silver
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2450
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    2350
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    0.28
+                  </center>
+                </td>
+
+                <td>
+                  <center>
+                    8393
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><IMG  WIDTH="250"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009088main_0698table2.jpg"  HEIGHT="351"  ALIGN="left"  BORDER="0" /><A HREF="/llis_lib/txt/1009570main_0698table2.txt"  >[D]</A></p>
+
+    <p>The outer container usually consists of a metal tube to provide mechanical support and pressure containment. The chosen design and processing of the container are extremely important in selecting the metal, because they can affect the useful life of the heat pipe. In addition, a compatibility must exist between the pipe material and the working fluid. For heat pipes, working fluid/container compatibility issues encompass any chemical reactions or diffusion processes occurring between the fluid and wall/wick materials that can lead to gas formation and/or corrosion. Table 2 lists the compatibilities of several metals and working fluids. Along with the metal/fluid compatibility, other considerations in the metal selection are ease of working the material, extrusion capability of the material, and its weldability. Proper container cleaning and heat pipe processing procedures are of extreme importance, since residual contamination within the heat pipe may also lead to gas
+    generation. Steps must also be taken to ensure the purity of the fluid charge; trace amounts of water in ammonia can lead to a reaction with the aluminum container and the formation of hydrogen gas. Chi [reference 1] and B &amp; K Engineering [reference 2] list standard cleaning and filling methods for a variety of working fluid/wall material combinations. Special consideration must be given to the processing of heat pipes to be used at temperatures below 250&deg;K. As the temperature drops, the vapor pressure of the fluid falls off. This allows any non-condensable gas created by contamination to expand, thus creating an even larger problem.</p>
+
+    <p>The heat pipe wick structure provides a porous medium for the formation of liquid menisci (which cause the capillary pumping action) and a vehicle for returning the working fluid from the condenser to the evaporator. To accomplish these wick functions effectively, the designer must provide pores, cavities, or channels of the right size, shape, quantity and location. An optimization technique is used in wick design to find the desired combination of ultimate heat transfer capacity, pumping capability, and temperature drop. The designer must also consider ease of wick fabrication, compatibility with the working fluid, wetting angle and permeability of the selected wick material. Figure 5 depicts a cross-sectional view of an axial groove wick; this design probably is the most commonly used for space application.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009087main_0698-5.jpg"  HEIGHT="412"  BORDER="0" /><A HREF="/llis_lib/txt/1009569main_0698-5.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+    In addition, X-ray certification of all welds at the end caps and fill tube is required to ensure good weld penetration and the absence of voids. The heat pipe container must be pressure tested to at least twice its maximum expected operating pressures (MEOP) prior to filling [reference 3]. Other qualification procedures include performance tests at adverse tilt angles to demonstrate proper wick function, and gas pocket tests performed with the heat pipe in the reflux mode. Heat pipes should be handled with care, especially those that contain ammonia or other high vapor pressure fluids. They should be treated as any other pressure vessel, and appropriate safety precautions must be exercised. Exposure to ammonia vapor can cause severe irritation to eyes and other mucous membranes. Exposure to ammonia liquid can cause severe burns to the skin. Whenever possible, heat pipes should be stored in a cold, dry environment. This will inhibit any internal chemical reactions which produce
+    non-condensable gas. <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Spacecraft applications to date have been for heat pipes operating between 200&deg;K and 350&deg;K. Consequently, a working fluid whose freezing and boiling points encompass this temperature range and has a high latent heat, a low viscosity, and high heat transport capability must be selected. GSFC has selected ammonia as an appropriate working fluid whose fluid properties meet these criteria. However, for safety reasons, the toxicity of ammonia precludes its use in manned environments such as the shuttle cabin [reference 4]. GSFC has selected aluminum alloys, such as 6061 and 6063, for the container material of the heat pipe because of their long-term compatibility with ammonia (see Table 2); heritage; ability to have an extruded axial groove wick structure; ease of fabrication, shaping, and configuring; good thermal compatibility with aluminum radiators and heat sinks; and weldability characteristics.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>Chi, S. W., "Heat Pipe Theory and Practice," Hemisphere Publishing Corp., New York, 1976</li>
+
+      <li>Brennan, P. J., and Kroliczek, E. J., "Heat Pipe Design Handbook," B &amp; K Engineering, Inc., Towson, Maryland, 1979</li>
+
+      <li>MIL-STD-1522A (USAF), "Military Standard General Requirements for Safe Design and Operation of Pressurized Missile and Space Systems," May, 1984</li>
+
+      <li>NSTS-1700.7B, "Safety Policy and Requirements for Payloads Using the Space Transportation System", January, 1989</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Heat transfer by means other than the heat pipe can have the following impacts:</p>
+
+    <ol>
+      <li>a price paid with respect to weight and size of the heat transfer equipment,</li>
+
+      <li>significant heat lost in transfer over considerable distances,</li>
+
+      <li>electromotive devices, such as liquid pumps, required to move the heat, and</li>
+
+      <li>possible problems presented by operation in zero gravity.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Nonadherence to the implementation methods presented above could result in the following possible impacts: improper cleaning and processing of the aluminum container could result in contaminants reacting with the ammonia to form NCG, which will interfere with the flow of vapor and reduce the heat transfer effectiveness. Contaminants reacting with ammonia normally produce hydrogen, and the gas collects in the condenser region. As more and more of the condenser is blocked, the surface area available for heat rejection decreases, reducing the heat transfer effectiveness; ultimately, the heat pipe may cease to function. Failure to certify welds at the end caps and the fill tube could result in improper or defective welds permitting leaks or catastrophic failure of the pressure vessel. For long-term space missions, working fluids in the appropriate temperature range, such as methanol and water, exhibit an incompatibility with aluminum, and should not be used.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use heat pipes, preferably aluminum heat pipes charged with anhydrous ammonia, in spacecraft and instrument thermal control applications. This practice enhances the control and flow of heat generated within the spacecraft.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on OAO-C, ATS-F, IUE, HST.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

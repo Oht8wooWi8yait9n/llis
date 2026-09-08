@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0656: Hardware Review/Certification Requirement</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0656: Hardware Review/Certification Requirement</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0656 (Database ID: 656)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/656" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1215.2; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The Hardware Review/Certification Requirement (HR/CR) provides a structured review process for assessing the status of flight hardware and screening for unresolved defects prior to delivery for integration.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>After flight hardware has been designed, undergone unit level reviews, fabricated, integrated, and tested, a review board is convened to review the status of the hardware and to certify that the hardware is ready for delivery and is acceptable for mating with the spacecraft. The Project System Engineer/Instrument Manager is selected to chair the review. Other members of the review board include the Hardware Division Representative, the Quality Assurance Engineer, the Software Assurance Engineer, The Environmental/Reliability Engineer, and the Product Assurance Manager.</p> 
+<p>The agenda and the scope of the review board is generally defined by the HR/CR form shown as Figure 1.</p> 
+<p>Using the HR/CR form as a checklist, the design engineer responsible for the hardware being reviewed addresses the following:</p> 
+<ol> 
+ <li>The hardware performance and requirements compliance status.</li> 
+ <li>That all requirements have been met, or that any requirements that have not been met are covered by approved waivers.</li> 
+ <li>That all documentation is current and complete, and includes all approved waivers and Engineering Change Requests (ECRs).</li> 
+ <li>That all analyses required to validate environmental requirements have been completed, documented, and approved.</li> 
+ <li>That all tests required to qualify the hardware have been successfully completed.</li> 
+ <li>That the hardware is acceptable for integration with the spacecraft.</li> 
+</ol> 
+<p>If the members of the review board or other participants have any concerns about the flight readiness of the hardware, anyone may write a Request for Action (RFA) against the hardware. These RFAs are reviewed by the Project and a response is prepared. After all RFAs are closed, the board certifies that the hardware is ready for delivery and flight by signing the HR/CR form.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>A structured review following a predetermined checklist such as the HR/CR form provides a mechanism for the responsible design engineer to review the status of the hardware and verify that the hardware is in compliance and ready for delivery and spacecraft integration. This process is enhanced by having a review board whose members have not been responsible for the design, fabrication, and testing of the hardware. Board members from the reliability engineering area and the product assurance area can focus this expertise on the completed product. Additionally, the board is able to take a fresh look at the hardware production cycle and to ask questions until they are satisfied that all necessary steps have been completed and that the hardware is acceptable for integration.</p> 
+<p><u>Related Practices:</u></p> 
+<ol> 
+ <li>Common Review Methods for Engineering Products, Reliability Preferred Practice No. PD-ED-1215.4.</li> 
+</ol> 
+<img alt="refer to [D] description" border="0" height="578" src="https://llis.nasa.gov/llis_lib/images/1009009main_0656.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009497main_0656.txt">[D]</a> 
+<br> 
+<br> Figure 1. Hardware Review / Certification Requirement Form
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Non-Compliance:<br /> <br /> HR/CR reviews are potentially capable of discovering hardware defects, deficiencies, or deviations prior to delivery of the hardware. Consequently, if the HR/CR review is not conducted, any defects, deficiencies, or deviations that may have been uncovered by the Review Board will either go undetected or will have to be detected by some other means at a time subsequent to delivery. If the hardware problems go undetected, then a mission failure may occur. If the hardware problems are detected late, then serious schedule impacts could result and the cost of correcting the hardware defect could be affected.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br /> <br /> A Hardware Review/Certification Requirement (HR/CR) Review is conducted prior to the delivery of flight hardware and associated software to evaluate and certify that the hardware is ready for delivery and that it is acceptable for integration with the spacecraft.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Programs That Certified Usage:<br /> <br /> Voyager, Galileo, and all other JPL developed Class A, B, and C spaceflight hardware.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0712: Design Considerations for Fluid Tubing Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0712: Design Considerations for Fluid Tubing Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0712 (Database ID: 712)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/712" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1224; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>By using standard military and industry-accepted tubing design criteria, the overall design of a system consisting of tubing will achieve maximum reliability, producibility, and safety at a minimum cost.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><b>CONFIGURATION DESIGN</b></p>
+
+    <p>Configuration design considerations of tubing systems should be coordinated among the engineering disciplines (structures, electrical, mechanical, etc.) that will be affected by the proposed paths of the tubing systems. Mockups and/or interface control drawings (ICD's) should be used in an interactive, iterative manner to verify outside tube diameter, bend radii, and end connector locations and interfaces. Drawings used during the configuration design phase should be to a level of detail which will accurately show all applicable equipment, structures, and general clearances (such as tubing support spacing) in order to accurately assess the acuteness of space limitations and effective tube lengths. Design layouts of tubing systems should allow for on-orbit access for maintenance, inspections, and removability if necessary. Electrical lines and their acceptable proximity to tubing paths should be fully assessed in accordance with operational parameters of the systems and the
+    effects of failure of each system upon the other. <i>Design elements such as material selection, tube fittings and routing, and maintenance properties must receive special consideration in systems using corrosive fluids.</i></p>
+
+    <p>Tube routing should follow straight paths, avoiding bends and fittings whenever possible, thus avoiding flow head losses associated with such configurations. In routing straight tubes between fixed points, thorough consideration should be given to tube length tolerances needed because of thermal and pressure differential induced stresses, structural/mechanical movement, vibrational movement, and end fitting thermal expansion induced stress differentials. Supports should be designed and implemented in such a way as not to overrestrict or underrestrict motion of tubing via proper material selection, structural design, and interval placement onto the tubing. Additionally, manufacturing, maintenance, inspection, and fabrication limitations should be considered during layout configuration.</p>
+
+    <p><b>MATERIAL SELECTION</b></p>
+
+    <p>Material selection for tubing should be compatible with the intended use of the tubing, its surrounding environment, and fluid commodity it is intended to carry. Special consideration should be given to offgassing properties in a space flight environment; corrosion/stress corrosion susceptibility (such as defined in Reference 1) for both the tubing, associated support structures, blind fasteners; and the effects of using dissimilar materials as exemplified in References 2 and 3. Additionally, a minimum of different types of tubing materials and sizes should be used to lower production costs and increase the reliability and safety of the system. All tubing used in a flight environment should be of a seamless configuration.</p>
+
+    <p><b>BENDS</b></p>
+
+    <p>In many design applications, tube bending will be necessary to compensate for relatively large induced thermal contraction or expansion stresses, to act as equal distant pressure manifolds, or to route around adjacent hardware in the surrounding configuration. Therefore, when tube bending is necessary, the linear distance from the end of the tube to the bend or from a fitting to a bend should be as great as possible. Bends in close linear proximity to one another along a common tube are not desirable because of the increase of stress concentrations in the area of the end of a tube and the bend, increased fabrication time to make the piece, and a possibility of high scrap rates during fabrication.</p>
+
+    <p>When the bending of tubing is necessary, the bend radius is an important consideration. Factors governing the bend radius limitations of the tubing are: tubing material properties, tube wall thickness (WT), outside tube diameter (OD), and internal pressure differentials. The WT/OD ratio will place limitations on the degree of bending allowable because of inside bend radius buckling and outside bend radius stretching. Material properties, microscopic grain structure, and annealing processes will additionally limit the degree of bending. Common and current industry and military standards that are sufficient for orbital conditions should be consulted to determine the minimum and maximum bend radii allowable for tubing as a function of these considerations.</p>
+
+    <p>Additionally, the selected standards should delineate the amount of ovalization ("out of roundness") allowable as a function of internal pressure and tubing material. The amount of tubing ovalization will usually be defined in terms of tube flatness and given as a percent of original outside diameter. As a rule of thumb, most standards will not allow a minimum bend radius of less than three times the outside diameter of the tubing because of excessive tubing ovalization as exemplified in Reference 4.</p>
+
+    <p><b>COIL MOTION</b></p>
+
+    <p>Coil motion tubing should be installed into a system such that the tubing is in a relaxed, unstressed position. The coil design should be such that motion of the tubing is concentric about the centerline of the tubing coils. Additionally, the motion should not adversely affect tube fittings, overly stress the tubing, or cause damage to surrounding equipment. Specific individual material property characteristics should be considered when designing coil motion systems. Proper coil pitch distances should be decided upon after consultation with current military standards.</p>
+
+    <p><b>UNDESIRABLE PLASTIC DEFORMATION</b></p>
+
+    <p>During the cold forming of a tube bend radius, care should be taken to minimize the degree of material buckling occurring in the inside portion of the bend radius. Buckling in this area reduces the strength of the tubing and could cause transition turbulence in flows with relatively high Reynolds numbers. Additionally, caution should be taken to minimize the degree of tubing ovalization. Ovalization creates a situation of hoop stress concentrations in tubing walls that could give way to lengthwise splitting of the tubing wall. Precautions such as the use of appropriate bending shoes should be used to minimize ovalization.</p>
+
+    <p><b>SPRINGBACK</b></p>
+
+    <p>During the cold forming process of tube bending, most materials will exhibit a springback characteristic when bent into the plastic deformation region of the material. Structurally, the degree of springback varies as a function of the WT/OD ratio, the degree of the bend, and the bend angle and radius. The finished bend radius should be coupled with the appropriate bending shoes, internal tube mandrills, and applicable standards delineating finished bend radius as a function of tube WT/OD ratio, and tubing material.</p>
+
+    <p><b>PROOF PRESSURE</b></p>
+
+    <p>As a minimum, each tube and tubing assembly should be exposed to a proof pressure testing procedure consistent with the pressures, pressure cycles, and temperature gradients that the part will experience. Standards for proof testing should be consistent with current appropriate standards. The part must be able to withstand the test without any evidence of premature failure. Using appropriate liquid or gaseous testing mediums, the test should verify that the tubing material and applicable fitting(s) are sound and leak free based upon the requirements of the applicable design drawing and project.</p>
+
+    <p>The designer should take measures to ensure that the drawing or specification delineating the fabrication details of the part contains requirements for proof and leak testing of all parts, usually at minimum and maximum fluid operating temperatures. For example, the Space Shuttle Program assigns general minimum factors of safety for proof pressure and ultimate pressure testing at 4.0 times the maximum operating pressure (MOP) for tubing less than 1.5 inches in outside diameter, and at 1.5 times MOP for tubing greater than 1.5 inches in diameter (References 5 and 6).</p>
+
+    <p><b>TUBE FITTINGS</b></p>
+
+    <p>Standard and NASA approved tubing fittings should be used whenever possible to avoid excessive use of nonstandard part types and the manufacture of nonstandard tube endings. Unless otherwise necessary, tube fittings should be of the same material as the tube and adjoining fittings. Use of dissimilar materials should be strongly weighed with respect to material incompatibilities, differential thermal properties, and possible dielectric incompatibilities. Offgassing properties should also be evaluated for all materials used in tube fittings when used in space flight situations.</p>
+
+    <p>Tube ends and tube fitting interfaces should be free of burrs both inside and outside the tubing. Tubing ends should be finished square, within tolerance limits well defined by the designer and consistent with current engineering standards as applicable. Additionally, surfaces should be cleaned within tolerances for foreign particulate presence defined by the engineering organization for the intended use of the part. All welded surfaces should be fabricated in a fashion that applies military standards with considerations for flight and space environments. For the purposes of this document, extensive discussion of mechanical and welded fittings is left to related standards, practices, and other documentation.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Use of this practice as a standard will result in a higher degree of design and configuration coherency than previously realized. Engineering judgments can be baselined according to military and industrial standard practices such as References 7 and 8. This practice is not all-inclusive; special care and sound engineering judgments must be made when tubing is being used for high-velocity liquid and gaseous substances and in applications where comparatively large cross-sectional-average Reynolds numbers are present. The latter is especially true, since flows that possess Reynolds numbers near 2300 may be transitioning from laminar to turbulent flow conditions, creating a condition of quasi-steady flow. Additionally, special considerations should be exercised and explored for orbital and space environments.</p>
+
+    <p>Specific standards are revised as lessons are learned and technologies change. The most current standards should be cited when designing fluid systems, and sound engineering judgment should be exercised when deciding which standard will be consistently applied to a given project.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>KSC-SPEC-Z-0007C, "Specification for Tubing, Steel, Corrosion Resistant, Types 304 and 316, Seamless, Annealed."</li>
+
+      <li>MSFC-SPEC-250, "Protective Finishes for Space Vehicle Structures."</li>
+
+      <li>KSC-STD-C-0001B, "Standard for Protective Coating of Carbon Structures."</li>
+
+      <li>MS33611, "Tube Bend Radii."</li>
+
+      <li>NSTS 07700, "Program Definition and Requirements."</li>
+
+      <li>NSTS 08318, "NSTS Hydraulic System Exceptions to MIL-H-5440."</li>
+
+      <li>MIL-F-45764C, "Fabrication and Installation of Fluid Lines and Fittings for Missiles and related Ground Equipment."</li>
+
+      <li>MIL-H-5440G, "Design and Installation Requirements for Hydraulic Systems, Aircraft, Types I and II."</li>
+
+      <li>Schlichting, H., "Boundary-Layer Theory (Grenzschicht-Theorie)," 1979, McGraw-Hill Book Company, New York, New York.</li>
+
+      <li>Boyerk, H., Gall, T., "Metals Handbook," 1985, American Society for Metals, Metals Park, Ohio.</li>
+
+      <li>"Installation Considerations for Fluid Tubing Systems", Reliability Preferred Practice GD-ED-2208</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Noncompliance may result in fluid system failures resulting in collateral damage to surrounding hardware and jeopardizing of mission success.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>The above practice delineates basic criteria for use in the design of fluid tubing systems for use on space flight equipment. These criteria are meant to enhance reliability and maintainability of these systems through standardized practices in design.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Space Shuttle</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

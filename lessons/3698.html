@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #3698: Hypergol Servicing Automation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #3698: Hypergol Servicing Automation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #3698 (Database ID: 3698)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-09-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Mission Operations and Ground Support Systems,  Missions and Systems Requirements Definition,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Energetic Materials - Explosive / Propellant / Pyrotechnic,  Ground Equipment,  Ground Operations,  Pressure Vessels,  Software,  Test Facility,  Ground processing and manifesting,  Configuration control and data management,  Advanced planning of safety systems,  Human factors planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/3698" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Space Shuttle ground support equipment (GSE) included remotely controlled equipment operated by the systems engineers for their respective systems. Extensive procedures were developed to establish preloading, loading, and postloading configurations for the OMS/RCS propellant tanks and helium and gaseous nitrogen (GN2) bottles. The system engineer issued commands from a control console to perform these procedures, which were lengthy and susceptible to human error. In addition, the requirement to manually control these very hazardous operations was stressful for the operators. An incident involving the STS-2 Forward Reaction Control System (FRCS) servicing highlighted the need for automation. During the servicing for STS-2, the MD162 quick disconnect failed, causing oxidizer to spill down the side of the FRCS module. No automatic safing was available at that time, information for the operator was limited, and spill response actions were slow. 
+<br> 
+<br> This problem could be mitigated in future operations because the design of the GSE and Launch Processing System (LPS) allowed for the creation of automated functions. Automated sequencers were developed based on manual procedures and related Shuttle orbiter and GSE requirements documents. 
+<br> 
+<br> This was accomplished in incremental steps. The first sequencers were developed for automated electromechanical checks of the GSE, automated startup of the propellant flow through the GSE Fluid Distribution System (FDS,) and loading of the orbiter helium and GN2 bottles. 
+<br> 
+<br> Then, a more organized and integrated software set was developed by creating a master menu program that established a group of applications and a master set of OMS/RCS programs. These programs could be selected by the operator and loaded into the six application slots. One application slot was always occupied by the monitor sequencer. The monitor sequencer performed a large group of automated operations such as the Storage Tank Auto Press (a program that automatically opened the storage tank pressurization valve or the storage tank vent valve to maintain a predefined value). Another example of control functions was the control of flow rate or system back-pressure. The monitor sequencer performed this function by progressively opening or closing flow control valves. Other applications contained the display drivers and the automated sequencers for functions such as loading of the propellant tanks. 
+<br> 
+<br> Autoload sequencers were first used for loading the orbiter hypergolic propellant tanks for the STS-26R post-Challenger mission. Prior to this, the OMS tank reloading operation took 6 hours and the RCS operation took 4 hours. With the development of autosequencers, loading of an OMS propellant tank could be done in just over 1 hour and an RCS propellant tank in about 30 minutes. Each propellant load was accurate and efficient and, in most cases, did not violate design requirements. 
+<br> 
+<br> Sequencers were designed to establish or verify proper configuration initially, monitor critical functions continuously, execute the required task in the prescribed sequence, and end with the orbiter in a secure, safe configuration. Each automated sequence is performed with minimal operator intervention. The sequencer design allowed the operator to stop at a predetermined hold point or to secure the operation through a predetermined securing sequence. These executed functions allow the sequencer to stop at a stable configuration for the vehicle and GSE and then continue from the point at which it was secured. 
+<br> 
+<br> In the sequencer, critical instrumentation (and instrumentation output in general) was monitored for a specific result or against a predetermined redline value. Exceeding a required value caused the execution of a securing action or a safing action that could be contained within the executing program or other automatic monitors. 
+<br> 
+<br> One such module that provides automatic monitoring and safing was the Reactive Control Logic (RCL) module. RCL, a critical monitoring and safing program assigned to specific instrumentation, uses defined redline values that will cause safing actions to be executed.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Automated procedures using the existing LPS led to improvements in quality, safety, and operating cost. Development of automated sequencers allowed for automatic monitoring of instrumentation with a planned automatic securing and safing response. 
+<br /> 
+<br /> Using a computer system with fewer limitations and greater capability (such as programmable logic controllers, or PLCs) than the Shuttle program’s LPS would allow for a better, more detailed automated process. Stops for exceptions could be programmed to provide planned actions for the operator. (For example, more information from the knowledge base and responses to anomalies could be built into the process.) This would reduce real-time documentation and the need to process paperwork for deviations. The test team would be able to confirm the event and immediately take corrective action if necessary. 
+<br /> 
+<br /> 
+<img align="Bottom" alt="Electromechanical checks of the ground support equipment" border="0" src="https://llis.nasa.gov/llis_lib/images/1033784main_VDDL2.jpg" title="Electromechanical checks of the ground support equipment" /> 
+<br /> 
+<br /> Figure 1: Typical Display 
+<br /> 
+<br /> Automated hypergolic servicing during Space Shuttle ground operations demonstrated how effective management and use of technological change can improve reliability and reduce operating cost in manned space flight programs, which have unique reliability and redundancy demands. Although the LPS could not be adapted to changing computer technologies, which put limitations on its automated sequencer capabilities, advances were made throughout the program. 
+<br /> 
+<br /> 
+<img align="Bottom" alt="Screen capture of a typical sequencer menu for tank filling" border="0" height="770" title="Screen capture of a typical sequencer menu for tank filling" width="1024" /> 
+<br /> 
+<br /> Figure 2: Typical Sequencer Menu 
+<br /> 
+<br /> 
+<img align="Bottom" alt="Screen capture showing a typical tank fill sequence" border="0" height="773" title="Screen capture showing a typical tank fill sequence" width="975" /> 
+<br /> 
+<br /> Figure 3: Typical Sequencer 
+<br /> 
+<br /> Highly trained operators are critical in manned space flight, because automation does not eliminate all risks, and the operation of fast-moving automated sequencers can lull a team into a false sense of security. Operators need detailed knowledge of the hardware, software, and task objectives in order to resolve and mitigate the effects of real-time anomalies. Continual training of the operators was key to the success of Space Shuttle automated servicing success. Training using a high-fidelity math model was mandatory for operator certification.
+</section>
+<section><h2>Recommendation(s)</h2>
+During development of software tools, evaluate the events that could occur during each stage of the task. Then determine the appropriate response. Provide a software tool that specifies the information to be evaluated, recovery actions, and the recommended solution. 
+<br /> 
+<br /> Automation can provide many benefits, but for manned space flight, a change in computer technology must be well managed. With the reliability requirements of manned space flight, having highly trained operators is essential.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+Automation reduced servicing time from 6 hours for OMS tank loading for STS-2 to approximately 1.5 hours of sequencer time for missions at the end of the Shuttle program. The RCS load that required 4 hours for STS-2 (not including an additional 4 hours of screen-drying time) was reduced to 0.5 hours of sequencer run time at the end of the Shuttle program. Human error was greatly reduced.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

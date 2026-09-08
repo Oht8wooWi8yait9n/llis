@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0735: Material Selection Practices</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0735: Material Selection Practices</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0735 (Database ID: 735)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/735" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1252; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Reliable materials can be selected for aerospace applications by choosing those materials that have demonstrated reliability in carefully controlled laboratory testing and in operational space flights. Use of the Materials and Processes Technical Information System (MAPTIS) data base by system designers will ensure that materials that have demonstrated reliable performance in flight and test experience are the first to be considered in new or revised designs. Engineers will then have the confidence in their selections, knowing that the data on which their decisions have been made have been thoroughly validated.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Introduction:</p>
+
+    <p>The Materials and Processes Technical Information System (MAPTIS) resides on a DEC Alpha 7620 Computer located at the George C. Marshall Space Flight Center in Huntsville, Alabama. It can be accessed through the Internet after assignment of an account number by completing a user request form which can be obtained from MSFC.</p>
+
+    <p>The MAPTIS data base contains properties and test histories on both metals and nonmetals. Searches of the database can be accomplished by material code, material specification, manufacturer, or by a string or phrase search. Materials are rated based on criteria in NASA Handbook 8060.1C [reference 1] , Marshall Space Flight Center Specification 250 [reference 2] , Marshall Space Flight Center Specification 522 [reference 3] , and SP-R022A [reference 4] . For metals, information is included in the database on corrosion, stress corrosion cracking, and compatibility with: (1) gaseous oxygen, (2) liquid oxygen, (3) nitrogen tetroxide, (4) hydrazine, (5) low pressure hydrogen (&lt;450 psi) and (6) high pressure hydrogen (&gt;450 psi). In addition MAPTIS contains: a material code index, an alloy designation, the heat treatment, material specifications, and the generic identification and form.</p>
+
+    <p>The database elements for nonmetals includes information on flammability, toxicity, thermal vacuum stability, and compatibility with: (1) liquid oxygen, (2) gaseous oxygen, (3) nitrogen tetroxide, (4) hydrazine, (5) liquid hydrogen, and (6) hydraulic fluid. Nonmetallic data is included for adhesives, elastomers, plastics, tapes, tubing, potting compounds, coatings and lubricants.</p>
+
+    <p>Material Selection:</p>
+
+    <p>The materials selection portion of MAPTIS is a design selection tool that can also be used for material surveys and design reviews. It is based on comprehensive storage of test data and handbook information on metals, nonmetals, and standard parts. It includes a thermal vacuum stability data base which is a compilation of vacuum outgassing data from tests conducted at MSFC and various other organizations including the White Sands Test Facility, the Goddard Space Flight Center, the European Space Agency, the Jet Propulsion Laboratory, and others. Data elements included are total mass loss, residual mass loss, volatile condensible material, pressure, temperature, duration, and test facility description. An atomic oxygen data base includes the effects of atomic oxygen on various materials, guidelines for selection of materials based on this parameter, and protective techniques. A special database included in MAPTIS is an analytical tool to evaluate toxic outgassing data. The
+    analysis provides a method for determining if the material or the assembled article meets the requirements of NHB 8060.1C acceptance criteria including the comparison of projected contaminant concentrations with maximum allowable concentrations. The material selection function is a vital part of achieving high reliability for long duration space missions or missions on which the materials encounter severe environments.</p>
+
+    <p>Material Properties:</p>
+
+    <p>The material properties portion of MAPTIS contains comprehensive online materials information including physical and mechanical properties. Materials are listed specifically by designation, trade name, and manufacturer. The metallic materials portion includes such information as mechanical properties, design allowables, variations with environment and temperature, graphical and tabular tensile and compressive yield and ultimate strengths, elongation, fatigue, stress-strain, and elastic modulus. Physical properties such as density and thermal expansion are also included, as are chemical, thermal, and electrical properties. Many of these same properties are also included for nonmetals with additional information on peel, tear, and impact resistance; lap shear, creep, and resilience. Physical and chemical properties such as viscosity, hardness, color, formulation, flashpoint, chemical and environmental resistance, and pH are included in the data base. For nonmetals, processing
+    parameters such as extrusion or molding temperatures, pressures, and times; cure conditions, mix ratios, rise, and demold times are also included. The types of materials contained in the nonmetals portion of the database are: plastics, nozzle materials, coatings, tapes, adhesives, and lubricants.</p>
+
+    <p>Verification and Control:</p>
+
+    <p>The MAPTIS is also used to obtain information on where the materials listed have been used, to determine the history of hardware and material selection rationale, and to correlate U.S. material designations with those of foreign material designations. The "where used" data aids in the identification, tracking, and control of all material usage as a function of part number, environment, contractor, and/or project. This information is available for the SRM/SRB, External Tank, Space Shuttle Main Engine, and Spacelab programs. The data includes configuration information, application information, materials usage information, and support information. Configuration information includes the associate contractor, the detailed drawing numbers and part numbers, and the next assembly drawing and part numbers for the device, part, or structure that used or uses the material. Application information includes test data, fluid systems compatibility, environmental conditions to which the
+    item(s) have been subjected, evaluation and analysis rationale, and process specifications. Materials usage and support information includes: (1) all materials by designation, code, and specification; (2) an overall material evaluation rating; (3) a record of the weight, surface area, and thickness of nonmetals; (4) a record of material usage agreements; and (5) material specifications. These success stories of materials which performed in an acceptable manner in real programs, as well as in laboratory tests, are indispensable inputs to the aerospace designer.</p>
+
+    <p>Structural Materials Failure Analysis Database:</p>
+
+    <p>It is not only the success stories that are important inputs to the designer, but also an in-depth knowledge of the failures that have occurred and why they occurred is another vital link to high reliability. The NASA-wide failure analysis data base for structural materials is also a part of MAPTIS. It provides fast and easy access to selected NASA and contractor reports on failure investigations for structural materials and processes that have been conducted over a period of 35 years. The database fulfills the stated requirements of personnel surveyed at NASA centers, the Department of Defense, and contractors who need to be able to retrieve data quickly, cross reference large quantities of technical information, and share results in a standard format between organizations. The database presents failure analysis information in a simple format. It is used by engineers and managers to get a head start on investigations, minimize duplications of effort, use resources effectively,
+    and ensure that problems have been resolved or can be avoided. There are approximately 900 records in the database at this writing, and the information is continuing to be updated and amended as new information becomes available. The database has nine identifying data fields plus an abstract averaging about 100 words to describe the nature of the failure, its cause, and corrective actions. Failures are categorized into 15 categories as follows:</p>
+
+    <ol>
+      <li>Critical Defect Growth</li>
+
+      <li>Corrosion Fatigue</li>
+
+      <li>Corrosion</li>
+
+      <li>Creep</li>
+
+      <li>High Cycle Fatigue</li>
+
+      <li>Hydrogen Embrittlement</li>
+
+      <li>Hydrogen Environment Embrittlement</li>
+
+      <li>Low Cycle Fatigue</li>
+
+      <li>Liquid Metal Embrittlement</li>
+
+      <li>Overload</li>
+
+      <li>Oxidation</li>
+
+      <li>Stress Assisted Grain Boundary Oxidation Crack</li>
+
+      <li>Stress Corrosion Cracking</li>
+
+      <li>Stress Rupture</li>
+
+      <li>Other</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Knowledge of the types of structural failures that have been encountered, the details of the failure analysis, and the corrective actions taken are essential elements in the material selection for systems which must perform reliably.</p>
+
+    <p>Project Support Data Base:</p>
+
+    <p>MAPTIS contains a project support data base designed for both external and internal support to the major ongoing NASA and MSFC projects. The project support data base includes an electronic bulletin board, lead engineer data records, a standards data base, specifications status, and correspondence status. The electronic bulletin board provides a method for rapid dissemination and exchange of materials and processes news, developments, and problems NASA-wide. Lead Engineers are listed for each project. A standards data base lists all NASA specifications and standards. The specifications tracking data file provides evaluation or approval status, disposition, description and effectivity for material and process specifications, operations, and procedures reviewed and evaluated by MSFC&iacute;s Materials and Processes Laboratory.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Historically, materials and their properties have been inextricably tied to the ability to withstand severe environments and to provide hardware that will operate successfully in multiple missions. An intimate knowledge of the materials, their composition, their reaction under various operating conditions, and their success and failure history will provide the designer with the ability to select the right material for any given task. MAPTIS contains an accumulated body of data and evidence that has been documented over many years and perfected into an electronic access system that is still being updated and growing. Use of this system has become an essential element in the continuing pursuit of the ultimate in reliable space flight systems.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>NHB 8060.1C;" Flammability, Odor, and Offgassing Requirements and Test Procedures for Materials in Environments that Support Combustion."</li>
+
+      <li>MSFC-SPEC-250A; "Protective Finishes for Space Vehicles, Structures, and Associated Flight Experiments."</li>
+
+      <li>MSFC-SPEC-522B; "Design Criteria for Controlling Stress Corrosion Cracking."</li>
+
+      <li>SP-R022A; "Vacuum Stability Requirements of Polymeric Materials for Spacecraft Applications."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to access and survey the MAPTIS system could result in overlooking important materials or process advancements, mistaking vital material parameters, or using materials in applications where they would be subject to potential degradation or failure. The result could be mission compromise, mission delays, loss of mission, or loss of life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Aerospace systems designers must ensure that the most reliable material is used to meet the design requirements for aerospace systems. Test results regarding corrosion resistance, susceptibility to stress corrosion cracking, flammability, toxicity, thermal vacuum stability, and compatibility with rocket engine fuels, oxidizers, and hydraulic fluids; as well as extensive chemical and physical properties data; are included in the Materials and Processes Technical Information System (MAPTIS). This information is used to assist the aerospace designer in identifying the most reliable material candidates for space systems.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I and Saturn V programs, Space Shuttle Main Engine, Solid Rocket Booster, Solid Rocket Motor, Space Shuttle External Tank, and Spacelab.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

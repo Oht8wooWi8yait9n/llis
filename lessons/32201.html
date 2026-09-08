@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #32201: Considerations for Helium Environments</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #32201: Considerations for Helium Environments</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #32201 (Database ID: 32201)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2021-08-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Flight Equipment,  Hardware,  Launch Process,  Parts,  Materials,  & Processes,  Payloads,  Research & Development,  Test & Verification,  Spacecraft and Spacecraft Instruments</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/32201" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">The Navigation Doppler Lidar (NDL) is a laser-based sensor capable of providing precision velocity and altitude relative to three laser-illuminated spots. &nbsp;The NDL transmits three laser beams in fixed directions relative to each other. &nbsp;Signals from each beam provide platform velocity and range to the ground along the laser line of sight.&nbsp; Figure 1 shows a schematic of the NDL system.&nbsp; </span></span></span></p> 
+<p style="margin-bottom:11px"><img alt="" src="https://nen.nasa.gov/documents/17793/1287425/Picture1.jpg/3a86c382-2a5e-aed9-6b93-36a5980d74b3?t=1678224295061"></p> 
+<p style="margin-bottom: 11px; text-align: center;">&nbsp;</p> 
+<p style="margin-bottom: 11px; text-align: center;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Figure 1. Diagram of the Navigation Doppler Lidar (NDL)</span></span></span></p> 
+<p style="margin-bottom: 11px;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">The NDL failure on the Blue Origin New Shepherd NS-17 flight can be traced to a helium purge that occurred prior to launch. &nbsp;The purge reduced the optical filter temperature, resulting in a filter center frequency shift. &nbsp;The shift in the filter center frequency degraded the fiber amplifier input power, leading to a laser energization failure. &nbsp;Without laser energization, the system could not collect the desired velocity and range data.</span></span></span></p> 
+<p style="margin-bottom: 11px;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">After the flight failure, controlled tests were performed to confirm the impacts of helium on the functioning of NDL.</span></span></span></p> 
+<p style="margin-bottom: 11px;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">When the optical filter was purged with helium, nitrogen, and air in separate test environments, different effects were seen on the optical filter. &nbsp;Figure 2 shows the fiber amplifier input power in these different tests.&nbsp; The top left plot shows what happened during the NS 17 flight.&nbsp; The power decayed after the helium purge was initiated.&nbsp; The lower left plot shows the fiber amplifier input power maintaining its nominal power during a nominal power-on and a power-on with a nitrogen purge introduced into a chamber containing the optical filter.&nbsp; The top right plot shows different behavior after a helium purge is introduced into the chamber containing the optical filter.&nbsp; Here, there is significant power decay.&nbsp; Finally, the lower right plot contrasts the fiber amplifier input power with the filter located inside the chamber subjected to the helium purge (as in the top right plot) and with the optical filter located outside the chamber.&nbsp; The only instance of a fiber amplifier power drop occurred when the optical filter was exposed to helium.&nbsp; The tests demonstrate that it is the optical filter exposure to the helium purge that is responsible for the decay in the fiber amplifier power. </span></span></span></p> 
+<p style="margin-bottom: 11px; text-align: center;"><img alt="" src="https://nen.nasa.gov/documents/17793/1287425/Picture2.png/d87fe6d4-7f6d-924b-c21e-2db3041f69f1?t=1678224357509"></p> 
+<p style="margin-bottom: 11px; text-align: center;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Figure 2. Fiber Amplifier input power under numerous conditions.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">These issues were caused by helium’s ability to permeate into the cavity of the optical filter combined with the high thermal conductivity of helium relative to air. &nbsp;When the helium purge occurred, helium was able to enter the optical filter cavity, greatly increasing the thermal conductivity of the resultant gas mixture in the cavity.&nbsp; The increased thermal conductivity of the gas mixture enhanced the rate at which heat could be transferred from the optical filter, and exceeded the ability of the heaters to maintain the set temperature.&nbsp; This result led to cooling in the optical filter and a subsequent shift in the filter center frequency, resulting in failed laser energization.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">The NDL project was treated as a highly risk tolerant mission.&nbsp; The higher risk tolerance led to certain concessions in terms of testing and analysis during the development and assembly, integration and test.&nbsp; Exposure to helium was considered benign from a material compatibility perspective.&nbsp; Thus, during instrument development, the optical filter was tested in both air and vacuum, but not in a helium environment.&nbsp; Post-failure, elevated thermal conductivity representing the presence of helium was incorporated into the thermal analysis, and that analysis showed a possible reduction in average filter temperature sufficient to impact the bandpass frequency and produce a failure to energize.&nbsp; However, testing was required to fully support the analysis.</span></span></span></p> 
+<p style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Helium’s relatively small molecular diameter coupled with its chemical inertness enhances its ability to penetrate many seals. &nbsp;In another helium-related failure, during the development of Hemispherical Resonator Gyroscopes (HRGs), a secondary vacuum cavity surrounding the primary cavity containing the HRG was added to bring the leak rate down to an acceptable level (David Rozelle, <i>The Hemispherical Resonator Gyro: From Wineglass to the Planets</i>, January 2009, <u>Advances in the Astronautical Sciences</u> 134:1157-1178).&nbsp; Helium permeation appears to have also been the culprit in the immobilization of hospital employee iPhones in 2018 after a helium leak occurred in an Illinois Hospital (<a href="https://www.ifixit.com/News/11986/iphones-are-allergic-to-helium" style="color:#0563c1; text-decoration:underline">iPhones are Allergic to Helium</a>, Kyle Wiens, October 30, 2018, IFIXIT; <a href="https://9to5mac.com/2018/10/31/helium-bricks-iphone-apple-watch/" style="color:#0563c1; text-decoration:underline">Helium temporarily bricks iPhones and Apple Watches in Chicago hospital, Android devices immune</a>, Michael Potuck, October 31, 2018, 9TO5Mac). </span></span></span></p> 
+<p style="margin-bottom:11px">&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li style="margin-bottom:11px"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Helium has a higher thermal conductivity than air and therefore can affect the thermal stability of systems.&#xa0; Testing in air and in vacuum does not envelope the thermal environment in which helium may be present.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif">Helium’s small molecular size and chemical inertness enables it to permeate into instruments and devices exposed to helium.&#xa0; Seals that are not specifically designed to prevent helium intrusion are susceptible.</span></span></span></li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ul> 
+ <li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:&quot;Calibri&quot;,sans-serif">Helium has a higher thermal conductivity than air, this difference in thermal conductivity must be considered in system thermal analysis when applicable. </span></span></span></li> 
+ <li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:&quot;Calibri&quot;,sans-serif">Special seals may be required to prevent helium permeation into susceptible devices. </span></span></span></li> 
+ <li style="margin-left:8px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:&quot;Calibri&quot;,sans-serif">If a mission exposes devices and/or instruments to helium, they should be screened and/or tested for helium susceptibilities.&#xa0; Generally speaking, systems should be tested in environments they will see through all mission phases. &#xa0;This recommendation goes hand in hand with NASA’s “Test as you fly, fly as you test” philosophy.</span></span></span></li> 
+</ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

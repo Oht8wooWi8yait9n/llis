@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #23201: RapidScat Power Subsystem Failure</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #23201: RapidScat Power Subsystem Failure</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #23201 (Database ID: 23201)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-12-12</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Hardware,  Payloads,  Spacecraft,  Test & Verification,  Power,  Spacecraft and Spacecraft Instruments,  Science integration,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/23201" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The RapidScat scatterometer was installed on the ISS in September 2014 to provide a replacement for the wide-swath scatterometry measurements that were lost when the antenna on the SeaWinds payload aboard the QuikSCAT satellite stopped rotating. Scatterometers are radar instruments that measure wind speed and direction over the ocean; they are useful for weather forecasting, hurricane monitoring, and observations of large-scale climate phenomena such as El Niño. &nbsp;Built by the NASA/Caltech Jet Propulsion Laboratory (JPL), RapidScat is mounted to the exterior of the ISS’s Columbus science laboratory module (Figure 1). Columbus was built and is operated by the European Space Agency.</p> 
+<p><img alt="Figure 1 is a color illustration of the International Space Station (ISS) emitting a beam resulting in a circular ring shadow imposed on the Earth below. A color insert shows one end of a cylindrical module in space with the structure of a roughly cubical instrument attached to the outside of the cylinder." src="/lessons/23201/2017-11_Rapidscat_Fig1.jpeg" style="width: 640px; height: 466px;"></p> 
+<p><b>Figure 1. </b>Illustration of the location of RapidScat on&nbsp;the ISS and its operation</p> 
+<p>Station power is generated centrally by solar arrays and routed via a 120 VDC system to all Station users. Inside Columbus, the incoming power goes through two Power Distribution Units (PDUs) and then, as 120 VDC or 28 VDC, to all payload racks, external platform locations (e.g., RapidScat), center aisle standard utility panels, and subsystems.</p> 
+<p>On August 19, 2016, the Columbus module experienced a shutdown of power to PDU-1, which supplied power to RapidScat and multiple other internal and external payloads and ISS systems (Reference (1)). Two minutes prior to the power bus shutdown, the RapidScat radar unexpectedly powered down and stopped sending telemetry. On August 20, an attempt to power RapidScat resulted in an overcurrent event. Subsequent attempts to power RapidScat all resulted in overcurrent events, and because the front-end power electronics are not on-orbit serviceable, the RapidScat mission could not be re-activated.</p> 
+<p>The limited telemetry available suggests that RapidScat (Figure 2) responded to an under-voltage condition in the Columbus-supplied power by either shutting down or rebooting its computer. Approximately two minutes later, this Columbus PDU-1 power anomaly resulted in a sudden removal of power to RapidScat (and other payloads and hardware fed by the Columbus power system). Subsequent attempts to power the instrument resulted in over-current induced trips, suggesting that a substantial internal hard short developed directly across the power bus (Reference (2)).</p> 
+<p><img alt="Figure 2 is a color photo showing six white-gowned and capped workers gathered in a high bay facility interior around an instrument approximately 3 ft.-cubed in dimensions. The main body of the instrument is covered by a white cover, and a black circular antenna is mounted to the top of the instrument. The workers eyes are focused on the instrument." src="/lessons/23201/2017-11_Rapidscat_Fig2.jpeg" style="width: 640px; height: 350px;"></p> 
+<p><b>Figure 2.</b> When QuikSCAT stopped collecting wide swath wind data in late 2009, JPL came<br> up with a quick and cost-effective replacement that used the framework of the ISS and reused<br> hardware originally built to test parts of QuikSCAT.</p> 
+<p>Failure analysis performed to account for the observed telemetry and symptoms suggests that RapidScat may have been damaged by a combination of (1) the under-voltage condition and (2) inductive kickback when PDU-1 suddenly lost power. During instrument development at JPL, ground testing of a sudden power off scenario was not done with an inductive load attached. It is plausible that one or more field-effect transistors (FETs) were stressed or driven to short by inductive kickback during or after the PDU-1 sudden power off event (Reference (3)).&nbsp;</p> 
+<p>Subsequent simulation of various failure modes revealed a heretofore undiscovered weakness in the design that left portions of the instrument’s solid-state switch circuits vulnerable to stress in the event of uncontrolled removal of power. It now seems most likely that the PDU-1 sudden loss of power event and a design weakness combined to cause the failure of a number of components in the power supply.</p> 
+<p>The RapidScat mission did not have specific science requirements (although it accepted a set of science objectives consistent with a two-year mission). The primary RapidScat mission goal (which was essentially accomplished during its ~2 years of operation) was to demonstrate (1) the agile reuse of flight-worthy hardware and (2) the capability of a Class D-like project to deploy and host a science-class instrument.</p> 
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in"><b>References:</b>&nbsp;</p> 
+<ol> 
+ <li style="margin-top:0in; margin-right:0in; margin-bottom:3.0pt">“Loss of Feeder 1 Power at COL SDX site,” JPL Incident Surprise Anomaly (ISA) No. 60031, August 19, 2016.</li> 
+ <li style="margin-top:0in; margin-right:0in; margin-bottom:3.0pt">Charles Benson, “RapidScat Failure Analysis,” IOM #3460-16-017, December 19, 2016.</li> 
+ <li style="margin-top:0in; margin-right:0in; margin-bottom:3.0pt">Stacey Boland, “Anomaly: ISS Feeder 1 Power Loss,” October 21, 2016.</li> 
+ <li style="margin-top:0in; margin-right:0in; margin-bottom:3.0pt">Patricia D. Lock, “Candidate Lesson Learned from RapidScat Anomaly,” JPL e-mail to David Oberhettinger, August 30, 2017.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li style="margin-top:6.0pt">It is likely (Reference (4)) that the failure of the RapidScat payload on the ISS was due in part to unanticipated removal of power resulting in voltage spikes caused by possible system-generated or self- induced inductive kickback.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">The behavior of EMI filter components downstream of switches can pose a threat in the event of sudden power removal. The effect of long cable runs, such as those found in the ISS, must also be considered. Models of source impedances cannot always be counted on to genuinely represent behavior in off-nominal situations. Voltage clamping is a technique used to limit the amplitude of a transient across a circuit by clipping off the over-voltage spikes at a safe level.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">The behavior of an external power subsystem that is designed by an outside organization may not be as well understood by JPL instrument designers as the power subsystem in a JPL spacecraft.</li> 
+</ol> 
+<p style="margin-top:6.0pt">The RapidScat failure mechanism represents a credible vulnerability for JPL’s upcoming ECOsystem Spaceborne Thermal Radiometer Experiment on Space Station (<i>ECOSTRESS</i>) mission.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="margin-top:6.0pt">Designs must be analyzed to understand if they contain the inductive potential to generate dangerous voltages when switch components open.</li> 
+ <li style="margin-top:6.0pt">Voltage clamping of the bus supply should be considered if it is practical and not precluded by competing requirements.</li> 
+ <li style="margin-top:6.0pt">Test as you fly, and fly as you test.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.13.1 (“Engineering Practices: Project and System Level Functional Verification and Validation”) and Paragraph 6.13.10 (“Engineering Practices: Project and System Level Functional Verification and Validation”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. In addition, JPL has referenced it supporting Paragraph 4.10.4.5 (“Flight System Design: System EMC/EMI Design—Use of filtering”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0644: Ni-Cd Conventional Spacecraft Battery Handling and Storage</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0644: Ni-Cd Conventional Spacecraft Battery Handling and Storage</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0644 (Database ID: 644)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/644" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Relibility Practice number PD-EC-1103 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Ni-Cd batteries are perishable and their ability to satisfactorily complete mission life is directly related to prudent handling and storage procedures. The development and implementation of appropriate project-unique procedures based on a set of proven guidelines assure that the optimum performance of Ni-Cd batteries is not degraded due to inappropriate handling and storage.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p>The Ni-Cd cell is constructed of positive plates (nickel electrodes), negative plates (cadmium electrodes), and a separator material that is interleaved with the plates and serves to insulate the positive plates from the negative plates and retain the electrolyte. The plates are connected to the respective cell terminals which are attached to a cell cover and inserted in a steel case and welded shut. The electrolyte is normally 31 percent concentration of potassium hydroxide and is added though the "fill tube" which is fitted with a pressure gauge. After the cell satisfactorily completes its manufacturing and acceptance testing, the fill tube is pinched off and welded closed.</p>
+
+    <p>The manufacture of a hermetically sealed Ni-Cd is predicated on a delicate balance between the active material, the relative state-of-charge of the active material between the positive and negative plates at the time the cell is sealed, the amount of electrolyte placed in the cell at closure, the properties of the separator material, and the free volume allowed by the case design. The aerospace Ni-Cd cell, which has no free or excess electrolyte, is referred to as an "electrolyte starved" design. The primary prerequisite for a sealed-electrolyte starved cell to operate safely is that the positive plates be limiting on charge so that only oxygen is generated during overcharge. During charge some of the current is utilized in the generation of oxygen gas and when in overcharge, all the current is used in generating oxygen. This causes the cell pressure to increase to a level that is dependent on the recombination rate of oxygen at the negative electrode, the rate of diffusion of
+    the oxygen through the separator, the amount of electrolyte in the cell, and the cell free volume. The cell pressure at 20 degrees C can typically be in the range of 50 to 65 PSIG.</p>
+
+    <p>The negative plates of a cell contain approximately 50 percent more capacity than the positive electrode. Of this "excess" negative capacity, approximately 60 percent remains uncharged when the positive plates are fully charged. This uncharged material is referred to as "overcharge protection" and is required to prevent the plates from becoming fully charged and generating hydrogen gas. The remainder of the excess negative material is in the charged state when the cell is fully discharged and provides over-discharge protection. It is referred to as precharge. On discharge, when the cell voltage drops below 1 volt, the positive plates are limiting, thereby leaving charged cadmium material to react with any residual oxygen when the cell is completely discharged. Typical pressure of fully discharged cells is 3 to 5 PSIG. A second reason for the positive plates to be limiting on discharge is to prevent the effects of negative capacity fading, which occurs during normal use, from
+    causing losses in cell capacity.</p>
+
+    <p>It is thought that capacity fading is related to the sizes of the cadmium crystals. It is most important that the overcharge protection is available for the entire life of the cell. Should the negative plates become fully charged, hydrogen gas is generated during overcharge and there is no effective mechanism within the cell for the recombination of Hydrogen gas. If a cell is over discharged (potential reversed) Hydrogen gas is generated at the positive electrode at a rate dependent upon the discharge rate. Because of the limited free space in a sealed cell, a cell that is reversed can quickly build up pressure and rupture the cell case or battery package.</p>
+
+    <p>The Ni-Cd cell is a highly complex, interactive electrochemical device where the present and future performance is totally dependent on its past history. This history includes the attributes and characteristics of the raw materials, the processing of these materials into components, the assembly of these components into a sealed cell, and all testing, handling, and storage.</p>
+
+    <p>Consequently, a cell or battery is classified as perishable and treated accordingly.</p>
+
+    <p>Because Ni-Cd batteries can be irreversibly degraded by improper use and handling, the following guidelines were developed for the use of battery engineers in preparing project-specific Battery Handling and Storage Requirement Documents:</p>
+
+    <p><b>GUIDELINE NO. 1</b> - Flight batteries should be maintained in a discharged and shorted condition and stored at cold temperatures when not required for "critical" spacecraft testing.</p>
+
+    <p>The electrochemical activity is at a minimum in the discharged state and when stored at the optimum storage temperature of 0 degrees C. A battery, stored discharged and shorted up to three years since cell activation, is expected to provide several years life of nominal performance in orbit.</p>
+
+    <p><b>GUIDELINE NO. 2</b> - Flight batteries should not be subjected to extended spacecraft integration and test activities.</p>
+
+    <p>The open circuit and intermittent use of Ni-Cd batteries during extended spacecraft integration and testing activities are known to significantly accelerate the degradation of batteries. Results from controlled tests have shown permanent and irreversible changes unlike anything observed after several years of spacecraft flight operations. Degradation is observed initially as an increase in cell overcharge voltage at low temperatures which is indicative of loss in overcharge protection. Also, integration and testing use promotes significant cadmium migration. Both of these are recognized as the dominate wear-out mechanisms which determine battery life.</p>
+
+    <p><b>GUIDELINE NO. 3</b> - The use of charged batteries after an open stand should be initiated with a 3 to 5 minutes discharge prior to initiating battery charge. Typically the discharge is done with spacecraft load and in concert with the spacecraft ground power console.</p>
+
+    <p>During normal cycling use, the battery is discharged followed by a recharge and some overcharge. In this mode, there is always a partial pressure of oxygen from the overcharge with oxygen recombination occurring at the negative electrode. In a relatively short time on open circuit, the oxygen recombines and the internal cell pressure returns to a vacuum. Charging cells that are fully charged in the absence of oxygen creates an "unnatural" condition, since there is no oxygen available to react with the negative electrodes. Past experience shows that this technique reduces the effects of open circuit stand on performance.</p>
+
+    <p><b>GUIDELINE NO. 4</b> - During periods when the battery is not needed to support spacecraft test and operations, it should be maintained on a low rate trickle charge, (C/100).</p>
+
+    <p>Trickle charge at low rates is preferred to open circuit stand for a battery. While there are degradation mechanisms associated with trickle charge, data from controlled tests indicate that this to be much less detrimental than open circuit stand.</p>
+
+    <p><b>GUIDELINE NO. 5</b> - Cooling should be provided to maintain battery temperatures at about 18 degrees C during spacecraft integration and test operations.</p>
+
+    <p>Exposures to elevated temperatures accelerate cadmium migration and separator breakdown which depletes the overcharge protection in the cells. Since the rate of separator degradation increases by a factor of 3 for every 10 degree C rise in temperature, strict adherence to this guideline is advised.</p>
+
+    <p><b>GUIDELINE NO. 6</b> - A battery stored discharged and shorted for a period greater than 14 days should be activated with a "reconditioning cycle" prior to placing it in use. The reconditioning cycle is performed at 20 degrees C and is defined as follows:</p>
+
+    <ol type="a">
+      <li>Recharge at C/20 (C/*** indicates recharge or discharge rates in terms of "name plate" battery capacity, e.g., C/20 = 1/20 of the capacity listed on the battery nameplate) for 40 hours (+/- 4 hours)</li>
+
+      <li>Discharge at C/2 constant current rate until the first cell reaches 1.0 volts.</li>
+
+     <li>Drain each cell with a 1 ohm resister to less than 0.03 volts.</li>
+
+       <li>Short each cell for a minimums of 4 hours</li>
+      <li>Recharge battery at C/20 constant current rate for 40 hours (+/- 4 hours)</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><b>GUIDELINE NO. 7</b> - Charged batteries should not stand on open circuit for more than 14 days. Charging should be initiated only after implementing Guideline No. 3.</p>
+
+    <p>When cells are on open circuit "self discharge" occurs which results in the formation of large cadmium crystals. Controlled tests have shown capacity loss of just under 1% per day at 23 degrees C and about 1.5% at 35 degrees C. The self discharge rate of each cell is not identical, consequently after extended periods of open circuit, there can be an appreciable capacity loss and capacity divergence between cells in a battery. This can be remedied by discharging the battery as described in Guideline No. 3 and trickle charging the battery several hours to bring all cells into balance.</p>
+
+    <p><b>GUIDELINE NO. 8</b> - A battery should be "reconditioned" if it has been on open circuit, subjected to intermittent use, i.e., open circuit, trickle charge, occasional discharge, etc., for a cumulative period of 30 days. Reconditioning is effected by performing the following sequence at 20 degrees C:</p>
+
+    <ol type="a">
+      <li>Discharge at C/2 constant current rate until the first cell reaches 1.0 v/c.</li>
+      <li>Drain each cell with a 1 ohm resistor until each cell's voltage is less than .03 V/C.</li>
+
+     <li>Short each cell for a minimum of 4 hours.</li>
+
+      <li>Recharge battery at C/20 constant current rate for 40 hours (+/- 4 hours).</li>
+
+
+      <li>Repeat steps a, b, and c.</li>
+
+      <li>Charge battery at C/10 constant current rate for 16 hours ( +/- 4 hours).</li>
+
+      <li>Repeat steps a, b, c, and f.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Exercising the active material by periodic discharge of each cell followed by a low charge helps retard permanent change in the crystal structure of the cadmium electrodes and forces electrolyte redistributions within the cell. The less frequent the reconditioning cycles, the less effective the reconditioning cycle is in restoring the discharge voltage of a battery.</p>
+
+    <p><b>GUIDELINE NO. 9</b> - Flight batteries should be discharged and cells shorted during shipment. Batteries should be packaged to exclude humidity and control temperatures to 5 degrees C (+/- 5 degrees C) and the shipping container should be equipped with temperature recorders to provide assurances that flight batteries have not been exposed to temperatures exceeding 25 degrees C.</p>
+
+    <p>A Ni-Cd battery can deliver very high currents if shorted. High currents would create a safety hazard as well as destroy the battery due to the excessive heat that would be generated. Elevated temperatures enhance the rates of electrochemical reaction and separator hydrolysis.</p>
+
+    <p><b>GUIDELINE NO. 10</b> - The final reconditioning of flight batteries should be performed at least 14 days prior to spacecraft launch. Upon completion of the reconditioning, flight batteries should be kept on low rate trickle charge until launch. Use the reconditioning sequence defined in Guideline No. 8.</p>
+
+    <p>The reconditioning cycle restores the battery discharge voltage to "like new" condition by enhancing the formation of small cadmium crystals and electrolyte redistribution. A complete discharge establishes capacity balance for all cells within a battery. The low rate trickle ensures that the battery is maintained at full state of charge for launch.</p>
+
+    <p><b>GUIDELINE NO. 11</b> - The design of flight batteries should include the following provisions for ground console interfacing with the batteries while integrated in the spacecraft:</p>
+
+    <ol type="a">
+      <li>Signal lines for monitoring total battery voltage, charge and discharge currents, battery temperatures, and individual cell voltages.</li>
+
+      <li>Capability to charge and discharge the battery from the ground test console</li>
+
+      <li>Capability to place a resistor and a shorting plug across each individual cell</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Capability must be provided to monitor the state of health of batteries and to discharge, charge, trickle charge and recondition batteries without powering up the spacecraft in order to meet guidelines to minimize degradation of the batteries.</p>
+
+    <p><b>GUIDELINE NO. 12</b> - A log book should be maintained on each flight battery including the complete test histories of each cell, of the assembled battery, and of all integration and test and launch site activities. Each log book should identify the project and battery and individual cell serial numbers. Chronological (date and time) entries for all test sequences, summary of observations, identification of related computer stored records, malfunctions, names of responsible test personnel, and references to test procedures controlling all tests should be recorded.</p>
+
+    <p>Since Ni-Cd batteries are perishable, their ability to satisfactorily complete their mission life is directly related to their storage, their ground use, and handling. Historical performance information is required to ensure their flight worthiness at launch time.</p>
+
+    <p>The referenced document provides additional details concerning the degradation mechanisms of Ni-Cd cells and how these mechanisms are affected by improper ground handling. The reference also includes a synopsis of Ni-Cd cell design and evolution over 30 years of space flight on GSFC satellites along with a chronological review of key elements which influenced the current design of the Ni-Cd cells.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Ni-Cd batteries can be damaged and irreversibly degraded through improper use and handling prior to launch. The 12 guidelines provided above were developed over many years of experience in the use, handling, and testing of Ni-Cd batteries. Following these guidelines ensures that flight batteries are not irreversibly degraded and have been properly reconditioned and prepared for launch.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Handbook For Handling And Storage Of Nickel Cadmium Batteries: Lessons Learned - NASA Reference Publication 1326 - February 1994.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The impact of not following this practice would very likely be that flight batteries would be irreversibly degraded due to improper handling and preparation for launch. This could result in the failure of batteries to meet flight performance requirements and also possibly early catastrophic failures.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Flight projects develop and implement handling and storage procedures for Ni-Cd flight batteries when applicable to minimize deterioration and irreversible effects on flight performance due to improper handling and storage.</p>
+
+    <p>The procedures described in this practice are specifically for Conventional Ni-Cd batteries and are not necessarily applicable to Super Ni-Cd batteries.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>GSFC Programs That Used Practice:<br />
+    <br />
+    Solar Maximum Mission (SMM); Landsat; Earth Resource Budget Satellite (ERBS); International Ultra-violet Explorer (IUE); Cosmic Background Explorer (COBE); Gamma Ray Observatory (GRO); Tracking and Data Relay Satellite System (TDRSS); National Oceanic &amp; Atmospheric Administration/Television Infrared Observation Satellite (NOAA/TIROS); Geostationary Operational Environmental Satellite (GOES); Upper Atmospheric Research Satellite (UARS); Extreme Ultraviolet Explorer (EUVE)</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

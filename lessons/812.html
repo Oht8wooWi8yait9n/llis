@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0812: Leak Testing of Liquid Hydrogen and Liquid Oxygen Propellant Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0812: Leak Testing of Liquid Hydrogen and Liquid Oxygen Propellant Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0812 (Database ID: 812)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/812" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1424 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Leak testing of a Liquid Hydrogen (LH<small><sub>2</sub></small>) and a Liquid Oxygen (LO<small><sub>2</sub></small>) propellant system prior to flight insures that the flight leakage rate does not exceed allowable leakage established for flight. Leak testing also insures the quality and reliability of a Space Shuttle Element and reduces the probability of system failure. Leak checks also prove that seals and sealing surfaces at joints are defect free and seals are seated correctly.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A leak is the result of cracks, holes, porosity, permeability, surface aspirates or scratches in a pressurized container or joint that allows the escape of liquid or gas. Leak test methods and procedures are designed for detecting, locating leaks, and ensuring the quality, serviceability and safety of components, structures and the entire propellant system.</p>
+
+    <p>Leak testing can be a time consuming and expensive task but should be implemented when necessary to protect product integrity or personnel safety. One of the most important steps in leak test development is to establish the specification for acceptable and unacceptable leak rates. Choosing the most effective and reliable leak testing method is also important.</p>
+
+    <p>Leak testing methods and sensors include the following:</p>
+
+    <ol>
+      <li>Acoustical - escaping gas that is audible or can be detected using acoustical instrumentation.</li>
+
+      <li>Odor - from tracer gas.</li>
+
+      <li>Leak test solution - bubbles form when applied over escaping gas.</li>
+
+      <li>Pressure decay - pressure loss over time.</li>
+
+      <li>Pressurized liquid - normally water, leakage can be seen.</li>
+
+      <li>Trace gas - color/radiation/odor.</li>
+
+      <li>Gas chromatography.</li>
+
+      <li>Halogen leak detection - requires use of alcohol torch (blue flame) with a sniffer tube when small amounts of fluorine, chlorine bromine, etc. enter the tube then the blue flame turns to a different color.</li>
+
+      <li>Helium leak detectors - detects leakage of small amounts of helium.</li>
+
+      <li>Flow meter - detects the volume of gas escaping over a specified time.</li>
+
+      <li>Bubble gauge - monitors inter seal leakage between primary/secondary when primary pressurized.</li>
+
+      <li>Light refraction.</li>
+
+      <li>Mass spectrometer.</li>
+
+      <li>Hydrogen sensors.</li>
+
+      <li>Oxygen sensors.</li>
+
+      <li>Electronic detectors.</li>
+
+      <li>Liquid sensitive electrical aluminum tape.</li>
+    </ol>
+
+    <p>This reliability Practice covers MSFC&iacute;s experience for ensuring that the External Tank, as an element of the Space Shuttle Transportation System, has developed an acceptable leak detection system and leakage verification program for the cryogenic propulsion oxidizer and fuel systems, Liquid Oxygen (LO<small><sub>2</sub></small>) and the Liquid Hydrogen (LH<small><sub>2</sub></small>) tanks.</p>
+
+    <p>EXTERNAL TANK</p>
+
+    <p>Extra effort is devoted to the procurement of defect-free raw material. Aluminum plate has been ultrasonic tested at the mill. The skin panels are placed into a weld fixture and welded using the variable polarity plasma arc (VPPA) or TIG welding method. After welding, the welds are x-rayed and penetrant inspected (defects are repaired as required). When the LO<small><sub>2</sub></small> tank has been assembled, the welds are wrapped with an aluminum tape which has an adhesive that is soluble in water. The LO<small><sub>2</sub></small> tank is then hydrostatically tested. If a leak is encountered during hydrostatic testing, the water will dissolve the adhesive and provide electrical continuity through the aluminum foil tape. A leak could then be isolated and repaired. After the LH<small><sub>2</sub></small> tank has been assembled, it is pneumatically proof tested with gaseous nitrogen (GN<small><sub>2</sub></small>). Leakage is checked with bubble solution at a reduced pressure
+    after proof test. After the LO<small><sub>2</sub></small> tank/intertank assembly is joined to the LH<small><sub>2</sub></small> tank, the propulsion delivery systems are installed on the tanks. The propulsion delivery systems consist of the LO<small><sub>2</sub></small> and LH<small><sub>2</sub></small> feed lines, recirculation line and pressurization lines. The propulsion delivery system lines are joined with bolted flanges containing Naflex or Raco/Creavey seals to control leakage.</p>
+
+    <p>The Raco<small><sup>&reg;</sup></small>/Creavey<small><sup>TM</sup></small> seal consists of a primary and secondary seal set. The primary seal is a Raco<small><sup>&reg;</sup></small> seal that is a pressure activated seal consisting of a Teflon jacket over an Inconel 718 spring. The secondary seal is a Creavey<small><sup>TM</sup></small> seal, which is a tubular Teflon cover with a stainless steel spring core that forms an "O" ring type seal. For Raco<small><sup>&reg;</sup></small>/Creavey<small><sup>TM</sup></small> seal arrangement, see Figure 1. This two-seal arrangement provides for means for leak checking the primary seal or the total leak rate of the primary and secondary seals. For the Naflex seal arrangement, see Figure 2. The bolted flanges for both types of seals have a leak test port that has been proved to be blockage free. The allowable leakage rate for the Raco<small><sup>&reg;</sup></small>/Creavey<small><sup>TM</sup></small> seals is 0.183 SCIM of helium at 50
+    ± 5.0 PSIG and ambient temperature. The propulsion line mechanical joints are leak checked in final assembly by pressurizing the leak check port to either 6 or 50 PSIG through a flow meter. The LH<small><sub>2</sub></small> &amp; LO<small><sub>2</sub></small> tank and propulsion lines are pressurized to 6 PSIG with GN<small><sub>2</sub></small> and the leakage rate of ìbî nuts and K seals are checked using the leak test solution bubble test (no bubbles in three minutes).</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009301main_0812-1.jpg"  HEIGHT="248"  BORDER="0" /><A HREF="/llis_lib/txt/1009776main_0812-1.txt"  >[D]</A><br />
+      Figure 1. Raco<small><sup>&reg;</sup></small>/Creavey<small><sup>TM</sup></small> Seal Configuration (not to Scale) 
+
+      <p><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009302main_0812-2.jpg"  HEIGHT="278"  BORDER="0" /><A HREF="/llis_lib/txt/1009777main_0812-2.txt"  >[D]</A><br />
+      Figure 2. Naflex Pressure Assisted Seal (Not to Scale)</p>
+    </center>
+
+    <p>The LO<small><sub>2</sub></small> and LH<small><sub>2</sub></small> tanks remain pressurized to 6 PSIG during storage and could stay pressurized for several years. The tank pressure is monitored and if it decays too rapidly action will be taken to find the leak. During the entire ET program, no repairs have been required for flight hardware.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The rigorous leak check and nondestructive testing on the External Tank program have contributed to more than fifty successful flights of the Space Shuttle. Leak testing methods performed on the ET including bubble solution, water soluble adhesive on aluminum tape, flow meter testing and pressure decay testing. These techniques have proven to be effective in maintaining 100 percent mission success.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>MMC-ET-SE 25-0: "System Definition Handbook, Space Shuttle External," Volume I &amp; II, National Aeronautics and Space Administration, Martin Marietta, August 1987.</li>
+
+      <li>Bray, Don E. and Don McBride: "Nondestructive Testing Techniques," John Wiley &amp; Sons, Inc., 1992.</li>
+
+      <li>Metals Handbook, Volume 17: "Nondestructive Inspection and Quality Control," ASM International, Metals Park, OH, 1989.</li>
+
+      <li>"Introduction to Helium Mass Spectrometer Leak detection," Varian Associates, Inc., Palo Alto, CA 94303, 1980.</li>
+
+      <li>McMaster, Robert C.: "Nondestructive Testing Handbook, Leak Testing," Volume 1, American Society for Nondestructive Testing, Inc., 1985.</li>
+
+      <li>Hammock, W. R. Jr., P.E. Cota, Jr., B.J. Rosenbaum, and M. J. Barrett: "Investigative Techniques Used to Locate the Liquid Hydrogen Leakage on the Space Shuttle Main Propulsion System," NASA, Johnson Space Center, AIAA SAE/ASME 27th Joint Propulsion Conference, Sacramento, CA, June 24-26, 1991.</li>
+
+      <li>Szemenyei, B., R. Delcher, M. Randall, E. Schmidlin, and S. Barkhoudarian: "Ground-Based and In-flight Leak Detection for Rocket Engines," X91-10319 Rockwell International/Rocketdyne Division, Canoga Park, CA.</li>
+
+      <li>Barile, Ronald G.: "Hazardous Gas Leak Analysis in the Space Shuttle," N92-19308, 1991 NASA/ASEE Summer Faculty Fellowship Program, Kennedy Space Center, University of Central Florida, August 22, 1991.</li>
+
+      <li>Barile, Ronald and William Helms: H2 Leak Detection Technical Interchange Meeting at KSC, Proceedings, April 29, 1992.</li>
+
+      <li>S-69-117: "Leakage Testing Handbook," JPL/GE NTIS N-69-38843, July 1969.</li>
+
+      <li>Reliability Preferred Practice PD-ED-1208, Static Cryogenic Seals for Launch Vehicles.</li>
+
+      <li>Reliability Preferred Practice PD-ED-1205, Weld Practices for 2219 Aluminum and Inconel 718.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Nonpractice could result in an unacceptable leakages of the cryogenic fuels from the LO<small><sub>2</sub></small> and LH<small><sub>2</sub></small> tanks and the propulsion system lines. Excessive leakage could ignite in the presence of an ignition source and could result in catastrophic loss of vehicle and crew. Excessive leakage could cause launch delays and result in excessive program cost.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Leak testing is a nondestructive test method that provides the capability to detect and measure the amount of liquid or gas escaping from a sealed pressure system and to locate the individual leaks for possible repair.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn I, IB II, IV, IVB, V, and Space Shuttle External Tank (ET).</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

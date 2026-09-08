@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2041: MRO Spaceflight Computer Side Swap Anomalies [Export Version]</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2041: MRO Spaceflight Computer Side Swap Anomalies [Export Version]</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2041 (Database ID: 2041)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-12-15</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Computers,  Flight Equipment,  Flight Operations,  Ground Equipment,  Hardware,  Payloads,  Software,  Spacecraft,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2041" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Mars Reconnaissance Orbiter (MRO) was launched in August 2005 with a mission to study the Martian climate, identify water-related landforms and aqueous deposits, characterize potential landing sites for Mars landers, and provide UHF relay for science data produced by these future missions. The MRO spacecraft is furnished with two redundant onboard computers (i.e., two Command &amp; Data Handling Subsystems, or C&amp;DHs), referred to as Side A and Side B, that share continuously updated state and sensor data. One computer remains active, while the second serves as a quotcold backupquot that can boot in tens of seconds.<br> <br> In March 2007, 4 months after beginning the science phase of its mission, telemetry alerted the operations team at the NASA/Caltech Jet Propulsion Laboratory to two successive timeouts of the spacecraft's heartbeat watchdog timer (Reference (1)). The first timeout prompted onboard fault protection (FP) software to order a warm reset of Side A. The second timeout triggered an autonomous switch or quotside swapquot to the Side B computer. After the booting of Side B, FP autonomously configured the vehicle into safe mode. This prompted an intensive investigation that failed to determine the root cause and rule out a permanent failure of Side A.<br> <br> Eleven months later, MRO performed another unrequested warm reset followed by an unrequested side swap-- this time back to Side A of the C&amp;DH (Reference (2)). Since Side A was now functioning properly, it was clear to JPL investigators that the fault on Side A which caused the first swap was cleared by the power cycling of Side A, allowing them to rule out a permanent hardware failure. This prompted JPL to re-open the investigation. In the course of this, they revisited information on a defect (quotPPCI Erratum 24quot) in the Power Peripheral Component Interconnect (PPCI) bridge Application-Specific Integrated Circuit (ASIC) in the RAD750 Spaceflight Computer (SFC) that was first reported in 2006 by the RAD750 vendor (Reference (2)). Under very specific conditions, this ASIC defect can cause the memory controller (Figure 1) to halt operations, resulting nominally in a warm reset of the computer that clears the condition.</p> 
+<p><b>Figure 1.</b> Block diagram of the RAD750 SFC with the memory controller highlighted<br> <img align="Bottom" alt="Figure 1, the block diagram of the RAD750 SFC, has three blocks. The center block is labeled" border="0" height="255" src="https://llis.nasa.gov/llis_lib/images/1021915main_2008-12_Side_Swap_Fig1.jpg" title="Figure 1, the block diagram of the RAD750 SFC, has three blocks. The center block is labeled" width="234"></p> 
+<p>This reported defect had not raised much JPL concern in 2006 because of the event's rarity and the belief that it would result merely in a warm reboot of the computer. However, the MRO project did not fully understand the low level details of RAD750 operation and its interaction with the MRO system design configuration. Specifically, ...<br> The remainder of this paragraph describes the failure mechanism experienced by the MRO project specific to its design implementation of the RAD750 Spaceflight Computer. The text has been redacted for International Traffic in Arms Regulations (ITAR) compliance. quotU.S. Personsquot may obtain a copy of the complete lesson learned by contacting the JPL Office of the Chief Engineer (David Oberhettinger at davido@nasa.gov).<br> <br> Unintended C&amp;DH side swaps and spacecraft placement into safe mode may interrupt telemetry downlink and, under some circumstances, threaten the mission. In October 2008, the MRO project implemented a vendor-recommended workaround, involving commanding a change to a parameter and a setting within the PPCI bridge ASIC, that should prevent further MRO side swap incidents.<br> <br> <u>References</u>:</p> 
+<ol> 
+ <li>quotMRO Side Swap to Side B,quot JPL Incident Surprise Anomaly (ISA) No. Z90507, March 14, 2007.</li> 
+ <li>PPCI Bridge ASIC Master Errata List, BAE Document # A13917 Revision (-) Version 1.3, Errata List for PPCI ASIC P/N 244A907 (Bridge Chip).</li> 
+ <li>quotExcess Latency in SPS Safe Mode Predicts Delivery,quot JPL Incident Surprise Anomaly (ISA) No. Z90508, March 14, 2007.</li> 
+ <li>quotFinal Report on the Mars Reconnaissance Orbiter C&amp;DH Side Swap #1 and #2 Anomalies,quot JPL Document No. D-37650 (MRO Report No. MRO-36-747), October 16, 2008.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+The quotErratum 24quot defect in the PPCI bridge ASIC represents a subtle failure mechanism for spacecraft employing a RAD750 SFC architecture that can be overcome by an operational workaround, but is best prevented through flight system design measures.
+</section>
+<section><h2>Recommendation(s)</h2>
+The full text of these recommendations have also been redacted for ITAR compliance. quotU.S. Personsquot may obtain a copy of the complete lesson learned by contacting the JPL Office of the Chief Engineer (David Oberhettinger at davido@nasa.gov). For all missions employing a RAD750 SFC architecture: 
+<ol> 
+ <li>The U.S. version of this recommendation calls for analyzing the proposed C&DH design to assure that it is not vulnerable to the Erratum 24 defect. (The Erratum 24 defect is a known issue, but the subtleties may not be apparent from the vendor-published data.)</li> 
+ <li>The U.S. version of this recommendation refers to the need for robust error checking.</li> 
+ <li>The U.S. version of this recommendation suggests robust design measures for data salvage.</li> 
+ <li>The U.S. version of this recommendation advocates a quotclear-everythingquot capability for power on resets (PORs).</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 9.4.2 (quotFlight System Flight Operations Design: Prime/Redundant Hardware Usage - Swapping to Redundant Hardwarequot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

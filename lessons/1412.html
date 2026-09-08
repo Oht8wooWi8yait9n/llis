@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1412: Plasma Arcs from Pyro Firing May Cause Prolonged NSI Shorts (2003)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1412: Plasma Arcs from Pyro Firing May Cause Prolonged NSI Shorts (2003)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1412 (Database ID: 1412)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-12-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1412" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During integration and test of Mars Exploration Rover (MER-A), the 6-amp, Single Point Ground (SPG) fuse-located on the Rover Electronics Module (REM) chassis was found to be blown. The JPL MER SPG Fuse was part of a system design that provided a grounded power bus (through the fuse) while safely allowing for the fault condition of a high-side power bus short-to-chassis by blowing the fuse and operating in a quotdegradedquot mode (floating bus). (Since the NSI power source return was connected through the fuse to chassis, plasma short currents went through it.) The blown fuse was in turn attributed to the firing of six pyros four weeks earlier to permit removal and rework of a circuit board. Electrical overstress analysis and tests cleared MER-A to fly with the embedded blown fuse, but the failure investigation revealed a previously unrecognized “plasma effect” failure mechanism for NASA Standard Initiators (NSIs).</p> 
+<p><img alt="refer to [D] description" border="0" height="331" src="https://llis.nasa.gov/llis_lib/images/1009445main_1412-1.jpg" title="refer to [D] description" width="360"><a href="https://llis.nasa.gov/llis_lib/txt/1009916main_1412-1.txt">[D]</a><br> Figure 1 - NASA Standard Initiator (NSI)</p> 
+<p><img alt="refer to [D] description" border="0" height="402" src="https://llis.nasa.gov/llis_lib/images/1009446main_1412-2.jpg" title="refer to [D] description" width="326"><a href="https://llis.nasa.gov/llis_lib/txt/1009917main_1412-2.txt">[D]</a><br> Figure 2 - Cutaway View of NSI</p> 
+<p><img alt="refer to [D] description" border="0" height="321" src="https://llis.nasa.gov/llis_lib/images/1009447main_1412-3.jpg" title="refer to [D] description" width="500"><a href="https://llis.nasa.gov/llis_lib/txt/1009918main_1412-3.txt">[D]</a><br> Figure 3 - Diagram of Plasma-Induced Discharge and Preferential Deposition of Molten Residual</p> 
+<p>By design, NASA pyro devices such as cable cutters, pin pullers, and separation nuts incorporate two NSIs. NSI firing always generates some conductive plasma, and MER firing circuits were designed to withstand a pin-to-pin or pin-to-case plasma arc lasting around 5-6 milliseconds after the NSI bridgewire opened. However, designers were unaware that a prolonged NSI pin-to-case short could result due to deposition of molten NSI residual. Thus, the number and magnitude of plasma shorts/ hard shorts on MER were much higher than expected. Pin-to-case metal deposition occurs after the plasma arc is extinguished, due to zirconium fragments forming a conductive path across the ceramic charge cup. The MER investigation revealed that the path resistance will increase after NSI cool-down, but the resistance will remain too low to safely limit current until the firing relay opens (32 milliseconds) or until the SPG fuse blows. The results may damage circuit components because the firing circuit current is significantly higher during the short, and the circuit elements are not sized to withstand this higher current for a full 32 milliseconds. Later bench tests showed that, depending on circuit parameters, ground fault currents of as much as 15-20 amps for 32 milliseconds were possible.</p> 
+<p>This incident led to a JPL-wide search for all NSIs fired during ground test on flight hardware. They were examined to verify that their resistance, as measured from the “high side” to the case, post-fire, exceeded 100 kilohm, indicating little shorting effects.</p> 
+<p>These shorting effects do not affect whether the NSI will fire properly since they occur after the firing. Once the NSI fires (within the first millisecond), its job is done and what happens to the remaining circuit components afterwards is moot. The real problem is firing NSIs during test. That is when circuit components may be damaged to the point where the circuit will fail to fire the next time (the actual operation). And, the reason that components may have been damaged on MER was that the pyro power bus was grounded through the fuse to chassis, allowing the short current to flow for up to 32 milliseconds. The SPG fuse blowing actually saved the circuit components by limiting the time of the impressed current on them.</p> 
+<p>References:</p> 
+<ol> 
+ <li>JPL Problem/Failure Report No. Z80623, May 12, 2003.</li> 
+ <li>Linda Facto &amp; Joe Savino, MER Pyro Circuits Lessons Learned, Internal JPL Presentation, August 6, 2003.</li> 
+ <li>NASA Lessons Learned No. 0348, “Magellan AACS RAM Upset During SRM Pyrotechnic Initiation,” October 25, 1994.</li> 
+ <li>NASA Lessons Learned No. 0448, “Fusing Element Failure resulting from Test Integration, Test, Pyrotechnic Devices, PYRO, Electrical Explosive Devices, EED, Command Circuit, Drive Circuit,” September 12, 1996</li> 
+</ol> Additional Key Words: test-induced failure, sneak circuit, smart NSI, pin-puller, cable cutter
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Plasma arcs from NSI firing can cause a permanent internal pin-to-case short circuit as low as ~ 0 ohms due to deposition of NSI fragments. This failure mechanism can produce current levels that may damage flight hardware, and the likelihood of its occurring appears to be increased by:</p> 
+<ul> 
+ <li>Firing the NSI into a mechanical actuation device with a small “free” volume.</li> 
+ <li>High bus voltage system level firing circuit (32.8 V on MER).</li> 
+ <li>Firing multiple NSI's within one device. (Conductive gas can flow from one NSI to another within same device.)</li> 
+ <li>Long firing pulse duration (e.g., 32 ms on MER).</li> 
+</ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Parts Selection and Reliability Analysis</p> 
+<ol> 
+ <li>Assume that a NSI short (as low as 0 ohms) will occur from the NSI high-side-pin to case-chassis for the entire duration that the “fire” relay is closed. Treat this as an expected transient; not a rare fault condition. Size pyro circuit elements (resistors, relays, PWB traces) to accommodate the calculated current during the NSI short.</li> 
+ <li>Include NSI short conditions when performing the Parts Stress Analysis and interface failure modes, effects, and criticality analysis (FMECA). Include in the worst case short current calculations (MER had resistive circuit limits of about 10-15 amps) the temperature, age, and pulse duration effects on battery impedance. Also include the temperature and life effects on (1) wire impedances and (2) stress limits on series resistors.</li> 
+ <li>Retain all NSIs and pyro devices that are fired during test on flight hardware in bonded stores until the end of flight operations, and maintain a detailed installation traceability log for each device used.</li> 
+ <li>Read and record post-fire resistance for each NSI tested on a flight system, high side pin-to-case and low side pin-to-case. Generate a failure report for each NSI with low (out of family), post fire resistance. (For example, <100 kilohms).</li> 
+ <li>If a Single Point Ground (SPG) fuse is used, (1) test the SPG fuse immediately prior to installation onto a spacecraft, after each removal, and after each reinstallation, (2) assure that the SPG fuse is accessible, and include explicit checks on SPG fuse state in each system test, and (3) exercise each pyro circuit after it is fired during ground NSI firing to verify parts functionality.</li> 
+</ol> Power/Pyro Design 
+<ol start="6"> 
+ <li>Do not extend the fire relay pulse time beyond that required with adequate margin to open the NSI bridgewire.</li> 
+ <li>Minimize the activation voltage and/or current used in the firing circuit to reduce the potential for NSI arcing or electroplating.</li> 
+ <li>When using a chassis-grounded firing source, consider a constant current source for the firing circuits.</li> 
+ <li>Because pyro initiated plasma effects can propagate into other systems and components, it is important to understand, design and test for such effects in a configuration as similar to flight as possible. Be mindful of where the short circuit current will physically flow.</li> 
+ <li>Select and size the firing circuit components to survive at least 4 firings at maximum possible voltage with a NSI 'high side' short to case condition.</li> 
+ <li>Locate a current limit resistor in the 'high side' line.</li> 
+ <li>Design the activation current, considering all circuit elements, to be 5-7 amperes for each NSI.</li> 
+</ol> System Grounding 
+<ol start="13"> 
+ <li>Before deviating from the JPL “soft ground” design principle (or any other design principle), assess the system impact and risk.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 7.5.6 (quotSafety and Mission Assurance Practices: Electronic Parts Reliability, Application, and Acquisitionquot), in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008. 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 4.3.1.1 (quotPower/Pyrotechnics Design: General - Power System Grounding/Fault Tolerancequot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006. 
+<br />
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

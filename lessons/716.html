@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0716: Spacecraft Deployed Appendage Test Guidelines</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0716: Spacecraft Deployed Appendage Test Guidelines</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0716 (Database ID: 716)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/716" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GT-TE-2403 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Adherence to this Guideline gives confidence that mechanisms will operate successfully during flight. The design phase analytical methods and results are verified. Testing determines margins to show by how much the design requirements are exceeded and pinpoints potential problem areas. Experience gained from failures and anomalies during testing help prevent recurrence in future programs.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>In order to realize the benefits of a deployable appendages test program, the following steps should be taken:</p>
+
+    <ol>
+      <li>Use the design requirements for the hardware to be tested to generate a list of tests that will verify that each requirement will be met. This list should include how many times each test must be conducted, and the pass/fail criteria for each test.</li>
+
+      <li>From this list, determine which tests can be combined to save time and costs.</li>
+
+      <li>Select the critical design parameters for which test values and margins are to be measured.</li>
+
+      <li>Decide what facilities and equipment will be needed for the tests. Design, analyze, fabricate, and check out any new items needed.</li>
+
+      <li>Determine what personnel will be required for each test.</li>
+
+      <li>Put together an overall schedule of tests, paying particular attention to the logistics of personnel, facilities, and material needed for each test.</li>
+
+      <li>Use the results of the previous steps to write a comprehensive test plan.</li>
+
+      <li>Follow the plan to set up and conduct the tests, then perform data reduction and analysis.</li>
+
+      <li>Write up the results of the tests in one or more test reports.</li>
+
+      <li>Correct deficiencies revealed in testing and re-test to verify the modified configuration.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Considerations:</u></p>
+
+    <p>To realize all the benefits, the test program should include:</p>
+
+    <ol>
+      <li>Thorough testing to qualify the design and correlate the design analysis. Acceptance criteria must be established prior to the start of testing.<br />
+      <br />
+      </li>
+
+      <li>Testing at greater extremes (temperatures, vacuum, loads) than expected during flight to determine margins.<br />
+      <br />
+      </li>
+
+      <li>Testing of flight-like hardware to prove designs.<br />
+      <br />
+      </li>
+
+      <li>Testing of actual flight hardware to prove workmanship and determine values of specific design parameters.<br />
+      <br />
+      </li>
+
+      <li>
+        Comprehensive part and component testing, to lessen the risk of failure at subsystem and system program phases, when such failures are very costly. Parts and components include:
+
+        <ul>
+          <li>Bearings</li>
+
+          <li>Springs</li>
+
+          <li>Dampers</li>
+
+          <li>Motors, gear trains</li>
+
+          <li>Switches, position indicators</li>
+        </ul>
+        <br />
+        <br />
+      </li>
+
+      <li>
+        Testing of subsystems (such as drive assemblies, hinge assemblies, gimbals, etc.) should include the following general tests:
+
+        <ul>
+          <li>Mass properties</li>
+
+          <li>Component interfaces</li>
+
+          <li>System interface</li>
+
+          <li>Subsystem performance verification (including margins)</li>
+
+          <li>Subsystem strength verification</li>
+
+          <li>Subsystem life, including lubricant/lubricant systems</li>
+
+          <li>Thermal vacuum</li>
+
+          <li>EMI/EMC</li>
+
+          <li>Magnetic</li>
+
+          <li>Vibration/acoustics</li>
+        </ul>
+        <br />
+        <br />
+      </li>
+
+      <li>
+        Specific subsystem tests should include (where applicable):
+
+        <ul>
+          <li>Restraint/release assembly tests</li>
+
+          <li>Hinge assembly tests</li>
+
+          <li>Drive assembly tests (solar array-antenna)</li>
+
+          <li>Gimbal assembly tests</li>
+        </ul>
+        <br />
+        <br />
+      </li>
+
+      <li>
+        System tests of complete deployable appendages should include:
+
+        <ul>
+          <li>System tests should match flight configuration as closely as possible.</li>
+
+          <li>Where practical, full deployment testing in simulated zero-G environment, including release, deployment, and lock-in.</li>
+
+          <li>Deployment in thermal-vacuum is preferable, but generally impractical.</li>
+
+          <li>Vibro/acoustic testing of the system in launch configuration should precede full deployment testing.</li>
+
+          <li>
+            Parameters to measure (where applicable) should include:
+
+            <ul>
+              <li>Deployment time, release to lock-in</li>
+
+              <li>Motor current</li>
+
+              <li>Stiffness stowed and deployed</li>
+
+              <li>Alignment</li>
+
+              <li>Envelope of motion during deployment</li>
+
+              <li>Electrical integrity of cables across hinges and gimbals</li>
+
+              <li>Release shock</li>
+
+              <li>Velocity at end of travel</li>
+
+              <li>Torque margins</li>
+
+              <li>System life, if applicable</li>
+            </ul>
+          </li>
+        </ul>
+        <br />
+        <br />
+      </li>
+
+      <li>In-depth investigation of all anomalies.<br />
+      <br />
+      </li>
+
+      <li>
+        Test facilities include:
+
+        <ul>
+          <li>
+            Design and Analysis - deployment testing of large appendages usually requires special, tailor-made facilities to simulate actual flight conditions as closely as possible, and to perform special engineering tests. Such hardware includes:
+
+            <ul>
+              <li>G-negation devices</li>
+
+              <li>Inertial load simulators</li>
+
+              <li>Thermal control devices capable of producing temperature levels and gradients</li>
+
+              <li>Fixtures for environmental tests</li>
+
+              <li>Fixtures for conducting stiffness measurements, modal tests, etc.</li>
+            </ul>
+            <br />
+            <br />
+          </li>
+
+          <li>
+            Facility Design Parameters
+
+            <ul>
+              <li>Simulation of mechanical and electrical launch configuration interfaces</li>
+
+              <li>Space available for full deployment</li>
+
+              <li>Type , number, size, and location of g-negation supports</li>
+
+              <li>Weight, size, cost, manufacturability of fixtures</li>
+
+              <li>Transportability of fixtures, if required</li>
+            </ul>
+          </li>
+
+          <li>
+            Analysis Parameters
+
+            <ul>
+              <li>Load carrying capacity of fixtures</li>
+
+              <li>Effect of fixtures on measured data</li>
+
+              <li>Pre-test predictions and establishment of pass/fail criteria</li>
+            </ul>
+          </li>
+
+          <li>Pre-test</li>
+
+          <li>Environmental test fixtures must be calibrated and safety tested in actual facility prior to use</li>
+        </ul>
+      </li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Testing of deployable appendages for spacecraft differs somewhat from the testing of other space hardware. It involves special considerations for dealing with large, cumbersome devices that usually require some degree of manual handing after each operation. Since ground testing is done in a 1-g environment, a complex facility is usually required for simulating the zero-g space condition (g-negation device).</p>
+
+    <p>This guideline covers the complete test program for spacecraft deployable appendages, including the general tests that also pertain to other space hardware, and the tests specifically pertinent to deployable appendages.</p>
+
+    <p><u>References:</u></p>
+
+    <ol>
+      <li>GSFC Engineering Directorate paper, "Spacecraft Deployable Appendages," May 1992.</li>
+
+      <li>Reliability Preferred Practice No. PD-EC-1101, Environmental Factors</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Without a comprehensive test program, the following types of failure would not be caught and corrected prior to flight:</p>
+
+    <ul>
+      <li>No lock-in, or poor lock-in</li>
+
+      <li>No release</li>
+
+      <li>Deployment stops prematurely</li>
+
+      <li>Electrical cable degradation</li>
+
+      <li>Incorrect final positioning</li>
+
+      <li>Deployment rate too high, resulting in high impact loads, thus possibly causing failures in other systems</li>
+
+      <li>Fluid leak (causes contamination)</li>
+
+      <li>Improper wiring</li>
+    </ul>
+    <br />
+    <br />
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Perform thorough testing of all flight deployable appendages, including the design, analysis, fabrication and checkout of the test facility and related hardware; the planning and conducting of the actual tests; the post-test data reduction and analysis; and the re-testing after correction of anomalies.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

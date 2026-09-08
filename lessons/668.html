@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0668: Pre-Ship Review</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0668: Pre-Ship Review</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0668 (Database ID: 668)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/668" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1215.5; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefits:</u></p>
+
+    <p>Pre-ship review ensures the completeness and readiness of each item of hardware and, if applicable, any associated software or firmware, prior to release for shipment to another facility. By imposing this requirement, any discrepancies or unresolved problems may be identified and corrected while the item remains under supplier purview. This review is beneficial because it provides an independent assessment of product readiness by knowledgeable people not directly involved in the fabrication and test activity.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The purpose of pre-ship review (PSR) is to determine whether the required work on a planned deliverable is complete and acceptable and, where applicable, whether the flight qualification criteria have been attained. This includes checking that all required analyses and tests were performed and that the data package contains all the required documentation. Action is taken to assess the actual performance of the item against the performance requirements. Differences between the designed versus the built hardware are identified, and any additional risks associated with the differences are assessed. Any liens, concerns, unresolved problems, and open issues with the hardware or software are cataloged, and plans to resolve such open issues and complete any unfinished work are assessed.</p>
+
+    <p>PSR requirements may apply to system contractors, subcontractors, and NASA centers; they are held prior to shipment to an integration or installation facility, a NASA center, the sponsor, or the launch site. System contractor requirements are written to specify PSR and to pass the requirement down to subcontractors.</p>
+
+    <p>The PSR is performed by a review board and is a customer-controlled review. The review board assesses the status of the deliverable item, recommends whether or not to ship it, makes an independent judgement of the risks, and identifies any concerns which would affect mission success. A representative of the receiving organization is usually present at the review. The planning and documentation process for pre-ship and other technical reviews is described in Reliability Preferred Practice No. PD-ED- 1215.4, Common Review Methods for Engineering Products. The review agenda specific to PSRs typically includes the items listed in Table 1.</p>
+
+    <center>
+      <table width="90%" border="1" bgcolor="#cccccc">
+        <tr>
+          <td>
+            <center>
+              <b>Table 1 - Pre-Ship Review Agenda</b>
+            </center>
+            <br />
+            
+
+            <ol>
+              <li>Prepare Final Compliance Matrix. Explain any incomplete requirements.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Review completeness of all drawing specifications, including incorporation of all engineering change requests (ECRs). Explain any drawings or specifications that are not complete.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Determine the status of required analyses-- their completion or plans to complete, and identify any open issues. Discuss and classify any residual risks.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Determine the completion status of hardware assembly and verify that the hardware reflects the final completed drawings. Explain each discrepancy in the as-built hardware.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Determine the status of required tests-- their completion or plans to complete, and identify any open issues. Discuss and classify any residual risks.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Specify the status of required documentation, including plans to provide any documents that are not complete and in the data package.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Provide plans to resolve any assurance liens.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Identify any ECRs that have not been implemented in the as-built product..</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Identify any problem/failure reports (or equivalent, customer-approved, supplier report formats) on the subject hardware (including electrical and mechanical ground support equipment) or software, as well as on other equipment which could affect it. Provide the plans for resolution.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Assess any "red flag" problem/failure reports (PFRs)-- problems, residual risks, and actions taken to manage the risk of an in-flight occurrence.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Catalog any waivers of product requirements, including the risk assessment associated with each.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Evaluate the readiness of hardware to be integrated with other hardware or the spacecraft.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Assess the readiness to ship hardware, including the adequacy of shipping containers, shipping methods, shipping environment control, and monitoring.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Identify special instructions for item handling, testing, and training.</li>
+
+              <li style="list-style: none"><br />
+              <br />
+              </li>
+
+              <li>Review plans for supplier participation after shipment.</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>A sample compliance matrix indicating the open item status of a sample subsystem is provided as Table 2.</p>
+
+    <center>
+      <b>Table 2 - Galileo Orbiter Attitude &amp; Articulation Control System (AACS) Compliance Matrix</b><br />
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009039main_0668.jpg"  HEIGHT="371"  BORDER="0" /><A HREF="/llis_lib/txt/1009525main_0668.txt"  >[D]</A><br />
+      <font size="-1">* Details on work remaining were explained in the PSR package; Source: Reference 3 (Vol. 2, p XVI-E3)
+    </center>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Pre-ship review provides a last opportunity for the supplier and the customer to review completion of development work before the product leaves the facility. Correction of liens after this milestone usually has a major schedule impact. The planned increase in supplier participation in NASA programs will likely cause an increase in hardware built at supplier sites. Effective pre-ship controls will help ensure the success of NASA outsourcing plans.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Hardware Review/Certification Requirement, Reliability Preferred Practice No. PD-ED-1215.2</li>
+
+      <li>Common Review Methods for Engineering Products, Reliability Preferred Practice No. PD-ED-1215.4.</li>
+    </ol>
+
+    <p>References:</p>
+
+    <ol>
+      <li>"JPL Standard for Reviews," Jet Propulsion Laboratory document JPL-D-10401, May 5, 1995.</li>
+
+      <li>"Cassini Project: Spacecraft System Review Program," Jet Propulsion Laboratory document JPL-D-9926, December 1992.</li>
+
+      <li>"Orbiter Preship Review, (Book 2)" Galileo Project, Jet Propulsion Laboratory document JPL-D-6358, May 10, 1989.</li>
+
+      <li>"Launch Vehicle Review Milestones," NASA ELV OI-12, April 1994.</li>
+
+      <li>"Requirements and Procedures for Flight Project Forward Review within the Space Experiments Division," NASA SED OI-6700- 1, December 1989.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Evaluate the completeness and readiness of each item of hardware and, if applicable, any associated software or firmware, prior to release for shipment to another facility by performing a pre-ship review.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    Prior to shipment of hardware or software, conduct a pre-ship review at the completion of the fabrication or build and testing of the item to be shipped. This review is scheduled as part of the overall technical review program as defined in a project review plan. Pre-ship review is held at the supplier or NASA facility where the item was made and tested.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Viking, Voyager, Magellan, Galileo, Atlas Centaur, Titan Centaur, and various instrument and space experiment projects.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0780: Pyrotechnic Shock Testing</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0780: Pyrotechnic Shock Testing</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0780 (Database ID: 780)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/780" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1408A, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Early assembly-level pyroshock testing can often reduce the impacts of design and manufacturing/assembly deficiencies upon program cost and schedule prior to system-level test. Such testing can provide a test margin over flight pyroshock conditions which cannot be achieved in system testing. Conversely, system-level shock testing can be used to verify system performance under pyroshock exposure, thus providing increased confidence in mission success and verifying the adequacy of the assembly-level tests.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Pyroshock testing of assemblies may be achieved by using one of the following types of sources:</p>
+
+    <ul>
+      <li>An explosive device [Ref. 1,2],</li>
+
+      <li>Impact of one structural member (e.g., a hammer) upon another (e.g., a beam, plate, shell, or combinations thereof) [Ref. 2-5], or</li>
+
+      <li>A vibration exciter or shaker programmed to generate short duration transient motion [Ref. 2,3,6,7].</li>
+    </ul>
+
+    <p>JPL has historically used a shaker, or a beam or plate excited by an explosive device or by hammer-type impact. The test magnitude should include a margin over maximum predicted flight conditions, which at JPL is commonly selected to be equal to 1.5 times the maximum expected flight environment over a frequency range anticipated to encompass the critical resonant frequencies of the test article. This test condition is monitored by accelerometers located at the facility/test article interface. Usually three shocks are specified for qualification testing, or one shock for protoflight, in each of three orthogonal directions. In most cases, the test article is electrically powered and operational, even when no power is to be applied to the hardware during the flight event.</p>
+
+    <p>For system-level acceptance testing, the actual pyrotechnic or explosive device(s) are commonly used, with multiple firings (three at JPL) of the devices that generate the dominant shock environment(s) applied to account for firing-to-firing variations. Power-on testing is normally utilized, with the operational mode applicable to the flight pyro event monitored.</p>
+
+    <p>Pyroshock tests nearly always utilize instrumentation for the purpose of environmental evaluation or test control. Pyroshock measurements are normally made with accelerometers despite some potentially serious deficiencies. Often in the near-field (within 6 in. or 15 cm) and sometimes in the mid-field (within 2 ft or 60 cm) of the source, improperly selected accelerometers may break, hard-bottom, or saturate under pyroshock loading, or incorrectly-set signal conditioners may saturate if accelerometer resonances are sufficiently excited [Ref. 8-10]. Such nonlinear responses will usually make the resulting data invalid over the entire spectrum.</p>
+
+    <p>Once valid signals are acquired, routine data analysis is performed to provide the desired acceleration time histories and shock response spectrum (SRS) [Ref. 11]. The SRS is utilized with natural frequencies usually selected to correspond to either 1/3 or 1/6 octave band center frequencies and a constant quality factor selected as Q=10. Assembly-level test control is usually specified to match the desired SRS, with additional limits placed on total shock duration. With impacting and explosive shock simulation, this SRS matching is usually performed iteratively with a dynamically similar model. With shaker shock simulation, the SRS matching is performed automatically at low levels, checked at intermediate levels, and then applied at full level.</p>
+
+    <p>Pyrotechnic shock or pyroshock is the transient motion of structural elements, assemblies, subsystems, or systems due to explosive loading induced by the detonation of ordnance devices incorporated into or attached to the structure. Pyroshock is often characterized by its high peak acceleration (300 g- to 300 kg), high frequency content (100 Hz to 1 MHZ) and short duration (10 µsec to 20 msec), which is largely dependent on the source type and strength, structural type and configuration, and especially the distance from the source to the response point of interest. For aerospace applications, explosive devices are generally used to separate structural subsystems (e.g., payloads from launch vehicles), deploy appendages (e.g., solar panels), or activate on-board operational subsystems (e.g., propellant valves) [Ref. 1,2]. In certain cases, the explosive loading may be accompanied by the release of stored energy due to structural preload. Current spacecraft design often
+    utilizes numerous explosive devices over the course of a mission.</p>
+
+    <p>JPL has historically utilized most of the available pyrotechnic or explosive devices, which can be divided into two general categories: point sources and line sources. Point sources include explosive bolts, separation nuts, pin pullers and pushers, bolt and cable cutters, and certain combinations of point sources and operational hardware (e.g., pyrovalves). Line sources include flexible linear shaped charges (FLSCs), mild detonating fuses (MDFs), primer cords, and certain commercially-available products intended to capture explosive and structural debris after separation (e.g., Super-Zip<small><sup>TM</sup></small>). Point and line sources have also been combined: V-band (Marmon) clamps use point explosive sources which may then allow the rapid release of stored strain energy from a structural preload acting along a line of contact between the two structures being separated.</p>
+
+    <p>Because of the high frequency content, many small elements resistant to random vibration are susceptible to pyroshock induced failure. Numerous flight equipment failures have been attributed to pyroshock exposure, some resulting in catastrophic mission loss [Ref. 12-13]. Particular examples of pyroshock induced failures include cracks and fracture in crystals, ceramics, epoxies, glass envelopes, solder joints and wire leads, seal failure, migration of contaminating particles, relay and switch chatter and transfer, and deformation of very small lightweight structural elements. On the other hand, deformation or failure of major structural elements is rare except in those regions close to the source where structural failure is intended.</p>
+
+    <p>If feasible, assembly-level pyroshock testing should be performed with the test article powered and operational, even when no power is to be applied to the hardware during the flight event, to improve the detection of intermittent failures which might not otherwise be detected until much later in the test program or in flight. Certain hardware can be expected to malfunction during pyroshock exposure but will resume operation within tolerance after the event.</p>
+
+    <p>Analytical methods and computational procedures have historically been inapplicable to pyroshock prediction. Thus, pyroshock is considered to be an experimental art [Ref. 4,5,7].</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Kalbfleisch, K.C., "Review of Pyro-Shock Generating Devices and Source Levels", IES Pyrotechnic Shock Tutorial Program, 31st ATM, Institute of Environmental Sciences, Apr.-May 1985.</li>
+
+      <li>Powers, D.R., "Pyro Shock Test Simulation Methods", IES Pyrotechnic Shock Tutorial Program, 31st ATM, Institute of Environmental Sciences, April-May 1985.</li>
+
+      <li>Powers, D.R., "Summary of Testing Techniques", Shock and Vibration Bulletin, No. 56, Pt. 3, pp 135-142, August 1986.</li>
+
+      <li>Davie, N.T., and Bateman, V.I., "Pyroshock Testing", Shock and Vibration Handbook (C.M. Harris, Ed.), 4th ed., Ch. 26, Pt II, McGraw-Hill, NY, 1996</li>
+
+      <li>Bateman, V.I., and Davie, N.T., "Recommended Practice for Pyroschock", Proceedings of the 41st ATM, Institute of Environmental Sciences, pp 208-216, April-May 1995.</li>
+
+      <li>Luhrs, H.N., "Equipment Sensitivity to Pyrotechnic Shock", Proceedings of the 22nd ATM, Institute of Environmental Sciences, pp 3-4, April 1976.</li>
+
+      <li>Zimmerman, R.M., "Pyroshock Bibliography", Proc. 39th ATM, Institute of Environmental Sciences, Vol.2, pp 471-479, May 1993.</li>
+
+      <li>Himelblau, H., Piersol, A.G., Wise, J.H., and Grundvig, M.R., "Handbook for Dynamic Data Acquisition and Analysis", IES-RP-DTE012.1, App. A, Institute of Environmental Sciences, Mt. Prospect, IL, March 1994.</li>
+
+      <li>Piersol, A.G., "Recommendations for the Acquisition and Analysis of Pryoshock Data", Sound and Vibration, Vol. 26, No.4, pp 18-21, April 1992</li>
+
+      <li>Piersol, A.G., "Pyroshock Recommendations in Proposed MIL-HDBK on Guidelines for Dynamic Data Acquisition and Analysis", Journal of the Institute of Environmental Sciences, Vol. XXXV, No. 5, pp21-26, Sept-Oct. 1992.</li>
+
+      <li>Ref. 8, Sec. 5.</li>
+
+      <li>Moening, C.J., "Pryotechnic Shock Flight Failures", IES Pryotechnic Shock Tutorial Program, 31st ATM, Institute of Environmental Sciences, April-May 1985.</li>
+
+      <li>Moening, C.J., "Views of the World of Pyrotechnic Shock", Shock and Vibration Bulletin, No. 56, Pt. 3, pp 3-28, August 1986.</li>
+
+      <li>"Powered-On Vibration," Reliability Preferred Practice No. PT-TE-1405.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Nonpractice poses a higher risk of flight failure, particularly for small components near the explosive source.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Subject potentially sensitive flight assemblies that contain electronic equipment or mechanical devices, as well as entire flight systems, to pyrotechnic shock (pyroshock) as part of a development, acceptance, protoflight, or qualification test program. Perform visual inspection and functional verification testing before and after each pyroshock exposure. Where feasible, perform assembly-level and system-level pyroshock tests with the test article powered and operational to better detect intermittent failures.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Mariner series, Viking, Voyager, Galileo and Magellan spacecraft.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

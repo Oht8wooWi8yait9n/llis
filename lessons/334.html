@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0334: Liquid Propulsion Systems; POGO, Instrumentation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0334: Liquid Propulsion Systems; POGO, Instrumentation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0334 (Database ID: 334)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1993-07-28</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/334" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The S-II stage of saturn had a very intriguing and baffling series of POGO or forced oscillation response culminating in the near disastrous AS-508 flight. The oscillation occurred early in the S-II stage burn and reached large acceleration amplitudes (thrust frame cross beam) of 33 g'S at 16 HZ, and the resulting large pressure oscillations shut the engine down at 160 seconds of S-II burn. POGO was not apparent for the S-II stage (probably because of poor instrumentation) until AS-503. AS-503 had a self-limiting, local POGO-type oscillation near the 480 second flight time. Concern was raised in the POGO working group over this oscillation and potential vehicle problems. After much discussion and analysis, it was generally agreed that the next vehicle could be made POGO safe by increasing the ullage pressure, which would raise the lox line frequency and decrease the gain and thus the instability. AS-504 did not follow predictions; in fact, it did the opposite. Again, the
+    oscillation was self-limiting. A more detailed look at the pump and engine test data revealed that the increase in ullage pressure would bring into play nonlinearities, which would increase the gain and thus the instability. It was becoming clear that many things were missing; more data must be acquired which required improved flight vehicle instrumentation. The ability to model the bulkhead hydroelastic characteristics was very poor and limited to the first mode. Elimination of this shortcoming required updated analysis and a comprehensive hydrostatic test program for data and verification. Additional line and engine tests were required to better define these characteristics, particularly since no analytical approach was available. In order to maintain launch schedules, it was decided to shut down the S-II center engine 60 seconds early and avoid the POGO problem. This appeared to be the answer, since no real performance loss was incurred. AS-505 and AS-506 appeared to confirm
+    this since no POGO was observed; however, the improved instrumentation was not on these flights but was planned for AS-507. The improved instrumentation detected several "football" bursts of oscillation during the flight of AS-507 indicating the POGO loop was marginally stable whereas nonlinear analysis was showing stable limit cycles. Further analysis on AS-508 indicated marginal to unstable conditions. The as-508 flight experienced severe POGO: oscillations started at 16 Hz producing an amplitude of 32 g'S or greater. The poor prediction was due to inadequate nonlinear characterization of the system. After the fact, modal analyses were conducted using three flights and test-determined nonlinearities, nonlinear pump gain, nonlinear damping, and pump inlet compliance. Using these nonlinearities, a reasonable analytical duplication of S-II POGO on all flights could be obtained without adjustments other than known vehicle flight-to-flight differences. The ability to accurately
+    predict POGO enabled design fixes to be implemented.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Small changes create large effects when a system is operating near a stability boundary and has a large energy source to feed the instability.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Design high energy, large load potential problems, such as "POGO" out of the system. Stability limits must be understood to a certain g-level which is tighter than the design uncertainties related to the instability phenomenon. To understand the phenomena, analyses must be performed considering nonlinearities and adequate instrumentation must be available on ground tests and on flight tests.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>POGO effects were eliminated or reduced to acceptable levels on future flights.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0833: Neutral Buoyancy Simulation of On-Orbit Maintenance</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0833: Neutral Buoyancy Simulation of On-Orbit Maintenance</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0833 (Database ID: 833)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/833" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-1 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Neutral buoyancy simulation can provide valuable information for designing-in accessibility, modularity, simplicity, and standardization. It can also provide cost-effective, specific design information on the effectiveness of crew stability aids, crew maneuvering aids, specialized tools, and operational timelines. Maintainability criteria that can be established by utilizing this process include: component accessibility; fasteners accessibility, systems installation; and the configuration and operation of crew stability aids and tools.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The neutral buoyancy facility at MSFC has been used since 1968 to effectively simulate the weightlessness of space, and has assisted in the establishment of maintainability design criteria, particularly in extravehicular activity (EVA). Use of full-scale neutral buoyancy simulations has also allowed for direct human participation in test operations, as well as for access to the large body mock-up hardware developed for EVA simulations. These methods are a very effective way of simulating on-orbit environments for the purpose of verifying and solidifying operations and maintenance procedures.</p>
+
+    <p>Other neutral buoyancy facilities used for NASA hardware development and test and crew training are the Weightless Environment Test Facility (WETF) at Johnson Space Center, the Neutral Buoyancy Research Facility at the University of Maryland, College Park, Maryland and the neutral buoyancy facility at McDonnell Douglas, Huntington Beach, California.</p>
+
+    <p>Neutral Buoyancy Characteristics</p>
+
+    <p>The MSFC neutral buoyancy facility has the following overall characteristics:</p>
+
+    <ul>
+      <li>Six-console control room.</li>
+
+      <li>Three-person, double-lock hyperbaric chamber.</li>
+
+      <li>Floating crane for underwater movement of hardware (one 2000-pound hoist, one 500- pound hoist).</li>
+
+      <li>Removable roof section to accommodate large hardware.</li>
+
+      <li>T.V. monitors, communications with test subjects, audio/video taping capability, pressure and depth displays of test subjects, and lightning warning systems.</li>
+
+      <li>Support of up to four Shuttle space suited crew members.</li>
+
+      <li>Umbilical-supplied underwater primary life support systems.</li>
+
+      <li>Operational Remote Manipulator Systems (RMS).</li>
+
+      <li>Air-lock for emergency test subject evacuation.</li>
+    </ul>
+
+    <p>The neutral buoyancy tank within the facility is a 1.3 million-gallon water tank that measures 40 ft. deep and 75 ft. in diameter. The water temperature is maintained at a range of 88 to 92 degrees Fahrenheit and a pH of 7.50. Cathodic protection systems are used to inhibit corrosion. The tank accommodates up to four pressure-suited test subjects simultaneously. Extravehicular Mobility Units are available for four test subjects. The tank can accommodate test durations of up to 6 hours.</p>
+
+    <p>HST Simulations</p>
+
+    <p>Underwater simulations in the neutral buoyancy facility strongly influenced the maintainability design criteria for the Hubble Space Telescope (HST) and its components; particularly with regard to visibility, accessibility, and simplicity. One of the primary considerations in maintainability of space hardware is the accessibility of components and systems by crew members during EVA. To be maintained in space, the components of a hardware item must be seen and reached by a pressure-suited astronaut or be within range of the appropriate tools.</p>
+
+    <p>Altogether, some 70 Orbital Replacement Units (ORUs) on the HST can be replaced on-orbit. Some of the largest ORUs are batteries, computers, reaction wheel assemblies, science instruments, fine guidance sensors, and wide field planetary cameras. One of the telephone-booth-sized science experiments weighs over 700 pounds. These items are mounted in equipment bays around the perimeter of the spacecraft. The bays open with large doors so components can be readily inspected and handled. Using neutral buoyancy simulations, design features of these components were validated, verified, and refined to ensure that the ORU features of modularity, accessibility, and simplicity were inherent in the design. Other features included a series of crew stability aids; including handrails, portable handles, tether attachments, and foot restraints. Neutral buoyancy simulation studies also determined the placement of foot restraints on both the HST and the RMS arm for maximum accessibility. These
+    design features give the crew mobility and stability during unstowing, transporting, and stowing ORUs.</p>
+
+    <p>Door latch design criteria were also addressed in neutral buoyancy simulations involving the HST. All internally stowed ORUs except the Radial Science Instrument are concealed by doors that must be opened and closed by a crew member before ORUs are installed or removed.</p>
+
+    <p>Simulations and Design Influence</p>
+
+    <p>A design criterion that has become increasingly important in on-orbit maintenance and which has been studied using neutral buoyancy simulation is standardization of the EVA interface to ORUs. The practice of standardization became a key issue in HST development with the decision to mount ORUs with 7/16-inch double height hex head bolts in three types of fittings: J-hooks, captive fasteners, and keyhole fasteners. Neutral buoyancy simulations have proven that the use of standardized bolt heads, clearances, and torque limits reduces the complexity of ORU maintenance in space. To achieve electrical connector standardization, neutral buoyancy simulation studies have evaluated such criteria as connector geometry (wing-tab presence, length, and diameter) and surface texture (knurls, ridges, and irregular shapes). Response variables studied included ease of alignment, firmness of grip, and level of torque required to lock the connectors. Studies of this type led to the development of
+    a standard for blind-mate, scoop-proof, low-and force, and subminiature connectors. If accepted as a standard, these connectors would be used in the Upper Atmosphere Research Satellite, Explorer Platform, International Space Station, and in robotic manipulators.</p>
+
+    <p>Human factors studies have been a significant part of neutral buoyancy simulation tests with large space structures. For example, experiments have been conducted to determine the effect of fatigue on productivity during lengthy EVA structural assembly operations. An experienced test subject assembled a 36 element tetrahedral truss structure repeatedly for 4 hours, while the subject's heart rate and general conditions were monitored. These neutral buoyancy simulations demonstrated EVA productivity to be significantly higher in space than in comparable conditions simulated in ground tests. Assembly time for structural assembly tasks was approximately 20 percent less in actual flight. The Experimental Assembly of Structures in EVA (EASE) project, an experiment flown on Space Shuttle mission STS 61-B, revealed that a flexible structure can be assembled in underwater conditions with a learning curve of 78 percent. It was determined that learning rate is independent of the strength,
+    coordination, or size of the test subject; or the fit of the pressure suit.</p>
+
+    <p>Structural configurations have been used at the MSFC neutral buoyancy simulator to obtain human factors data. In one experiment, six-element tetrahedrons were used to obtain data on learning and on the relative value of a variety of assembly aids. The structural elements in these tetrahedrons were 11-foot-long tubes of PVC plastic, 4 inches in diameter. Sleeve-locking connectors were used to join the beams at the nodes of the structure, or "joint cluster." Much more complex structures were used to collect information on fatigue, and on crew members' ability to deal with complicated configurations and hardware. A single 36-element tetrahedral truss served as a baseline structure for comparing single-person assembly with two-person assembly, for quantifying productivity changes due to the use of various assembly aids, and for evaluating other structural configurations.</p>
+
+    <p>Results of structural assembly experiments have shown that test subject learning rate is much higher in the weightless conditions of neutral buoyancy than in conditions on dry land. The most time-consuming task during assembly operations is aligning the beams. This large time consumption is due to the kinematics of water drag. Fatigue is not a significant factor in the assembly process if the subjects pace themselves. None the less, the following considerations must be taken when running a simulation to avoid problems:</p>
+
+    <ul>
+      <li>Assign two safety divers per test subject to manage the umbilical and monitor the test subjects performance.</li>
+
+      <li>When possible, conduct paper computer simulations, and one-g dry run simulations prior to neutral buoyancy simulations.</li>
+    </ul>
+
+    <p>Principal Limitations</p>
+
+    <p>The principal limitations of neutral buoyancy simulations include: (1) the need to design hardware to accommodate the effects of water corrosion, (2) varying water pressure with depth, and (3) frictional resistance of the water to body and equipment movement.</p>
+
+    <p>The impact of not taking full advantage of the neutral buoyancy simulation capabilities at MSFC and other locations could mean entering a space mission without full knowledge of the effects of weightlessness on mission tasks, particularly in EVA's. Maximum emphasis should be placed on conducting simulations with the highest fidelity possible to ensure mission success. Failure to do so results in a greater probability of incurring safety hazards, anomalies, increased maintenance resources (man-hours), and hardware damage.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Akin, David L. and Howard, Russell D.: Neutral Buoyancy Simulation for Space Telerobotics Operations, In SPIE, Cooperative Intelligence Robotics in Space, Vol. II, pp. 414-420, 1991.</li>
+
+      <li>Akin, David L. and Bowden, Mary L.: "EVA Capabilities for the Assembly of Large Space Structures," IAF-82-393, Massachusetts Institute of Technology, October 1, 1982.</li>
+
+      <li>Akin, David L.: A Design Methodology for Neutral Buoyancy Simulation of Space Operations, 88-4628-CP, Massachusetts Institute of Technology, September 1988.</li>
+
+      <li>Barnby, Mary E. and Griffin, Thomas J.: Neutral Buoyancy Methodology for Studying Satellite Servicing EVA Crewmember Interfaces, Proceedings of the Human Factors Society 33rd Annual Meeting, pp. 149-153, 1989.</li>
+
+      <li>Designing an Observatory for Maintenance in Orbit: The Hubble Space Telescope Experience, NASA/MSFC, April 1987.</li>
+
+      <li>EIA Standard for Connector, Electrical, Rectangular, Blind-Mate, Scoop-Proof, Low-Force, Subminiature, AN/SI/EIA S-XXX-1991 (draft), American National Standards Institute, Inc., November 18, 1991.</li>
+
+      <li>Griffin, B.N.: Zero-G Simulation Verifies EVA Servicing of Space Station Modules, AIAA-86-2312, AIAA, Space Station in the Twenty-First Century, Reno, Nevada, September 3-5, 1986.</li>
+
+      <li>Neutral Buoyancy Simulator Test and Checkout Procedures for NBS Test Operations, NBS-TCP-90, NASA/MSFC, April 17, 1992.</li>
+
+      <li>Sanders, Fred G.: Space Telescope Neutral Buoyancy Simulations - The First Two Years, NASA-TM-82485, NASA/MSFC, June 1982.</li>
+
+      <li>The Design and Development of the Hubble Space Telescope Neutral Buoyancy Trainer, Final Report for Contract NAS8-35318, Essex Corporation, December 31, 1990.</li>
+
+      <li>Lessons Learned Document from Neutral Buoyancy Simulation Testing Activities, MDC H34111, McDonnell Douglas Astronautics Company, Huntington Beach, CA, October 1987.</li>
+
+      <li>Sexton, J.D.: Report for Neutral Buoyancy Simulations of Transfer Orbit Stage Contingency Extravehicular Activities, NASA-TM-103583, NASA/MSFC, June 1992.</li>
+
+      <li>Sexton, J.D.: Test Report for Neutral Buoyancy Simulations of Hubble Space Telescope Maintenance and Refurbishment Operations: Simulations of HST Maintenance and Refurbishment Mission and New Block II ORU Access Study, NASA/MSFC, May 1989.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Equipment and crew interface testing in a simulated weightless environment at an early development stage in NASA programs is an accurate means of assessing hardware and tool design features and determining crew capabilities and requirements. While other forms of weightlessness simulations (e.g., parabolic flight, motion base, and computer models) have proven effective in specific applications, underwater simulations have proven particularly beneficial in hardware development, crew/hardware interface design, and operations planning, since they can accommodate a large worksite volume and extended test times.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Simulate on-orbit space maintenance activities by using a neutral buoyancy facility to assist in making design decisions that will ensure optimum on-orbit maintainability of space hardware.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Skylab, Hubble Space Telescope, Space Shuttle Orbiter, International Space Station, Apollo.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

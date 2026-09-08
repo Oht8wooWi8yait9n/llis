@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0810: Thermal Cycling</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0810: Thermal Cycling</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0810 (Database ID: 810)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/810" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1402, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>Demonstrates readiness of the hardware to operate in the intended cyclic environment. Precipitates defects from design or manufacturing processes that could result in flight failures.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>As part of ATP, run at least eight thermal cycles over the temperature range experienced by the hardware during storage, shipping, launch, flight, and reentry. The maximum and minimum temperatures anticipated should be exceeded by 10 degrees C. The last three thermal cycles should be failure-free.</p> 
+<p>Equipment must stabilize at these limits before cycling to the opposing limit. Equipment generally should be operated within the anticipated thermal range rather than at the thermal limits.</p> 
+<p>Thermal cycling should be conducted in a vacuum if the test item is designed to operate in a vacuum.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>Thermal cycle modeling has shown that the general form of the thermal cycling test math model is given by Equation (1).</p> 
+<img alt="refer to [D] description" border="0" height="58" src="https://llis.nasa.gov/llis_lib/images/1009293main_0810-1.jpg" title="refer to [D] description" width="461"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009768main_0810-1.txt">[D]</a>: 
+<p>Where:</p> 
+<ul> 
+ <li>TE = Test Effectiveness</li> 
+ <li>F = Fraction of total failures that can be recipitated by a thermal cycle</li> 
+ <li>P<small><sub>d</sub></small> = Probability of detection</li> 
+ <li>l<small><sub>O</sub></small> = Failure rate at T<small><sub>O</sub></small></li> 
+ <li>N = Number of thermal cycles</li> 
+ <li>K = A constant</li> 
+ <li>DT = T - T<small><sub>O</sub></small></li> 
+ <li>T = Operating temperature for l</li> 
+ <li>T<small><sub>O</sub></small> = Operating temperature for l<small><sub>O</sub></small></li> 
+</ul> 
+<p>Fig. 1 shows that the failures available are the sum of three parts:</p> 
+<ol> 
+ <li>Failures detected by thermal cycle tests</li> 
+ <li>Undetected failures</li> 
+ <li>Failures not precipitated</li> 
+</ol> 
+<img alt="refer to [D] description" border="0" height="287" src="https://llis.nasa.gov/llis_lib/images/1009295main_0810-3.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009770main_0810-3.txt">[D]</a> 
+<br> Figure 1: General Form of TC Test Model 
+<p>For single temperature range of 50<small><sup>o</sup></small>C, the test effectiveness equation reduces to Equation (2).</p> 
+<img alt="refer to [D] description" border="0" height="61" src="https://llis.nasa.gov/llis_lib/images/1009294main_0810-2.jpg" title="refer to [D] description" width="457"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009769main_0810-2.txt">[D]</a> 
+<p>Figure 2 shows a plot of Equation (2) based on a probability of detection, P<small><sub>d</sub></small>, of 0.9. The equation is based on values of l<small><sub>O</sub></small> and K that were found by solving two simultaneous equations.</p> 
+<img alt="refer to [D] description" border="0" height="312" src="https://llis.nasa.gov/llis_lib/images/1009296main_0810-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009771main_0810-4.txt">[D]</a> 
+<br> Figure 2. Test Effectiveness Plot for lT = 50 
+<small><sup>o</sup></small>C 
+<p>Printed circuit boards (PCBs) are especially prone to solder joint cracking. The design is required to minimize the mechanical forces, as generated by thermal mismatch of materials or vibration, in the solder joints.</p> 
+<p>References:</p> 
+<ol> 
+ <li>GDCD BNZ 69-007, Curssell, G. M., <q>Atlas and Centaur Component Acceptance Test Plan,</q> 1984.</li> 
+ <li>NASA TMX-53731, Van Orden, R. E., <q>Mounting of Components to Printed Wiring Boards,</q> 1968.</li> 
+ <li>Laube, R. B., <q>Space Vehicle Thermal Cycling Test Parameters,</q> Proceeding of the Institute of Environmental Sciences, 1983.</li> 
+ <li>Nelson, C. E., <q>System Level Reliability Thermal Cycling,</q> Proceeding of the Institute of Environment Sciences, 1983.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Design and manufacturing defects that could have been detected during ground testing manifest themselves during flight.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>As a minimum, run eight thermal cycles over the approximate temperature range for hardware that cycles in flight over ranges greater than 20<small><sup>o</sup></small>C. The last three thermal cycles should be failure free.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on ATLAS, CENTAUR, Space Electronic Rocket Tests (SERTs) 1 and 2, Communication Technology Satellite (CTS), GOES, COBE, NOAA, LANDSAT, Solar Maximum Mission.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

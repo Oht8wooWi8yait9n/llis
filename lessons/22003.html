@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #22003: Thermal Strap Joint Relaxation and Material Creep</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #22003: Thermal Strap Joint Relaxation and Material Creep</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #22003 (Database ID: 22003)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-07-28</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Manufacturing and Assembly,  Computer-Aided Design / Manufacturing / Engineering,  Cryogenic Systems,  Hardware,  Spacecraft,  Spacecraft and Spacecraft Instruments,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/22003" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin: 0in 0in 8pt;">The James Webb Space Telescope (JWST) Integrated Science Instrument Module (ISIM) thermal control system includes aluminum foil thermal straps for controlling heat flow to and from temperature-critical instruments in order to meet science instrument thermal performance requirements. A stackup of aluminum 1100, indium spacer and high purity aluminum foil in compression, as well as threaded inserts in aluminum 1100 in tension, was used in many of the thermal strap joints to improve thermal conduction through the bolted interfaces of the strap assemblies. Figure 1 shows the material stackup of a typical joint. After the second ISIM cryogenic vacuum test, an inspection of the thermal strap joints was requested from the ISIM thermal team. During the inspection, loosened bolts were found in the thermal strap joints attached to the ISIM structure.<sup>1,2</sup> Figure 2 shows an example of one of the thermal strap joint configurations on ISIM. A re-design of the thermal strap joints, including re-sizing of the threaded inserts and an updated torque application of the bolted joints<sup>3</sup>,<sup> </sup>was necessary to ensure mechanical integrity and maintain thermal performance.</p> 
+<p style="margin: 0in 0in 8pt;"><img alt="ISIM Thermal Strap Joint Material Stackup (Flight-like)" src="/lessons/22003/figure_1.jpg"></p> 
+<p style="margin: 0in 0in 8pt;"><img alt="" src="/lessons/22003/figure_2.jpg"></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin: 0in 0in 8pt;">Due to the material stackup in a typical ISIM thermal strap joint, the bolted joints relaxed over time during ground processing. Indium flows, and aluminum 1100 and high purity aluminum foils all distort under a compressive load. Threaded inserts in aluminum 1100 under a tensile load exhibit material creep at room temperature. This was observed to be one of the largest drivers in joint relaxation due to higher stresses in the parent material around the threaded insert, worsening the material creep.<sup>4</sup> Although re-torquing helped to mitigate indium flow-out, re-torquing in excess exacerbated the material creep and distortion. This material behavior degraded mechanical stability of the joint as it lost preload over time. Accounting for bolted joint preload loss over time, by characterizing material creep at room temperature and indium spacer flow-out, as well as prescribing minimum and maximum torques and a re-torque schedule to maintain acceptable joint preload at cryogenic temperatures<sup>4,5</sup>, was critical in ensuring mechanical integrity and thermal performance during on-ground and mission lifecycles.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p style="margin: 0in 0in 8pt;">Thermal strap designs tend to use pure materials that are excellent at conducting heat but not necessarily at maintaining structural integrity. Limitations in these materials and designs need to be considered:</p> 
+<ul> 
+ <li style="margin: 0in 0in 8pt;">1100 series aluminum, a popular material for thermal joints, mechanically <b><i>creeps over time at room temperature</i></b> in both tension and compression</li> 
+ <li style="margin: 0in 0in 8pt;">Soft materials with threaded holes, such as 1100 series aluminum, are not strong enough for the design of proper mechanical joints (where a bolt should fail prior to the parent, threaded material) even with thread enhancements such as helicoils when using standard flight fasteners</li> 
+ <li style="margin: 0in 0in 8pt;">Threaded holes/inserts in aluminum 1100 should be avoided if at all possible (a through hole with a bolt and nut or nut plate is a better option)</li> 
+ <li style="margin: 0in 0in 8pt;">When soft materials are used, every effort should be made to distribute the pressure area of bolted joint to as large an area as possible</li> 
+ <li style="margin: 0in 0in 8pt;">Designs shall take into account changes in preload over the lifetime of the joint, including pre-launch dwell time at room temperature as well as the typical operational environments.</li> 
+</ul> 
+<p style="margin: 0in 0in 8pt;"> </p> 
+<p style="margin: 0in 0in 8pt;"><b>Documents Related to Lesson</b></p> 
+<ol> 
+ <li> <p style="margin-top: 0in; margin-bottom: 10pt;">JWST-RVW-027022 ISIM Heat Strap Recovery Review</p> </li> 
+ <li> <p style="margin-top: 0in; margin-bottom: 10pt;">JWST-RVW-027203 ISIM Heat Strap Recovery Review – Closeout</p> </li> 
+ <li> <p style="margin-top: 0in; margin-bottom: 10pt;">JWST-PRES-027009 ISIM Heat Strap Component Redesign</p> </li> 
+ <li> <p style="margin-top: 0in; margin-bottom: 10pt;">JWST-RPT-031205 ISIM Heat Strap Joint Relaxation Test and Analysis Report</p> </li> 
+ <li> <p style="margin-top: 0in; margin-bottom: 10pt;">JWST-PROC-026766 JWST ISIM Heat Strap Connection Pre-Load and Creep Test Procedure</p> </li> 
+</ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

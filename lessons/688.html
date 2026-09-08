@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0688: Management of Limited Failure Analysis Resources for Electrical, Electronic and Electromechanical (EEE) Parts</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0688: Management of Limited Failure Analysis Resources for Electrical, Electronic and Electromechanical (EEE) Parts</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0688 (Database ID: 688)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/688" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2213 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Analysis of EEE parts failures during manufacture and usage in flight hardware has proven a useful tool in identifying part infant mortality, assembly processing and manufacturing defects, subtle assembly design overstress, and end of part life. However, the need to conserve essential program resources, combined with continued diminishing program funds, requires that a strategy for managing part failure analysis be established. Such a strategy can ensure that important failure analysis is still performed while making optimum use of available resources. This will provide maximum cost benefit to a program in which budgets are tight.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>EEE parts failure analysis is essential in design and development of on-orbit space systems. A complete understanding of when and how these components fail can increase the reliability and chances for mission success of a system and is essential in the design process. Often times limited resources are available for such analysis, and management of those resources is the key. EEE part failure analysis is essential if the hardware is in the developmental stage, as defined by the following criteria:</p>
+
+    <ol>
+      <li>The parts are leading edge technology or based on new technology</li>
+
+      <li>The part emulates a specific function</li>
+
+      <li>The part has no reliability data available</li>
+
+      <li>The system design is evolving or being enhanced prior to hardware manufacturing</li>
+
+      <li>The parts are currently being manufactured or purchased</li>
+
+      <li>The assembly hardware is currently being manufactured</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Failure to identify latent defects, infant mortality, manufacturing process deficiencies, and subtle design overstress conditions may result in additional cost to a program. If these deficiencies are caught in the beginning at the board, system, or field level, the cost of redesign to correct the defects can increase by a factor of ten or more, depending on the amount of rework, retest, and recall of the fleet hardware considered necessary.</p>
+
+    <p>If the hardware is mature, as defined by the following criteria, a decision whether to perform failure analysis or to trend for generic failure causes should be determined. The following criteria should be utilized:</p>
+
+    <ol>
+      <li>The parts are from a proven technology and reliability data exists;</li>
+
+      <li>The system design is certified;</li>
+
+      <li>The hardware has successfully flown more than one mission;</li>
+
+      <li>The parts have been demonstrated to be reliable and mature;</li>
+
+      <li>Similar parts are not being installed into assembly hardware;</li>
+
+      <li>ESD handling, testing and checkout procedures are well established and adequate;</li>
+
+      <li>The parts are known to have adequate tolerance for Total Ionizing Radiation Dose and Single Event Effects for the mission.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>Space quality military parts used in the Space Shuttle Orbiter Program have a minimum expected life of ten years. If the part has failed with less than ten years field service life, failure analysis is recommended. If the part has had successful field service over ten years, trending of the part failure should be considered.</p>
+
+    <p>The trending process itself must ensure that:</p>
+
+    <ol>
+      <li>sufficient investigation is performed to isolate the hardware failure,</li>
+
+      <li>the process can detect an increasing failure rate, end of part life issues,</li>
+
+      <li>tolerance shift does not give an undesirable system operational effect,</li>
+
+      <li>the part is retained to support future trend investigations.</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>If the flight hardware is mature, and the part is over twenty years old, a decision should be made whether the part should be submitted to the trend process or scrapped. This determination should be based on whether the part is obsolete and unavailable (or available in only limited quantities), whether sufficient information is available to make a failure analysis possible, or if failure analysis will provide valuable results for the program. A process flow of the decision process is provided in figure 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009058main_0688.jpg"  HEIGHT="382"  BORDER="0" /><A HREF="/llis_lib/txt/1009543main_0688.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>There is also a simple, cost effective way of performing failure analysis which requires delidding a part and examining it under a microscope to look for visible signs of ESD damage or overcurrent conditions. This may be sufficient if the box failed immediately after handling. If delidding does not reveal any of these symptoms, then one may use a Scanning Electron Microscope for more detailed examination of a device or component. If a device fails parametrically rather than functionally then analysis on the integrated tester may give clues about the failure modes. Each of these procedures adds a different value to the program. The investigator can request the appropriate level of analysis.</p>
+
+    <p>Finally, a "reality check" of the decision to failure analyze, failure trend or scrap the part should be made using the following criteria:</p>
+
+    <ol>
+      <li>Has the box failed immediately after handling? (It may be due to ESD damage to a device).</li>
+
+      <li>Can random failures be tolerated?</li>
+
+      <li>Have all sources of usage history, i.e. program, NASA Institutional, and Government - Industry Data Exchange Program been examined for related information to determine if a failure trend is indicated?</li>
+
+      <li>Have other similar equipment impacts been evaluated and coordinated?</li>
+
+      <li>Has the part provided "reasonable, expected service"?</li>
+
+      <li>Have all sources of processing errors, subtle overstress, and mishandling been considered?</li>
+
+      <li>Is the equipment providing reasonable support to program goals?</li>
+
+      <li>Will the equipment continue to support program goals in the foreseeable future?</li>
+    </ol>
+    <br />
+    <br />
+
+    <p>This criteria allows the designer or end item user to determine the most feasible and cost effective approach for their hardware and program. Sometimes a reality check can provide a simple means of identifying and resolving technical problems.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>This guideline provides a strategy for assessing part failure analysis as used in the Orbiter Program. This strategy has the benefit of a program that has redundant hardware/function, meets the fail operational-fail safe requirement, and can tolerate random failures and system maintenance while supporting its program goal.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to utilize these suggestions can cost a program resources when unnecessary or futile failure analysis occurs. When analyzing a part, board or system, care should be taken on the available data as well as other factors, and if all factors are not carefully considered, much time, effort and money could be wasted. Also, inability to perform failure analysis could cost a program dearly in failed hardware, loss of mission or even loss of life. Clearly understanding the failure tendencies of a part is critical to mission and program success.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Implement a strategy for Electrical, Electronic, and Electromechanical (EEE) Parts failure analysis in which the analysis resources employed are optimized. Provide all engineers involved with the tools and data necessary to complete failure analysis, knowing that resources may be limited.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0733: Pre-Flight Problem/Failure Reporting Procedures</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0733: Pre-Flight Problem/Failure Reporting Procedures</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0733 (Database ID: 733)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/733" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1250; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>This practice significantly enhances the probability of mission success by ensuring that problems/failures occurring during ground test are properly identified, documented, assessed, tracked and corrected in a controlled and approved manner. Another benefit of the PFR procedure is to provide data on problem/failure trends. Trend data may then be analyzed so that errors are not repeated on future hardware and software.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>A formal procedure (Reference 1) establishes the GSFC system for the identification and documentation of Problem/Failure Reports (PFRs), the data collection and monitoring of PFRs, the risk assessment and rating of problems/failures, and the Project and Center management approvals of corrective actions. For hardware, the procedure begins with the first application of power (or first test usage for mechanical items) at the lowest level of assembly of qualification or flight configuration hardware. For software, the procedure begins with the first test use of the software item with a hardware item of the mission system at the component level or higher.</p>
+
+    <p><u>Identification and Documentation of PFRs:</u></p>
+
+    <p>Anyone with knowledge of a problem or failure may initiate a PFR. PFRs are generated for any departure from a design, performance, testing, or handling requirement that affects the function of flight equipment, ground support equipment that interfaces with flight equipment or that could compromise mission objectives. All GSFC generated PFRs begin as problem records identified on applicable Certification Logs (Ref. 3), Problem Records (Ref. 4) and work orders. After a PFR occurrence, the Certification Log and Work Order, as applicable, are used to document, define and control any repairs, fixes, or modifications that may be performed on the hardware or software.</p>
+
+    <p>PFRs are generated and entered electronically into a PFR database, normally accessible on designated personal computers in hardware assembly and test areas. The PFR database program's on-screen instructions indicate certain required data that is to be provided, and automatically assigns a PFR number for traceability. PFRs can be prepared manually on GSFC PFR Form 4-2 (Figures 1 &amp; 2) when the PFR database is not available or the system is inoperative. The PFR data on this form is entered into the database at the earliest opportunity following the problem/failure, but must be filed within 24 hours.</p>
+
+    <p>All PFRs, including both hardcopy and electronic formats, are forwarded to the Project Office for routing to designated personnel. Contractor-generated PFRs are provided to the Project Office in accordance with applicable contract requirements. PFRs generated in-house or at launch sites are provided directly to the Project Flight Assurance Manager (FAM) and the Systems Assurance Manager (SAM) or their designees, as appropriate. The Project FAM/SAM or their designees enter all the hardcopy PFRs that they receive into the GSFC PFR database.</p>
+
+    <p><u>Data Collection and Monitoring of PFRs:</u></p>
+
+    <p>The FAM/SAM provide copies of all PFRs to the members of a Failure Review Board (FRB) that is established and authorized by each project to investigate, analyze, and determine the cause of each problem/failure and the appropriate disposition of each PFR. The FRB consists of the following project personnel as a minimum:</p>
+
+    <ol type="a">
+      <li>The project FAM/SAM or designees (serves as chairman)</li>
+
+      <li>The Project Manager or designee</li>
+
+      <li>The cognizant engineer(s) responsible for the failed item(s).</li>
+    </ol>
+
+    <p>Continuation of operations or immediate initiation of troubleshooting operations after the occurrence of a problem or failure is at the discretion of the cognizant engineer and other members of the FRB as appropriate and is based on the following factors:</p>
+
+    <ol type="a">
+      <li>The number and severity of problem/failure occurrences during the operation in question;</li>
+
+      <li>The degree of confidence in ability to quickly diagnose the source or cause of the problem or failure;</li>
+
+      <li>The potential risk to hardware or software posed by continuing the operations after the problem or failure;</li>
+
+      <li>The consequences of terminating an operation in which a failure has occurred (e.g., thermal vacuum testing).</li>
+    </ol>
+
+    <p><u>Risk Assessment and Rating of Problems/Failures:</u></p>
+
+    <p>The residual risk of each PFR must be considered by the FRB before it can be considered for closure. A two-factored risk rating system is used. The first rating factor identifies the impact that the problem/failure would have on the flight hardware and/or software performance capabilities if it occurred during the mission. Redundancy is ignored in establishing this rating. The failure effect ratings are illustrated in Table 1.</p>
+
+    <center>
+      <table border="0" width="95%">
+        <tr valign="TOP">
+          <th>Table 1. PFR Failure Effect Ratings</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1" width="100%">
+              <tr valign="CENTER" align="CENTER">
+                <td><b>RATING</b></td>
+
+                <td><b>FAILURE EFFECT</b></td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">3</td>
+
+                <td>Catastrophic or major degradation to mission, system or instrument performance, reliability or safety</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">2</td>
+
+                <td>Moderate or significant degradation to mission, system or instrument performance, reliability or safety, defined as:<br />
+                a) Appreciable change in functional capability<br />
+                b) Appreciable degradation of engineering or science telemetry<br />
+                c) Causing significant operational difficulties or constraints<br />
+                d) Causing reduction in mission lifetime</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">1</td>
+
+                <td>Negligible or no impact on mission, system, or instrument performance, reliability or safety.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>The second rating factor identifies the confidence in understanding both the cause(s) of the problem/failure and the effectiveness of the resulting corrective action. The failure corrective action ratings are shown in Table 2.</p>
+
+    <center>
+      <table border="0" width="95%">
+        <tr valign="TOP">
+          <th>Table 2. PFR Failure Corrective Action Ratings</th>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="1" width="100%">
+              <tr valign="CENTER" align="CENTER">
+                <td><b>RATING</b></td>
+
+                <td><b>FAILURE CORRECTIVE ACTION</b></td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">1</td>
+
+                <td>The root cause of the problem/failure has been determined with confidence by analysis and/or test. Corrective action has been determined, implemented and verified with certainty. There exists no credible possibility of problem/failure recurrence.</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">2</td>
+
+                <td>The root cause of the problem/failure has not been determined with confidence. However, some corrective action has been determined, implemented and verified with certainty. There exists some possibility that the problem/failure may recur.</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">3</td>
+
+                <td>The root cause is considered to be known and understood with confidence. Corrective action has not been determined, implemented or verified with certainty. There exists some possibility that the problem/failure may recur.</td>
+              </tr>
+
+              <tr valign="TOP">
+                <td align="CENTER">4</td>
+
+                <td>The root cause has not been defined with certainty. Corrective action has not been determined, implemented nor verified with certainty. There exists some possibility that the problem/failure may recur.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p>Any PFR with a failure effect rating of "2" or "3", coupled with a failure corrective action rating of "3" or "4" is identified as a Red Flag PFR indicating significant residual risk associated with the problem/failure in question. GSFC Project Manager signatures are required on all red flag PFRs. No delegation of signature authority is permitted. All red flag PFRs are highlighted at GSFC Project Flight Assurance Reviews.</p>
+
+    <p><u>Project and Center Management Approval of Corrective Actions:</u></p>
+
+    <p>A PFR is considered for closure when the FRB determines that appropriate and sufficient investigation of the cause of the problem/failure has been completed and that commensurate corrective action has been completed and properly documented. The following signatures are required to formally close a PFR:</p>
+
+    <ol type="a">
+      <li>The Contractor Program/Project Manager and Contractor QC for PFRs initiated by off-site GSFC contractors</li>
+
+      <li>The GSFC FRB chairman</li>
+
+      <li>The GSFC Project Manager or his delegated FRB representative. Red Flag PFRs, defined above require the signature of the Project Manager.</li>
+    </ol>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>This practice ensures that all problem/failure occurrences including minor glitches are fully reported and dealt with as appropriate in a formal procedure with Project and GSFC management oversight and approval.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>GSFC Flight Assurance Procedure, No. FAP P-303-849, "Problem/Failure Reporting"</li>
+
+      <li>Guidelines for Standard Payload Assurance Requirements (SPAR) for GSFC Orbital Projects</li>
+
+      <li>The GSFC Certification Log, FAP P-303-820</li>
+
+      <li>Problem Record Items, GSFC, FAP P-303-845</li>
+
+      <li>NASA NHB 5300.4 (1A-1) ReliabilityProgram Requirements for Aeronautical and Space Systems Contractors (January 1987)</li>
+
+      <li>Reliability Preferred Practice PD-AP-1304, Problem/Failure Report Independent Review/Approval</li>
+
+      <li>Reliability Preferred Practice PD-AP-1305, Risk Rating of Problem/Failure Reports</li>
+
+      <li>Reliability Preferred Practice PD-ED-1232, Spacecraft Orbital AnomalyReport (SOAR) System</li>
+
+      <li>Reliability Preferred Practice PD-ED-1255, Problem Reporting and Corrective Action System</li>
+    </ol>
+    <br />
+    <br />
+
+    <center>
+      <a href="https://llis.nasa.gov/llis_lib/pdf/1009455main_0733-form1.pdf" target="new"><br />
+      <IMG  WIDTH="422"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009189main_0733-1.jpg"  HEIGHT="552"  BORDER="0" /><A HREF="/llis_lib/txt/1009668main_0733-1.txt"  >[D]</A><br />
+      Figure 1. GSFC PFR Form 4-2: Problem/Failure Report<br />
+      </a><font size="-1">(Click on Image for .pdf file)<br />
+      <a href="https://llis.nasa.gov/llis_lib/pdf/1009456main_0733-form2.pdf" target="new"><br />
+      <IMG  WIDTH="407"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009190main_0733-2.jpg"  HEIGHT="534"  BORDER="0" /><A HREF="/llis_lib/txt/1009669main_0733-2.txt"  >[D]</A><br />
+      Figure 2. GSFC PFR Form 4-2 (cont.): Instruction Sheet for Problem/Failure Report<br />
+      </a><font size="-1">(Click on image for .pdf file)
+    </center>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Without this practice with its formal reporting procedures, problems/failures, particularly minor glitches, may be overlooked or not considered serious enough to investigate or report to Project Management. This could result in recurrence of the problem/failure during the mission and result in significant degradation in performance.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>A formal procedure is followed in the reporting and documentation of problems/failures occurring during test, pre-launch operations, and launch operations for both hardware and software. A separate system, the "Spacecraft Orbital Anomaly Report (SOAR)", is used for the reporting, evaluation and correction of problems occurring on-orbit (see Reliability Preferred Practice No. PD-ED-1232).</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on all GSFC in-house flight programs in accordance with the GSFC Quality Assurance Requirements defined in Reference 2. Out-of-house contractors may use their system so long as it meets the provisions of the GSFC Quality Assurance Requirements and is approved by GSFC.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

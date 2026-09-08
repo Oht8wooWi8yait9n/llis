@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0973: Web-based Training Considerations</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0973: Web-based Training Considerations</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0973 (Database ID: 973)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-07-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/973" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>In the 1995-1996 timeframe the Office of Safety and Mission Assurance (OSMA) began development of a distance learning capability under the umbrella of the Professional Development Initiative (PDI). This distance learning capability eventually evolved from a Safety and Mission Assurance discipline system into the Site for Online Learning and Resources (SOLAR) (http://solar.msfc.nasa.gov), currently one of NASA's primary distance learning resources. The intent of the initial development effort was to design and implement a prototype system for the Safety and Mission Assurance discipline.</p>
+
+    <p>Over the five years since the initial release of SOLAR (or its predecessor) there have been approximately 2500 training instances (completion of a single module by a single person) in the Safety and Mission Assurance discipline's approximately 70 courses. Over this time period some Safety and Mission Assurance courses have as few as 20 training use instances while others have had several hundred training use instances. In other disciplines (such as Information Technology Security) where SOLAR is used for mandatory training there have been thousands of training use instances for a single course.</p>
+
+    <p>Based on this data, is it reasonable to assume that a potentially large number of training use instances is the only determining factor in the decision to develop a web-based training course? Certainly the need to provide a large number of training use instances suggests web-based training as a candidate for content delivery since per training use instance development and delivery costs are reduced each time an additional student completes a course. In contrast the development costs for instructor based training are reduced each time an additional student completes a course but the delivery costs vary depending on the number of students, their location, etc. If the course content is appropriate for delivery via web-based training, then web-based training can be an effective method for training large numbers of students.</p>
+
+    <p>If a large number of potential training use instances represents a good potential course for web-based development, does that mean that a small number of training use instances rules out web-based training as an alternative to instructor based training? The answer depends on several factors. Just considering the potential number of students alone is not sufficient to make the determination. The location of the students and the instructors must be considered. The cost to deliver training to 20 students that are collocated with the instructor is quite a bit less than the cost to deliver training to 20 students that are each in a different location, since travel, lodging and meals must be considered. (Note: Other options for providing the training such as the use of Video-teleconferencing may offset some or all of these costs and should be a factor in determining method of delivery).</p>
+
+    <p>The period over which the training is to be provided and the shelf life of the course material must also be considered. If the course was to be delivered to 5 students a year for 4 years, web-based course delivery might be more cost effective than instructor based delivery. Again location of students and instructor would affect costs. The shelf life of the course material would also be a factor. If the course required no updates over the 4-year period then the development cost is spread over all of the training use instances. If updates were required during the 4-year period then each of those represents an additional development effort; in essence the "single" course would actually look like four courses from a development standpoint. One final consideration concerns the timing of the course. If all of the training instances can be accommodated simultaneously (synchronous) then even in a dispersed student population use of technology such as Video-teleconferencing could make
+    instructor based delivery a consideration. If however the training can not be delivered simultaneously (asynchronous) web based training becomes more attractive.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>There are many factors in addition to the number of potential training instances that should be considerations in determining if web-based training is an appropriate method for training delivery. These factors include potential number of training instances; dispersion of students/instructor; delivery period; shelf life of the course materials; instructor based delivery options such as Video-teleconferencing; synchronous vs. asynchronous delivery requirements; portability among training delivery systems.</p>
+
+    <p>Note: As distance learning technology evolves other factors may need to be considered when determining the training delivery method. Advances in training technology now allow for the easy separation of development of course content and course templates (the operational look and feel of course delivery). For example, the Shared Content Object Reference Model (SCORM) has been recently developed as a standard means for packaging course content. Course content developed in accordance with this standard can be plugged into compliant training delivery systems. SCORM compliant course materials are also packaged in segments that can be used by multiple training courses. The goal being to encourage technologies that enable dynamic learning where content is custom-assembled and delivered to learners according to their own personal pace and need. This enables sharing of course content among different courses or training systems. In comparison the current SOLAR technology relies on static
+    webpages specifically developed for a course/module. (The course content is not independent from the delivery system). Any reuse would require replicating the webpages and assembling them within a new course/module. Reusability of course segments or use in other training systems as in SCORM would allow development costs to be potentially spread over an even larger number of training use instances.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Carefully consider all factors when determining the method of training delivery.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

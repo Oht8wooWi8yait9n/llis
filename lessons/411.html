@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0411: Inability to Perform Inflight Checkout of Viking Lander RF Power Amplifier in High-Power Mode (~1975)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0411: Inability to Perform Inflight Checkout of Viking Lander RF Power Amplifier in High-Power Mode (~1975)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0411 (Database ID: 411)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1996-06-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/411" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>(Relevant Historical Lesson(s) Learned)</p>
+
+    <p>The Viking Lander relay link transmitter has selectable power output levels of 1, 10, and 30 watts. Inflight checkout of the Lander system was to include operation at each of the power levels. Prior to launch, Orbiter and Lander telecom analysts identified the planned checkout as a problem. With the Lander attached to the Orbiter during interplanetary flight, the separation between the Lander relay transmitting antenna and the Orbiter relay receiving antenna was small enough that the Orbiter relay receiver was subject to overload and possible zenering of input transistors at 30 watts.</p>
+
+    <p>Prelaunch antenna tests were limited by available modeling capability (use of 1:5 scale; half of the bioshield) and VO-1/VL-1 mated tests were accomplished under non-flight conditions (Orbiter relay antenna stowed, noisy environment).</p>
+
+    <p>An inflight test was devised, in which the 1-watt mode was tried and the effect on the available Orbiter relay receiver telemetry points noted. The receiver signal strength telemetry (AGC) was "saturated." An input current telemetry channel, responding to the large overloads was "calibrated" at one watt, and on the basis of this, the 10-watt level was deemed safe and was exercised. However, parameter tolerance buildup resulted in too large a risk of relay receiver damage for the 30-Watt checkout to be tried.</p>
+
+    <p>Because of the absence of testing and the criticality of the Mars-descent data, the initial mission design requirement for 30 watts during descent was re-examined. As a result of this work, the (small) risk of data loss due to atmospheric fading was accepted. Descent was at 10 watts, and subsequent relay passes from Mars' surface were at 30 watts.</p>
+
+    <p>Additional Keyword(s): Margins, Subsystem Interaction, Antenna Pattern, Communication Link, RF Measurement, Test Methods</p>
+
+    <p>Reference(s):</p>
+
+    <ol>
+      <li>Viking Project Document VFT-022, "Viking Orbiter System, Primary Mission Performance Report," June 15, 1977. (see section of Relay Radio Subsystem, pp. II-37 to II-39.)</li>
+
+      <li>Viking Flight Team memo OTAU-15240-FHJT, "Recommendation Against 30-watt Lander UHF Transmitter Checkout," Jim Taylor to R. A. Ploszaj, February 11, 1976.</li>
+
+      <li>VFT Memo FPAG-15642-EAE, "RCE 10 Watt Mode in Descent for Mission 1," E. A. Euler, 3/18/76</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>A system design must include requirements for "testability."</li>
+
+      <li>Test requirements may create "abnormal" operating modes which are easy to overlook during the design of individual elements of a system.</li>
+
+      <li>Accurate analysis of the coupling of RF energy between systems physically close to one another, over other than free-space paths, may be intractable, particularly in the presence of adjacent "structure."</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>Inflight test requirements should be considered in selection of telemetry data points.</li>
+
+      <li>On Viking, the overall "system" problem was exacerbated because the Orbiter, the Lander, and the Viking Project were each the responsibility of different organizations. (The Galileo Orbiter and its Probe are a similar composite system, in which interactive RF effects need to be carefully assessed.)</li>
+
+      <li>Early system decisions as to which tests will be necessary are needed to make correct recommendations regarding testability and test operating modes.</li>
+    </ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br>JPL has referenced the lesson as supporting Paragraph 4.1.7.2 ("Flight System Design: General - Operability - Design for In-Flight Characterization") in the JPL standard "Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles)," JPL Document D-17868, Rev. 3, December 11, 2006.<br><br>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

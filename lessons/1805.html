@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1805: Mars Global Surveyor (MGS) Spacecraft Loss of Contact</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1805: Mars Global Surveyor (MGS) Spacecraft Loss of Contact</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1805 (Database ID: 1805)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2007-09-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Pre-Phase A</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Engineering Design,  Mission Operations and Ground Support Systems,  Missions and Systems Requirements Definition,  Safety and Mission Assurance,  Systems Engineering and Analysis,  Communication Systems,  Flight Equipment,  Flight Operations,  Ground Equipment,  Ground Operations,  Hardware,  Payloads,  Software,  Spacecraft,  Power,  Software Engineering,  Spacecraft and Spacecraft Instruments,  Mission control Planning,  Mission operations systems,  Mission concepts and life-cycle planning,  Requirements critical to costing and cost credibility,  Review boards,  Configuration and data management,  Review systems and boards,  Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1805" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Contact was lost with the Mars Global Surveyor (MGS) spacecraft in November 2006-- ten years into its mission to map the surface of Mars and study the atmosphere and interior of the planet. At the beginning of a prescheduled, routine contact, the spacecraft reported alarms indicating that one solar array drive had temporarily been stuck and that the spacecraft had automatically switched to the redundant drive controller (Reference (1)). At the next scheduled contact 2 hours later, the normal spacecraft signal was not detected by the Deep Space Network (DSN), and all subsequent attempts to command the spacecraft and reestablish communication were unsuccessful.<br> <br> The mission loss was attributed to a High Gain Antenna (HGA) positioning command sent by the spacecraft operations team five months earlier that, in the process of updating several parameters, created a bad memory load (Reference (2)). The command was mistakenly written to the wrong memory address in the spacecraft's onboard computers, corrupting two independent parameters and introducing two separate faults.<br> <br> The first parameter error caused a fault in which one solar array was driven against its hard stop; system fault protection incorrectly interpreted the indication as a stuck solar array gimbal and placed MGS into Contingency Mode. In Contingency Mode, the spacecraft alternates between the Sun-Comm-Power Mode (SCPM) control state (commanding an attitude consistent with thermal control of the spacecraft bus and communications with Earth), and the less conventional Sun-Stuck-Gimbal (SSG) control state (favoring a spacecraft orientation to the sun optimized for battery charging, even at the risk of violating thermal limits).<br> <br> Because the spacecraft attitude directly exposed one of the spacecraft batteries to the sun during each SSG period (Figure 1), the temperature of the exposed battery continued to rise. The onboard power management software interpreted the battery overheating as an overcharge condition and kept reducing the charge rate. Since the remaining battery could not support the full electrical load, and the attitude during each SCPM period eclipsed one solar panel, both batteries became critically depleted.<br> <br> The second parameter error caused a fault that induced the HGA to point away from the Earth, disrupting downlink communications such that ground controllers remained unaware of the need to correct the mission-critical thermal and power situation. After 5 to 6 Mars orbits in Contingency Mode, the spacecraft batteries became completely discharged, disabling attitude control and the spacecraft subsystems.</p> 
+<p>&nbsp;</p> 
+<p style="text-align: center;"><img alt="Figure 1 is a color diagram of MGS that depicts the orientation of the spacecraft relative to the sun when in the SSG control state.  The diagram shows that both the solar panels and the spacecraft battery are exposed to solar radiation when in this attitude." border="0" height="257" src="https://llis.nasa.gov/llis_lib/images/1015792main_2007-08_MGS_Fig_1.jpg" title="Figure 1 is a color diagram of MGS that depicts the orientation of the spacecraft relative to the sun when in the SSG control state.  The diagram shows that both the solar panels and the spacecraft battery are exposed to solar radiation when in this attitude." width="500"><br> <strong>Figure 1.</strong> MGS in Sun-Stuck-Gimbal (SSG) control state<br> &nbsp;</p> MGS was an overall mission success, having completed its primary mission in January 2001. MGS had a solid record of accomplishments (e.g., use of aerobraking, global mapping, science results, lander mission support), and operated longer than any other spacecraft sent to Mars. 
+<br> 
+<br> 
+<b>References:</b> 
+<br> 
+<br> (1) quotMGS SAM Gimbal and BUS Swap,quot Incident Surprise Anomaly (ISA) No. Z89435, NASA/Caltech Jet Propulsion Laboratory, November 7, 2006. 
+<br> (2) quotReport on the Loss of the Mars Global Surveyor,quot Mars Global Surveyor Operations Review Board, NASA Goddard Space Flight Center, July 2, 2007. 
+<p>&nbsp;</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li><b>Operational Procedures and Processes.</b> An independent review board (Reference (2)) determined that the MGS mission team followed existing operating procedures and processes, but the rules were inadequate to detect the errors. More thorough operating procedures and processes would have avoided many of the factors contributing to this anomaly.<br />  </li> 
+ <li><b>Spacecraft Design Weaknesses.</b> The onboard fault protection was inadequate to diagnose and correct the faults that were the likely cause of the mission loss. The spacecraft mistakenly determined that a solar array was stuck and, based on this information, initiated an attitude that was thermally unsafe for an essential battery. In addition, telemetry did not provide the ground with sufficient data on the cause of the initial fault.<br />  </li> 
+ <li><b>Lifetime Management Considerations.</b> MGS had entered its fourth extended mission phase just prior to the anomaly. As is common during extensions to already long-lived missions, the MGS budget and staff had been reduced to economize on mission ops. While no direct evidence attributes the anomaly to these reductions, the review board judged that such reductions can inherently increase risk. Periodic reviews should have been performed to assure that spacecraft control parameters were appropriate to the current state of the spacecraft, and the risks associated with normal personnel turnover over time should also have been assessed. While the training methodology for some operations positions was excellent, the board noted that it was not uniformly applied.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+The key recommendations in Reference (2) state: 
+<br />   
+<ol> 
+ <li><u>Operational Procedures and Processes.</u> 
+  <ul> 
+   <li>Ground alarm limits should be set equal to or within expected flight software and hardware performance limits.</li> 
+   <li>Projects should be required to conduct, prior to upload, a thorough review of all proposed flight software patches, non-routine parameter and data/table modifications, and any change affecting fault protection or Contingency/Safe Mode.</li> 
+   <li>Predefined commands should be always used in preference to general memory loads for parameter updates.</li> 
+   <li>A thorough flight software configuration management (CM) process, including regular readout and validation of the flight computer memory and maintenance of high-fidelity memory image in the ground testbed, must be in place and rigorously followed.</li> 
+   <li>Ground operations should have in place a procedure to quickly acquire stored telemetry and/or memory readout data upon discovery of a spacecraft fault.</li> 
+  </ul> </li> 
+ <li><u>Spacecraft Design Weaknesses</u> 
+  <ul> 
+   <li>Operation at an allowable hardware limit should not be interpreted by autonomous fault protection as a fault.</li> 
+   <li>All Contingency and Safe Mode attitudes need to be evaluated and designed to provide for thermal safety. Where the design cannot provide for thermal safety along with other health and safety concerns, contingency procedures should be developed as risk mitigation.</li> 
+   <li>As a part of a fault response, key data should be captured and returned autonomously to the ground at the next scheduled downlink, without the ground having to send a command. Key data includes fault detection quothigh water marks,quot data concerning the subsystem in which the anomaly occurred, etc.</li> 
+  </ul> </li> 
+ <li><u>Lifetime Management Considerations</u> 
+  <ul> 
+   <li>Each extended mission should be formally and independently reviewed, across the board, including assessment of whether system-level fault protection parameters are appropriate given the state of the remaining complement of hardware.</li> 
+   <li>The operational processes need to be routinely updated to accommodate the changing personnel and operational environment.</li> 
+  </ul> </li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting specific paragraphs in the Jet Propulsion Laboratory standard ¿Flight Project Practices, Rev. 6,¿ JPL DocID 58032, March 6, 2006. These paragraphs are:</p> 
+<p>Paragraph 5.7.8 (quotManagement Practices: Spares, Testbeds, and Modelsquot), Paragraph 5.12 (quotManagement Practices: Project Staffing and Destaffingquot), Paragraph 6.3.2 (quotEngineering Practices: Mission Operations -- Process and Procedurequot), Paragraph 6.3.3 (Engineering Practices: Mission Operations -- Flight Teamquot), Paragraph 6.3.4 (quotEngineering Practices: Mission Operations -- Spacecraft Health and Safety, and Performance Analysisquot), Paragraph 6.11 (quotEngineering Practices: Software Developmentquot), Paragraph 6.15.2.3 (quotEngineering Practices: Configuration Management -- Implementationquot), and Paragraph 5.22.1 (Management Practices: Lessons Learnedquot)</p> 
+<p>In addition, JPL has referenced this lesson learned supporting specific paragraphs in the JPL standard ¿Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),¿ JPL Document D-17868, Rev. 3, December 11, 2006. These paragraphs are:</p> 
+<p>Paragraph 4.1.3.2 (quotFlight System Design: Design Robustness -- Protection Against Operator Errorsquot), Paragraph 4.3.3.4 (quotPower/Pyrotechnics Design: Power Generation -- Recovery from Loss of Powerquot), Paragraph 4.4.1.1 (quotInformation System Design: Redundant Handling of Critical Dataquot), Paragraph 4.4.4.5 (quotInformation System Design: Commanding and Sequencing -- Commanding Modesquot), Paragraph 4.4.6.4 (quotInformation System Design: Telemetry Visibility -- Visibility of Spacecraft Statequot), Paragraph 4.8.2.5 (quotSystem Thermal Design: Temperature Control Design Performance -- Design Margin under Anomalous Conditionsquot), Paragraph 4.9.2.2 (quotSystem Fault Protection Design: Fault Protection Response -- Flight System Safingquot), Paragraph 4.9.3.1 (quotSystem Fault Protection Design: Flight-Ground Interface -- In-Flight Commandabilityquot), Paragraph 4.9.3.2 (quotSystem Fault Protection Design: Flight-Ground Interface -- Visibility into Fault Protection Statequot), Paragraph 4.9.3.5 (quotSystem Fault Protection Design: Flight-Ground Interface -- Fault Protection Margin Monitoringquot), and Paragraph 4.9.3.7 (quotSystem Fault Protection Design: Flight-Ground Interface -- Visibility into Fault Response Activityquot).</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+ISO 14711, quotSpace Systems - Unmanned Mission Operations Concepts - Guidelines for Defining and Assessing Concept Productsquot
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

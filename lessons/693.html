@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0693: Earth Orbit Environmental Heating</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0693: Earth Orbit Environmental Heating</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0693 (Database ID: 693)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/693" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-AP-2301 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Consideration of the solar, albedo, and earth radiation thermal inputs, including seasonal variation with tolerances, is required to accurately predict the thermal environment of orbiting devices.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p><i>SOLAR CONSTANT</i></p>
+
+    <p>The nominal solar constant value is 1367.5 W/m<sup><small>2</small></sup>. The variation of the earth-sun distance causes a ± 3.5% seasonal variation from nominal. The accuracy of the solar constant is taken as ± 0.5%. The following are the values for various seasons in the northern hemisphere.</p>
+
+    <center>
+      <table border="0">
+        <tr>
+          <td>NOMINAL</td>
+
+          <td>1367.5 W/m<sup><small>2</small></sup></td>
+        </tr>
+
+        <tr>
+          <td>WINTER</td>
+
+          <td>1422.0 W/m<sup><small>2</small></sup> (NOM + 4.0%)</td>
+        </tr>
+
+        <tr>
+          <td>SUMMER</td>
+
+          <td>1318.0 W/m<sup><small>2</small></sup> (NOM - 4.0%)</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p><i>ALBEDO FACTOR</i><sup><small>*</small></sup></p>
+
+    <p>The nominal albedo factor is 0.30. The variation around the nominal should be ± 0.05. No variation during the sunlit portion of a given orbit should be assumed unless extremely light weight items are being considered. Programs that compute albedo energy should use 0.35 (hot case), 0.30 (nominal case), and 0.25 (cold case), respectively.</p>
+
+    <p><sup><small>*</small></sup>Note: Since earth temperature and albedo vary with latitude, as the orbit approaches either extreme of a polar or equatorial orbit, further study of the literature should be made. (see AIAA-87-1596)</p>
+
+    <p><i>EARTH EMITTED ENERGY</i> <sup><small>*</small></sup></p>
+
+    <p>The nominal earth temperature for earth emitted IR energy is 255 degrees K. This temperature produces a heating rate of 241 W/m<small><sup>2</sup></small>. A reasonable variation can be obtained by maintaining consistency using the following relationship between Solar, Albedo, and Earth Emitted Energy:</p>
+
+    <p>Earth Emitted Energy = [(1-Albedo Factor)x Solar Constant] / 4.0</p>
+
+    <p>Table 1 shows the variations in Earth Emitted Energy that result from using the above recommended Solar and Albedo ranges.</p>
+
+    <p>Software programs that compute Earth Emitted Energy should use the appropriate hot, nominal, or cold case Solar and Albedo values; and the corresponding black body Earth temperature to achieve an energy balance.</p>
+
+    <p><i>REFERENCES FOR QUICK CHECKS OR SIMPLE CALCULATIONS</i></p>
+
+    <p>Hand calculations should be made to verify that computer outputs of heating values for flat surfaces of known orientation and minimal reflected inputs from other surfaces are reasonable. Hand calculations also may be necessary when time does not permit a computer study. A check of incident Albedo energy to a flat plate at various altitudes and orientations can be made by using TN-D 1842 "Earth Reflected Solar Radiation Incident Upon an Arbitrary Oriented Spinning Flat Plate," by F. Cunningham. Figures 1 through 9 show the orbit-averaged incident Earth and Albedo energies to an Earth-oriented flat plate at various altitudes and orbit/sun angles. Eclipse factors for elliptical orbits are provided in "Calculation of the Eclipse Factor for Elliptical Satellite Orbits", by F. Cunningham. A hand calculation of incident Earth Emitted Energy to a flat plate at various attitudes and altitudes also is possible. Figure 10 shows the instantaneous geometric shape factor for a planar surface
+    as a function of altitude and attitude (h/R is the ratio of the orbit altitude to the Earth radius). The earth radius is 6,365 km. The incident Earth Emitted Energy is found by multiplying the shape factor times the black body emissive power at the earth temperature. For an altitude of 1,000 km and a flat plate whose normal is 90 degrees to the nadir (l= 90); h/R = 0.157, which gives a shape factor of 0.19. The Earth Emitted Energy incident on the plate is 0.19 x 241 W/m<sup><small>2</small></sup>or 46 W/m<sup><small>2</small></sup>.</p>
+
+    <p>*NOTE: Since earth temperature and albedo vary with latitude, as the orbit approaches either extreme of a polar or equatorial orbit, further study of the literature should be made (see AIAA-87-1596).</p>
+
+    <center>
+      <table width="75%" border="0">
+        <tr>
+          <td>
+            <center>
+              RECOMMENDED SOLAR AND ALBEDO RANGES<sup><small>*</small></sup>
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <table width="100%" border="1">
+              <tr align="center">
+                <td>SOLAR<br />
+                CONSTANT<br />
+                (W/m<sup><small>2</small></sup>)</td>
+
+                <td>ALBEDO FACTOR</td>
+
+                <td>EARTH EMITTED<br />
+                ENERGY (W/m<sup><small>2</small></sup>)</td>
+
+                <td>EQUIV. EARTH<br />
+                TEMP (&deg;K)</td>
+              </tr>
+
+              <tr align="center" valign="top">
+                <td>NOMINAL 1368</td>
+
+                <td>0.25<br />
+                0.30<br />
+                0.35</td>
+
+                <td>256<br />
+                239<br />
+                222</td>
+
+                <td>258<br />
+                254<br />
+                250</td>
+              </tr>
+
+              <tr align="center" valign="top">
+                <td>
+                  <table>
+                    <tr valign="top">
+                      <td>WINTER<br />
+                      SOLSTICE</td>
+
+                      <td>1422</td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td>0.25<br />
+                0.30<br />
+                0.35</td>
+
+                <td>267<br />
+                249<br />
+                231</td>
+
+                <td>262<br />
+                258<br />
+                253</td>
+              </tr>
+
+              <tr align="center" valign="top">
+                <td>
+                  <table>
+                    <tr valign="top">
+                      <td>SUMMER<br />
+                      SOLSTICE</td>
+
+                      <td>1318</td>
+                    </tr>
+                  </table>
+                </td>
+
+                <td>0.25<br />
+                0.30<br />
+                0.35</td>
+
+                <td>247<br />
+                231<br />
+                214</td>
+
+                <td>256<br />
+                251<br />
+                246</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td><sup><small>*</small></sup>For use in Orbit Average Analyses</td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <u>EQUIVALENT SINK TECHNIQUE</u>
+    </center>
+    <br />
+    <br />
+
+    <p>The equivalent sink technique can be used by replacing all surrounding surface radiant interchanges and the absorbed Solar and Earth energies to node i with a single radiation coupling to a single node at temperature T sink.</p>
+
+    <p>To derive the equation for this sink temperature, first consider an energy balance at node i where all the inputs are treated as gross inputs and node i has a view to space of 1.0.</p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td align="left"><b>(1)</b></td>
+
+          <td align="right"><IMG  WIDTH="375"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009071main_0693eq1.jpg"  HEIGHT="84"  BORDER="0" /><A HREF="/llis_lib/txt/1009553main_0693eq1.txt"  >[D]</A></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <center>
+      <table width="550">
+        <tr>
+          <td width="50%">
+            <center>
+              From planetary flux program (TRASYS or SSPTA)
+            </center>
+          </td>
+
+          <td width="50%">
+            <center>
+              From thermal program (SINDA) results obtained from Geometric Math Model (GMM) radiation exchange program
+            </center>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" align="left">Where:</td>
+        </tr>
+      </table>
+      <br />
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009075main_0693where.jpg"  HEIGHT="77"  BORDER="0" /><A HREF="/llis_lib/txt/1009557main_0693where.txt"  >[D]</A>
+    </center>
+    <br />
+    <br />
+
+    <p>Next consider the equivalent sink energy balance situation:<IMG  WIDTH="188"  ALT="refer to [D] description"  TITLE="refer to [D] description"  HSPACE="5"  SRC="/llis_lib/images/1009070main_0693bal.jpg"  HEIGHT="50"  BORDER="0" /><A HREF="/llis_lib/txt/1009552main_0693bal.txt"  >[D]</A></p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td align="left"><b>(2)</b></td>
+
+          <td align="right"><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009072main_0693eq2.jpg"  HEIGHT="53"  BORDER="0" /><A HREF="/llis_lib/txt/1009554main_0693eq2.txt"  >[D]</A></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>Solving (1) for <IMG  WIDTH="23"  ALT="refer to [D] description"  TITLE="refer to [D] description"  HSPACE="4"  SRC="/llis_lib/images/1009074main_0693QI.jpg"  HEIGHT="25"  ALIGN="absmiddle"  BORDER="0" /><A HREF="/llis_lib/txt/1009556main_0693QI.txt"  >[D]</A> and setting equal to the right side of (2) gives:</p>
+
+    <center>
+      <table width="90%">
+        <tr>
+          <td align="left"><b>(3)</b></td>
+
+          <td align="right"><IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009073main_0693eq3.jpg"  HEIGHT="213"  BORDER="0" /><A HREF="/llis_lib/txt/1009555main_0693eq3.txt"  >[D]</A></td>
+        </tr>
+      </table>
+    </center>
+    <br />
+    <br />
+
+    <p>The equivalent sink for node i may be determined from the detailed thermal math model by determining the adiabatic temperature of node i when node i is disconnected from internal heat paths and heat dissipations. For a transient situation, node i must be an arithmetic node or a low mass node.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Thermal analysis of an earth orbiting spacecraft requires the accounting of incident thermal energy from all external sources. The most significant external sources of energy incident on the spacecraft are the sun, the thermal radiation of the earth, and the solar energy reflected from the earth (albedo). The modification of the energy incident on the spacecraft due to the earth-sun distance variation, and the accuracy of the measurements of the solar constant, are of sufficient magnitude to be important parameters in performing a thermal analysis.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Not considering the variations in the environmental thermal effects as described in this guideline will result in an incomplete thermal analysis. The temperature variation of the spacecraft could be grossly underestimated, thereby reducing its reliability.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use the currently accepted values for the solar constant, albedo and earth radiation when calculating the heat balance of earth orbiters. This practice provides the heating rates for the black body case without consideration of spectral effects or collimation.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

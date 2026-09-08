@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1396: Ground Network (GN) Ka-band Ground Terminal - Design, Integration, and Test Issues</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1396: Ground Network (GN) Ka-band Ground Terminal - Design, Integration, and Test Issues</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1396 (Database ID: 1396)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-09-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1396" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>A Ka-band demonstration ground terminal was implemented for NASA&raquo;s Ground Network under the GSFC Ka-Band Transition Project (KaTP). This ground terminal is intended to function as a demonstration terminal to demonstrate the feasibility of Ka-band services, and to aid the testing of Ka-band and high data rate technologies that could support future NASA near-earth missions.<br />
+    <br />
+     a. System Requirements Document (SRD)<br />
+     The SRD encompassed too many requirements that were not directly related to the performance and capability of the Ka band portion of the ground terminal.<br />
+    <br />
+     b. High Data Rate Receiver<br />
+     The performance of the high data rate demodulator/bit synchronizer used during the demonstration testing did not perform as well as desired. The unit was tunable from 50 to 600 Mbps. Performance was acceptable up to 450 Mbps, but the unit seemed very susceptible to channel distortions at higher rates.<br />
+    <br />
+     c. Boresite Antenna<br />
+     The boresite system used for testing the KaTP GN ground terminal consisted of a test modulator, upconverter and one meter dual band S, Ka parabolic antenna mounted at the top of an antenna tower. The one meter boresite antenna provided adequate S-band and Ka-band gain, however, the beamwidth at Ka was too narrow for testing purposes. Movement of the boresite antenna tower due to wind caused problems during error gradient testing of the Ka-band autotrack system.</p>
+
+    <p>Also, a different antenna was used on the boresite tower than the one used for factory testing of the GN Ka-band antenna autotrack system. This resulted in test results on-site that varied from factory test results making problem resolution difficult with the antenna vendor.<br />
+    <br />
+     d. Channel Distortions<br />
+     The Ka-band ground terminal system was purchased in several subsystems (antenna, downconverter, fiber optics, etc) and integrated together at Wallops Flight Facility. Once the system was fully configured, the channel distortion levels were greater than anticipated.<br />
+    <br />
+     e. Radome<br />
+     The radome leaked considerably after installation. All seams had to eventually be caulked.<br />
+    <br />
+     f. Antenna axis configuration<br />
+     A Ka-band ground terminal antenna was required that could track low-earth orbiting spacecraft, including tracking support of spacecraft through zenith. Three axis (azimuth/elevation/tilt mount) antennas have been used in the recent past by NASA's Ground Network to support these type of spacecraft orbits, but some reliability and maintenance issues with this configuration have been encountered.<br />
+    <br />
+     g. Ka Feed components<br />
+     Performance problems encountered with the Ka feed considerably impacted delivery and installation.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>a. System Requirements Document (SRD)<br />
+    In addition to Ka-band requirements, the SRD also included S band transmit and receive requirements for the system since the antenna was dual band. However, S band requirements should have been stated at a higher level. Much effort went into justifying and verifying S band equipment performance specs. Nearly 75% of the SRD requirements were related to S band. The SRD should have focused less on the S band requirements, since the intent of the system was primarily to demonstrate the Ka performance. The S band subsystems utilized standard, proven equipment that were already in use in the GN.<br />
+    <br />
+    b. High Data Rate Receiver<br />
+     For bit error rate (BER) testing, it is recommended to use receivers that have been optimized for the data rates under test. Although the unit used during demonstration testing was very flexible and useful for general lab support, the receiver performance in terms of implementation loss at the higher data rates of interest was not adequate to support the objectives of the test. The implementation loss of the test receiver was higher than expected and created difficulties in obtaining useful BER test data. It would also be recommended that a receiver manufacturer take into account the system channel magnitude and phase response to optimally match the receiver filter for best ISI performance.<br />
+    <br />
+    c. Boresite Antenna<br />
+     The use of a smaller boresite antenna, or separate antennas for S and Ka band would provide better performance during boresite testing, particularly in high wind situations. For example, a WR-34 horn was used during the latter portion of the demonstration testing, and it provided improved performance compared to the one meter parabolic antenna for this test scenario. It is also recommended to use the same boresite antenna for on-site testing that is used for factory testing. When problems were encountered on-site that did not appear at the factory, the local boresite antenna was blamed for the problems. Using the same boresite antenna would eliminate any finger pointing in a similar situation.<br />
+    <br />
+    d. Channel Distortions<br />
+    It is recommended that system requirements be levied on one vender that is responsible for the entire ground terminal design, integration, and test. For example, the magnitude and phase response for the entire channel should be specified from RF input to IF output, and the vendor should perform an allocation of theses end-to-end system requirements to individual components. Distortion measurements through the whole system should be verified at the factory prior to delivery. Also it is recommended that the receiver be mounted close to antenna, and transfer the IF signal in digital format via fiber optic cable rather than at the intermediate frequency. Cable runs should be minimized, and the use very low loss cable is recommended.<br />
+    <br />
+    e. Radome<br />
+    The vendor should demonstrate water tightness of radome prior to delivery and installation on-site.<br />
+    <br />
+    f. Antenna axis configuration<br />
+    The X-Y axis configuration is the recommended approach for a ground terminal that is required to track low-earth orbiting spacecraft. This configuration precludes the use of a third tilt axis to handle high elevation passes. The X-Y axis system is less complex, improving maintenance and reliability.<br />
+    <br />
+    g. Ka Feed components<br />
+    Nearly all problems encountered with the feed were the result of low quality cables and adapters. Recommend in the future that reliability be considered more than cost for the feed subsystem components.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Recommendations are provided above as part of the lesson learned for each topic.<br />
+    <br />
+    </p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

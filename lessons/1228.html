@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1228: Circular document referencing (establishing document relationships)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1228: Circular document referencing (establishing document relationships)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1228 (Database ID: 1228)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-03-22</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1228" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Specifications are written to control the baseline requirements to which the Space Station is designed, constructed, verified, and delivered. A common practice within most specifications is to reference documents (know as applicable documents) with the specification as a source of requirements. Early in the development of the specifications the undesirable practice of "circular" referencing of documents infiltrated the specifications within the Space Station Program. Circular references is, in general, a condition by which a specification or document at a low level of the specification (or document) tree hierarchy references a specification of document at a higher level in the specification (or document) tree hierarchy. The following example illustrates the impact of "circular referencing."</p>
+
+    <p>Within the Space Station Program the top level specification is the System Specification (SSP 41000). SSP 41000 references numerous documents. Among the referenced documents in SSP 41000 are SSP 30558 and SSP 30559. The SSP 30558 and SSP 30559 documents, in turn reference SSP 41000 (completing the "circle"). Other specifications within the Space Station Specification "Tree" referenced SSP 30558 and SSP 30559. Because 41000 is an applicable document in 30558 and 30559, a lower level specification with the spec tree (for example, the United States Lab (USL) Spec) was placed in the posture of inadvertently being subjected to all requirements within the System Specification. There are two undesirable results caused by this practice:<br />
+    </p>
+
+    <ol>
+      <li>Obviously the USL was not intended to fulfill all requirements as defined in the System Specification. The USL, however, under this structuring could have been construed as needing to meet all System Spec Requirements.</li>
+
+      <li>Maintenance of the "applicable document" section of each individual specification becomes tangled and interwoven to the point that nonapplicable requirements must be verified. For example a modification to SSP 30559 would result in a required document change of every specification within the Space Station Specification Tree.</li>
+    </ol>
+    Root cause: Failure to establish guidelines that define the purpose, use, and relationships of applicable documents. (Center Data Manager's note: The confusion over applicable documents arises quite often from an author's perceived need to justify or establish authority for a document versus identifying documents that, when cited as applicable, will aid in document implementation. The two purposes are quite different but in a poorly defined process both can be considered as meaning "applicable.") <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Document relationships in any program must be clearly defined and understood to ensure effective and straightforward implementation of specifications and requirements</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Provide early definition of both specification tree and document tree hierarchies applicable to the program. (from Center Data Manager: Consider performing the process for requirement compliance and traceability versus document / specification authority as separate exercises. For example, if a requirement must be traced to a standard, consider using a parallel traceability matrix or a commercial off the shelf requirements tracing package.)<br />
+    <br />
+    </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Action taken at Huntsville: [CM] This lesson learned does apply to my area of responsibility. This lesson learned is already part of our standard practices for specification development. The spec tree is established early and the parent-child relationships established. In spec development, the "applicable documents" section should not reference any document that is a parent to that document on the spec tree. There may be references to parent documents, but they are usually qualified with a statement like -- in the case of a discrepancy between the (parent document) and (child document), the (parent document) always takes precedence.</p>
+
+    <p>Action taken at KSC: System and component specifications are not generated nor maintained by the processing team at KSC for flight items. When items of support equipment are designed for use at KSC, Design Certification Reviews are conducted to ensure all the proper specifications have been identified and properly annotated in the equipment spec.</p>
+
+    <p>Action taken at NASA/JSC: The lesson learned has been reviewed and the following is currently in place to correct this problem:<br />
+    </p>
+
+    <ol>
+      <li>The Program initiated Documents 50257 and 50258 (Program and Boeing Controlled Indexes). These two documents would house the inter-relationships between documents and traceability between higher and lower tiered documents. This was instituted on the Program in 1997.</li>
+
+      <li>However, it was determined that these documents could not be responsive to the daily changes on the Program. Therefore, it was agreed that CM would build an interactive database to track these changes and the relationships between documents. This database is currently in work and is scheduled for implementation late FY99.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

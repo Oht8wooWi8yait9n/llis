@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1463: Accident Investigations/Information Technology (IT) Support Requirements for Major Mishap Investigation</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1463: Accident Investigations/Information Technology (IT) Support Requirements for Major Mishap Investigation</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1463 (Database ID: 1463)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2003-08-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1463" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>There was no single NASA system on February 1 that could meet the requirements set for the Columbia Accident Investigation Board (CAIB) and Columbia Task Force (CTF). The Process Based Mission Assurance - Enhanced Security (PBMA-ES) system, using a proven COTS "engine" was rapidly deployed within a dedicated stand-alone hardware/software environment to provide a high level of security, including 2-factor strong user authentication. The system provided immediate secure, web-based operability of key functionality to support a mobile, in-the-field, investigation activity including, action tracking, calendar, document management, and database capabilities.<br />
+    <br />
+     Neither the CAIB, the CTF, nor the PBMA management team could reasonably anticipate or identify all of the requirements at the beginning of the investigation (both functional and interface) needed to support the investigation. The requirements "critical needs" continued to evolve from the initial request for &ldquo;action tracking,&rdquo; i.e., customization of JSC form 564, to web links, to full text search, to advanced library support capabilities. In addition, particularly early-on, there existed a continuous, often tension-filled negotiation process between the needs of the multi-headed customer(s) (CAIB) and the IT-security community. The absence of clear IT security policies exacerbated the requirements change process. Finally, the degree and complexity of library management requirements, as driven by Department of Justice (DOJ), did not emerge until a month after implementation of the PBMA-ES.<br />
+    <br />
+    This real-time customization with &ldquo;on-the-fly&rdquo; changes constantly in-work, resulted in a major hw/sw configuration management challenge, organizational policy disconnects, and ultimately frustrated customers who were looking for immediate implementation of their desired changes.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Real-time, crisis-mode systems engineering can never capture all potential future requirements. You do the best that you can and make the best decisions you can with the information you have at the time.<br />
+    <br />
+    The overarching lesson learned is that NASA needs to have a web-based, Mishap Investigation Support System (MISS) in-place and operational, "locked and loaded" on hot standby to support major mishaps. The system must fulfill the requirement set identified in the next section. It is equally important to have a designated (hot standby) management team ready to support the myriad of operational requirements and customization needs that one can expect to emerge.<br />
+    <br />
+    In the final analysis, the experienced PBMA management team provided the necessary support to implement the dynamically evolving CAIB requirements.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Establish a NASA baseline information technology Mishap Investigation Requirements Set (MIRS) to include the following elements:<br />
+    </p>
+
+    <ul>
+      <li>
+        MISS Management Team: Experience dictates that a management team be available to quickly respond to a major mishap and be able to quickly implement mishap-specific plans and procedures such as: 
+
+        <ul>
+          <li>Configuration management</li>
+
+          <li>IT Security Plan modifications</li>
+
+          <li>On-site user orientation/training</li>
+
+          <li>24x7 technical support during the early phase of an investigation</li>
+
+          <li>Data backup and archival activities</li>
+
+          <li>Work group administration</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>Financial/resource management</li>
+    </ul>
+
+    <ul>
+      <li>Sustaining engineering and operations</li>
+    </ul>
+
+    <ul>
+      <li>Collaborative Environment: Use a web-based, fully integrated, COTS knowledge management system application to provide immediate field support for the investigation team (i.e., members, contacts, calendars, task management, web-links, etc.). A COTS product will ensure best-available, market-driven capabilities are available to support mishap investigation teams.</li>
+    </ul>
+
+    <ul>
+      <li>Independence/Portability: Expect to confront the issue of accident board independence and ensure that the MISS is established as a stand-alone hardware/software infrastructure behind a NASA firewall but portable so that it can be easily moved to any NASA Center.</li>
+    </ul>
+
+    <ul>
+      <li>IT Security: A well-defined and documented NASA IT security policy applicable to all systems is essential. Recommend baselining NASA system host-center firewalls, secure socket layer encryption, and a secure but usable single factor user-authentication policy. A generic but tailorable IT security plan should be in place for the hot standby system.</li>
+    </ul>
+
+    <ul>
+      <li>Hardware/Software Infrastructure: Use a commercial-like, multiple-web server front-end to ensure a high level of reliability and operability.</li>
+    </ul>
+
+    <ul>
+      <li>Interfaces: Identify mandatory interfaces for compatibility with other support tool sets. Establish interface control agreements as part of MISS development. Interface control testing should verify interoperability.</li>
+    </ul>
+
+    <ul>
+      <li>Library Services / Massive File Manipulation and Data Archiving: Co-locate the web servers with standalone archive/library servers if it is deemed necessary to perform frequent massive file upload, download, and manipulation. It is inefficient and time consuming to transfer massive files via the internet.</li>
+    </ul>
+
+    <ul>
+      <li>
+        Expect to Customize/Change Management: Experience suggests that no system can meet all potential requirements that may evolve during an investigation. Anticipating the need to customize, the MISS management team must have in-place: 
+
+        <ul>
+          <li>a baseline configuration management plan and process</li>
+
+          <li>a change process with clear roles and responsibilities for requirements management and change approval</li>
+
+          <li>a dedicated beta-test server to conduct verification testing for hw/sw changes</li>
+        </ul>
+      </li>
+    </ul>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>TBD NASA Response</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

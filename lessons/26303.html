@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #26303: Implementing Power Quality Test Capability for ISS Payloads</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #26303: Implementing Power Quality Test Capability for ISS Payloads</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #26303 (Database ID: 26303)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2018-05-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Ground Equipment,  Hardware,  Payloads,  Spacecraft,  Standard,  Test & Verification,  Power,  Spacecraft and Spacecraft Instruments,  International partner coordination,  Early requirements and standards definition,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/26303" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>ECOSTRESS is one of a new class of low-cost, rapid-development, NASA science instruments. Delivered to the International Space Station (ISS) in July 2018, it will measure the temperature of plants growing in specific locations on Earth over the course of a solar year.</p> 
+<p>&nbsp;</p> 
+<p>During system-level Electromagnetic Interference and Compatibility (EMI/EMC) testing in the summer of 2017, the ECOSTRESS payload was also tested for Power Quality (PQ), a requirement levied from Reference (1) for electrical hardware that interfaces with the ISS. <u>This test was the first standard system-level PQ test for an ISS payload conducted at JPL.</u> Efforts to develop this test capability began two years prior on a part-time basis, given limited EMC personnel availability and a tight project budget. Key prerequisites were acquiring the necessary test equipment for input impedance measurement and developing all the various transient waveforms and power conditions specified in Reference (1). Because correspondence with counterparts at NASA Johnson Space Center (JSC) and NASA Marshall Space Flight Center (MSFC) was limited, interpretation of the test requirements was largely left up to JPL EMC personnel. By the spring of 2017, training on impedance measurement was provided by JSC’s ISS Power Laboratory, along with clarification on some of the other PQ test issues.</p> 
+<p>&nbsp;</p> 
+<p>PQ testing at JPL (Figure 1) included the following:</p> 
+<ul> 
+ <li>Surge and Inrush Current Limits</li> 
+ <li>Reverse Current</li> 
+ <li>Small Signal Stability and Constraints on Input Impedance</li> 
+ <li>Large Signal Stability</li> 
+ <li>Interface C (i.e., one of several power distribution tests used for ISS science payloads) at Normal and Non-Normal Power Conditions</li> 
+ <li>Compatibility with Soft Start/Stop and Current Limiting Remote Power Controller</li> 
+</ul> 
+<p>&nbsp;</p> 
+<p><img alt="The photographic images shows the ECOSTRESS instrument located inside the anechoic chamber at JPL for its Electromagnetic Interference and Compatibility testing The instrument is an elongated rectangular smooth metal box with the exposed mechanical assembly that is used for the doublesided rotating scan mirror The anechoic chamber walls are lined by small blue and or grey colored pyramid cones that absorb any electromagnetic radiation" src="/lessons/26303/ecostress_Fig1a.png" style="width: 640px; height: 440px;"></p> 
+<p><b>Figure 1. </b>ECOSTRESS Integration and Test personnel&nbsp;unwrap payload in the EMC anechoic chamber at JPL</p> 
+<p>&nbsp;</p> 
+<p style="margin-top:7.5pt; margin-right:0in; margin-bottom:7.5pt; margin-left:0in">Despite the PC test capability startup challenges, the majority of tests were performed adequately with a mix of compliant and non-compliant results (i.e. impedance out-of-spec). For some tests, the verification seemed incomplete (e.g., oscilloscope capture timescale too short for large signal stability), but the data from other PQ tests on ECOSTRESS and OCO-3 indicated full compliance. One test error occurred during reverse current because the current probe was clamped in the wrong position and thus captured non-representative results. But this was alleviated through proper testing of the OCO-3 power converter unit, which is similar to ECOSTRESS’s.</p> 
+<p style="margin-top:7.5pt; margin-right:0in; margin-bottom:7.5pt; margin-left:0in">&nbsp;</p> 
+<p style="margin-top:7.5pt; margin-right:0in; margin-bottom:7.5pt; margin-left:0in">One particular test that raised the concern of the ECOSTRESS team was Interface C at Normal/Non-Normal Power Conditions, because the test procedure called for power cycling after each transient condition. Testing was halted midway, and a meeting between Assembly, Test, and Launch Operations (ATLO), payload power, and EMC personnel convened to discuss risks of such a test approach. The designers of the converter unit found the numerous power cycles acceptable, but ATLO preferred they be minimized. The transient tests were modified so they occurred in one long sequence with significant gaps of steady power in between to give the ECOSTRESS team time to identify any susceptibilities and for the EMC team to capture all required waveforms. The new test sequence was rehearsed on a load resistor. The change was then redlined accordingly, with approval from both ECOSTRESS and the EMC team, and the remaining power conditions were simulated without payload-related issues.</p> 
+<p style="margin-top:7.5pt; margin-right:0in; margin-bottom:7.5pt; margin-left:0in">&nbsp;</p> 
+<p>PQ testing was completed on schedule, and the test results were reviewed and accepted by the ECOSTRESS project, JPL EMC, and partners at JSC. The appropriate waivers/tailoring interpretation agreements (TIAs) with JSC, MSFC, and the Japanese Space Agency (JAXA) were made based on the EMC and PQ test report (Reference (2)).</p> 
+<p>&nbsp;</p> 
+<p><u>References</u>:</p> 
+<ol> 
+ <li>Space Station Protocol (SSP) 52051 (Rev B), User Electric Power Specifications and Standards - 120Volt DC Loads, Vol.</li> 
+ <li style="margin-top:4.8pt">ECOSTRESS EMI/EMC/Power Quality Test Report, M. Soriano, Jet Propulsion Laboratory IOM 5137-17-066A, March 9, 2018.</li> 
+ <li style="margin-top:4.8pt">ECOSTRESS SMA Lessons Learned, H. Kwong-Fu, June 21, 2018.</li> 
+ <li style="margin-top:4.8pt">JPL Design Principles, Rev. 7, JPL DocID 43913, March 27, 2018, Paragraph 8.1.3.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in">According to Reference (3):</p> 
+<ol> 
+ <li>Significant preparation is required to develop a new test capability at a NASA center—in this case PQ testing per Space Station Protocols.</li> 
+ <li style="margin-top:6.0pt">New engineering processes require extensive internal review by project and line management-- and in this case also by external partners (i.e., counterparts at other NASA centers).</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Projects should engage subject matter experts early to identify processes, environments, etc. that are not business-as-usual, and should provide resources to address them.</li> 
+ <li style="margin-top:6.0pt">Test personnel, particularly for environmental tests on flight hardware, need to specify estimated test duration, power cycling, and other test configuration changes clearly in their test procedures.</li> 
+ <li style="margin-top:6.0pt">Hardware power cycles should be accounted as a limited resource, like operational lifetime and mate/de-mates, and minimized accordingly, in accordance with Reference (4).</li> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt">Adopt signal integrity analysis and PQ verification as an established process at JPL, with appropriate classes, on-the-job training, tools, equipment, and expert advice.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.14.4 (“Engineering Practices: Design and Verification for Environmental Compatibility”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 12,” JPL DocID 58032, December 14, 2017. In addition, JPL has referenced it supporting Paragraph 8.1.3 (“Flight System Verification and Validation Design:  Allocation and Tracking of Life Limited Items”) in the JPL standard “JPL Design Principles, Rev. 7,” JPL DocID 43913, March 27, 2018.</p> 
+<p> </p> 
+<p>In addition, the JPL EMC group has devoted additional resources to address these lessons learned in preparation for Power Quality tests on other ISS payloads at JPL. PQ testing was performed successfully for the OCO-3 power converter unit and preparations are underway for S.A.M and EMIT hardware. The Signal Integrity Community of Practice seeks to adopt PQ as a JPL process.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0739: Design Considerations For Lightning Strike Survivability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0739: Design Considerations For Lightning Strike Survivability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0739 (Database ID: 739)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Glenn Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/739" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1231; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Experience learned from the Atlas/Centaur and Space Shuttle flights serve to emphasize the importance of the implementation of the proper protection/design enhancements to avoid and survive natural or triggered lightning for all launches.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Due to the lightning strike incident on Apollo 12, the AC-67 failure, and the numerous lightning strikes to the shuttle launch complex at 39-B, significant changes were made to improve electromagnetic compatibility (EMC) of launch vehicles and ground support equipment. The EMC approach is essentially the same for all of these vehicles with special considerations given to specific payload and launch requirements. The Atlas/Centaur and the Shuttle protection design are described in Reference 2.</p>
+
+    <p>The major areas that a designer needs to address for lightning and transient hardening are: proper grounding of vehicle and ground support equipment, bonding requirements, and circuit protection. This is accomplished primarily through wire shielding and secondarily through transient limiters. Following the detailed requirements will limit the damage inflicted by lightning or high current transients.</p>
+
+    <p>Ground Support Equipment</p>
+
+    <p>The Launch System Fixed Service Structure (FSS) stands considerably taller than the airborne vehicle, creating a 45 degree "cone of protection" relative to the vehicle (as illustrated in Figure 1). The probability of a lightning strike is a function of the design of the cone and the location of the object within the cone. The tower itself acts as a low impedance down conductor.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009197main_0739-1.jpg"  HEIGHT="485"  BORDER="0" /><A HREF="/llis_lib/txt/1009677main_0739-1.txt"  >[D]</A><br />
+      Figure 1. Shuttle Vehicle Complex Lightning Protection
+    </center>
+
+    <p>The ground support equipment (umbilical tower, service tower, etc.) must contain the appropriate conductive paths for lightning currents. These structures should follow the code in the "U.S. Lightning Protection Code (NFPA-78)". The reason these requirements are placed on the structure is to avoid large potential differences between the lightning conductor and ground support equipment within the tower. All equipment susceptible to high current must be sufficiently grounded and bonded. Critical circuits are normally protected with transient limiters.</p>
+
+    <p>All cable harnesses should have an overshield, which is grounded on both ends. Also, to protect against induced electromagnetic transients circuit wire twisting should be implemented. All wires and components connecting ground support equipment with payloads should be appropriately grounded.</p>
+
+    <p>Circuits or components which interface with the vehicle should be hardened against lightning transients and electromagnetic interference. The following lists the recommended practices for circuit protection:</p>
+
+    <div style="margin-left: 2em">
+      <p>a) Lightning suppression devices and appropriate mechanisms should be placed at areas of critical circuit interfaces and in current loop areas where potential differences can be substantial during direct and induced lightning strikes. Such areas would be the inertial navigation unit (INU) uplink and data acquisition system (DAS) downlink circuit interfaces and telemetry connections.</p>
+
+      <p>b) Individual equipment should be grounded to facility structure when ground support equipment is installed.</p>
+
+      <p>c) Items subjected to transient charging must meet MIL-B-5087 (Class S) bonding requirements. Components should be connected to the tower facility grid.</p>
+
+      <p>d) Heavy gauge grounding cables should be instituted to ground external items to major structural members.</p>
+
+      <p>e) Auxiliary grounding straps should be employed, as needed, to relieve differences in potential for items being mated and demated.</p>
+    </div>
+
+    <p>Airborne Vehicle Equipment</p>
+
+    <p>Airborne vehicle equipment consist of the launch vehicle and the payload (satellites, experiments, etc.). Since lightning will predominately strike the nose or fairing of a rocket, the equipment contained there should be shielded to withstand the current and induced effects. To protect the vehicle and components, several lines of defense are used starting with the vehicle&iacute;s structure, bonding requirements, and cable shielding.</p>
+
+    <p>In order to protect the internal equipment, a large conductive surface must extend the length of the vehicle. This is easily resolved by constructing an all metal surface vehicle with adequate bonding between the stages. With composite skin vehicles, a cable raceway is needed to extend the entire length of the vehicle, and conductive paint should be used on the skin. All memory sensitive devices should be EMI hardened and placed far from the raceway.</p>
+
+    <p>The purpose of overall airborne system bonding is to maintain an equipotential system (see Figure 2). To ensure this all tank sections should be welded and bonded to achieve a low impedance reference plane. All metallic parts of linear length greater then 12 inches should have a discharge path to structure. In launch vehicles all critical areas must follow MIL-B-5087B (Class R) or NSTS 07636 bonding to satisfy NASA bonding requirements.</p>
+
+    <p>The bonding of all electrical components (connections, metallic plumbing, etc.) is mandatory to achieve an equipotential environment. This is important in areas where large current loops might be formed (see Figure 2) or on the vehicle where critical electrical components are found. All areas should follow the MIL-B-5087B (Class S &amp; R) or NSTS 07636 requirements for electrical bonding. The designer should also note that adequate cross-sectional area and skin area must be taken into account when applying the bonding requirements. All connection surfaces must be free from insulation material and foreign material such as, paint, oxide, and corrosion. It is also important to reduce sharp bends in conductors. Sharp bends cause high conductor separation forces and are areas of high impedances to the leading edge of the current pulse; more importantly, they are potential arcing points.</p>
+
+    <center>
+      <IMG  WIDTH="491"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009198main_0739-2.jpg"  HEIGHT="838"  BORDER="0" /><A HREF="/llis_lib/txt/1009678main_0739-2.txt"  >[D]</A><br />
+      Figure 2. Example of Ground Plane Bonding on the Atlas/Centaur
+    </center>
+
+    <p>Shielding guidelines were established after the critical failure of AC-67. In order to reduce magnetic induced voltages in cable wires, it is possible to design cables such that the induced voltages can be self-cancelling. This is completed through twisted-pair wiring enclosed by a copper braid shield. The following shielding list can be applied to all launch vehicles.</p>
+
+    <div style="margin-left: 2em">
+      <p>a.) Power and Low Frequency. Twist the power or signal wire/wires with its return line. This should be referenced to the vehicle structure on both ends. Any power lines leading to inductive loads that are not locally diode suppressed should be shielded with the shield grounded on both ends. Do not shield power leads between power supply and a subsystem, or between units of a subsystem.</p>
+
+      <p>b.) Radio Frequency Circuit Shielding. RF circuits or circuits susceptible to RF should have the outerbraid of the coaxial cable grounded at both ends and all points along the length of the shield as necessary.</p>
+
+      <p>c.) Digital Data Lines. Use a shielded twisted pair with the shield being grounded at both ends.</p>
+
+      <p>d.) Ordnance Circuit Shielding. Twisted shielded wire should be used from electroexplosive devices to the ordnance power switching device. The shields should be grounded at both ends.</p>
+
+      <p>e.) Memory Device Shielding . Due to the difficulty in predicting the shield attenuation on at metallic structural corners, an adequate safety margin should be used for protection against excessive interior flux.</p>
+
+      <p>f.) Rules for Circuit Shielding. Circuits with impedances greater than 100 ohms or are sensitive to high frequency must have the twisted pairs shielded. All circuit shields should be grounded to structure at both ends of the circuit via the connector backshell.</p>
+
+      <p>g.) Harness Shielding. All cable or harness shields must be terminated at both ends of a conductive EMI backshell. The 360 degree peripheral shield termination technique should be applied.</p>
+    </div>
+
+    <p>In order to reduce the amount of induced effects caused by lightning, it is important that the electrical wiring follow the requirements for shielding. This will limit the possibility of "noise" throughout the system or "circuit upset". The designer should also consider the possibility of using fiber-optic cables, thus eliminating the susceptibility to the electromagnetic effects of lightning. This can be applied in the areas for control, data, and transmission lines.</p>
+
+    <p>Structural Design Provisions. In addition to hardening the electrical system, structural designs should avoid susceptibility to triboelectric or frictional charging. Fairings should be of an all metal stringer construction. This encases the inertial navigation unit and all electrical components in a Faraday cage enclosure (Ref.4 &amp;5).</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>All ground station equipment and airborne vehicle equipment should be hardened against lightning transients and electromagnetic interference. When lightning strikes an object, current flows and voltages are produced across impedances. The voltage becomes large if the impedance is high, and thus produces substantial arcing. This occurred on AC-67 during flight resulting in a improper yaw command and destruction of vehicle and payload. Arcing and circuit upset can even occur if lightning does not strike directly, but discharges nearby producing a high magnetic flux which will induce a current in the electrical components. This was observed while AC-43 was on the launch pad resulting in several components experiencing circuit upset.</p>
+
+    <p>As a result of these modifications and improvements, the flight history of Atlas II has not been affected by lightning transients or electromagnetic interference (EMI). Compliance with transient and bonding requirements, harness shield termination improvements incorporated throughout the system will provide the necessary immunity to any lightning-induced effects at the unit/subsystem level.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Atlas/Centaur AC-67, "Problem Report Closeout," No. AK44901 CT, General Dynamics Space Systems Division, 1987.</li>
+
+      <li>AFSC DH 1-4, "Electromagnetic Compatibility,"4th ed., March 1984.</li>
+
+      <li>Gabrielson, Bruce C., The Aerospace Engineer&iacute;s Handbook of Lightning Protection, Interference Control Technologies, Inc., Gainesville, VA, 1988.</li>
+
+      <li>Hasbrouck, R.T. , Lightning-Understanding It and Protecting Systems from Its Effects, Lawrence Livermore National Laboratory, 1989, UCRL-53925.</li>
+
+      <li>Hart, William C. &amp; Malone, Edgar W., Lightning and Lightning Protection, Don White Consultants, Inc., Gainesville, VA, 1979.</li>
+
+      <li>KSC-STD-E-0013, "Facility Lightning Protection Design Standard".</li>
+
+      <li>MIL-B-5087B, "Bonding, Electrical, and Lightning Protection, for Aerospace Systems," October, 1964.</li>
+
+      <li>NSTS 07636, "Space Shuttle: Lightning Protection, Test and Analysis Requirements,"November 1991.</li>
+
+      <li>NSTS 16007, Revision F, "Launch Commit Criteria and Background," NASA, 1992.</li>
+
+      <li>"Report of Atlas/Centaur-67/FLTSATCOM F-6 Investigation Board Vol. I-Final Report," NASA, July 15, 1987.</li>
+
+      <li>NFPA-78, "U.S. Lightning Protection Code".</li>
+
+      <li>Fisher, F.A. &amp; Plummer, J.A., Lightning Protection of Aircraft, Lightning Technologies, Inc.</li>
+
+      <li>SL-E-0002, "NSTS EMI Characteristics, Requirements For Equipment".</li>
+
+      <li>Electrical Shielding of Power, Signal and Control Cables - Reliability Preferred Practice No. PD-ED-1213</li>
+
+      <li>Electrical Grounding Practices for Aerospace Hardware - Reliability Preferred Practice No. PD-ED-1214</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to the set of constraints, stated herein, could jeopardize the flight and mission success of any launch vehicle.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Implement lightning survivability in the design of launch vehicles to avoid lightning induced failures.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn, Atlas/Centaur, Titan, Space Shuttle.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0729: Integration and Test Practices to Eliminate Stresses on Electrical and Mechanical Components</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0729: Integration and Test Practices to Eliminate Stresses on Electrical and Mechanical Components</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0729 (Database ID: 729)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/729" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice Number PT-TE-1429 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>These practices prevent the long term degradation and early failure of electrical parts and components due to electrical and mechanical overstressing. Damage due to overstressing may not result in immediate failure and may not be detected by component or assembly level testing but can result in early failures.</p>
+
+    <p><u>Implementation:</u></p>
+
+    <p>Formal Electrical Integration Procedures are prepared, reviewed, and approved to document and control the step by step procedures used in mating, testing, integrating, etc. of flight hardware at all levels of assembly. A number of practices are incorporated into these procedures to prevent electrical and mechanical overstressing of electrical parts and components. These practices are described in the following:</p>
+
+    <ol>
+      <li><i>Safe-To-Mate Cable Harness Test:</i> This test is performed on flight cables and harnesses prior to their connection to flight hardware. A breakout box is inserted at one end of the cable. Power and signal flow, continuity, isolation, etc. are tested through the entire cable. This test checks for wiring errors that could apply over-voltages, reverse polarities, improper signals, etc. that could cause electrical stress to parts and components.</li>
+
+      <li><i>Safe-To-Mate Cable And Simulator Test:</i> This test is performed on cables and harnesses connected to simulators prior to their connection to flight hardware, A breakout box is inserted at the flight unit end of the cable or harness. Power and signal flow, continuity, isolation, etc. is tested through the entire cable or harness. This test checks for wiring errors in both the simulator and the cable that could apply over-voltages, reverse polarities, improper signals, etc. that could cause electrical stress to parts and components.</li>
+
+      <li><i>Disconnect Meters Before Changing Range Scales:</i> Meter probe connections to flight hardware and to GSE when connected to flight hardware are disconnected and grounded during meter range switching in order to drain off electrostatic charges and voltage transients that may develop during the range switching.</li>
+
+      <li><i>Ground Cable and Harness Connectors Before Mating:</i> Cable and harness connector shells are grounded before mating with flight hardware in order to drain-off electrostatic charges.</li>
+
+      <li><i>Verify Ground Connections:</i> The resistance of ground connections between flight hardware boxes and packages and between flight boxes and packages and structure ground are verified by measurement and must be no greater than 2.5 milliohms.</li>
+
+      <li><i>Verify Power-off Before Mating Or Demating Connectors:</i> Power-off is verified for ground support and test equipment and for flight hardware before signal and power connectors are mated or demated with flight hardware. This is to prevent transients and partial and intermittent connections that could occur during the connection process.</li>
+
+      <li><i>Ground Scaffolding and Workstands:</i> Scaffolding and workstands located near flight hardware are grounded to a central ground point to prevent electrostatic buildup and discharges to the flight hardware. Painting of scaffolding and workstands is not permitted in order to prevent electrostatic charge buildup on the painted surfaces that can be transferred to the flight hardware. Paint also prevents proper ground connections to the scaffolding and workstands.</li>
+
+      <li><i>Unroll Tapes Slowly:</i> Tapes used on or around flight hardware are unrolled slowly in front of an ionized air source if available in order to prevent electrostatic charge buildup and discharges to the flight hardware.</li>
+
+      <li><i>Connector Savers:</i> Connector savers are used on those flight connectors where frequent mates and demates are required during the integration and test program. The connector savers minimize the wear and stress on the connector pins due to frequent mate and demate procedures.</li>
+
+      <li><i>Connector Demate Tools:</i> Connector demate tools are used to demate flight connectors in order to minimize stress on flight connector pins.</li>
+
+      <li><i>Log of Flight Connector Mates And Demates:</i> A log of all flight connector mates and demates is maintained and monitored in order to access the impact on the connectors of the mates and demates and to facilitate cleaning of connector pins every 10 mate and demate operations.</li>
+
+      <li><i>Secure Flight Cables To Connectors:</i> Flight Cables are secured to the back of connectors with strain relief clamps or by potting in order to minimize strain at the connector pins and wire crimp areas.</li>
+
+      <li><i>Check Cable Assemblies For Sharp Edges:</i> Cable assemblies are carefully checked for sharp edges that could cut into or nick wire insulation and flight components and boxes during installation and handling and could cause a failure at a later date. Typically, these sharp edges are caused by the aluminum foil wrapped around cables for EMI shielding purposes.</li>
+
+      <li><i>Abrasiveness Of Cable Harnesses On Flight Structure:</i> Cable harnesses are designed and installed on flight structures so as to prevent abrasions on the structure and on flight boxes and parts. Abrasions can be caused by moving parts, handling during integration and test activities, insufficient bending radiuses, etc.</li>
+
+      <li><i>Harness Flexing Across Hinged Joints:</i> Harnesses across hinged joints are designed for the number of planned operations of the joint and also for an appropriate number of additional operations of the joint that could be required during the integration and test activities.</li>
+
+      <li><i>Protection Of Flight Cables And Harnesses:</i> Flight cables and harnesses are appropriately stored and protected from stress and damage until they are installed. This is to ensure that damage to cables and harnesses will not lead to early failures.</li>
+
+      <li><i>Quality And Protection of GSE Cables:</i> GSE and test cables are fabricated to good quality standards and are protected from damage to prevent failures that could result in stress to and early failures of flight hardware. This includes appropriate separation of power, signal , and ground wires to minimize cross coupling of signals and transients that could stress electrical parts and result in early failures.</li>
+    </ol>
+    <u>Technical Rationale:</u>
+
+    <p>Electrical components in flight hardware can be very susceptible to damage due to overvoltages including transients and electrostatic buildups and discharges, application of voltages in the reverse polarity, application of improper signals etc. Flight connectors can be degraded and damaged by excessive and improper mates and demates. The damages can be so severe that the performance is affected and the faulty part can be identified and replaced during the integration and test program. However, in many cases the damage is not immediately apparent and can begin a process of gradual degradation to failure during the mission life of the hardware in space. The above practices have been adopted to prevent the damaging influences that can cause the degradation of components and the loss of reliable operation during the flight mission.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Noncompliance with these practices can result in damage to flight components during the integration and test program. Some of this damage will require replacement of components during the integration and test program whereas other damage can result in early failures during the mission.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use proven GSFC practices during the integration and testing of flight hardware to prevent electrical and mechanical overstressing of flight hardware parts and components, thereby, assuring that the "designed in" reliability is not compromised.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on all GSFC Flight Programs</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

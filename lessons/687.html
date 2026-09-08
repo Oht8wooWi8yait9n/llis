@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0687: Spacecraft Deployed Appendage Design Guidelines</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0687: Spacecraft Deployed Appendage Design Guidelines</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0687 (Database ID: 687)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/687" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Guideline Number GD-ED-2209 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Increases confidence in designs and their operational reliability. Ensures accuracy of design analyses, completeness of requirements in procurement documents and thoroughness of test planning. Ensures functional compatibility of assembly and test fixtures.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Designs must factor in effects of the space environment. Relevant differences between ground test conditions and flight deployment should be identified for consideration at the design and test stages to assure operation with adequate margins. G-negation pickup points can be designed in. Historically, some deployables have passed ground tests but failed in space. Space imposed conditions include thermal gradients and thermally induced loads, outgassing, low moisture, zero gravity and ballooned thermal blankets. Handbook material values do not always apply for the space environment. Physical parameters vary such as solid film lubricant friction which varies with moisture content. The space environment is not easy to simulate in earthbound tests and allowance should be made for expected parameter variations.</p>
+
+    <p>Deployed appendages should be designed using the following guidelines:</p>
+
+    <ol>
+      <li>Avoid complication; simple designs are more reliable.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Avoid single point failures. If unavoidable, assure generous margins. Where practical, design them out or employ redundancy unless redundant complication reduces reliability. Assure redundancy is truly independent, not coupled.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Margins - Provide minimum torque/force margin:<br />
+
+        <center>
+          T<small><sub>t</sub></small> = 1.25 T<small><sub>f</sub></small> + 4.0* T<small><sub>v</sub></small>
+        </center>
+        <br />
+
+        <dl>
+          <dt>where: T<small><sub>t</sub></small> = minimum total available torque/force</dt>
+
+          <dd>T<small><sub>f</sub></small> = fixed and non-variable loads such as Ia terms</dd>
+
+          <dd>T<small><sub>v</sub></small> = worst case variable torques/forces such as coulomb friction and other loads which vary with environmental conditions and operating life.</dd>
+
+          <dd>*Factor 4.0 is the Design Goal, reduced where excessive mass, power or volume is required, e.g., motor driven mechanisms. Maintain a minimum factor of 2.0 under worst case degraded conditions.</dd>
+
+          <dd><br />
+          <br />
+          </dd>
+        </dl>
+      </li>
+
+      <li>Force analyses should use best available loads and forces and examine the full range of expected minimum and maximum parameter values, make adequate allowance for uncertainty. Torque requirements are higher with high friction, deployment velocity and momentum higher with low friction. Use test verified values where available for such critical parameters as friction (if only handbook values available, multiply by 3 to cover uncertainties), cable flexure torque, bearing drag torque. Include worst case thermal effects, wearout, friction changes and end-of-life conditions.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Designs should tolerate moderate increases in friction. Maintain calculated torque/force margins above 2 with m assumed up to 0.5 for typical material combinations. Friction force estimates are untrustworthy, handbook values represent controlled conditions. Use cautiously, test if possible. Consider case differences between published numbers and actual conditions such as effects of part surface treatments, differences between ground test conditions and space environment (humidity, pressure, loads). Use appropriate fits, alignment tolerances, surface treatments, deburring and hardness differentials to avoid galling which nullifies friction estimates.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Temperature effects at deployment should be accounted for, e.g., torque/force changes at hingelines and separation points from temperature gradients within assemblies, bulk temperature effects and differential temperatures between deployables and mounting structure.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Humidity effects, e.g., molybdenum disulfide (MoS<small><sub>2</sub></small>) friction varies and nonmetals change size with moisture content, can affect torque margins and fit clearances. Moly lube should not contain graphite.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Rolling element bearing loads for long life devices should be kept below 320,000 psi mean Hertzian stress for launch, 200,000 psi or lower for operation, less if lubrication is marginal.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Consider effects on bearing preload, torque and life due to thermal gradients and bulk temperature variations.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Analysis.<br />
+        <br />
+        Loads analyses and load sharing between deployed appendages and spacecraft structure can be greatly affected by compliance of typical appendage joints. Examples are bolt preloaded joints, separation joint clamping devices, bearing supported hinge lines, and movable mechanical joints such as gimbals and solar array drives. Accurate stiffness knowledge of these devices is crucial for valid loads analyses.<br />
+        <br />
+
+        <p>Verification and validation should be addressed in design, and plans made to acquire sufficient data to verify models. Kinematic diagrams should be constructed including all degrees of freedom and constraints. For accurate loads and stress analyses, assure correct component parameters are used in the Finite Element Analysis (e.g., bearing stiffness, friction coupling, compliance of bonded joints, stiffness of movable joints - clearance fit or preloaded, transmissibility across joints). Perform loads analysis based on true compliance of individual members for accurate assessment of load sharing. Cross-check with deflection analyses, compare with measured values. Incorporate proper deployment angles, velocity, acceleration and impacts to size components with adequate predicted margins. Include critical component parameters in analysis based on actual measured unit data where possible, eg. bearing friction, compliance of assemblies. Account for fabrication and assembly
+        variables which affect design parameters used in analysis.</p>
+
+        <p>Evaluate zero-g case to determine impact on design and verification. Jerking (non-uniform acceleration) can be critical in deployment. Its effects should be evaluated. Stick-slip friction conditions can worsen the condition.</p>
+
+        <p>Stowed and deployed frequencies should be evaluated. These affect launch loads and Flight Attitude Control.</p>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Separation Planes<br />
+        <br />
+        Employ kickoff springs where practical in the separation joints; especially important for long appendages. Use anti-seize, anti-weld coatings, dissimilar materials. Provide retention joint flexure capability to accommodate launch loads, e.g., spherical, vs conical cup-cones. Assure adequate dynamic envelope clearance. Use the following guidelines for wire and cable routing at hingelines.
+
+        <ul>
+          <li>Mechanical design of appendages should allow cabling across the hinges to be left fixed and undisturbed after component deployment testing throughout spacecraft assembly and integration. Provide field joints for connection of hinge and cable subassemblies.</li>
+
+          <li>Minimize flexure torque through entire travel, allow for temperature effects. Test new designs.</li>
+
+          <li>Use wire guides and clamps, braided and laced cables to maintain free loop control in 1g testing and launch environment and to avoid snags during deployment.</li>
+
+          <li>Control chaffing during deploy and stow tests and launch vibration.</li>
+
+          <li>Use proper cable clamp size for no-slip position control and cushioned clamps for Coax cables.</li>
+
+          <li>Control Coax cable minimum bend radius.</li>
+        </ul>
+      </li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Coax Cable Protection during Component Assembly and Integration and Test<br />
+      <br />
+      Design-in armor protection where possible. Provide takeup allowance for connect/disconnect without cable kinking. Train personnel in correct handling procedures. Follow planned Coax cable handling procedures, use safe temporary support when free ends are not connected, provide for safe and gentle tie-down, prevent crush.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Sharp Edges<br />
+      <br />
+      Eliminate sharp corners that cut through lube coatings, produce galling. Use specific drawing callout to control break and blend of sharp corners on moving elements. This is not always covered by general drawing callouts or implemented under General Workmanship Standards. Double-check workmanship during assembly; visually inspect for sharp corners, handcheck running fits and clearances and verify clearance of chamfers to inside corners.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Contamination Control<br />
+      <br />
+      Design-in labyrinth or contact type seals to contain lubricants, minimize outgassing and limit external contamination.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Limit Switches for Position Monitoring<br />
+      <br />
+      Switches are prone to misadjustment and failure. Use only to indicate safe/stow/deploy positions, not to control deployment sequence. Allow for overtravel and deadband (hysteresis) effects, provide adequate margins for actuation force and stroke. Provide simple, stable adjustability at assembly.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Avoid galling of close-fit parts in moving members during assembly or operation.<br />
+      <br />
+      Prefer non-galling metal-metal couples. Provide adequate differential hardness of parts. Substitute anti-galling stainless steel for conventional SST. Provide anti-gall surface treatments to prevent damage in assembly/disassembly/adjustment operations. Provide anti-gall treatment for titanium parts and fasteners.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide adequate clearance fit allowances in moving members to accommodate:<br />
+      <br />
+      Bulk temperature effects, thermal expansion (CTE) mismatch effects and temperature gradient effects.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Design slip fit interfaces for thermal expansion takeup.<br />
+      <br />
+      Assure friction control where intentional slip is required. Use surface treatments, lubricants and fit clearances which prevent lockup or cocking where slip is intended.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Deployment and Temperature Effects.<br />
+      <br />
+      Determine temperature effects on stowed and deployed frequencies. If explosive deployment devices are used, determine near source shock levels and effects on deployables (instruments, optical devices, etc.). Deploy latches must not rely on appendage momentum; latches should lockup under static (zero velocity) appendage force/torque. If friction dependent, control surface contamination for predictable friction. Avoid thermally induced misalignment (e.g., differential temperature of deployable boom legs). Consider post-deployment thermal contraction of deployable boom lanyards causing limit switch reactuation at low temperature. Control deployment end-of-travel impact, use energy absorbing dampers where necessary. Use floating pin/flange arrangement for hinge joints where practical to provide redundant sliding surfaces. If system will be dormant for a long time, it should be designed so all deployable parts can be partially deployed and retracted periodically to prevent "lockup"
+      due to stiction, lubricant changes, or adhesion of plastics.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Handling - large items<br />
+      <br />
+      Design-in handling fixture attachment points. Locate attachment points to position c.g. for stable lifting. Where feasible, provide for 1g counterbalance attachment on hardware for functional testing.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Design-in self-fixturing alignment and assembly guides.<br />
+      <br />
+      Self-aligning guides permit assembly without expensive fixtures, reduce need for highly skilled personnel. Provide self-aligning parts, with lead-in where practicable to protect precision surfaces, interfaces and bearings and minimize assembly debris generation.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide disassembly features.<br />
+      <br />
+      Plan for unexpected disassembly, rework or reinspection. Design-in pry slots on close fit parts to permit easy separation without damage during typical assembly and disassembly for fit checking, shim selection or end shake checks. Provide puller holes, slots, jacking screw threaded holes or punch holes for disassembly of press fit components.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Key electrical connections.<br />
+      <br />
+      Use differently keyed or dissimilar electrical connections for squibs and motors to prevent inadvertent interchange between prime and redundant and prevent malfunction.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Use specific fastener hardware designs for appendages.<br />
+      <br />
+      Use plated self-locking nuts that reduce thread wear and reduce probability of galling and thread seizure but withstand few reuses. <i>Fastener seizure and removal degrades critical hardware.</i> Limit reuse of self-locking designs. Threads can become damaged, generate wear particles. Choose head designs for driver engagement appropriate to application, torque requirement and accessibility for tools. Small hex drive screws strip easily, Torque-Set and coinslot drive types are difficult to remove. Torque stripe where appropriate to ensure integrity, permit later verification. Avoid countersunk (flat head) fastener usage where practical; driver engagement is easily damaged.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>Provide clearance for thermal blankets and tiedowns at moving interfaces.<br />
+      <br />
+      Provide a taping edge or draw string flange to control blanket edges at moving interfaces. Provide adequate clearance for launch environment dynamic deflections with no protrusions or sharp edges to catch blankets. Provide adequate clearance gap with securely taped edges at moving interfaces; minimum one inch between hard surfaces which get blanketed.</li>
+
+      <li style="list-style: none"><br />
+      <br />
+      </li>
+
+      <li>
+        Lubrication for deployed appendages.<br />
+        <br />
+        Lubrication is crucial for deployables, many of which are mission critical. Key lubricant functions include the separation of surfaces and friction reduction. This is critical because often the deployment forces and kickoff spring forces are kept small to minimize dynamic forces. For sensitive science missions, extremely low outgassing is essential. Most deployables are single use and experience few cycles through test and flight so long wear life issues are not paramount in the lube selection. However, movable joints must sustain ground and launch environments, Flight conditions of sometimes long duration, and then deployment, often at temperature extremes. The clamped separation joints may experience micromotion at interfaces during ground handling, test and launch environments which can disturb surfaces. Lubes must stay in place to effectively separate surfaces, not outgas excessively and minimize friction.<br />
+        <br />
+        Surfaces that must separate or move relative to one another (e.g. hinge line bearings and latching devices) must be designed to preclude the possibility of metal-to-metal adhesion which causes increased friction and, in extreme cases, galling. Launch shifts or on-orbit thermal gradients can produce unexpected added forces at the separation points.<br />
+        <br />
+        To minimize friction problems the following guidelines are followed:
+
+        <ol>
+          <li>Maximize utilization of rolling surfaces, as opposed to sliding motion.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Lubrication or separation of all moving surfaces either by a suitable aerospace grease or dry lubricant coating should be used without exception, even for lightly loaded "friction compatible" surfaces.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>On hard mating surfaces where hard coatings are used (such as Type III anodizing on aluminum) loads must be kept below the bearing yield strength of the substrate metal (e.g. 60 ksi for 6061-T6 aluminum).</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Smooth and polished mating surfaces are preferred.</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Dissimilar material mating surfaces should have low mutual solid solubility, or at least one of the two should have a heavy dissimilar coating (e.g. nitride, carbide or oxide).</li>
+
+          <li style="list-style: none"><br />
+          <br />
+          </li>
+
+          <li>Caging devices should be designed to positively preclude relative motion between clamped surfaces when subjected to shipment or launch vibration. Any separation (gapping) under launch loads is undesirable. Small amplitude oscillatory motion between mating surfaces can damage lubricating films and, in the extreme, result in fretting (adhesion) of the surfaces.</li>
+        </ol>
+        <br />
+        Two alternatives are available for lubrication - "wet" lube with a low vapor pressure aerospace grease and "dry" lube by means of bonded or sputtered MoS<small><sub>2</sub></small> coatings.<br />
+        <br />
+        The wet lube is generally preferred because the lubricating film is self healing and frictional behavior is more consistent and predictable. The grease with the most heritage is Bray 600 series, a synthetic fluorinated oil thickened with micron sized Teflon<small><sup>TM</sup></small> powder. The grease is extremely low outgassing (TML&lt;0.1% and CVCM &lt;0.05% for the standard 125&deg;C - 24 hour test) making contamination concerns negligible for virtually all S/C applications. The wet lube usable temperature range is -80&deg;C to +200&deg;C.<br />
+        <br />
+        For extreme low temperatures, cryogenic applications and other special circumstances, MoS<small><sub>2</sub></small> coatings are suitable. For most consistent performance and lowest possible outgassing these films should be applied by the ion sputtering process. Epoxy and polyimide bonded films can be successfully employed with proper application and burnishing to remove excess material.
+      </li>
+    </ol>
+    <br />
+    <br />
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Careful and critical review during the design stage can produce better, more reliable designs. Such foresight can help avoid many fabrication, assembly, test and deployment problems. These guidelines highlight often overlooked but recurring troublesome problems. Incorporation of successful practices from past experience can reduce cost, avoid unexpected schedule impacts and improve reliability of new devices.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>GSFC Engineering Directorate paper, "Spacecraft Deployable Appendages," May 1992</li>
+
+      <li>MIL-A-83577 General Specification for Moving Mechanical Assemblies for Space and Launch Vehicles</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Incorrect analysis parameters for critical moveable components can result in improper loads and under- or over-design of supporting structure or improper loads in deployables, causing malfunction or breakage. Insufficient force/torque margins, parts hangup or unaccounted drag can result in non-release. Sharp edges and difficult assembly can degrade parts, lubricants and coatings, allowing passage of ground tests but causing flight failure.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This guideline describes design practices for deployable appendages which can improve accuracy of analyses, simplify and optimize designs, and minimize fabrication and test problems to produce reliable deployables. This guideline includes techniques used on successful missions and will help avoid past deployment problems.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

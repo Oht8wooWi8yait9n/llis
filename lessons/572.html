@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0572: Damage to Bipropellant Main Engines from Premature Oxidizer Depletion (1997)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0572: Damage to Bipropellant Main Engines from Premature Oxidizer Depletion (1997)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0572 (Database ID: 572)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1997-07-17</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/572" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The first in a series of commercial geosynchronous satellites experienced abnormal operation of the bipropellant main engines following initial pressurization of the propellant tanks. Subsequent analysis of contractor test data on engine flows, previously unavailable to the customer, indicated an actual engine mixture ratio slightly higher than the ratio used to determine the propellant loading. This resulted in the depletion of the oxidizer about one minute prior to the end of the final burn required to place the spacecraft on station. The extremely large monopropellant burns required to compensate for the absence of oxidizer may reduce the mission life.</p>
+
+    <p>The spacecraft was provided with two methods to detect oxidizer depletion: (1) a single accelerometer reading indicating acceleration below a manually set threshold and (2) multiple readings of acceleration values which are time-averaged at 60 percent below the last steady-state value. With the latter method active during the final burn, the depletion was not detected by the onboard software because the average acceleration did not drop below the 60 percent threshold. Severe line pressure oscillations, indicative of intermittent ingestion of oxidizer bubbles, indicated the main engines were still firing. The engines were allowed to operate in this abnormal mode for about 30 seconds before shut down was commanded by ground control to minimize engine damage.</p>
+
+    <p>Additional Keyword(s): Engine Flow Test Data</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Premature depletion of one propellant can occur in bipropellant systems if engine and component acceptance test data are not properly considered when determining the flight propellant loads. The level of dissolved gases in the oxidizer should also be considered.</li>
+
+      <li>For nitrogen tetroxide/hydrazine engines similar to those intended for use in future planetary missions, oxidizer depletion may be difficult to detect from accelerometer readings because of (a) the residual thrust of the hydrazine operating in monopropellant mode and (b) random slugs of oxidizer which may continue to be ingested by the engine for tens of seconds after the first bubbles are ingested.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol>
+      <li>For bipropellant propulsion systems, ensure that supplier data on engine and engine component acceptance tests are used properly in determining the flight propellant loads and that consumption data are available to mission planners for use in accurately predicting the onset of oxidizer depletion. Be sure to verify the level of helium or nitrogen pressurant gas saturation in the propellants.</li>
+
+      <li>If a method that time averages the reduction in acceleration from steady state values is used to determine the onset of oxidizer depletion and to trigger burn termination, select an appropriate threshold deceleration value based on actual test data.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #30701: Reliance on Part Hermeticity and Residual Gas Analysis on GOES-R Bipolar Junction Transistors</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #30701: Reliance on Part Hermeticity and Residual Gas Analysis on GOES-R Bipolar Junction Transistors</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #30701 (Database ID: 30701)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-11-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase C</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Parts,  Materials,  & Processes,  Quality,  Reliability,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/30701" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">Late in development of the first in the GOES-R satellite series, an in-circuit failure of a JANS2N3637 bipolar junction transistor (BJT) in a TO-39 package was encountered that was traced to corrosion in one of the bondwires.&nbsp; Failure analysis and residual gas analysis (RGA) of the failed part revealed the presence of moisture and atmospheric ingress.&nbsp; Within a few weeks of this event a similar failure was encountered involving a JANS2N2222a BJT in a TO-18 package on the Insight project, experienced by the same prime contractor.&nbsp; This part showed elevated moisture in the internal cavity.&nbsp; It appears that some parts in the lot had elevated hydrogen that may have then been involved in a chemical reaction prompted by handling of the part and weakness in the seal.&nbsp; Both of these parts problems prompted the project to replace dozens of parts without any proof or indication that the replacement parts were from better lots than the original lots, at the cost of multiple millions of dollars and a significant launch delay.&nbsp; In both cases on the same project, the reliance on part hermeticity and RGA combined with fine and gross leak testing cost the project enormous amount of money, months of schedule usage, and elevated the risks to the project substantially due to the excessive amounts of rework, without any certainty in the improvement of the lots. The “partial hermeticity” in each case likely trapped moisture and contaminants to cause ideal conditions for corrosion.&nbsp; &nbsp;The project had no choice but to replace the parts because there was no way to provide assurance that the remaining parts would be able to survive 15 years on-orbit, while new parts that have not experienced any anomalies provide maximum confidence. Unfortunately, there are no statistically significant means to assure the integrity of hermeticity across the parts being used with high confidence without destroying most of the parts.&nbsp; </span></span></span></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ul> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The reliance on hermetic parts can drive up both technical and programmatic risk by (1) trapping contaminants in the parts during the manufacturing process, (2) allowing contaminants to enter the parts for those that are on the fine edge of being hermetic, and (3) providing false confidence that the use of such parts provides substantial protection against part failure due to corrosion.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The sample size for RGA testing under MIL-PRF-19500 only provides a top-level indicator that parts in the lot are free from significant elevated moisture or contaminants.&#xa0; Furthermore, there is no practice increased sample size that would provide enough statistical basis.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">Before replacing parts always verify with certainty that the replacement parts are better than the existing parts.</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">The use of JANS parts is neither necessary or sufficient for assuring integrity or reliability of parts through integration and testing (I&amp;T).</span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif">Sound system level testing is an essential means to flesh out many problematic parts issues. There should never be a consideration that the use of JANS parts can supersede good design or robust environmental testing.</span></span></span></li> 
+</ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="color:black">Recognize that parts intended to be hermetic are subject to screening and </span>destructive physical analysis (<span style="color:black">DPA) processes that are not statistically significant. This leaves an opportunity for escapes in hermetic parts subject MIL-PRF-19500 (to include JANS cavity parts such as BJTs in TO cans).</span></span></span></span></li> 
+ <li><span style="font-size:11pt"><span style="line-height:115%"><span style="font-family:Calibri,sans-serif"><span style="color:black">Do not replace parts based on a part failure or alert without considering fully the risk of replacement and confirmation that the replacement lot is statistically better than the installed lot.&#xa0; </span></span></span></span></li> 
+</ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0764: Controlling Stress Corrosion Cracking in Aerospace Applications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0764: Controlling Stress Corrosion Cracking in Aerospace Applications</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0764 (Database ID: 764)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/764" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice No. PD-ED-1227; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p>Selection of materials, heat treating methods, fabrication methodologies, testing regimes, and loading paths that are not susceptible to stress corrosion cracking will promote fewer failures due to Stress Corrosion Cracking (SCC) and will eliminate downtime due to the change-out of components.</p> 
+<p><u>Implementation:</u></p> 
+<p>Numerous materials have been tested for susceptibility to SCC in a 3.5 percent NaCl alternate immersion bath, a 5 percent NaCl salt fog cabinet and a 90-100 percent relative humidity cabinet. These tests resulted in the development of a specification on Design Criteria for Controlling Stress Corrosion (Reference 3). The information contained in the specification is based upon laboratory tests in which specimens were either sprayed with salt water or periodically immersed and withdrawn; by exposure of the specimen to simulated seacoast or mild industrial environments; and by service experience with fabricated hardware. This specification also lists materials that have a high resistance, a moderate resistance, or a low resistance to SCC. MSFC's Material Selection List for Space Hardware (Reference 4) also lists materials that have a high resistance to SCC.</p> 
+<table border="0" width="95%"> 
+ <tbody> 
+  <tr valign="TOP"> 
+   <td><img alt="refer to [D] description" border="0" height="286" src="https://llis.nasa.gov/llis_lib/images/1009218main_0764-table1.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009697main_0764-table1.txt">[D]</a></td> 
+   <td><img alt="refer to [D] description" border="0" height="370" src="https://llis.nasa.gov/llis_lib/images/1009216main_0764-1.jpg" title="refer to [D] description" width="300"><a href="https://llis.nasa.gov/llis_lib/txt/1009695main_0764-1.txt">[D]</a></td> 
+  </tr> 
+ </tbody> 
+</table> 
+<img align="RIGHT" alt="refer to [D] description" border="0" height="383" src="https://llis.nasa.gov/llis_lib/images/1009217main_0764-2.jpg" title="refer to [D] description" width="400"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009696main_0764-2.txt">[D]</a> 
+<p>To avoid failure, the tensile stress in service must be maintained at a safe level. Since stresses are additive, all sources of stress (see Table 1) must be considered to ensure that the threshold stress (the stress level which will result in a failure if stress corrosion is present) is not exceeded. There is not an absolute threshold stress for stress corrosion as there is with other material properties. Therefore, estimates of the stress corrosion threshold for a specific service application must be determined for each alloy and heat treatment by using a test piece, a stressing procedure, and a corrosive environment that are appropriate for the material's intended application. A simplified stress corrosion test fixture with a round tensile specimen installed is illustrated on Figure 1 in a simulated corrosion environment. A masking material is applied to the test fixture to ensure that the specimen alone is exposed to the corrosive environment. The tensile specimen is stressed to a desired level (typically 25, 50, 75 or 90 percent yield strength). The specimen is then submerged in a 3.5 percent NaCl alternate immersion bath, in a 5 percent NaCl salt spray (fog), or in a 90-95 percent relative humidity test. Test duration is typically three months for low alloy steels and aluminum alloys, and six months for stainless steel.</p> 
+<p>The most common processing methods for production of wrought metal are rolling, forging and extruding. These processing methods produce a granular structure which is parallel to the flow of metal. As shown on Figure 2, grain orientation is parallel to the longitudinal direction of rolling, extrusion or drawing. When thin shapes are rolled or extruded, grains are oriented in a short transverse or long transverse direction as shown on Figure 2. The resistance of metals to SCC is always less when tension is applied in a transverse direction. It is least for the short transverse direction. Stress corrosion is aggravated when tensile stresses due to assembly have been applied in the short transverse direction. Table 2 lists typical materials and environments that may cause stress corrosion.</p> 
+<img alt="refer to [D] description" border="0" height="413" src="https://llis.nasa.gov/llis_lib/images/1009219main_0764-table2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009698main_0764-table2.txt">[D]</a> 
+<p><u>Technical Rationale:</u></p> 
+<p>SCC is caused by the combined action of sustained tensile stress and corrosion which result in premature failure of materials. Certain materials are more susceptible than others. If a susceptible material is placed in service in a corrosive environment under a tension of sufficient magnitude, and the duration of service is sufficient to permit the initiation and growth of cracks, failure will occur at a stress lower than the material will normally be expected to withstand.</p> 
+<p><u>References</u></p> 
+<ol> 
+ <li>Hall, A. and Hongola, M: <q>Stress Corrosion Test Procedure Applicable to Lot Acceptance Testing and Qualification Testing for Forward Separation Bolt Assembly.</q> Hi-shear Corporation, Ordnance Group, Torrance, CA, June 1, 1988.</li> 
+ <li>Fontana, Mars G.: <q>Corrosion Engineering.</q> Third Edition, McGraw-Hill Book Company, New York, 1986.</li> 
+ <li><q>Design Criteria for Controlling Stress Corrosion Cracking.</q> MSFC-SPEC-522B, NASA/Marshall Space Flight Center, AL, September 30, 1988.</li> 
+ <li><q>Material Selection List for Space Hardware.</q> MSFC-HDBK-527F, NASA/Marshall Space Flight Center, AL, September 30, 1988.</li> 
+ <li>Crain, Bruce D.: <q>Handbook of Corrosion Data.</q> ASM International, Metals Park, OH, August 1989.</li> 
+ <li>McEvily, A. J. Jr.: <q>Atlas of Stress Corrosion and Corrosion Fatigue Curves.</q> ASM International, Metals Park, OH, 1990.</li> 
+ <li>Scully, J. C.: <q>The Fundamentals of Corrosion.</q> Third Edition, Pergamon Press, Inc., Elmsford, NY, 1990.</li> 
+ <li>Torres, P.D.: <q>MSFC Corrosion Test Procedure Currently Followed for Testing Round Tensile Specimens.</q> Memo No. EH24(92-24), NASA/Marshall Space Flight Center, AL, October 22, 1992.</li> 
+ <li><q>Standard Practice for Evaluating Stress Corrosion Cracking Resistance of Metals and Alloys by Alternate Immersion in 3.5% Sodium Chloride Solution.</q> ASTM G44-88, American Society for Testing and Materials, Philadelphia, PA, June 1988.</li> 
+ <li><q>Standard Practice for Preparation of Stress Corrosion Test Specimens for Weldments.</q> ASTM G58-85, American Society for Testing and Materials, Philadelphia, PA, November 1985, (reapproved 1990).</li> 
+ <li><q>Standard Test Method for Salt Spray Testing.</q> ASTM B117-90, American Society for Testing and Materials, Philadelphia, PA, May 1990.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to proven criteria for controlling SCC could result in hardware failure, which could result in schedule slippages, excessive resource expenditures, shortened mission life, mission failure, and, in extreme cases, loss of life.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>This practice presents considerations that should be evaluated and applied concerning stress corrosion and subsequent crack propagation in mechanical devices, structural devices, and related components used in aerospace applications. Material selection, heat treat methods, fabrication methodology, testing regimes, and loading path assessments are presented as methods to reduce the potential for stress corrosion cracking in a material's operational environment.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Saturn IB, Saturn V, Lunar Roving Vehicle, Space Shuttle Solid Rocket Booster, Space Shuttle External Tank, Space Shuttle Solid Rocket Motor, Material Experiments Assembly, Inertial Upper Stage, Skylab, High Energy Astronomy Observatory, Hubble Space Telescope.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

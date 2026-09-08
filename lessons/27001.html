@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #27001: Translucent Room Temperature Vulcanizing (RTV) Acts as Unintended Optical Element</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #27001: Translucent Room Temperature Vulcanizing (RTV) Acts as Unintended Optical Element</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #27001 (Database ID: 27001)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-05-05</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Langley Research Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Parts,  Materials,  & Processes,  Spacecraft and Spacecraft Instruments,  Engineering design and project processes and standards</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/27001" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p style="margin: 0in 0in 8pt;">The CERES FM-6 instrument includes three sensor assemblies that all use the ICM for internal calibration. The Short-Wave Internal Calibration Source (SWICS) includes a lamp, a Circuit Card Assembly (CCA), mirror, and photodiode. As shown in Figure 1, the photodiode views the SWICS tungsten filament lamp via a hole in the fold mirror through a band pass filter (700nm-800nm) mounted in front of the photodiode can.</p> 
+<p style="margin: 0in 0in 8pt;"><img alt="" src="/lessons/27001/swics figure 1.png" style="width: 500px; height: 298px;"></p> 
+<p style="margin: 0in 0in 8pt; text-align: center;">Figure 1. SWICS Lamp and Monitor Photodiode</p> 
+<p style="margin: 0in 0in 8pt;">During baseline instrument calibration in May 2012, performance issues were observed for the SWICS. As seen in Figure 1, the lamp output can be observed by both the short-wave sensor itself and the monitor photodiode. During the 45 day calibration campaign, the short-wave sensor indicated that the lamp was brightening approximately 0.02%/day. During that same time, the monitor photodiode indicated dimming of approximately -0.03%/day. It should be noted that the photodiode is a relatively narrowband measurement, sensitive in the range 700nm to 800nm while the broadband short-wave sensor measures 300nm to &gt; 3μm.</p> 
+<p style="margin: 0in 0in 8pt;">An extensive investigation ruled out the electronics and many other possible root causes. The investigation discovered and corrected filter assembly issues that turned out to not be significant enough to be the root cause for the observed problem.</p> 
+<p style="margin: 0in 0in 8pt;">Eventually, the SWICS lamp assembly’s translucent DC93-500 RTV was determined to be a critical part of the optical path. As shown in Figure 2, rays emitted from the back of the lamp filament scatter forward into the SWICS optical train from the flat surface behind the bulb housing. Because of the location of the flat surface with respect to the lenses, more light scattered from the flat surface reaches the SWICS photodiode than the short-wave sensor. In fact, nearly half of the photodiode signal comes from reflections off the back plane of the lamp housing. Hence, the photodiode output is much more sensitive to physical changes in the RTV and changes in the material properties of the RTV than the short-wave sensor. Physical changes in the RTV that could vary over time include debonding from the lamp housing, void/bubble movement and mold deformation with temperature. In addition, material transmission changes in the RTV due to outgassing under vacuum could have a larger impact on the photodiode because of the narrower spectral sampling.</p> 
+<p style="margin: 0in 0in 8pt;"><img alt="" src="/lessons/27001/swics figure 2.png" style="width: 500px; height: 331px;"></p> 
+<p style="margin: 0in 0in 8pt;">&nbsp;</p> 
+<p style="margin: 0in 0in 8pt;">Therefore, the evidence points to photodiode sensitivity to physical changes in the RTV and changes in the RTV optical properties as the root cause for the ICM instability.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin: 0in 0in 8pt;">Translucent DC93-500 can be a significant optical element. Physical changes to the RTV can occur in uncontrolled ways over time. In addition, the RTV material/optical properties under vacuum cause a slow degradation of the transmittance through the RTV</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p style="margin: 0in 0in 8pt;">Translucent RTV should not be used in situations where it can become part of the optical path.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

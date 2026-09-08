@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1519: Procure an Adequate Mission Operations Server (2004)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1519: Procure an Adequate Mission Operations Server (2004)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1519 (Database ID: 1519)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2004-11-29</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1519" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>An Operations Storage Server (OSS) capable of supporting both Mars Exploration Rover missions (MER-A and MER-B) was implemented, but only after early server hardware failures that necessitated major re-planning. In 2002, during Phase C (Design &amp; Build) of the MER project, plans were proposed to acquire a high performance, centralized, project server to rapidly process the high volumes of science data expected of the Ground Data System (GDS) during operations on the Martian surface. The Mission Operations System (MOS) funding in Phase D (integration &amp; test), however, was inadequate to support full implementation of the recommended OSS system. The less expensive OSS that was deployed experienced repeated failures during pre-launch test, post-launch test, and launch/cruise operations. This included major server hardware failures lasting for days that occurred only weeks prior to MER-A launch in June 2003, and several weeks prior to Entry, Descent, and Landing (EDL)
+    activities in January 2004. Contributing issues included:</p>
+
+    <ul>
+      <li>Late procurement of a server system comprised of low-end, poorly integrated hardware incapable of meeting mission requirements for speed and reliability.</li>
+
+      <li>OSS design engineering involvement in the OSS was significantly reduced (from ~1.5 FTE to 0.25 FTE) prior to final OSS implementation.</li>
+
+      <li>Very limited testing prior to operational use because the original OSS was not installed until late in system integration and test (ATLO).</li>
+
+      <li>Major changes to the system architecture from a single isolated server assigned to each MER mission, to three servers networked between two buildings, multiple floors and four subnets, plus backup servers.</li>
+    </ul>
+
+    <p>Reliability concerns prompted the MER project to scrap this OSS design late in 2003, and procure a turnkey system that was installed by the vendor just prior to EDL. The project was then able to use components of the original system to provide a backup server capability. This cluster system has successfully supported both rover missions without a major failure.<br />
+     Additional Key Words: Data Acquisition System, Distributed Computing Environment, Ground &amp; Mission Operations, Multimission Data Services, Mission Data System, science data processing, server architecture<br />
+    </p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Critical mission dataflow (ground) components that are procured and implemented too late, or feature low performance, non-integrated hardware, are unlikely to reliably provide the speed and capability required by mission operations.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Procure and provide design engineering support to implement an integrated suite of server hardware that fully meets mission data throughput requirements and can be expanded without redesign. Utilize the expertise of experienced vendors to install the system at least nine months prior to expected operational use (e.g., launch operations). Stabilize Mission Support Area (MSA) plans early to prevent infrastructure changes that could impact overall system reliability and performance. Plan for a robust backup system.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Preventive Action Notice No. Z87145 was opened by JPL on August 2, 2005 to initiate and document appropriate Laboratory-wide corrective action on the above recommendation.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

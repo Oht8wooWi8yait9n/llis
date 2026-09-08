@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1997: Application Notes Facilitate the Use of Non-NASA Standards</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1997: Application Notes Facilitate the Use of Non-NASA Standards</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1997 (Database ID: 1997)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2008-11-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Not Applicable &amp;raquo; Pre-Phase A</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> NASA Standards,  Level 0/1 Requirements,  Early requirements and standards definition,  Engineering design and project processes and standards,  Level II/III requirements definition</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1997" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Technical standards capture lessons learned and new technology, provide a common base for interoperability, and facilitate engineering excellence. These include standards published by NASA, other government agencies, standards developing organizations (SDOs), and international bodies. Standards, specifications (specs), and handbooks published by NASA are particularly valuable as they provide direction that is specific to the space environments and other design challenges that are faced solely by NASA missions. However, federal government policy (Reference (1)) explicitly discourages the preparation of new NASA standards and handbooks where existing industry standards are technically adequate. Although this has the salutary effect of minimizing the maintenance of duplicative standards, it also means that a NASA system operating in the vacuum of space has had to justify non-use of a grease specification intended for army tank tracks. Another extreme-- but real-- example is the designation of a paint specification for naval ships for use in spacecraft coatings. 
+<br> 
+<br> Clearly, general-use industry standards and specs may not be optimal for spaceflight applications where, for example, the out-gassing properties of lubricants and paints must be rigorously controlled. Furthermore, many specs have recently been rewritten to require the use of recycled and commercial-off-the-shelf (COTS) materials in the production process. Requirements have been eliminated that have called for (1) customer notification of changes in product materials and processes and (2) testing to re-qualify the product over the full range of properties. The U.S. Office of Management and Budget (OMB) requires NASA and other federal agencies to report how many government standards were eliminated and how many industry voluntary consensus standards (VCS) were adopted each year, but projects have not been required by the OMB to assess the risk of applying non-optimal requirements. 
+<br> 
+<br> To minimize this risk, NASA has pioneered the preparation of application notes that add NASA-specific cautions or caveats to a number of industry standards adopted by NASA. The purpose of the application notes is to identify provisions in a document that may be widely applicable to general industry or even to the aerospace industry, but may be incorrect or misleading when used in the design of NASA spaceflight systems. The application notes are prepared by the NASA Engineering Standards Panel (NESP) and made available, along with the full text of the industry documents, in the NASA-maintained standards repository (Reference (2)). 
+<br> 
+<br> A pyrovalve (pyrotechnic device) specified for use as a backup in the Mars Reconnaissance Orbiter (MRO) Propellant Isolation Assembly (PIA) provides an example of the need for an application note. The material used to fabricate the primer chamber component was flagged as susceptible to stress corrosion. Inspection of a previously activated unit (Figures 1 and 2) showed failure due to stress corrosion cracking of the primer chamber body (PCB) (Reference (3)). The Materials Identification and Usage List (MIUL) for the pyrovalve identified the PCB as fabricated from 7075 aluminum alloy with a T651 temper. AMS-QQ-A-225/9, the industry spec adopted by NASA and DoD for procurement of this material, states that, quotThis alloy is intended for use where high strength and good corrosion resistance are requiredquot (Reference (4)). In this application, however, the 4000 psi of high chloride combustion gas pressure to which the material is subjected upon firing of the booster charge causes stress corrosion cracking. 
+<br> &nbsp; 
+<table border="0"> 
+ <tbody> 
+  <tr> 
+   <td><img alt="Figure 1 is a high contrast photographic image similar to an X-ray. A dark circular mass lies in the upper left quadrant of the image; the periphery of the dark circle has a vaguely spongy texture. The remainder of the image is an off-white blank. Thin dark striations, similar to gullies make by running water, extend from the dark circle into the off-white area. These represent voids where there are cracks in the material. There are three main branches of these striations, each leading to narrower patterns of striations." border="0" height="140" src="https://llis.nasa.gov/llis_lib/images/1021247main_2008-11_AppNotes_Fig1.jpg" title="Figure 1 is a high contrast photographic image similar to an X-ray. A dark circular mass lies in the upper left quadrant of the image; the periphery of the dark circle has a vaguely spongy texture. The remainder of the image is an off-white blank. Thin dark striations, similar to gullies make by running water, extend from the dark circle into the off-white area. These represent voids where there are cracks in the material. There are three main branches of these striations, each leading to narrower patterns of striations." width="180"></td> 
+   <td>............</td> 
+   <td valign="bottom"><img alt="Figure 2 is a color photo of a silvery metal part. Most of the photo is taken up by a barrel-shaped structure, with several thin cracks in it that extend parallel to the longest axis of the structure. A threaded extension protrudes from the right end of the barrel; it's diameter is about one-half the diameter of the barrel." border="0" height="123" src="https://llis.nasa.gov/llis_lib/images/1021248main_2008-11_AppNotes_Fig2.jpg" title="Figure 2 is a color photo of a silvery metal part. Most of the photo is taken up by a barrel-shaped structure, with several thin cracks in it that extend parallel to the longest axis of the structure. A threaded extension protrudes from the right end of the barrel; it's diameter is about one-half the diameter of the barrel." width="180"></td> 
+  </tr> 
+  <tr> 
+   <td><b>Figure 1</b>. Scanning electron<br> microscope (SEM) image<br> shows evidence of stress<br> corrosion cracking of the MRO<br> PIA backup pyrovalve.</td> 
+   <td>&nbsp;</td> 
+   <td valign="top"><b>Figure 2</b>. Effect of stress corrosion<br> cracking on the MRO PIA backup<br> pyrovalve.</td> 
+  </tr> 
+ </tbody> 
+</table> 
+<br> An application note in the NASA standards repository would alert NASA users of Reference (4) to the circumstances under which Paragraph 6.1 (Intended Use) is misleading in regard to stress corrosion resistance. The application note would point NASA users to MSFC-SPEC-522B for rating of resistance to stress corrosion cracking, and would provide guidance on the threshold crack propagation stress for NASA applications. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li>OMB Circular A-119, quotFederal Participation In The Development And Use Of Voluntary Consensus Standards And In Conformity Assessment Activities,quot February 10, 1998</li> 
+ <li>NASA Standards and Technical Assistance Resource Tool, http://standards.nasa.gov</li> 
+ <li>quotValves Corrosion,quot JPL Problem/Failure Report No. Z85547, January 21, 2005.</li> 
+ <li>AMS-QQ-A-225/9, quotAluminum Alloy 7075, Bar, Rod, Wire, and Special Shapes; Rolled, Drawn, or Cold Finished,quot Society of Automotive Engineers (SAE), Paragraph 6.1: Intended Use, July 1, 1997.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+NASA use of industry standards and specs issued by SDOs like the Society of Automotive Engineers (SAE) or the American Society for Testing and Materials (ASTM) is explicitly encouraged by government policy, but these general-use documents are not typically prepared with consideration given to spaceflight applications. Application of these standards to spacecraft systems without the preparation and review of appropriate guidance may pose an unacceptable and unnecessary risk to mission success. The deregulation of industry by elimination or relaxation of government standards and specs for the procurement of qualified materials, processes, and products (formerly audited and enforced by entities such as Defense Contract Administration Services (DCAS)), has further increased the risk that even products known to be acceptable will not perform as expected.
+</section>
+<section><h2>Recommendation(s)</h2>
+NASA users of non-NASA engineering standards issued by standards developing organizations for industry-wide use should consult application notes that alert NASA users to provisions of questionable applicability to NASA systems. NASA users should also assist in identifying such provisions that necessitate the preparation of new application notes.
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.1.2 (Flight System Design: General-- Design Standards) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

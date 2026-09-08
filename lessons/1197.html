@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1197: Deep Space 2 Telecom Hardware-Software Interaction (1999)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1197: Deep Space 2 Telecom Hardware-Software Interaction (1999)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1197 (Database ID: 1197)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2002-04-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1197" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>During post launch bench thermal testing of the Deep Space 2 (DS-2) telecommunications subsystem (TS), it was discovered that the DS-2 transmit frequency was out of specification when the flight spare electronics was exposed to low temperatures (~ -80 °C). Upon investigation, a previously unknown hardware-software interaction was discovered.</p> 
+<img border="0" height="410" src="https://llis.nasa.gov/llis_lib/images/1009435main_1197-1.jpg" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009906main_1197-1.txt">[D]</a> &nbsp; 
+<p>In the design of the TS, the flight software commands a temperature measurement of the master crystal oscillator. This measurement is made to adjust the oscillator frequency to compensate for previously characterized, temperature induced, frequency drifts. The software then refers to a lookup table, and applies the appropriate compensation needed to keep the oscillator frequency within specification over the flight allowable operational temperature. Troubleshooting indicated that, due to a programming error, the software fails to power a sensor ASIC during the period when temperature should be measured by the device. This error was not apparent during ambient testing because the software defaults to a fixed level of compensation at room temperature.</p> 
+<p>During assembly and test of the DS-2 flight hardware, a decision was made to delete TS bench thermal testing because of tight schedule constraints. Previous bench thermal tests of the flight subassembly hardware were believed to have been adequate and to have measured performance representative of the final delivered subsystem. The subassembly tests, however, did not exercise the flight software. Because the final subsystem test was deleted, an important hardware-software interaction was missed.</p> 
+<p>The frequency drift was sufficient to cause a 0.5dB degradation of the DS-2 downlink signal from Mars Global Surveyor-an inconsequential effect given the large design margin in the downlink budget.</p> 
+<p>Reference: Jet Propulsion Laboratory Problem/Failure Report No. Z50019, February 4, 1999.</p> 
+<p>Additional Key Words: telecomm subsystem, power-on testing, software test, frequency excursion, end-to-end test</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Hardware subassembly thermal tests may not be indicative of subsystem or higher level performance.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>To fully validate performance, test integrated software and hardware over the flight operational temperature range.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraphs 6.13.2 and 6.13.3 (quotEngineering Practices: Design and Verification for Environmental Compatibilityquot), in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008. 
+<br /> In addition, JPL has referenced the lesson as supporting Paragraph 8.2.1 (quotFlight System Verification and Validation Design: Pre-Delivery Verification - Subsystem and Assembly Levelquot), in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006. 
+<br />
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

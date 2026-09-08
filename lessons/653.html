@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0653: Electrical Shielding of Power, Signal and Control Cables</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0653: Electrical Shielding of Power, Signal and Control Cables</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0653 (Database ID: 653)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/653" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lessons Learned is based on Reliability Practice No. PD-ED-1213; from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>High performance shielding on wiring harnesses, cables and wires minimizes radiated emissions from hardware that could be picked up by itself or other hardware and interfere with proper operation. Shielding also minimizes the sensitivity of hardware to radiated emissions, from itself or other hardware, that could interfere with proper operation.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Cable shielding that can provide 60 dB or more of shielding effectiveness is used to meet the radiated emission and the radiated susceptibility requirements of GSFC's General Environmental Verification Specification for STS &amp; ELV Payloads, Subsystems, and Components (GEVS-SE). This document contains a baseline for demonstrating by test the satisfactory performance of hardware in the expected mission environments.</p>
+
+    <p>Connector types should be selected that provide 60 dB or more of shielding, and provide an appropriate method for attaching cable shields and maintaining a low impedance path to chassis or structure ground. Soldering shields to the back of connectors is not a good practice since many cables use both an aluminum foil shield and a braid shield. Also, soldered connections make repairs and wiring changes very difficult. Good practice is to use a solid back shell that tightly grips the shield all the way around and provides complete 360 degree shielding. Cable shields should not be attached to connector pins and grounded on the inside equipment chassis or boxes since this enables shields to conduct outside emissions into the box, and inside emission to the outside, and can cause radiated emission problems.</p>
+
+    <p>Chassis or box mounted connectors should have a conductive gasket between the mounting surface of the connector and the chassis or box in order to provide an EMI tight seal. The mating surfaces of the connector and the chassis or box should be clean and highly conductive.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The practice provides a basis for the selection of cable shields and connector types that enable equipments to comply with the References 1 and 2 EMC requirements. Additionally, the proper selection of cable shielding and connector types significantly reduces the possibility of electromagnetic compatibility problems.</p>
+
+    <p><u>Related Practices:</u></p>
+
+    <ol>
+      <li>Power Line Filters - Practice No. PD-ED-1206.</li>
+
+      <li>EMC Guidelines for Payloads, Subsystems and Components - Guideline No. GT-TE-2401.</li>
+    </ol>
+
+    <p>References:</p>
+
+    <ol>
+      <li>General Environmental Verification Specification For STS &amp; ELV Payloads, Subsystems, And Components (GEVS-SE).</li>
+
+      <li>Shuttle Orbiter/Cargo Standard Interfaces Document (JSC 07700 Volume XIV Attachment 1 (ICD 2-19001).</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Impact of Nonpractice:<br />
+    <br />
+    The absence of high performance cable shielding frequently results in cross interference which degrades hardware operation and can obliterate scientific data. These problems can usually be identified in ground testing, but correcting them by retrofitting flight hardware is very difficult and expensive. Therefore, it is important that cable shielding be included in the early design of hardware.</p>
+
+    <p>Significant interference problems can occur on orbit that were not corrected during ground testing or were not found due to hardware interference situations that could not be exactly duplicated during ground testing. Also, deterioration or partial failure of components and parts can result in increased levels of radiated emissions. Hardware that is susceptible to these radiated emissions can exhibit problems such as microprocessor resets, false or inaccurate engineering data readouts, unintentional mode changes, and noisy or lost scientific data. Cable shielding minimizes these interference problems by isolating hardware from radiated emissions.</p>
+
+    <p>Numerous EMC tests at GSFC have demonstrated that unshielded cables and wires such as power leads, thermistor, and thermostat leads pick up radiated emission signals and re-radiate them from all areas of a payload. Additionally, the signals are often conducted inside shielded boxes. These tests have also shown that signal and control leads should have 60 dB or more of shielding effectiveness; whereas, most commercial shielded cable has only 30 to 40 dB of shielding effectiveness.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Practice:<br />
+    <br />
+    All wiring harnesses, cables, and wires on payloads, instruments, subsystems, and components are well shielded, including the use of connector types that provide tight EMI back shells or other means for attaching shields. This practice assumes that all efforts have been made to develop a design which requires minimum shielding.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Program Which Certified Usage:<br />
+    <br />
+    All GSFC Flight programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

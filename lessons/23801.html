@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #23801: Requirements Management Process and Database</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #23801: Requirements Management Process and Database</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #23801 (Database ID: 23801)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2018-04-18</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Program and Project Management,  Configuration control and data management,  Review systems and boards,  Engineering design and project processes and standards,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/23801" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The GSDO Program System Requirements Review was held in 2012 and the Preliminary Design Review was held in 2014 to help establish the groundwork needed to launch NASA’s Orion spacecraft. During the time leading up to the December 2014 launch of Exploration Flight Test 1 (EFT-1), the first Orion test flight, the GSDO Program set up the Cradle database for requirements management. The project schema was configured and the program determined how requirements would be tracked and closed. </p> 
+<p>Cost and schedule impacts occurred due to a number of issues with how the requirements were structured, allocated and closed. System acceptance or certification reviews were delayed due to the lack of an efficient process for closing requirements or making closure evidence available in configuration-managed repositories. Significant resources were needed in order to correct problems with the GSDO Program’s requirements set and the allocation, management and closure of requirements.</p> 
+<ol> 
+ <li style="list-style-type:none"> 
+  <ol> 
+   <li>Requirements related to Exploration Mission 1 (EM-1) and Exploration Mission 2 (EM-2) were not cleanly separated by mission. There were EM-2 children of EM-1 requirements. Verification and validation testing could not close the EM-1 parent requirements since EM-2 implementation and testing were considered future work for the EM-1 requirements. These problems were corrected by adding an effectivity field to specify dates associated with each requirement, and requirements had to be separated by mission.</li> 
+   <li>The Engineering organization kept its own set of subsystem-level requirements outside of the Cradle database, and its requirements set did not always accurately reflect changes to the Program’s requirements set. The Engineering organization also had some requirements that had not been allocated by the Program. The problem was corrected by shifting the Engineering organization’s management of its requirements to the Program’s requirements database.</li> 
+   <li>Design verification matrices (DVM) were used by the Engineering organization as closure evidence for requirements, but were not integrated with the Program requirements database. These matrices did not always have the correct requirements and did not always have links to configuration-managed evidence from testing. This required reworking DVMs.</li> 
+   <li>There were delays in the availability of configuration-managed evidence of test completion. These delays were the result of inefficient processes for placing test results into configuration-managed repositories or having a test procedure that had so much testing included in it that the procedure could not be completed in a timely manner. This was addressed by splitting long test sequences into shorter ones when evidence of test completion was needed quickly, and by implementing an efficient process for getting test reports into configuration-managed repositories.</li> 
+   <li>GSDO’s requirements were not allocated through the ground system structure down to the lowest level (subsystem or project). At the time, the GSDO Program made use of an Integrated Product Team (IPT) structure. Program-level requirements were allocated to each IPT and eventually to each subsystem or project. When the Program reorganized and stopped using IPTs, the requirements needed significant rework. </li> 
+   <li>Design standards (such as KSC-DE-512-SM, Facility Systems, Ground Support Systems, and Ground Support Equipment General Design Requirements) give specific requirements as well as invoking other standards. These were allocated to subsystems or projects and were not further decomposed. Some requirements buried in these standards were not addressed. At the individual project level, all requirements levied by design specifications and standards need to be pulled out and the applicable requirements need to be spelled out in the project’s requirements.</li> 
+  </ol> </li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>When there are requirements for different missions or the requirements are to be implemented at different times, the requirements should be separated and a mission effectivity used to designate the related mission.</li> 
+ <li>Requirements should be managed in a single tool rather than allowing projects to have a separate way of managing their requirements. Evidence of design compliance (requirements verification matrices) should also be integrated into the tool to ensure all requirements are in sync and closure evidence is available. An alternative solution is to allow the use of different tools but to ensure that these data sets remain in sync (interoperability).</li> 
+ <li>Requirements should be allocated through the system structure and reflect the actual architecture of the system rather than being allocated in a way that reflects the management structure.</li> 
+ <li>If requirements closure is needed to support a milestone, long test sequences should be split into separate tests.</li> 
+ <li>An efficient process should be created to ensure test completion evidence is quickly available in configuration-managed repositories and is linked to the requirements being closed by the test.</li> 
+ <li>Design specifications or standards should be decomposed into individual requirements at the project level, and only requirements relevant to the project should be retained.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="margin-bottom:.0001pt">Programs and projects should carefully consider how requirements are entered into the requirements management tool and how they are allocated and closed. Complex requirements sets may require separation into categories or groupings.</li> 
+ <li style="margin-bottom:.0001pt">Requirements should be allocated only through the system structure—not the organizational structure.</li> 
+ <li style="margin-bottom:.0001pt">Programs and projects should go through day-in-the-life scenarios for requirements entry, linking, allocation and closure to ensure the tool is set up correctly, requirements are linked correctly, and that at the project level all requirements are clearly articulated. The requirements management process must ensure that projects have the correct requirements, that requirements changes are flowed to the project, and that closure evidence is quickly and easily available in order to close requirements in a timely manner.</li> 
+</ol>
+</section>
+<section><h2>Related Policies & Standards</h2>
+KSC-DE-512-SM, Facility Systems, Ground Support Systems, and Ground Support Equipment General Design Requirements
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

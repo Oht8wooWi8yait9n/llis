@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0840: Mean Time To Repair Predictions</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0840: Mean Time To Repair Predictions</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0840 (Database ID: 840)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/840" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number AT-2 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>The Mean Time To Repair (MTTR) predictions can be used to highlight those areas of a system that exhibit poor maintainability in order to justify improvement, modification, or a change of design. They also permit the user to make an early assessment of whether the system predicted downtime and logistic requirements are adequate and consistent with the system operational requirements and allocations.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>In general, the MTTR of a system is an estimated average elapsed time required to perform corrective maintenance, which consists of fault isolation and correction. For analysis purposes, fault correction is divided into disassembly, interchange, re-assembly, alignment and checkout tasks. The repair time of a maintainable unit generally consists of both a large number of relatively short-time repair periods and a small number of long-time repair periods. The former would correspond to the more usual case where the failed unit is replaced by a spare at the operational site on detection of a failure. The long downtimes would occur when diagnosis is difficult or removing a defective part is complicated due to, for instance, rusted/stripped mounted nuts. Having a collection of such field data provides the design engineer an opportunity to assess the Mean Time To Repair (MTTR) of the current system as it matures, or to predict the MTTR of a new system according to its features with
+    the current system.</p>
+
+    <p>MTTR is a useful parameter that should be used early in planning and designing stages of a system. The parameter is used in assessing the accessibility/locations of system components; for example, a component that often fails should be located where it can easily be removed and replaced. The estimated MTTR may also dictate changes in system designs in order to meet the turn-around time criteria for critical systems, such as communication and life support systems on the Space Station. In addition, the parameter helps in calculating the life cycle cost of a system, which includes cost of the average time technicians spend on a repair task, or how much Extravehicular Activity (EVA) time is required for astronauts to repair a system.</p>
+
+    <p>MTTR is defined as the average time necessary to troubleshoot, remove, repair, and replace a failed system component. An interval estimator for MTTR can be developed from the mean of the sample data, within a lower and a upper limit with a confidence bound. For example, from a sample data set, one can find with 90-percent confidence that the range 3.2 to 4.2 will contain the population mean. Unfortunately, the exact MTTR of a system can never be found due to data uncertainties.</p>
+
+    <p>Log-Normal Distribution</p>
+
+    <p>The distribution most commonly used to describe the actual frequencies of occurrence of system repair time is the log normal because it reflects short duration repair-time, a large number of observations closely grouped about some modal value, and long repair-time data points. The general shape of log normal distribution is shown in Figure 1.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009347main_0840-1.jpg"  HEIGHT="329"  BORDER="0" /><A HREF="/llis_lib/txt/1009822main_0840-1.txt"  >[D]</A><br />
+      Figure 1: Lognormal Distribution
+    </center>
+
+    <p>Without getting involved in the derivation of the distribution equations which can be found in any statistical textbook, the following example will illustrate how MTTR of a replaceable unit may be calculated from a finite observed set of data.</p>
+
+    <p>Example 1: The repair times t<small><sub>i</sub></small> for an orbital replaceable unit (ORU) are observed to be 1.3, 1.5, 1.7, 1.8, 2.2, 2.6, 3.0, 3.1, and 3.9 hours. Using log normal distribution to estimate the MTTR of the unit.</p>
+
+    <p>Solution:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009348main_0840-2.jpg"  HEIGHT="48"  BORDER="0" /><A HREF="/llis_lib/txt/1009823main_0840-2.txt"  >[D]</A>
+    </center>
+
+    <p>Utilizing statistical methods, the Maximum Likelihood Estimator (MLE), or the best estimated value of the mean is:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009349main_0840-3.jpg"  HEIGHT="127"  BORDER="0" /><A HREF="/llis_lib/txt/1009824main_0840-3.txt"  >[D]</A>
+    </center>
+
+    <p>The Maximum Likelihood Estimator of the variance is:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009350main_0840-4.jpg"  HEIGHT="127"  BORDER="0" /><A HREF="/llis_lib/txt/1009825main_0840-4.txt"  >[D]</A>
+    </center>
+
+    <p>Therefore, the mean of the log normal distribution of this example is:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009351main_0840-5.jpg"  HEIGHT="140"  BORDER="0" /><A HREF="/llis_lib/txt/1009826main_0840-5.txt"  >[D]</A>
+    </center>
+
+    <p>and its variability of time to repair is:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009352main_0840-6.jpg"  HEIGHT="115"  BORDER="0" /><A HREF="/llis_lib/txt/1009827main_0840-6.txt"  >[D]</A>
+    </center>
+
+    <p>How to Implement the MTTR Process</p>
+
+    <p>Accurately estimating the MTTR of a new system is more than applying the derived formulas on field data of any existing systems. The designer must know the overall maintenance concept and operating conditions of the new system; for example, how and where the system is going to be operated and how its failed units will be swapped out. With this background, the designer can proceed to approximate the maintenance procedure of the new system, then select an existing system that has been exposed to similar operating conditions and that has a mature set of operating data. After the similarity between the two systems is assessed, the designer then can determine certain conversion factors needed to make the existing system data more applicable to the new system. Once this is done, the predictions for the new system are more meaningful and accurate.</p>
+
+    <p>Elements of MTTR</p>
+
+    <p>The MTTR prediction of a system begins at the replaceable unit level (RUL) where a defective unit is removed and replaced in order to restore the system to its original condition. Then the system MTTR predictions are accomplished by integrating the MTTR's of maintainable units. The following defines the elements used in the MTTR prediction of a system:</p>
+
+    <p>Fault Isolation: Time associated with those tasks required to isolate the fault to the item.</p>
+
+    <p>Disassembly: Time associated with gaining access to the replaceable item or items identified during the fault correction process.</p>
+
+    <p>Interchange: Time associated with the removal and replacement of a faulty replaceable item or suspected faulty item.</p>
+
+    <p>Reassembly: Time associated with closing up the equipment after interchange is performed.</p>
+
+    <p>Alignment: Time associated with aligning the system or replaceable item after a fault has been corrected.</p>
+
+    <p>Checkout: Time associated with the verification that a fault has been corrected and the system is operational.</p>
+
+    <p>Constant failure rates: The rate of failures that result from strictly random or chance causes. This type of failure occurs predominantly in the useful life period of a unit.</p>
+
+    <p>K factor: For on-orbit tasks, a conversion factor may be applied to convert elemental task times performed in 1-g environment to Micro-gravity environment. The conversion factor may be derived from data of past similar programs or from the neutral buoyancy testing.</p>
+
+    <p>Ground Rules and Assumptions</p>
+
+    <p>In the prediction, certain ground rules and assumptions apply:</p>
+
+    <ul>
+      <li>Mean Time To Repair (MTTR) does not include the maintenance overhead, which is generally non-related task time such as time to fill out a requisition, time to go get tools, break-time, time waiting for parts, etc.</li>
+
+      <li>Worksite time is the only variable considered.</li>
+
+      <li>All equipment experiences a constant failure rate.</li>
+
+      <li>All tasks are performed sequentially by one crew member unless otherwise noted.</li>
+
+      <li>Maintenance is performed in accordance with established maintenance procedures and appropriately trained personnel.</li>
+
+      <li>The prediction depends upon the use of recorded reliability and maintainability data and experience that have been obtained from comparable systems and components under similar conditions of use and operation.</li>
+    </ul>
+
+    <p>System Level Prediction</p>
+
+    <p>At the system level, MTTR is calculated by summing the product of the replaceable items' MTTR's and their corresponding failure rates; the result is then divided into the sum of all replaceable items' failure rates.</p>
+
+    <p>Mathematically, it can be expressed as:</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009353main_0840-7.jpg"  HEIGHT="460"  BORDER="0" /><A HREF="/llis_lib/txt/1009828main_0840-7.txt"  >[D]</A>
+    </center>
+
+    <p>As an example, assume the three ORUs of a system have the following MTTR'S, Variance (V), and failure rates L:</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009355main_0840-9.jpg"  HEIGHT="218"  BORDER="0" /><A HREF="/llis_lib/txt/1009830main_0840-9.txt"  >[D]</A><br />
+      Table 1: ORU / MTTR
+    </center>
+
+    <p>Apply the above formula to calculate the system MTTR:</p>
+
+    <p>The results of the above example indicate that the most often failed unit will essentially drive the MTTR and variance of a system.</p>
+
+    <center>
+      <IMG  WIDTH="430"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009354main_0840-8.jpg"  HEIGHT="338"  BORDER="0" /><A HREF="/llis_lib/txt/1009829main_0840-8.txt"  >[D]</A>
+    </center>
+
+    <p>Overall, the prediction is a straight forward process and is useful in estimating a system's MTTR. Even with a limited set of data, if the prediction is used early in the design phase, the derived value should help in shaping a preliminary design guideline for the system. In addition, the prediction can also verify logistics and maintainability requirements at some later stage.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>Lamarre, B. G., Mathematical Modeling, Reliability and Maintainability of Electronic Systems, Edited by: J.E. Arsenault and J.A. Roberts, Computer Science Press, p372 - 373.</li>
+
+      <li>Miller, Irwin, Probability and Statistics for Engineers, Prentice Hall Inc., Englewood Cliffs, p116.</li>
+
+      <li>MIL-HDBK-338-1A, Electronic Reliability Design Handbook, Department of Defense.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>This MTTR prediction technique is a fast, simple, accurate and effective approach for providing a design baseline for repair times. Design and product assurance engineers can use the MTTR data to effectively define sparing, logistics and maintenance programs for a pending design.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Predict the mean time to repair (MTTR) of avionics and ground electronics systems at any level of maintenance (on orbit, intermediate or depot level) using analytical methods . This technique assumes a constant failure rate, and should be used accordingly.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on International Space Station Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

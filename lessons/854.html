@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0854: Pneumatic Systems - Pilot-Controlled Pressure Regulator Loading</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0854: Pneumatic Systems - Pilot-Controlled Pressure Regulator Loading</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0854 (Database ID: 854)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-11-30</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/854" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-09 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p> 
+<p>Design of a pneumatic systems using vented pressure regulators offers the following maintainability advantages:</p> 
+<ul> 
+ <li>Requirement for a separate relief valve in the pilot-loading circuit is eliminated.</li> 
+ <li>Logistics support requirements (materials, parts, tools) are decreased by elimination of additional relief valves.</li> 
+ <li>System availability is increased by elimination of additional components and their maintenance/downtime requirements.</li> 
+ <li>Elimination of components enhances maintainability and increases reliability.</li> 
+ <li>Overall life cycle costs are improved by decreased maintenance and downtime requirements, and increased system availability.</li> 
+</ul> 
+<p>Pressure in pneumatic systems must be controlled. Primary points of control are downstream of the source (compressor) and the system receiver (tank). Control of pressure is required downstream of the compressor for system safety and downstream of the receiver to maintain a steady pressure source for efficient operation of other system components. Pneumatic systems use pressure regulators to provide this control. For those systems using standard dome-loaded (pilot-operated) regulators, this practice requires use of separate vented regulator for loading the pilot operated regulators. Figure 1 shows a regulator system with separate relief valves. A venting type regulator limits downstream pressure to a level lower than that of the upstream (receiver) pressure. It also acts as a relief valve for its leg of the circuit in the event of pressure build up. This method eliminates the need for a separate relief valve in the dome-loading circuit. Figure 1 also shows an example of a vented system which illustrates this method.</p> 
+<img alt="refer to [D] description" src="https://llis.nasa.gov/llis_lib/images/1009382main_0854-1.jpg" style="border-width: 0px; border-style: solid; width: 450px; height: 427px;" title="refer to [D] description"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009857main_0854-1.txt">[D]</a> 
+<p>Reference:</p> 
+<ol> 
+ <li>KSC-SD-Z-0005A, Standard for Design of Pneumatic Ground Support Equipment.</li> 
+ <li>Parker-Hannifin Corp., Bulletin 0225- B1, Fluid Power.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When pneumatic system requirements mandate the use of pilot operated pressure regulators, the use of vented pressure regulators to supply reference pressure is mandatory. This reduces the system component count and associated logistics requirements.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Use a separate, hand-operated, spring-loaded, vented regulator in pneumatic system designs to provide reference pressures for pilot controlled pressure regulators. Specify application in system/equipment specifications, requirements documents, and design policies and practices.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Apollo, National Space Transportation System (STS), and Pneumatic Ground Support Systems</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0770: RF Breakdown Characterization</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0770: RF Breakdown Characterization</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0770 (Database ID: 770)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/770" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PT-TE-1432 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p>
+
+    <p>Knowledge of the dielectric breakdown characteristics of RF devices at low pressures or in a near vacuum environment can be used to protect sensitive flight equipment. RF breakdown is a concern because of the low, near-vacuum pressures at which spacecraft are tested and operated. RF breakdown testing is conducted to establish hardware resilience to the application of out-of-spec input signal levels, signal reflections due to mismatches at hardware interfaces, inadvertent evacuation of vacuum chambers during RF input, application of RF signals during the ascent phase of the spacecraft launch vehicle, etc.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>Provide the expected signal level, plus an additional 6 dB over the expected operating frequency range, to the input of the device under test while monitoring the output frequency. Reduce the atmospheric pressure from ambient to vacuum at the controlled rate specified in the test plan. After dwelling at vacuum for a period of time sufficient to monitor the performance of the unit under test, increase the atmospheric pressure from vacuum back to ambient at a controlled rate.</p>
+
+    <p>After the test has been completed, inspect the test article for damage. Hardware damage is manifested by a change in the monitored RF performance during the test, or by visible indicators such as burn marks on output connectors. If neither indication is evident, the equipment is considered to have passed the test. However, if the RF output signal dips or degrades, or external burn marks are seen, the test article is dismantled and inspected for internal burn marks in the vicinity of RF conductors. The typical corrective action is to redesign the equipment to provide wider gaps between RF signal conductors.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Electrical damage to equipment or devices can occur due to dielectric breakdown. RF energy produces stress on the electrons in the gaseous medium between two electrodes situated within an electrical field. The RF breakdown phenomenon occurs at low pressure when an RF field generates a sufficiently high voltage potential for the gas in the gap between two electrodes to ionize and transition from an insulator to a conductor. This happens when the production of electrons in the intermediary gas exceeds the removal of electrons. The two main mechanisms are:</p>
+
+    <ol>
+      <li><b>Ionization Breakdown:</b> Ionization by electron collision is the dominant electron production mechanism. Ionization of the gas by electron collision happens at higher ambient pressures when the electron mean free path becomes shorter than the electron separation distance.</li>
+
+      <li><b>Multipaction:</b> Multipaction, or secondary electron emission from the electrodes, occurs when the ambient pressure is sufficiently low that the electron mean free path is longer than the electron separation distance. Multipaction is observed at pressures below 10<sup><small>-2</small></sup> Torr.</li>
+    </ol>
+
+    <p>As a result, damage can occur in the small gaps between conductive or dielectric surfaces which may result in serious degradation of hardware performance. To establish the available margins for safe operation of the hardware prior to spacecraft-level testing or launch, validate the RF power levels below which no damage will occur either in vacuum or at critical pressure.</p>
+
+    <p><u>References</u></p>
+
+    <ol>
+      <li>Woo, R., "Final Report on RF Voltage Breakdown in Coaxial Transmission Lines," NASA Technical Report No. 32-1500, October 1, 1970.</li>
+
+      <li>Radiated Susceptibility System Verification, Reliability Preferred Practice No. PD-TE-1416.</li>
+    </ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The hardware may be damaged if operated at critical pressure or in a vacuum above the RF power levels at which the RF breakdown or multipaction phenomena occur. The damage may not be readily observable from external inspection of the hardware.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Tests are performed to verify that radio frequency (RF) equipment, such as receivers, transmitters, diplexers, isolators, RF cables, and connectors, can operate without damage or degradation. Reliability assurance is necessary in both a vacuum environment and at critical pressure with adequate demonstrated margins above the expected operating RF signal levels.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on Voyager, Galileo, Cassini</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2043: Understand What 'Cleaning' Means In The Context Of The Flight Item</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2043: Understand What 'Cleaning' Means In The Context Of The Flight Item</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2043 (Database ID: 2043)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-02-16</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Hardware,  Industrial Operations,  Parts,  Materials,  & Processes,  Payloads,  Safety & Mission Assurance,  Spacecraft,  Product Assurance,  Quality,  Engineering design and project processes and standards,  Level II/III requirements definition</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2043" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Environmental Monitors on Station (EMOS) is a NASA program to design, build, and test a series of environmental monitors for installation on the International Space Station (ISS). The Vehicle Cabin Atmosphere Monitor (VCAM) is a rack-mounted EMOS instrument for monitoring the air in the ISS. VCAM's pre-concentrator, gas chromatograph and mass spectrometer will detect trace amounts of organic molecules. Internal software will perform the identification and quantification. VCAM is delivered with an Orbital Replacement Unit (ORU), a delivery system for the consumable gases (i.e., a carrier gas and calibrant mixture) required for VCAM operation. Each ORU (Figure 1) is designed for 12 months of operation, followed by on-orbit replenishment. 
+<br> &nbsp; 
+<img alt="Figure 1 is a color photo of a complex arrangement of tanks, metal feed lines, and valves mounted on a flat metal tray. The open unit appears to be roughly cubical in shape, such that the entire unit could be slid into a rack within an enclosed volume. There are two tanks" border="0" height="254" src="https://llis.nasa.gov/llis_lib/images/1021982main_2009-02_ORU.jpg" title="Figure 1 is a color photo of a complex arrangement of tanks, metal feed lines, and valves mounted on a flat metal tray. The open unit appears to be roughly cubical in shape, such that the entire unit could be slid into a rack within an enclosed volume. There are two tanks" width="338"> &nbsp; 
+<b>Figure 1.</b> VCAM ORU 
+<br> In accordance with a standard JPL cleaning procedure, isopropyl alcohol (IPA) was used liberally on ORU parts, both prior to and during fabrication and integration. The flow of helium gas at a slightly elevated temperature through the ORU units during a purging procedure was expected to remove any IPA residue. Instead, while testing the VCAM with an ORU installed, excessive levels of residual IPA were detected in both the carrier and calibrant gases (Reference 1). Due to the high sensitivity of the mass spectrometer, the IPA residue requirement calls for less than 200 parts per billion (ppb), whereas the detected concentration was in the double and triple-digit parts per million (ppm) range. This high level of residual IPA interferes with the VCAM Level 1 requirement to detect hazardous concentrations of IPA within the range of 1 to 10 ppm in the ISS cabin air. 
+<br> 
+<br> VCAM measurements verified that IPA adsorbed onto soft goods and having filled small volumes would not likely be removed by the standard purging protocol. IPA measurements made following standard purging trials (e.g., bakeout) indicated that the IPA continued to desorb. Thermal-vacuum purging was needed to reduce the residual IPA concentration below the 200 ppb requirement. In this ORU-specific case, placing the unit in thermal-vacuum at 10 
+<sup>-5</sup> torr and 80 degrees C for 150 to 200 hours proved adequate after other alternative methods were tried without success. Follow up testing confirmed that IPA levels remained at less than 200 ppb, and further desorbing of IPA was not observed. 
+<br> 
+<br> 
+<u>References</u>: 
+<ol> 
+ <li>quotIsopropyl Alcohol Residue,quot JPL Problem/Failure Report No. 13449, September 5, 2008.</li> 
+ <li>quotGeneral Cleaning Requirements for Spacecraft Propulsion Systems and Support Equipment, Detail Specification for,quot Jet Propulsion Laboratory (JPL) Spec No. FS504574C, May 28, 1974.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li>It can be extremely difficult and expensive to remove residual IPA from a sensitive instrument. The current Precision Cleaning practices and processes, such as those specified by Reference (2), may be inadequate to meet the needs of sensitive instrumentation. The Precision Cleaning processes commonly used by NASA does not solicit the input on customer requirements that is needed to identify special needs. These needs may include alternative chemicals and methods for cleaning and verification.<br />  </li> 
+ <li>For an extended period following the implementation of standard purging protocols, contaminant concentrations may increase as gases are released from soft goods and small volumes.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>Ensure that the Precision Cleaning process is geared to unique needs and is sensitive to the possibility that the customer has failed to state special requirements. Actively involve the customer in the preparation and review of the cleaning procedure to assure that special requirements are identified.<br />  </li> 
+ <li>Verification that flight hardware contaminants have been fully purged should include retesting over an extended period to assure that concentrations have not increased as trapped contaminants are released.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.10 (quotEngineering Practices: Materials, Processes, and Contamination Controlquot) in the Jet Propulsion Laboratory standard quotFlight Project Practices, Rev. 7,quot JPL DocID 58032, September 30, 2008.
+</section>
+<section><h2>Related Policies & Standards</h2>
+ISO 14952-6, "Space systems " Surface cleanliness of fluid systems "Part 6: Precision-cleaning processes," November 15, 2003.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

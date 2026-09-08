@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0827: Quantitative Reliability Requirements Used as Performance-Based Requirements for Space Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0827: Quantitative Reliability Requirements Used as Performance-Based Requirements for Space Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0827 (Database ID: 827)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/827" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-ED-1273, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>Quantitative reliability requirements provide specific design goals and criteria for assuring that the system will meet the intended durability and life. Early in the design process, the system developer will be required to consider how the design will provide the requisite reliability characteristics and must provide analyses to verify that the delivered hardware will meet the requirements. Assessment of the early design's ability to meet quantitative reliability requirements will support design trades, component selection, and maintainability design, and help assure that appropriate material strengths are used as well as the appropriate levels and types of redundancy.</p>
+
+    <p><u>Implementation Method:</u></p>
+
+    <p>The missions and scientific objectives of the subject space system are used to define quantitative reliability goals and objectives. In general, the quantitative reliability goals and objectives are stated as requisite probabilities of achieving specific missions or scientific objectives under stated operating conditions and environments. The probability values specified as being required are established through a process of trading off a desire for very high value against the cost and design constraints of achieving that value. The specified level will also determine an accepted level of risk or likelihood that the mission objective will not be met. Very often, the acceptable level may be negotiated between the science community or user, the contractor, and the various responsible NASA organizations.</p>
+
+    <p>The use of quantitative performance-based reliability requirements does not supersede or negate the need for specifying fault tolerance or other classical reliability requirements. Fault tolerance requirements and reliability design criteria should also be levied to ensure the proper separation of redundancy, and the avoidance of failure propagation. Quantitative requirements are levied to ensure that the operational performance and missions can be met with an accepted probability level or likelihood. Table 1 shows examples of several different types of quantitative reliability requirements that can be levied on a space hardware program. The importance of using both types of requirements lies in the need to ensure that the system design is as robust as necessary and that it meets the verifiable performance goal. These types of requirements, if utilized correctly, will work hand in hand to provide the contractor direction on developing a more reliable product. The quantitative
+    requirements are levied to ensure that operational needs can be met based on pre-set conditions.</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009327main_0827-1.jpg"  HEIGHT="253"  BORDER="0" /><A HREF="/llis_lib/txt/1009802main_0827-1.txt"  >[D]</A><br />
+      Table 1: Examples of Quantitative Reliability Requirements
+    </center>
+
+    <p>A quantitative reliability requirement by definition means that the reliability is expressed in a measurable quantity. Performance-based reliability requirements are generally stated in terms of the probability of properly performing a mission phase or objective without a failure (or sequence of failures) that will terminate the mission phase. An example is the International Space Station reliability requirement in SSP 41000, "System Specification for the International Space Station (ISS)." The reliability requirement in SSP 41000 states that the Space Station shall provide an operational capability to provide a microgravity environment for 50 percent of the internal payload locations for at least 180 days per year in continuous periods of no less than 30 days with a reliability of 0.80 or better. This requirement holds the ISS prime contractor responsible for providing a vehicle design that will operate continuously for 30 days without suffering a system failure that would
+    exceed the conditions necessary for microgravity science, and do so at least 4 out of 5 of the periods. The system reliability, given its associated components and redundancy configuration, can be measured against that quantitative requirement. Also, during design reviews, consideration must be given to reliability assessments of the design because of such requirements, thus heightening the awareness of program risks that may otherwise go uncovered.</p>
+
+    <p>Other requirement statements might relate to the launch phase of a space system or simply to the normal operation phase. However, the specific elements of the requirement statement include the description of the desired performance, usually a direct or indirect reference to the amount of time involved, and the probability value needed. The mission/objective specified in a reliability requirement may deal with a major portion of the entire mission or may be a very specific portion of the mission. For instance, a reliability requirement may be specified for the ability to maintain attitude or perform a significant mission event.</p>
+
+    <p>The specification values used for the reliability requirement depends on the criticality of the mission or objective and the consequences of failure. In the Space Station case, loss of the microgravity capability is not inherently catastrophic, and a repair capability is available. Four successful 30-day periods out of five was considered to be reasonably achievable, and was deemed to be acceptable to the scientific user community. In man-rated vehicles, determining an acceptable value for the likelihood of mission success (hence loss of mission) may be more difficult. However, specifications for the reliability may then address the probability of avoiding mission aborts or loss of function. An example might be "the item shall perform its functions during the launch phase without losing any of the defined capabilities or functions with a probability of 0.98." The Federal Aviation Administration relates the consequence of failure and the probability of its occurrence in its
+    consideration of risk, and is shown in Figure 1. By defining quantitative reliability requirements as those involving failure events throughout a flight leading to emergency procedures or immediate landings (mission aborts), the quantitative values for commercial vehicles would be specified in the 0.999 to 0.99999 range, (or conversely 1 out of a thousand to 1 out of 100 thousand).</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009328main_0827-2.jpg"  HEIGHT="322"  BORDER="0" /><A HREF="/llis_lib/txt/1009803main_0827-2.txt"  >[D]</A><br />
+      Figure 1: An Illustration of the Relationship Between Consequence of Failure and the Probability of Its Occurrence (FAA, Updated)
+    </center>
+
+    <p>In non-man rated vehicles or systems, the emphasis is on specifying a requirement that is sufficient to ensure a high likelihood of mission success, but not so high as to drive cost and weight beyond reasonable bounds. The use of function and item redundancy for increasing the likelihood of mission success will likely be necessary to meet high quantitative reliability specifications, but redundancy can also add significant program costs. Again, trade studies may be necessary to balance requirements for the likelihood of meeting a mission objective against the reliability achieved with current manufacturing technologies and against various design options. For instance, it would be extremely difficult at current technology levels to meet a 0.999 reliability on a lengthy mission of high complexity without the use of functional redundancy. For quick-development, highly cost-restrictive programs with limited objectives, a performance-based reliability requirement of 0.9 or less may
+    be appropriate to keep the acquisition costs within bounds.</p>
+
+    <p>To verify the fulfillment of a quantitative requirement, reliability analysis such as reliability block diagram analysis (RBDA) is used. The attribute of reliability, by definition, lies in the probabilistic realm while most performance attributes or parameters such as temperature, speed, thrust, voltage, or material strength contain more deterministic characteristics. Within the accuracy of the measuring devices, one can directly measure performance attributes in the deterministic realm to verify compliance with requirements. No such measuring device exists for probabilistic parameters like reliability; it is usually estimated through comparison to similar components or systems through inference, analysis, and the use of statistics. Verification that quantitative requirements have been met also provides answers to questions such as "how reliable is this system?"</p>
+
+    <center>
+      <IMG  WIDTH="500"  ALT="refer to [D] description"  TITLE="refer to [D] description"  SRC="/llis_lib/images/1009329main_0827-3.jpg"  HEIGHT="162"  BORDER="0" /><A HREF="/llis_lib/txt/1009804main_0827-3.txt"  >[D]</A><br />
+      Table 2: Quantitative Reliability Requirement Verification Techniques
+    </center>
+
+    <p>A reliability requirement specified without a probability value such as "the vehicle shall perform xyz mission on-orbit without failure for 5 years" is impossible to verify during qualification or acceptance testing. The likelihood, or probability, that the requirement will be met is assessable, and this activity is inherently equivalent to assessing the reliability. Without quantitative requirements, it is left to the certification assessor to evaluate an estimate of the probability of success and to decide if that is sufficient, which places the risk on the program.</p>
+
+    <p>A great deal of preliminary analysis may be necessary in the requirement specification process that considers the capability of the technology to various levels of reliability. This preliminary analysis helps avoid setting quantitative requirements too high or too low. Development of quantitative reliability requirements must represent a balance between the operational performance requirements of the system and the ability to restore and maintain the system through maintenance and sparing.</p>
+
+    <p>Establishment of quantitative requirements as high as possible is necessary to maximize the probability that the system will complete the mission without failure. However, achieving high reliability or probability of mission success increases cost by generally requiring redundant equipment and fail-safe devices as well as high margins of safety in the material properties used. Thus, meeting unrealistic and unnecessary reliability requirements can lead to program weight and volume problems as well as cost inflation Based on the stress-strength concept of failure, perfect reliability could be achieved by building a system whose strength is greater than any conceivable stress put on the system. In reality, weight, volume, and cost constraints usually limit the strength of the design. Although perfect reliability from space systems cannot be expected, consideration of the needs of the operational community as well as the budget of the program will help in determining a requirement
+    level. Also, if reliability goals are not met, it may be necessary to initiate a reliability growth scenario in which failure modes are analyzed and designed out of the system. This may or may not cost the program extra money, as reliability growth testing may not have been part of the original life cycle plan.</p>
+
+    <p>As mentioned above, the International Space Station Program has levied a quantitative performance requirement on the Prime Contractor. Arrival at that requirement came through rigorous coordination with operational elements of the program, including the Mission Operations Directorate and the Science and Utilization community. The actual benchmark of 0.8 was derived from analysis of the operational needs of the program, the number of failures that could be tolerated, and an early analysis of what the space station design concept could provide. This number was a mutual agreement between the product assurance community and the operations community. As a result of this requirement, the prime is undergoing an effort as part of it&iacute;s reliability group to maintain a running tally of the overall station reliability via reliability block diagram analysis. Every design change, program change, or other input is reflected in the running tally to ensure that the design meets the
+    requirement.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>Many previous NASA program development efforts have relied on specific design requirements such as redundancy to minimize risk and the likelihood of failure. Quantitative reliability requirements augment qualitative reliability analysis such as failure tolerance, but more importantly, gives teeth to a requirement that may otherwise slip from the design. Designers and contractors are held responsible for designing systems and to demonstrate analytically that the system or function will have a sufficient likelihood of failure-free mission operations.</p>
+
+    <p>References:</p>
+
+    <ol>
+      <li>SSP 41000, "System Specification for the International Space Station (ISS)," November 1, 1994, Contract NAS15-10000.</li>
+
+      <li>NASA Risk Management Program Tools and Techniques Handbook, Draft, July 1988, NASA Headquarters, Code QS.</li>
+
+      <li>NASA Safety Risk Management Program Plan, Sections 1-5, NASA Headquarters, Code QS.</li>
+
+      <li>Reliability Preferred Practice PD-AP-1313, "System Reliability Assessment Using Block Diagramming Methods."</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Program teams and/or contractors will not be obligated and/or held accountable to design for reliability, and reliability issues may be overlooked. Also, operational design goals may not be met due to less than expected vehicle availability because of failed critical items. Program cost as well as risk will probably increase.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Develop performance-based reliability requirements by considering elements of system performance in terms of specific missions and events and by determining the requisite system reliability needed to achieve those missions and events. Specify the requisite reliability in the system specifications in quantitative terms, along with recommended approaches to verify the requirements are met. Require the system provider to demonstrate adherence to the reliability requirements via analysis and test.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the International Space Station Program.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

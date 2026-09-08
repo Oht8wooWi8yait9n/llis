@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0661: Redundancy Considerations for Ground Communication Systems</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0661: Redundancy Considerations for Ground Communication Systems</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0661 (Database ID: 661)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/661" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number GSE-3007 from NASA Technical Memorandum 4322A, NASA Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>In most instances it is not practical to be fail-safe at any cost. This practice provides guidelines on using redundancy only where it is required. Too much redundancy leads to failures resulting from increased complexity. Mean Time Before Failure (MTBF) is estimated as a function of the number of parts. Minimizing redundancy reduces the number of parts and therefore increases the MTBF. This practice illustrates how to design a system that satisfies the technical requirements but contains cost by minimizing the level of redundancy.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>The Operational Intercommunication System - Digital (OIS-D) at the Vehicle Assembly Building (VAB) serves as the mechanism for discussing this practice. The OIS-D is a controlled access, multiuser, multichannel communications system used in support of vehicle test and launch operations. It is a fully digital system that provides 500 user channels of duplex voice communications. OIS-D equipment in the VAB interfaces with the Central Summing Network (CSN) in the Launch Control Center (LCC). OIS-D equipment in the VAB consists of the following:</p> 
+<ul> 
+ <li>Group Processor Assembly (GPA) Racks</li> 
+ <li>Transmission Equipment (DTE) Rack</li> 
+ <li>Power Rack, D.C. Chargers, Battery Banks, Battery Disconnects, and D.C. Disconnects</li> 
+ <li>End Instruments (EI)</li> 
+</ul> &nbsp; 
+<p>The OIS-D will be referred to in the remainder of the report as the voice communication system.</p> 
+<p><b><i>System Operation:</i></b></p> 
+<p>The telephone system (Figure 1) provides a loose analogy to the voice communication system (Figure 2). The EI is a unit in which one connects a headset and dials up a voice channel. The user can talk and listen over this channel. As a communication device, the EI is analogous to the telephone. The EI is a user-operated, microcomputer-based, communication device.</p> 
+<p>The GPA is the principal rack assembly of the voice communication system. Each GPA transmits and receives voice, status, and signaling data from its associated EIs. The GPA is analogous to a central office. It provides the interface between the End Instruments and the Central Summing Network (CSN).</p> 
+<p>The CSN gathers information from multiple GPAs and sums the information for redistribution. The CSN is analogous to the toll office.</p> 
+<img alt="refer to [D] description" border="0" height="336" src="https://llis.nasa.gov/llis_lib/images/1009020main_0661-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009508main_0661-1.txt">[D]</a> 
+<br> 
+<br> 
+<img alt="refer to [D] description" border="0" height="308" src="https://llis.nasa.gov/llis_lib/images/1009021main_0661-2.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009509main_0661-2.txt">[D]</a> &nbsp; 
+<p><b><i>Power Distribution:</i></b></p> 
+<p>The voice communication system operates on a floating 48V DC power source. This power is first converted from 480V AC to 48V DC by a battery charger. It is then routed through circuit breaker distribution panels, and to battery banks where it is stored in case of a power failure. From there the power is distributed to the power supplies used by each chassis, and to the fans used for rack cooling, through power control modules that reside on each of the GPA racks. If 480V AC power fails, the battery banks supply 48V DC for a minimum of one hour. EI operating power (48V DC) is normally supplied by its associated GPA over the data transmission lines. The data transmission lines act as a medium for both the data transmission and power transmission to the EI.</p> 
+<p><b><i>Redundancy Policy:</i></b></p> 
+<p>The design must satisfy the Ground Support Equipment (GSE) Fail Safe requirement of NSTS 07700, Volume X. The requirement states that all GSE (except primary structure and pressure vessels) shall be designed to sustain a failure without causing loss of vehicle systems or loss of personnel capability. One of the requirements for support of hazardous operations is to have co-located EIs in areas of hazardous operations.</p> 
+<p>The requirement for co-located EIs implies redundant EIs. Furthermore, the fail-safe requirement points towards a redundant implementation. That is, redundant GPAs, redundant power, and redundant Data Transmission Equipment (DTE). The data transmission equipment consists of Fiber Optic Transmitters (FO TX) and Fiber Optic Receivers (FO RX).</p> 
+<p>The power requirements and data transmission equipment requirements are best satisfied through use of redundancy. The GPA requires additional consideration. Figure 3 is an implementation that utilizes redundant GPAs. For illustration purposes assume that each GPA can support four EIs (actually each GPA supports 119 EIs). This implementation satisfies the fail-safe requirement but it is very expensive. The GPA is the most expensive item in the system. Figure 4 introduces an alternative implementation. Observe that in this implementation neighboring EIs have different GPAs. Simply by requiring that co-located EIs have connections to independent GPAs eliminates the need for redundant GPAs. In the event of a failure, the operator could move to a neighboring EI and quotsafequot the system. Therefore Figure 4 is cost effective while also satisfying the fail-safe requirements.</p> 
+<img alt="refer to [D] description" border="0" height="473" src="https://llis.nasa.gov/llis_lib/images/1009022main_0661-3.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009510main_0661-3.txt">[D]</a> 
+<br> 
+<br> 
+<img alt="refer to [D] description" border="0" height="506" src="https://llis.nasa.gov/llis_lib/images/1009023main_0661-4.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009511main_0661-4.txt">[D]</a> &nbsp; 
+<p>Both implementations were considered during the design of OIS-D. Many existing designs conform to Figure 3. The cost of the GPAs made the figure 3 implementation too costly for OIS-D. The Figure 4 implementation was acceptable to the design team because it fit within the cost profile of the system and satisfied the fail-safe requirements. In practice the system has proved to be very reliable.</p> 
+<p><u>Technical Rationale:</u></p> 
+<p>In attempting to determine if complete redundancy is needed or if policy decisions can be implemented to alleviate many of the fail-safe concerns, two questions need to be answered:</p> 
+<ul> 
+ <li>Will it decrease cost?</li> 
+ <li>Will it improve the product?</li> 
+</ul> &nbsp; 
+<p>The answer to both questions is yes. Eliminating unnecessary redundancy reduces cost. The product is improved because the system MTBF increases with the removal of unnecessary redundancy. These are quantifiable justifications for the implementation of this practice. This practice should also be adhered to when designing Local Area Networks (LANs) and Wide Area Networks (WANs).</p> 
+<p>References:</p> 
+<ol> 
+ <li>SAA009CU08-026 (Revision A) - System Assurance Analysis of the Operational Intercommunication System - Digital at the Vehicle Assembly Building (VAB).</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Incorrectly applying redundancy can result in higher cost and reduced MTBF.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Designing a fail-safe ground communication system requires attention to hardware and policy decisions. Ensuring a fail-safe system normally requires some use of redundancy. It also requires safe operating procedures. It further requires a reliable source of power. This practice considers what operating procedures are needed, what level of hardware redundancy is required, and backup power considerations.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Space Shuttle Program, Ground Support Equipment including the Operational Intercommunication System — Digital (OIS-D) at the Kennedy Space Center.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

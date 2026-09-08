@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0938: Probable Scenario for Mars Polar Lander Mission Loss (1998)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0938: Probable Scenario for Mars Polar Lander Mission Loss (1998)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0938 (Database ID: 938)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-02-14</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research,  Science,  Exploration Systems,  Space Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/938" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> The MPL flight software did not take into account certain known hardware characteristics. Resulting mission-critical failure modes were not detected during testing of the spacecraft.</p> 
+<p> It was known that the touchdown sensors generated false momentary signals at leg deployment. This transient behavior was not properly accounted for in the software design. It is believed that these momentary signals were recorded as valid touchdown events, resulting in the engines shutting down at an altitude of 40 meters. The resultant free fall to the surface of Mars is viewed as the probable cause of the December 1999 MPL mission loss (References 1 and 2).</p> 
+<p> Neither the software requirements specification nor the software, subsystem or system test plans required verification of transient signal immunity. Therefore it was never verified.</p> 
+<p> Wiring errors in the touchdown sensors prevented registry of the touchdown or detection of the false transient signal during the first system-level leg deployment test.</p> 
+<p> A full leg deployment test was not repeated after the wiring was corrected. However, the footpads were again manually depressed and the sensors successfully registered a touchdown. A rerun of the complete deployment test with the correct wiring would probably have detected the software's inability to disregard the false momentary signal caused by leg rebound.</p> 
+<p> <b>4/18/17 Update.</b> The conclusions of the Young (Reference (1)) and Casani (Reference (2)) reports have not been invalidated over the past 17 years. However, the development of the Mars Phoenix (PHX) lander, which inherited much of the MPL design and spare hardware and was launched in 2007, revealed another 15 failure modes (Reference (5)) during the Entry, Descent, and Landing (EDL) phase which could have led to the MPL mission failure (and one or two of them could also have threatened (the successful) Mars Pathfinder (MPF), Spirit, and Opportunity rover missions). For example, the breakup analysis performed after the 2003 Columbia Shuttle loss reveals the potential for the MPL cruise stage to have re-contacted the rear of the MPL lander during its descent through the Martian atmosphere.</p> 
+<p> References:</p> 
+<ol> 
+ <li> Mars Program Independent Assessment Team Summary Report (Young Report), 14 March 2000.</li> 
+ <li> Report on the Mars Polar Lander and Deep Space 2 Missions, JPL Special Review Board (Casani Report), JPL Internal Document D-18709, 22 March 2000, Section 7.7.</li> 
+ <li> JPL Corrective Action Notice No. Z69163, Mars Program Investigation Results: "Software Design", 4 May 2000.</li> 
+ <li> JPL Lesson Learned, Software Error in the MPL Uplink Loss Timer.</li> 
+ <li> Rob Manning, “Can failure be a measure of success?,” JPL LEAP Seminar, March 24, 2017.</li> 
+</ol> 
+<p> Additional Key Words: Software Test, System Integration and Test, Test Planning</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol> 
+ <li> Project test policy and procedures should specify actions to be taken when a failure occurs during test. When tests are aborted, or known to have had flawed procedures, they must be rerun after the test deficiencies are corrected. When test article hardware or software is changed, the test should be rerun unless there is a clear rationale for omitting the rerun.</li> 
+ <li> All known hardware operational characteristics, including transients and spurious signals, must be reflected in the software requirements documents and verified by test.</li> 
+ <li> <b>4/18/17 Update.</b> In designing a mission that has substantial heritage from a previous successful mission, it is imprudent to take the previous success for granted. The 15 failure modes discovered during PHX development suggest that MPF, Spirit, and Opportunity may have narrowly escaped mission failure during EDL, and they support the need for a very critical, skeptical, view of inherited flight systems.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p> See Lesson(s) Learned</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<br /> 
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.13.5.1 (&quot;Engineering Practices: Design and Verification for Environmental Compatibility - Test Execution&quot;), and Paragraph 6.14.2.4 (&quot;Engineering Practices: Project and System Level Functional Verification and Validation - Verification and Validation&quot;), in the Jet Propulsion Laboratory standard &quot;Flight Project Practices, Rev. 7,&quot; JPL DocID 58032, September 30, 2008.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

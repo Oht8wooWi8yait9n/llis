@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1219: Integrated Configuration Control/Troubleshooting</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1219: Integrated Configuration Control/Troubleshooting</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1219 (Database ID: 1219)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-03-08</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Johnson Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1219" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The description that follows will demonstrate that pre-flight troubleshooting relied on history of a similar failure and did not check the actual configurations of certain subsystems or their components. Because troubleshooting did not go "outside the box", there was no attempt to think beyond historical failures. This was compounded by a design that did not provide a way to directly verify power was being delivered to the specific component - in this case specific channels to an electronic card.</p>
+
+    <p>During the STS-88 (Flt 2A) Node 1 ECLSS equipment checkout, the Node 1 Sample Distribution System (SDS) forward and starboard valves failed to change position when electrically commanded from the ground. Due to a previous failure history, it was incorrectly assumed that the SDS valve failures were attributed to internal binding. A subsequent troubleshooting and repair activity was authorized for STS-96 (Flt 2A.1) to try to repair the valves. This activity was unsuccessful.</p>
+
+    <p>However, it was determined from data reviews post STS-96 procedure that the Remote Power Controller (RPC) was open rather than closed during all previous tests. The RPC provides power to the Solenoid Driver Output (SDO) card channels controlling these SDS valves. Analysis has determined that the RPC power feed to the SDO had not been closed for the FWD and STBD SDS valves. Previously, the NADIR and SELECTOR SDS valves had been commanded on both the 2A and 2A.1 missions, with success both times. It turns out that these SDS valves are connected to an SDO card in which the RPC is always kept closed due to SDO card requirement to power the Multiplexer / Demultiplexer (MDM) heaters. A subsequent test conducted at GMT 320/1999 verified that the valves could be commanded to change position from the ground if power was applied to the appropriate SDO card. Flight Note EFCN934 SDS Valve Checkout - Inc B provided the proper power configuration. This problem is documented in PR# 988.</p>
+
+    <p>Root cause: An analysis has determined that an RPC power feed to the SDO card had not been closed for the Node 1 FWD and STBD SDS valves preventing the valves from actuating by command. This was due to an oversight of the ISS 2A Operations Checklist to verify that the correct power configuration was enabled to perform the SDS valve checkout procedures. The Operations Checklist indicated what command would be sent to change the position of the SDS valve and the initial / final valve position indications, but no additional commanding to power the appropriate SDO cards. This appears to be a cross-subsystem problem where the ECLSS engineering knew how to command the valves and the EPS engineering knew which RPCs were open or closed, but in the Flight Operational Readiness (FOR) review of these documents, this issue was missed by both.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>When faced with an anomaly that cannot be explained from previous failure history, troubleshooters must be trained to "think outside the box" using integrated multi-disciplinary teams to investigate possible failure modes</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>In developing future command procedures, the Mission Operations Directorate (MOD) and other mission support specialist (SE Subsystem Engineering, etc.) should take additional care to ensure that upstream power requirements are met in order to ensure success of hardware command (activation, checkout, test, etc.) activities.<br />
+    <br />
+    </p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>Action taken at Huntington Beach: A multi-disciplinary team of design engineers reviews operational procedures before they are published. This ensures that expected configurations (such as the RPC switch closure and SDO switch closure) are accounted for. Also, the design of most of HB software involving EATCS valve closure includes two-step commanding (one step that in effect closes/opens the RPC switch and the second step that closes/opens the SDO switch). Finally, the design teams review the NASA MOD procedures as part of the FOR. Any missing steps by that time should be caught as part of the FOR.</p>
+
+    <p>Action taken at Huntsville: Current processes used here in developing Operations procedures, require that all SDO cards be powered up when the MDM is powered up and remain on while the MDM is operating. This will preclude a similar problem from occurring. If MOD does not want to keep all the SDO cards powered, then it is recommended that a step be added to verify/activate the appropriate cards as part of their operations procedures. Since this was an off-nominal test, a specific operations procedure was probably not developed beforehand for this condition. This type of scenario can/will occur again so it is imperative that the MER coordinate closely with the ESR hardware/software experts to work off-nominal procedures before their execution. This will insure correct procedures are implemented.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

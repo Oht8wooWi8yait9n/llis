@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0981: Reverse Polarity Concerns With Tantalum Capacitors</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0981: Reverse Polarity Concerns With Tantalum Capacitors</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0981 (Database ID: 981)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2000-06-12</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/981" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Most tantalum capacitors are sensitive to the polarity of the applied voltage. Incorrect installation and/or improper circuit application that subjects the capacitors to reverse bias may lead to performance degradation or catastrophic failure (short circuit) of the capacitor. <b>Dry slug tantalum capacitors can survive being installed backwards for long periods of time (thousands of hours) when derated to 15% or less of rated voltage.</b></p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>By nature of their construction, tantalum capacitors (both wet slug and dry slug styles) are polar devices that are susceptible to performance degradation and/or catastrophic failure if reverse biased. This behavioral characteristic has always been known, but recent experiences have reminded us of the importance of proper installation and circuit design when using this type of component. Historically, reverse polarity failures have been observed that resulted from:</p>
+
+    <ul>
+      <li>Incorrect initial installation (part installed backwards)</li>
+
+      <li>Incorrect installation during rework (original part installed correctly, but replacement part put in backwards)</li>
+
+      <li>Correct circuit design, but incorrect artwork on the printed wiring board (part installed correctly according to the artwork, but actually in backwards)</li>
+
+      <li>Incorrect circuit design (printed wiring board artwork correct per circuit layout, but design error resulted in parts in backwards)</li>
+    </ul>
+
+    <p>The NASA EEE Parts Assurance Group (NEPAG) is currently investigating the reverse polarity behavior of tantalum dry slug chip capacitors because there is little definitive information in the literature on this subject. Preliminary results will be available in the last quarter of 2001.</p>
+
+    <p>&nbsp;</p>
+
+    <p align="center"><b><u>Guidelines Regarding Reverse Bias Application of Tantalum Capacitors</u></b></p>
+
+    <p align="center"><b>Wet Slug (Non-Solid) Tantalum Capacitors<br />
+     Ex.- MIL-PRF-39006<br />
+     CLR79, CLR81, CLR90 and CLR91 types</b></p>
+
+    <ul>
+      <li>Capable of handling up to 3 volts of reverse polarity regardless of capacitor voltage rating. Leakage current characteristics will be higher than normal.</li>
+
+      <li>Exceeding 3 volts reverse bias will cause rapid deterioration of the capacitor leading to catastrophic failure (short circuit)</li>
+
+      <li>Polarity identification is generally indicated by a "+" or a stripe on the anode termination. Also, hermetically sealed, tubular case, wet slug styles have a crimp towards one end of the case that may be used to identify the anode ("+") end. Exceptions or variations to these conventions may exist.</li>
+    </ul>
+
+    <p align="center"><b>Dry Slug (Solid) Tantalum Capacitors<br />
+     Ex. MIL-PRF-39003 and MIL-PRF-55365<br />
+     CSR, CSS and CWR types</b></p>
+
+    <ul>
+      <li>Sensitive to reverse polarity but tend to be much less so than their wet slug counterparts.</li>
+
+      <li>May fail explosively under reverse bias, even catch fire.</li>
+
+      <li><b>May survive "indefinitely" at room temperature with up to 15% of their voltage rating applied in reverse.</b> Capacitors will have a higher leakage current than in the forward direction, but this may be undetectable in the majority of heavily derated circuit applications. The circuit may operate properly for many hours (hundreds or even thousands) before failure. Influential factors in life expectancy are believed to include: manufacturer, style, size, capacitance, moisture content and of course rated voltage.</li>
+
+      <li>"Chip" styles may be more vulnerable to failure under reverse bias than hermetically sealed styles because moisture may accelerate failure. NEPAG is investigating the effect of moisture.</li>
+
+      <li>
+        "Chip" styles are more prone to being installed improperly because they may be very small and the polarity identifier can be hard to see. 
+
+        <ul>
+          <li>Conformally coated "chip" styles (ex.--CWR06) typically identify the polarity by a small projection "nub" in the center of one termination representing the anode (+) termination</li>
+
+          <li>Molded case "chip" styles (ex.--CWR09 and CWR11) identify the polarity by a beveled edge in the case and/or a polarity bar marked on the case</li>
+        </ul>
+      </li>
+
+      <li>Polarity identification is generally indicated by a "+" or a stripe adjacent to the anode termination. Exceptions or variations to these conventions may exist. One example of such an exception is the tubular case capacitor made in accordance with MIL-PRF-39003/10 which requires a stripe to identify the cathode "-" termination</li>
+    </ul>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Based on the aforementioned concerns with reverse bias application of tantalum capacitors, the following suggestions are provided.</p>
+
+    <ul>
+      <li>Due to possible variations in the conventions used to identify capacitor polarity, careful review of the capacitors marking requirements (per MIL specification or per manufacturer data sheet) must be performed to ensure proper orientation during installation</li>
+
+      <li>Carefully review circuit designs and printed wiring board artwork for correct polarity of tantalum capacitors</li>
+
+      <li>Carefully inspect all tantalum capacitors following installation to ensure their polarity matches the artwork (or corrective action instructions if the artwork is faulty)</li>
+
+      <li>Photograph populated boards at a magnification, fidelity and from a perspective capable of showing the polarity of the tantalum capacitors</li>
+
+      <li>Carefully review the polarity of all tantalum chip capacitors replaced as a result of rework</li>
+    </ul>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

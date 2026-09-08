@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0987: Chandra X-ray Observatory (CXO) Development Program Programmatic "Lessons Learned"</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0987: Chandra X-ray Observatory (CXO) Development Program Programmatic "Lessons Learned"</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0987 (Database ID: 987)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-05-03</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/987" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Marshall Space Flight Center (MSFC) was responsible for the development of the Chandra X-ray Observatory, successfully launched in July, 1999. Chandra is the third of NASA's "Great Observatories." This captures program management lessons learned from Chandra's inception through its launch in 1999.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<ol>
+      <li>Stable Requirements are key to program stability. Do not allow requirements to creep. One step in this process is to involve all stakeholders in developing and finalizing requirements. Stakeholders may include potential development and operations contractors, engineering and other organizations and NASA Headquarters.</li>
+
+      <li>Plan early in the program for operations considerations, making sure the operations organization is strongly involved in defining requirements and in the early design process to assure systems are user friendly. This is not easy to accomplish for either MSFC or the contractor, particularly in a schedule and funding constrained development environment where design features to enhance operations may result in features not envisioned by the design organization.</li>
+
+      <li>To the maximum extent possible assure that the operations and verification databases, as well as, command and telemetry pneumonic are common. Often, to reduce cost, a contractor will propose the use of systems level Electrical Ground Support Equipment (EGSE) that was previously used on another program. This can make portability between operations and verification difficult, since Ground Support Equipment (GSE) Interface Control Document (ICD) is often obsolete by the time the program is ready for systems testing. Use of existing GSE may require both hardware and software upgrades.</li>
+
+      <li>The operations organization should realize from the beginning that the development program may suffer schedule erosion, and should therefore develop contingency planning for operations procedure development in an environment where the operations database is not yet finalized. Spending effort complaining about the development program being late is not productive.</li>
+
+      <li>Spend the necessary resources to provide for a strong systems engineering organization throughout the program. Assign managers for all interface control documents and layout a schedule for their development through baselining. Make sure the systems engineering manager has direct control of all manpower for systems analyses such as thermal, structural dynamics, error budgets, loads, mass properties, electrical power demand, orbital mechanics, etc. Do not overlook the need for strong systems engineering involvement in requirements and verification traceability.</li>
+
+      <li>Make sure that one organization is responsible for end-to-end systems engineering for the entire payload including the payload ground operations system. Engineering of the entire system includes penetrating the total system design on both sides of an ICD rather than working just your side of it. When responsible for building a total systems analytical model (thermal, structural, dynamic, electrical, etc.) by assembling a number of analytical inputs from other organizations, systematically check the accuracy of these inputs before using them and perform sanity tests on the total model with simple yet carefully chosen boundary conditions to make sure it is correct.</li>
+
+      <li>When verifying performance of optical elements or systems always cross check the results using another completely different test method. When required to use gravity off-loaders in the test of optical systems, it is essential that they be rigorously tested and correlated with analytical models under both nominal and off nominal conditions.</li>
+
+      <li>Maintain a strong engineering involvement with the contractor from the beginning of the program, not just when you get into trouble. Encourage a sense of "ownership" and continuity of responsibility for all individuals involved in the program. In the case of engineering this can be helped greatly by insuring that the same individual remains responsible for a given technical discipline throughout the program.</li>
+
+      <li>Assure that adequate funding and schedule reserve is budgeted at the beginning of the program, no less than 25% and possibly more depending on assessed technical risk.</li>
+
+      <li>Before launch of any remotely operated satellite or other equipment, perform end-to-end tests of the flight system with the ground control system using the final flight and ground versions of hardware, software, database and procedures. The flight operations team should perform these tests. To the extent possible, each command type should be sent and verified. Commands that by their nature cannot be tested in this manner should be tested in a high fidelity simulator with the ground system and all hardware commands to the flight system should be verified using the ground system for functionality.</li>
+
+      <li>Any mission critical verification that requires verification, in whole or in part, by analysis should be double checked or preferably analyzed in parallel by an independent party. This same principle should also apply to any operational commands that are generated based on analytical input.</li>
+
+      <li>To the extent that resources permit, design the system with reserve capability, including failure tolerance, beyond that stated in the requirements.</li>
+
+      <li>Never stop looking for undetected failure modes or potential risks throughout the entire program development and operational phases.</li>
+
+      <li>Hold regular status meetings by telecon with the entire program team so that all parties remain knowledgeable of program status and issues.</li>
+
+      <li>NASA management's main goal should be to provide help and guidance to their contractors. Monitoring progress is only a by-product of this effort, not its primary objective.</li>
+
+      <li>Taking shortcuts in box-level testing is a gamble with poor odds. Spend the time to thoroughly verify the flight worthiness of hardware and software at the lowest level. Finding box-level problems during systems-level testing is much more costly and disruptive in the long run.</li>
+
+      <li>If independent review teams are to be used, get them involved at Preliminary Design Review (PDR) and keep them involved in all major reviews, as well as in the resolution of critical issues as they arise throughout the program.</li>
+
+      <li>Critically evaluate any hardware or software that a contractor wants to use from another program or verify by similarity. Independently assess its specifications and how it was used in former programs, as compared with your requirements. Be particularly wary if the previous program was classified and details are not available. Insist that the contractor provide all specifications to support your evaluation.</li>
+
+      <li>Be especially cautious when dealing with highly complex scientific hardware where the developer is "the only one that understands how it works." This system should not be exempt from review by as knowledgeable a team of experts as you can assemble, even if they have to be brought in from another NASA center or independent organizations. For instance, the Advanced Charge-Coupled Device (CCD) Imaging Spectrometer (ACIS) CCD radiation test shortcomings may have been caught by such a team, if one had been assembled one early in the program.</li>
+    </ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Reiterating major lessons learned:</p>
+
+    <ol>
+      <li>Do not allow requirements to creep.</li>
+
+      <li>Include operations in requirements definition and early design.</li>
+
+      <li>Wherever possible, maintain common pneumonics for all components and sub-systems.</li>
+
+      <li>Develop operational contingency plans to accommodate possible schedule delays.</li>
+
+      <li>Provide strong systems engineering throughout the program life cycle.</li>
+
+      <li>Organize to ensure proper analysis of critical interfaces.</li>
+
+      <li>When verifying performance of optical elements or systems, always cross check the results using another completely different test method.</li>
+
+      <li>Maintain a strong engineering involvement with the contractor from the beginning of the program, not just when you get into trouble.</li>
+
+      <li>Assure that adequate funding and schedule reserve is budgeted at the beginning of the program.</li>
+
+      <li>Before launch of any remotely operated satellite or other equipment, perform end-to-end tests of the flight system with the ground control system using the final flight and ground versions of hardware, software, database and procedures.</li>
+
+      <li>Provide cross-checks for any mission critical verifications based, in any part, on analysis.</li>
+
+      <li>To the extent that resources permit, make program decisions that provide the system with reserve capabilities that exceed the requirements.</li>
+
+      <li>Never stop looking for undetected failure modes or potential risks.</li>
+
+      <li>Hold regular status meetings with the entire program team so that all parties remain knowledgeable of program status and issues.</li>
+
+      <li>NASA management's main goal should be to provide help and guidance to their contractors.</li>
+
+      <li>Spend the time to thoroughly verify the flight worthiness of hardware and software at the lowest level.</li>
+
+      <li>If independent review teams are to be used, get them involved at Preliminary Design Review (PDR) and keep them involved.</li>
+
+      <li>Critically evaluate any hardware or software that a contractor wants to use from another program or verify by similarity.</li>
+
+      <li>No system should be exempt from review by technical experts as you can assemble, even if they have to be brought in from outside.</li>
+    </ol>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

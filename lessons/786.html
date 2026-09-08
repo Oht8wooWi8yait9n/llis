@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0786: Independent Review of Reliability Analyses</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0786: Independent Review of Reliability Analyses</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0786 (Database ID: 786)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/786" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-AP-1302, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p>
+
+    <p><u>Benefit:</u></p>
+
+    <p>This process of peer review serves to validate both the accuracy and the thoroughness of analyses. If performed in a timely fashion, it can correct design errors with minimal program impact.</p>
+
+    <p><u>Technical Rationale:</u></p>
+
+    <p>The creation of a well-functioning, highly reliable design requires the rigorous application of numerous design tools. Among these are Part Stress, Worst-Case Circuit Performance, Failure Modes and Effects and Criticality, Fault Trees, and Single Event Effects on Electronics. Each of these is a highly specialized field. The design or analysis engineer who performs these is usually the judge of the attributes to be examined and their exact depth of examination. The analyst also selects the analytical approach. All of these decisions are a function of the analyst's experience, wisdom, and perception of the program constraints and needs. For these reasons, it is very possible that omissions or inadvertent errors are occasionally made.</p>
+
+    <p>Experience on the above noted programs as well as numerous other projects has shown that approximately 40 percent of all analyses contain significant shortcomings when they are performed for the first time. Approximately half of these are defects or omissions in the analysis alone and are not design defects. The remaining 20 percent actually represent design defects, the severity of which ranges from minor to mission catastrophic. Experience has shown that about 5 percent of all released manufacturing designs contain potential mission jeopardizing defects. The only proven method for detection of these defects is an independent review of the design details by an impartial, objective, competent peer in the appropriate technical field.</p>
+
+    <p>To be effective this process should be a closed-loop system, which clearly identifies the design defect and enters it into a tracking system that requires resolution by either a design change or a program waiver. The process should also clearly differentiate between analysis omissions or defects and design deficiencies. Analysis deficiencies also should be tracked in a similar closed-loop system to assure timely updates, which may ferret out additional design deficiencies and will serve as an accurate historical record of the design.</p>
+
+    <p>It is essential that the independent review process be based on purely technical grounds that avoid any connotation of being personal or punitive in nature. The reviewers should maintain an objective, constructive, and professional dialogue with the analysts to aid the resolution process.</p>
+
+    <p>Experience on numerous projects has shown that this independent review process does work and the resultant quality of both the analyses and the designs is enhanced.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The absence of independent review of reliability analyses results in the very real possibility of not detecting a design defect. The process rapidly degenerates if the design analyst feels that the analysis task is performed simply to satisfy a project milestone. The depth and accuracy of the analysis suffers, and because of the lack of feedback (positive or negative), there is no increase in technical competence. An independent review with no closed-loop correction system is of little value because experience has shown that condoned apathy will replace corrective action in many cases. Also, there will be no accurate technical and historical record of the design process to aid the troubleshooting required by test or mission failures; and there will be no inheritance record to forward with hardware that is used on more than one project.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Establish a mandatory closed-loop system for detailed, independent, and timely technical reviews of all analyses performed in support of the reliability/design process.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Viking, Voyager and Magellan programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

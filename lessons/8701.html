@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #8701: Take Special Care to Avoid Misprobing When Using Breakout Boxes</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #8701: Take Special Care to Avoid Misprobing When Using Breakout Boxes</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #8701 (Database ID: 8701)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2014-02-18</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Safety and Mission Assurance, Ground Equipment, Ground Operations, Hardware, Payloads, Safety and Mission Assurance, Spacecraft, Test and Verification, Quality</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/8701" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> A BOB is an item of commercial test equipment inserted between two powered electrical devices to provide ready access for probing or patching of electrical signals. BOBs are useful for identifying miswiring during safe-to-mate procedures, and they are commonly used at the NASA/Caltech Jet Propulsion Laboratory (JPL) to support integration testing. A downside to providing easy access to cable connections that would otherwise be sealed is that inadvertent misprobing of the exposed BOB contacts may short a circuit.</p> 
+<div> 
+ <table border="0" style="margin: auto;"> 
+  <tbody> 
+   <tr> 
+    <td> <img alt="Figure 1 is a color photo of a rectangular box about the size of a flip cellphone. Sixty-one labeled pairs of black and red contacts are arrayed across the top of the box. At one end of the box are two large contact with wire leading from them: one contact is labeled “to UDIM,” and the other is labeled “to power supply.”" src="https://llis.nasa.gov/llis_lib/images/NEN8701-BOB_Fig1.png" style="width: 400px; height: 146px;" /></td> 
+   </tr> 
+   <tr> 
+    <td> <strong>Figure 1.</strong> BOB configured for use in a 2008 functional test of an MSL<br /> Up/Down Intermediate Frequency Module (UDIM)</td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p> A safe-to-mate procedure was performed at JPL during integration of the Mars Science Laboratory (MSL) rover Wheel and Steering Actuator prototype into the Payload System Testbed. All measured circuit values for one encoder channel on the Rover Motor Controller were found to be within the expected ranges. However, after the system was powered off, patched to excite a different encoder channel, and the system again powered, the measured values of the second channel were found to be outside the predicted values.</p> 
+<p> It was determined that mis-probing had caused a short that blew the fuse on the Rover Motor Controller Sensor. This test error by a very experienced technician was made more likely by the sensitivity of the sensor board while configured to include a BOB; similar mis-probing incidents had occurred during previous MSL safe-to-mate procedures at the subsystem level. No hardware was overstressed, and the Motor Controller Assembly team was advised to proceed slowly and carefully while in the BOB configuration.</p> 
+<p> <u>References</u>:</p> 
+<ol> 
+ <li> “Blown Fuse on RMCA EM3 RMCS3 J2 Dedicated Encoder Channel,” JPL Problem/Failure Report No. 26718, June 21, 2010.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> The common use of BOBs during subsystem/system integration and test does much to facilitate hardware checkout and test procedures, but the BOBs also expose developmental hardware or spaceflight hardware to an additional risk of test-induced damage.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Regardless of the experience level of test personnel, any patching or probing of electrical connections to sensitive hardware that involve a BOB should be done with extreme care. Actions should be performed under observation, methodically, and at half speed.</li> 
+ <br /> 
+ <li> When working from a written procedure (as is typical with a safe-to-mate and initial hardware powering), double-check the BOB connections against the procedure before powering the hardware.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.12.8 (“Engineering Practices: Protection and Security of Flight Hardware”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 10,” JPL DocID 58032, October 23, 2013.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

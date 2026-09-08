@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #3759: Space Shuttle High-Density Electrical Connector Retest</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #3759: Space Shuttle High-Density Electrical Connector Retest</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #3759 (Database ID: 3759)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-08-24</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Ground Operations,  Lander Systems,  Launch Systems,  Ground processing and manifesting,  Ground support systems,  Logistics and maintenance,  DDT/E,  Vehicle concepts,  Impact of human factors on systems requirements and designs,  Level II/III requirements definition,  Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/3759" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Thousands of electrical connectors are used on the Space Shuttle Orbiter to allow quick connection and disconnection of electrical circuits for maintenance, modification, inspection, or troubleshooting. NLS connectors are procured according to MSFC specification 40M38277 and are similar in construction to MIL-C-38999, Series II, connectors. NLS connectors are commonly referred to high-density connectors because of their generally high number of small contacts per connector (up to 128 size 22D contacts in a single connector). From a design perspective, 128-pin NLS connectors offer space and weight advantages but are challenging from a vehicle processing perspective. 
+<br> 
+<br> First, the contacts of high-density connectors are more susceptible to bending during mating and demating than those of lower-density connectors. If the connector is damaged beyond repair, each connector contact must be depinned and repinned—a labor-intensive operation. 
+<br> 
+<br> Second, demating and reworking connectors have a significant effect on system-level retesting. According to the Orbiter Maintenance Requirements and Specifications Document (OMRSD), when a connector is demated, each pin must be functionally reverified after the connector is remated before the next mission. This requirement was imposed to detect bent or recessed contacts or other anomalies that could otherwise go undetected until the function was used during flight. In addition, the OMRSD requires that all replaced connectors be continuity-tested prior to power-up to verify that they were pinned appropriately. This requirement was imposed to ensure that flight hardware was not inadvertently electrically damaged because of a missed pin. 
+<br> 
+<br> Meeting these requirements for high-density connectors can be challenging, and the retesting alone can take weeks. For example, the circuits of a 128-pin NLS connector can branch out to 15 or more other connectors. Continuity testing requires the demating of all those additional connectors, each of which carries its own retest requirements. This situation can quickly spiral into a retesting nightmare, which can have significant effects on milestones. 
+<br> 
+<br> A worst-case example of this situation is retesting of the landing gear system. As one of the last steps of the Orbiter Processing Facility flow, the landing gear is functionally tested and then stowed. The Orbiter is then taken to the Vehicle Assembly Building and mated to the External Tank and Solid Rocket Boosters. Once the Orbiter is vertical and mated, the landing gear cannot be functionally tested for the rest of the processing flow. Therefore, demating any connectors associated with those circuits must be avoided because retesting would require destacking and returning the Orbiter to the Orbiter Processing Facility.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Though high-density connectors offer many design benefits, they present significant challenges for vehicle processing and anomaly resolution. They are more susceptible to damage than low-density connectors and carry significant retesting requirements if they are demated. High-density connectors should be used sparingly, and whenever possible, systems should not share a connector. 
+<br />   
+<table border="2"> 
+ <tbody> 
+  <tr> 
+   <td><img align="Bottom" alt="Back side of high density connecter" border="0" height="500" src="https://llis.nasa.gov/llis_lib/images/1038400main_BacksideHighDensityconnector.png" title="Back side of high density connecter" /></td> 
+   <td><img align="Bottom" alt="Front side of high density connector" border="0" height="500" src="https://llis.nasa.gov/llis_lib/images/1038399main_NLSBentPin3.jpg" title="Front side of high density connector" /></td> 
+  </tr> 
+  <tr> 
+   <td>Back view: A high-density NLS connector with 128 wire segments is a challenge to vehicle processing.</td> 
+   <td>Front view: This high-density NLS connector has a bent pin (Number 115).</td> 
+  </tr> 
+ </tbody> 
+</table>
+</section>
+<section><h2>Recommendation(s)</h2>
+Current technologies allow increased use of serial digital busses. When possible, these should be used to reduce the number of discrete circuits. Besides offering obvious design advantages, serial digital busses require less discrete system-level retesting. When possible, the ability to retest the circuits should be built into the vehicle’s electrical systems as opposed to requiring manual activation of hardware. Finally, high-density connectors should be used sparingly, and whenever possible, systems should not share a connector.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

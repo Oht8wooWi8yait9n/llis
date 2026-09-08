@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #8401: Schedule Early Generation and Validation of Simulated Science Datasets</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #8401: Schedule Early Generation and Validation of Simulated Science Datasets</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #8401 (Database ID: 8401)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2013-06-25</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase D</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing, Program Management, Ground Equipment, Information Technology / Systems, Test and Verification, Ground support systems, Configuration control and data management, Science integration</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/8401" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> A Science Data Processing System (SDPS) is typically developed for a NASA project to accommodate the huge quantities of raw science data downlinked from instruments or experiments over the course of a mission. Sometimes referred to as a Science Data System (SDS), the SDPS converts telemetry into higher level science data products provided to the science community for research and applications. The SDPS is centered at the NASA/Caltech Jet Propulsion Laboratory (JPL) on JPL-managed missions, where JPL is responsible for processing and distributing data products in a timely manner as required to meet mission objectives. Figure 1 depicts the science data flow to and from the science data processing function. One critical task in SDPS development is data simulation, a technique that provides visualizations of the extremely large and complicated science datasets and permits verification of the system.</p> 
+<div> 
+ <table border="0" style="margin: auto;"> 
+  <tbody> 
+   <tr> 
+    <td> <img alt="Figure 1 is a context diagram that shows science data flows. A vertical dashed line is drawn down the middle, with the right half of the diagram bearing a heading,”Downlink Processes.” The data flows from a spacecraft as a downlink signal to Data Acquisition; from there a divided path goes on one path to Science Data Processing and Science Data Archival, on a second path to Navigation &amp; Maneuver Design, and on a third path to Realtime Monitoring and Spacecraft/Instrument Performance Analysis. Then this Realtime Monitoring and Spacecraft/Instrument Performance Analysis flows into the left half of the flow diagram, which is headed “Uplink Processes” to the function labeled Science Planning (which also received data from Navigation &amp; Maneuver Design). From Science Planning, data flows to Sequence &amp; R/T Command Development and Command Radiation (to the spacecraft)." src="https://llis.nasa.gov/llis_lib/images/2013-03_SDPS_Fig1.jpg" style="width: 600px; height: 360px;" /></td> 
+   </tr> 
+   <tr> 
+    <td> <b>Figure 1.</b> The science data processing function is depicted within the context of the entire<br /> Mission Operations System (MOS) for the Orbiting Carbon Observatory mission<br /> <small><u>Legend</u>: OSC– Orbital Sciences Corp; GSFC– NASA Goddard Space Flight Center</small></td> 
+   </tr> 
+  </tbody> 
+ </table> 
+</div> 
+<p> The Orbiting Carbon Observatory (OCO), an Earth orbiting satellite mission managed by JPL, was designed to make precise, time-dependent, global measurements of atmospheric carbon dioxide (CO<sub>2</sub>). In developing the SDPS for OCO, The Ground Data System (GDS) Team (which is responsible for spacecraft and instrument monitoring and operations) did a good job of leveraging the Instrument and Observatory thermal-vacuum test output to generate datasets for system testing (Reference (1)). The team generated multiple sets of data that represented varying conditions. These data provided a good basis for OCO system testing.</p> 
+<p> Unfortunately, the GDS Team was unable to generate simulated data that covered all critical operational modes. The team only generated Attitude Control System (ACS) data for the Nadir mode, and was unable to generate ACS data in the Glint or Target modes. Further, the team was not able to generate data that could run through Level 2. The Instrument thermal-vacuum tests recorded only direct solar observations, rather than solar light reflected off the surface of the Earth. The science retrieval algorithms could not work with direct solar observations. It should be noted that, despite the best efforts of the team that plans and performs an SDPS test, it is not uncommon for the SDPS test configuration and environment to be unable to generate certain characters of test data. In such cases, certain simulated data sets are generated by the science instrument during system-level testing (e.g., thermal-vacuum test), while other types of simulated data are generated by an algorithm scientist and inserted into the processing chain to exercise and validate certain science data product software executables.</p> 
+<p> The Algorithm Team generated a partial orbit of spectra that simulated the spectra that they expected to see in flight. The GDS obtained that dataset, manipulated it into an OCO L1B (registered radiance at the sensor product dataset) file, and gathered the ancillary data needed to run the dataset through the Level 2 AOPD (Agent-Oriented Program &amp; Design algorithm) PGE (Product Generation Executive). Even at launch, however, that dataset had not yet been diffused into the system testing process.</p> 
+<p> For OCO, the full set of required test cases was not identified soon enough to conduct the additional planning needed for their generation. For the OCO-2 follow-on project, the full set of simulated test cases was known, and the GDS Team began early to determine which sets should be implemented and which sets the project could omit as an acceptable risk.</p> 
+<p> <u>References</u>:</p> 
+<ol> 
+ <li> P.J. Guske, “OCO (Orbiting Carbon Observatory) Project Lessons Learned Document (Final),” JPL Document No. D-26172, July 7, 2009, Paragraph 3.7.6.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> Simulated science data is needed by multiple groups within a project team to test their respective SDPS elements. Even though the specific needs of each group may vary, a cooperative effort among the different groups may reduce the amount of time required to generate an adequately complete set of simulated data for system test. If the project fails to plan the timely generation of a complete set of simulated data, system testing may be unable to verify and validate all critical operational modes.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Early in the project lifecycle, project management should define which science datasets, both simulated and captured, will be required for use during system testing. Schedules should allocate adequate time to ensure that all required simulated datasets are generated and validated in time for system testing.</li> 
+ <br /> 
+ <li> Project management should also require the various Project Element Managers (PEMs) to collaborate in this effort. Early in Phase C/D and well before the thermal-vacuum test cycles, PEMs should document their specific data simulation needs and their plans to simulate the required datasets. Based on these brief documents, the project team can collectively determine how the members can most efficiently generate all of the requisite simulated datasets.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 5.7.1 (“Management Practices: Spares, Testbeds, and Models”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 9,” JPL DocID 58032, August 21, 2012.</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+NASA-STD-7009, Standard for Models and Simulations
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0982: Retention of Traceability Data for EEE Parts</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0982: Retention of Traceability Data for EEE Parts</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0982 (Database ID: 982)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2001-04-16</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Goddard Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/982" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Effective, critical traceability of EEE parts may be lost if original shipping containers and documentation are not retained by original equipment manufacturers (OEMs) and their contractors.</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Recently, NASA Goddard Space Flight Center (GSFC) has observed that many hardware builders repackage EEE parts during receiving inspection and discard the part manufacturer's original shipping containers. This practice can lead to loss of vital lot traceability information because in many cases, the shipping containers contain unique lot information that may not be provided by the part markings or other shipping documentation (Certificates of Compliance, etc.) that is typically retained by the user. This problem may also occur if the user discards the paperwork and/or packaging when all the parts in the package have been used.</p> 
+<p>Accurate and detailed EEE part lot traceability information may be critical in order to perform risk assessments, circuit performance analysis and failure investigations especially when problems are reported for parts that may already be assembled into hardware or when troubleshooting on-orbit anomalies. The EEE part manufacturer generally establishes lot traceability through a combination of the manufacturer's part number, CAGE code and a unique <q>production</q> Lot Date Code (LDC). Generally speaking, the <q>production</q> LDC identifies a group of parts of the same style and ratings that are manufactured from the same raw material lots and are processed through all critical manufacturing steps and tests as a single group. As such, the <q>production</q> LDC is an invaluable lot identifier. Unfortunately, this <q>production</q> LDC is generally NOT marked directly on the parts (especially for smaller <q>chip</q> style components where there may be insufficient room for any part markings) and is sometimes only provided to the user on labels affixed to the original shipping containers for the parts (i.e., C of C may not contain <q>production</q> LDC info).</p> 
+<p>It is important to note that a <q>production</q> LDC is not the same as the <q>inspection</q> LDC (or <q>marking</q> LDC) which is commonly marked directly on the part and shipping documentation. (For MIL specification products, the LDC marked on the parts is the <q>inspection</q> LDC). The <q>inspection</q> LDC generally represents the year and week when a group of parts is subjected to the manufacturer's final test and inspection (end of production test). It is very probable for a manufacturer to submit many different production lots of the same part type to final inspection during the same week. As such, each <q>inspection</q> lot may be me made up of multiple <q>production</q> lots. When a problem is later discovered that is attributed to a specific <q>production lot,</q> the user may not be able to effectively assess risk if the only traceability data they have on file is the <q>inspection</q> LDC.</p> 
+<p>Figure 1 helps to illustrate a recent example where disposal of the manufacturer's original shipping containers resulted in loss of effective lot traceability. This figure shows the original shipping container of one tantalum chip capacitor manufacturer. A label affixed to the container by the manufacturer provides vital lot traceability information including procurement part number, manufacturer part number, CAGE Code, <q>production</q> LDC and <q>inspection</q> LDC. The other shipping documentation that accompanied this manufacturer's shipment did NOT contain the <q>production</q> LDC. Different users of this manufacturer's parts discarded this container (and label) after performing receiving inspection or stocking or kitting the parts. When problems with this manufacturer's parts were later reported, having only part number and <q>inspection</q> LDC (from part markings and C of C) made traceability back to the manufacturer's original production traveler information exceedingly difficult, if not impossible. Therefore, valuable lot pedigree information could not be obtained to assist in the risk assessment process.</p> 
+<p><img alt="refer to [D] description" border="0" height="366" src="https://llis.nasa.gov/llis_lib/images/1009422main_0982-1.jpg" title="refer to [D] description" width="500" /><a href="https://llis.nasa.gov/llis_lib/txt/1009893main_0982-1.txt">[D]</a></p> 
+<h4> </h4>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>To assist in effective lot traceability it is suggested to require OEMs and their contractors to retain ALL of the EEE part manufacturer's original shipping documentation AND packaging information. If shipping containers cannot be retained, then pertinent labels should be copied or carefully removed for storage along with other pertinent receiving inspection data. In addition, it is suggested to retain this traceability information for the duration of the mission in the event that this data is required to address on-orbit anomalies.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

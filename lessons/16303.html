@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #16303: Juno/MSL SDRAM Vulnerability</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #16303: Juno/MSL SDRAM Vulnerability</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #16303 (Database ID: 16303)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2016-03-22</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Science, Space Technology</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Spacecraft and Spacecraft Instruments, Program level review processes, Engineering design and project processes and standards, Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/16303" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p> Juno, a Jupiter orbiter designed and operated by the NASA/Caltech Jet Propulsion Laboratory (JPL), was launched in August 2011. Over the first three months of Juno cruise, the spacecraft experienced a set of anomalies of varying durations and signatures in synchronous dynamic random-access memory (SDRAM) memory modules (Reference (1)). These included a multi-bit error (MBE), clusters of single bit errors (SBEs), and stuck bits.</p> 
+<p> In April 2012, four months before the Mars rovers landing, the MSL project discovered (Reference (2)) that a SEFI<sup>1</sup> had occurred on the backup MSL Rover Computer Element (RCE-B).  This resulted in a large number of SBEs and double bit errors (DBEs) in the Nonvolatile Memory and Camera Interface Board (NVMCAM) SDRAM memory.  Analysis, ground test, and flight testing determined that this SEFI event was similar to the Juno SEFI event.</p> 
+<p> A cold reboot of MSL’s RCE-B resolved the issue, a swap to the backup computer (RCE-B) was performed, and MSL operations have continued nominally. However, where the likelihood and impact of a SEFI event on SDRAM is acceptable during the cruise phase and the operations phase of a mission, the risk is greater during the Entry, Descent, and Landing (EDL) phase. If the MSL SEFI had occurred shortly prior to or during EDL, and were it not for the MSL Second Chance (SECC) flight software, the SEFI would most likely have been mission-ending. SEFI-triggered DBEs are continuing to occur during MSL surface operations (Reference (3)), but because they clear during the following cold boot, they are considered a transient event.</p> 
+<p> The JPL electronic parts specialists pointed out to the MSL project, based on parts test data, that radiation-induced SEFI incidents were a strong possibility for the SDRAM part. However, this information was not communicated to the appropriate MSL systems engineers or to the MSL avionics chief engineer.</p> 
+<p> The Juno anomalies also prompted concern at JPL because the Gravity Recovery and Interior Laboratory (GRAIL) spacecraft was flying memory devices from the same manufacturer’s lot in a similar space environment. The Soil Moisture Active Passive (SMAP) mission was also considered to be potentially impacted by the SDRAM susceptibility to radiation damage.</p> 
+<p style="margin-left:.25in;"> <sup>1</sup>A SEFI is a space radiation-induced event often associated with an upset in a control bit or register in a programmable digital device (Reference (4)). Like a single event upset (SEU), it can result from a single heavy ion strike upon the component, but it is manifested in a somewhat different manner. That is, a SEFI is a soft error that causes the component to reset, lock-up, or otherwise malfunction in a detectable way, but a SEFI does not require power cycling of the device to restore operability.</p> 
+<p> <strong>References:</strong></p> 
+<ol> 
+ <li> “NVM SDRAM Vulnerability” (MSL, Juno, GRAIL, SMAP), JPL Problem/Failure Report (PFR) No. 50582, November 15, 2011.</li> 
+ <li> “RCE-B NVMCAM Double Bit Errors” (MSL, Juno), JPL Incident/Surprise Anomaly (ISA) No. 51764, April 10, 2012.</li> 
+ <li> “NVMCAM SDRAM DBEs on Sol 803,” JPL Incident/Surprise Anomaly (ISA) No. 57325, November 10, 2014.</li> 
+ <li> JEDEC specification JESD89A, “Measurement and Reporting of Alpha Particle and Terrestrial Cosmic Ray-Induced Soft Errors in Semiconductor Devices,” JEDEC Solid State Technology Association, October 2006, p. 3.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p> NASA engineers face a challenge in obtaining electronic parts suitable for spaceflight applications. Commercial-off-the-shelf (COTS) parts, including memory devices, are designed for low cost, high performance, and low power—not for error detection. High density memory devices are not manufactured to meet NASA radiation hardness requirements. Hence, whenever NASA adopts a new type of non-radiation tolerant commercial memory device, such as cellphone-type memory for small spacecraft, radiation-induced errors arise. As these part vulnerabilities are sometimes predictable, spaceflight projects need to understand them and mitigate their impacts.</p> 
+<p> Whenever JPL has adopted a new memory part or a new type of digital memory, unexpected part behaviors have resulted. Examples have included manufacturing issues (Galileo TC244 parts), architectural issues (Cassini Solid State Recorder high double bit error rates), bit failures (EEPROM weak bits), and in this case SEFIs. Unanticipated problems can be expected with emerging types such as magnetoresistive RAM (MRAM) and resistive RAM (RRAM).</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li> Ensure that part test results, particularly results with negative outcomes, are widely distributed to the appropriate system design personnel. This will allow the part user community to select alternate parts, design systems to cope with the part vulnerabilities, or use as-is.</li> 
+ <br /> 
+ <li> The radiation test report for the SDRAM part provided part usage-based recommendations.  Requirements on parts that are dictated by the flight environment should be flowed into a repository where anyone can access the part usage requirements during system design.</li> 
+ <br /> 
+ <li> Projects should establish a more penetrating part review process to ensure that memory device use will be consistent with known failure mechanisms like SEFI.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p> JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 4.12.1.5 (“Flight System Design : Flight Electronics Hardware System Design - Radiation Design Factors”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p><p><font size="5">Related Policies, Standards, Handbooks, Procedures, or Other Documents</font></p><p> JEDEC specification JESD89A, “Measurement and Reporting of Alpha Particle and Terrestrial Cosmic Ray-Induced Soft Errors in Semiconductor Devices,” JEDEC Solid State Technology Association, October 2006</p>
+</section>
+<section><h2>Related Policies & Standards</h2>
+<p> JEDEC specification JESD89A, “Measurement and Reporting of Alpha Particle and Terrestrial Cosmic Ray-Induced Soft Errors in Semiconductor Devices,” JEDEC Solid State Technology Association, October 2006</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

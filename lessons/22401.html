@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #22401: Premature Wear of the MSL Wheels</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #22401: Premature Wear of the MSL Wheels</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #22401 (Database ID: 22401)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2017-09-26</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation &amp;raquo; Phase E</div>
+      
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Integration and Testing,  Flight Equipment,  Robotics,  Spacecraft and Spacecraft Instruments,  Planetary Operations,  Planetary entry and landing concepts,  Vehicle concepts,  Reliability,  Engineering design and project processes and standards,  Level II/III requirements definition,  Mission and systems trade studies</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/22401" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>The MSL “Curiosity” rover landed on August 6, 2012, ­­­and it has currently driven 19 kilometers (Reference (1)) across the Martian surface. Curiosity's six aluminum wheels were designed for mobility on loose sand, rocks perched on sand, and flat bedrock. The design was tested under simulated conditions in the Mars Yard outdoor test facility. Like the wheels on the three prior Mars rovers, however, the wheel (Figure 1) was designed with very limited knowledge of the specific terrain features that would eventually be encountered during Mars surface operations.</p> 
+<p><img alt="Figure 1 is a photo of the Curiosity rover wheel. The black rimmed wheel is hollow, exposing five aluminum curved flexible spokes attached to a central hub. The tread of the wheel, known as ‘grousers’ span the width of the wheel in three chevron shapes. " src="/lessons/22401/2016-11_wheels_Fig1.jpg" style="width: 550px; height: 485px;"></p> 
+<p><strong>Figure 1.</strong> Components of a Curiosity wheel</p> 
+<p>As the rover drives across the surface of Mars, the rover operations team at the NASA/Caltech Jet Propulsion Laboratory (JPL) employs the Mars Hand Lens Imager (MAHLI) camera on the rover's robotic arm to check the condition of the wheels at routine intervals. On sol 411 (October 2, 2013) imagery revealed a puncture in the skin of the left front wheel (Figure 2). This did not raise a concern because such wear and tear was expected, especially in the thinnest areas of the wheel skin between the chevron-shaped grousers (treads). (Previous Mars rover wheels had straight skin protrusions; the chevron feature was provided for the purpose of preventing sideways slip.) However, subsequent visual wheel inspections revealed higher than expected wheel wear, which prompted JPL to start tracking the progression of wheel damage.</p> 
+<p><img alt="Figure 2 is a photo taken on Mars of the inside surface of the Curiosity rover wheel.  The smooth interior of the surface shows aluminum ripped puncture damage cause by sharp embedded rocks." src="/lessons/22401/2016-11_wheels_Fig2.png" style="width: 550px; height: 551px;"></p> 
+<p><strong>Figure 2.</strong> Detail view of the inner surface of Curiosity's left front wheel on sol 411. Arrow<br> points to tear.</p> 
+<p>Within a few months of the sol 411 anomaly, the MSL project became concerned by the apparent increase in the rate of wheel damage (Reference (2)), and a tiger team was formed to analyze the problem. By sol 463 (November 24, 2013), a large rip had opened above the Morse-code holes in the left front wheel that was much larger than expected and exceeded any damage seen in testing. The progressive damage to MSL wheels has continued (Figure 3). This rip, and the others that would follow is attributed to single-event punctures, as well as metal fatigue, due partially to the prevalence of ventifacts embedded in bedrock (i.e., immobile, wind-eroded pyramidal rocks). This terrain had not been simulated in pre-launch testing of the wheel (Reference (3), Sec. 4.18) because only limited knowledge about the terrain was available. The stresses from deformation and the metal fatigue are highest on the skin near the tips of the chevron features, and many tears seem to propagate from the chevron tips.</p> 
+<p><b><sup><img alt="Figure 3 is a photo taken on Mars looking back on the exterior of the Curiosity rover wheel.  The image shows several impingement damage points on the wheel.  On the lower half of the wheel, three areas of aluminum ripped punctures, the largest of which is center of the wheel width between the chevron pattern tread. The hole size is about 1/3 of the wheel width.  The second and third punctures are about half as small as the largest, located in approximately higher on the wheel, but also in the center of the wheel width.  A deep conic penetration of the wheel is located on the outer edge near the top of the wheel.  Smaller non-penetrating cracks are also seen in various locations on the wheel." src="/lessons/22401/2016-11_wheels_Fig3rev.png" style="width: 550px; height: 493px;"></sup></b></p> 
+<p><strong>Figure 3.</strong> MAHLI full-wheel imagery of Curiosity's left-middle wheel taken on April 18,<br> 2016 (sol 1,315)</p> 
+<p>The impact of ventifacts is exacerbated by a dynamic mechanical load on the wheels. The design of the rocker-bogie system (Figure 4) includes wheels that all rotate at the same speed and downward-angled arms that support the middle and front wheels. If a front or middle wheel hangs up on a rock and the rest of the rover keeps driving, the arm exerts a <a href="http://i.stack.imgur.com/qcnqs.gif">downward force on the wheel</a>. This increases wheel loading well beyond the static weight of the vehicle, and it is sufficient to cause local grouser yielding and skin puncture. The MSL rear wheels, which have experienced minimal damage, do not see this downward force because they are merely dragged behind the arm like a trailer on a hitch. Where this pushing force might have been expected to merely shift a loose pointy rock, <a href="https://youtu.be/9Sb6VFJMk5Q">subsequent testing</a> has shown that the punctures are primarily due to the prevalence of pointy rocks that are immobile—either cemented into the ground or a part of the bedrock.<a title="">[1]</a></p> 
+<p><b><sup><img alt="Figure 4 is a computerized model of the Mars Exploration Rover Rocker Bogie System. The two rear wheels are connected by a rocker bar above the wheels. In the middle of the rear rocker bar, the forward rocker bar is attached angling down towards the front most rover wheel." src="/lessons/22401/2016-11_wheels_Fig4.jpg" style="width: 550px; height: 309px;"></sup></b></p> 
+<p style="text-align: justify;"><strong>Figure 4.</strong> The rocker-bogie mobility system (the wheels depicted are not the Curiosity<br> design) surmounts the face of a vertical obstacle (rock) by having the center and rear<br> wheels force the front wheels against the obstacle. The rotation of the front wheel then lifts<br> the vehicle up and over the obstacle. The rear wheel then presses the middle wheel<br> against the obstacle and the front wheel pulls it against the obstacle until the middle wheel<br> is lifted up and over. Finally, the rear wheel is pulled over the obstacle by the front two wheels.</p> 
+<p>The&nbsp;rover test program did not consider driving-related loads to be the only potential cause of wheel damage. The MSL project had placed more emphasis during wheel testing on <a href="https://www.youtube.com/watch?v=cPgsGkPtiVw">landing touchdown loads</a>, the expected worst case wheel failure mode, than on terrain-influenced driving loads. (Post-touchdown imaging revealed only slight damage-- a minor crack in the L2 wheel (Reference (4), p. 5.)</p> 
+<p>The MSL project has implemented corrective actions to mitigate the extent of future damage. These include establishment of guidelines, based on visual observations and on verification in the Mars Yard, for (1) assessing wheel wear progression and (2) minimizing wheel wear while driving. The latter measure involves avoiding driving over hard surfaces with a high concentration of sharp ventifacts and, where feasible, driving backward on “wheel hostile” terrain to reduce the load on the front wheels. These measures have proven effective in managing the rate of damage (Reference (2)): the rover will be able to complete its extended mission, and it will likely be capable of additional extensions to the MSL mission. The major effects of the wheel damage problem are to slow the progress of Curiosity and to limit the paths the mission can choose to explore.</p> 
+<p>The design of the MSL wheels has been more susceptible than anticipated to puncture and cracking, particularly following interaction with certain types of terrain (Reference (2)). Specifically, the root cause analysis (Reference (6), p. 29-30) of the premature MSL wheel wear offers some instructive lessons learned:</p> 
+<ol> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">The wheel design is not robust to fatigue. Nominal vehicle weight, in combination with nominal drive torque, causes wheel skin stresses to exceed the endurance limit of the material, initiating cracks.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Position control of drive actuators causes non-trivial inter-mobility forces while traversing obstacles, due to differences in the traveled distance of each wheel. These forces increase wheel loading well beyond the static weight of the vehicle, and are sufficient to cause local grouser yielding and skin puncture.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Terrain matters! The wheel design is not robust to puncture on naturally occurring ventifacts. Wheel skin sheet metal is susceptible to puncture from obstacles that are well within the sharpness of naturally occurring ventifacts found on Earth, and likely on Mars.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Skin loss around a grouser (whether from fatigue cracks or puncture) causes a change in the wheel load path, loading said grouser beyond the material yield limit. This material overload situation will eventually cause all wheel grousers to fail, generally at the location where the grousers meet the wheel internal stiffening ring (Figure 1).</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Turning-in-Place (TiP) is preferentially harder on wheel W2, increasing reaction loads beyond that of W2’s normal driving loads. Compounding the issue, W2 turns on a smaller Ackermann arc during TiP maneuvers; small Ackermann turning radii contribute to wheel damage.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">Steering while sitting atop an obstacle at the wheel edge caused the highest loads observed during test. This process, however, does not appear to be a primary damage mode-- likely due to the low probability of coming to rest atop a sharp obstacle at the extreme edges of the wheel, and then commanding a steering operation.</li> 
+</ol> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in">The follow-on Mars 2020 rover project is designing and testing a modified wheel with greater durability over harsh terrain and sand traverse performance equal to MSL (despite an increase in rover mass), while minimizing wheel mass growth (Reference (7), p. 12).</p> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in"><b>References:</b></p> 
+<ol> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt"><a href="http://curiosityrover.com/tracking/drivelog.html">http://curiosityrover.com/tracking/drivelog.html</a></li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt">“Wheel Wear,” JPL Incident Surprise Anomaly (ISA) Report No. 55561, December 18, 2013.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:.0001pt">“Mars Science Laboratory Wheel Damage Mechanical Tiger Team – Final Report,” JPL Document No. D-78450/MSL-266-3989, January 6, 2015.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:.0001pt">R.E. Arvidson, et al, “Relating Geolocic Units and Mobility System Kinematics Contributing to Curiosity Wheel Damage at Gale Crater, Mars,” Journal of Terramechanics, TER 691, March 20, 2017. Patrick DeGrosse Jr.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt">“MSL Wheel Damage,” JPL Incident Surprise Anomaly (ISA) Report No. 56534, June 18, 2014.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt">Patrick DeGrosse Jr., “What is Causing the Damage?,” September 25, 2014.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt">“M2020 Mobility Wheel &amp; Flexure Initial Design Review,” Mars 2020 Mission Formulation, June 14, 2016.</li> 
+ <li style="margin-top:2.0pt; margin-right:0in; margin-bottom:3.0pt">MARS 2020 Project, Surface Terrain Model Specification Document, JPL Document No. D‐93886, October 1, 2015.</li> 
+</ol> 
+<div>
+  &nbsp; 
+ <div> 
+  <p style="margin-left:31.5pt"><b><sup>1</sup></b> “<i>When we conduct tests on Earth with the best analogues that we can find, we believe that they will behave in a certain way. But Mars doesn't have to agree with us. So one of the difficulties is that the Mars material is just fundamentally unknown. But to be blunt, if it were all known then we wouldn’t need to go there.”</i> - Fuk K. Li, Director, JPL Mars Exploration Directorate</p> 
+ </div> 
+</div>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in">The MSL project history suggests that:</p> 
+<ol> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt">The JPL design maxim of “test as you fly, fly as you test” was not heeded (Reference (7), Slide 28). Because the MSL wheel was life tested at the single-wheel level, representative loads over life from inter-mobility forces were not achieved. Also, the wheel was life tested over smooth, artificial terrain that under-represented the ventifacted (wind-sharpened) bedrock encountered on Mars (Reference (7), Slide 28), and testing did not account for the impact of rock immobility.</li> 
+ <li style="margin-top:6.0pt">Analytical modeling and testing of mobility systems need to expand on the range of load cases to encompass our evolving understanding of worst case operational environments, with margin.</li> 
+</ol>
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Challenge your assumptions. </b>MSL’s relatively slow speed across the Martian terrain led the project to focus on wheel design for semi-static loads, which are consistent with testing with a single wheel.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Achieve consensus.</b> During Phase A, ensure that the project team agrees to a common definition of the worst case surface terrain configuration (Reference (8)).</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:3.0pt"><b>Provide margin.</b> If you don’t understand an environment, provide ‘well-margined’ capabilities to encompass the worst case. Mitigate the overall risk of planetary missions through (1) rigorous assessment of the major known environmental risk contributors and (2) provision of design capabilities to counter critical environmental risks at the upper bounds of their probable severity, with substantial margin.</li> 
+</ol> 
+<p style="margin-top:12.0pt; margin-right:0in; margin-bottom:3.0pt; margin-left:0in">Specific to Curiosity, Reference (3), Sec. 5.0, provides the following recommendations to the Mars 2020 (M2020) project (and other future planetary rovers):</p> 
+<ol start="4"> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:6.0pt"><b>Terrains to Avoid.</b> Maximize driving on “wheel friendly” terrain. The correlation between wheel damage and harsh terrain appears high. Areas with a large amount of ~8 centimeters (cm) or larger sharply pointed ventifacts in sand, with no available “rock-free” paths, appear to be among the worst types of terrain to drive over. Smaller ventifacts, capable of engaging the inter-grouser wheel ‘skin,’ which lie loosely on hard bedrock are of equal concern.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt"><b>Preferred Terrains.</b> For maximizing wheel life the preferred terrains include sandy (cohesionless) or cohesive regolith terrains, with few and avoidable large rocks/ventifacts, and few ventifacts in general larger than 8 cm (the size threshold below which these rocks typically get pushed into the soil by the vehicle). Generally, the observation of consistent (uninterrupted) wheel tracks is thought to be an indication of good terrain for maximizing wheel life.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt"><b>Driving Mode.</b> Consider driving in reverse over particularly challenging terrain, provided that the additional steering can be planned for a safe location and if the additional distance caused by the steering is not a large fraction of the distance driven on that particular sol.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt"><b>Monitor Wheels.</b> Periodically (~500 meters) inspect all six wheels for damage. This will allow early identification of any significant changes in damage trends and provide more data to correlate with the terrains.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt"><b>Wheel Life Improvement.</b> The best way in which to improve wheel life would be to develop a torque controlled driving mode, such that the torque on the other wheels can be reduced as the wheel encountering the obstacle is traversing it. Because of the current damage state of the wheels, even this type of new mode will not prevent damage from continuing, as the load threshold has been reduced due to the existing punctures. Nevertheless, this type of driving mode, if implemented correctly, is likely to result in reduced wheel damage.</li> 
+ <li style="margin-top:6.0pt; margin-right:0in; margin-bottom:.0001pt"><b>Rock Detection.</b> Develop higher fidelity rock detection for auto nav drives. In certain terrains, if auto nav could detect and avoid sharp, pointy ventifacts greater than 8 cm in sandy terrain, damage to the wheels could be reduced.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p style="margin-top:6.0pt; margin-right:0in; margin-bottom:6.0pt; margin-left:0in">JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 6.13.1 (“Engineering Practices: Project and System Level Functional Verification and Validation”) in the Jet Propulsion Laboratory standard “Flight Project Practices, Rev. 11,” JPL DocID 58032, January 4, 2017. In addition, JPL has referenced it supporting Paragraph 6.3.9 (“Managed Margins: Flight System Technical Resource Margins -- S/C Mechanisms Functional Margins”) in the JPL standard “Design, Verification/Validation and Operations Principles for Flight Systems (Design Principles),” JPL Document D-17868, Rev. 6, October 4, 2012.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

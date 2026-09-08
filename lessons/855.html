@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0855: Pneumatic System Contamination Protection</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0855: Pneumatic System Contamination Protection</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0855 (Database ID: 855)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1994-12-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/855" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Maintainability Technique number OPS-11 from NASA Technical Memorandum 4628, Recommended Techniques for Effective Maintainability.</p>
+
+    <p>Proper use of filters, prevents contaminated gas from interfacing with component and system operation, provides the following benefits:</p>
+
+    <ul>
+      <li>Decreased component failure caused by contamination.</li>
+
+      <li>Efficient and effective means of servicing system/equipment by filter cleaning or replacement.</li>
+
+      <li>Increased system availability due to reduction in system maintenance.</li>
+    </ul>
+
+    <p>No matter how well a system is designed or how expensive, particulate-contaminated gas interferes with component and system operation. System gas must be conditioned; it must be decontaminated before it is allowed to enter a pneumatic system. The KSC design standard for pneumatic systems defines the following requirements for filters:</p>
+
+    <ul>
+      <li>Filters shall be installed immediately upstream of all interfaces where control of particulate matter is critical and at other appropriate points as required to control particulate migration.</li>
+
+      <li>Selection of filters shall be made only after analysis of overall system performance requirements. This ensures maximum protection of critical components and minimal performance penalty (pressure drop).</li>
+
+      <li>Filter housings and elements shall be constructed of 300 series stainless steel to reduce particulate contamination due to corrosion. Seal materials shall conform to manufacturer's recommendations and the requirements specified herein. The element construction should be welded instead of soldered whenever possible to simplify cleaning. Where 300 series stainless steel is specified, type 303 and other austenitic stainless steels should be avoided whenever possible because of susceptibility to stress corrosion cracking. However, overall cost should be the deciding factor.</li>
+
+      <li>Filter elements shall maintain filtering quality and not be damaged in any way when subjected to worst-case system conditions (i.e., maximum design flow rate and element clogged to its maximum design capability).</li>
+    </ul>
+    Providing unconditioned gas in a pneumatic system will have the following effects:
+
+    <ul>
+      <li>Degraded system performance because of contamination.</li>
+
+      <li>Increased maintenance cost and downtime to recover from problems induced by contamination.</li>
+
+      <li>Decreased system availability.</li>
+    </ul>
+    <u>References</u><br />
+    <br />
+
+    <ol>
+      <li>KSC-SD-Z-0005A, Standard for Design of Pneumatic Ground Support Equipment.</li>
+
+      <li>Parker-Hannifin Corp., Bulletin 0225-B1, Fluid Power.</li>
+    </ol>
+    <br />
+    <br />
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>System gas must be conditioned before it is allowed to enter a new system. Installing filters immediately upstream of interfaces achieves this objective and also reduces dirt and water contamination that can interfere with component and system operation.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>Install filters immediately upstream of all interfaces in pneumatic systems to control dirt and water contamination.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Apollo, National Space Transportation System, and Pneumatic Ground Support Systems.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

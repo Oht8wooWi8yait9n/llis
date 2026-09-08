@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #3576: Hypergolic Propellant Pumps</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #3576: Hypergolic Propellant Pumps</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #3576 (Database ID: 3576)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2010-09-06</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Kennedy Space Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Accident Investigation,  Crew Survival Systems,  Ground support systems,  Affect of Cultural factors on long-term human and robotic missions,  Reliability,  Long term sustainability and maintenance planning</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/3576" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+Pump Operation/Requirements: As a result of risk analyses performed on the pumps, several pump requirements were changed and pump operations were improved. 
+<br> 
+<img align="Bottom" alt="Hydrolic propellant pump cooled by re-circulating the commodity around the motor portion (between rotor and stator windings) of the assembly" border="0" src="https://llis.nasa.gov/llis_lib/images/1033438main_Propellant%20pump%20used%20at%20LC39.JPG" title="Hydrolic propellant pump cooled by re-circulating the commodity around the motor portion (between rotor and stator windings) of the assembly"> 
+<ul> 
+ <li>Vibration analysis is now performed each time the pumps are operated</li> 
+ <li>During start-up and through pump start, the K5 solenoid valve (pump #1 bleed) is now left open to bleed any entrained gas from the pump #1 impeller.</li> 
+ <li>Minimum flow rate requirements through the pumps were instituted.</li> 
+ <li>Nominal flow rates, pressures, and current limits were instituted.</li> 
+ <li>Minimum storage tank pressures are now maintained to prevent pump cavitations during operation, which can result from low head pressure.</li> 
+ <li>A specialized contactor was added that is wired in to a programmable logic controller (PLC). All functions for the pump and its related hardware are controlled by the PLC, including start-up and shutdown specifications and programmed automatic shutdowns.</li> 
+ <li>A thermocouple was added in a drywell to monitor bearing temperature and thermal cutout was transferred to the PLC.</li> 
+ <li>Pump maintenance will be performed after 150 hours of run time. Pumps will be removed from the system and inspected for any off-nominal wear on the bearings and journals. Bearings will be replaced when pumps are rebuilt.</li> 
+ <li>The following electrical tests were instituted prior to installation and after each rebuild: grounding of all phases, phase imbalance, and resistance between phases.</li> 
+ <li>Technicians are required to be out of line of sight of the pumps during start-up and run time. Technicians will return to safe the area after the fluid distribution system is inspected.</li> 
+</ul> All of the above was performed/instituted to improve safety and reliability of the hypergolic servicing pumps.
+</section>
+<section><h2>Lesson(s) Learned</h2>
+A problem with the pumps used on the Titan Program drove United Space Alliance (USA) to investigate the operation of the pumps used in the Shuttle Program. After extensive review, it was found that USA had already implemented many safeguards for pump operations. This review also brought about several other changes or additions to manufacturing and operational safeguards for the pumps. As a result of this review, the pumps were deemed critical components, thus driving the creation of operational requirements for their manufacturing and operation. 
+<img align="Bottom" alt="Cut away diagram of pump" border="0" src="https://llis.nasa.gov/llis_lib/images/1033439main_Chempump%20cutaway.JPG" title="Cut away diagram of pump" />
+</section>
+<section><h2>Recommendation(s)</h2>
+The use of canned pumps is not recommended for hypergolic operations. The use of the pumped commodity as a cooling agent circulating between the rotor and stator of an electric motor is the primary reason for classifying the pumps as critical components. Magnetic-drive pumps are recommended for this application. This would reduce if not eliminate the stringent requirements for this pump.
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

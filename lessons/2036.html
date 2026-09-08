@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #2036: Provide a Design Capability Allowing Key Mechanical Adjustments After Subsystem Integration</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #2036: Provide a Design Capability Allowing Key Mechanical Adjustments After Subsystem Integration</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #2036 (Database ID: 2036)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 2009-01-12</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Jet Propulsion Laboratory</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> Implementation</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations, Science</div>
+      <div class="metadata-item"><span class="metadata-label">Topic / Category:</span> Flight Equipment,  Hardware,  Payloads,  Risk Management / Assessment,  Test & Verification,  Test Article,  Spacecraft and Spacecraft Instruments,  Planning of requirements verification processes</div>
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/2036" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+The Tunable Laser Spectrometer (TLS) is one of three instruments that make up the Sample Analysis at Mars (SAM) instrument suite within the Mars Science Laboratory (MSL) spacecraft payload. In developing and operating the MSL TLS, the NASA/Caltech Jet Propulsion Laboratory (JPL) seeks to understand Martian atmospheric and geophysical processes by measuring methane, water, and carbon dioxide abundances in the Martian atmosphere and soil with unprecedented accuracy. 
+<br> 
+<br> For any TLS, the backscattering of the instrument's primary laser beam from reflective internal component surfaces produces secondary laser beams, and pairs of these scattering surfaces can set up quotoptical standing waves.quot When combined with the primary laser beam at the detector, this interference can reduce the sensitivity of these instruments to a level below performance requirements. 
+<br> 
+<br> Because its compact design places various internal surfaces in close proximity, the JPL TLS design is especially vulnerable to standing wave contamination or quotfringes.quot Using the TLS Development Model (DM) as a testbed (Figure 1), JPL employed a systematic approach to assessing the potential impact of each optical surface on standing wave amplitudes. Realignment of optical elements within the DM was successful in attenuating optical standing waves to acceptable levels. 
+<br> &nbsp; 
+<img alt="Figure 1 is a color photograph of a number of components laid out linearly on a perforated table. The component at the top of the photo is an assembly that appears as a clear plastic disk, labeled" border="0" height="336" src="https://llis.nasa.gov/llis_lib/images/1021606main_2009-01_TSL_Fig1_small.jpg" title="Figure 1 is a color photograph of a number of components laid out linearly on a perforated table. The component at the top of the photo is an assembly that appears as a clear plastic disk, labeled" width="304"> &nbsp; 
+<b>Figure 1.</b> The JPL TLS DM unit provided an ability to adjust and realign optical elements to optimize instrument performance. 
+<br> When the flight unit of the MSL TLS opto-mechanical system was first integrated and performance-tested in August 2007, however, optical standing waves were observed that greatly exceeded those previously observed in the DM unit (Reference (1)). This threat to mission performance was mitigated by adding mylar sheet material to the MSL flight TLS foreoptics that attenuated the amplitude of the fringes. 
+<br> 
+<br> The reduction of standing wave fringe amplitudes in tunable laser spectrometers is typically accomplished by making small adjustments in instrument alignment after the system integration. On the JPL TLS flight unit, however, the optical elements (that were adjusted in the DM unit) had been staked and bonded prior to integration and test (I&amp;T) (Reference (2)). Although staking of flight units is useful in preventing unintentional shifts in component alignment, it greatly restricted the ability to make any optical alignment adjustments at the laser/foreoptics end of the instrument after system integration. 
+<br> 
+<br> 
+<b>References:</b> 
+<ol> 
+ <li>quotTLS Science Standing Waves,quot JPL Problem/Failure Report No. 6617, August 17, 2007.</li> 
+ <li>Robert T. Menzies, quotReport on the TLS Standing Waves Tiger Team Activity: Findings &amp; Recommendations,quot December 7, 2007.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+Unless precision assemblies are specifically designed to permit mechanical adjustment of components following subsystem integration, it may be infeasible to quottweakquot an assembly during I&T to meet functionality or performance requirements without risk of damage. For example, if machining to realign the MSL TLS optical elements had been performed after staking, it could have led to localized deformation or delamination of these elements.
+</section>
+<section><h2>Recommendation(s)</h2>
+<ol> 
+ <li>For all precision assemblies subject to correction by mechanical adjustments, provide a design capability that allows adjustments for key mechanical parameters both before and after integration. For example, the use of attenuator material should be accommodated in the design of a TLS, and the ability to perform TLS laser beam position adjustment and angular adjustment should be retained during the I&T period.</li> 
+ <br /> 
+ <li>Staking or fastening actions that limit the ability to make necessary alignment adjustments within assemblies should not be employed until it is demonstrated that functionality and performance requirements can be met with adequate margin during I&T.</li> 
+</ol>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+JPL has referenced this lesson learned as additional rationale and guidance supporting Paragraph 8.3.3.6 (quotSystem Assembly, Integration and Test: System Functional Verification - System Alignmentsquot) in the JPL standard quotDesign, Verification/Validation and Operations Principles for Flight Systems (Design Principles),quot JPL Document D-17868, Rev. 3, December 11, 2006.
+</section>
+<section><h2>Related Policies & Standards</h2>
+AIAA Std S-114 2005, "Moving Mechanical Assemblies for Space and Launch Vehicles," NASA-STD-5017, "Design and Development Requirements for Mechanisms"
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

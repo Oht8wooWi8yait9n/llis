@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #1120: International Space Station (ISS) Program/Extravehicular Activity (EVA)/Simplified Aid for EVA Rescue (SAFER)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #1120: International Space Station (ISS) Program/Extravehicular Activity (EVA)/Simplified Aid for EVA Rescue (SAFER)</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #1120 (Database ID: 1120)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-02-01</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> NASA Headquarters</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/1120" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>Redundancy of Safety-Critical Flight Systems</p>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>The NASA Standard Initiator (NSI) on a SAFER unit tested on STS-86 on October 1, 1997, did not activate because of a marginal design of the activating power supply. As a result, the unit could not function. The certification testing for the firing circuit did not identify the power supply inadequacy. Also, an inadequate NSI emulator was used for most of the original SAFER certification (qualification) and acceptance tests (see also Finding #14).</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>25a. The design and implementation of flight systems critical to safety and mission success should, at least, provide redundancy for system startup.</p>
+
+    <p>25b. All NASA Centers should review the design requirements for reliable activation of the NSI and assure they are adequate to be communicated to their suppliers, especially those who are responsible for the design of firing circuits. All designs currently using NSI's should be reviewed to assure that the firing circuits are adequate and have been appropriately tested.</p>
+
+    <p>25c. Qualification tests of safety-critical equipment must use flight-quality hardware. Any exceptions must require high-level program approval.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>25a. NASA concurs with the ASAP finding that the NSI drive circuit of the USA SAFER was marginal in its design to the point where the drive circuit failed to activate the NSI during a demonstration on STS-86. The failure was due to lack of margin within the subsystem to drive the NSI and not due to lack of redundancy (a backup subsystem) to the subsystem. Adding redundancy (a backup subsystem) to drive the NSI would not resolve the lack of margin as both the primary and backup subsystems would still fail to drive the NSI without sufficient margin. This condition was addressed by addition of a new NSI circuit with increased margin to fire the NSI on demand. In addition the new NSI contains redundant components where possible. The USA SAFER is categorized as emergency hardware and is designed for use only after the EVA crewmember had inadvertently separated from structure due to a tether failure or a tether disconnection. The combination of the tether and USA SAFER provide a
+    functional redundancy to each other and a fail-operational system, which can sustain one failure in the tether (functional after one failure) and still retains the capability to continue with the EVA. A subsequent failure of the tether (two failures) and a functional USA SAFER provide a fail-safe system, which still retains the capability to successfully terminate the mission by using the USA SAFER to bring the inadvertently-separated EVA crewmember back to safety. Once the USA SAFER is needed to perform self-rescue in its role as the fail-safe device, its failure to perform due to any reason would result in loss of the EVA crewmember. Because the USA SAFER is to provide the fail-safe capability, as the functional redundancy to the tether, it was designed as a single-string system. As such, redundancy was not required for all subsystems and components. Adding redundancy to the activation subsystem alone would not increase the probability of saving an inadvertently separated
+    crewmember since other critical subsystems (propulsion and mechanism) are still single-string. NASA will evaluate redesigning the next generation SAFER to be fully redundant in critical functions.</p>
+
+    <p>25b. NASA agrees with the ASAP recommendation. The new USA SAFER NSI circuit employs the capacitive discharge approach which has been well proven by the SSP. Peer reviews were held to evaluate the new circuit design, and a series of tests were performed with the complete flight circuit. Also, the Engineering Directorate's Pyrotechnic Subsystem Manager performed a comprehensive review of all known uses of the NSI to ensure an acceptable design existed and that appropriate certification/acceptance tests had been accomplished. Lastly, a User's Guide (JSC-28596) for the NSI was developed to assist developers in selecting the appropriate NSI, designing the appropriate NSI drive circuit, and testing the complete NSI subsystem.</p>
+
+    <p>25c. NASA concurs with ASAP recommendation to use flight-quality hardware to support qualification testing. The new USA SAFER circuit certification was completed with the successful firing of 15 flight NSI's consecutively.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Lesson #0752: Check Valve Reliability in Aerospace Applications</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292e;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      background-color: #fcfcfc;
+    }
+    header {
+      border-bottom: 2px solid #e1e4e8;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.85rem;
+      color: #0b3d91; /* NASA Blue */
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+    .metadata {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.92rem;
+      color: #586069;
+      background-color: #f1f8ff;
+      border: 1px solid #c8e1ff;
+      border-radius: 6px;
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .metadata-item {
+      flex: 1 1 200px;
+    }
+    .metadata-label {
+      font-weight: 600;
+      color: #0366d6;
+    }
+    .canonical-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #d13438;
+      font-weight: 600;
+    }
+    section {
+      background: #ffffff;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    h2 {
+      font-size: 1.3rem;
+      color: #0b3d91;
+      border-bottom: 1px solid #eaecef;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #d1d5da;
+      border-radius: 4px;
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e1e4e8;
+      font-size: 0.85rem;
+      color: #6a737d;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Lesson #0752: Check Valve Reliability in Aerospace Applications</h1>
+    <div class="metadata">
+      <div class="metadata-item"><span class="metadata-label">Lesson ID:</span> #0752 (Database ID: 752)</div>
+      <div class="metadata-item"><span class="metadata-label">Date:</span> 1999-01-31</div>
+      <div class="metadata-item"><span class="metadata-label">Organization:</span> Marshall Space Flight Center</div>
+      <div class="metadata-item"><span class="metadata-label">Program Phase:</span> None</div>
+      <div class="metadata-item"><span class="metadata-label">Mission Directorate:</span> Aeronautics Research, Human Exploration and Operations</div>
+      
+    </div>
+    <div class="canonical-link">
+      Source: <a href="https://llis.nasa.gov/lesson/752" target="_blank" rel="noopener">View Official NASA LLIS Entry (live system)</a>
+    </div>
+  </header>
+
+  <main>
+    <section><h2>Driving Event / Description</h2>
+<p>This Lesson Learned is based on Reliability Practice number PD-ED-1267, from NASA Technical Memorandum 4322A, Reliability Preferred Practices for Design and Test.</p> 
+<p><u>Benefit:</u></p> 
+<p>The benefits of using special design and test procedures for aerospace check valves are long life, consistent operation, and trouble-free performance during prelaunch, launch, and orbital operations.</p> 
+<p><u>Implementation Method:</u></p> 
+<p>Introduction:</p> 
+<p>Aerospace check valves allow fluid flow of propellants and gasses in one direction and, if the system pressure reverses, close quickly to prevent flow in the opposite direction. Aerospace check valves are normally self-contained, spring loaded devices, requiring no external actuation signals or sources of power. The valving elements are activated by the pressure forces of the flow media. Ball type check valves are suitable for smaller applications, while poppet type valves are more appropriate for large flows, such as in the Space Shuttle Main Engine (SSME) application shown on Figure 1. Internal check valve leakage due to contamination is the main reliability detractor for both types of valve, although other failure modes such as external leakage, failure of the poppet or ball to open, and poppet or ball chatter are other potential failure modes. Highly reliable check valves have been designed, built, installed, and operated for extended periods in launch vehicle and propulsion applications with no detrimental in-flight failures.</p> 
+<img alt="refer to [D] description" border="0" height="405" src="https://llis.nasa.gov/llis_lib/images/1009201main_0752-1.jpg" title="refer to [D] description" width="500"> 
+<a href="https://llis.nasa.gov/llis_lib/txt/1009681main_0752-1.txt">[D]</a> 
+<br> Figure 1. SSME Purge Check Valve 
+<p>Design Practices:</p> 
+<p>Successful design practices have evolved that have resulted in failure-free aerospace check valve configurations. Large flow paths are provided through poppet-type check valves to reduce flow velocities and erosion of seats. Figure 1 is a cutaway view of the SSME purge check valve, a typical check valved used in aerospace applications. Teflon sleeves are provided for smooth operation and quick opening and closing of the poppets to permit rapid response to pressure differentials. Valve housings are configured to avoid areas that can trap contaminants. quotSwept-byquot designs are employed where the fluid flow tends to pass contaminants through the valve.</p> 
+<p>Material compatibility with the working fluid is an important design consideration. The material evaluation includes dynamic as well as static implications, and considers temperature, pressure, and phase variations of the fluid. To minimize valve-induced contamination, material selection includes consideration of wear particle size on useful life. (Particle sizes vary as the Youngís Modulus divided by the square of the compressive yield stress.) Where threaded connectors are used, rolled threads are used in preference to machined threads to minimize burrs and to achieve higher strength. Pipe threads are avoided, and the check valve should have female threads to avoid thread damage. Dead-end passages and capillary passages are avoided. All materials and tolerances must be examined to account for material properties after exposure to fluids and contaminants. Testing should include exposure to fluids and contaminants in the failure mode operation. Materials compatibility testing is particularly important for check valves used to isolate bipropellant tanks of hypergolic systems where the valves can be exposed to both oxidizers and fuel vapors and their byproducts. Teflon in particular swells after exposure to nitrogen tetroxide vapor or liquid and adequate clearance must be provided in the valve after swelling to prevent binding of moving parts.</p> 
+<p>Aerospace check valves work best in a contamination-free system, but where contamination is likely to be present, internal leakage due to contamination is minimized if the spring force is matched with material softness to ensure compression and closure. Self-aligning poppets or balls are desirable in most instances. System contaminants are identified to determine particle size and material properties. Metal-to-metal sliding parts are avoided as they not only are prone to produce contamination, but can also entrap externally induced contamination. Valving elements are designed with quick-opening areas to preclude chattering, flow instability, and high fluid velocities around the valve seat. Guidance of the poppet onto the valve seat to allow for a maximum alignment and eccentricity tolerance is achieved by providing a large diameter guide bearing surface length to poppet diameter ratio. (Minimum ratio should be 2:1). A finish of 16 or 32 microns root-mean-square is recommended. Positive stops are provided at the end of travel to minimize transient stresses due to poppet travel. Leakage rates are minimized by lapping poppet and seal surfaces to produce very smooth finishes. Reduced life due to vibration sensitivity is minimized by decreasing available clearances in bearings and guides, avoiding large overhung moments, and restricting lateral motion of poppets. Stress corrosion is controlled by avoiding stress corrosion susceptible materials and by designing the parts to operate at low stress levels. External leakage is minimized or eliminated by using welded valve body construction, requiring the use of vacuum-melt bar stock material, and by impregnating valve body castings with sealants.</p> 
+<p>Process and Control Practices:</p> 
+<p>Aerospace check valve parts are ultrasonically cleaned, assembled in specified clean areas, and controlled by a single contamination control specification during manufacturing, assembly, and testing. Test fluid media is governed by this same contamination control specification. Fabrication barriers (bags) are used to protect clean parts. Vendor controls are used to warrant that contamination particle size and count will not exceed specified limits. In some instances, a continuous purge of dry Helium is needed on the downstream side of check valves for cryogenic applications to prevent freezing of water vapor or atmospheric Nitrogen on the downstream sealing surface.</p> 
+<p>Testing Practices:</p> 
+<p>Contamination susceptibility tests are conducted during development to determine the levels of contaminant that the check-valve can tolerate. Verification of valve operation is achieved through 50 to 100 run-in cycles. Rapidly cycling valves designed for liquid applications for functional verification is not done in a dry condition because the lack of fluid damping can increase seat stress and reduce check-valve lifetime. Life cycle endurance tests and long term materials compatibility testing are conducted under operational environmental conditions. In launch vehicle applications, it has proven desirable to perform eight-cycle leak checks on each check-valve prior to launch.</p> 
+<p>Integration and Application Practices:</p> 
+<p>Aerospace check valves are often used in redundant configurations to increase reliability. Valves are installed into functional groups within systems using permanent connections, (such as welded or brazed connections) to avoid contamination and to prevent leakage. This type of installation allows a group of valves to be replaced in the event of a malfunction.</p> 
+<p>Technical Rationale :</p> 
+<p>The six purge check valves on the Space Shuttle Main Engine (SSME) have performed successfully in more than 67 missions to date without a failure. Five check valves used on the engine's pneumatic control system have performed equally as well in all missions. These check valves, and others used in the SRB and ET, were designed, built, tested, and operated in accordance with the practices described herein.</p> 
+<p>References:</p> 
+<ol> 
+ <li>SSME Orientation: Space Transportation System Training Data, Report # ME110(A)RIR, Rockwell International Corporation, December 1991.</li> 
+ <li><q>Long Life Assurance Study for Manned Spacecraft Long Life Hardware,</q> Report #MCR-72- 169, Martin Marietta Corporation, September 1972.</li> 
+</ol>
+</section>
+<section><h2>Lesson(s) Learned</h2>
+<p>Failure to adhere to the practices described herein could result in internal or external leakage of the aerospace check valve or failure of the valve to open or close properly and quickly during operation. Internal leakage could be caused by the poppet failing to close, seat damage, contamination, and instability or chattering of the valve poppet. Internal leakage could result in detrimental back flow, loss of pressure downstream, and system malfunction. A variety of final effects could include improper response to control system commands, loss of fluids through purge ports, fire due to the mixing of hypergolic components, and engine or system premature shutdown, causing a mission delay or abort.</p>
+</section>
+<section><h2>Recommendation(s)</h2>
+<p>In check valve design for aerospace applications examine all design features, materials, and tolerances to evaluate the effects of contamination and exposure to cryogenic or hypergolic propellants. Conduct long term compatibility tests simulating the operational environment to assess material suitability for each unique application.</p>
+</section>
+<section><h2>Evidence / Additional Context</h2>
+<p>This practice has been used on the Saturn Launch Vehicles, Space Shuttle Main Engine (SSME), Space Shuttle Solid Rocket Booster (SRB) programs.</p>
+</section>
+  </main>
+
+  <footer>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on 2026-09-08</p>
+  </footer>
+</body>
+</html>
