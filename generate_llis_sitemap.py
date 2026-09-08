@@ -40,7 +40,7 @@ def fetch_all_lessons(session: requests.Session) -> list[dict]:
     payload = {
         "query": {"match_all": {}},
         "from": 0,
-        "size": 5000,
+        "size": 10000,
     }
     for attempt in range(1, MAX_RETRIES + 1):
         try:
