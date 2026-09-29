@@ -199,7 +199,7 @@ HTML_PAGE_TEMPLATE = """<!DOCTYPE html>
   </main>
 
   <footer>
-    <p>NASA Lessons Learned Information System (LLIS) Public Archive | Synchronized on {sync_date}</p>
+    <p>NASA Lessons Learned Information System (LLIS) Public Archive</p>
   </footer>
 </body>
 </html>
@@ -273,12 +273,20 @@ def generate_static_pages(hits: list[dict], output_dir: str, sync_date: str) -> 
             mission_dir_html=mission_dir_html,
             topics_html=topics_html,
             content_sections=content_sections,
-            sync_date=sync_date,
         )
 
         file_path = os.path.join(lessons_dir, f"{doc_id}.html")
-        with open(file_path, "w", encoding="utf-8") as f:
-            f.write(html_out)
+        needs_write = True
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, "r", encoding="utf-8") as f_in:
+                    if f_in.read() == html_out:
+                        needs_write = False
+            except Exception:
+                pass
+        if needs_write:
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(html_out)
 
         processed_lessons.append({
             "id": doc_id,
@@ -300,6 +308,18 @@ def generate_static_pages(hits: list[dict], output_dir: str, sync_date: str) -> 
 def generate_index_page(lessons: list[dict], output_dir: str, sync_date: str):
     """Generate root index.html catalog for human browsing and search crawlers."""
     index_path = os.path.join(output_dir, "index.html")
+
+    effective_sync_date = sync_date
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, "r", encoding="utf-8") as f:
+                prev_text = f.read()
+                m_count = re.search(r'Total Public Lessons:\s*<strong>(\d+)</strong>', prev_text)
+                m_date = re.search(r'Last Synchronized:\s*<strong>([^<]+)</strong>', prev_text)
+                if m_count and int(m_count.group(1)) == len(lessons) and m_date:
+                    effective_sync_date = m_date.group(1).strip()
+        except Exception:
+            pass
 
     rows = []
     for item in sorted(lessons, key=lambda x: str(x["lesson_number"]), reverse=True):
@@ -384,7 +404,7 @@ def generate_index_page(lessons: list[dict], output_dir: str, sync_date: str):
     <div class="stats-bar">
       <div>Total Public Lessons: <strong>{len(lessons)}</strong></div>
       <div>Source: <strong>https://llis.nasa.gov/</strong></div>
-      <div>Last Synchronized: <strong>{sync_date}</strong></div>
+      <div>Last Synchronized: <strong>{effective_sync_date}</strong></div>
     </div>
   </header>
 
@@ -411,9 +431,46 @@ def generate_index_page(lessons: list[dict], output_dir: str, sync_date: str):
 </body>
 </html>
 """
-    with open(index_path, "w", encoding="utf-8") as f:
-        f.write(index_html)
+    # Write only if content changed
+    needs_write = True
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, "r", encoding="utf-8") as f:
+                if f.read() == index_html:
+                    needs_write = False
+        except Exception:
+            pass
+    if needs_write:
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write(index_html)
     print(f"[+] Generated root catalog index: {index_path}")
+
+
+def load_existing_lastmod(sitemap_path: str) -> dict[str, str]:
+    mapping = {}
+    if os.path.exists(sitemap_path):
+        try:
+            tree = ET.parse(sitemap_path)
+            for u in tree.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}url"):
+                loc = u.find("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")
+                lastmod = u.find("{http://www.sitemaps.org/schemas/sitemap/0.9}lastmod")
+                if loc is not None and loc.text and lastmod is not None and lastmod.text:
+                    mapping[loc.text.strip()] = lastmod.text.strip()
+        except Exception:
+            pass
+    return mapping
+
+
+def write_if_changed(file_path: str, content: str):
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                if f.read() == content:
+                    return
+        except Exception:
+            pass
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write(content)
 
 
 def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
@@ -422,6 +479,7 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     gh_urls_path = os.path.join(output_dir, "llis_urls.txt")
 
     gh_urls = [f"{GITHUB_PAGES_BASE}/"] + [item["github_pages_url"] for item in lessons]
+    prev_gh_lastmod = load_existing_lastmod(gh_sitemap_path)
 
     xml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -430,9 +488,10 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     for u in gh_urls:
         escaped_u = escape(u)
         priority = "1.0" if u == f"{GITHUB_PAGES_BASE}/" else "0.8"
+        lastmod = prev_gh_lastmod.get(u, current_date)
         xml_lines.append("  <url>")
         xml_lines.append(f"    <loc>{escaped_u}</loc>")
-        xml_lines.append(f"    <lastmod>{current_date}</lastmod>")
+        xml_lines.append(f"    <lastmod>{lastmod}</lastmod>")
         xml_lines.append("    <changefreq>monthly</changefreq>")
         xml_lines.append(f"    <priority>{priority}</priority>")
         xml_lines.append("  </url>")
@@ -441,11 +500,8 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     gh_xml_content = "\n".join(xml_lines)
     ET.fromstring(gh_xml_content.encode("utf-8"))  # Validate XML
 
-    with open(gh_sitemap_path, "w", encoding="utf-8") as f:
-        f.write(gh_xml_content)
-    with open(gh_urls_path, "w", encoding="utf-8") as f:
-        for u in gh_urls:
-            f.write(f"{u}\n")
+    write_if_changed(gh_sitemap_path, gh_xml_content)
+    write_if_changed(gh_urls_path, "\n".join(gh_urls) + "\n")
     print(f"[+] Successfully wrote primary sitemap: {gh_sitemap_path} ({len(gh_urls)} URLs)")
 
     # 2. Direct Sitemap (Pointing to live llis.nasa.gov URLs)
@@ -453,6 +509,7 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     direct_urls_path = os.path.join(output_dir, "llis_direct_urls.txt")
 
     direct_urls = [f"{BASE_LIVE_URL}/"] + [item["live_url"] for item in lessons]
+    prev_d_lastmod = load_existing_lastmod(direct_sitemap_path)
 
     d_xml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -461,9 +518,10 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     for u in direct_urls:
         escaped_u = escape(u)
         priority = "1.0" if u == f"{BASE_LIVE_URL}/" else "0.8"
+        lastmod = prev_d_lastmod.get(u, current_date)
         d_xml_lines.append("  <url>")
         d_xml_lines.append(f"    <loc>{escaped_u}</loc>")
-        d_xml_lines.append(f"    <lastmod>{current_date}</lastmod>")
+        d_xml_lines.append(f"    <lastmod>{lastmod}</lastmod>")
         d_xml_lines.append("    <changefreq>monthly</changefreq>")
         d_xml_lines.append(f"    <priority>{priority}</priority>")
         d_xml_lines.append("  </url>")
@@ -472,18 +530,14 @@ def write_sitemaps(lessons: list[dict], output_dir: str, current_date: str):
     d_xml_content = "\n".join(d_xml_lines)
     ET.fromstring(d_xml_content.encode("utf-8"))
 
-    with open(direct_sitemap_path, "w", encoding="utf-8") as f:
-        f.write(d_xml_content)
-    with open(direct_urls_path, "w", encoding="utf-8") as f:
-        for u in direct_urls:
-            f.write(f"{u}\n")
+    write_if_changed(direct_sitemap_path, d_xml_content)
+    write_if_changed(direct_urls_path, "\n".join(direct_urls) + "\n")
     print(f"[+] Successfully wrote direct sitemap: {direct_sitemap_path} ({len(direct_urls)} URLs)")
 
     # 3. Write raw JSON Lines for offline / API ingestion
     jsonl_path = os.path.join(output_dir, "llis_lessons.jsonl")
-    with open(jsonl_path, "w", encoding="utf-8") as f:
-        for item in lessons:
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    jsonl_content = "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in lessons)
+    write_if_changed(jsonl_path, jsonl_content)
     print(f"[+] Successfully wrote JSON Lines database: {jsonl_path}")
 
 
