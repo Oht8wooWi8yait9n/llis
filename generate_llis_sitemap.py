@@ -49,9 +49,9 @@ def fetch_all_lessons(session: requests.Session) -> list[dict]:
             if resp.status_code == 200:
                 data = resp.json()
                 hits = data.get("hits", {}).get("hits", [])
-                total = data.get("hits", {}).get("total", len(hits))
-                print(f"[+] Successfully retrieved {len(hits)} lessons (total in index: {total})")
-                return hits
+                valid_hits = [h for h in hits if str(h.get("_id", "")).strip().isdigit()]
+                print(f"[+] Successfully retrieved {len(valid_hits)} valid lessons (filtered {len(hits) - len(valid_hits)} phantom entries, raw hits: {len(hits)})")
+                return valid_hits
         except Exception as e:
             print(f"[!] Request error on attempt {attempt}: {e}")
         if attempt < MAX_RETRIES:
@@ -213,7 +213,9 @@ def generate_static_pages(hits: list[dict], output_dir: str, sync_date: str) -> 
     processed_lessons = []
 
     for h in hits:
-        doc_id = str(h.get("_id", ""))
+        doc_id = str(h.get("_id", "")).strip()
+        if not doc_id.isdigit():
+            continue
         src = h.get("_source", {})
 
         title = src.get("title") or "Untitled Lesson"

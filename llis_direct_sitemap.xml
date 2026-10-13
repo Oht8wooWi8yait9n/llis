@@ -2665,12 +2665,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://llis.nasa.gov/lesson/_search?gr2883.css</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://llis.nasa.gov/lesson/2037</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -5061,24 +5055,6 @@
   <url>
     <loc>https://llis.nasa.gov/lesson/33101</loc>
     <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?rnlybz.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?ddf0kw.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?z6kny2.css</loc>
-    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -7509,42 +7485,6 @@
   <url>
     <loc>https://llis.nasa.gov/lesson/33205</loc>
     <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?mrz1zs.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?s5biw9.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?bxm8ub.css</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?h7hs22.css</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?zr9mkr.css</loc>
-    <lastmod>2026-10-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?ii813l.css</loc>
-    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -10023,24 +9963,6 @@
   <url>
     <loc>https://llis.nasa.gov/lesson/33502</loc>
     <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?mhfvo2.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?fg2u17.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?sz42u6.css</loc>
-    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -12783,36 +12705,6 @@
   <url>
     <loc>https://llis.nasa.gov/lesson/32401</loc>
     <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?xvrt84.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?anajv9.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?k9ewrv.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?dzwjy0.css</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://llis.nasa.gov/lesson/_search?xekjp0.css</loc>
-    <lastmod>2026-10-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
